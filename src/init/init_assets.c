@@ -19,7 +19,7 @@ void init_cursor(game_t *game)
 {
     const char path[] = "assets/pictures/icons/cursor_icon.png";
     sfIntRect rect = init_rect(75, 23, 300, 326);
-    sfVector2f pos = init_pos(10, 10);
+    sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = {0.25, 0.25};
 
     game->assets->cursor = create_sprite(path, rect, pos, scale);
