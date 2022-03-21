@@ -1,0 +1,12 @@
+USAGE
+    ./my_rpg [-h]
+
+DESCRIPTION
+    My RPG is a RolePlayGame
+
+USER_INTERACTIONS
+    ESC:    Pause menu / Quit the game
+
+    Mouse:  See with your eyes & click on buttons ;)
+
+And for sure ... ENJOY !!!
