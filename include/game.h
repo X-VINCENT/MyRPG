@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** Game Header for My Defender
+** Game Header for My RPG
 ** File description:
-** Xavier VINCENT - Max PEIXOTO
+** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #ifndef GAME_H_
