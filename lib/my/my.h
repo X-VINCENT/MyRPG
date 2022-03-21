@@ -45,7 +45,7 @@ int my_str_isupper(char const *);
 int my_str_isprintable(char const *);
 int my_showstr(char const *);
 int my_showmem(char const *, int);
-char *my_strcat(char *, char const *);
+char *my_strcat(char *, char *);
 char *my_strncat(char *, char const *, int);
 int my_puterror(char const *);
 int my_getnbsize(int);
