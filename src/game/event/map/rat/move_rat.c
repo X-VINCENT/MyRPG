@@ -12,13 +12,13 @@ void move_rat(game_t *game)
     rat_t *rat = game->assets->map->rat;
     sfVector2f pos = sfSprite_getPosition(rat->sprite);
 
-    if (game->event->event->key.code == sfKeyLeft)
+    if (game->event->event->key.code == game->keys->move_left)
         move_rat_left(game, pos, rat->sprite, rat->speed);
-    if (game->event->event->key.code == sfKeyRight)
+    if (game->event->event->key.code == game->keys->move_right)
         move_rat_right(game, pos, rat->sprite, rat->speed);
-    if (game->event->event->key.code == sfKeyUp)
+    if (game->event->event->key.code == game->keys->move_up)
         move_rat_up(game, pos, rat->sprite, rat->speed);
-    if (game->event->event->key.code == sfKeyDown)
+    if (game->event->event->key.code == game->keys->move_down)
         move_rat_down(game, pos, rat->sprite, rat->speed);
     sfView_setCenter(game->view, (sfVector2f){pos.x, pos.y});
 }

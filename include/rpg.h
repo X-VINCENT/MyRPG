@@ -42,8 +42,9 @@
     #define RAT_SPEED 10
 
     // View
-    #define ZOOM 10
+    #define ZOOM_VALUE 10
     #define MAX_ZOOM 150
     #define MAX_DEZOOM 1000
+    #define ROTATE_VALUE 5
 
 #endif /* !MY_RPG_H_ */

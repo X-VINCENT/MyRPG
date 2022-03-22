@@ -31,8 +31,9 @@
                 game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
             void move_rat_down(
                 game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-        // zoom_view.c
+        // view.c
         void zoom_view(game_t *game);
+        void rotate_view(game_t *game);
 
         // key_pressed.c
         void map_key_pressed(game_t *game);
@@ -66,6 +67,11 @@
     // map.c
     void map_stage(game_t *game);
 
+    // stage.c
+    void select_game_stage(game_t *game);
+    void select_game_stage_2(game_t *game);
+    void select_game_stage_3(game_t *game);
+
 // Tools
     // audio.c
     void down_volume(game_t *game);
@@ -86,9 +92,7 @@
 
 // my_rpg.c
 int my_rpg(void);
-void select_game_stage(game_t *game);
-void select_game_stage_2(game_t *game);
-void select_game_stage_3(game_t *game);
+int display_all(game_t *game, sfClock *clock);
 void display_cursor(game_t *game);
 
 #endif /* !GAME_H_ */

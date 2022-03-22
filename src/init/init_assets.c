@@ -14,7 +14,6 @@ void init_assets(game_t *game)
     game->assets = malloc(sizeof(assets_t));
     init_cursor(game);
     init_map(game);
-    return;
 }
 
 void init_cursor(game_t *game)
@@ -24,5 +23,4 @@ void init_cursor(game_t *game)
     sfVector2f scale = {0.25, 0.25};
 
     game->assets->cursor = create_sprite(CURSOR, rect, pos, scale);
-    return;
 }

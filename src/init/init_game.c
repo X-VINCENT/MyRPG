@@ -21,6 +21,7 @@ game_t *init_game(void)
     init_view(game);
     init_event(game);
     init_assets(game);
+    init_keys(game);
     return game;
 }
 
@@ -34,6 +35,15 @@ void init_window(game_t *game)
     sfRenderWindow_setKeyRepeatEnabled(game->window, sfFalse);
 }
 
+
+void init_view(game_t *game)
+{
+    sfVector2f size = {game->res * 16 / 9 / 3, game->res / 3};
+    sfVector2f pos = init_pos(0, 0);
+
+    game->view = create_view(size, pos, 0);
+}
+
 void init_event(game_t *game)
 {
     event_t *event = NULL;
@@ -44,10 +54,16 @@ void init_event(game_t *game)
     game->event->event = malloc(sizeof(sfEvent));
 }
 
-void init_view(game_t *game)
+void init_keys(game_t *game)
 {
-    sfVector2f size = {game->res * 16 / 9 / 3, game->res / 3};
-    sfVector2f pos = init_pos(0, 0);
+    game->keys = malloc(sizeof(keys_t));
 
-    game->view = create_view(size, pos, 0);
+    game->keys->move_left = sfKeyLeft;
+    game->keys->move_right = sfKeyRight;
+    game->keys->move_up = sfKeyUp;
+    game->keys->move_down = sfKeyDown;
+    game->keys->rotate_left = sfKeyQ;
+    game->keys->rotate_right = sfKeyD;
+    game->keys->zoom_in = sfKeyZ;
+    game->keys->zoom_out = sfKeyS;
 }

@@ -13,4 +13,5 @@ void map_key_pressed(game_t *game)
 
     move_rat(game);
     zoom_view(game);
+    rotate_view(game);
 }

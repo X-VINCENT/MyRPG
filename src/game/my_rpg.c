@@ -7,19 +7,6 @@
 
 #include "rpg.h"
 
-int display_all(game_t *game, sfClock *clock)
-{
-    if (sfTime_asSeconds(
-        sfClock_getElapsedTime(clock)) > 1 / game->fps) {
-        sfRenderWindow_clear(game->window, sfBlack);
-        select_game_stage(game);
-        display_cursor(game);
-        sfRenderWindow_display(game->window);
-        sfClock_restart(clock);
-    }
-    return 0;
-}
-
 int my_rpg(void)
 {
     game_t *game = NULL;
@@ -30,12 +17,23 @@ int my_rpg(void)
     while (sfRenderWindow_isOpen(game->window)) {
         sfRenderWindow_setView(game->window, game->view);
         event(game);
-        select_game_stage(game);
         display_all(game, clock);
     }
     sfClock_destroy(clock);
     destroy_all(game);
     return SUCCESS;
+}
+
+int display_all(game_t *game, sfClock *clock)
+{
+    if (time_elapsed(clock) > 1 / game->fps) {
+        sfRenderWindow_clear(game->window, sfBlack);
+        select_game_stage(game);
+        display_cursor(game);
+        sfRenderWindow_display(game->window);
+        sfClock_restart(clock);
+    }
+    return 0;
 }
 
 void display_cursor(game_t *game)

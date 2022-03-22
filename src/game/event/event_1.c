@@ -11,21 +11,22 @@ void event(game_t *game)
 {
     if (!game)
         return;
-    sfRenderWindow_pollEvent(game->window, game->event->event);
-    switch (game->event->event->type) {
-        case sfEvtClosed:
-            sfRenderWindow_close(game->window);
-            break;
-        case sfEvtKeyPressed:
-            event_key_pressed(game);
-            break;
-        case sfEvtMouseButtonPressed:
-            mouse_pressed(game);
-            break;
-        case sfEvtMouseMoved:
-            mouse_moved(game);
-        default:
-            break;
+    while (sfRenderWindow_pollEvent(game->window, game->event->event)) {
+        switch (game->event->event->type) {
+            case sfEvtClosed:
+                sfRenderWindow_close(game->window);
+                break;
+            case sfEvtKeyPressed:
+                event_key_pressed(game);
+                break;
+            case sfEvtMouseButtonPressed:
+                mouse_pressed(game);
+                break;
+            case sfEvtMouseMoved:
+                mouse_moved(game);
+            default:
+                break;
+        }
     }
 }
 
