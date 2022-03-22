@@ -2,8 +2,8 @@
 *.d
 *~
 my_rpg
-assets
 .vscode
+assets
 push_code
 
 # Object files
