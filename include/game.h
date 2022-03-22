@@ -10,6 +10,12 @@
 
     #include "rpg.h"
 
+// Display
+    // Map
+        // display.c
+        void display_map(game_t *game);
+
+// Event
     // event_1.c
     void event(game_t *game);
     void event_key_pressed(game_t *game);

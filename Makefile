@@ -13,17 +13,21 @@ SRC_MAIN            =           $(addprefix src/,                            \
 
 SRC                 =           $(addprefix src/,                            \
 								destroy/destroy.c                            \
+								destroy/map/destroy.c                        \
 								errors/check_env.c                           \
 								errors/check_file.c                          \
 								errors/check_pictures.c                      \
 								errors/help.c                                \
+								game/display/map/display.c                   \
 								game/event/event_1.c                         \
 								game/event/event_2.c					     \
 								game/event/event_3.c					     \
+								game/stage/map.c                             \
 								game/tools/audio.c                           \
 								game/tools/fps.c                             \
 								game/tools/res.c                             \
 								game/my_rpg.c                                \
+								init/map/init.c                              \
 								init/init_assets.c                           \
 								init/init_game.c)
 

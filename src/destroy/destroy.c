@@ -29,5 +29,6 @@ void destroy_assets(assets_t *assets)
 {
     if (!assets)
         return;
+    destroy_map(assets->map);
     free(assets);
 }

@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Map
+    // destroy.c
+    void destroy_map(map_t *map);
+
 // destroy.c
 void destroy_all(game_t *game);
 void destroy_event(event_t *event);

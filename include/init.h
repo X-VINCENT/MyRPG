@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Map
+    // init.c
+    void init_map(game_t *game);
+
 // init_assets.c
 void init_assets(game_t *game);
 void init_cursor(game_t *game);

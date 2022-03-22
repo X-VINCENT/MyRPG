@@ -10,8 +10,13 @@
 
     #include "csfml.h"
 
+    typedef struct map {
+        sfSprite *bg;
+    } map_t;
+
     typedef struct assets {
         sfSprite *cursor;
+        map_t *map;
     } assets_t;
 
     typedef struct event {
