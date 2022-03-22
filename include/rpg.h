@@ -42,7 +42,7 @@
     #define RAT_SPEED 10
 
     // View
-    #define ZOOM 50
+    #define ZOOM 10
     #define MAX_ZOOM 150
     #define MAX_DEZOOM 1000
 
