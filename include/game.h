@@ -32,6 +32,10 @@
     void mouse_button_pressed_3(game_t *game);
     void mouse_moved_3(game_t *game);
 
+// Stage
+    // map.c
+    void map_stage(game_t *game);
+
 // Tools
     // audio.c
     void down_volume(game_t *game);

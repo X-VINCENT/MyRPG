@@ -14,5 +14,5 @@ void init_map(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->map = malloc(sizeof(map_t));
-    game->assets->map = create_sprite(MAP, rect, pos, scale);
+    game->assets->map->bg = create_sprite(MAP, rect, pos, scale);
 }
