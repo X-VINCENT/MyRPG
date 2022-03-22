@@ -34,6 +34,7 @@ void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
         case MAP_STAGE:
+            zoom_view(game);
             move_rat(game);
         default:
             event_key_pressed_2(game);

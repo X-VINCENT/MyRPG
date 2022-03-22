@@ -21,16 +21,18 @@
 // Event
     // Map
         // Rat
-        // move_rat.c
-        void move_rat(game_t *game);
-        void move_rat_left(
-            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-        void move_rat_right(
-            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-        void move_rat_up(
-            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-        void move_rat_down(
-            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+            // move_rat.c
+            void move_rat(game_t *game);
+            void move_rat_left(
+                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+            void move_rat_right(
+                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+            void move_rat_up(
+                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+            void move_rat_down(
+                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+        // zoom_view.c
+        void zoom_view(game_t *game);
 
     // event_1.c
     void event(game_t *game);
