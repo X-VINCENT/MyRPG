@@ -39,11 +39,13 @@
         int zoom_out;
         int rotate_left;
         int rotate_right;
+        int reset_view;
     } keys_t;
 
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        sfClock *fps_clock;
         event_t *event;
         assets_t *assets;
         keys_t *keys;

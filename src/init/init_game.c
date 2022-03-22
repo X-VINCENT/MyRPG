@@ -13,10 +13,11 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
+    game->fps_clock = sfClock_create();
     game->stage = MAP_STAGE;
     game->last_stage = START_STAGE;
-    game->fps = 60;
-    game->res = 1080;
+    game->fps = DEFAULT_FPS;
+    game->res = DEFAULT_WINDOW_RESOLUTION;
     init_window(game);
     init_view(game);
     init_event(game);
@@ -27,19 +28,16 @@ game_t *init_game(void)
 
 void init_window(game_t *game)
 {
-    game->window = create_window("My RPG",
-        game->res * 16 / 9, game->res);
+    game->window = create_window("My RPG", game->res * 16 / 9, game->res);
     sfRenderWindow_setFramerateLimit(game->window, game->fps);
     sfRenderWindow_setMouseCursorVisible(game->window, sfFalse);
     set_icon_window(game->window, "assets/pictures/icons/window_icon.png");
-    sfRenderWindow_setKeyRepeatEnabled(game->window, sfFalse);
 }
-
 
 void init_view(game_t *game)
 {
-    sfVector2f size = {game->res * 16 / 9 / 3, game->res / 3};
-    sfVector2f pos = init_pos(0, 0);
+    sfVector2f size = {VIEW_DEFAULT_SIZE_X, VIEW_DEFAULT_SIZE_Y};
+    sfVector2f pos = init_pos(VIEW_DEFAULT_POS_X, VIEW_DEFAULT_POS_Y);
 
     game->view = create_view(size, pos, 0);
 }
@@ -66,4 +64,5 @@ void init_keys(game_t *game)
     game->keys->rotate_right = sfKeyD;
     game->keys->zoom_in = sfKeyZ;
     game->keys->zoom_out = sfKeyS;
+    game->keys->reset_view = sfKeyR;
 }

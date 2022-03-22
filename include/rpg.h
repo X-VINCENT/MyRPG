@@ -37,14 +37,23 @@
     #define START_STAGE 0
     #define MAP_STAGE 1
 
+    // Window
+    #define DEFAULT_FPS 60
+    #define DEFAULT_WINDOW_RESOLUTION 1080
+
+    // View
+    #define VIEW_DEFAULT_SIZE_X 1920
+    #define VIEW_DEFAULT_SIZE_Y 1080
+    #define VIEW_DEFAULT_POS_X 0
+    #define VIEW_DEFAULT_POS_Y 0
+    #define VIEW_DEFAULT_ROTATION 0
+    #define VIEW_ZOOM_VALUE 10
+    #define VIEW_MAX_ZOOM_IN 150
+    #define VIEW_MAX_ZOOM_OUT 1000
+    #define VIEW_ROTATE_VALUE 5
+
     // Rat
     #define SCALE_RAT 1
     #define RAT_SPEED 10
-
-    // View
-    #define ZOOM_VALUE 10
-    #define MAX_ZOOM 150
-    #define MAX_DEZOOM 1000
-    #define ROTATE_VALUE 5
 
 #endif /* !MY_RPG_H_ */

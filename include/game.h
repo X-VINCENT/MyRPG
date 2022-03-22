@@ -34,6 +34,7 @@
         // view.c
         void zoom_view(game_t *game);
         void rotate_view(game_t *game);
+        void reset_view(game_t *game);
 
         // key_pressed.c
         void map_key_pressed(game_t *game);
@@ -92,7 +93,7 @@
 
 // my_rpg.c
 int my_rpg(void);
-int display_all(game_t *game, sfClock *clock);
+int display_all(game_t *game);
 void display_cursor(game_t *game);
 
 #endif /* !GAME_H_ */

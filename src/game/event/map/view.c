@@ -11,33 +11,44 @@ void zoom_view(game_t *game)
 {
     sfEvent *event = game->event->event;
     sfVector2f view_size = sfView_getSize(game->view);
+    float zoom_x = sfSprite_getScale(game->assets->cursor).x;
+    float zoom_y = sfSprite_getScale(game->assets->cursor).y;
+    float offset = VIEW_ZOOM_VALUE;
 
     if (event->key.code == game->keys->zoom_in &&
-        sfView_getSize(game->view).y > MAX_ZOOM) {
+        sfView_getSize(game->view).y > VIEW_MAX_ZOOM_IN) {
         sfView_setSize(game->view, (sfVector2f){
-            view_size.x - ZOOM_VALUE * 16 / 9, view_size.y - ZOOM_VALUE});
+            view_size.x - offset * 16 / 9, view_size.y - offset});
         sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            sfSprite_getScale(game->assets->cursor).x - ZOOM_VALUE / 100,
-            sfSprite_getScale(game->assets->cursor).y - ZOOM_VALUE / 100});
+            zoom_x - offset / 100, zoom_y - offset / 100});
     }
     if (event->key.code == game->keys->zoom_out &&
-        sfView_getSize(game->view).y < MAX_DEZOOM) {
+        sfView_getSize(game->view).y < VIEW_MAX_ZOOM_OUT) {
         sfView_setSize(game->view, (sfVector2f){
-            view_size.x + ZOOM_VALUE * 16 / 9, view_size.y + ZOOM_VALUE});
+            view_size.x + offset * 16 / 9, view_size.y + offset});
         sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            sfSprite_getScale(game->assets->cursor).x + ZOOM_VALUE / 100,
-            sfSprite_getScale(game->assets->cursor).y + ZOOM_VALUE / 100});
+            zoom_x + offset / 100, zoom_y + offset / 100});
     }
 }
 
 void rotate_view(game_t *game)
 {
     sfEvent *event = game->event->event;
+    float rotation = sfView_getRotation(game->view);
 
     if (event->key.code == game->keys->rotate_left)
-        sfView_setRotation(game->view,
-            sfView_getRotation(game->view) + ROTATE_VALUE);
+        sfView_setRotation(game->view, rotation + VIEW_ROTATE_VALUE);
     if (event->key.code == game->keys->rotate_right)
-        sfView_setRotation(game->view,
-            sfView_getRotation(game->view) - ROTATE_VALUE);
+        sfView_setRotation(game->view, rotation - VIEW_ROTATE_VALUE);
+}
+
+void reset_view(game_t *game)
+{
+    sfEvent *event = game->event->event;
+    sfVector2f default_size = {VIEW_DEFAULT_SIZE_X, VIEW_DEFAULT_SIZE_Y};
+
+    if (event->key.code == game->keys->reset_view) {
+        sfView_setSize(game->view, default_size);
+        sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);
+    }
 }
