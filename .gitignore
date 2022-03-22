@@ -4,7 +4,6 @@
 my_rpg
 .vscode
 push_code
-assets
 
 # Object files
 *.o
