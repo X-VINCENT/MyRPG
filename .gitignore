@@ -3,6 +3,7 @@
 *~
 my_rpg
 .vscode
+push_code
 
 # Object files
 *.o
