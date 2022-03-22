@@ -3,8 +3,8 @@
 *~
 my_rpg
 .vscode
-assets
 push_code
+assets
 
 # Object files
 *.o
