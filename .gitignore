@@ -2,8 +2,8 @@
 *.d
 *~
 my_rpg
-.vscode
 push_code
+.vscode
 
 # Object files
 *.o
