@@ -2,6 +2,7 @@
 *.d
 *~
 my_rpg
+assets
 .vscode
 push_code
 
