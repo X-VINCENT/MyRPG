@@ -13,18 +13,18 @@ SRC_MAIN            =           $(addprefix src/,                            \
 
 SRC                 =           $(addprefix src/,                            \
 								destroy/destroy.c                            \
+								destroy/map/rat/destroy.c                    \
 								destroy/map/destroy.c                        \
-								destroy/rat/destroy.c                        \
 								errors/check_env.c                           \
 								errors/check_file.c                          \
 								errors/check_pictures.c                      \
 								errors/help.c                                \
+								game/display/map/rat/display.c               \
 								game/display/map/display.c                   \
-								game/display/rat/display.c                   \
+								game/event/map/rat/move_rat.c                \
 								game/event/map/key_pressed.c                 \
 								game/event/map/mouse_moved.c                 \
 								game/event/map/mouse_pressed.c               \
-								game/event/rat/move_rat.c                 \
 								game/event/event_1.c                         \
 								game/event/event_2.c					     \
 								game/event/event_3.c					     \
@@ -34,6 +34,7 @@ SRC                 =           $(addprefix src/,                            \
 								game/tools/res.c                             \
 								game/my_rpg.c                                \
 								init/map/init.c                              \
+								init/map/init_rat.c                          \
 								init/init_assets.c                           \
 								init/init_game.c)
 
@@ -46,6 +47,7 @@ SRC_CSFML           =           $(addprefix csfml/,                          \
 								shape.c                                      \
 								sprite.c                                     \
 								text.c                                       \
+								view.c                                       \
 								window.c)
 
 SRC_TESTS           =           $(addprefix tests/,                          \

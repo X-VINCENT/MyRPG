@@ -12,12 +12,26 @@
 
 // Display
     // Map
+        // Rat
+            // display.c
+            void display_rat(game_t *game);
         // display.c
         void display_map(game_t *game);
-    // Rat
-        void display_rat(game_t *game);
 
 // Event
+    // Map
+        // Rat
+        // move_rat.c
+        void move_rat(game_t *game);
+        void move_rat_left(
+            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+        void move_rat_right(
+            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+        void move_rat_up(
+            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+        void move_rat_down(
+            game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
+
     // event_1.c
     void event(game_t *game);
     void event_key_pressed(game_t *game);

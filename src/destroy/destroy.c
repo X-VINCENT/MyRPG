@@ -14,6 +14,7 @@ void destroy_all(game_t *game)
     destroy_window(game->window);
     destroy_event(game->event);
     destroy_assets(game->assets);
+    destroy_view(game->view);
     free(game);
 }
 
@@ -30,6 +31,5 @@ void destroy_assets(assets_t *assets)
     if (!assets)
         return;
     destroy_map(assets->map);
-    destroy_rat(assets->rat);
     free(assets);
 }

@@ -40,6 +40,15 @@ void animate_sprite(sfSprite *sprite, float shift, int max_value)
     sfSprite_setTextureRect(sprite, rect);
 }
 
+void set_sprite_origin(sfSprite *sprite, sfIntRect rect)
+{
+    sfVector2f origin = {rect.width / 2, rect.height / 2};
+
+    if (!sprite)
+        return;
+    sfSprite_setOrigin(sprite, origin);
+}
+
 void destroy_sprite(sfSprite *sprite)
 {
     if (!sprite)

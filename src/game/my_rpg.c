@@ -15,6 +15,7 @@ int my_rpg(void)
         return ERROR;
     while (sfRenderWindow_isOpen(game->window)) {
         sfRenderWindow_clear(game->window, sfBlack);
+        sfRenderWindow_setView(game->window, game->view);
         event(game);
         select_game_stage(game);
         display_cursor(game);

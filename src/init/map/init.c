@@ -15,4 +15,5 @@ void init_map(game_t *game)
 
     game->assets->map = malloc(sizeof(map_t));
     game->assets->map->bg = create_sprite(MAP, rect, pos, scale);
+    init_rat(game);
 }

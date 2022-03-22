@@ -10,5 +10,6 @@
 void destroy_map(map_t *map)
 {
     destroy_sprite(map->bg);
+    destroy_rat(map->rat);
     free(map);
 }

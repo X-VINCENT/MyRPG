@@ -11,11 +11,11 @@
     #include "rpg.h"
 
 // Map
+    // Rat
+        // destroy.c
+        void destroy_rat(rat_t *rat);
     // destroy.c
     void destroy_map(map_t *map);
-//Rat
-    //destroy
-    void destroy_rat(rat_t *rat);
 
 // destroy.c
 void destroy_all(game_t *game);

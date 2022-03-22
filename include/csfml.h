@@ -51,6 +51,7 @@
     sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
         sfVector2f position, sfVector2f scale);
     void animate_sprite(sfSprite *sprite, float shift, int max_value);
+    void set_sprite_origin(sfSprite *sprite, sfIntRect rect);
     void destroy_sprite(sfSprite *sprite);
 
 // Text
@@ -59,7 +60,7 @@
     void destroy_text(sfText *text);
 
 // View
-    sfView *create_view(sfVector2f size, sfVector2f position);
+    sfView *create_view(sfVector2f size, sfVector2f position, float angle);
     void destroy_view(sfView *view);
 
 // Window

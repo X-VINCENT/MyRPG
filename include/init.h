@@ -23,6 +23,7 @@ void init_rat(game_t *game);
 game_t *init_game(void);
 void init_window(game_t *game);
 void init_event(game_t *game);
+void init_view(game_t *game);
 
 //init_sounds.c
 void init_sounds(game_t *game);

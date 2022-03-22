@@ -9,6 +9,6 @@
 
 void destroy_rat(rat_t *rat)
 {
-    destroy_sprite(rat->rat);
+    destroy_sprite(rat->sprite);
     free(rat);
 }

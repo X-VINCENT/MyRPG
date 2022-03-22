@@ -10,17 +10,18 @@
 
     #include "csfml.h"
 
+    typedef struct rat {
+        sfSprite *sprite;
+        int speed;
+    } rat_t;
+
     typedef struct map {
         sfSprite *bg;
+        rat_t *rat;
     } map_t;
-
-    typedef struct rat {
-        sfSprite *rat;
-    } rat_t;
 
     typedef struct assets {
         sfSprite *cursor;
-        rat_t *rat;
         map_t *map;
     } assets_t;
 
