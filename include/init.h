@@ -17,6 +17,7 @@
 // init_assets.c
 void init_assets(game_t *game);
 void init_cursor(game_t *game);
+void init_rat(game_t *game);
 
 // init_game.c
 game_t *init_game(void);

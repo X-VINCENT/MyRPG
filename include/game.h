@@ -14,6 +14,8 @@
     // Map
         // display.c
         void display_map(game_t *game);
+    // Rat
+        void display_rat(game_t *game);
 
 // Event
     // event_1.c

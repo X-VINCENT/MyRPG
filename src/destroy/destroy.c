@@ -30,5 +30,6 @@ void destroy_assets(assets_t *assets)
     if (!assets)
         return;
     destroy_map(assets->map);
+    destroy_rat(assets->rat);
     free(assets);
 }

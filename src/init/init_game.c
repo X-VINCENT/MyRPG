@@ -13,12 +13,12 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = START_STAGE;
+    game->stage = MAP_STAGE;
     game->last_stage = START_STAGE;
     game->fps = 60;
     game->res = 1080;
     init_window(game);
-    init_view(game);
+    //init_view(game);
     init_event(game);
     init_assets(game);
     return game;
@@ -46,8 +46,8 @@ void init_event(game_t *game)
 
 void init_view(game_t *game)
 {
-    sfVector2f size = {game->res * 16 / 9, game->res};
+    /*sfVector2f size = {game->res * 16 / 9, game->res};
     sfVector2f pos = init_pos(0, 0);
 
-    game->view = create_view(size, pos);
+    game->view = create_view(size, pos);*/
 }

@@ -14,7 +14,8 @@ int check_assets(void)
     error += check_audio();
     error += check_fonts();
     error += check_pictures();
-    error += is_file("assets/map/map.jpg");
+    error += is_file(MAP);
+    error += is_file(RAT_BLUE);
     if (error > 0)
         return ERROR;
     return SUCCESS;

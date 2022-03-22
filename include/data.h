@@ -14,8 +14,13 @@
         sfSprite *bg;
     } map_t;
 
+    typedef struct rat {
+        sfSprite *rat;
+    } rat_t;
+
     typedef struct assets {
         sfSprite *cursor;
+        rat_t *rat;
         map_t *map;
     } assets_t;
 

@@ -30,6 +30,8 @@
 
     // Assets
     #define MAP "assets/map/map.jpg"
+    #define RAT_BLUE "assets/fonts/rats/blue.png"
+    #define CURSOR "assets/pictures/icons/cursor_icon.png"
 
     // Stage
     #define START_STAGE 0
