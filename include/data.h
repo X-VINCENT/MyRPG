@@ -26,6 +26,7 @@
 
     typedef struct game {
         sfRenderWindow *window;
+        sfView *view;
         event_t *event;
         assets_t *assets;
         int stage;

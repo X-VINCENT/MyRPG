@@ -18,6 +18,7 @@ game_t *init_game(void)
     game->fps = 60;
     game->res = 1080;
     init_window(game);
+    init_view(game);
     init_event(game);
     init_assets(game);
     return game;
@@ -41,4 +42,12 @@ void init_event(game_t *game)
         return;
     game->event = malloc(sizeof(event_t));
     game->event->event = malloc(sizeof(sfEvent));
+}
+
+void init_view(game_t *game)
+{
+    sfVector2f size = {game->res * 16 / 9, game->res};
+    sfVector2f pos = init_pos(0, 0);
+
+    game->view = create_view(size, pos);
 }

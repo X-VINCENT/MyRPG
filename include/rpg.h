@@ -35,5 +35,4 @@
     #define START_STAGE 0
     #define MAP_STAGE 1
 
-
 #endif /* !MY_RPG_H_ */
