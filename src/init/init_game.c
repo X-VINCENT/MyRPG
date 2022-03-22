@@ -13,7 +13,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = MAP_STAGE;
+    game->stage = START_STAGE;
     game->last_stage = START_STAGE;
     game->fps = 60;
     game->res = 1080;
