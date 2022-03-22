@@ -34,20 +34,29 @@
         // zoom_view.c
         void zoom_view(game_t *game);
 
+        // key_pressed.c
+        void map_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void map_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void map_mouse_pressed(game_t *game);
+
     // event_1.c
     void event(game_t *game);
     void event_key_pressed(game_t *game);
-    void mouse_button_pressed(game_t *game);
+    void mouse_pressed(game_t *game);
     void mouse_moved(game_t *game);
 
     // event_2.c
     void event_key_pressed_2(game_t *game);
-    void mouse_button_pressed_2(game_t *game);
+    void mouse_pressed_2(game_t *game);
     void mouse_moved_2(game_t *game);
 
     // event_3.c
     void event_key_pressed_3(game_t *game);
-    void mouse_button_pressed_3(game_t *game);
+    void mouse_pressed_3(game_t *game);
     void mouse_moved_3(game_t *game);
 
     //rat

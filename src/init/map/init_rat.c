@@ -14,7 +14,7 @@ void init_rat(game_t *game)
     sfVector2f pos = init_pos(960, 540);
     sfVector2f scale = {SCALE_RAT, SCALE_RAT};
 
-    game->assets->map->rat->sprite = create_sprite(RAT_BLUE, rect, pos, scale);
+    game->assets->map->rat->sprite = create_sprite(BLUE_RAT, rect, pos, scale);
     set_sprite_origin(game->assets->map->rat->sprite, rect);
     game->assets->map->rat->speed = RAT_SPEED;
 }

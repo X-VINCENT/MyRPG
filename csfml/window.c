@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** Create Window gor CSFML
+** Create Window for CSFML
 ** File description:
 ** Xavier VINCENT
 */

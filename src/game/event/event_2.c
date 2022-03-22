@@ -16,11 +16,11 @@ void event_key_pressed_2(game_t *game)
     }
 }
 
-void mouse_button_pressed_2(game_t *game)
+void mouse_pressed_2(game_t *game)
 {
     switch (game->stage) {
         default:
-            mouse_button_pressed_3(game);
+            mouse_pressed_3(game);
             break;
     }
 }

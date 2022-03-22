@@ -11,22 +11,21 @@ void event(game_t *game)
 {
     if (!game)
         return;
-    if (sfRenderWindow_pollEvent(game->window, game->event->event)) {
-        switch (game->event->event->type) {
-            case sfEvtClosed:
-                sfRenderWindow_close(game->window);
-                break;
-            case sfEvtKeyPressed:
-                event_key_pressed(game);
-                break;
-            case sfEvtMouseButtonPressed:
-                mouse_button_pressed(game);
-                break;
-            case sfEvtMouseMoved:
-                mouse_moved(game);
-            default:
-                break;
-        }
+    sfRenderWindow_pollEvent(game->window, game->event->event);
+    switch (game->event->event->type) {
+        case sfEvtClosed:
+            sfRenderWindow_close(game->window);
+            break;
+        case sfEvtKeyPressed:
+            event_key_pressed(game);
+            break;
+        case sfEvtMouseButtonPressed:
+            mouse_pressed(game);
+            break;
+        case sfEvtMouseMoved:
+            mouse_moved(game);
+        default:
+            break;
     }
 }
 
@@ -34,19 +33,20 @@ void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
         case MAP_STAGE:
-            zoom_view(game);
-            move_rat(game);
+            map_key_pressed(game);
         default:
             event_key_pressed_2(game);
             break;
     }
 }
 
-void mouse_button_pressed(game_t *game)
+void mouse_pressed(game_t *game)
 {
     switch (game->stage) {
+        case MAP_STAGE:
+            map_mouse_pressed(game);
         default:
-            mouse_button_pressed_2(game);
+            mouse_pressed_2(game);
             break;
     }
 }

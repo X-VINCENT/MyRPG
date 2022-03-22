@@ -11,6 +11,7 @@ int check_pictures(void)
 {
     int error = 0;
 
+    error += is_file(BLUE_RAT);
     return error;
 }
 

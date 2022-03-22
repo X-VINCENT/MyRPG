@@ -26,7 +26,7 @@ game_t *init_game(void)
 
 void init_window(game_t *game)
 {
-    game->window = create_window("My Defender",
+    game->window = create_window("My RPG",
         game->res * 16 / 9, game->res);
     sfRenderWindow_setFramerateLimit(game->window, game->fps);
     sfRenderWindow_setMouseCursorVisible(game->window, sfFalse);

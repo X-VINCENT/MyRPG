@@ -17,15 +17,15 @@ void zoom_view(game_t *game)
         sfView_setSize(game->view, (sfVector2f){
             view_size.x - ZOOM * 16 / 9, view_size.y - ZOOM});
         sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            sfSprite_getScale(game->assets->cursor).x - ZOOM / 50,
-            sfSprite_getScale(game->assets->cursor).y - ZOOM / 50});
+            sfSprite_getScale(game->assets->cursor).x - ZOOM / 100,
+            sfSprite_getScale(game->assets->cursor).y - ZOOM / 100});
     }
     if (event->key.code == sfKeyLControl &&
         sfView_getSize(game->view).y < MAX_DEZOOM) {
         sfView_setSize(game->view, (sfVector2f){
             view_size.x + ZOOM * 16 / 9, view_size.y + ZOOM});
         sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            sfSprite_getScale(game->assets->cursor).x + ZOOM / 50,
-            sfSprite_getScale(game->assets->cursor).y + ZOOM / 50});
+            sfSprite_getScale(game->assets->cursor).x + ZOOM / 100,
+            sfSprite_getScale(game->assets->cursor).y + ZOOM / 100});
     }
 }
