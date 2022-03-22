@@ -24,6 +24,7 @@ SRC                 =           $(addprefix src/,                            \
 								game/event/map/key_pressed.c                 \
 								game/event/map/mouse_moved.c                 \
 								game/event/map/mouse_pressed.c               \
+								game/event/rat/move_rat.c                 \
 								game/event/event_1.c                         \
 								game/event/event_2.c					     \
 								game/event/event_3.c					     \

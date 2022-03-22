@@ -34,6 +34,9 @@
     void mouse_button_pressed_3(game_t *game);
     void mouse_moved_3(game_t *game);
 
+    //rat
+    void move_rat(game_t *game);
+
 // Stage
     // map.c
     void map_stage(game_t *game);
