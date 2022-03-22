@@ -58,6 +58,10 @@
         const char *font_path, sfColor color, int size, const char *string);
     void destroy_text(sfText *text);
 
+// View
+    sfView *create_view(sfVector2f size, sfVector2f position);
+    void destroy_view(sfView *view);
+
 // Window
     sfRenderWindow *create_window(const char *title, int width, int height);
     sfRenderWindow *set_icon_window(
