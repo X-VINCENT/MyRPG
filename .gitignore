@@ -10,6 +10,8 @@ my_rpg
 *.obj
 *.elf
 *.gcno
+*.gcda
+*.dat
 
 # Linker output
 *.ilk
