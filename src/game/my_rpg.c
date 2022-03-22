@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-int check_clock(game_t *game, sfClock *clock)
+int display_all(game_t *game, sfClock *clock)
 {
     if (sfTime_asSeconds(
         sfClock_getElapsedTime(clock)) > 1 / game->fps) {
@@ -23,50 +23,19 @@ int check_clock(game_t *game, sfClock *clock)
 int my_rpg(void)
 {
     game_t *game = NULL;
+    sfClock *clock = sfClock_create();
 
     if (!(game = init_game()))
         return ERROR;
-    sfClock *clock = sfClock_create();
     while (sfRenderWindow_isOpen(game->window)) {
         sfRenderWindow_setView(game->window, game->view);
         event(game);
         select_game_stage(game);
-        check_clock(game, clock);
+        display_all(game, clock);
     }
     sfClock_destroy(clock);
     destroy_all(game);
     return SUCCESS;
-}
-
-void select_game_stage(game_t *game)
-{
-    if (!game)
-        return;
-    switch (game->stage) {
-        case MAP_STAGE:
-            map_stage(game);
-            break;
-        default:
-            break;
-    }
-    select_game_stage_2(game);
-}
-
-void select_game_stage_2(game_t *game)
-{
-    switch (game->stage) {
-        default:
-            break;
-    }
-    select_game_stage_3(game);
-}
-
-void select_game_stage_3(game_t *game)
-{
-    switch (game->stage) {
-        default:
-            break;
-    }
 }
 
 void display_cursor(game_t *game)
@@ -78,4 +47,5 @@ void display_cursor(game_t *game)
     if (!game)
         return;
     sfSprite_setPosition(game->assets->cursor, coords);
+    sfRenderWindow_drawSprite(game->window, game->assets->cursor, NULL);
 }

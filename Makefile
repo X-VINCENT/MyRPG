@@ -30,6 +30,7 @@ SRC                 =           $(addprefix src/,                            \
 								game/event/event_2.c					     \
 								game/event/event_3.c					     \
 								game/stage/map.c                             \
+								game/stage/stage.c                           \
 								game/tools/audio.c                           \
 								game/tools/fps.c                             \
 								game/tools/res.c                             \
