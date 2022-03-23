@@ -42,8 +42,8 @@
     #define DEFAULT_WINDOW_RESOLUTION 1080
 
     // View
-    #define VIEW_DEFAULT_SIZE_X 1920
-    #define VIEW_DEFAULT_SIZE_Y 1080
+    #define VIEW_DEFAULT_SIZE_X 500
+    #define VIEW_DEFAULT_SIZE_Y 312.5
     #define VIEW_DEFAULT_POS_X 0
     #define VIEW_DEFAULT_POS_Y 0
     #define VIEW_DEFAULT_ROTATION 0
