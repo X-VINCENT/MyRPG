@@ -17,6 +17,7 @@
 
     typedef struct map {
         sfSprite *bg;
+        sfConvexShape *appartment_shape;
         rat_t *rat;
     } map_t;
 

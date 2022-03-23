@@ -45,9 +45,11 @@
     float time_elapsed(sfClock *clock);
 
 // Convex Shape
-    sfConvexShape *create_convex_shape_from_file(const char *filepath);
+    sfConvexShape *create_convex_shape_from_file(const char *filepath,
+        sfVector2f position, sfColor color, sfColor out_color);
     shape_t *store_shape_coordinates_in_struct(const char *buffer);
-    sfConvexShape *create_convex_shape(shape_t *s_shape);
+    sfConvexShape *create_convex_shape(shape_t *s_shape, sfVector2f position,
+        sfColor color, sfColor out_color);
 
 //Init
     sfIntRect init_rect(int left, int top, int width, int height);

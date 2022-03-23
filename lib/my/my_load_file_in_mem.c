@@ -18,9 +18,9 @@ char *my_load_file_in_mem(const char *file)
         my_puterror("File not found.\n");
         return NULL;
     }
-    if ((buff = malloc(sizeof(char) * 201 + 1)) == NULL)
+    if ((buff = malloc(sizeof(char) * 1000000 + 1)) == NULL)
         return NULL;
-    read(fd, buff, 202);
+    read(fd, buff, 1000000);
     buff[my_strlen(buff) + 1] = '\0';
     close(fd);
     return buff;

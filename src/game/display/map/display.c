@@ -12,4 +12,5 @@ void display_map(game_t *game)
     map_t *map = game->assets->map;
 
     sfRenderWindow_drawSprite(game->window, map->bg, NULL);
+    sfRenderWindow_drawConvexShape(game->window, map->appartment_shape, NULL);
 }

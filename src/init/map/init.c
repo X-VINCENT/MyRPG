@@ -15,5 +15,7 @@ void init_map(game_t *game)
 
     game->assets->map = malloc(sizeof(map_t));
     game->assets->map->bg = create_sprite(MAP, rect, pos, scale);
+    game->assets->map->appartment_shape = create_convex_shape_from_file(
+        "assets/map/appartment.shape", pos, sfRed, sfBlack);
     init_rat(game);
 }
