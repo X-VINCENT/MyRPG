@@ -12,6 +12,16 @@
     #include <SFML/Audio.h>
     #include <SFML/Graphics.h>
 
+    #include "../lib/my/my.h"
+    #include "../lib/my_printf/my_printf.h"
+
+// Structures
+    typedef struct shape {
+        int *x;
+        int *y;
+        int counter;
+    } shape_t;
+
 // Animation
     void button_hover(sfSprite *sprite, sfClock *clock,
         sfFloatRect *global_bounds, sfVector2f coords);
@@ -33,6 +43,11 @@
 
 // Clock
     float time_elapsed(sfClock *clock);
+
+// Convex Shape
+    sfConvexShape *create_convex_shape_from_file(const char *filepath);
+    shape_t *store_shape_coordinates_in_struct(const char *buffer);
+    sfConvexShape *create_convex_shape(shape_t *s_shape);
 
 //Init
     sfIntRect init_rect(int left, int top, int width, int height);
