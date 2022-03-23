@@ -29,6 +29,8 @@ void move_rat_left(
     sfIntRect rect = init_rect(24, 66, 23, 22);
     sfVector2f scale = {-SCALE_RAT, SCALE_RAT};
 
+    if (!rat_can_move_left(game))
+        return;
     pos.x -= speed_move;
     sfSprite_setTextureRect(rat, rect);
     sfSprite_setScale(rat, scale);
@@ -42,6 +44,8 @@ void move_rat_right(
     sfIntRect rect = init_rect(24, 66, 23, 22);
     sfVector2f scale = {SCALE_RAT, SCALE_RAT};
 
+    if (!rat_can_move_right(game))
+        return;
     pos.x += speed_move;
     sfSprite_setTextureRect(rat, rect);
     sfSprite_setScale(rat, scale);
@@ -55,6 +59,8 @@ void move_rat_up(
     sfIntRect rect = init_rect(22, 95, 16, 21);
     sfVector2f scale = {SCALE_RAT, SCALE_RAT};
 
+    if (!rat_can_move_up(game))
+        return;
     pos.y -= speed_move;
     sfSprite_setTextureRect(rat, rect);
     sfSprite_setScale(rat, scale);
@@ -68,6 +74,8 @@ void move_rat_down(
     sfIntRect rect = init_rect(21, 39, 16, 21);
     sfVector2f scale = {SCALE_RAT, SCALE_RAT};
 
+    if (!rat_can_move_down(game))
+        return;
     pos.y += speed_move;
     sfSprite_setTextureRect(rat, rect);
     sfSprite_setScale(rat, scale);

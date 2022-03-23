@@ -53,6 +53,8 @@
     #define VIEW_ROTATE_VALUE 5
 
     // Rat
+    #define RAT_DEFAULT_POS_X 100
+    #define RAT_DEFAULT_POS_Y 100
     #define SCALE_RAT 1
     #define RAT_SPEED 10
 

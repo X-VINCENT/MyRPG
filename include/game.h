@@ -21,6 +21,12 @@
 // Event
     // Map
         // Rat
+            // check_move_rat.c
+            int rat_can_move_left(game_t *game);
+            int rat_can_move_right(game_t *game);
+            int rat_can_move_up(game_t *game);
+            int rat_can_move_down(game_t *game);
+
             // move_rat.c
             void move_rat(game_t *game);
             void move_rat_left(

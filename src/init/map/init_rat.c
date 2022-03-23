@@ -11,10 +11,11 @@ void init_rat(game_t *game)
 {
     game->assets->map->rat = malloc(sizeof(rat_t));
     sfIntRect rect = init_rect(21, 39, 16, 21);
-    sfVector2f pos = init_pos(960, 540);
+    sfVector2f pos = init_pos(RAT_DEFAULT_POS_X, RAT_DEFAULT_POS_Y);
     sfVector2f scale = {SCALE_RAT, SCALE_RAT};
 
-    game->assets->map->rat->sprite = create_sprite(BLUE_RAT, rect, pos, scale);
+    game->assets->map->rat->sprite = create_sprite(
+        BLUE_RAT, rect, pos, scale);
     set_sprite_origin(game->assets->map->rat->sprite, rect);
     game->assets->map->rat->speed = RAT_SPEED;
 }

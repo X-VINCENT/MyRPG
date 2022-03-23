@@ -21,6 +21,7 @@ SRC                 =           $(addprefix src/,                            \
 								errors/help.c                                \
 								game/display/map/rat/display.c               \
 								game/display/map/display.c                   \
+								game/event/map/rat/check_move_rat.c          \
 								game/event/map/rat/move_rat.c                \
 								game/event/map/key_pressed.c                 \
 								game/event/map/mouse_moved.c                 \
