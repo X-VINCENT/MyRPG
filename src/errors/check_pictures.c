@@ -11,17 +11,23 @@ int check_pictures(void)
 {
     int error = 0;
 
+    error += is_file(BLUE_RAT);
+    error += is_file(APPARTMENT);
+    error += is_file(CITY);
+    error += check_environment_assets();
+    error += check_gui();
+    error += check_icons();
     return error;
 }
 
-int check_backgrounds(void)
+int check_environment_assets(void)
 {
     int error = 0;
 
     return error;
 }
 
-int check_buttons(void)
+int check_gui(void)
 {
     int error = 0;
 
@@ -32,7 +38,7 @@ int check_icons(void)
 {
     int error = 0;
 
-    error += is_file("assets/pictures/icons/cursor_icon.png");
-    error += is_file("assets/pictures/icons/window_icon.png");
+    error += is_file(CURSOR);
+    error += is_file(WINDOW_ICON);
     return error;
 }

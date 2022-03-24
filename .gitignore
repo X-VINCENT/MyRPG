@@ -1,32 +1,60 @@
-#################################################
-#                                               #
-#                  .gitignore                   #
-#                                               #
-#################################################
-
-#################################################
-#                  Base  Files                  #
-#################################################
-a.out
-
-#################################################
-#                  Temp  Files                  #
-#################################################
+# Prerequisites
+*.d
 *~
-*.o
+my_rpg
+push_code
 .vscode
-.history
-vgcore*
+*.dat
 
-#################################################
-#               Criterion Files                 #
-#################################################
-unit_tests
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
 *.gcno
 *.gcda
 
-#################################################
-#                Project Files                  #
-#################################################
-my_rpg
-*.dat
+# Linker output
+*.ilk
+*.map
+*.city
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf

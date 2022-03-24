@@ -12,6 +12,16 @@
     #include <SFML/Audio.h>
     #include <SFML/Graphics.h>
 
+    #include "../lib/my/my.h"
+    #include "../lib/my_printf/my_printf.h"
+
+// Structures
+    typedef struct shape {
+        int *x;
+        int *y;
+        int counter;
+    } shape_t;
+
 // Animation
     void button_hover(sfSprite *sprite, sfClock *clock,
         sfFloatRect *global_bounds, sfVector2f coords);
@@ -34,7 +44,19 @@
 // Clock
     float time_elapsed(sfClock *clock);
 
-//Init
+// Convex Shape
+    sfConvexShape *create_convex_shape_from_file(const char *filepath,
+        sfVector2f position, sfColor color, sfColor out_color);
+    shape_t *store_shape_coordinates_in_struct(const char *buffer);
+    sfConvexShape *create_convex_shape(shape_t *s_shape, sfVector2f position,
+        sfColor color, sfColor out_color);
+
+// Image
+    sfImage *create_image(const char *filename);
+    void save_image(sfImage *image, const char *filename);
+    void destroy_image(sfImage *image);
+
+// Init
     sfIntRect init_rect(int left, int top, int width, int height);
     sfVector2f init_pos(int x, int y);
     sfVector2f init_scale(int x, int y);
@@ -51,12 +73,17 @@
     sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
         sfVector2f position, sfVector2f scale);
     void animate_sprite(sfSprite *sprite, float shift, int max_value);
+    void set_sprite_origin(sfSprite *sprite, sfIntRect rect);
     void destroy_sprite(sfSprite *sprite);
 
 // Text
     sfText *create_text(
         const char *font_path, sfColor color, int size, const char *string);
     void destroy_text(sfText *text);
+
+// View
+    sfView *create_view(sfVector2f size, sfVector2f position, float angle);
+    void destroy_view(sfView *view);
 
 // Window
     sfRenderWindow *create_window(const char *title, int width, int height);
