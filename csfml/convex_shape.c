@@ -19,8 +19,6 @@ sfConvexShape *create_convex_shape_from_file(const char *filepath,
         return NULL;
     if (!(s_shape = store_shape_coordinates_in_struct(buffer)))
         return NULL;
-    for (int idx = 0; idx < s_shape->counter; idx += 1)
-        printf("{%d, %d}\n", s_shape->x[idx], s_shape->y[idx]);
     free(buffer);
     return create_convex_shape(s_shape, position, color, out_color);
 }
