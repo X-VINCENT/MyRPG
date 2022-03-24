@@ -72,7 +72,8 @@
 // Sprite
     sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
         sfVector2f position, sfVector2f scale);
-    void animate_sprite(sfSprite *sprite, float shift, int max_value);
+    void animate_sprite(
+        sfSprite *sprite, float shift, int max_value, int offset_from_left);
     void set_sprite_origin(sfSprite *sprite, sfIntRect rect);
     void destroy_sprite(sfSprite *sprite);
 

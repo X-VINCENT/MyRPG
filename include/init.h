@@ -20,7 +20,7 @@
 
 // Rat
     // init.c
-    void init_rat(game_t *game);
+    void init_rat(game_t *game, const char *filename_color);
 
 // init_assets.c
 void init_assets(game_t *game);

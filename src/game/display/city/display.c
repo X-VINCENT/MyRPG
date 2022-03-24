@@ -12,6 +12,6 @@ void display_city(game_t *game)
     city_t *city = game->assets->city;
 
     sfView_setCenter(
-        game->view, sfSprite_getPosition(game->assets->rat->sprite));
+        game->view, sfSprite_getPosition(game->assets->rat->idle_front));
     sfRenderWindow_drawSprite(game->window, city->bg, NULL);
 }

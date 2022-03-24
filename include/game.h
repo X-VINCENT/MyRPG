@@ -46,14 +46,20 @@
 
     // Rat
         // Rat
-            // check_move_rat.c
+            // animate.c
+            void animate_rats(game_t *game);
+
+            // check.c
             int rat_can_move_left(game_t *game);
             int rat_can_move_right(game_t *game);
             int rat_can_move_up(game_t *game);
             int rat_can_move_down(game_t *game);
 
-            // move_rat.c
+            // move.c
             void move_rat(game_t *game);
+
+            // position.c
+            void set_rats_position(game_t *game, sfVector2f position);
 
         // key_pressed.c
         void rat_key_pressed(game_t *game);

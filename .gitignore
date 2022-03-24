@@ -5,6 +5,7 @@ my_rpg
 push_code
 .vscode
 *.dat
+unit_tests
 
 # Object files
 *.o
