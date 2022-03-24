@@ -20,8 +20,20 @@
     } city_t;
 
     typedef struct rat {
-        sfSprite *sprite;
+        sfSprite *idle_front;
+        sfSprite *idle_back;
+        sfSprite *idle_left;
+        sfSprite *idle_right;
+        sfSprite *movement_up;
+        sfSprite *movement_down;
+        sfSprite *movement_left;
+        sfSprite *movement_right;
+        int up;
+        int down;
+        int left;
+        int right;
         int speed;
+        int is_moving;
     } rat_t;
 
     typedef struct assets {

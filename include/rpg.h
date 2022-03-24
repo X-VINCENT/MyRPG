@@ -70,9 +70,22 @@
     #define VIEW_ROTATE_VALUE 5
 
     // Rat
-    #define RAT_DEFAULT_POS_X 100
-    #define RAT_DEFAULT_POS_Y 100
-    #define SCALE_RAT 1
+    #define RAT_DEFAULT_POS (sfVector2f){100, 100}
+    #define SCALE_RAT (sfVector2f){1.00, 1.00}
     #define RAT_SPEED 1
+        // Idle
+            #define RAT_IDLE_FRONT_OFFSET 18
+            #define RAT_IDLE_FRONT_MAX 94
+            #define RAT_IDLE_BACK_OFFSET 19
+            #define RAT_IDLE_BACK_MAX 94
+            #define RAT_IDLE_SIDE_OFFSET 27
+            #define RAT_IDLE_SIDE_MAX 129
+        // Movement
+            #define RAT_UP_OFFSET 19
+            #define RAT_UP_MAX 135
+            #define RAT_DOWN_OFFSET 18
+            #define RAT_DOWN_MAX 133
+            #define RAT_SIDE_OFFSET 25
+            #define RAT_SIDE_MAX 164
 
 #endif /* !MY_RPG_H_ */
