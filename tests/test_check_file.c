@@ -42,10 +42,3 @@ Test(is_file, basic_is_file_false)
 
     cr_assert_eq(returned_value, 1);
 }
-
-Test(is_file, basic_is_file_null)
-{
-    int returned_value = is_file(NULL);
-
-    cr_assert_eq(returned_value, 1);
-}
