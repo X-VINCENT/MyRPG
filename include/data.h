@@ -28,6 +28,8 @@
         sfSprite *movement_down;
         sfSprite *movement_left;
         sfSprite *movement_right;
+        sfClock *idle_anim_clock;
+        sfClock *movement_anim_clock;
         int up;
         int down;
         int left;

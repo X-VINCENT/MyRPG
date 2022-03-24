@@ -26,7 +26,8 @@ sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
     return sprite;
 }
 
-void animate_sprite(sfSprite *sprite, float shift, int max_value)
+void animate_sprite(
+    sfSprite *sprite, float shift, int max_value, int offset_from_left)
 {
     sfIntRect rect;
 
@@ -34,7 +35,7 @@ void animate_sprite(sfSprite *sprite, float shift, int max_value)
         return;
     rect = sfSprite_getTextureRect(sprite);
     if (rect.left >= max_value - shift)
-        rect.left = 0;
+        rect.left = offset_from_left;
     else
         rect.left += shift;
     sfSprite_setTextureRect(sprite, rect);

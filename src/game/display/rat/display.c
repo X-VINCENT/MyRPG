@@ -50,4 +50,5 @@ void display_rat(game_t *game)
         default:
             break;
     }
+    rat->is_moving = 0;
 }

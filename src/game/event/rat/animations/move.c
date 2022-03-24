@@ -12,7 +12,6 @@ void move_rat_up(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_up);
 
-    rat->is_moving = 0;
     if (!rat_can_move_up(game))
         return;
     pos.y -= rat->speed;
@@ -29,7 +28,6 @@ void move_rat_down(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_down);
 
-    rat->is_moving = 0;
     if (!rat_can_move_down(game))
         return;
     pos.y += rat->speed;
@@ -46,7 +44,6 @@ void move_rat_left(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_left);
 
-    rat->is_moving = 0;
     if (!rat_can_move_left(game))
         return;
     pos.x -= rat->speed;
@@ -63,7 +60,6 @@ void move_rat_right(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_right);
 
-    rat->is_moving = 0;
     if (!rat_can_move_right(game))
         return;
     pos.x += rat->speed;

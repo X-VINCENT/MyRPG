@@ -25,6 +25,7 @@ void init_rat_idle(game_t *game, const char *filename_color)
     set_sprite_origin(rat->idle_back, r_back);
     set_sprite_origin(rat->idle_left, r_sides);
     set_sprite_origin(rat->idle_right, r_sides);
+    rat->idle_anim_clock = sfClock_create();
 }
 
 void init_rat_movement(game_t *game, const char *filename_color)
@@ -45,6 +46,7 @@ void init_rat_movement(game_t *game, const char *filename_color)
     set_sprite_origin(rat->movement_down, r_down);
     set_sprite_origin(rat->movement_left, r_sides);
     set_sprite_origin(rat->movement_right, r_sides);
+    rat->movement_anim_clock = sfClock_create();
 }
 
 void init_rat(game_t *game, const char *filename_color)
