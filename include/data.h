@@ -10,6 +10,11 @@
 
     #include "csfml.h"
 
+    typedef struct appartment {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } appartment_t;
+
     typedef struct city {
         sfSprite *bg;
     } city_t;
@@ -21,6 +26,7 @@
 
     typedef struct assets {
         sfSprite *cursor;
+        appartment_t *appartment;
         city_t *city;
         rat_t *rat;
     } assets_t;

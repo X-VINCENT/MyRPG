@@ -12,6 +12,7 @@ SRC_MAIN            =           $(addprefix src/,                            \
 								main.c)
 
 SRC                 =           $(addprefix src/,                             \
+								destroy/appartment/destroy.c                  \
 								destroy/city/destroy.c                        \
 								destroy/rat/destroy.c                         \
 								destroy/destroy.c                             \
@@ -19,8 +20,12 @@ SRC                 =           $(addprefix src/,                             \
 								errors/check_file.c                           \
 								errors/check_pictures.c                       \
 								errors/help.c                                 \
+								game/display/appartment/display.c             \
 								game/display/city/display.c                   \
 								game/display/rat/display.c                    \
+								game/event/appartment/key_pressed.c           \
+								game/event/appartment/mouse_moved.c           \
+								game/event/appartment/mouse_pressed.c         \
 								game/event/city/key_pressed.c                 \
 								game/event/city/mouse_moved.c                 \
 								game/event/city/mouse_pressed.c               \
@@ -32,6 +37,7 @@ SRC                 =           $(addprefix src/,                             \
 								game/event/event_1.c                          \
 								game/event/event_2.c					      \
 								game/event/event_3.c					      \
+								game/stage/appartment.c                       \
 								game/stage/city.c                             \
 								game/stage/stage.c                            \
 								game/tools/audio.c                            \
@@ -39,6 +45,7 @@ SRC                 =           $(addprefix src/,                             \
 								game/tools/res.c                              \
 								game/tools/view.c                             \
 								game/my_rpg.c                                 \
+								init/appartment/init.c                        \
 								init/city/init.c                              \
 								init/rat/init.c                               \
 								init/init_assets.c                            \

@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Appartment
+    // destroy.c
+    void destroy_appartment(appartment_t *appartment);
+
 // City
     // destroy.c
     void destroy_city(city_t *city);

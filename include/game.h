@@ -11,6 +11,10 @@
     #include "rpg.h"
 
 // Display
+    // Appartment
+        // display.c
+        void display_appartment(game_t *game);
+
     // City
         // display.c
         void display_city(game_t *game);
@@ -20,6 +24,16 @@
         void display_rat(game_t *game);
 
 // Event
+    // City
+        // key_pressed.c
+        void appartment_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void appartment_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void appartment_mouse_pressed(game_t *game);
+
     // City
         // key_pressed.c
         void city_key_pressed(game_t *game);
@@ -67,6 +81,9 @@
     void mouse_moved_3(game_t *game);
 
 // Stage
+    // appartment.c
+    void appartment_stage(game_t *game);
+
     // city.c
     void city_stage(game_t *game);
 

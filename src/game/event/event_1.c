@@ -33,6 +33,8 @@ void event(game_t *game)
 void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
+        case APPARTMENT_STAGE:
+            appartment_key_pressed(game);
         case CITY_STAGE:
             city_key_pressed(game);
         default:
@@ -44,6 +46,8 @@ void event_key_pressed(game_t *game)
 void mouse_pressed(game_t *game)
 {
     switch (game->stage) {
+        case APPARTMENT_STAGE:
+            appartment_mouse_pressed(game);
         case CITY_STAGE:
             city_mouse_pressed(game);
         default:
@@ -55,6 +59,10 @@ void mouse_pressed(game_t *game)
 void mouse_moved(game_t *game)
 {
     switch (game->stage) {
+        case APPARTMENT_STAGE:
+            appartment_mouse_moved(game);
+        case CITY_STAGE:
+            city_mouse_moved(game);
         default:
             mouse_moved_2(game);
             break;

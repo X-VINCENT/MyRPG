@@ -15,6 +15,7 @@ void init_assets(game_t *game)
     init_cursor(game);
     init_city(game);
     init_rat(game);
+    init_appartment(game);
 }
 
 void init_cursor(game_t *game)

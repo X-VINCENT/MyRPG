@@ -29,6 +29,9 @@ void select_game_stage(game_t *game)
     if (!game)
         return;
     switch (game->stage) {
+        case APPARTMENT_STAGE:
+            appartment_stage(game);
+            break;
         case CITY_STAGE:
             city_stage(game);
             break;
