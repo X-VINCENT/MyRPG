@@ -9,7 +9,7 @@
 
 void display_rat(game_t *game)
 {
-    rat_t *rat = game->assets->map->rat;
+    rat_t *rat = game->assets->rat;
 
     sfRenderWindow_drawSprite(game->window, rat->sprite, NULL);
 }

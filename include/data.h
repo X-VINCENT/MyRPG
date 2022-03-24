@@ -10,20 +10,19 @@
 
     #include "csfml.h"
 
+    typedef struct city {
+        sfSprite *bg;
+    } city_t;
+
     typedef struct rat {
         sfSprite *sprite;
         int speed;
     } rat_t;
 
-    typedef struct map {
-        sfSprite *bg;
-        sfConvexShape *appartment_shape;
-        rat_t *rat;
-    } map_t;
-
     typedef struct assets {
         sfSprite *cursor;
-        map_t *map;
+        city_t *city;
+        rat_t *rat;
     } assets_t;
 
     typedef struct event {

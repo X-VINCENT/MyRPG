@@ -1,15 +1,14 @@
 /*
 ** EPITECH PROJECT, 2022
-** Destroy Map for My RPG
+** Destroy City for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */
 
 #include "rpg.h"
 
-void destroy_map(map_t *map)
+void destroy_city(city_t *city)
 {
-    destroy_sprite(map->bg);
-    destroy_rat(map->rat);
-    free(map);
+    destroy_sprite(city->bg);
+    free(city);
 }

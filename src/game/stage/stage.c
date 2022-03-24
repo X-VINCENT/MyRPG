@@ -29,8 +29,8 @@ void select_game_stage(game_t *game)
     if (!game)
         return;
     switch (game->stage) {
-        case MAP_STAGE:
-            map_stage(game);
+        case CITY_STAGE:
+            city_stage(game);
             break;
         default:
             break;

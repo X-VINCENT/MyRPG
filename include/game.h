@@ -11,15 +11,26 @@
     #include "rpg.h"
 
 // Display
-    // Map
-        // Rat
-            // display.c
-            void display_rat(game_t *game);
+    // City
         // display.c
-        void display_map(game_t *game);
+        void display_city(game_t *game);
+
+    // Rat
+        // display.c
+        void display_rat(game_t *game);
 
 // Event
-    // Map
+    // City
+        // key_pressed.c
+        void city_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void city_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void city_mouse_pressed(game_t *game);
+
+    // Rat
         // Rat
             // check_move_rat.c
             int rat_can_move_left(game_t *game);
@@ -29,27 +40,15 @@
 
             // move_rat.c
             void move_rat(game_t *game);
-            void move_rat_left(
-                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-            void move_rat_right(
-                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-            void move_rat_up(
-                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-            void move_rat_down(
-                game_t *game, sfVector2f pos, sfSprite *rat, int speed_move);
-        // view.c
-        void zoom_view(game_t *game);
-        void rotate_view(game_t *game);
-        void reset_view(game_t *game);
 
         // key_pressed.c
-        void map_key_pressed(game_t *game);
+        void rat_key_pressed(game_t *game);
 
         // mouse_moved.c
-        void map_mouse_moved(game_t *game);
+        void rat_mouse_moved(game_t *game);
 
         // mouse_pressed.c
-        void map_mouse_pressed(game_t *game);
+        void rat_mouse_pressed(game_t *game);
 
     // event_1.c
     void event(game_t *game);
@@ -67,12 +66,9 @@
     void mouse_pressed_3(game_t *game);
     void mouse_moved_3(game_t *game);
 
-    //rat
-    void move_rat(game_t *game);
-
 // Stage
-    // map.c
-    void map_stage(game_t *game);
+    // city.c
+    void city_stage(game_t *game);
 
     // stage.c
     void select_game_stage(game_t *game);
@@ -96,6 +92,11 @@
     void down_res_2(game_t *game);
     void up_res(game_t *game);
     void up_res_2(game_t *game);
+
+    // view.c
+    void zoom_view(game_t *game);
+    void rotate_view(game_t *game);
+    void reset_view(game_t *game);
 
 // my_rpg.c
 int my_rpg(void);

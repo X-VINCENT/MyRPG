@@ -10,9 +10,9 @@
 
     #include "rpg.h"
 
-// Map
+// City
     // init.c
-    void init_map(game_t *game);
+    void init_city(game_t *game);
 
 // init_assets.c
 void init_assets(game_t *game);

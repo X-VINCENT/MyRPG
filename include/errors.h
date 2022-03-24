@@ -22,8 +22,8 @@ int is_file(const char *filepath);
 
 // Check Pictures
 int check_pictures(void);
-int check_backgrounds(void);
-int check_buttons(void);
+int check_environment_assets(void);
+int check_gui(void);
 int check_icons(void);
 
 // Help

@@ -14,7 +14,6 @@ int check_assets(void)
     error += check_audio();
     error += check_fonts();
     error += check_pictures();
-    error += is_file(MAP);
     if (error > 0)
         return ERROR;
     return SUCCESS;

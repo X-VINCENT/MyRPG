@@ -33,8 +33,8 @@ void event(game_t *game)
 void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
-        case MAP_STAGE:
-            map_key_pressed(game);
+        case CITY_STAGE:
+            city_key_pressed(game);
         default:
             event_key_pressed_2(game);
             break;
@@ -44,8 +44,8 @@ void event_key_pressed(game_t *game)
 void mouse_pressed(game_t *game)
 {
     switch (game->stage) {
-        case MAP_STAGE:
-            map_mouse_pressed(game);
+        case CITY_STAGE:
+            city_mouse_pressed(game);
         default:
             mouse_pressed_2(game);
             break;

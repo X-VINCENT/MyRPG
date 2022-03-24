@@ -14,7 +14,7 @@ game_t *init_game(void)
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
     game->fps_clock = sfClock_create();
-    game->stage = MAP_STAGE;
+    game->stage = CITY_STAGE;
     game->last_stage = START_STAGE;
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
@@ -31,7 +31,7 @@ void init_window(game_t *game)
     game->window = create_window("My RPG", game->res * 16 / 9, game->res);
     sfRenderWindow_setFramerateLimit(game->window, game->fps);
     sfRenderWindow_setMouseCursorVisible(game->window, sfFalse);
-    set_icon_window(game->window, "assets/pictures/icons/window_icon.png");
+    set_icon_window(game->window, WINDOW_ICON);
 }
 
 void init_view(game_t *game)

@@ -13,7 +13,8 @@ void init_assets(game_t *game)
         return;
     game->assets = malloc(sizeof(assets_t));
     init_cursor(game);
-    init_map(game);
+    init_city(game);
+    init_rat(game);
 }
 
 void init_cursor(game_t *game)

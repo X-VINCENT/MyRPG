@@ -1,16 +1,18 @@
 /*
 ** EPITECH PROJECT, 2022
-** Map Mouse Button Pressed for My RPG
+** City Mouse Button Pressed for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #include "rpg.h"
 
-void map_mouse_pressed(game_t *game)
+void city_mouse_pressed(game_t *game)
 {
-    map_t *map = game->assets->map;
+    city_t *city = game->assets->city;
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
+
+    rat_mouse_pressed(game);
 }

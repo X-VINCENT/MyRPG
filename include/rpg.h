@@ -28,14 +28,30 @@
     #define SUCCESS 0
     #define ERROR 84
 
-    // Assets
-    #define MAP "assets/map/map.jpg"
-    #define BLUE_RAT "assets/pictures/rats/blue.png"
-    #define CURSOR "assets/pictures/icons/cursor_icon.png"
+// Assets
+
+    // Audio
+        // Musics
+        // Sounds
+
+    // Images
+        // Characters
+            // Rat
+            #define BLUE_RAT "assets/images/characters/rat/blue.png"
+
+        // Environments
+        #define APPARTMENT "assets/images/environments/appartment/view.png"
+        #define CITY "assets/images/environments/city/view.jpg"
+
+        // Icons
+        #define CURSOR "assets/images/icons/cursor_icon.png"
+        #define WINDOW_ICON "assets/images/icons/window_icon.png"
+
+        // Objects
 
     // Stage
     #define START_STAGE 0
-    #define MAP_STAGE 1
+    #define CITY_STAGE 1
 
     // Window
     #define DEFAULT_FPS 60

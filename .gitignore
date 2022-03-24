@@ -4,6 +4,7 @@
 my_rpg
 push_code
 .vscode
+*.dat
 
 # Object files
 *.o
@@ -16,6 +17,7 @@ push_code
 # Linker output
 *.ilk
 *.map
+*.city
 *.exp
 
 # Precompiled Headers

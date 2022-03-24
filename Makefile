@@ -11,34 +11,37 @@ TEST_NAME           =           unit_tests
 SRC_MAIN            =           $(addprefix src/,                            \
 								main.c)
 
-SRC                 =           $(addprefix src/,                            \
-								destroy/destroy.c                            \
-								destroy/map/rat/destroy.c                    \
-								destroy/map/destroy.c                        \
-								errors/check_env.c                           \
-								errors/check_file.c                          \
-								errors/check_pictures.c                      \
-								errors/help.c                                \
-								game/display/map/rat/display.c               \
-								game/display/map/display.c                   \
-								game/event/map/rat/check_move_rat.c          \
-								game/event/map/rat/move_rat.c                \
-								game/event/map/key_pressed.c                 \
-								game/event/map/mouse_moved.c                 \
-								game/event/map/mouse_pressed.c               \
-								game/event/map/view.c                        \
-								game/event/event_1.c                         \
-								game/event/event_2.c					     \
-								game/event/event_3.c					     \
-								game/stage/map.c                             \
-								game/stage/stage.c                           \
-								game/tools/audio.c                           \
-								game/tools/fps.c                             \
-								game/tools/res.c                             \
-								game/my_rpg.c                                \
-								init/map/init.c                              \
-								init/map/init_rat.c                          \
-								init/init_assets.c                           \
+SRC                 =           $(addprefix src/,                             \
+								destroy/city/destroy.c                        \
+								destroy/rat/destroy.c                         \
+								destroy/destroy.c                             \
+								errors/check_env.c                            \
+								errors/check_file.c                           \
+								errors/check_pictures.c                       \
+								errors/help.c                                 \
+								game/display/city/display.c                   \
+								game/display/rat/display.c                    \
+								game/event/city/key_pressed.c                 \
+								game/event/city/mouse_moved.c                 \
+								game/event/city/mouse_pressed.c               \
+								game/event/rat/move/check.c                   \
+								game/event/rat/move/move.c                    \
+								game/event/rat/key_pressed.c                  \
+								game/event/rat/mouse_moved.c                  \
+								game/event/rat/mouse_pressed.c                \
+								game/event/event_1.c                          \
+								game/event/event_2.c					      \
+								game/event/event_3.c					      \
+								game/stage/city.c                             \
+								game/stage/stage.c                            \
+								game/tools/audio.c                            \
+								game/tools/fps.c                              \
+								game/tools/res.c                              \
+								game/tools/view.c                             \
+								game/my_rpg.c                                 \
+								init/city/init.c                              \
+								init/rat/init.c                               \
+								init/init_assets.c                            \
 								init/init_game.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \
