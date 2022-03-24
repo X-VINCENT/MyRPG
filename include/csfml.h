@@ -51,7 +51,12 @@
     sfConvexShape *create_convex_shape(shape_t *s_shape, sfVector2f position,
         sfColor color, sfColor out_color);
 
-//Init
+// Image
+    sfImage *create_image(const char *filename);
+    void save_image(sfImage *image, const char *filename);
+    void destroy_image(sfImage *image);
+
+// Init
     sfIntRect init_rect(int left, int top, int width, int height);
     sfVector2f init_pos(int x, int y);
     sfVector2f init_scale(int x, int y);
