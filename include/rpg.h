@@ -40,7 +40,7 @@
 
     // Environments
     #define APPARTMENT "assets/images/environments/appartment/view.png"
-    #define APPART_HITBOX "assets/images/environments/appartment/hitbox.png"
+    #define APPART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
     #define CITY "assets/images/environments/city/view.jpg"
 
     // Icons

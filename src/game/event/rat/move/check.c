@@ -11,10 +11,15 @@ int rat_can_move_left(game_t *game)
 {
     rat_t *rat = game->assets->rat;
     sfVector2f rat_pos = sfSprite_getPosition(rat->sprite);
+    sfColor color;
 
-    rat_pos.y += rat->speed;
-    if (game->stage == CITY_STAGE || game->stage == APPARTMENT_STAGE)
-        return 1;
+    rat_pos.x -= rat->speed;
+    if (game->stage == APPARTMENT_STAGE) {
+        color = sfImage_getPixel(
+            game->assets->appartment->hitbox, rat_pos.x, rat_pos.y);
+        if (color.r == 0 && color.g == 0 && color.b == 0)
+            return 1;
+    }
     return 0;
 }
 
@@ -22,10 +27,15 @@ int rat_can_move_right(game_t *game)
 {
     rat_t *rat = game->assets->rat;
     sfVector2f rat_pos = sfSprite_getPosition(rat->sprite);
+    sfColor color;
 
-    rat_pos.y += rat->speed;
-    if (game->stage == CITY_STAGE || game->stage == APPARTMENT_STAGE)
-        return 1;
+    rat_pos.x += rat->speed;
+    if (game->stage == APPARTMENT_STAGE) {
+        color = sfImage_getPixel(
+            game->assets->appartment->hitbox, rat_pos.x, rat_pos.y);
+        if (color.r == 0 && color.g == 0 && color.b == 0)
+            return 1;
+    }
     return 0;
 }
 
@@ -33,10 +43,15 @@ int rat_can_move_up(game_t *game)
 {
     rat_t *rat = game->assets->rat;
     sfVector2f rat_pos = sfSprite_getPosition(rat->sprite);
+    sfColor color;
 
-    rat_pos.y += rat->speed;
-    if (game->stage == CITY_STAGE || game->stage == APPARTMENT_STAGE)
-        return 1;
+    rat_pos.y -= rat->speed;
+    if (game->stage == APPARTMENT_STAGE) {
+        color = sfImage_getPixel(
+            game->assets->appartment->hitbox, rat_pos.x, rat_pos.y);
+        if (color.r == 0 && color.g == 0 && color.b == 0)
+            return 1;
+    }
     return 0;
 }
 
@@ -44,9 +59,14 @@ int rat_can_move_down(game_t *game)
 {
     rat_t *rat = game->assets->rat;
     sfVector2f rat_pos = sfSprite_getPosition(rat->sprite);
+    sfColor color;
 
     rat_pos.y += rat->speed;
-    if (game->stage == CITY_STAGE || game->stage == APPARTMENT_STAGE)
-        return 1;
+    if (game->stage == APPARTMENT_STAGE) {
+        color = sfImage_getPixel(
+            game->assets->appartment->hitbox, rat_pos.x, rat_pos.y);
+        if (color.r == 0 && color.g == 0 && color.b == 0)
+            return 1;
+    }
     return 0;
 }
