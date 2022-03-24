@@ -44,10 +44,3 @@ Test(check_display, basic_check_display_ko)
 
     cr_assert_eq(returned_value, 0);
 }
-
-Test(check_display, basic_check_display_null)
-{
-    int returned_value = check_display(NULL);
-
-    cr_assert_eq(returned_value, ERROR);
-}
