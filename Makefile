@@ -69,9 +69,7 @@ SRC_CSFML           =           $(addprefix csfml/,                          \
 
 SRC_TESTS           =           $(addprefix tests/,                          \
 								test_check_env.c                             \
-								test_check_env2.c                             \
-								test_check_file.c							 \
-								test_check_file2.c)
+								test_check_file.c)
 SRC_TESTS           +=          $(SRC) $(SRC_CSFML)
 
 OBJ_MAIN            =           $(SRC_MAIN:.c=.o)
