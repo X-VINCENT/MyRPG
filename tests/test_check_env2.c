@@ -5,6 +5,9 @@
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
+#include <criterion/criterion.h>
+#include "rpg.h"
+
 Test(check_display, basic_check_display_null)
 {
     int returned_value = check_display(NULL);
