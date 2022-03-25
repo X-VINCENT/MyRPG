@@ -30,6 +30,7 @@
         sfSprite *movement_right;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
+        sfClock *latency_status_clock;
         int up;
         int down;
         int left;
