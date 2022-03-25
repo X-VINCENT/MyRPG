@@ -18,6 +18,11 @@
     // init.c
     void init_city(game_t *game);
 
+// home_menu
+    //parallax
+        // init.c
+        void init_parallax(home_menu_t *home);
+
 // Rat
     // init.c
     void init_rat(game_t *game, const char *filename_color);

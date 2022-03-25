@@ -49,6 +49,7 @@ SRC                 =           $(addprefix src/,                             \
 								game/my_rpg.c                                 \
 								init/appartment/init.c                        \
 								init/city/init.c                              \
+								init/home_menu/parallax/init.c                \
 								init/rat/init.c                               \
 								init/init_assets.c                            \
 								init/init_game.c)
