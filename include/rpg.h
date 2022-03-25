@@ -41,7 +41,8 @@
     // Environments
     #define APPARTMENT "assets/images/environments/appartment/view.png"
     #define APPART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
-    #define CITY "assets/images/environments/city/view.jpg"
+    #define CITY "assets/images/environments/city/view.png"
+    #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
 
     // Icons
     #define CURSOR "assets/images/icons/cursor_icon.png"
@@ -71,8 +72,9 @@
 
     // Rat
     #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
+    #define RAT_DEFAULT_POS_MAP (sfVector2f){2468, 1710}
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
-    #define RAT_SPEED 1
+    #define RAT_SPEED 10
         // Idle
             #define RAT_IDLE_FRONT_OFFSET 18
             #define RAT_IDLE_FRONT_MAX 94

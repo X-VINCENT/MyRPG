@@ -17,6 +17,7 @@
 
     typedef struct city {
         sfSprite *bg;
+        sfImage *hitbox;
     } city_t;
 
     typedef struct rat {

@@ -9,10 +9,11 @@
 
 void init_city(game_t *game)
 {
-    sfIntRect rect = init_rect(0, 0, 10000, 10000);
+    sfIntRect rect = init_rect(0, 0, 3000, 2000);
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->city = malloc(sizeof(city_t));
     game->assets->city->bg = create_sprite(CITY, rect, pos, scale);
+    game->assets->city->hitbox = create_image(CITY_HITBOX);
 }
