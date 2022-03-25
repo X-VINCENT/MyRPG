@@ -43,6 +43,7 @@ void init_rat_movement(game_t *game, const char *filename_color)
         filename_color, r_sides, pos, (sfVector2f){-scale.x, scale.y});
     rat->movement_right = create_sprite(filename_color, r_sides, pos, scale);
     rat->movement_anim_clock = sfClock_create();
+    rat->latency_status_clock = sfClock_create();
     set_sprite_origin(rat->movement_up, r_up);
     set_sprite_origin(rat->movement_down, r_down);
     set_sprite_origin(rat->movement_left, r_sides);

@@ -21,6 +21,7 @@ void move_rat_up(game_t *game)
     rat->left = 0;
     rat->right = 0;
     rat->is_moving = 1;
+    sfClock_restart(rat->latency_status_clock);
 }
 
 void move_rat_down(game_t *game)
@@ -37,6 +38,7 @@ void move_rat_down(game_t *game)
     rat->left = 0;
     rat->right = 0;
     rat->is_moving = 1;
+    sfClock_restart(rat->latency_status_clock);
 }
 
 void move_rat_left(game_t *game)
@@ -53,6 +55,7 @@ void move_rat_left(game_t *game)
     rat->left = 1;
     rat->right = 0;
     rat->is_moving = 1;
+    sfClock_restart(rat->latency_status_clock);
 }
 
 void move_rat_right(game_t *game)
@@ -69,6 +72,7 @@ void move_rat_right(game_t *game)
     rat->left = 0;
     rat->right = 1;
     rat->is_moving = 1;
+    sfClock_restart(rat->latency_status_clock);
 }
 
 void move_rat(game_t *game)
