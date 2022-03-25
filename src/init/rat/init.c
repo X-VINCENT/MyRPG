@@ -56,6 +56,7 @@ void init_rat(game_t *game, const char *filename_color)
     game->assets->rat = malloc(sizeof(rat_t));
     game->assets->rat->speed = RAT_SPEED;
     game->assets->rat->is_moving = 0;
+    game->assets->rat->movement_clock = sfClock_create();
     init_rat_idle(game, filename_color);
     init_rat_movement(game, filename_color);
 }

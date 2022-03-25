@@ -20,5 +20,6 @@ void destroy_rat(rat_t *rat)
     sfClock_destroy(rat->idle_anim_clock);
     sfClock_destroy(rat->movement_anim_clock);
     sfClock_destroy(rat->latency_status_clock);
+    sfClock_destroy(rat->movement_clock);
     free(rat);
 }
