@@ -123,7 +123,7 @@
 
 // my_rpg.c
 int my_rpg(void);
-int display_all(game_t *game);
+int engine(game_t *game);
 void display_cursor(game_t *game);
 
 #endif /* !GAME_H_ */

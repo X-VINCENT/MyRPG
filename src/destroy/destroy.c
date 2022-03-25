@@ -13,7 +13,6 @@ void destroy_all(game_t *game)
         return;
     destroy_window(game->window);
     destroy_view(game->view);
-    sfClock_destroy(game->fps_clock);
     destroy_event(game->event);
     destroy_assets(game->assets);
     free(game);

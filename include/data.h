@@ -66,7 +66,6 @@
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
-        sfClock *fps_clock;
         event_t *event;
         assets_t *assets;
         keys_t *keys;

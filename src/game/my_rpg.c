@@ -15,23 +15,20 @@ int my_rpg(void)
         return ERROR;
     while (sfRenderWindow_isOpen(game->window)) {
         event(game);
-        display_all(game);
+        engine(game);
     }
     destroy_all(game);
     return SUCCESS;
 }
 
-int display_all(game_t *game)
+int engine(game_t *game)
 {
-    if (time_elapsed(game->fps_clock) > 1.0 / game->fps) {
-        sfRenderWindow_clear(game->window, sfBlack);
-        select_game_stage(game);
-        display_cursor(game);
-        sfRenderWindow_setView(game->window, game->view);
-        sfRenderWindow_display(game->window);
-        sfClock_restart(game->fps_clock);
-    }
-    return 0;
+    sfRenderWindow_clear(game->window, sfBlack);
+    select_game_stage(game);
+    display_cursor(game);
+    sfRenderWindow_setView(game->window, game->view);
+    sfRenderWindow_display(game->window);
+    return SUCCESS;
 }
 
 void display_cursor(game_t *game)

@@ -70,7 +70,7 @@
     #define VIEW_ROTATE_VALUE 5
 
     // Rat
-    #define RAT_DEFAULT_POS (sfVector2f){100, 100}
+    #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
     #define RAT_SPEED 1
         // Idle
