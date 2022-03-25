@@ -19,6 +19,9 @@
     void init_city(game_t *game);
 
 // home_menu
+    //init.c
+    void init_home_menu(assets_t *assets);
+
     //parallax
         // init.c
         void init_parallax(home_menu_t *home);

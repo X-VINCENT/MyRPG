@@ -14,6 +14,8 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                             \
 								destroy/appartment/destroy.c                  \
 								destroy/city/destroy.c                        \
+								destroy/home_menu/destroy.c                   \
+								destroy/home_menu/parallax/destroy.c          \
 								destroy/rat/destroy.c                         \
 								destroy/destroy.c                             \
 								errors/check_env.c                            \
@@ -49,6 +51,7 @@ SRC                 =           $(addprefix src/,                             \
 								game/my_rpg.c                                 \
 								init/appartment/init.c                        \
 								init/city/init.c                              \
+								init/home_menu/init.c                         \
 								init/home_menu/parallax/init.c                \
 								init/rat/init.c                               \
 								init/init_assets.c                            \

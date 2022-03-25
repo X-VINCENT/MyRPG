@@ -15,11 +15,11 @@ void init_parallax(home_menu_t *home)
 
     home->parallax = malloc(sizeof(parallax_t));
     home->parallax->bg0 = create_sprite(
-        "assets/images/menus/home/bg0.png,", rect, pos, scale);
+        "assets/images/menus/home/bg0.png", rect, pos, scale);
     home->parallax->bg1 = create_sprite(
-        "assets/images/menus/home/bg1.png,", rect, pos, scale);
+        "assets/images/menus/home/bg1.png", rect, pos, scale);
     home->parallax->bg2 = create_sprite(
-        "assets/images/menus/home/bg2.png,", rect, pos, scale);
+        "assets/images/menus/home/bg2.png", rect, pos, scale);
     home->parallax->bg3 = create_sprite(
-        "assets/images/menus/home/bg3.png,", rect, pos, scale);
+        "assets/images/menus/home/bg3.png", rect, pos, scale);
 }

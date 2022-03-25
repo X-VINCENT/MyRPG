@@ -32,6 +32,7 @@ void destroy_assets(assets_t *assets)
         return;
     destroy_appartment(assets->appartment);
     destroy_city(assets->city);
+    destroy_home_menu(assets->home_menu);
     destroy_rat(assets->rat);
     free(assets);
 }
