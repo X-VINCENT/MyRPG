@@ -38,6 +38,9 @@
     // Characters
         // Rat
         #define BLUE_RAT "assets/images/characters/rat/blue.png"
+        #define RED_RAT "assets/images/characters/rat/red.png"
+        #define GREEN_RAT "assets/images/characters/rat/green.png"
+        #define PURPLE_RAT "assets/images/characters/rat/purple.png"
 
     // Environments
     #define APPARTMENT "assets/images/environments/appartment/view.png"

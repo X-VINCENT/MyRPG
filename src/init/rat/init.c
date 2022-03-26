@@ -53,10 +53,18 @@ void init_rat_movement(game_t *game, const char *filename_color)
 
 void init_rat(game_t *game, const char *filename_color)
 {
+    rat_t *rat = NULL;
+    sfIntRect r_shadow = init_rect(202, 40, 12, 4);
+    sfVector2f pos = RAT_DEFAULT_POS_CITY;
+    sfVector2f scale = SCALE_RAT;
+
     game->assets->rat = malloc(sizeof(rat_t));
-    game->assets->rat->speed = RAT_SPEED_CITY;
-    game->assets->rat->is_moving = 0;
-    game->assets->rat->movement_clock = sfClock_create();
+    rat = game->assets->rat;
+    rat->speed = RAT_SPEED_CITY;
+    rat->is_moving = 0;
+    rat->movement_clock = sfClock_create();
+    rat->shadow = create_sprite(filename_color, r_shadow, pos, scale);
+    set_sprite_origin(rat->shadow, r_shadow);
     init_rat_idle(game, filename_color);
     init_rat_movement(game, filename_color);
 }

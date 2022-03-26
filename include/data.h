@@ -40,6 +40,7 @@
         sfSprite *movement_down;
         sfSprite *movement_left;
         sfSprite *movement_right;
+        sfSprite *shadow;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *movement_clock;

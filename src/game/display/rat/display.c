@@ -11,6 +11,7 @@ void display_rat_movement(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
+    sfRenderWindow_drawSprite(game->window, rat->shadow, NULL);
     if (rat->up == 1)
         sfRenderWindow_drawSprite(game->window, rat->movement_up, NULL);
     if (rat->down == 1)
@@ -29,6 +30,7 @@ void display_rat_idle(game_t *game)
         display_rat_movement(game);
         return;
     }
+    sfRenderWindow_drawSprite(game->window, rat->shadow, NULL);
     if (rat->up == 0 && rat->down == 0 && rat->left == 0 && rat->right == 0)
         sfRenderWindow_drawSprite(game->window, rat->idle_back, NULL);
     if (rat->up == 1)
