@@ -25,9 +25,13 @@ SRC                 =           $(addprefix src/,                             \
 								game/display/appartment/display.c             \
 								game/display/city/display.c                   \
 								game/display/rat/display.c                    \
+								game/event/appartment/locations/door.c        \
+								game/event/appartment/locations/locations.c   \
 								game/event/appartment/key_pressed.c           \
 								game/event/appartment/mouse_moved.c           \
 								game/event/appartment/mouse_pressed.c         \
+								game/event/city/locations/appartment.c        \
+								game/event/city/locations/locations.c         \
 								game/event/city/key_pressed.c                 \
 								game/event/city/mouse_moved.c                 \
 								game/event/city/mouse_pressed.c               \
@@ -46,6 +50,7 @@ SRC                 =           $(addprefix src/,                             \
 								game/stage/stage.c                            \
 								game/tools/audio.c                            \
 								game/tools/fps.c                              \
+								game/tools/location.c                         \
 								game/tools/res.c                              \
 								game/tools/view.c                             \
 								game/my_rpg.c                                 \

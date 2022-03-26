@@ -11,6 +11,7 @@
 // Libs
     #include <fcntl.h>
     #include <stdlib.h>
+    #include <stdbool.h>
     #include "../lib/my/my.h"
     #include "../lib/my_printf/my_printf.h"
 
@@ -60,21 +61,30 @@
     #define DEFAULT_WINDOW_RESOLUTION 1080
 
     // View
-    #define VIEW_DEFAULT_SIZE_X 517
-    #define VIEW_DEFAULT_SIZE_Y 292
-    #define VIEW_DEFAULT_POS_X 258.5
-    #define VIEW_DEFAULT_POS_Y 146
-    #define VIEW_DEFAULT_ROTATION 0
-    #define VIEW_ZOOM_VALUE 10
-    #define VIEW_MAX_ZOOM_IN 150
-    #define VIEW_MAX_ZOOM_OUT 1000
-    #define VIEW_ROTATE_VALUE 5
+        // DEFAULT
+        #define VIEW_DEFAULT_SIZE (sfVector2f){720, 480}
+        #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
+        #define VIEW_DEFAULT_ROTATION 0
+        #define VIEW_ZOOM_VALUE 10
+        #define VIEW_MAX_ZOOM_IN 150
+        #define VIEW_MAX_ZOOM_OUT 1000
+        #define VIEW_ROTATE_VALUE 5
+
+        // Appartment
+        #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
+        #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
+
+        // City
+        #define VIEW_CITY_SIZE (sfVector2f){720, 480}
+        #define VIEW_CITY_POS (sfVector2f){2468, 1710}
 
     // Rat
+        // Speed
+            #define RAT_SPEED_APPARTMENT 2
+            #define RAT_SPEED_CITY 5
     #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
-    #define RAT_DEFAULT_POS_MAP (sfVector2f){2468, 1710}
+    #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
-    #define RAT_SPEED 10
         // Idle
             #define RAT_IDLE_FRONT_OFFSET 18
             #define RAT_IDLE_FRONT_MAX 94
@@ -89,5 +99,12 @@
             #define RAT_DOWN_MAX 140
             #define RAT_SIDE_OFFSET 27
             #define RAT_SIDE_MAX 177
+
+    // Locations
+        // Appartment
+        #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
+
+        // City
+        #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
 
 #endif /* !MY_RPG_H_ */

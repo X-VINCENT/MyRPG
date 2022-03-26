@@ -12,4 +12,5 @@ void appartment_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
 
     rat_key_pressed(game);
+    appartment_locations(game);
 }

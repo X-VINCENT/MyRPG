@@ -45,10 +45,9 @@ void rotate_view(game_t *game)
 void reset_view(game_t *game)
 {
     sfEvent *event = game->event->event;
-    sfVector2f default_size = {VIEW_DEFAULT_SIZE_X, VIEW_DEFAULT_SIZE_Y};
 
     if (event->key.code == game->keys->reset_view) {
-        sfView_setSize(game->view, default_size);
+        sfView_setSize(game->view, VIEW_DEFAULT_SIZE);
         sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);
     }
 }

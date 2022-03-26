@@ -12,6 +12,7 @@ void city_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
 
     rat_key_pressed(game);
+    city_locations(game);
     zoom_view(game);
     rotate_view(game);
     reset_view(game);
