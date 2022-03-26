@@ -10,6 +10,13 @@
 
     #include "csfml.h"
 
+    typedef struct parallax {
+        sfSprite *bg0;
+        sfSprite *bg1;
+        sfSprite *bg2;
+        sfSprite *bg3;
+    } parallax_t;
+
     typedef struct appartment {
         sfSprite *bg;
         sfImage *hitbox;
@@ -17,7 +24,12 @@
 
     typedef struct city {
         sfSprite *bg;
+        sfImage *hitbox;
     } city_t;
+
+    typedef struct home_menu {
+        parallax_t *parallax;
+    } home_menu_t;
 
     typedef struct rat {
         sfSprite *idle_front;
@@ -30,6 +42,7 @@
         sfSprite *movement_right;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
+        sfClock *movement_clock;
         sfClock *latency_status_clock;
         int up;
         int down;
@@ -43,6 +56,7 @@
         sfSprite *cursor;
         appartment_t *appartment;
         city_t *city;
+        home_menu_t *home_menu;
         rat_t *rat;
     } assets_t;
 

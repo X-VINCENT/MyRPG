@@ -24,7 +24,14 @@
         void display_rat(game_t *game);
 
 // Event
-    // City
+    // Appartment
+        // Locations
+            // door.c
+            void location_door_appartment(game_t *game);
+
+            // locations.c
+                void appartment_locations(game_t *game);
+
         // key_pressed.c
         void appartment_key_pressed(game_t *game);
 
@@ -35,6 +42,13 @@
         void appartment_mouse_pressed(game_t *game);
 
     // City
+        // Locations
+            // appartment.c
+                void location_appartment_city(game_t *game);
+
+            // locations.c
+                void city_locations(game_t *game);
+
         // key_pressed.c
         void city_key_pressed(game_t *game);
 
@@ -109,6 +123,10 @@
     // fps.c
     void down_fps(game_t *game);
     void up_fps(game_t *game);
+
+    // location.c
+    bool check_location_rect(
+        sfSprite *character, sfVector2f location, int width, int height);
 
     // res.c
     void down_res(game_t *game);

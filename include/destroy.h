@@ -18,6 +18,12 @@
     // destroy.c
     void destroy_city(city_t *city);
 
+// Home Menu
+    // destroy.c
+    void destroy_home_menu(home_menu_t *home_menu);
+     //parallax
+     void destroy_parallax(parallax_t *parallax);
+
 // Rat
     // destroy.c
     void destroy_rat(rat_t *rat);

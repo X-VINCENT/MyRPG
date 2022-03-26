@@ -13,7 +13,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = APPARTMENT_STAGE;
+    game->stage = CITY_STAGE;
     game->last_stage = START_STAGE;
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
@@ -35,10 +35,7 @@ void init_window(game_t *game)
 
 void init_view(game_t *game)
 {
-    sfVector2f size = {VIEW_DEFAULT_SIZE_X, VIEW_DEFAULT_SIZE_Y};
-    sfVector2f pos = init_pos(VIEW_DEFAULT_POS_X, VIEW_DEFAULT_POS_Y);
-
-    game->view = create_view(size, pos, 0);
+    game->view = create_view(VIEW_DEFAULT_SIZE, VIEW_DEFAULT_POS, 0);
 }
 
 void init_event(game_t *game)
