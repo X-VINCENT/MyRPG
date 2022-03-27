@@ -17,9 +17,6 @@ void move_rat_up(game_t *game)
     pos.y -= rat->speed;
     set_rats_position(game, pos);
     rat->up = 1;
-    rat->down = 0;
-    rat->left = 0;
-    rat->right = 0;
     rat->is_moving = 1;
     sfClock_restart(rat->latency_status_clock);
 }
@@ -33,10 +30,7 @@ void move_rat_down(game_t *game)
         return;
     pos.y += rat->speed;
     set_rats_position(game, pos);
-    rat->up = 0;
     rat->down = 1;
-    rat->left = 0;
-    rat->right = 0;
     rat->is_moving = 1;
     sfClock_restart(rat->latency_status_clock);
 }
@@ -50,10 +44,7 @@ void move_rat_left(game_t *game)
         return;
     pos.x -= rat->speed;
     set_rats_position(game, pos);
-    rat->up = 0;
-    rat->down = 0;
     rat->left = 1;
-    rat->right = 0;
     rat->is_moving = 1;
     sfClock_restart(rat->latency_status_clock);
 }
@@ -67,9 +58,6 @@ void move_rat_right(game_t *game)
         return;
     pos.x += rat->speed;
     set_rats_position(game, pos);
-    rat->up = 0;
-    rat->down = 0;
-    rat->left = 0;
     rat->right = 1;
     rat->is_moving = 1;
     sfClock_restart(rat->latency_status_clock);
@@ -78,7 +66,12 @@ void move_rat_right(game_t *game)
 void move_rat(game_t *game)
 {
     sfEvent *event = game->event->event;
+    rat_t *rat = game->assets->rat;
 
+    rat->up = 0;
+    rat->down = 0;
+    rat->left = 0;
+    rat->right = 0;
     if (event->key.code == game->keys->move_up)
         move_rat_up(game);
     if (event->key.code == game->keys->move_down)

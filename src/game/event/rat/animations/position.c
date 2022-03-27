@@ -10,6 +10,7 @@
 void set_rats_position(game_t *game, sfVector2f position)
 {
     rat_t *rat = game->assets->rat;
+    sfVector2f shadow_position = {position.x, position.y + 12};
 
     sfSprite_setPosition(rat->idle_front, position);
     sfSprite_setPosition(rat->idle_back, position);
@@ -19,4 +20,5 @@ void set_rats_position(game_t *game, sfVector2f position)
     sfSprite_setPosition(rat->movement_down, position);
     sfSprite_setPosition(rat->movement_left, position);
     sfSprite_setPosition(rat->movement_right, position);
+    sfSprite_setPosition(rat->shadow, shadow_position);
 }

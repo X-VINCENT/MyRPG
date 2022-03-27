@@ -138,6 +138,8 @@
     void zoom_view(game_t *game);
     void rotate_view(game_t *game);
     void reset_view(game_t *game);
+    void check_and_center_view(
+        game_t *game, sfSprite *character, sfSprite *background);
 
 // my_rpg.c
 int my_rpg(void);
