@@ -35,6 +35,9 @@ void select_game_stage(game_t *game)
         case CITY_STAGE:
             city_stage(game);
             break;
+        case START_STAGE:
+            home_menu_stage(game);
+            break;
         default:
             break;
     }

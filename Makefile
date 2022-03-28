@@ -28,6 +28,8 @@ SRC                 =           $(addprefix src/,                            \
 								errors/help.c                                \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
+								display/home_menu/parallax/animate.c         \
+								display/home_menu/parallax/display.c         \
 								display/rat/display.c                        \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -37,6 +39,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/city/locations/appartment.c            \
 								event/city/locations/locations.c             \
 								event/city/key_pressed.c                     \
+								event/home_menu/key_pressed.c                \
 								event/city/mouse_moved.c                     \
 								event/city/mouse_pressed.c                   \
 								event/rat/animations/animate.c               \
@@ -51,6 +54,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_3.c					             \
 								stage/appartment.c                           \
 								stage/city.c                                 \
+								stage/home_menu.c                            \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \

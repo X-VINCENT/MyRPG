@@ -44,6 +44,10 @@
     // mouse_pressed.c
     void city_mouse_pressed(game_t *game);
 
+// Home Menu
+    //key_pressed.c
+    void home_menu_key_pressed(game_t *game);
+
 // Rat
     // Animations
         // animate.c

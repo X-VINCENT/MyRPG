@@ -33,6 +33,8 @@ void event(game_t *game)
 void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
+        case START_STAGE:
+            home_menu_key_pressed(game);
         case APPARTMENT_STAGE:
             appartment_key_pressed(game);
         case CITY_STAGE:

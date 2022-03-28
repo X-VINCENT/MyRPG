@@ -15,6 +15,7 @@
         sfSprite *bg1;
         sfSprite *bg2;
         sfSprite *bg3;
+        sfClock *clock;
     } parallax_t;
 
     typedef struct appartment {

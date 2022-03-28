@@ -21,6 +21,9 @@ void appartment_stage(game_t *game);
 // city.c
 void city_stage(game_t *game);
 
+//home_menu.c
+void home_menu_stage(game_t *game);
+
 // stage.c
 void select_game_stage(game_t *game);
 void select_game_stage_2(game_t *game);

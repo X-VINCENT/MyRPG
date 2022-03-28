@@ -18,6 +18,11 @@
     // display.c
     void display_city(game_t *game);
 
+//home_menu
+    //parallax
+    void animate_parallax(game_t *game);
+    void display_parallax(game_t *game);
+
 // Rat
     // display.c
     void display_rat(game_t *game);
