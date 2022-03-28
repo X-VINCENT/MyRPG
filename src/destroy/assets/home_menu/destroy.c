@@ -14,6 +14,7 @@ void destroy_home_menu(home_menu_t *menu)
         sfSprite_destroy(menu->quit[idx]);
         sfSprite_destroy(menu->options[idx]);
     }
+    sfSprite_destroy(menu->title);
     free(menu->quit);
     free(menu->options);
     free(menu);

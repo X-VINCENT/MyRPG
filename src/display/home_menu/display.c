@@ -12,6 +12,7 @@ void display_home_menu(game_t *game)
     home_menu_t *home = game->assets->home_menu;
 
     display_parallax(game);
+    sfRenderWindow_drawSprite(game->window, home->title, NULL);
     sfRenderWindow_drawSprite(game->window,
         home->quit[home->quit_state], NULL);
     sfRenderWindow_drawSprite(game->window,
