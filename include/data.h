@@ -53,12 +53,18 @@
         int is_moving;
     } rat_t;
 
+    typedef struct transitions {
+        sfSprite **rat_enter;
+        sfSprite **rat_quit;
+    } transitions_t;
+
     typedef struct assets {
         sfSprite *cursor;
         appartment_t *appartment;
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
+        transitions_t *transitions;
     } assets_t;
 
     typedef struct event {
@@ -78,11 +84,24 @@
         int reset_view;
     } keys_t;
 
+    typedef struct musics {
+        sfMusic *rat_transition;
+    } musics_t;
+
+    typedef struct sounds {
+    } sounds_t;
+
+    typedef struct audio {
+        musics_t *musics;
+        sounds_t *sounds;
+    } audio_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
         event_t *event;
         assets_t *assets;
+        audio_t *audio;
         keys_t *keys;
         int stage;
         int last_stage;

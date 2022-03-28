@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** My Defender File for My RPG
+** RPG File for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

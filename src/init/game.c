@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Init Game Structure for My RPG
+** Init Game for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
@@ -17,10 +17,11 @@ game_t *init_game(void)
     game->last_stage = START_STAGE;
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
+    game->view = create_view(VIEW_DEFAULT_SIZE, VIEW_DEFAULT_POS, 0);
     init_window(game);
-    init_view(game);
     init_event(game);
     init_assets(game);
+    init_audio(game);
     init_keys(game);
     return game;
 }
@@ -31,11 +32,6 @@ void init_window(game_t *game)
     sfRenderWindow_setFramerateLimit(game->window, game->fps);
     sfRenderWindow_setMouseCursorVisible(game->window, sfFalse);
     set_icon_window(game->window, WINDOW_ICON);
-}
-
-void init_view(game_t *game)
-{
-    game->view = create_view(VIEW_DEFAULT_SIZE, VIEW_DEFAULT_POS, 0);
 }
 
 void init_event(game_t *game)

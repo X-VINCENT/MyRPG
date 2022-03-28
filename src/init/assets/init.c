@@ -14,7 +14,7 @@ void init_assets(game_t *game)
     game->assets = malloc(sizeof(assets_t));
     init_cursor(game);
     init_city(game);
-    init_home_menu(game->assets);
+    init_home_menu(game);
     init_rat(game, BLUE_RAT);
     init_appartment(game);
 }
