@@ -19,6 +19,8 @@
     #define MARKET_STAGE 5
     #define MUSEUM1_STAGE 6
     #define MUSEUM2_STAGE 7
+    #define RAT_TRANSITION_ENTER 8
+    #define RAT_TRANSITION_QUIT 9
 
 // appartment.c
 void appartment_stage(game_t *game);

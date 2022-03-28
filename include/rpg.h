@@ -65,7 +65,11 @@
     #define CURSOR "assets/images/icons/cursor_icon.png"
     #define WINDOW_ICON "assets/images/icons/window_icon.png"
 
-    // Objects
+    // Menus
+        // Transitions
+            // Rat
+            #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"
+            #define RAT_QUIT "assets/images/menus/transitions/rat/quit.png"
 
 // Window
 #define DEFAULT_FPS 0
@@ -85,8 +89,10 @@
     #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
+    // Ice Cream Shop
     #define VIEW_ICE_SIZE (sfVector2f){576, 480}
     #define VIEW_ICE_POS (sfVector2f){0, 0}
+
     // City
     #define VIEW_CITY_SIZE (sfVector2f){720, 480}
     #define VIEW_CITY_POS (sfVector2f){2468, 1710}

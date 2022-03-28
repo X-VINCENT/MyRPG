@@ -26,9 +26,21 @@
         // init.c
         void init_home_menu(game_t *game);
 
+    // Ice Cream
+        // init.c
+        void init_ice_cream(game_t *game);
+
+    // Market
+        // init.c
+        void init_market(game_t *game);
+
     // Rat
         // init.c
         void init_rat(game_t *game, const char *filename_color);
+
+    // Transitions
+        // init.c
+        void init_transitions(game_t *game);
 
     // init.c
     void init_assets(game_t *game);

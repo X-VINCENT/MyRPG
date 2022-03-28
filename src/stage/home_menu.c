@@ -9,6 +9,6 @@
 
 void home_menu_stage(game_t *game)
 {
-    display_parallax(game);
     animate_parallax(game);
+    display_home_menu(game);
 }

@@ -13,6 +13,7 @@ int check_pictures(void)
 
     error += is_file(BLUE_RAT);
     error += is_file(APPARTMENT);
+    error += is_file(ICE);
     error += is_file(CITY);
     error += check_environment_assets();
     error += check_gui();

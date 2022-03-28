@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Display City for My RPG
+** Display parallax for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */

@@ -39,6 +39,8 @@ void event_key_pressed(game_t *game)
             appartment_key_pressed(game);
         case CITY_STAGE:
             city_key_pressed(game);
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_key_pressed(game);
         default:
             event_key_pressed_2(game);
             break;
@@ -52,6 +54,8 @@ void mouse_pressed(game_t *game)
             appartment_mouse_pressed(game);
         case CITY_STAGE:
             city_mouse_pressed(game);
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_mouse_pressed(game);
         default:
             mouse_pressed_2(game);
             break;
@@ -65,6 +69,8 @@ void mouse_moved(game_t *game)
             appartment_mouse_moved(game);
         case CITY_STAGE:
             city_mouse_moved(game);
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_mouse_moved(game);
         default:
             mouse_moved_2(game);
             break;

@@ -9,7 +9,7 @@
 
 void home_menu_key_pressed(game_t *game)
 {
-    if (game->event->event->key.code == sfKeyEnter) {
-        game->stage = 1;
+    if (game->event->event->key.code == sfKeyReturn) {
+        game->stage = START_STAGE;
     }
 }

@@ -74,6 +74,16 @@
     // mouse_pressed.c
     void rat_mouse_pressed(game_t *game);
 
+// Transitions
+    // key_pressed.c
+    void transitions_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void transitions_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void transitions_mouse_pressed(game_t *game);
+
 // event_1.c
 void event(game_t *game);
 void event_key_pressed(game_t *game);

@@ -13,6 +13,7 @@ SRC_MAIN            =           $(addprefix src/,                            \
 
 SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
+								destroy/assets/ice_shop/destroy.c 			 \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
@@ -30,6 +31,9 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
+								display/home_menu/display.c                  \
+								display/ice_shop/display.c 					 \
+								display/market/display.c 					 \
 								display/rat/display.c                        \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -49,12 +53,17 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/key_pressed.c                      \
 								event/rat/mouse_moved.c                      \
 								event/rat/mouse_pressed.c                    \
+								event/transitions/key_pressed.c              \
+								event/transitions/mouse_moved.c              \
+								event/transitions/mouse_pressed.c            \
 								event/event_1.c                              \
 								event/event_2.c					             \
 								event/event_3.c					             \
 								stage/appartment.c                           \
 								stage/city.c                                 \
 								stage/home_menu.c                            \
+								stage/ice_shop.c                             \
+								stage/market.c                               \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
@@ -66,7 +75,10 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/city/init.c                      \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
+								init/assets/ice_cream/init.c                 \
+								init/assets/market/init.c                    \
 								init/assets/rat/init.c                       \
+								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \

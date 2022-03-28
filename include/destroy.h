@@ -15,9 +15,17 @@
         // destroy.c
         void destroy_appartment(appartment_t *appartment);
 
+    // Ice cream shop
+        // destroy.c
+        void destroy_ice(ice_t *ice);
+
     // City
         // destroy.c
         void destroy_city(city_t *city);
+
+    // Market
+        // destroy.c
+        void destroy_market(market_t *market);
 
     // Home Menu
         // destroy.c

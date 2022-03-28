@@ -23,6 +23,16 @@
         sfImage *hitbox;
     } appartment_t;
 
+    typedef struct ice {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } ice_t;
+
+    typedef struct market {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } market_t;
+
     typedef struct city {
         sfSprite *bg;
         sfImage *hitbox;
@@ -30,6 +40,11 @@
 
     typedef struct home_menu {
         parallax_t *parallax;
+        sfSprite **quit;
+        sfSprite **options;
+        int quit_state;
+        int options_state;
+        sfClock *button_clock;
     } home_menu_t;
 
     typedef struct rat {
@@ -55,13 +70,15 @@
     } rat_t;
 
     typedef struct transitions {
-        sfSprite **rat_enter;
-        sfSprite **rat_quit;
+        sfSprite *rat_enter;
+        sfSprite *rat_quit;
     } transitions_t;
 
     typedef struct assets {
         sfSprite *cursor;
         appartment_t *appartment;
+        ice_t *ice;
+        market_t *market;
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
