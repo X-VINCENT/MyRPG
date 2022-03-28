@@ -18,6 +18,9 @@ void select_game_stage_3(game_t *game)
 void select_game_stage_2(game_t *game)
 {
     switch (game->stage) {
+        case MARKET_STAGE:
+            market_stage(game);
+            break;
         default:
             break;
     }
@@ -29,14 +32,17 @@ void select_game_stage(game_t *game)
     if (!game)
         return;
     switch (game->stage) {
-        case APPARTMENT_STAGE:
-            appartment_stage(game);
+        case START_STAGE:
+            home_menu_stage(game);
             break;
         case CITY_STAGE:
             city_stage(game);
             break;
-        case START_STAGE:
-            home_menu_stage(game);
+        case APPARTMENT_STAGE:
+            appartment_stage(game);
+            break;
+        case ICE_STAGE:
+            ice_stage(game);
             break;
         default:
             break;

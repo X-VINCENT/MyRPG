@@ -52,10 +52,10 @@ void mouse_pressed(game_t *game)
     switch (game->stage) {
         case START_STAGE:
             home_menu_mouse_pressed(game);
-        case APPARTMENT_STAGE:
-            appartment_mouse_pressed(game);
         case CITY_STAGE:
             city_mouse_pressed(game);
+        case APPARTMENT_STAGE:
+            appartment_mouse_pressed(game);
         case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
             transitions_mouse_pressed(game);
         default:

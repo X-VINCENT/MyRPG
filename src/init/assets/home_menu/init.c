@@ -13,7 +13,8 @@ void init_title(home_menu_t *home)
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = init_scale(1, 1);
 
-    home->title = create_sprite("assets/images/menu/home/title.png");
+    home->title = create_sprite(
+        "assets/images/menu/home/title.png", rect, pos, scale);
 }
 
 void init_quit_button(home_menu_t *home)
@@ -54,7 +55,7 @@ void init_home_menu(game_t *game)
     game->assets->home_menu = malloc(sizeof(home_menu_t));
     game->assets->home_menu->button_clock = sfClock_create();
     init_parallax(game);
-    init_title(game);
+    init_title(game->assets->home_menu);
     init_quit_button(game->assets->home_menu);
     init_option_button(game->assets->home_menu);
 }

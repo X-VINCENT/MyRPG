@@ -30,6 +30,10 @@
     // display.c
     void display_ice_cream(game_t *game);
 
+//Clothe
+    //display.c
+    void display_clothe(game_t *game);
+
 // Market
     // display.c
     void display_market(game_t *game);

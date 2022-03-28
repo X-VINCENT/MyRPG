@@ -32,6 +32,8 @@
         // appartment.c
         void location_appartment_city(game_t *game);
 
+        //ice_cream_shop.c
+        void location_ice_cream(game_t *game);
         // locations.c
         void city_locations(game_t *game);
 

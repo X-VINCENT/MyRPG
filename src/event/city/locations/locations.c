@@ -9,5 +9,6 @@
 
 void city_locations(game_t *game)
 {
+    location_ice_cream(game);
     location_appartment_city(game);
 }

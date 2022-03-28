@@ -33,6 +33,11 @@
         sfImage *hitbox;
     } market_t;
 
+    typedef struct clothe {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } clothe_t;
+
     typedef struct city {
         sfSprite *bg;
         sfImage *hitbox;
@@ -42,6 +47,7 @@
         parallax_t *parallax;
         sfSprite **quit;
         sfSprite **options;
+        sfSprite *title;
         int quit_state;
         int options_state;
         sfClock *button_clock;
@@ -79,6 +85,7 @@
         appartment_t *appartment;
         ice_t *ice;
         market_t *market;
+        clothe_t *clothe;
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;

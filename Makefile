@@ -34,6 +34,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/home_menu/display.c                  \
 								display/ice_shop/display.c 					 \
 								display/market/display.c 					 \
+								display/clothe/display.c 					 \
 								display/rat/display.c                        \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -41,6 +42,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/mouse_moved.c               \
 								event/appartment/mouse_pressed.c             \
 								event/city/locations/appartment.c            \
+								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
 								event/city/key_pressed.c                     \
 								event/home_menu/key_pressed.c                \
@@ -66,6 +68,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
+								stage/clothe.c                               \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \

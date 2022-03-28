@@ -27,6 +27,9 @@
         // destroy.c
         void destroy_market(market_t *market);
 
+    // Clothe
+        //destroy.c
+        void destroy_clothe(clothe_t *clothe);
     // Home Menu
         // destroy.c
         void destroy_home_menu(home_menu_t *home_menu);

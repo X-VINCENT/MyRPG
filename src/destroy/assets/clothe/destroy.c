@@ -1,14 +1,14 @@
 /*
 ** EPITECH PROJECT, 2022
-** Market Stage for My RPG
+** Destroy ice for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */
 
 #include "rpg.h"
 
-void market_stage(game_t *game)
+void destroy_clothe(clothe_t *clothe)
 {
-    display_market(game);
-    display_rat(game);
+    destroy_sprite(clothe->bg);
+    free(clothe);
 }

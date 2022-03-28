@@ -53,13 +53,19 @@
     // Environments
     #define APPARTMENT "assets/images/environments/appartment/view.png"
     #define APPART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
+
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
-    #define ICE "assets/images/environments/ice_cream_shop/ice_cream_shop.png"
-    #define CLOTHE "assets/images/environments/clothe_store/cothestore.png"
-    #define MARKET "assets/images/environments/market/market.png"
-    #define MUSEUM1 "assets/images/environments/museum/museum1.png"
-    #define MUSEUM2 "assets/images/environments/museum/museum2.png"
+
+    #define ICE "assets/images/environments/ice_cream_shop/view.png"
+
+    #define CLOTHE "assets/images/environments/clothe_store/view.png"
+
+    #define MARKET "assets/images/environments/market/view.png"
+
+    #define MUSEUM1 "assets/images/environments/museum/view.png"
+
+    #define MUSEUM2 "assets/images/environments/museum/view.png"
 
     // Icons
     #define CURSOR "assets/images/icons/cursor_icon.png"
@@ -91,7 +97,7 @@
 
     // Ice Cream Shop
     #define VIEW_ICE_SIZE (sfVector2f){576, 480}
-    #define VIEW_ICE_POS (sfVector2f){0, 0}
+    #define VIEW_ICE_POS (sfVector2f){288, 240}
 
     // City
     #define VIEW_CITY_SIZE (sfVector2f){720, 480}
@@ -125,5 +131,6 @@
 
     // City
     #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
+    #define LOCATION_ICE_SHOP (sfVector2f) {811, 1664}
 
 #endif /* !MY_RPG_H_ */
