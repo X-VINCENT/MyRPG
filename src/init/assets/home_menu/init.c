@@ -9,9 +9,9 @@
 
 void init_quit_button(home_menu_t *home)
 {
-    sfIntRect rect = init_rect(0, 0, 16, 16);
-    sfVector2f pos = init_pos(0, 1048);
-    sfVector2f scale = init_scale(2, 2);
+    sfIntRect rect = init_rect(0, 0, 64, 64);
+    sfVector2f pos = init_pos(0, 1014);
+    sfVector2f scale = init_scale(1, 1);
 
     home->quit = malloc(sizeof(sfSprite *) * 4);
     home->quit[0] = create_sprite(
@@ -21,9 +21,9 @@ void init_quit_button(home_menu_t *home)
 
 void init_option_button(home_menu_t *home)
 {
-    sfIntRect rect = init_rect(48, 32, 16, 16);
-    sfVector2f pos = init_pos(0, 1048);
-    sfVector2f scale = init_scale(2, 2);
+    sfIntRect rect = init_rect(192, 128, 64, 64);
+    sfVector2f pos = init_pos(64, 1014);
+    sfVector2f scale = init_scale(1, 1);
 
     home->options = malloc(sizeof(sfSprite *) * 4);
     home->options[0] = create_sprite(
