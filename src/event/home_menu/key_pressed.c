@@ -9,7 +9,8 @@
 
 void home_menu_key_pressed(game_t *game)
 {
-    if (game->event->event->key.code == sfKeyReturn) {
+    sfEvent *event = game->event->event;
+
+    if (event->key.code == sfKeyReturn)
         game->stage = CITY_STAGE;
-    }
 }

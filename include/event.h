@@ -33,9 +33,13 @@
         void location_appartment_city(game_t *game);
 
         //ice_cream_shop.c
-        void location_ice_cream(game_t *game);
+        void location_ice_cream_city(game_t *game);
+
         // locations.c
         void city_locations(game_t *game);
+
+        // market.c
+        void location_market_city(game_t *game);
 
     // key_pressed.c
     void city_key_pressed(game_t *game);
@@ -49,10 +53,29 @@
 // Home Menu
     //key_pressed.c
     void home_menu_key_pressed(game_t *game);
+
     //mouse_moved.c
     void home_menu_mouse_moved(game_t *game);
+
     //mouse_pressed.c
     void home_menu_mouse_pressed(game_t *game);
+
+// Ice Cream Shop
+    // Locations
+        // door.c
+        void location_door_ice_cream_shop(game_t *game);
+
+        // locations.c
+        void ice_cream_shop_locations(game_t *game);
+
+    // key_pressed.c
+    void ice_cream_shop_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void ice_cream_shop_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void ice_cream_shop_mouse_pressed(game_t *game);
 
 // Rat
     // Animations

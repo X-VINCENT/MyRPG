@@ -130,6 +130,7 @@
         keys_t *keys;
         int stage;
         int last_stage;
+        int next_stage;
         int fps;
         int res;
     } game_t;

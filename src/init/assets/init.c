@@ -17,8 +17,8 @@ void init_assets(game_t *game)
     init_home_menu(game);
     init_rat(game, BLUE_RAT);
     init_appartment(game);
-    init_market(game);
     init_ice_cream(game);
+    init_market(game);
     init_transitions(game);
 }
 

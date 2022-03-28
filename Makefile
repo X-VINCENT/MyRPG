@@ -44,12 +44,18 @@ SRC                 =           $(addprefix src/,                            \
 								event/city/locations/appartment.c            \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
+								event/city/locations/market.c                \
 								event/city/key_pressed.c                     \
+								event/city/mouse_moved.c                     \
+								event/city/mouse_pressed.c                   \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
-								event/city/mouse_moved.c                     \
-								event/city/mouse_pressed.c                   \
+								event/ice_cream_shop/locations/door.c        \
+								event/ice_cream_shop/locations/locations.c   \
+								event/ice_cream_shop/key_pressed.c           \
+								event/ice_cream_shop/mouse_moved.c           \
+								event/ice_cream_shop/mouse_pressed.c         \
 								event/rat/animations/animate.c               \
 								event/rat/animations/check.c                 \
 								event/rat/animations/move.c                  \

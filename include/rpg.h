@@ -95,21 +95,30 @@
     #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
-    // Ice Cream Shop
-    #define VIEW_ICE_SIZE (sfVector2f){576, 480}
-    #define VIEW_ICE_POS (sfVector2f){288, 240}
-
     // City
     #define VIEW_CITY_SIZE (sfVector2f){720, 480}
     #define VIEW_CITY_POS (sfVector2f){2468, 1710}
 
+    // Ice Cream Shop
+    #define VIEW_ICE_SIZE (sfVector2f){576, 480}
+    #define VIEW_ICE_POS (sfVector2f){288, 240}
+
+    // Market
+    #define VIEW_MARKET_SIZE (sfVector2f){740, 450}
+    #define VIEW_MARKET_POS (sfVector2f){370, 225}
+
 // Rat
+    #define SCALE_RAT (sfVector2f){1.00, 1.00}
     // Speed
         #define RAT_SPEED_APPARTMENT 2
         #define RAT_SPEED_CITY 5
+        #define RAT_SPEED_ICE_CREAM_SHOP 2
+        #define RAT_SPEED_MARKET 5
+    // Pos
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
-        #define SCALE_RAT (sfVector2f){1.00, 1.00}
+        #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 441}
+        #define RAT_DEFAULT_POS_MARKET (sfVector2f){342, 30}
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
         #define RAT_IDLE_FRONT_MAX 94
@@ -131,6 +140,10 @@
 
     // City
     #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
-    #define LOCATION_ICE_SHOP (sfVector2f) {911, 1690}
+    #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
+    #define LOCATION_MARKET (sfVector2f) {400, 1667}
+
+    // Ice Cream Shop
+    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 453}
 
 #endif /* !MY_RPG_H_ */

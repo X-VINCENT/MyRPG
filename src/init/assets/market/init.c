@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Init ice cream shop for My RPG
+** Init Market for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
@@ -14,7 +14,6 @@ void init_market(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->market = malloc(sizeof(market_t));
-    game->assets->market->bg = create_sprite(
-        MARKET, rect, pos, scale);
+    game->assets->market->bg = create_sprite(MARKET, rect, pos, scale);
     //game->assets->ice->hitbox = create_image(ICE_HITBOX);
 }
