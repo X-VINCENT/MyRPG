@@ -49,6 +49,8 @@
     void home_menu_key_pressed(game_t *game);
     //mouse_moved.c
     void home_menu_mouse_moved(game_t *game);
+    //mouse_pressed.c
+    void home_menu_mouse_pressed(game_t *game);
 
 // Rat
     // Animations
