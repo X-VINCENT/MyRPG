@@ -131,6 +131,6 @@
 
     // City
     #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
-    #define LOCATION_ICE_SHOP (sfVector2f) {811, 1664}
+    #define LOCATION_ICE_SHOP (sfVector2f) {911, 1690}
 
 #endif /* !MY_RPG_H_ */
