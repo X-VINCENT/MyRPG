@@ -63,9 +63,9 @@
 
     #define MARKET "assets/images/environments/market/view.png"
 
-    #define MUSEUM1 "assets/images/environments/museum/view.png"
+    #define MUSEUM1 "assets/images/environments/museum/view1.png"
 
-    #define MUSEUM2 "assets/images/environments/museum/view.png"
+    #define MUSEUM2 "assets/images/environments/museum/view2.png"
 
     // Icons
     #define CURSOR "assets/images/icons/cursor_icon.png"
