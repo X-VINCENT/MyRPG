@@ -15,19 +15,27 @@
     #include "../lib/my/my.h"
     #include "../lib/my_printf/my_printf.h"
 
-// CSFML
+// CSFML Headers
     #include "csfml.h"
 
-// My Runner
+// RPG Headers
     #include "data.h"
     #include "destroy.h"
+    #include "display.h"
     #include "errors.h"
-    #include "game.h"
+    #include "event.h"
     #include "init.h"
+    #include "stage.h"
+    #include "tools.h"
 
-// Macros
+// Basic Macros
     #define SUCCESS 0
     #define ERROR 84
+
+// RPG File
+    int my_rpg(void);
+    int engine(game_t *game);
+    void display_cursor(game_t *game);
 
 // Assets
 // Audio
@@ -54,60 +62,55 @@
 
     // Objects
 
-    // Stage
-    #define START_STAGE 0
-    #define CITY_STAGE 1
-    #define APPARTMENT_STAGE 2
+// Window
+#define DEFAULT_FPS 0
+#define DEFAULT_WINDOW_RESOLUTION 1080
 
-    // Window
-    #define DEFAULT_FPS 0
-    #define DEFAULT_WINDOW_RESOLUTION 1080
+// View
+    // DEFAULT
+    #define VIEW_DEFAULT_SIZE (sfVector2f){720, 480}
+    #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
+    #define VIEW_DEFAULT_ROTATION 0
+    #define VIEW_ZOOM_VALUE 10
+    #define VIEW_MAX_ZOOM_IN 150
+    #define VIEW_MAX_ZOOM_OUT 1000
+    #define VIEW_ROTATE_VALUE 5
 
-    // View
-        // DEFAULT
-        #define VIEW_DEFAULT_SIZE (sfVector2f){720, 480}
-        #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
-        #define VIEW_DEFAULT_ROTATION 0
-        #define VIEW_ZOOM_VALUE 10
-        #define VIEW_MAX_ZOOM_IN 150
-        #define VIEW_MAX_ZOOM_OUT 1000
-        #define VIEW_ROTATE_VALUE 5
+    // Appartment
+    #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
+    #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
-        // Appartment
-        #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
-        #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
+    // City
+    #define VIEW_CITY_SIZE (sfVector2f){720, 480}
+    #define VIEW_CITY_POS (sfVector2f){2468, 1710}
 
-        // City
-        #define VIEW_CITY_SIZE (sfVector2f){720, 480}
-        #define VIEW_CITY_POS (sfVector2f){2468, 1710}
+// Rat
+    // Speed
+        #define RAT_SPEED_APPARTMENT 2
+        #define RAT_SPEED_CITY 5
+#define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
+#define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
+#define SCALE_RAT (sfVector2f){1.00, 1.00}
+    // Idle
+        #define RAT_IDLE_FRONT_OFFSET 18
+        #define RAT_IDLE_FRONT_MAX 94
+        #define RAT_IDLE_BACK_OFFSET 18
+        #define RAT_IDLE_BACK_MAX 94
+        #define RAT_IDLE_SIDE_OFFSET 27
+        #define RAT_IDLE_SIDE_MAX 130
+    // Movement
+        #define RAT_UP_OFFSET 20
+        #define RAT_UP_MAX 135
+        #define RAT_DOWN_OFFSET 20
+        #define RAT_DOWN_MAX 140
+        #define RAT_SIDE_OFFSET 27
+        #define RAT_SIDE_MAX 177
 
-    // Rat
-        // Speed
-            #define RAT_SPEED_APPARTMENT 2
-            #define RAT_SPEED_CITY 5
-    #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
-    #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
-    #define SCALE_RAT (sfVector2f){1.00, 1.00}
-        // Idle
-            #define RAT_IDLE_FRONT_OFFSET 18
-            #define RAT_IDLE_FRONT_MAX 94
-            #define RAT_IDLE_BACK_OFFSET 18
-            #define RAT_IDLE_BACK_MAX 94
-            #define RAT_IDLE_SIDE_OFFSET 27
-            #define RAT_IDLE_SIDE_MAX 130
-        // Movement
-            #define RAT_UP_OFFSET 20
-            #define RAT_UP_MAX 135
-            #define RAT_DOWN_OFFSET 20
-            #define RAT_DOWN_MAX 140
-            #define RAT_SIDE_OFFSET 27
-            #define RAT_SIDE_MAX 177
+// Locations
+    // Appartment
+    #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
 
-    // Locations
-        // Appartment
-        #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
-
-        // City
-        #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
+    // City
+    #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
 
 #endif /* !MY_RPG_H_ */

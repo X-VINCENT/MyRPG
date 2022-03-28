@@ -10,27 +10,41 @@
 
     #include "rpg.h"
 
-// Appartment
-    // destroy.c
-    void destroy_appartment(appartment_t *appartment);
+// Assets
+    // Appartment
+        // destroy.c
+        void destroy_appartment(appartment_t *appartment);
 
-// City
-    // destroy.c
-    void destroy_city(city_t *city);
+    // City
+        // destroy.c
+        void destroy_city(city_t *city);
 
-// Home Menu
-    // destroy.c
-    void destroy_home_menu(home_menu_t *home_menu);
-     //parallax
-     void destroy_parallax(parallax_t *parallax);
+    // Home Menu
+        // destroy.c
+        void destroy_home_menu(home_menu_t *home_menu);
+        //parallax
+        void destroy_parallax(parallax_t *parallax);
 
-// Rat
+    // Rat
+        // destroy.c
+        void destroy_rat(rat_t *rat);
+
     // destroy.c
-    void destroy_rat(rat_t *rat);
+    void destroy_assets(assets_t *assets);
+
+// Audio
+    // destroy.c
+    void destroy_audio(audio_t *audio);
+
+    // musics.c
+    void destroy_musics(musics_t *musics);
+
+    // sounds.c
+    void destroy_sounds(sounds_t *sounds);
 
 // destroy.c
 void destroy_all(game_t *game);
 void destroy_event(event_t *event);
-void destroy_assets(assets_t *assets);
+void destroy_keys(keys_t *keys);
 
 #endif /* !DESTROY_H_ */

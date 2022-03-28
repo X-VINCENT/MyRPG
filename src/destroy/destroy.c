@@ -15,6 +15,8 @@ void destroy_all(game_t *game)
     destroy_view(game->view);
     destroy_event(game->event);
     destroy_assets(game->assets);
+    destroy_audio(game->audio);
+    destroy_keys(game->keys);
     free(game);
 }
 
@@ -26,13 +28,9 @@ void destroy_event(event_t *event)
     free(event);
 }
 
-void destroy_assets(assets_t *assets)
+void destroy_keys(keys_t *keys)
 {
-    if (!assets)
+    if (!keys)
         return;
-    destroy_appartment(assets->appartment);
-    destroy_city(assets->city);
-    destroy_home_menu(assets->home_menu);
-    destroy_rat(assets->rat);
-    free(assets);
+    free(keys);
 }

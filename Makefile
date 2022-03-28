@@ -11,56 +11,63 @@ TEST_NAME           =           unit_tests
 SRC_MAIN            =           $(addprefix src/,                            \
 								main.c)
 
-SRC                 =           $(addprefix src/,                             \
-								destroy/appartment/destroy.c                  \
-								destroy/city/destroy.c                        \
-								destroy/home_menu/destroy.c                   \
-								destroy/home_menu/parallax/destroy.c          \
-								destroy/rat/destroy.c                         \
-								destroy/destroy.c                             \
-								errors/check_env.c                            \
-								errors/check_file.c                           \
-								errors/check_pictures.c                       \
-								errors/help.c                                 \
-								game/display/appartment/display.c             \
-								game/display/city/display.c                   \
-								game/display/rat/display.c                    \
-								game/event/appartment/locations/door.c        \
-								game/event/appartment/locations/locations.c   \
-								game/event/appartment/key_pressed.c           \
-								game/event/appartment/mouse_moved.c           \
-								game/event/appartment/mouse_pressed.c         \
-								game/event/city/locations/appartment.c        \
-								game/event/city/locations/locations.c         \
-								game/event/city/key_pressed.c                 \
-								game/event/city/mouse_moved.c                 \
-								game/event/city/mouse_pressed.c               \
-								game/event/rat/animations/animate.c           \
-								game/event/rat/animations/check.c             \
-								game/event/rat/animations/move.c              \
-								game/event/rat/animations/position.c          \
-								game/event/rat/key_pressed.c                  \
-								game/event/rat/mouse_moved.c                  \
-								game/event/rat/mouse_pressed.c                \
-								game/event/event_1.c                          \
-								game/event/event_2.c					      \
-								game/event/event_3.c					      \
-								game/stage/appartment.c                       \
-								game/stage/city.c                             \
-								game/stage/stage.c                            \
-								game/tools/audio.c                            \
-								game/tools/fps.c                              \
-								game/tools/location.c                         \
-								game/tools/res.c                              \
-								game/tools/view.c                             \
-								game/my_rpg.c                                 \
-								init/appartment/init.c                        \
-								init/city/init.c                              \
-								init/home_menu/init.c                         \
-								init/home_menu/parallax/init.c                \
-								init/rat/init.c                               \
-								init/init_assets.c                            \
-								init/init_game.c)
+SRC                 =           $(addprefix src/,                            \
+								destroy/assets/appartment/destroy.c          \
+								destroy/assets/city/destroy.c                \
+								destroy/assets/home_menu/destroy.c           \
+								destroy/assets/home_menu/parallax/destroy.c  \
+								destroy/assets/rat/destroy.c                 \
+								destroy/assets/destroy.c                     \
+								destroy/audio/destroy.c                      \
+								destroy/audio/musics.c                       \
+								destroy/audio/sounds.c                       \
+								destroy/destroy.c                            \
+								errors/check_env.c                           \
+								errors/check_file.c                          \
+								errors/check_pictures.c                      \
+								errors/help.c                                \
+								display/appartment/display.c                 \
+								display/city/display.c                       \
+								display/rat/display.c                        \
+								event/appartment/locations/door.c            \
+								event/appartment/locations/locations.c       \
+								event/appartment/key_pressed.c               \
+								event/appartment/mouse_moved.c               \
+								event/appartment/mouse_pressed.c             \
+								event/city/locations/appartment.c            \
+								event/city/locations/locations.c             \
+								event/city/key_pressed.c                     \
+								event/city/mouse_moved.c                     \
+								event/city/mouse_pressed.c                   \
+								event/rat/animations/animate.c               \
+								event/rat/animations/check.c                 \
+								event/rat/animations/move.c                  \
+								event/rat/animations/position.c              \
+								event/rat/key_pressed.c                      \
+								event/rat/mouse_moved.c                      \
+								event/rat/mouse_pressed.c                    \
+								event/event_1.c                              \
+								event/event_2.c					             \
+								event/event_3.c					             \
+								stage/appartment.c                           \
+								stage/city.c                                 \
+								stage/stage.c                                \
+								tools/audio.c                                \
+								tools/fps.c                                  \
+								tools/location.c                             \
+								tools/res.c                                  \
+								tools/view.c                                 \
+								rpg.c                                        \
+								init/assets/appartment/init.c                \
+								init/assets/city/init.c                      \
+								init/assets/home_menu/init.c                 \
+								init/assets/home_menu/parallax/init.c        \
+								init/assets/rat/init.c                       \
+								init/assets/init.c                           \
+								init/audio/init.c                            \
+								init/audio/musics.c                          \
+								init/audio/sounds.c                          \
+								init/game.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \
 								animation.c                                  \

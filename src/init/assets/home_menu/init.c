@@ -7,8 +7,8 @@
 
 #include "rpg.h"
 
-void init_home_menu(assets_t *assets)
+void init_home_menu(game_t *game)
 {
-    assets->home_menu = malloc(sizeof(home_menu_t));
-    init_parallax(assets->home_menu);
+    game->assets->home_menu = malloc(sizeof(home_menu_t));
+    init_parallax(game);
 }
