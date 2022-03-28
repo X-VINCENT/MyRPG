@@ -55,6 +55,11 @@
     #define APPART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
+    #define ICE "assets/images/environments/ice_cream_shop/ice_cream_shop.png"
+    #define CLOTHE "assets/images/environments/clothe_store/cothestore.png"
+    #define MARKET "assets/images/environments/market/market.png"
+    #define MUSEUM1 "assets/images/environments/museum/museum1.png"
+    #define MUSEUM2 "assets/images/environments/museum/museum2.png"
 
     // Icons
     #define CURSOR "assets/images/icons/cursor_icon.png"
@@ -80,6 +85,8 @@
     #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
+    #define VIEW_ICE_SIZE (sfVector2f){576, 480}
+    #define VIEW_ICE_POS (sfVector2f){0, 0}
     // City
     #define VIEW_CITY_SIZE (sfVector2f){720, 480}
     #define VIEW_CITY_POS (sfVector2f){2468, 1710}
@@ -88,9 +95,9 @@
     // Speed
         #define RAT_SPEED_APPARTMENT 2
         #define RAT_SPEED_CITY 5
-#define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
-#define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
-#define SCALE_RAT (sfVector2f){1.00, 1.00}
+        #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
+        #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
+        #define SCALE_RAT (sfVector2f){1.00, 1.00}
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
         #define RAT_IDLE_FRONT_MAX 94

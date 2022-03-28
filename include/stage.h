@@ -14,6 +14,11 @@
     #define START_STAGE 0
     #define CITY_STAGE 1
     #define APPARTMENT_STAGE 2
+    #define ICE_STAGE 3
+    #define CLOTHE_STAGE 4
+    #define MARKET_STAGE 5
+    #define MUSEUM1_STAGE 6
+    #define MUSEUM2_STAGE 7
 
 // appartment.c
 void appartment_stage(game_t *game);
