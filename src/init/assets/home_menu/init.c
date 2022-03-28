@@ -9,37 +9,34 @@
 
 void init_quit_button(home_menu_t *home)
 {
-    sfIntRect rect = init_rect(0, 0, 64, 64);
-    sfIntRect rect_h = init_rect(320, 0, 64, 64);
-    sfIntRect rect_p = init_rect(640, 0, 64, 64);
-    sfVector2f pos = init_pos(0, 0);
+    sfIntRect rect = init_rect(0, 0, 16, 16);
+    sfVector2f pos = init_pos(10, 10);
     sfVector2f scale = init_scale(1, 1);
 
     home->quit = malloc(sizeof(sfSprite *) * 4);
-    home->quit[0] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect, pos, scale);
-    home->quit[1] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect_h, pos, scale);
-    home->quit[2] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect_p, pos, scale);
+    for (int idx  = 0; idx < 3; idx += 1) {
+        home->quit[idx] = create_sprite(
+            "assets/images/objects/buttons/buttons_1.png", rect, pos, scale);
+        set_sprite_origin(home->quit[idx], rect);
+        rect.left += 80;
+    }
+    home->quit[3] = NULL;
     home->quit_state = 0;
 }
 
 void init_option_button(home_menu_t *home)
 {
-    sfIntRect rect = init_rect(192, 128, 64, 64);
-    sfIntRect rect_h = init_rect(512, 128, 64, 64);
-    sfIntRect rect_p = init_rect(832, 128, 64, 64);
-    sfVector2f pos = init_pos(80, 0);
+    sfIntRect rect = init_rect(48, 32, 16, 16);
+    sfVector2f pos = init_pos(28, 10);
     sfVector2f scale = init_scale(1, 1);
 
     home->options = malloc(sizeof(sfSprite *) * 4);
-    home->options[0] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect, pos, scale);
-    home->options[1] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect_h, pos, scale);
-    home->options[2] = create_sprite(
-        "assets/images/objects/buttons/buttons_1.png", rect_p, pos, scale);
+    for (int idx  = 0; idx < 3; idx += 1) {
+        home->options[idx] = create_sprite(
+            "assets/images/objects/buttons/buttons_1.png", rect, pos, scale);
+        set_sprite_origin(home->options[idx], rect);
+        rect.left += 80;
+    }
     home->options_state = 0;
 }
 

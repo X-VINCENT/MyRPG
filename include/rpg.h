@@ -77,7 +77,7 @@
 
 // View
     // DEFAULT
-    #define VIEW_DEFAULT_SIZE (sfVector2f){1920, 1080}
+    #define VIEW_DEFAULT_SIZE (sfVector2f){640, 360}
     #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
     #define VIEW_DEFAULT_ROTATION 0
     #define VIEW_ZOOM_VALUE 10
