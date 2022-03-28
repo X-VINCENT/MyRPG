@@ -12,10 +12,10 @@ void animate_parallax(game_t *game)
     parallax_t *parallax = game->assets->home_menu->parallax;
 
     if (time_elapsed(parallax->clock) > 0.05) {
-        animate_sprite(parallax->bg0, 1, 320, 0);
-        animate_sprite(parallax->bg1, 2, 320, 0);
-        animate_sprite(parallax->bg2, 3, 320, 0);
-        animate_sprite(parallax->bg3, 4, 320, 0);
+        animate_sprite(parallax->bg0, 0.5, 320, 0);
+        animate_sprite(parallax->bg1, 1, 320, 0);
+        animate_sprite(parallax->bg2, 2, 320, 0);
+        animate_sprite(parallax->bg3, 3, 320, 0);
         sfClock_restart(parallax->clock);
     }
 }

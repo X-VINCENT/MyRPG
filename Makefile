@@ -44,6 +44,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/city/locations/locations.c             \
 								event/city/key_pressed.c                     \
 								event/home_menu/key_pressed.c                \
+								event/home_menu/mouse_moved.c                \
 								event/city/mouse_moved.c                     \
 								event/city/mouse_pressed.c                   \
 								event/rat/animations/animate.c               \

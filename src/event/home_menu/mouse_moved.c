@@ -14,8 +14,10 @@ void home_menu_mouse_moved(game_t *game)
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
-    sfFloatRect r_quit = sfSprite_getGlobalBounds(home->quit);
-    sfFloatRect r_option = sfSprite_getGlobalBounds(home->options);
+    sfFloatRect r_quit = sfSprite_getGlobalBounds(
+        home->quit[home->quit_state]);
+    sfFloatRect r_option = sfSprite_getGlobalBounds(
+        home->options[home->options_state]);
 
     if (sfFloatRect_contains(&r_quit, coords.x, coords.y))
         home->quit_state = 1;
@@ -25,6 +27,6 @@ void home_menu_mouse_moved(game_t *game)
         home->options_state = 1;
     else
         home->options_state = 0;
-    button_hover(home->quit, home->button_clock, &r_quit, coords);
-    button_hover(home->options, home->button_clock, &r_option, coords);
+    button_hover(home->quit[home->quit_state], home->button_clock, &r_quit, coords);
+    button_hover(home->options[home->options_state], home->button_clock, &r_option, coords);
 }
