@@ -56,8 +56,10 @@ SRC                 =           $(addprefix src/,                            \
 								event/ice_cream_shop/key_pressed.c           \
 								event/ice_cream_shop/mouse_moved.c           \
 								event/ice_cream_shop/mouse_pressed.c         \
+								event/rat/animations/check/appartment.c      \
+								event/rat/animations/check/check.c           \
+								event/rat/animations/check/city.c            \
 								event/rat/animations/animate.c               \
-								event/rat/animations/check.c                 \
 								event/rat/animations/move.c                  \
 								event/rat/animations/position.c              \
 								event/rat/key_pressed.c                      \

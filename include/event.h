@@ -79,14 +79,27 @@
 
 // Rat
     // Animations
+        // Check
+            // appartment.c
+            int rat_can_move_left_appartment(game_t *game);
+            int rat_can_move_right_appartment(game_t *game);
+            int rat_can_move_up_appartment(game_t *game);
+            int rat_can_move_down_appartment(game_t *game);
+
+            // check.c
+            int rat_can_move_left(game_t *game);
+            int rat_can_move_right(game_t *game);
+            int rat_can_move_up(game_t *game);
+            int rat_can_move_down(game_t *game);
+
+            // city.c
+            int rat_can_move_left_city(game_t *game);
+            int rat_can_move_right_city(game_t *game);
+            int rat_can_move_up_city(game_t *game);
+            int rat_can_move_down_city(game_t *game);
+
         // animate.c
         void animate_rats(game_t *game);
-
-        // check.c
-        int rat_can_move_left(game_t *game);
-        int rat_can_move_right(game_t *game);
-        int rat_can_move_up(game_t *game);
-        int rat_can_move_down(game_t *game);
 
         // move.c
         void move_rat(game_t *game);
