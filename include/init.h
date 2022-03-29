@@ -18,6 +18,10 @@
     // City
         // init.c
         void init_city(game_t *game);
+    
+    // Clothe
+        //init.c
+        void init_clothe(game_t *game);
 
     // Home Menu
         // Parallax
@@ -33,6 +37,14 @@
     // Market
         // init.c
         void init_market(game_t *game);
+
+    // Museum1
+        //init.c
+        void init_museum1(game_t *game);
+    
+    // Museum2
+        //init.c
+        void init_museum2(game_t *game);
 
     // Rat
         // init.c

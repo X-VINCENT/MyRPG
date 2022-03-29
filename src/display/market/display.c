@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Display ice cream shop for My RPG
+** Display market for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */

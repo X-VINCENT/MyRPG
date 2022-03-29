@@ -37,6 +37,12 @@ void ice_stage(game_t *game);
 // market.c
 void market_stage(game_t *game);
 
+//museum1
+void museum1_stage(game_t *game);
+
+//museum2
+void museum2_stage(game_t *game);
+
 // stage.c
 void select_game_stage(game_t *game);
 void select_game_stage_2(game_t *game);

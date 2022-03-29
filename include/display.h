@@ -38,6 +38,14 @@
     // display.c
     void display_market(game_t *game);
 
+//Museum1
+    //display.c
+    void display_museum1(game_t *game);
+
+//Museum2
+    //display.c
+    void display_museum2(game_t *game);
+
 // Rat
     // display.c
     void display_rat(game_t *game);

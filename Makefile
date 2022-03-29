@@ -14,7 +14,11 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/ice_shop/destroy.c 			 \
+								destroy/assets/market/destroy.c 			 \
+								destroy/assets/museum1/destroy.c 			 \
+								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/city/destroy.c                \
+								destroy/assets/clothe/destroy.c 			 \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
 								destroy/assets/rat/destroy.c                 \
@@ -34,6 +38,8 @@ SRC                 =           $(addprefix src/,                            \
 								display/home_menu/display.c                  \
 								display/ice_shop/display.c 					 \
 								display/market/display.c 					 \
+								display/museum1/display.c 					 \
+								display/museum2/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
 								event/appartment/locations/door.c            \
@@ -73,10 +79,12 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_3.c					             \
 								stage/appartment.c                           \
 								stage/city.c                                 \
+								stage/clothe.c                               \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/clothe.c                               \
+								stage/museum1.c								 \
+								stage/museum2.c 							 \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
@@ -86,10 +94,13 @@ SRC                 =           $(addprefix src/,                            \
 								rpg.c                                        \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
+								init/assets/clothe/init.c 					 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
+								init/assets/museum1/init.c 					 \
+								init/assets/museum2/init.c 					 \
 								init/assets/rat/init.c                       \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \

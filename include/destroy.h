@@ -35,7 +35,12 @@
         void destroy_home_menu(home_menu_t *home_menu);
         //parallax
         void destroy_parallax(parallax_t *parallax);
-
+    // Museum1
+        //destroy.c
+        void destroy_museum1(museum1_t *museum1);
+    // Museum2
+        //destroy.c
+        void destroy_museum2(museum2_t *museum2);
     // Rat
         // destroy.c
         void destroy_rat(rat_t *rat);

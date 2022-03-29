@@ -23,6 +23,16 @@
         sfImage *hitbox;
     } appartment_t;
 
+    typedef struct museum1 {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } museum1_t;
+
+    typedef struct museum2 {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } museum2_t;
+
     typedef struct ice {
         sfSprite *bg;
         sfImage *hitbox;
@@ -83,6 +93,8 @@
     typedef struct assets {
         sfSprite *cursor;
         appartment_t *appartment;
+        museum1_t *museum1;
+        museum2_t *museum2;
         ice_t *ice;
         market_t *market;
         clothe_t *clothe;
