@@ -21,6 +21,15 @@ void select_game_stage_2(game_t *game)
         case MARKET_STAGE:
             market_stage(game);
             break;
+        case CLOTHE_STAGE:
+            clothe_stage(game);
+            break;
+        case MUSEUM1_STAGE:
+            museum1_stage(game);
+            break;
+        case MUSEUM2_STAGE:
+            museum2_stage(game);
+            break;
         default:
             break;
     }

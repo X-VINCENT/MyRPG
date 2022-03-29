@@ -16,8 +16,11 @@
     #define APPARTMENT_STAGE 2
     #define ICE_STAGE 3
     #define MARKET_STAGE 4
-    #define RAT_TRANSITION_ENTER 5
-    #define RAT_TRANSITION_QUIT 6
+    #define CLOTHE_STAGE 5
+    #define MUSEUM1_STAGE 6
+    #define MUSEUM2_STAGE 7
+    #define RAT_TRANSITION_ENTER 8
+    #define RAT_TRANSITION_QUIT 9
 
 // appartment.c
 void appartment_stage(game_t *game);
@@ -32,7 +35,7 @@ void home_menu_stage(game_t *game);
 void ice_stage(game_t *game);
 
 // clothe.c
-void ice_stage(game_t *game);
+void clothe_stage(game_t *game);
 
 // market.c
 void market_stage(game_t *game);

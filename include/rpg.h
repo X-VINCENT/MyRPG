@@ -141,9 +141,12 @@
     // City
     #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
     #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
-    #define LOCATION_MARKET (sfVector2f) {400, 1667}
+    #define LOCATION_MARKET (sfVector2f) {1522, 1683}
 
     // Ice Cream Shop
     #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 453}
+
+    // Market
+    #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}
 
 #endif /* !MY_RPG_H_ */
