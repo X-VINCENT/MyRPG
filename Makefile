@@ -131,7 +131,7 @@ SRC_TESTS           +=          $(SRC) $(SRC_CSFML)
 OBJ_MAIN            =           $(SRC_MAIN:.c=.o)
 OBJ                 =           $(SRC:.c=.o) $(SRC_CSFML:.c=.o)
 
-CFLAGS              +=          -Iinclude
+CFLAGS              +=          -Iinclude -W -Wall -Wextra
 LDFLAGS             =           -Llib -lmy
 LDFLAGS             +=          -lcsfml-graphics -lcsfml-window
 LDFLAGS             +=          -lcsfml-system -lcsfml-audio
