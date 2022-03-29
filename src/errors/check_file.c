@@ -39,7 +39,7 @@ int is_file(const char *filepath)
 
     if (!filepath)
         return 1;
-    if (file = fopen(filepath, "r")) {
+    if ((file = fopen(filepath, "r"))) {
         fclose(file);
         return SUCCESS;
     }

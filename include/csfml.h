@@ -83,7 +83,7 @@
     void destroy_text(sfText *text);
 
 // View
-    sfView *create_view(sfVector2f size, sfVector2f position, float angle);
+    sfView *create_view(sfVector2f size, float angle);
     void destroy_view(sfView *view);
 
 // Window
