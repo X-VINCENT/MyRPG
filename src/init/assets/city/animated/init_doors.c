@@ -11,10 +11,12 @@ void init_doors(game_t *game)
 {
     doors_t *doors =  game->assets->city->doors;
     sfIntRect rect = init_rect(0, 0, 19, 38);
-    sfVector2f pos = init_pos(2460, 1665);
+    sfVector2f pos = init_pos(2459, 1662);
     sfVector2f scale = init_scale(1, 1);
 
     doors->rat = create_sprite("assets/images/environments/city/rat_door.png",
                 rect, pos, scale);
     doors->clock = sfClock_create();
+    doors->animation = sfClock_create();
+    doors->rat_is_taken = 0;
 }

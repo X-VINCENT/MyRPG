@@ -100,7 +100,7 @@
     #define VIEW_ROTATE_VALUE 5
 
     // Appartment
-    #define VIEW_APPARTMENT_SIZE (sfVector2f){517, 292}
+    #define VIEW_APPARTMENT_SIZE (sfVector2f){600, 320}
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
     // City
@@ -108,7 +108,7 @@
     #define VIEW_CITY_POS (sfVector2f){2468, 1710}
 
     // Ice Cream Shop
-    #define VIEW_ICE_SIZE (sfVector2f){576, 480}
+    #define VIEW_ICE_SIZE (sfVector2f){600, 320}
     #define VIEW_ICE_POS (sfVector2f){288, 240}
 
     // Market
@@ -125,7 +125,7 @@
     // Pos
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
-        #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 441}
+        #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_MARKET (sfVector2f){342, 30}
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
@@ -152,7 +152,7 @@
     #define LOCATION_MARKET (sfVector2f) {1522, 1683}
 
     // Ice Cream Shop
-    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 453}
+    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 385}
 
     // Market
     #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}

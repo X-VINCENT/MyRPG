@@ -51,7 +51,9 @@
 
     typedef struct doors {
         sfSprite *rat;
+        int rat_is_taken;
         sfClock *clock;
+        sfClock *animation;
     } doors_t;
 
     typedef struct city {
