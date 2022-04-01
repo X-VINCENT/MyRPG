@@ -11,10 +11,13 @@ void init_title(home_menu_t *home)
 {
     sfIntRect rect = init_rect(0, 0, 640, 360);
     sfVector2f pos = init_pos(0, 0);
+    sfVector2f pos_title = init_pos(0, -25);
     sfVector2f scale = init_scale(1, 1);
 
     home->title = create_sprite(
-        "assets/images/menus/home/title.png", rect, pos, scale);
+        "assets/images/menus/home/title.png", rect, pos_title, scale);
+    home->press = create_sprite(
+        "assets/images/menus/home/press.png", rect, pos, scale);
 }
 
 void init_quit_button(home_menu_t *home)

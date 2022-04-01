@@ -58,6 +58,7 @@
         sfSprite **quit;
         sfSprite **options;
         sfSprite *title;
+        sfSprite *press;
         int quit_state;
         int options_state;
         sfClock *button_clock;
