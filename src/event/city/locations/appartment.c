@@ -13,10 +13,10 @@ void location_appartment_city(game_t *game)
 
     if (check_location_rect(rat->idle_front,
         LOCATION_APPARTMENT, 20, 8) == true && rat->up == 1) {
-        game->stage = APPARTMENT_STAGE;
-        sfView_setCenter(game->view, VIEW_APPARTMENT_POS);
-        sfView_setSize(game->view, VIEW_APPARTMENT_SIZE);
-        set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
-        rat->speed = RAT_SPEED_APPARTMENT;
+            game->stage = APPARTMENT_STAGE;
+            sfView_setCenter(game->view, VIEW_APPARTMENT_POS);
+            sfView_setSize(game->view, VIEW_APPARTMENT_SIZE);
+            set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
+            rat->speed = RAT_SPEED_APPARTMENT;
     }
 }

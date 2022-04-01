@@ -94,6 +94,7 @@ SRC                 =           $(addprefix src/,                            \
 								rpg.c                                        \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
+								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c 					 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \

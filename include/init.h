@@ -18,6 +18,9 @@
     // City
         // init.c
         void init_city(game_t *game);
+        //animated
+            //doors.c
+            void init_doors(game_t *game);
 
     // Clothe
         //init.c

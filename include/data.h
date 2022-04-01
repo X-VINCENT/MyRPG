@@ -45,11 +45,18 @@
 
     typedef struct clothe {
         sfSprite *bg;
+
         sfImage *hitbox;
     } clothe_t;
 
+    typedef struct doors {
+        sfSprite *rat;
+        sfClock *clock;
+    } doors_t;
+
     typedef struct city {
         sfSprite *bg;
+        doors_t *doors;
         sfImage *hitbox;
     } city_t;
 
