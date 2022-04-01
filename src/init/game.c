@@ -13,7 +13,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = CITY_STAGE;
+    game->stage = START_STAGE;
     game->last_stage = START_STAGE;
     game->next_stage = START_STAGE;
     game->fps = DEFAULT_FPS;

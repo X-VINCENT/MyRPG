@@ -10,7 +10,4 @@
 void transitions_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
-
-    if (event->key.code == sfKeyReturn)
-        game->stage = game->next_stage;
 }

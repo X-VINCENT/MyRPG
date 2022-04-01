@@ -41,7 +41,9 @@ void event_key_pressed(game_t *game)
             appartment_key_pressed(game);
         case ICE_STAGE:
             ice_cream_shop_key_pressed(game);
-        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+        case RAT_TRANSITION_ENTER:
+            transitions_key_pressed(game);
+        case RAT_TRANSITION_QUIT:
             transitions_key_pressed(game);
         default:
             event_key_pressed_2(game);
