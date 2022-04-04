@@ -123,8 +123,10 @@
         #define RAT_SPEED_ICE_CREAM_SHOP 2
         #define RAT_SPEED_MARKET 5
     // Pos
+        #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
+        #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f) {915, 1675}
+
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
-        #define RAT_DEFAULT_POS_CITY (sfVector2f){2468, 1710}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_MARKET (sfVector2f){342, 30}
     // Idle

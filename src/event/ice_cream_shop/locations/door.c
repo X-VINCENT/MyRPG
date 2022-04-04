@@ -16,7 +16,7 @@ void location_door_ice_cream_shop(game_t *game)
         game->stage = CITY_STAGE;
         sfView_setCenter(game->view, VIEW_CITY_POS);
         sfView_setSize(game->view, VIEW_CITY_SIZE);
-        set_rats_position(game, RAT_DEFAULT_POS_CITY);
+        set_rats_position(game, RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP);
         rat->speed = RAT_SPEED_CITY;
     }
 }

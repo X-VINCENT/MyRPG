@@ -13,7 +13,7 @@ void init_rat_idle(game_t *game, const char *filename_color)
     sfIntRect r_front = init_rect(22, 39, 16, 21);
     sfIntRect r_back = init_rect(22, 94, 16, 24);
     sfIntRect r_sides = init_rect(22, 66, 25, 22);
-    sfVector2f pos = RAT_DEFAULT_POS_CITY;
+    sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
 
     rat->idle_front = create_sprite(filename_color, r_front, pos, scale);
@@ -34,7 +34,7 @@ void init_rat_movement(game_t *game, const char *filename_color)
     sfIntRect r_up = init_rect(22, 226, 16, 26);
     sfIntRect r_down = init_rect(22, 164, 16, 24);
     sfIntRect r_sides = init_rect(22, 194, 25, 26);
-    sfVector2f pos = RAT_DEFAULT_POS_CITY;
+    sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
 
     rat->movement_up = create_sprite(filename_color, r_up, pos, scale);
@@ -54,7 +54,7 @@ void init_rat(game_t *game, const char *filename_color)
 {
     rat_t *rat = NULL;
     sfIntRect r_shadow = init_rect(202, 40, 12, 4);
-    sfVector2f pos = RAT_DEFAULT_POS_CITY;
+    sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
 
     game->assets->rat = malloc(sizeof(rat_t));
