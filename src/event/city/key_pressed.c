@@ -11,6 +11,7 @@ void city_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
+    inventory_key_pressed(game);
     rat_key_pressed(game);
     city_locations(game);
     zoom_view(game);

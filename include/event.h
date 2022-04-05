@@ -126,6 +126,9 @@
     // mouse_pressed.c
     void transitions_mouse_pressed(game_t *game);
 
+//inventory
+    void inventory_key_pressed(game_t *game);
+
 // event_1.c
 void event(game_t *game);
 void event_key_pressed(game_t *game);

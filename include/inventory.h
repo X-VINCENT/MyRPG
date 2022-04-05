@@ -10,7 +10,8 @@
 
     #include "rpg.h"
 
-    #define SLOT_PATH "assets/images/inventory/pack.png"
+    #define SLOT_PATH_ON "assets/images/inventory/slot_on.png"
+    #define SLOT_PATH_OFF "assets/images/inventory/slot_off.png"
     #define INVENTORY_SIZE (9)
 
     enum item {
@@ -24,7 +25,8 @@
     typedef struct inventory {
         int selected;
         int *items;
-        sfSprite **slots;
+        sfSprite **slots_on;
+        sfSprite **slots_off;
     } inventory_t;
 
 #endif /* !INVENTORY_H_ */

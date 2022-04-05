@@ -10,6 +10,9 @@
 void event_key_pressed_2(game_t *game)
 {
     switch (game->stage) {
+        case RAT_TRANSITION_QUIT:
+            transitions_key_pressed(game);
+            break;
         default:
             event_key_pressed_3(game);
             break;
