@@ -150,6 +150,7 @@
         assets_t *assets;
         audio_t *audio;
         keys_t *keys;
+        inventory_t *inventory;
         int stage;
         int last_stage;
         int next_stage;

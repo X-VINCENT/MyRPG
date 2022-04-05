@@ -49,6 +49,7 @@
 // Rat
     // display.c
     void display_rat(game_t *game);
+    void display_inventory(game_t *game);
 
 // Transitions
     // display.c

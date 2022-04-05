@@ -24,6 +24,7 @@ game_t *init_game(void)
     init_assets(game);
     init_audio(game);
     init_keys(game);
+    init_inventory(game);
     return game;
 }
 

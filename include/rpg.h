@@ -19,14 +19,15 @@
     #include "csfml.h"
 
 // RPG Headers
+    #include "inventory.h"
     #include "data.h"
-    #include "destroy.h"
     #include "display.h"
     #include "errors.h"
     #include "event.h"
     #include "init.h"
     #include "stage.h"
     #include "tools.h"
+    #include "destroy.h"
 
 // Basic Macros
     #define SUCCESS 0

@@ -26,6 +26,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
+								destroy/inventory/destroy.c                  \
 								destroy/destroy.c                            \
 								errors/check_env.c                           \
 								errors/check_file.c                          \
@@ -33,6 +34,7 @@ SRC                 =           $(addprefix src/,                            \
 								errors/help.c                                \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
+								display/inventory/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
 								display/home_menu/display.c                  \
@@ -108,6 +110,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
+								init/inventory/init.c                        \
 								init/game.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \

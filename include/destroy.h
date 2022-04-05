@@ -44,6 +44,10 @@
     // Rat
         // destroy.c
         void destroy_rat(rat_t *rat);
+    
+    // Inventory
+        //destroy.c
+        void destroy_inventory(inventory_t *inventory);
 
     // destroy.c
     void destroy_assets(assets_t *assets);

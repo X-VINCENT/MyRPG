@@ -71,6 +71,10 @@
     // sounds.c
     void init_sounds(game_t *game);
 
+// Inventory
+    //init.c
+    void init_inventory(game_t *game);
+
 // game.c
 game_t *init_game(void);
 void init_window(game_t *game);
