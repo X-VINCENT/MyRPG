@@ -41,6 +41,9 @@
         // market.c
         void location_market_city(game_t *game);
 
+        // museum.c
+        void location_museum_city(game_t *game);
+
     // key_pressed.c
     void city_key_pressed(game_t *game);
 

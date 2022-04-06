@@ -15,4 +15,5 @@ void city_locations(game_t *game)
     location_appartment_city(game);
     location_ice_cream_city(game);
     location_market_city(game);
+    location_museum_city(game);
 }
