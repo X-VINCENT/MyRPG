@@ -51,6 +51,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/mouse_pressed.c             \
 								event/inventory/key_pressed.c				 \
 								event/city/locations/appartment.c            \
+								event/city/locations/clothe_shop.c 			 \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
 								event/city/locations/market.c                \
