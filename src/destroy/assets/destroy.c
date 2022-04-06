@@ -20,5 +20,6 @@ void destroy_assets(assets_t *assets)
     destroy_clothe(assets->clothe);
     destroy_museum1(assets->museum1);
     destroy_museum2(assets->museum2);
+    destroy_top_bar(assets->top_bar);
     free(assets);
 }

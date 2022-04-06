@@ -83,6 +83,10 @@
     // mouse_pressed.c
     void ice_cream_shop_mouse_pressed(game_t *game);
 
+// Inventory
+    // key_pressed.c
+    void inventory_key_pressed(game_t *game);
+
 // Rat
     // Animations
         // Check
@@ -122,6 +126,26 @@
     // mouse_pressed.c
     void rat_mouse_pressed(game_t *game);
 
+// Settings Menu
+    // key_pressed.c
+    void settings_menu_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void settings_menu_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void settings_menu_mouse_pressed(game_t *game);
+
+// Top Bar
+    // key_pressed.c
+    void top_bar_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void top_bar_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void top_bar_mouse_pressed(game_t *game);
+
 // Transitions
     // key_pressed.c
     void transitions_key_pressed(game_t *game);
@@ -131,9 +155,6 @@
 
     // mouse_pressed.c
     void transitions_mouse_pressed(game_t *game);
-
-//inventory
-    void inventory_key_pressed(game_t *game);
 
 // event_1.c
 void event(game_t *game);

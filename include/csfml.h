@@ -27,6 +27,8 @@
         sfFloatRect *global_bounds, sfVector2f coords);
     void button_hover_little(sfSprite *sprite, sfClock *clock,
         sfFloatRect *global_bounds, sfVector2f coords);
+    void text_hover(sfText *text, sfClock *clock,
+        sfFloatRect *global_bounds, sfVector2f coords);
 
 // Audio
     sfMusic *create_music(const char *music_path);
@@ -80,6 +82,7 @@
 // Text
     sfText *create_text(
         const char *font_path, sfColor color, int size, const char *string);
+    void set_text_origin(sfText *text);
     void destroy_text(sfText *text);
 
 // View

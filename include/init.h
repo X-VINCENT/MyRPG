@@ -53,6 +53,10 @@
         // init.c
         void init_rat(game_t *game, const char *filename_color);
 
+    // Top Bar
+        // init.c
+        void init_top_bar(game_t *game);
+
     // Transitions
         // init.c
         void init_transitions(game_t *game);

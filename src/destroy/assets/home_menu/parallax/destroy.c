@@ -9,9 +9,9 @@
 
 void destroy_parallax(parallax_t *parallax)
 {
-    sfSprite_destroy(parallax->bg0);
-    sfSprite_destroy(parallax->bg1);
-    sfSprite_destroy(parallax->bg2);
-    sfSprite_destroy(parallax->bg3);
+    destroy_sprite(parallax->bg0);
+    destroy_sprite(parallax->bg1);
+    destroy_sprite(parallax->bg2);
+    destroy_sprite(parallax->bg3);
     free(parallax);
 }

@@ -43,6 +43,9 @@
     // Musics
     // Sounds
 
+// Fonts
+    #define FONT_RPG "assets/fonts/rpg.ttf"
+
 // Images
     // Characters
         // Rat
@@ -86,6 +89,10 @@
             #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"
             #define RAT_QUIT "assets/images/menus/transitions/rat/quit.png"
 
+    // Objects
+        // GUI
+            #define GUI "assets/images/objects/gui.png"
+
 // Window
 #define DEFAULT_FPS 0
 #define DEFAULT_WINDOW_RESOLUTION 1080
@@ -100,6 +107,13 @@
     #define VIEW_MAX_ZOOM_OUT 1000
     #define VIEW_ROTATE_VALUE 5
 
+    // MENUS
+    #define VIEW_MENUS_SIZE (sfVector2f){1920, 1080}
+    #define VIEW_MENUS_POS (sfVector2f){960, 540}
+
+    #define VIEW_HOME_MENU_SIZE (sfVector2f){640, 360}
+    #define VIEW_HOME_MENU_POS (sfVector2f){320, 180}
+
     // Appartment
     #define VIEW_APPARTMENT_SIZE (sfVector2f){600, 320}
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
@@ -112,7 +126,7 @@
     #define VIEW_ICE_SIZE (sfVector2f){600, 320}
     #define VIEW_ICE_POS (sfVector2f){288, 240}
 
-    //Clothe shop
+    // Clothe shop
     #define VIEW_CLOTHE_SIZE (sfVector2f){1024, 768}
     #define VIEW_CLOTHE_POS (sfVector2f){336, 321}
 
@@ -120,7 +134,7 @@
     #define VIEW_MARKET_SIZE (sfVector2f){740, 450}
     #define VIEW_MARKET_POS (sfVector2f){370, 225}
 
-    //Museum
+    // Museum
     #define VIEW_MUSEUM1_SIZE (sfVector2f){1920, 1080}
     #define VIEW_MUSEUM1_POS (sfVector2f){384, 528}
 
@@ -174,5 +188,26 @@
 
     // Market
     #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}
+
+// Texts
+#define ENGLISH_MENU_1 "Menu 1"
+#define FRENCH_MENU_1 "Menu 1"
+#define GERMAN_MENU_1 "Menu 1"
+#define SPANISH_MENU_1 "Menu 1"
+
+#define ENGLISH_MENU_2 "Menu 2"
+#define FRENCH_MENU_2 "Menu 2"
+#define GERMAN_MENU_2 "Menu 2"
+#define SPANISH_MENU_2 "Menu 2"
+
+#define ENGLISH_MENU_3 "Menu 3"
+#define FRENCH_MENU_3 "Menu 3"
+#define GERMAN_MENU_3 "Menu 3"
+#define SPANISH_MENU_3 "Menu 3"
+
+#define ENGLISH_MENU_4 "Menu 4"
+#define FRENCH_MENU_4 "Menu 4"
+#define GERMAN_MENU_4 "Menu 4"
+#define SPANISH_MENU_4 "Menu 4"
 
 #endif /* !MY_RPG_H_ */

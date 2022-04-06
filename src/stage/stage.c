@@ -10,6 +10,9 @@
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
+        case SETTINGS_STAGE:
+            settings_stage(game);
+            break;
         default:
             break;
     }

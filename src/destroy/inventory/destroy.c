@@ -11,14 +11,11 @@ void destroy_inventory(inventory_t *inventory)
 {
     if (!inventory)
         return;
-    for (int i = 0; inventory->slots_on[i] != NULL; i++) {
-        sfTexture_destroy(sfSprite_getTexture(inventory->slots_on[i]));
-        sfSprite_destroy(inventory->slots_on[i]);
-        sfTexture_destroy(sfSprite_getTexture(inventory->slots_off[i]));
-        sfSprite_destroy(inventory->slots_off[i]);
+    for (int idx = 0; inventory->slots_off[idx] != NULL; idx += 1) {
+        destroy_sprite(inventory->slots_off[idx]);
+        destroy_sprite(inventory->slots_on[idx]);
     }
     free(inventory->slots_on);
     free(inventory->slots_off);
     free(inventory);
-    return;
 }

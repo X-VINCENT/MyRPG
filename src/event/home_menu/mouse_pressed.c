@@ -19,4 +19,8 @@ void home_menu_mouse_pressed(game_t *game)
 
     if (sfFloatRect_contains(&r_q, coords.x, coords.y))
         sfRenderWindow_close(game->window);
+    if (sfFloatRect_contains(&r_o, coords.x, coords.y)) {
+        game->last_stage = game->stage;
+        game->stage = SETTINGS_STAGE;
+    }
 }

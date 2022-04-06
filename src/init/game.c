@@ -57,4 +57,5 @@ void init_keys(game_t *game)
     game->keys->zoom_in = sfKeyZ;
     game->keys->zoom_out = sfKeyS;
     game->keys->reset_view = sfKeyR;
+    game->keys->escape = sfKeyEscape;
 }

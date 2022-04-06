@@ -13,15 +13,16 @@ SRC_MAIN            =           $(addprefix src/,                            \
 
 SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
-								destroy/assets/ice_shop/destroy.c 			 \
-								destroy/assets/market/destroy.c 			 \
-								destroy/assets/museum1/destroy.c 			 \
-								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
+								destroy/assets/ice_shop/destroy.c 			 \
+								destroy/assets/market/destroy.c 			 \
+								destroy/assets/museum1/destroy.c 			 \
+								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
+								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
@@ -44,6 +45,8 @@ SRC                 =           $(addprefix src/,                            \
 								display/museum2/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
+								display/settings_menu/display.c              \
+								display/top_bar/display.c                    \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
@@ -76,6 +79,12 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/key_pressed.c                      \
 								event/rat/mouse_moved.c                      \
 								event/rat/mouse_pressed.c                    \
+								event/settings_menu/key_pressed.c            \
+								event/settings_menu/mouse_moved.c            \
+								event/settings_menu/mouse_pressed.c          \
+								event/top_bar/key_pressed.c                  \
+								event/top_bar/mouse_moved.c                  \
+								event/top_bar/mouse_pressed.c                \
 								event/transitions/key_pressed.c              \
 								event/transitions/mouse_moved.c              \
 								event/transitions/mouse_pressed.c            \
@@ -90,6 +99,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/market.c                               \
 								stage/museum1.c								 \
 								stage/museum2.c 							 \
+								stage/settings.c 							 \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
@@ -108,6 +118,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/museum1/init.c 					 \
 								init/assets/museum2/init.c 					 \
 								init/assets/rat/init.c                       \
+								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \

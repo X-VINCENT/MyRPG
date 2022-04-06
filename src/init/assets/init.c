@@ -23,6 +23,7 @@ void init_assets(game_t *game)
     init_museum2(game);
     init_market(game);
     init_transitions(game);
+    init_top_bar(game);
 }
 
 void init_cursor(game_t *game)

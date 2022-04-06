@@ -100,6 +100,19 @@
         sfSprite *rat_quit;
     } transitions_t;
 
+    typedef struct top_bar {
+        sfText *menu1;
+	    sfText *menu2;
+	    sfText *menu3;
+	    sfText *menu4;
+	    sfSprite *settings_off;
+	    sfSprite *settings_on;
+	    sfSprite *quit_off;
+	    sfSprite *quit_on;
+	    sfSprite *dot;
+        sfClock *clock;
+    } top_bar_t;
+
     typedef struct assets {
         sfSprite *cursor;
         appartment_t *appartment;
@@ -112,6 +125,7 @@
         home_menu_t *home_menu;
         rat_t *rat;
         transitions_t *transitions;
+        top_bar_t *top_bar;
     } assets_t;
 
     typedef struct event {
@@ -129,6 +143,7 @@
         int rotate_left;
         int rotate_right;
         int reset_view;
+        int escape;
     } keys_t;
 
     typedef struct musics {
