@@ -214,4 +214,28 @@
 #define GERMAN_MENU_4 "Menu 4"
 #define SPANISH_MENU_4 "Menu 4"
 
+#define ENGLISH_SETTINGS "Settings"
+#define ENGLISH_GAME "Game"
+#define ENGLISH_GRAPHICS "Graphics"
+#define ENGLISH_AUDIO "Audio"
+#define ENGLISH_CONTROLS "Controls"
+
+#define FRENCH_SETTINGS "Paramètres"
+#define FRENCH_GAME "Jeu"
+#define FRENCH_GRAPHICS "Visuels"
+#define FRENCH_AUDIO "Son"
+#define FRENCH_CONTROLS "Contrôles"
+
+#define GERMAN_SETTINGS "Einstellungen"
+#define GERMAN_GAME "Spiel"
+#define GERMAN_GRAPHICS "Grafik"
+#define GERMAN_AUDIO "Audio"
+#define GERMAN_CONTROLS "Steuert"
+
+#define SPANISH_SETTINGS "Configuraciones"
+#define SPANISH_GAME "Juego"
+#define SPANISH_GRAPHICS "Gráficos"
+#define SPANISH_AUDIO "Su"
+#define SPANISH_CONTROLS "Control S"
+
 #endif /* !MY_RPG_H_ */
