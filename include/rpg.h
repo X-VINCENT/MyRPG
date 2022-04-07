@@ -77,13 +77,17 @@
     #define WINDOW_ICON "assets/images/icons/window_icon.png"
 
     // Menus
-        // home
+        // Home
             #define BG0 "assets/images/menus/home/bg0.png"
             #define BG1 "assets/images/menus/home/bg1.png"
             #define BG2 "assets/images/menus/home/bg2.png"
             #define BG3 "assets/images/menus/home/bg3.png"
             #define HOME_TITLE "assets/images/menus/home/title.png"
             #define HOME_PRESS "assets/images/menus/home/press.png"
+
+        // Settings
+            #define SETTINGS_BG "assets/images/menus/settings/bg.png"
+
         // Transitions
             // Rat
             #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"

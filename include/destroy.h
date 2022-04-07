@@ -53,6 +53,10 @@
         // destroy.c
         void destroy_rat(rat_t *rat);
 
+    // Settings
+        // destroy.c
+        void destroy_settings(settings_t *settings);
+
     // Top Bar
         // destroy.c
         void destroy_top_bar(top_bar_t *bar);

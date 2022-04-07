@@ -22,6 +22,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/museum1/destroy.c 			 \
 								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
+								destroy/assets/settings/destroy.c            \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
 								destroy/audio/destroy.c                      \
@@ -45,7 +46,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/museum2/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
-								display/settings_menu/display.c              \
+								display/settings/display.c              \
 								display/top_bar/display.c                    \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -79,9 +80,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/key_pressed.c                      \
 								event/rat/mouse_moved.c                      \
 								event/rat/mouse_pressed.c                    \
-								event/settings_menu/key_pressed.c            \
-								event/settings_menu/mouse_moved.c            \
-								event/settings_menu/mouse_pressed.c          \
+								event/settings/key_pressed.c                 \
+								event/settings/mouse_moved.c                 \
+								event/settings/mouse_pressed.c               \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
@@ -118,6 +119,11 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/museum1/init.c 					 \
 								init/assets/museum2/init.c 					 \
 								init/assets/rat/init.c                       \
+								init/assets/settings/audio.c                 \
+								init/assets/settings/controls.c              \
+								init/assets/settings/game.c                  \
+								init/assets/settings/graphics.c              \
+								init/assets/settings/init.c                  \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \

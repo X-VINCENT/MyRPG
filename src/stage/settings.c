@@ -11,6 +11,6 @@ void settings_stage(game_t *game)
 {
     sfView_setSize(game->view, VIEW_MENUS_SIZE);
     sfView_setCenter(game->view, VIEW_MENUS_POS);
-    display_settings_menu(game);
+    display_settings(game);
     display_cursor(game);
 }
