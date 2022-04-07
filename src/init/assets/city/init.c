@@ -14,6 +14,8 @@ void init_city(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->city = malloc(sizeof(city_t));
+    game->assets->city->doors = malloc(sizeof(doors_t));
     game->assets->city->bg = create_sprite(CITY, rect, pos, scale);
     game->assets->city->hitbox = create_image(CITY_HITBOX);
+    init_doors(game);
 }

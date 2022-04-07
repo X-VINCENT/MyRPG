@@ -15,6 +15,7 @@
         sfSprite *bg1;
         sfSprite *bg2;
         sfSprite *bg3;
+        sfClock *clock;
     } parallax_t;
 
     typedef struct appartment {
@@ -22,13 +23,54 @@
         sfImage *hitbox;
     } appartment_t;
 
+    typedef struct museum1 {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } museum1_t;
+
+    typedef struct museum2 {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } museum2_t;
+
+    typedef struct ice {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } ice_t;
+
+    typedef struct market {
+        sfSprite *bg;
+        sfImage *hitbox;
+    } market_t;
+
+    typedef struct clothe {
+        sfSprite *bg;
+
+        sfImage *hitbox;
+    } clothe_t;
+
+    typedef struct doors {
+        sfSprite *rat;
+        int rat_is_taken;
+        sfClock *clock;
+        sfClock *animation;
+    } doors_t;
+
     typedef struct city {
         sfSprite *bg;
+        doors_t *doors;
         sfImage *hitbox;
     } city_t;
 
     typedef struct home_menu {
         parallax_t *parallax;
+        sfSprite **quit;
+        sfSprite **options;
+        sfSprite *title;
+        sfSprite *press;
+        int quit_state;
+        int options_state;
+        sfClock *button_clock;
     } home_menu_t;
 
     typedef struct rat {
@@ -54,17 +96,36 @@
     } rat_t;
 
     typedef struct transitions {
-        sfSprite **rat_enter;
-        sfSprite **rat_quit;
+        sfSprite *rat_enter;
+        sfSprite *rat_quit;
     } transitions_t;
+
+    typedef struct top_bar {
+        sfText *menu1;
+	    sfText *menu2;
+	    sfText *menu3;
+	    sfText *menu4;
+	    sfSprite *settings_off;
+	    sfSprite *settings_on;
+	    sfSprite *quit_off;
+	    sfSprite *quit_on;
+	    sfSprite *dot;
+        sfClock *clock;
+    } top_bar_t;
 
     typedef struct assets {
         sfSprite *cursor;
         appartment_t *appartment;
+        museum1_t *museum1;
+        museum2_t *museum2;
+        ice_t *ice;
+        market_t *market;
+        clothe_t *clothe;
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
         transitions_t *transitions;
+        top_bar_t *top_bar;
     } assets_t;
 
     typedef struct event {
@@ -82,6 +143,7 @@
         int rotate_left;
         int rotate_right;
         int reset_view;
+        int escape;
     } keys_t;
 
     typedef struct musics {
@@ -103,8 +165,10 @@
         assets_t *assets;
         audio_t *audio;
         keys_t *keys;
+        inventory_t *inventory;
         int stage;
         int last_stage;
+        int next_stage;
         int fps;
         int res;
     } game_t;

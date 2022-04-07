@@ -67,17 +67,21 @@ void move_rat(game_t *game)
 {
     sfEvent *event = game->event->event;
     rat_t *rat = game->assets->rat;
+    sfKeyCode code = event->key.code;
 
-    rat->up = 0;
-    rat->down = 0;
-    rat->left = 0;
-    rat->right = 0;
-    if (event->key.code == game->keys->move_up)
+    if (code == game->keys->move_up || code == game->keys->move_down
+        || code == game->keys->move_left || code == game->keys->move_right) {
+        rat->up = 0;
+        rat->down = 0;
+        rat->left = 0;
+        rat->right = 0;
+    }
+    if (code == game->keys->move_up)
         move_rat_up(game);
-    if (event->key.code == game->keys->move_down)
+    if (code == game->keys->move_down)
         move_rat_down(game);
-    if (event->key.code == game->keys->move_left)
+    if (code == game->keys->move_left)
         move_rat_left(game);
-    if (event->key.code == game->keys->move_right)
+    if (code == game->keys->move_right)
         move_rat_right(game);
 }

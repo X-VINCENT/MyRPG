@@ -10,5 +10,7 @@
 void destroy_city(city_t *city)
 {
     destroy_sprite(city->bg);
+    destroy_sprite(city->doors->rat);
+    sfClock_destroy(city->doors->clock);
     free(city);
 }

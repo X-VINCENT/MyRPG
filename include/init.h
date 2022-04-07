@@ -18,6 +18,13 @@
     // City
         // init.c
         void init_city(game_t *game);
+        //animated
+            //doors.c
+            void init_doors(game_t *game);
+
+    // Clothe
+        //init.c
+        void init_clothe(game_t *game);
 
     // Home Menu
         // Parallax
@@ -26,9 +33,33 @@
         // init.c
         void init_home_menu(game_t *game);
 
+    // Ice Cream
+        // init.c
+        void init_ice_cream(game_t *game);
+
+    // Market
+        // init.c
+        void init_market(game_t *game);
+
+    // Museum1
+        //init.c
+        void init_museum1(game_t *game);
+
+    // Museum2
+        //init.c
+        void init_museum2(game_t *game);
+
     // Rat
         // init.c
         void init_rat(game_t *game, const char *filename_color);
+
+    // Top Bar
+        // init.c
+        void init_top_bar(game_t *game);
+
+    // Transitions
+        // init.c
+        void init_transitions(game_t *game);
 
     // init.c
     void init_assets(game_t *game);
@@ -43,6 +74,10 @@
 
     // sounds.c
     void init_sounds(game_t *game);
+
+// Inventory
+    //init.c
+    void init_inventory(game_t *game);
 
 // game.c
 game_t *init_game(void);

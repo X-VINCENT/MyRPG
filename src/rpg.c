@@ -25,7 +25,6 @@ int engine(game_t *game)
 {
     sfRenderWindow_clear(game->window, sfBlack);
     select_game_stage(game);
-    display_cursor(game);
     sfRenderWindow_setView(game->window, game->view);
     sfRenderWindow_display(game->window);
     return SUCCESS;

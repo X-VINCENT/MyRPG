@@ -11,8 +11,8 @@ void location_appartment_city(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
-    if (check_location_rect(rat->idle_front,
-        LOCATION_APPARTMENT, 20, 8) == true && rat->up == 1) {
+    if ((check_location_rect(rat->idle_front,
+        LOCATION_APPARTMENT, 20, 8) == true && rat->up == 1)) {
         game->stage = APPARTMENT_STAGE;
         sfView_setCenter(game->view, VIEW_APPARTMENT_POS);
         sfView_setSize(game->view, VIEW_APPARTMENT_SIZE);

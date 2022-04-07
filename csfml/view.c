@@ -7,7 +7,7 @@
 
 #include "csfml.h"
 
-sfView *create_view(sfVector2f size, sfVector2f position, float angle)
+sfView *create_view(sfVector2f size, float angle)
 {
     sfView *view = sfView_create();
 

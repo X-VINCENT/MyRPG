@@ -15,19 +15,47 @@
         // destroy.c
         void destroy_appartment(appartment_t *appartment);
 
+    // Ice cream shop
+        // destroy.c
+        void destroy_ice(ice_t *ice);
+
     // City
         // destroy.c
         void destroy_city(city_t *city);
 
+    // Market
+        // destroy.c
+        void destroy_market(market_t *market);
+
+    // Clothe
+        //destroy.c
+        void destroy_clothe(clothe_t *clothe);
+
     // Home Menu
         // destroy.c
         void destroy_home_menu(home_menu_t *home_menu);
-        //parallax
+        // parallax.c
         void destroy_parallax(parallax_t *parallax);
+
+    // Inventory
+        //destroy.c
+        void destroy_inventory(inventory_t *inventory);
+
+    // Museum1
+        // destroy.c
+        void destroy_museum1(museum1_t *museum1);
+
+    // Museum2
+        // destroy.c
+        void destroy_museum2(museum2_t *museum2);
 
     // Rat
         // destroy.c
         void destroy_rat(rat_t *rat);
+
+    // Top Bar
+        // destroy.c
+        void destroy_top_bar(top_bar_t *bar);
 
     // destroy.c
     void destroy_assets(assets_t *assets);

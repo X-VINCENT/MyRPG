@@ -33,10 +33,21 @@ void event(game_t *game)
 void event_key_pressed(game_t *game)
 {
     switch (game->stage) {
-        case APPARTMENT_STAGE:
-            appartment_key_pressed(game);
+        case START_STAGE:
+            home_menu_key_pressed(game);
+            break;
         case CITY_STAGE:
             city_key_pressed(game);
+            break;
+        case APPARTMENT_STAGE:
+            appartment_key_pressed(game);
+            break;
+        case ICE_STAGE:
+            ice_cream_shop_key_pressed(game);
+            break;
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_key_pressed(game);
+            break;
         default:
             event_key_pressed_2(game);
             break;
@@ -46,10 +57,16 @@ void event_key_pressed(game_t *game)
 void mouse_pressed(game_t *game)
 {
     switch (game->stage) {
-        case APPARTMENT_STAGE:
-            appartment_mouse_pressed(game);
+        case START_STAGE:
+            home_menu_mouse_pressed(game);
         case CITY_STAGE:
             city_mouse_pressed(game);
+        case APPARTMENT_STAGE:
+            appartment_mouse_pressed(game);
+        case ICE_STAGE:
+            ice_cream_shop_mouse_pressed(game);
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_mouse_pressed(game);
         default:
             mouse_pressed_2(game);
             break;
@@ -59,10 +76,16 @@ void mouse_pressed(game_t *game)
 void mouse_moved(game_t *game)
 {
     switch (game->stage) {
-        case APPARTMENT_STAGE:
-            appartment_mouse_moved(game);
+        case START_STAGE:
+            home_menu_mouse_moved(game);
         case CITY_STAGE:
             city_mouse_moved(game);
+        case APPARTMENT_STAGE:
+            appartment_mouse_moved(game);
+        case ICE_STAGE:
+            ice_cream_shop_mouse_moved(game);
+        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
+            transitions_mouse_moved(game);
         default:
             mouse_moved_2(game);
             break;

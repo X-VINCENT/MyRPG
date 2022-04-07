@@ -9,5 +9,12 @@
 
 void city_locations(game_t *game)
 {
+    sfEvent *event = game->event->event;
+    doors_t *doors = game->assets->city->doors;
+
     location_appartment_city(game);
+    location_ice_cream_city(game);
+    location_market_city(game);
+    location_museum_city(game);
+    location_clothe_shop_city(game);
 }

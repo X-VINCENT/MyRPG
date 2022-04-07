@@ -17,6 +17,7 @@ sfRectangleShape *create_rectangle_shape(
     sfRectangleShape_setSize(rectangle, size);
     sfRectangleShape_setFillColor(rectangle, color);
     sfRectangleShape_setOutlineColor(rectangle, out_color);
+    sfRectangleShape_setOrigin(rectangle, origin);
     return rectangle;
 }
 

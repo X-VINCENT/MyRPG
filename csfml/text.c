@@ -26,6 +26,15 @@ sfText *create_text(
     return text;
 }
 
+void set_text_origin(sfText *text)
+{
+    sfVector2f origin = {sfText_getGlobalBounds(text).width / 2,
+        sfText_getGlobalBounds(text).height / 2};
+    if (!text)
+        return;
+    sfText_setOrigin(text, origin);
+}
+
 void destroy_text(sfText *text)
 {
     if (!text)

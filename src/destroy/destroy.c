@@ -17,6 +17,7 @@ void destroy_all(game_t *game)
     destroy_assets(game->assets);
     destroy_audio(game->audio);
     destroy_keys(game->keys);
+    destroy_inventory(game->inventory);
     free(game);
 }
 

@@ -59,9 +59,5 @@ void check_and_center_view(
     sfVector2f view = sfView_getSize(game->view);
     sfFloatRect rect = sfSprite_getGlobalBounds(background);
 
-    if (sfFloatRect_contains(&rect, pos.x - view.x / 2, pos.y) &&
-        sfFloatRect_contains(&rect, pos.x, pos.y - view.y / 2) &&
-        sfFloatRect_contains(&rect, pos.x + view.x / 2, pos.y) &&
-        sfFloatRect_contains(&rect, pos.x, pos.y + view.y / 2))
-        sfView_setCenter(game->view, pos);
+    sfView_setCenter(game->view, pos);
 }

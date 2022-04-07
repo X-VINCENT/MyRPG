@@ -11,6 +11,11 @@ void city_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
+    if (event->key.code == game->keys->escape) {
+        game->last_stage = game->stage;
+        game->stage = SETTINGS_STAGE;
+    }
+    inventory_key_pressed(game);
     rat_key_pressed(game);
     city_locations(game);
     zoom_view(game);

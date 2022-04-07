@@ -13,16 +13,18 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = CITY_STAGE;
+    game->stage = START_STAGE;
     game->last_stage = START_STAGE;
+    game->next_stage = START_STAGE;
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
-    game->view = create_view(VIEW_DEFAULT_SIZE, VIEW_DEFAULT_POS, 0);
+    game->view = create_view(VIEW_DEFAULT_SIZE, 0);
     init_window(game);
     init_event(game);
     init_assets(game);
     init_audio(game);
     init_keys(game);
+    init_inventory(game);
     return game;
 }
 
@@ -36,8 +38,6 @@ void init_window(game_t *game)
 
 void init_event(game_t *game)
 {
-    event_t *event = NULL;
-
     if (!game)
         return;
     game->event = malloc(sizeof(event_t));
@@ -57,4 +57,5 @@ void init_keys(game_t *game)
     game->keys->zoom_in = sfKeyZ;
     game->keys->zoom_out = sfKeyS;
     game->keys->reset_view = sfKeyR;
+    game->keys->escape = sfKeyEscape;
 }
