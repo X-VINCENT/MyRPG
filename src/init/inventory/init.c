@@ -17,7 +17,7 @@ void init_inventory(game_t *game)
         * INVENTORY_SIZE + 1);
     game->inventory->slots_off = malloc(sizeof(sfSprite *)
         * INVENTORY_SIZE + 1);
-    game->inventory->selected = 2;
+    game->inventory->selected = 0;
     for (int i = 0; i < INVENTORY_SIZE; i++) {
         game->inventory->slots_on[i] = create_sprite(SLOT_PATH_ON,
             rect, position, (sfVector2f){0.05, 0.05});
