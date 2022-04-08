@@ -218,6 +218,11 @@ fclean: clean
 
 re: clean all
 
+fast:
+	make fclean -j
+	make -j
+	./my_rpg
+
 tests_run:
 	@echo ""
 	@echo $(COMPILING_LIBS)
