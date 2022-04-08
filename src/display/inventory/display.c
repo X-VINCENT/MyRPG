@@ -11,7 +11,11 @@ void display_inventory(game_t *game)
 {
     inventory_t *inventory = game->inventory;
     sfVector2f view = sfView_getCenter(game->view);
-    sfVector2f slot_pos = {view.x - 220, view.y + 150};
+    sfVector2f size = sfView_getSize(game->view);
+    sfVector2f slot_pos = {view.x - (((INVENTORY_SIZE + 1) *
+        sfSprite_getScale(game->inventory->slots_off[0]).x *
+        sfSprite_getTextureRect(game->inventory->slots_off[0]).width)
+        / 2) + 4, view.y + size.y / 2 - 50};
 
     for (int i = 0; inventory->slots_on[i] != NULL; i++) {
         slot_pos.x += 40;

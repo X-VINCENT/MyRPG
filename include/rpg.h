@@ -106,10 +106,10 @@
     #define VIEW_DEFAULT_SIZE (sfVector2f){640, 360}
     #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
     #define VIEW_DEFAULT_ROTATION 0
-    #define VIEW_ZOOM_VALUE 10
-    #define VIEW_MAX_ZOOM_IN 150
-    #define VIEW_MAX_ZOOM_OUT 1000
-    #define VIEW_ROTATE_VALUE 5
+    #define VIEW_ZOOM_VALUE 5
+    #define VIEW_MAX_ZOOM_IN 250
+    #define VIEW_MAX_ZOOM_OUT 700
+    #define VIEW_ROTATE_VALUE 1
 
     // MENUS
     #define VIEW_MENUS_SIZE (sfVector2f){1920, 1080}
@@ -123,7 +123,7 @@
     #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
 
     // City
-    #define VIEW_CITY_SIZE (sfVector2f){720, 480}
+    #define VIEW_CITY_SIZE (sfVector2f){853, 480}
     #define VIEW_CITY_POS (sfVector2f){2468, 1710}
 
     // Ice Cream Shop
