@@ -59,7 +59,5 @@ void check_and_center_view(
     sfVector2f view = sfView_getSize(game->view);
     sfFloatRect rect = sfSprite_getGlobalBounds(background);
 
-    if (game->stage == CITY_STAGE)
-        sfView_setSize(game->view, VIEW_CITY_SIZE);
     sfView_setCenter(game->view, pos);
 }
