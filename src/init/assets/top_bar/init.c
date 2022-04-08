@@ -10,10 +10,10 @@
 void init_texts_top_bar(game_t *game)
 {
     top_bar_t *bar = game->assets->top_bar;
-    sfVector2f pos1 = init_pos(384, 86);
-    sfVector2f pos2 = init_pos(684, 86);
-    sfVector2f pos3 = init_pos(984, 86);
-    sfVector2f pos4 = init_pos(1284, 86);
+    sfVector2f pos1 = init_pos(384, 64);
+    sfVector2f pos2 = init_pos(684, 64);
+    sfVector2f pos3 = init_pos(984, 64);
+    sfVector2f pos4 = init_pos(1284, 64);
 
     bar->menu1 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_1);
     bar->menu2 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_2);

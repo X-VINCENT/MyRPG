@@ -77,13 +77,17 @@
     #define WINDOW_ICON "assets/images/icons/window_icon.png"
 
     // Menus
-        // home
+        // Home
             #define BG0 "assets/images/menus/home/bg0.png"
             #define BG1 "assets/images/menus/home/bg1.png"
             #define BG2 "assets/images/menus/home/bg2.png"
             #define BG3 "assets/images/menus/home/bg3.png"
             #define HOME_TITLE "assets/images/menus/home/title.png"
             #define HOME_PRESS "assets/images/menus/home/press.png"
+
+        // Settings
+            #define SETTINGS_BG "assets/images/menus/settings/bg.png"
+
         // Transitions
             // Rat
             #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"
@@ -150,7 +154,7 @@
 
     // Pos
         #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
-        #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f) {915, 1675}
+    #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
 
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
@@ -209,5 +213,29 @@
 #define FRENCH_MENU_4 "Menu 4"
 #define GERMAN_MENU_4 "Menu 4"
 #define SPANISH_MENU_4 "Menu 4"
+
+#define ENGLISH_SETTINGS "Settings"
+#define ENGLISH_GAME "Game"
+#define ENGLISH_GRAPHICS "Graphics"
+#define ENGLISH_AUDIO "Audio"
+#define ENGLISH_CONTROLS "Controls"
+
+#define FRENCH_SETTINGS "Paramètres"
+#define FRENCH_GAME "Jeu"
+#define FRENCH_GRAPHICS "Visuels"
+#define FRENCH_AUDIO "Son"
+#define FRENCH_CONTROLS "Contrôles"
+
+#define GERMAN_SETTINGS "Einstellungen"
+#define GERMAN_GAME "Spiel"
+#define GERMAN_GRAPHICS "Grafik"
+#define GERMAN_AUDIO "Audio"
+#define GERMAN_CONTROLS "Steuert"
+
+#define SPANISH_SETTINGS "Configuraciones"
+#define SPANISH_GAME "Juego"
+#define SPANISH_GRAPHICS "Gráficos"
+#define SPANISH_AUDIO "Su"
+#define SPANISH_CONTROLS "Control S"
 
 #endif /* !MY_RPG_H_ */

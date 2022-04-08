@@ -22,8 +22,9 @@ void init_assets(game_t *game)
     init_museum1(game);
     init_museum2(game);
     init_market(game);
-    init_transitions(game);
+    init_settings(game);
     init_top_bar(game);
+    init_transitions(game);
 }
 
 void init_cursor(game_t *game)

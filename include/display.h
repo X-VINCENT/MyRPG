@@ -55,7 +55,7 @@
     void display_rat(game_t *game);
 
 // Settings Menu
-    void display_settings_menu(game_t *game);
+    void display_settings(game_t *game);
 
 // Top Bar
     void display_top_bar(game_t *game);

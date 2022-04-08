@@ -128,13 +128,13 @@
 
 // Settings Menu
     // key_pressed.c
-    void settings_menu_key_pressed(game_t *game);
+    void settings_key_pressed(game_t *game);
 
     // mouse_moved.c
-    void settings_menu_mouse_moved(game_t *game);
+    void settings_mouse_moved(game_t *game);
 
     // mouse_pressed.c
-    void settings_menu_mouse_pressed(game_t *game);
+    void settings_mouse_pressed(game_t *game);
 
 // Top Bar
     // key_pressed.c

@@ -95,6 +95,38 @@
         int is_moving;
     } rat_t;
 
+    typedef struct settings_game {
+        sfText *game;
+    } settings_game_t;
+
+    typedef struct settings_graphics {
+        sfText *graphics;
+    } settings_graphics_t;
+
+    typedef struct settings_audio {
+        sfText *audio;
+    } settings_audio_t;
+
+    typedef struct settings_controls {
+        sfText *controls;
+        sfText *up;
+        sfText *down;
+        sfText *left;
+        sfText *right;
+        sfText *interact;
+    } settings_controls_t;
+
+    typedef struct settings {
+        sfSprite *bg;
+        sfSprite *scrolling_rect;
+        sfText *settings;
+        settings_game_t *game;
+        settings_graphics_t *graphics;
+        settings_audio_t *audio;
+        settings_controls_t *controls;
+        int current;
+    } settings_t;
+
     typedef struct transitions {
         sfSprite *rat_enter;
         sfSprite *rat_quit;
@@ -102,14 +134,14 @@
 
     typedef struct top_bar {
         sfText *menu1;
-	    sfText *menu2;
-	    sfText *menu3;
-	    sfText *menu4;
-	    sfSprite *settings_off;
-	    sfSprite *settings_on;
-	    sfSprite *quit_off;
-	    sfSprite *quit_on;
-	    sfSprite *dot;
+        sfText *menu2;
+        sfText *menu3;
+        sfText *menu4;
+        sfSprite *settings_off;
+        sfSprite *settings_on;
+        sfSprite *quit_off;
+        sfSprite *quit_on;
+        sfSprite *dot;
         sfClock *clock;
     } top_bar_t;
 
@@ -124,6 +156,7 @@
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
+        settings_t *settings;
         transitions_t *transitions;
         top_bar_t *top_bar;
     } assets_t;

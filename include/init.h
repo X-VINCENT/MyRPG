@@ -53,6 +53,22 @@
         // init.c
         void init_rat(game_t *game, const char *filename_color);
 
+    // Settings
+        // audio.c
+        void init_settings_audio(game_t *game);
+
+        // controls.c
+        void init_settings_controls(game_t *game);
+
+        // game.c
+        void init_settings_game(game_t *game);
+
+        // graphics.c
+        void init_settings_graphics(game_t *game);
+
+        // init.c
+        void init_settings(game_t *game);
+
     // Top Bar
         // init.c
         void init_top_bar(game_t *game);

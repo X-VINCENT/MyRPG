@@ -9,7 +9,7 @@
 
 void init_doors(game_t *game)
 {
-    doors_t *doors =  game->assets->city->doors;
+    doors_t *doors = game->assets->city->doors;
     sfIntRect rect = init_rect(0, 0, 19, 38);
     sfVector2f pos = init_pos(2459, 1662);
     sfVector2f scale = init_scale(1, 1);
