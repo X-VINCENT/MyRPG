@@ -117,9 +117,6 @@
         // position.c
         void set_rats_position(game_t *game, sfVector2f position);
 
-    // key_pressed.c
-    void rat_key_pressed(game_t *game);
-
     // mouse_moved.c
     void rat_mouse_moved(game_t *game);
 
