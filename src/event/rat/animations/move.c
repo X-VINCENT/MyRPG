@@ -76,12 +76,12 @@ void move_rat(game_t *game)
         rat->left = 0;
         rat->right = 0;
     }
-    if (code == game->keys->move_up)
+    if (sfKeyboard_isKeyPressed(game->keys->move_up))
         move_rat_up(game);
-    if (code == game->keys->move_down)
+    if (sfKeyboard_isKeyPressed(game->keys->move_down))
         move_rat_down(game);
-    if (code == game->keys->move_left)
+    if (sfKeyboard_isKeyPressed(game->keys->move_left))
         move_rat_left(game);
-    if (code == game->keys->move_right)
+    if (sfKeyboard_isKeyPressed(game->keys->move_right))
         move_rat_right(game);
 }
