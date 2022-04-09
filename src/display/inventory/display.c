@@ -11,18 +11,20 @@ void display_inventory(game_t *game)
 {
     inventory_t *inventory = game->inventory;
     sfVector2f view = sfView_getCenter(game->view);
-    sfVector2f slot_pos = {view.x - 220, view.y + 150};
+    sfVector2f size = sfView_getSize(game->view);
+    int offset = 30;
+    sfVector2f slot_pos = {view.x - (((INVENTORY_SIZE + 2) * offset) / 2),
+        view.y + size.y / 2 - 50};
 
     for (int i = 0; inventory->slots_on[i] != NULL; i++) {
-        slot_pos.x += 40;
-        sfSprite_setPosition(game->inventory->slots_on[i], slot_pos);
-        sfSprite_setPosition(game->inventory->slots_off[i], slot_pos);
-        if (i == game->inventory->selected)
+        slot_pos.x += offset;
+        sfSprite_setPosition(inventory->slots_on[i], slot_pos);
+        sfSprite_setPosition(inventory->slots_off[i], slot_pos);
+        if (i == inventory->selected)
             sfRenderWindow_drawSprite(game->window,
-                game->inventory->slots_on[i], NULL);
+                inventory->slots_on[i], NULL);
         else
             sfRenderWindow_drawSprite(game->window,
-                game->inventory->slots_off[i], NULL);
+                inventory->slots_off[i], NULL);
     }
-    return;
 }

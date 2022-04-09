@@ -47,6 +47,11 @@ void reset_view(game_t *game)
     sfEvent *event = game->event->event;
 
     if (event->key.code == game->keys->reset_view) {
+        if (game->stage == CITY_STAGE) {
+            sfView_setSize(game->view, VIEW_CITY_SIZE);
+            sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);  
+            return;
+        }
         sfView_setSize(game->view, VIEW_DEFAULT_SIZE);
         sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);
     }
