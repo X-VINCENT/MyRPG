@@ -30,6 +30,16 @@ void set_text_origin(sfText *text)
 {
     sfVector2f origin = {sfText_getGlobalBounds(text).width / 2,
         sfText_getGlobalBounds(text).height / 2};
+
+    if (!text)
+        return;
+    sfText_setOrigin(text, origin);
+}
+
+void set_text_origin_middle_left(sfText *text)
+{
+    sfVector2f origin = {0, sfText_getGlobalBounds(text).height / 2};
+
     if (!text)
         return;
     sfText_setOrigin(text, origin);

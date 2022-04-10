@@ -119,7 +119,7 @@
     typedef struct settings {
         sfSprite *bg;
         sfSprite *scrolling_rect;
-        sfText *settings;
+        sfText *settings_text;
         settings_game_t *game;
         settings_graphics_t *graphics;
         settings_audio_t *audio;

@@ -7,6 +7,18 @@
 
 #include "rpg.h"
 
+void init_texts_settings(game_t *game)
+{
+    settings_t *settings = game->assets->settings;
+    sfColor color = sfColor_fromRGBA(244, 154, 78, 255);
+    sfVector2f pos = init_pos(38, 210);
+
+    settings->settings_text = create_text(
+        FONT_BUENARD, color, 48, ENGLISH_SETTINGS);
+    sfSprite_setPosition(settings->settings_text, pos);
+    set_text_origin_middle_left(settings->settings_text);
+}
+
 void init_settings(game_t *game)
 {
     sfIntRect r_bg = init_rect(0, 0, 1920, 1080);
@@ -22,6 +34,7 @@ void init_settings(game_t *game)
         GUI, r_scrolling_rect, p_scrolling_rect, scale);
     set_sprite_origin(
         game->assets->settings->scrolling_rect, r_scrolling_rect);
+    init_texts_settings(game);
     init_settings_game(game);
     init_settings_graphics(game);
     init_settings_audio(game);

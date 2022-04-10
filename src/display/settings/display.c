@@ -13,5 +13,6 @@ void display_settings(game_t *game)
 
     sfRenderWindow_drawSprite(game->window, settings->scrolling_rect, NULL);
     sfRenderWindow_drawSprite(game->window, settings->bg, NULL);
+    sfRenderWindow_drawText(game->window, settings->settings_text, NULL);
     display_top_bar(game);
 }

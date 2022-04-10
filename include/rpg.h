@@ -45,6 +45,7 @@
 
 // Fonts
     #define FONT_RPG "assets/fonts/rpg.ttf"
+    #define FONT_BUENARD "assets/fonts/Buenard.ttf"
 
 // Images
     // Characters

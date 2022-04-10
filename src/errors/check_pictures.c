@@ -57,6 +57,8 @@ int check_gui(void)
     int error = 0;
 
     error += is_file("assets/images/objects/buttons/buttons_1.png");
+    error += is_file(SLOT_PATH_ON);
+    error += is_file(SLOT_PATH_OFF);
     error += is_file(GUI);
     return error;
 }

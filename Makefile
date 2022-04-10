@@ -244,4 +244,4 @@ cover:
 
 my_tests: tests_run cover fclean
 
-.PHONY: all $(NAME) clean fclean re tests_run cover my_tests zip unzip
+.PHONY: all $(NAME) clean fclean re fast tests_run cover my_tests zip unzip

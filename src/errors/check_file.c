@@ -31,6 +31,7 @@ int check_fonts(void)
     int error = 0;
 
     error += is_file(FONT_RPG);
+    error += is_file(FONT_BUENARD);
     return error;
 }
 
