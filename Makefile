@@ -46,7 +46,11 @@ SRC                 =           $(addprefix src/,                            \
 								display/museum2/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
-								display/settings/display.c              \
+								display/settings/audio.c                     \
+								display/settings/controls.c                  \
+								display/settings/display.c                   \
+								display/settings/graphics.c                  \
+								display/settings/game.c                      \
 								display/top_bar/display.c                    \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -79,6 +83,18 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/animations/position.c              \
 								event/rat/mouse_moved.c                      \
 								event/rat/mouse_pressed.c                    \
+								event/settings/audio/key_pressed.c           \
+								event/settings/audio/mouse_moved.c           \
+								event/settings/audio/mouse_pressed.c         \
+								event/settings/controls/key_pressed.c        \
+								event/settings/controls/mouse_moved.c        \
+								event/settings/controls/mouse_pressed.c      \
+								event/settings/game/key_pressed.c            \
+								event/settings/game/mouse_moved.c            \
+								event/settings/game/mouse_pressed.c          \
+								event/settings/graphics/key_pressed.c        \
+								event/settings/graphics/mouse_moved.c        \
+								event/settings/graphics/mouse_pressed.c      \
 								event/settings/key_pressed.c                 \
 								event/settings/mouse_moved.c                 \
 								event/settings/mouse_pressed.c               \
@@ -244,4 +260,4 @@ cover:
 
 my_tests: tests_run cover fclean
 
-.PHONY: all $(NAME) clean fclean re tests_run cover my_tests zip unzip
+.PHONY: all $(NAME) clean fclean re fast tests_run cover my_tests zip unzip

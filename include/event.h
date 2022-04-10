@@ -123,7 +123,47 @@
     // mouse_pressed.c
     void rat_mouse_pressed(game_t *game);
 
-// Settings Menu
+// Settings
+    // Audio
+        // key_pressed.c
+        void settings_audio_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void settings_audio_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void settings_audio_mouse_pressed(game_t *game);
+
+    // Controls
+        // key_pressed.c
+        void settings_controls_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void settings_controls_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void settings_controls_mouse_pressed(game_t *game);
+
+    // Game
+        // key_pressed.c
+        void settings_game_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void settings_game_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void settings_game_mouse_pressed(game_t *game);
+
+    // Graphics
+        // key_pressed.c
+        void settings_graphics_key_pressed(game_t *game);
+
+        // mouse_moved.c
+        void settings_graphics_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void settings_graphics_mouse_pressed(game_t *game);
+
     // key_pressed.c
     void settings_key_pressed(game_t *game);
 

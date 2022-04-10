@@ -45,6 +45,7 @@
 
 // Fonts
     #define FONT_RPG "assets/fonts/rpg.ttf"
+    #define FONT_BUENARD "assets/fonts/Buenard.ttf"
 
 // Images
     // Characters
@@ -100,6 +101,12 @@
 // Window
 #define DEFAULT_FPS 0
 #define DEFAULT_WINDOW_RESOLUTION 1080
+
+// Language
+    #define ENGLISH 0
+    #define FRENCH 1
+    #define GERMAN 2
+    #define SPANISH 3
 
 // View
     // DEFAULT

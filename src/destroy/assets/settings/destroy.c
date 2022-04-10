@@ -33,5 +33,11 @@ void destroy_settings(settings_t *settings)
     destroy_settings_graphics(settings->graphics);
     destroy_settings_audio(settings->audio);
     destroy_settings_controls(settings->controls);
+    destroy_text(settings->settings_text);
+    destroy_text(settings->game_text);
+    destroy_text(settings->graphics_text);
+    destroy_text(settings->audio_text);
+    destroy_text(settings->controls_text);
+    sfClock_destroy(settings->clock);
     free(settings);
 }

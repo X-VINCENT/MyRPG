@@ -28,6 +28,12 @@
     #define MENU4_STAGE 13
     #define SETTINGS_STAGE 14
 
+// Settings Stage
+    #define SETTINGS_STAGE_GAME 0
+    #define SETTINGS_STAGE_GRAPHICS 1
+    #define SETTINGS_STAGE_AUDIO 2
+    #define SETTINGS_STAGE_CONTROLS 3
+
 // appartment.c
 void appartment_stage(game_t *game);
 
