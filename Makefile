@@ -46,7 +46,11 @@ SRC                 =           $(addprefix src/,                            \
 								display/museum2/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
-								display/settings/display.c              \
+								display/settings/audio.c                     \
+								display/settings/controls.c                  \
+								display/settings/display.c                   \
+								display/settings/graphics.c                  \
+								display/settings/game.c                      \
 								display/top_bar/display.c                    \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \

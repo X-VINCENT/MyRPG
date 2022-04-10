@@ -54,8 +54,21 @@
     // display.c
     void display_rat(game_t *game);
 
-// Settings Menu
+// Settings
+    // audio.c
+    void display_settings_audio(game_t *game);
+
+    // controls.c
+    void display_settings_controls(game_t *game);
+
+    // display.c
     void display_settings(game_t *game);
+
+    // game.c
+    void display_settings_game(game_t *game);
+
+    // graphics.c
+    void display_settings_graphics(game_t *game);
 
 // Top Bar
     void display_top_bar(game_t *game);

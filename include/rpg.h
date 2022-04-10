@@ -102,6 +102,12 @@
 #define DEFAULT_FPS 0
 #define DEFAULT_WINDOW_RESOLUTION 1080
 
+// Language
+    #define ENGLISH 0
+    #define FRENCH 1
+    #define GERMAN 2
+    #define SPANISH 3
+
 // View
     // DEFAULT
     #define VIEW_DEFAULT_SIZE (sfVector2f){640, 360}

@@ -96,19 +96,15 @@
     } rat_t;
 
     typedef struct settings_game {
-        sfText *game;
     } settings_game_t;
 
     typedef struct settings_graphics {
-        sfText *graphics;
     } settings_graphics_t;
 
     typedef struct settings_audio {
-        sfText *audio;
     } settings_audio_t;
 
     typedef struct settings_controls {
-        sfText *controls;
         sfText *up;
         sfText *down;
         sfText *left;
@@ -120,6 +116,10 @@
         sfSprite *bg;
         sfSprite *scrolling_rect;
         sfText *settings_text;
+        sfText *game_text;
+        sfText *graphics_text;
+        sfText *audio_text;
+        sfText *controls_text;
         settings_game_t *game;
         settings_graphics_t *graphics;
         settings_audio_t *audio;
@@ -204,6 +204,7 @@
         int next_stage;
         int fps;
         int res;
+        int language;
     } game_t;
 
 #endif /* !DATA_H_ */
