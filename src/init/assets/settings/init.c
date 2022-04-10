@@ -66,5 +66,6 @@ void init_settings(game_t *game)
     init_settings_graphics(game);
     init_settings_audio(game);
     init_settings_controls(game);
+    game->assets->settings->clock = sfClock_create();
     game->assets->settings->current = 0;
 }

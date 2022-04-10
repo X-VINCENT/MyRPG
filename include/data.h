@@ -124,6 +124,7 @@
         settings_graphics_t *graphics;
         settings_audio_t *audio;
         settings_controls_t *controls;
+        sfClock *clock;
         int current;
     } settings_t;
 
