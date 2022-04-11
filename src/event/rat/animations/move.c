@@ -12,6 +12,9 @@ void move_rat_up(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_up);
 
+    rat->down = 0;
+    rat->left = 0;
+    rat->right = 0;
     if (!rat_can_move_up(game))
         return;
     pos.y -= rat->speed;
@@ -26,6 +29,9 @@ void move_rat_down(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_down);
 
+    rat->up = 0;
+    rat->left = 0;
+    rat->right = 0;
     if (!rat_can_move_down(game))
         return;
     pos.y += rat->speed;
@@ -40,6 +46,9 @@ void move_rat_left(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_left);
 
+    rat->up = 0;
+    rat->down = 0;
+    rat->right = 0;
     if (!rat_can_move_left(game))
         return;
     pos.x -= rat->speed;
@@ -54,6 +63,9 @@ void move_rat_right(game_t *game)
     rat_t *rat = game->assets->rat;
     sfVector2f pos = sfSprite_getPosition(rat->movement_right);
 
+    rat->up = 0;
+    rat->down = 0;
+    rat->left = 0;
     if (!rat_can_move_right(game))
         return;
     pos.x += rat->speed;
@@ -69,13 +81,6 @@ void move_rat(game_t *game)
     rat_t *rat = game->assets->rat;
     sfKeyCode code = event->key.code;
 
-    if (code == game->keys->move_up || code == game->keys->move_down
-        || code == game->keys->move_left || code == game->keys->move_right) {
-        rat->up = 0;
-        rat->down = 0;
-        rat->left = 0;
-        rat->right = 0;
-    }
     if (sfKeyboard_isKeyPressed(game->keys->move_up))
         move_rat_up(game);
     if (sfKeyboard_isKeyPressed(game->keys->move_down))

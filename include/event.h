@@ -123,6 +123,9 @@
     // mouse_pressed.c
     void rat_mouse_pressed(game_t *game);
 
+    // move_rat_check.c
+    void check_rat_key_pressed(game_t *game);
+
 // Settings
     // Audio
         // key_pressed.c

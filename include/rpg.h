@@ -153,10 +153,10 @@
 // Rat
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
     // Speed
-        #define RAT_SPEED_APPARTMENT 0.5
-        #define RAT_SPEED_CITY 1
-        #define RAT_SPEED_ICE_CREAM_SHOP 0.5
-        #define RAT_SPEED_CLOTHE_SHOP 0.5
+        #define RAT_SPEED_APPARTMENT 1
+        #define RAT_SPEED_CITY 4
+        #define RAT_SPEED_ICE_CREAM_SHOP 1
+        #define RAT_SPEED_CLOTHE_SHOP 1
         #define RAT_SPEED_MARKET 2
         #define RAT_SPEED_MUSEUM1 2
 
@@ -189,7 +189,7 @@
     #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
 
     // City
-    #define LOCATION_APPARTMENT (sfVector2f){2460, 1698}
+    #define LOCATION_APPARTMENT (sfVector2f){2450, 1690}
     #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
     #define LOCATION_CLOTHE_SHOP (sfVector2f) {573, 1666}
     #define LOCATION_MARKET (sfVector2f) {1522, 1683}

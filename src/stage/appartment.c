@@ -14,5 +14,5 @@ void appartment_stage(game_t *game)
     display_appartment(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, apart->bg_top, NULL);
-    move_rat(game);
+    check_rat_key_pressed(game);
 }
