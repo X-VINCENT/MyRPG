@@ -80,7 +80,7 @@
     // mouse_moved.c
     void ice_cream_shop_mouse_moved(game_t *game);
 
-    // mouse_pressed.c
+    // mouse_pressed.cFailed to create texture, its internal size is too high (42000x338, maximum is 16384x16384)
     void ice_cream_shop_mouse_pressed(game_t *game);
 
 // Inventory

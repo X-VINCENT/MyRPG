@@ -11,4 +11,5 @@ void museum1_stage(game_t *game)
 {
     display_museum1(game);
     display_rat(game);
+    check_rat_key_pressed(game);
 }
