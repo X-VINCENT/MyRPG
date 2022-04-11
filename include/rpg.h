@@ -232,6 +232,8 @@
 #define ENGLISH_LEFT "Left"
 #define ENGLISH_RIGHT "Right"
 #define ENGLISH_INTERACT "Interact"
+#define ENGLISH_ENGLISH "English"
+#define ENGLISH_LANGUAGE "Language"
 
 #define FRENCH_SETTINGS "Parametres"
 #define FRENCH_GAME "Jeu"
@@ -243,6 +245,8 @@
 #define FRENCH_LEFT "Gauche"
 #define FRENCH_RIGHT "Droite"
 #define FRENCH_INTERACT "Interagir"
+#define FRENCH_FRENCH "Francais"
+#define FRENCH_LANGUAGE "Langue"
 
 #define GERMAN_SETTINGS "Einstellungen"
 #define GERMAN_GAME "Spiel"
@@ -254,6 +258,8 @@
 #define GERMAN_LEFT "Links"
 #define GERMAN_RIGHT "Rechts"
 #define GERMAN_INTERACT "Interagieren"
+#define GERMAN_GERMAN "Deutsch"
+#define GERMAN_LANGUAGE "Sprache"
 
 #define SPANISH_SETTINGS "Configuraciones"
 #define SPANISH_GAME "Juego"
@@ -265,5 +271,7 @@
 #define SPANISH_LEFT "Izquierda"
 #define SPANISH_RIGHT "Derecha"
 #define SPANISH_INTERACT "Interactuar"
+#define SPANISH_SPANISH "Espanol"
+#define SPANISH_LANGUAGE "Idioma"
 
 #endif /* !MY_RPG_H_ */

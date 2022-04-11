@@ -19,6 +19,8 @@ void set_texts_origin(game_t *game)
     set_text_origin_middle_left(game->assets->settings->graphics_text);
     set_text_origin_middle_left(game->assets->settings->audio_text);
     set_text_origin_middle_left(game->assets->settings->controls_text);
+    set_text_origin_middle_left(game->assets->settings->game->title_language);
+    set_text_origin(game->assets->settings->game->language);
     set_text_origin(game->assets->top_bar->menu1);
     set_text_origin(game->assets->top_bar->menu2);
     set_text_origin(game->assets->top_bar->menu3);

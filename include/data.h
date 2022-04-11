@@ -99,7 +99,8 @@
     typedef struct settings_game {
         sfSprite *arrow_language_right;
         sfSprite *arrow_language_left;
-        sfText **language;
+        sfText *title_language;
+        sfText *language;
     } settings_game_t;
 
     typedef struct settings_graphics {

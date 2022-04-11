@@ -20,6 +20,9 @@ void set_texts_german(game_t *game)
     sfText_setString(game->assets->settings->graphics_text, GERMAN_GRAPHICS);
     sfText_setString(game->assets->settings->audio_text, GERMAN_AUDIO);
     sfText_setString(game->assets->settings->controls_text, GERMAN_CONTROLS);
+    sfText_setString(game->assets->settings->game->language, GERMAN_GERMAN);
+    sfText_setString(
+        game->assets->settings->game->title_language, GERMAN_LANGUAGE);
     sfText_setString(game->assets->top_bar->menu1, GERMAN_MENU_1);
     sfText_setString(game->assets->top_bar->menu2, GERMAN_MENU_2);
     sfText_setString(game->assets->top_bar->menu3, GERMAN_MENU_3);
