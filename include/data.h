@@ -9,6 +9,7 @@
     #define DATA_H_
 
     #include "csfml.h"
+    #include "pnj.h"
 
     typedef struct parallax {
         sfSprite *bg0;
@@ -161,6 +162,7 @@
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
+        pnj_t **pnj;
         settings_t *settings;
         transitions_t *transitions;
         top_bar_t *top_bar;
