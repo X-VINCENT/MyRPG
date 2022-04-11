@@ -82,6 +82,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/animations/move.c                  \
 								event/rat/animations/position.c              \
 								event/rat/mouse_moved.c                      \
+								event/rat/move_rat_check.c				   	 \
 								event/rat/mouse_pressed.c                    \
 								event/settings/audio/key_pressed.c           \
 								event/settings/audio/mouse_moved.c           \

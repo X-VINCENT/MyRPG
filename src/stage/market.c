@@ -11,4 +11,5 @@ void market_stage(game_t *game)
 {
     display_market(game);
     display_rat(game);
+    check_rat_key_pressed(game);
 }

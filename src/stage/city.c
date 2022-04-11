@@ -13,5 +13,5 @@ void city_stage(game_t *game)
         game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);
     display_rat(game);
-    move_rat(game);
+    check_rat_key_pressed(game);
 }
