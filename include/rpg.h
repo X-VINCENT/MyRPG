@@ -56,8 +56,9 @@
         #define PURPLE_RAT "assets/images/characters/rat/purple.png"
 
     // Environments
-    #define APPARTMENT "assets/images/environments/appartment/view.png"
-    #define APPART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
+    #define APPARTMENT "assets/images/environments/appartment/apart.png"
+#define APPARTMENT_TOP "assets/images/environments/appartment/apart_top.png"
+    #define APPART_HITBOX "assets/images/environments/appartment/hitbox.png"
 
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
@@ -161,12 +162,14 @@
 
     // Pos
         #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
-    #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
-
+        #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
+        #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
+        #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
+        
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
-        #define RAT_DEFAULT_POS_MARKET (sfVector2f){342, 30}
+        #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 342}
         #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f){47, 793}
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
@@ -197,8 +200,11 @@
     // Ice Cream Shop
     #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 385}
 
+    //Clothe
+    #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){50, 226}
+
     // Market
-    #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}
+    #define LOCATION_DOOR_MARKET (sfVector2f){12, 334}
 
 // Texts
 #define ENGLISH_MENU_1 "Menu 1"
@@ -226,23 +232,43 @@
 #define ENGLISH_GRAPHICS "Graphics"
 #define ENGLISH_AUDIO "Audio"
 #define ENGLISH_CONTROLS "Controls"
+#define ENGLISH_UP "Up"
+#define ENGLISH_DOWN "Down"
+#define ENGLISH_LEFT "Left"
+#define ENGLISH_RIGHT "Right"
+#define ENGLISH_INTERACT "Interact"
 
-#define FRENCH_SETTINGS "Paramètres"
+#define FRENCH_SETTINGS "Parametres"
 #define FRENCH_GAME "Jeu"
 #define FRENCH_GRAPHICS "Visuels"
 #define FRENCH_AUDIO "Son"
-#define FRENCH_CONTROLS "Contrôles"
+#define FRENCH_CONTROLS "Controles"
+#define FRENCH_UP "Haut"
+#define FRENCH_DOWN "Bas"
+#define FRENCH_LEFT "Gauche"
+#define FRENCH_RIGHT "Droite"
+#define FRENCH_INTERACT "Interagir"
 
 #define GERMAN_SETTINGS "Einstellungen"
 #define GERMAN_GAME "Spiel"
 #define GERMAN_GRAPHICS "Grafik"
 #define GERMAN_AUDIO "Audio"
 #define GERMAN_CONTROLS "Steuert"
+#define GERMAN_UP "Hoch"
+#define GERMAN_DOWN "Niedrig"
+#define GERMAN_LEFT "Links"
+#define GERMAN_RIGHT "Rechts"
+#define GERMAN_INTERACT "Interagieren"
 
 #define SPANISH_SETTINGS "Configuraciones"
 #define SPANISH_GAME "Juego"
-#define SPANISH_GRAPHICS "Gráficos"
+#define SPANISH_GRAPHICS "Graficos"
 #define SPANISH_AUDIO "Su"
 #define SPANISH_CONTROLS "Control S"
+#define SPANISH_UP "Alto"
+#define SPANISH_DOWN "Bajo"
+#define SPANISH_LEFT "Izquierda"
+#define SPANISH_RIGHT "Derecha"
+#define SPANISH_INTERACT "Interactuar"
 
 #endif /* !MY_RPG_H_ */

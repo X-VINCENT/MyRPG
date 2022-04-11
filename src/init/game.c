@@ -19,6 +19,7 @@ game_t *init_game(void)
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
     game->view = create_view(VIEW_DEFAULT_SIZE, 0);
+    game->language = ENGLISH;
     init_window(game);
     init_event(game);
     init_assets(game);

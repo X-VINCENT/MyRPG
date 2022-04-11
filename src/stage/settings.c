@@ -13,4 +13,5 @@ void settings_stage(game_t *game)
     sfView_setCenter(game->view, VIEW_MENUS_POS);
     display_settings(game);
     display_cursor(game);
+    check_rat_key_pressed(game);
 }

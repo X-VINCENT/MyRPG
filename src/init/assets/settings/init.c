@@ -10,8 +10,8 @@
 void init_texts_settings_2(game_t *game)
 {
     settings_t *settings = game->assets->settings;
-    sfVector2f pos_audio = init_pos(110, 590);
-    sfVector2f pos_controls = init_pos(110, 500);
+    sfVector2f pos_audio = init_pos(110, 500);
+    sfVector2f pos_controls = init_pos(110, 590);
 
     settings->audio_text = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_AUDIO);
