@@ -65,23 +65,28 @@ void move_rat_right(game_t *game)
 
 void move_rat(game_t *game)
 {
-    sfEvent *event = game->event->event;
-    rat_t *rat = game->assets->rat;
-    sfKeyCode code = event->key.code;
-
-    if (code == game->keys->move_up || code == game->keys->move_down
-        || code == game->keys->move_left || code == game->keys->move_right) {
-        rat->up = 0;
-        rat->down = 0;
-        rat->left = 0;
-        rat->right = 0;
-    }
-    if (sfKeyboard_isKeyPressed(game->keys->move_up))
+    if (sfKeyboard_isKeyPressed(game->keys->move_up)) {
+        game->assets->rat->down = 0;
+        game->assets->rat->left = 0;
+        game->assets->rat->right = 0;
         move_rat_up(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_down))
+    }
+    if (sfKeyboard_isKeyPressed(game->keys->move_down)) {
+        game->assets->rat->up = 0;
+        game->assets->rat->left = 0;
+        game->assets->rat->right = 0;
         move_rat_down(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_left))
+    }
+    if (sfKeyboard_isKeyPressed(game->keys->move_left)) {
+        game->assets->rat->up = 0;
+        game->assets->rat->right = 0;
+        game->assets->rat->down = 0;
         move_rat_left(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_right))
+    }
+    if (sfKeyboard_isKeyPressed(game->keys->move_right)) {
+        game->assets->rat->up = 0;
+        game->assets->rat->down = 0;
+        game->assets->rat->left = 0;
         move_rat_right(game);
+    }
 }
