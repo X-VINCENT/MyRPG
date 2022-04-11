@@ -119,6 +119,12 @@ SRC                 =           $(addprefix src/,                            \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
+								tools/language/english.c                     \
+								tools/language/french.c                      \
+								tools/language/german.c                      \
+								tools/language/language.c                    \
+								tools/language/origin.c                      \
+								tools/language/spanish.c                     \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/view.c                                 \

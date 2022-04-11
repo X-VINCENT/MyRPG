@@ -9,6 +9,11 @@
 
 void destroy_settings_game(settings_game_t *s_game)
 {
+    destroy_sprite(s_game->arrow_language_left);
+    destroy_sprite(s_game->arrow_language_right);
+    for (int idx = 0; s_game->language[idx] != NULL; idx += 1)
+        destroy_text(s_game->language[idx]);
+    free(s_game->language);
     free(s_game);
 }
 

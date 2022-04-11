@@ -21,6 +21,25 @@ void stop_musics(game_t *game);
 void down_fps(game_t *game);
 void up_fps(game_t *game);
 
+// Language
+    // english.c
+    void set_texts_english(game_t *game);
+
+    // french.c
+    void set_texts_french(game_t *game);
+
+    // german.c
+    void set_texts_german(game_t *game);
+
+    // language.c
+    void set_language_texts(game_t *game);
+
+    // origin.c
+    void set_texts_origin(game_t *game);
+
+    // spanish.c
+    void set_texts_spanish(game_t *game);
+
 // location.c
 bool check_location_rect(
     sfSprite *character, sfVector2f location, int width, int height);
