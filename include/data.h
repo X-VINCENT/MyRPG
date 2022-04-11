@@ -104,6 +104,18 @@
     } settings_game_t;
 
     typedef struct settings_graphics {
+        sfText *title_res;
+        sfText **res;
+        sfSprite *res_left;
+        sfSprite *res_right;
+        sfText *title_fps;
+        sfText **fps;
+        sfSprite *fps_left;
+        sfSprite *fps_right;
+        sfText *title_vsync;
+        sfText **vsync;
+        sfSprite *vsync_left;
+        sfSprite *vsync_right;
     } settings_graphics_t;
 
     typedef struct settings_audio {
@@ -210,6 +222,7 @@
         int next_stage;
         int fps;
         int res;
+        int vsync;
         int language;
     } game_t;
 

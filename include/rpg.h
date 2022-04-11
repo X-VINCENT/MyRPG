@@ -201,6 +201,9 @@
     // Market
     #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}
 
+// Rects
+    #define R_ARROW (sfIntRect){240, 0, 35, 51}
+
 // Texts
 #define ENGLISH_MENU_1 "Menu 1"
 #define FRENCH_MENU_1 "Menu 1"
@@ -234,6 +237,10 @@
 #define ENGLISH_INTERACT "Interact"
 #define ENGLISH_ENGLISH "English"
 #define ENGLISH_LANGUAGE "Language"
+#define ENGLISH_RESOLUTION "Resolution"
+#define ENGLISH_FRAMERATE "Frame Rate Limit"
+#define ENGLISH_VSYNC "Vertical Synchronisation"
+#define ENGLISH_UNLIMITED "Unlimited"
 
 #define FRENCH_SETTINGS "Parametres"
 #define FRENCH_GAME "Jeu"
@@ -247,6 +254,10 @@
 #define FRENCH_INTERACT "Interagir"
 #define FRENCH_FRENCH "Francais"
 #define FRENCH_LANGUAGE "Langue"
+#define FRENCH_RESOLUTION "Resolution"
+#define FRENCH_FRAMERATE "Taux de rafraichissement max"
+#define FRENCH_VSYNC "Synchronisation verticale"
+#define FRENCH_UNLIMITED "Illimite"
 
 #define GERMAN_SETTINGS "Einstellungen"
 #define GERMAN_GAME "Spiel"
@@ -260,6 +271,10 @@
 #define GERMAN_INTERACT "Interagieren"
 #define GERMAN_GERMAN "Deutsch"
 #define GERMAN_LANGUAGE "Sprache"
+#define GERMAN_RESOLUTION "Auflosung"
+#define GERMAN_FRAMERATE "Bildratenbegrenzung"
+#define GERMAN_VSYNC "Vertikale Synchronisation"
+#define GERMAN_UNLIMITED "Unbegrenzt"
 
 #define SPANISH_SETTINGS "Configuraciones"
 #define SPANISH_GAME "Juego"
@@ -273,5 +288,9 @@
 #define SPANISH_INTERACT "Interactuar"
 #define SPANISH_SPANISH "Espanol"
 #define SPANISH_LANGUAGE "Idioma"
+#define SPANISH_RESOLUTION "Resolucion"
+#define SPANISH_FRAMERATE "Limit de velocidad de fotogramas"
+#define SPANISH_VSYNC "Sincronization vertical"
+#define SPANISH_UNLIMITED "Ilimitado"
 
 #endif /* !MY_RPG_H_ */
