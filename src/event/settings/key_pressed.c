@@ -13,16 +13,16 @@ void settings_navigate_menus(game_t *game)
     sfEvent *event = game->event->event;
 
     if (event->key.code == game->keys->move_down) {
-        if (settings->current == 0)
-            settings->current == 3;
-        else
-            settings->current -= 1;
-    }
-    if (event->key.code == game->keys->move_up) {
         if (settings->current == 3)
-            settings->current == 0;
+            settings->current = 0;
         else
             settings->current += 1;
+    }
+    if (event->key.code == game->keys->move_up) {
+        if (settings->current == 0)
+            settings->current = 3;
+        else
+            settings->current -= 1;
     }
 }
 

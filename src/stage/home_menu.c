@@ -14,4 +14,5 @@ void home_menu_stage(game_t *game)
     animate_parallax(game);
     display_home_menu(game);
     display_cursor(game);
+    check_rat_key_pressed(game);
 }

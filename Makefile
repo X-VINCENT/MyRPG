@@ -67,9 +67,19 @@ SRC                 =           $(addprefix src/,                            \
 								event/city/key_pressed.c                     \
 								event/city/mouse_moved.c                     \
 								event/city/mouse_pressed.c                   \
+								event/clothe/locations/door.c 				 \
+								event/clothe/locations/locations.c 			 \
+								event/clothe/key_pressed.c 					 \
+								event/clothe/mouse_moved.c 					 \
+								event/clothe/mouse_pressed.c 				 \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
+								event/market/locations/door.c 				 \
+								event/market/locations/locations.c 			 \
+								event/market/key_pressed.c 		             \
+								event/market/mouse_moved.c 		             \
+								event/market/mouse_pressed.c 		         \
 								event/ice_cream_shop/locations/door.c        \
 								event/ice_cream_shop/locations/locations.c   \
 								event/ice_cream_shop/key_pressed.c           \
@@ -82,8 +92,8 @@ SRC                 =           $(addprefix src/,                            \
 								event/rat/animations/move.c                  \
 								event/rat/animations/position.c              \
 								event/rat/mouse_moved.c                      \
-								event/rat/move_rat_check.c				   	 \
 								event/rat/mouse_pressed.c                    \
+								event/rat/move_rat_check.c                   \
 								event/settings/audio/key_pressed.c           \
 								event/settings/audio/mouse_moved.c           \
 								event/settings/audio/mouse_pressed.c         \
@@ -120,6 +130,12 @@ SRC                 =           $(addprefix src/,                            \
 								stage/stage.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
+								tools/language/english.c                     \
+								tools/language/french.c                      \
+								tools/language/german.c                      \
+								tools/language/language.c                    \
+								tools/language/origin.c                      \
+								tools/language/spanish.c                     \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/view.c                                 \

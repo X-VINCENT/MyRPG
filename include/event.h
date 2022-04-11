@@ -56,6 +56,23 @@
     // mouse_pressed.c
     void city_mouse_pressed(game_t *game);
 
+// Clothe store
+    //Locations
+        //door.c
+        void location_door_clothe_store(game_t *game);
+
+        //locations.c
+        void clothe_store_locations(game_t *game);
+
+        //key_pressed.c
+        void clothe_store_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void clothe_store_mouse_moved(game_t *game);
+
+        //mouse_pressed.c
+        void clothe_store_mouse_pressed(game_t *game);
+
 // Home Menu
     //key_pressed.c
     void home_menu_key_pressed(game_t *game);
@@ -82,6 +99,23 @@
 
     // mouse_pressed.cFailed to create texture, its internal size is too high (42000x338, maximum is 16384x16384)
     void ice_cream_shop_mouse_pressed(game_t *game);
+
+//Market
+    //Locations
+        //door.c
+        void location_door_market(game_t *game);
+
+        //locations.c
+        void market_locations(game_t *game);
+
+        //key_pressed.c
+        void market_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void market_mouse_moved(game_t *game);
+
+        //mouse_pressed.c
+        void market_mouse_pressed(game_t *game);
 
 // Inventory
     // key_pressed.c
@@ -122,6 +156,9 @@
 
     // mouse_pressed.c
     void rat_mouse_pressed(game_t *game);
+
+    // move_rat_check.c
+    void check_rat_key_pressed(game_t *game);
 
 // Settings
     // Audio

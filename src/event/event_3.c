@@ -10,6 +10,8 @@
 void event_key_pressed_3(game_t *game)
 {
     switch (game->stage) {
+        case MARKET_STAGE:
+            market_key_pressed(game);
         default:
             break;
     }
@@ -18,6 +20,8 @@ void event_key_pressed_3(game_t *game)
 void mouse_pressed_3(game_t *game)
 {
     switch (game->stage) {
+        case MARKET_STAGE:
+            market_mouse_pressed(game);
         default:
             break;
     }
@@ -26,6 +30,8 @@ void mouse_pressed_3(game_t *game)
 void mouse_moved_3(game_t *game)
 {
     switch (game->stage) {
+        case MARKET_STAGE:
+            market_mouse_moved(game);
         default:
             break;
     }

@@ -16,7 +16,7 @@ void location_market_city(game_t *game)
         game->stage = MARKET_STAGE;
         sfView_setCenter(game->view, VIEW_MARKET_POS);
         sfView_setSize(game->view, VIEW_MARKET_SIZE);
-        set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
+        set_rats_position(game, RAT_DEFAULT_POS_MARKET);
         rat->speed = RAT_SPEED_APPARTMENT;
     }
 }

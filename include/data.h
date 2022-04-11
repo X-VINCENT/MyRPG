@@ -20,6 +20,7 @@
 
     typedef struct appartment {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } appartment_t;
 
@@ -96,6 +97,9 @@
     } rat_t;
 
     typedef struct settings_game {
+        sfSprite *arrow_language_right;
+        sfSprite *arrow_language_left;
+        sfText **language;
     } settings_game_t;
 
     typedef struct settings_graphics {
