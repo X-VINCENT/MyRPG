@@ -11,4 +11,5 @@ void appartment_stage(game_t *game)
 {
     display_appartment(game);
     display_rat(game);
+    move_rat(game);
 }
