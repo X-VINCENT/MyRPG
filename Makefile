@@ -25,6 +25,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/settings/destroy.c            \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
+								destroy/assets/pnjs/destroy.c                \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
@@ -37,6 +38,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
+								display/pnjs/display.c                       \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
 								display/home_menu/display.c                  \
@@ -59,6 +61,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/mouse_pressed.c             \
 								event/inventory/key_pressed.c				 \
 								event/city/locations/appartment.c            \
+								event/city/locations/pnjs.c                  \
 								event/city/locations/clothe_shop.c 			 \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
@@ -151,6 +154,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/museum1/init.c 					 \
 								init/assets/museum2/init.c 					 \
 								init/assets/rat/init.c                       \
+								init/assets/pnj/init_pnj.c                   \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls.c              \
 								init/assets/settings/game.c                  \
@@ -187,7 +191,7 @@ SRC_TESTS           +=          $(SRC) $(SRC_CSFML)
 OBJ_MAIN            =           $(SRC_MAIN:.c=.o)
 OBJ                 =           $(SRC:.c=.o) $(SRC_CSFML:.c=.o)
 
-CFLAGS              +=          -Iinclude -W -Wall -Wextra
+CFLAGS              +=          -Iinclude
 LDFLAGS             =           -Llib -lmy
 LDFLAGS             +=          -lcsfml-graphics -lcsfml-window
 LDFLAGS             +=          -lcsfml-system -lcsfml-audio

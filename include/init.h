@@ -76,6 +76,9 @@
     // Transitions
         // init.c
         void init_transitions(game_t *game);
+    
+    //pnjs
+        void init_struct_pnjs(game_t *game);
 
     // init.c
     void init_assets(game_t *game);

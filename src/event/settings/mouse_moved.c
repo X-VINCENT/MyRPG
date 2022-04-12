@@ -26,14 +26,19 @@ void settings_texts_mouse_moved(game_t *game)
 
 void settings_mouse_moved(game_t *game)
 {
+    settings_t *settings = game->assets->settings;
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
 
     settings_texts_mouse_moved(game);
-    settings_audio_mouse_moved(game);
-    settings_controls_mouse_moved(game);
-    settings_game_mouse_moved(game);
-    settings_graphics_mouse_moved(game);
+    if (settings->current == SETTINGS_STAGE_GAME)
+        settings_game_mouse_moved(game);
+    if (settings->current == SETTINGS_STAGE_GRAPHICS)
+        settings_graphics_mouse_moved(game);
+    if (settings->current == SETTINGS_STAGE_AUDIO)
+        settings_audio_mouse_moved(game);
+    if (settings->current == SETTINGS_STAGE_CONTROLS)
+        settings_controls_mouse_moved(game);
     top_bar_mouse_moved(game);
 }

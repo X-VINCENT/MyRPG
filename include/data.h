@@ -9,6 +9,7 @@
     #define DATA_H_
 
     #include "csfml.h"
+    #include "pnj.h"
 
     typedef struct parallax {
         sfSprite *bg0;
@@ -99,10 +100,23 @@
     typedef struct settings_game {
         sfSprite *arrow_language_right;
         sfSprite *arrow_language_left;
-        sfText **language;
+        sfText *title_language;
+        sfText *language;
     } settings_game_t;
 
     typedef struct settings_graphics {
+        sfText *title_res;
+        sfText **res;
+        sfSprite *res_left;
+        sfSprite *res_right;
+        sfText *title_fps;
+        sfText **fps;
+        sfSprite *fps_left;
+        sfSprite *fps_right;
+        sfText *title_vsync;
+        sfText **vsync;
+        sfSprite *vsync_left;
+        sfSprite *vsync_right;
     } settings_graphics_t;
 
     typedef struct settings_audio {
@@ -161,6 +175,7 @@
         city_t *city;
         home_menu_t *home_menu;
         rat_t *rat;
+        pnj_t **pnj;
         settings_t *settings;
         transitions_t *transitions;
         top_bar_t *top_bar;
@@ -209,6 +224,7 @@
         int next_stage;
         int fps;
         int res;
+        int vsync;
         int language;
     } game_t;
 

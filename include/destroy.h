@@ -61,6 +61,9 @@
         // destroy.c
         void destroy_top_bar(top_bar_t *bar);
 
+    //pnjs
+        void destroy_pnj(assets_t *assets);
+
     // destroy.c
     void destroy_assets(assets_t *assets);
 

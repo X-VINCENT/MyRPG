@@ -18,6 +18,7 @@ game_t *init_game(void)
     game->next_stage = START_STAGE;
     game->fps = DEFAULT_FPS;
     game->res = DEFAULT_WINDOW_RESOLUTION;
+    game->vsync = 0;
     game->view = create_view(VIEW_DEFAULT_SIZE, 0);
     game->language = ENGLISH;
     init_window(game);
