@@ -30,6 +30,7 @@ int check_pictures(void)
     error += is_file(RED_RAT);
     error += is_file(GREEN_RAT);
     error += is_file(PURPLE_RAT);
+    error += is_file(PNJ_BLACK_PATH);
     error += check_menu_pictures();
     error += check_environment_assets();
     error += check_gui();
