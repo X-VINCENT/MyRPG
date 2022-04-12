@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Zoom View City  Event for My RPG
+** Zoom View City Event for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugoi DUBOIS
 */
@@ -49,7 +49,7 @@ void reset_view(game_t *game)
     if (event->key.code == game->keys->reset_view) {
         if (game->stage == CITY_STAGE) {
             sfView_setSize(game->view, VIEW_CITY_SIZE);
-            sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);  
+            sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);
             return;
         }
         sfView_setSize(game->view, VIEW_DEFAULT_SIZE);

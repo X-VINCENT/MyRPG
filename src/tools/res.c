@@ -24,7 +24,7 @@ void down_res(game_t *game)
             break;
     }
     sfRenderWindow_setSize(game->window,
-        (sfVector2u) {game->res * 16 / 9, game->res});
+        (sfVector2u){game->res * 16 / 9, game->res});
 }
 
 void down_res_2(game_t *game)
@@ -58,7 +58,7 @@ void up_res(game_t *game)
             break;
     }
     sfRenderWindow_setSize(game->window,
-        (sfVector2u) {game->res * 16 / 9, game->res});
+        (sfVector2u){game->res * 16 / 9, game->res});
 }
 
 void up_res_2(game_t *game)

@@ -165,7 +165,7 @@
         #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
         #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
         #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
-        
+
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
@@ -208,6 +208,9 @@
 
 // Rects
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
+    #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
+    #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34}
+    #define R_BAR (sfIntRect){0, 660, 500, 20}
 
 // Texts
 #define ENGLISH_MENU_1 "Menu 1"
@@ -246,6 +249,8 @@
 #define ENGLISH_FRAMERATE "Frame Rate Limit"
 #define ENGLISH_VSYNC "Vertical Synchronisation"
 #define ENGLISH_UNLIMITED "Unlimited"
+#define ENGLISH_MUSIC_VOLUME "Music Volume"
+#define ENGLISH_EFFECTS_VOLUME "Sound Effects Volume"
 
 #define FRENCH_SETTINGS "Parametres"
 #define FRENCH_GAME "Jeu"
@@ -263,6 +268,8 @@
 #define FRENCH_FRAMERATE "Taux de rafraichissement max"
 #define FRENCH_VSYNC "Synchronisation verticale"
 #define FRENCH_UNLIMITED "Illimite"
+#define FRENCH_MUSIC_VOLUME "Volume de la musique"
+#define FRENCH_EFFECTS_VOLUME "Volume des effets sonores"
 
 #define GERMAN_SETTINGS "Einstellungen"
 #define GERMAN_GAME "Spiel"
@@ -280,6 +287,8 @@
 #define GERMAN_FRAMERATE "Bildratenbegrenzung"
 #define GERMAN_VSYNC "Vertikale Synchronisation"
 #define GERMAN_UNLIMITED "Unbegrenzt"
+#define GERMAN_MUSIC_VOLUME "Musiklautstarke"
+#define GERMAN_EFFECTS_VOLUME "Lautstarke der Soundeffekte"
 
 #define SPANISH_SETTINGS "Configuraciones"
 #define SPANISH_GAME "Juego"
@@ -297,5 +306,7 @@
 #define SPANISH_FRAMERATE "Limit de velocidad de fotogramas"
 #define SPANISH_VSYNC "Sincronization vertical"
 #define SPANISH_UNLIMITED "Ilimitado"
+#define SPANISH_MUSIC_VOLUME "Volumen de la mumake fcleeaeaeaesica"
+#define SPANISH_EFFECTS_VOLUME "Volumen de efectos de sonido"
 
 #endif /* !MY_RPG_H_ */

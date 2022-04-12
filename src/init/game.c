@@ -7,12 +7,8 @@
 
 #include "rpg.h"
 
-game_t *init_game(void)
+void init_game_variables(game_t *game)
 {
-    game_t *game = NULL;
-
-    if (!(game = malloc(sizeof(game_t))))
-        return NULL;
     game->stage = START_STAGE;
     game->last_stage = START_STAGE;
     game->next_stage = START_STAGE;
@@ -21,6 +17,17 @@ game_t *init_game(void)
     game->vsync = 0;
     game->view = create_view(VIEW_DEFAULT_SIZE, 0);
     game->language = ENGLISH;
+    game->music_volume = 100;
+    game->effects_volume = 100;
+}
+
+game_t *init_game(void)
+{
+    game_t *game = NULL;
+
+    if (!(game = malloc(sizeof(game_t))))
+        return NULL;
+    init_game_variables(game);
     init_window(game);
     init_event(game);
     init_assets(game);

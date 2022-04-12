@@ -35,10 +35,8 @@ void event_key_pressed(game_t *game)
     switch (game->stage) {
         case START_STAGE:
             home_menu_key_pressed(game);
-            break;
         case CITY_STAGE:
             city_key_pressed(game);
-            break;
         case CLOTHE_STAGE:
             clothe_store_key_pressed(game);
         case APPARTMENT_STAGE:
@@ -46,7 +44,6 @@ void event_key_pressed(game_t *game)
             break;
         case ICE_STAGE:
             ice_cream_shop_key_pressed(game);
-            break;
         case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
             transitions_key_pressed(game);
             break;

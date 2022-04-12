@@ -27,6 +27,8 @@ void set_texts_origin_settings(game_t *game)
     set_text_origin_middle_left(settings->graphics->title_fps);
     set_text_origin_middle_left(settings->graphics->title_vsync);
     set_text_origin(settings->graphics->fps[4]);
+    set_text_origin_middle_left(settings->audio->title_music);
+    set_text_origin_middle_left(settings->audio->title_effects);
 }
 
 void set_texts_origin(game_t *game)
