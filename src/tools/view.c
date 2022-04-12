@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Zoom View City  Event for My RPG
+** Zoom View City Event for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugoi DUBOIS
 */

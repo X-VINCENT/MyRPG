@@ -15,6 +15,7 @@ void display_settings_audio_music(game_t *game)
     sfRenderWindow_drawSprite(game->window, s_audio->music_left, NULL);
     sfRenderWindow_drawSprite(game->window, s_audio->music_right, NULL);
     sfRenderWindow_drawSprite(game->window, s_audio->music_empty_bar, NULL);
+    sfRenderWindow_drawSprite(game->window, s_audio->music_circle_bar, NULL);
 }
 
 void display_settings_audio_effects(game_t *game)
@@ -25,6 +26,7 @@ void display_settings_audio_effects(game_t *game)
     sfRenderWindow_drawSprite(game->window, s_audio->effects_left, NULL);
     sfRenderWindow_drawSprite(game->window, s_audio->effects_right, NULL);
     sfRenderWindow_drawSprite(game->window, s_audio->effects_empty_bar, NULL);
+    sfRenderWindow_drawSprite(game->window, s_audio->effects_circle_bar, NULL);
 }
 
 void display_settings_audio(game_t *game)

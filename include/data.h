@@ -124,11 +124,13 @@
         sfSprite *music_left;
         sfSprite *music_right;
         sfSprite *music_empty_bar;
+        sfSprite *music_circle_bar;
         sfSprite **music_bar;
         sfText *title_effects;
         sfSprite *effects_left;
         sfSprite *effects_right;
         sfSprite *effects_empty_bar;
+        sfSprite *effects_circle_bar;
         sfSprite **effects_bar;
     } settings_audio_t;
 
@@ -236,6 +238,8 @@
         int res;
         int vsync;
         int language;
+        int music_volume;
+        int effects_volume;
     } game_t;
 
 #endif /* !DATA_H_ */

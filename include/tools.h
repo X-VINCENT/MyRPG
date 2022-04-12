@@ -60,4 +60,8 @@ void reset_view(game_t *game);
 void check_and_center_view(
     game_t *game, sfSprite *character, sfSprite *background);
 
+// volume.c
+void set_music_volume(game_t *game);
+void set_effects_volume(game_t *game);
+
 #endif /* !TOOLS_H_ */

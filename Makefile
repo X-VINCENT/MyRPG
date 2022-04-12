@@ -121,29 +121,6 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_1.c                              \
 								event/event_2.c					             \
 								event/event_3.c					             \
-								stage/appartment.c                           \
-								stage/city.c                                 \
-								stage/clothe.c                               \
-								stage/home_menu.c                            \
-								stage/ice_shop.c                             \
-								stage/market.c                               \
-								stage/museum1.c								 \
-								stage/museum2.c 							 \
-								stage/settings.c 							 \
-								stage/stage.c                                \
-								tools/arrow.c                                \
-								tools/audio.c                                \
-								tools/fps.c                                  \
-								tools/language/english.c                     \
-								tools/language/french.c                      \
-								tools/language/german.c                      \
-								tools/language/language.c                    \
-								tools/language/origin.c                      \
-								tools/language/spanish.c                     \
-								tools/location.c                             \
-								tools/res.c                                  \
-								tools/view.c                                 \
-								rpg.c                                        \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
@@ -168,7 +145,31 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
 								init/inventory/init.c                        \
-								init/game.c)
+								init/game.c                                  \
+								stage/appartment.c                           \
+								stage/city.c                                 \
+								stage/clothe.c                               \
+								stage/home_menu.c                            \
+								stage/ice_shop.c                             \
+								stage/market.c                               \
+								stage/museum1.c								 \
+								stage/museum2.c 							 \
+								stage/settings.c 							 \
+								stage/stage.c                                \
+								tools/arrow.c                                \
+								tools/audio.c                                \
+								tools/fps.c                                  \
+								tools/language/english.c                     \
+								tools/language/french.c                      \
+								tools/language/german.c                      \
+								tools/language/language.c                    \
+								tools/language/origin.c                      \
+								tools/language/spanish.c                     \
+								tools/location.c                             \
+								tools/res.c                                  \
+								tools/view.c                                 \
+								tools/volume.c                               \
+								rpg.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \
 								animation.c                                  \
