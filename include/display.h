@@ -34,6 +34,10 @@
     // display.c
     void display_inventory(game_t *game);
 
+//pnjs
+    //display.c
+    void display_pnj(game_t *game, pnj_t *pnj);
+
 // Clothe
     // display.c
     void display_clothe(game_t *game);

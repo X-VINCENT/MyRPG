@@ -39,6 +39,8 @@ void event_key_pressed(game_t *game)
         case CITY_STAGE:
             city_key_pressed(game);
             break;
+        case CLOTHE_STAGE:
+            clothe_store_key_pressed(game);
         case APPARTMENT_STAGE:
             appartment_key_pressed(game);
             break;
@@ -61,6 +63,8 @@ void mouse_pressed(game_t *game)
             home_menu_mouse_pressed(game);
         case CITY_STAGE:
             city_mouse_pressed(game);
+        case CLOTHE_STAGE:
+            clothe_store_mouse_pressed(game);
         case APPARTMENT_STAGE:
             appartment_mouse_pressed(game);
         case ICE_STAGE:
@@ -84,6 +88,8 @@ void mouse_moved(game_t *game)
             appartment_mouse_moved(game);
         case ICE_STAGE:
             ice_cream_shop_mouse_moved(game);
+        case CLOTHE_STAGE:
+            clothe_store_mouse_moved(game);
         case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
             transitions_mouse_moved(game);
         default:

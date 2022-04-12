@@ -1,6 +1,6 @@
     /*
 ** EPITECH PROJECT, 2022
-** Move Rat Check Pressed for My RPG
+** Move Rat Check for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

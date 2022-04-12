@@ -162,12 +162,14 @@
 
     // Pos
         #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
-    #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
-
+        #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
+        #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
+        #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
+        
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
-        #define RAT_DEFAULT_POS_MARKET (sfVector2f){342, 30}
+        #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 342}
         #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f){47, 793}
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
@@ -198,8 +200,11 @@
     // Ice Cream Shop
     #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 385}
 
+    //Clothe
+    #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){50, 226}
+
     // Market
-    #define LOCATION_DOOR_MARKET (sfVector2f){1522, 1683}
+    #define LOCATION_DOOR_MARKET (sfVector2f){12, 334}
 
 // Rects
     #define R_ARROW (sfIntRect){240, 0, 35, 51}

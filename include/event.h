@@ -47,6 +47,9 @@
         // museum.c
         void location_museum_city(game_t *game);
 
+        //pnjs
+        bool check_pnj_intersects(game_t *game);
+
     // key_pressed.c
     void city_key_pressed(game_t *game);
 
@@ -55,6 +58,23 @@
 
     // mouse_pressed.c
     void city_mouse_pressed(game_t *game);
+
+// Clothe store
+    //Locations
+        //door.c
+        void location_door_clothe_store(game_t *game);
+
+        //locations.c
+        void clothe_store_locations(game_t *game);
+
+        //key_pressed.c
+        void clothe_store_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void clothe_store_mouse_moved(game_t *game);
+
+        //mouse_pressed.c
+        void clothe_store_mouse_pressed(game_t *game);
 
 // Home Menu
     //key_pressed.c
@@ -80,8 +100,25 @@
     // mouse_moved.c
     void ice_cream_shop_mouse_moved(game_t *game);
 
-    // mouse_pressed.c
+    // mouse_pressed.cFailed to create texture, its internal size is too high (42000x338, maximum is 16384x16384)
     void ice_cream_shop_mouse_pressed(game_t *game);
+
+//Market
+    //Locations
+        //door.c
+        void location_door_market(game_t *game);
+
+        //locations.c
+        void market_locations(game_t *game);
+
+        //key_pressed.c
+        void market_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void market_mouse_moved(game_t *game);
+
+        //mouse_pressed.c
+        void market_mouse_pressed(game_t *game);
 
 // Inventory
     // key_pressed.c
