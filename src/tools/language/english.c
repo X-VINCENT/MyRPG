@@ -27,6 +27,8 @@ void set_texts_english_settings(game_t *game)
     sfText_setString(settings->graphics->title_fps, ENGLISH_FRAMERATE);
     sfText_setString(settings->graphics->title_vsync, ENGLISH_VSYNC);
     sfText_setString(settings->graphics->fps[4], ENGLISH_UNLIMITED);
+    sfText_setString(settings->audio->title_music, ENGLISH_MUSIC_VOLUME);
+    sfText_setString(settings->audio->title_effects, ENGLISH_EFFECTS_VOLUME);
 }
 
 void set_texts_english(game_t *game)

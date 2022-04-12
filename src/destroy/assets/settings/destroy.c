@@ -41,6 +41,12 @@ void destroy_settings_graphics(settings_graphics_t *s_graphics)
 
 void destroy_settings_audio(settings_audio_t *s_audio)
 {
+    destroy_text(s_audio->title_music);
+    destroy_sprite(s_audio->music_left);
+    destroy_sprite(s_audio->music_right);
+    destroy_text(s_audio->title_effects);
+    destroy_sprite(s_audio->effects_left);
+    destroy_sprite(s_audio->effects_right);
     free(s_audio);
 }
 

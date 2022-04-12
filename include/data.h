@@ -127,7 +127,7 @@
         sfText *title_effects;
         sfSprite *effects_left;
         sfSprite *effects_right;
-        sfSprite **effect_bar;
+        sfSprite **effects_bar;
     } settings_audio_t;
 
     typedef struct settings_controls {
