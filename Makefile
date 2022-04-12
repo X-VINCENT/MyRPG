@@ -104,6 +104,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/settings/controls/key_pressed.c        \
 								event/settings/controls/mouse_moved.c        \
 								event/settings/controls/mouse_pressed.c      \
+								event/settings/controls/move_controls.c      \
 								event/settings/game/key_pressed.c            \
 								event/settings/game/mouse_moved.c            \
 								event/settings/game/mouse_pressed.c          \

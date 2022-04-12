@@ -7,13 +7,20 @@
 
 #include "rpg.h"
 
-sfText *create_title(sfVector2f pos, const char *string)
+void init_settings_controls_scrolling_bar(game_t *game)
 {
-    sfText *text = create_text(FONT_BUENARD, sfWhite, 36, string);
+    settings_controls_t *s_controls = game->assets->settings->controls;
+    sfVector2f pos_scrolling_bar = init_pos(1825, 479);
+    sfVector2f pos_scrolling_bar_inside = init_pos(1825, 329);
+    sfVector2f scale = init_scale(1, 1);
 
-    set_text_origin_middle_left(text);
-    sfText_setPosition(text, pos);
-    return text;
+    s_controls->scrolling_bar = create_sprite(GUI, R_SCROLLING_BAR,
+        pos_scrolling_bar, scale);
+    set_sprite_origin(s_controls->scrolling_bar, R_SCROLLING_BAR);
+    s_controls->scrolling_bar_inside = create_sprite(GUI,
+        R_SCROLLING_BAR_INSIDE, pos_scrolling_bar_inside, scale);
+    set_sprite_origin(
+        s_controls->scrolling_bar_inside, R_SCROLLING_BAR_INSIDE);
 }
 
 settings_key_t *create_key(
@@ -26,7 +33,9 @@ settings_key_t *create_key(
     sfVector2f scale = init_scale(1, 1);
     sfVector2f reset_scale = {0.5, 0.5};
 
-    s_key->title = create_title(title_pos, title_string);
+    s_key->title = create_text(FONT_BUENARD, sfWhite, 36, title_string);
+    set_text_origin_middle_left(s_key->title);
+    sfText_setPosition(s_key->title, title_pos);
     s_key->key_rect = create_sprite(GUI, R_KEY_BG, key_pos, scale);
     set_sprite_origin(s_key->key_rect, R_KEY_BG);
     s_key->key = create_text(FONT_BUENARD, sfWhite, 36, key_string);
@@ -82,5 +91,7 @@ void init_settings_controls(game_t *game)
 {
     game->assets->settings->controls = malloc(sizeof(settings_controls_t));
 
+    init_settings_controls_scrolling_bar(game);
     init_settings_controls_keys(game);
+    game->assets->settings->controls->scrolling_clock = sfClock_create();
 }
