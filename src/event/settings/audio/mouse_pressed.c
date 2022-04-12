@@ -19,10 +19,14 @@ void settings_audio_mouse_pressed_music(game_t *game)
     if (sfFloatRect_contains(&r_left, coords.x, coords.y)) {
         if (game->music_volume >= 10)
             game->music_volume -= 10;
+        else
+            game->music_volume = 0;
     }
     if (sfFloatRect_contains(&r_right, coords.x, coords.y)) {
         if (game->music_volume <= 90)
             game->music_volume += 10;
+        else
+            game->music_volume = 100;
     }
     set_music_volume(game);
 }
@@ -39,10 +43,14 @@ void settings_audio_mouse_pressed_effects(game_t *game)
     if (sfFloatRect_contains(&r_left, coords.x, coords.y)) {
         if (game->effects_volume >= 10)
             game->effects_volume -= 10;
+        else
+            game->effects_volume = 0;
     }
     if (sfFloatRect_contains(&r_right, coords.x, coords.y)) {
         if (game->effects_volume <= 90)
             game->effects_volume += 10;
+        else
+            game->effects_volume = 100;
     }
     set_effects_volume(game);
 }
