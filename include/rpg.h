@@ -208,6 +208,7 @@
 
 // Rects
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
+    #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
 
 // Texts
 #define ENGLISH_MENU_1 "Menu 1"

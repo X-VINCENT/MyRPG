@@ -123,10 +123,12 @@
         sfText *title_music;
         sfSprite *music_left;
         sfSprite *music_right;
+        sfSprite *music_empty_bar;
         sfSprite **music_bar;
         sfText *title_effects;
         sfSprite *effects_left;
         sfSprite *effects_right;
+        sfSprite *effects_empty_bar;
         sfSprite **effects_bar;
     } settings_audio_t;
 

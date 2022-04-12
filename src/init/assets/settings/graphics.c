@@ -31,7 +31,7 @@ void init_settings_graphics_titles(game_t *game)
 void init_settings_graphics_res(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 310);
+    sfVector2f p_arrow_left = init_pos(1450, 310);
     sfVector2f p_arrow_right = init_pos(1750, 310);
     sfVector2f p_res = init_pos(1600, 305);
     sfVector2f scale = {0.5, 0.5};
@@ -55,7 +55,7 @@ void init_settings_graphics_res(game_t *game)
 void init_settings_graphics_fps(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 410);
+    sfVector2f p_arrow_left = init_pos(1450, 410);
     sfVector2f p_arrow_right = init_pos(1750, 410);
     sfVector2f p_fps = init_pos(1600, 405);
     sfVector2f scale = {0.5, 0.5};
@@ -79,7 +79,7 @@ void init_settings_graphics_fps(game_t *game)
 void init_settings_graphics_vsync(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 510);
+    sfVector2f p_arrow_left = init_pos(1450, 510);
     sfVector2f p_arrow_right = init_pos(1750, 510);
     sfVector2f p_vsync = init_pos(1600, 505);
     sfVector2f scale = {0.5, 0.5};

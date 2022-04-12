@@ -10,7 +10,7 @@
 void init_settings_game_language(game_t *game)
 {
     settings_game_t *s_game = game->assets->settings->game;
-    sfVector2f p_arrow_left = init_pos(1448, 310);
+    sfVector2f p_arrow_left = init_pos(1450, 310);
     sfVector2f p_arrow_right = init_pos(1750, 310);
     sfVector2f p_language_title = init_pos(700, 305);
     sfVector2f p_language = init_pos(1600, 305);
