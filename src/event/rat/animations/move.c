@@ -81,12 +81,12 @@ void move_rat(game_t *game)
     rat_t *rat = game->assets->rat;
     sfKeyCode code = event->key.code;
 
-    if (sfKeyboard_isKeyPressed(game->keys->move_up))
+    if (sfKeyboard_isKeyPressed(game->keys->up))
         move_rat_up(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_down))
+    if (sfKeyboard_isKeyPressed(game->keys->down))
         move_rat_down(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_left))
+    if (sfKeyboard_isKeyPressed(game->keys->left))
         move_rat_left(game);
-    if (sfKeyboard_isKeyPressed(game->keys->move_right))
+    if (sfKeyboard_isKeyPressed(game->keys->right))
         move_rat_right(game);
 }

@@ -54,6 +54,9 @@
         void destroy_rat(rat_t *rat);
 
     // Settings
+        // controls.c
+        void destroy_settings_controls(settings_controls_t *s_controls);
+
         // destroy.c
         void destroy_settings(settings_t *settings);
 
