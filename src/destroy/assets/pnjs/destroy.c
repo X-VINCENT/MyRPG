@@ -13,6 +13,8 @@ void destroy_pnj(assets_t *assets)
         destroy_sprite(assets->pnj[i]->sprite);
         for (int x = 0; assets->pnj[i]->text_to_display[x] != NULL; x++)
             destroy_text(assets->pnj[i]->text_to_display[x]);
+        if (assets->pnj[i]->text_to_display)
+            free(assets->pnj[i]->text_to_display);
         if (assets->pnj[i]->timer_display_text)
             sfClock_destroy(assets->pnj[i]->timer_display_text);
     }
