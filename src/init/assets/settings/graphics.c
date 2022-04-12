@@ -44,7 +44,7 @@ void init_settings_graphics_res(game_t *game)
     s_graphics->res[1] = create_text(FONT_BUENARD, sfWhite, 36, "1280x720");
     s_graphics->res[2] = create_text(FONT_BUENARD, sfWhite, 36, "1920x1080");
     s_graphics->res[3] = create_text(FONT_BUENARD, sfWhite, 36, "2560x1440");
-    s_graphics->res[4] = create_text(FONT_BUENARD, sfWhite, 36, "2840x2160");
+    s_graphics->res[4] = create_text(FONT_BUENARD, sfWhite, 36, "3840x2160");
     s_graphics->res[5] = NULL;
     for (int idx = 0; s_graphics->res[idx] != NULL; idx += 1) {
         set_text_origin(s_graphics->res[idx]);
@@ -79,9 +79,9 @@ void init_settings_graphics_fps(game_t *game)
 void init_settings_graphics_vsync(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 385);
-    sfVector2f p_arrow_right = init_pos(1750, 385);
-    sfVector2f p_vsync = init_pos(1600, 405);
+    sfVector2f p_arrow_left = init_pos(1448, 485);
+    sfVector2f p_arrow_right = init_pos(1750, 485);
+    sfVector2f p_vsync = init_pos(1600, 505);
 
     s_graphics->vsync_left = create_sprite(
         GUI, R_ARROW, p_arrow_left, (sfVector2f){1, 1});
@@ -91,6 +91,10 @@ void init_settings_graphics_vsync(game_t *game)
     s_graphics->vsync[0] = create_text(FONT_BUENARD, sfWhite, 36, "OFF");
     s_graphics->vsync[1] = create_text(FONT_BUENARD, sfWhite, 36, "ON");
     s_graphics->vsync[2] = NULL;
+    for (int idx = 0; s_graphics->vsync[idx] != NULL; idx += 1) {
+        set_text_origin(s_graphics->vsync[idx]);
+        sfText_setPosition(s_graphics->vsync[idx], p_vsync);
+    }
 }
 
 void init_settings_graphics(game_t *game)
