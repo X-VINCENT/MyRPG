@@ -165,7 +165,7 @@
         #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
         #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
         #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
-        
+
         #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}

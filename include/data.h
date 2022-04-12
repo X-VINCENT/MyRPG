@@ -120,6 +120,14 @@
     } settings_graphics_t;
 
     typedef struct settings_audio {
+        sfText *title_music;
+        sfSprite *music_left;
+        sfSprite *music_right;
+        sfSprite **music_bar;
+        sfText *title_effects;
+        sfSprite *effects_left;
+        sfSprite *effects_right;
+        sfSprite **effect_bar;
     } settings_audio_t;
 
     typedef struct settings_controls {
