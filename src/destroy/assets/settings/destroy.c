@@ -60,11 +60,6 @@ void destroy_settings_audio(settings_audio_t *s_audio)
     free(s_audio);
 }
 
-void destroy_settings_controls(settings_controls_t *s_controls)
-{
-    free(s_controls);
-}
-
 void destroy_settings(settings_t *settings)
 {
     destroy_settings_game(settings->game);

@@ -12,13 +12,13 @@ void settings_navigate_menus(game_t *game)
     settings_t *settings = game->assets->settings;
     sfEvent *event = game->event->event;
 
-    if (event->key.code == game->keys->move_down) {
+    if (event->key.code == game->keys->down) {
         if (settings->current == 3)
             settings->current = 0;
         else
             settings->current += 1;
     }
-    if (event->key.code == game->keys->move_up) {
+    if (event->key.code == game->keys->up) {
         if (settings->current == 0)
             settings->current = 3;
         else

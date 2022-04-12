@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Keys
+    // get_name.c
+    const char *get_key_name(sfKeyCode key);
+
 // Language
     // english.c
     void set_texts_english(game_t *game);

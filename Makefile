@@ -22,6 +22,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/museum1/destroy.c 			 \
 								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
+								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
@@ -156,15 +157,18 @@ SRC                 =           $(addprefix src/,                            \
 								stage/museum2.c 							 \
 								stage/settings.c 							 \
 								stage/stage.c                                \
-								tools/arrow.c                                \
-								tools/audio.c                                \
-								tools/fps.c                                  \
+								tools/keys/get_name.c                        \
+								tools/keys/get_name2.c                       \
+								tools/keys/get_name3.c                       \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \
 								tools/language/language.c                    \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
+								tools/arrow.c                                \
+								tools/audio.c                                \
+								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/view.c                                 \

@@ -134,12 +134,30 @@
         sfSprite **effects_bar;
     } settings_audio_t;
 
+    typedef struct settings_key {
+        sfText *title;
+        sfSprite *key_rect;
+        sfText *key;
+        sfSprite *reset;
+    } settings_key_t;
+
     typedef struct settings_controls {
-        sfText *up;
-        sfText *down;
-        sfText *left;
-        sfText *right;
-        sfText *interact;
+        sfSprite *scrolling_bar;
+        sfSprite *scrolling_bar_inside;
+        settings_key_t *up;
+        settings_key_t *down;
+        settings_key_t *left;
+        settings_key_t *right;
+        settings_key_t *jump;
+        settings_key_t *dodge;
+        settings_key_t *attack;
+        settings_key_t *interact;
+        settings_key_t *zoom_in;
+        settings_key_t *zoom_out;
+        settings_key_t *rotate_left;
+        settings_key_t *rotate_right;
+        settings_key_t *reset_view;
+        settings_key_t *escape;
     } settings_controls_t;
 
     typedef struct settings {
@@ -199,10 +217,14 @@
     } event_t;
 
     typedef struct keys {
-        int move_left;
-        int move_right;
-        int move_up;
-        int move_down;
+        int up;
+        int down;
+        int left;
+        int right;
+        int jump;
+        int dodge;
+        int attack;
+        int interact;
         int zoom_in;
         int zoom_out;
         int rotate_left;
