@@ -32,9 +32,13 @@ void settings_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
 
     settings_navigate_menus(game);
-    settings_audio_key_pressed(game);
-    settings_controls_key_pressed(game);
-    settings_game_key_pressed(game);
-    settings_graphics_key_pressed(game);
+    if (settings->current == SETTINGS_STAGE_GAME)
+        settings_game_key_pressed(game);
+    if (settings->current == SETTINGS_STAGE_GRAPHICS)
+        settings_graphics_key_pressed(game);
+    if (settings->current == SETTINGS_STAGE_AUDIO)
+        settings_audio_key_pressed(game);
+    if (settings->current == SETTINGS_STAGE_CONTROLS)
+        settings_controls_key_pressed(game);
     top_bar_key_pressed(game);
 }

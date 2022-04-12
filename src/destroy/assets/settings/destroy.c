@@ -11,14 +11,31 @@ void destroy_settings_game(settings_game_t *s_game)
 {
     destroy_sprite(s_game->arrow_language_left);
     destroy_sprite(s_game->arrow_language_right);
-    for (int idx = 0; s_game->language[idx] != NULL; idx += 1)
-        destroy_text(s_game->language[idx]);
-    free(s_game->language);
+    destroy_text(s_game->title_language);
+    destroy_text(s_game->language);
     free(s_game);
 }
 
 void destroy_settings_graphics(settings_graphics_t *s_graphics)
 {
+    destroy_text(s_graphics->title_res);
+    for (int idx = 0; s_graphics->res[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->res[idx]);
+    free(s_graphics->res);
+    destroy_sprite(s_graphics->res_left);
+    destroy_sprite(s_graphics->res_right);
+    destroy_text(s_graphics->title_fps);
+    for (int idx = 0; s_graphics->fps[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->fps[idx]);
+    free(s_graphics->fps);
+    destroy_sprite(s_graphics->fps_left);
+    destroy_sprite(s_graphics->fps_right);
+    destroy_text(s_graphics->title_vsync);
+    for (int idx = 0; s_graphics->vsync[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->vsync[idx]);
+    free(s_graphics->vsync);
+    destroy_sprite(s_graphics->vsync_left);
+    destroy_sprite(s_graphics->vsync_right);
     free(s_graphics);
 }
 
