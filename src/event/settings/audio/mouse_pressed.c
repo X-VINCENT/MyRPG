@@ -28,7 +28,21 @@ void settings_audio_mouse_pressed_music(game_t *game)
         else
             game->music_volume = 100;
     }
-    set_music_volume(game);
+}
+
+void settings_audio_mouse_pressed_music_bar(game_t *game)
+{
+    settings_audio_t *s_audio = game->assets->settings->audio;
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
+    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
+        game->window, mouse, NULL);
+    sfFloatRect r_bar;
+
+    for (int idx = 0; s_audio->music_bar[idx] != NULL; idx += 1) {
+        r_bar = sfSprite_getGlobalBounds(s_audio->music_bar[idx]);
+        if (sfFloatRect_contains(&r_bar, coords.x, coords.y))
+            game->music_volume = idx * 10;
+    }
 }
 
 void settings_audio_mouse_pressed_effects(game_t *game)
@@ -52,7 +66,21 @@ void settings_audio_mouse_pressed_effects(game_t *game)
         else
             game->effects_volume = 100;
     }
-    set_effects_volume(game);
+}
+
+void settings_audio_mouse_pressed_effects_bar(game_t *game)
+{
+    settings_audio_t *s_audio = game->assets->settings->audio;
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
+    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
+        game->window, mouse, NULL);
+    sfFloatRect r_bar;
+
+    for (int idx = 0; s_audio->effects_bar[idx] != NULL; idx += 1) {
+        r_bar = sfSprite_getGlobalBounds(s_audio->effects_bar[idx]);
+        if (sfFloatRect_contains(&r_bar, coords.x, coords.y))
+            game->effects_volume = idx * 10;
+    }
 }
 
 void settings_audio_mouse_pressed(game_t *game)
@@ -63,5 +91,9 @@ void settings_audio_mouse_pressed(game_t *game)
         game->window, mouse, NULL);
 
     settings_audio_mouse_pressed_music(game);
+    settings_audio_mouse_pressed_music_bar(game);
     settings_audio_mouse_pressed_effects(game);
+    settings_audio_mouse_pressed_effects_bar(game);
+    set_music_volume(game);
+    set_effects_volume(game);
 }
