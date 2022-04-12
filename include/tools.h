@@ -10,17 +10,6 @@
 
     #include "rpg.h"
 
-// audio.c
-void down_volume(game_t *game);
-void up_volume(game_t *game);
-void down_sounds(game_t *game);
-void up_sounds(game_t *game);
-void stop_musics(game_t *game);
-
-// fps.c
-void down_fps(game_t *game);
-void up_fps(game_t *game);
-
 // Language
     // english.c
     void set_texts_english(game_t *game);
@@ -39,6 +28,20 @@ void up_fps(game_t *game);
 
     // spanish.c
     void set_texts_spanish(game_t *game);
+
+// arrow.c
+sfSprite *create_arrow(sfVector2f pos, sfVector2f scale);
+
+// audio.c
+void down_volume(game_t *game);
+void up_volume(game_t *game);
+void down_sounds(game_t *game);
+void up_sounds(game_t *game);
+void stop_musics(game_t *game);
+
+// fps.c
+void down_fps(game_t *game);
+void up_fps(game_t *game);
 
 // location.c
 bool check_location_rect(

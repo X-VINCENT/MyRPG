@@ -58,8 +58,8 @@ void display_settings(game_t *game)
     settings_t *settings = game->assets->settings;
 
     sfRenderWindow_drawSprite(game->window, settings->scrolling_rect, NULL);
+    display_current_settings(game);
     sfRenderWindow_drawSprite(game->window, settings->bg, NULL);
     display_settings_texts(game);
-    display_current_settings(game);
     display_top_bar(game);
 }

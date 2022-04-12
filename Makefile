@@ -131,6 +131,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/museum2.c 							 \
 								stage/settings.c 							 \
 								stage/stage.c                                \
+								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/language/english.c                     \

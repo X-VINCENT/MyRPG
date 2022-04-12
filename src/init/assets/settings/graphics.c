@@ -10,9 +10,9 @@
 void init_settings_graphics_titles(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_res_title = init_pos(850, 305);
-    sfVector2f p_fps_title = init_pos(850, 405);
-    sfVector2f p_vsync_title = init_pos(850, 505);
+    sfVector2f p_res_title = init_pos(700, 305);
+    sfVector2f p_fps_title = init_pos(700, 405);
+    sfVector2f p_vsync_title = init_pos(700, 505);
 
     s_graphics->title_res = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_RESOLUTION);
@@ -31,14 +31,14 @@ void init_settings_graphics_titles(game_t *game)
 void init_settings_graphics_res(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 285);
-    sfVector2f p_arrow_right = init_pos(1750, 285);
+    sfVector2f p_arrow_left = init_pos(1448, 310);
+    sfVector2f p_arrow_right = init_pos(1750, 310);
     sfVector2f p_res = init_pos(1600, 305);
+    sfVector2f scale = {0.5, 0.5};
+    sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->res_left = create_sprite(
-        GUI, R_ARROW, p_arrow_left, (sfVector2f){1, 1});
-    s_graphics->res_right = create_sprite(
-        GUI, R_ARROW, p_arrow_right, (sfVector2f){-1, 1});
+    s_graphics->res_left = create_arrow(p_arrow_left, scale);
+    s_graphics->res_right = create_arrow(p_arrow_right, invert_scale);
     s_graphics->res = malloc(sizeof(sfText *) * 6);
     s_graphics->res[0] = create_text(FONT_BUENARD, sfWhite, 36, "640x480");
     s_graphics->res[1] = create_text(FONT_BUENARD, sfWhite, 36, "1280x720");
@@ -55,14 +55,14 @@ void init_settings_graphics_res(game_t *game)
 void init_settings_graphics_fps(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 385);
-    sfVector2f p_arrow_right = init_pos(1750, 385);
+    sfVector2f p_arrow_left = init_pos(1448, 410);
+    sfVector2f p_arrow_right = init_pos(1750, 410);
     sfVector2f p_fps = init_pos(1600, 405);
+    sfVector2f scale = {0.5, 0.5};
+    sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->fps_left = create_sprite(
-        GUI, R_ARROW, p_arrow_left, (sfVector2f){1, 1});
-    s_graphics->fps_right = create_sprite(
-        GUI, R_ARROW, p_arrow_right, (sfVector2f){-1, 1});
+    s_graphics->fps_left = create_arrow(p_arrow_left, scale);
+    s_graphics->fps_right = create_arrow(p_arrow_right, invert_scale);
     s_graphics->fps = malloc(sizeof(sfText *) * 6);
     s_graphics->fps[0] = create_text(FONT_BUENARD, sfWhite, 36, "30");
     s_graphics->fps[1] = create_text(FONT_BUENARD, sfWhite, 36, "60");
@@ -79,14 +79,14 @@ void init_settings_graphics_fps(game_t *game)
 void init_settings_graphics_vsync(game_t *game)
 {
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
-    sfVector2f p_arrow_left = init_pos(1448, 485);
-    sfVector2f p_arrow_right = init_pos(1750, 485);
+    sfVector2f p_arrow_left = init_pos(1448, 510);
+    sfVector2f p_arrow_right = init_pos(1750, 510);
     sfVector2f p_vsync = init_pos(1600, 505);
+    sfVector2f scale = {0.5, 0.5};
+    sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->vsync_left = create_sprite(
-        GUI, R_ARROW, p_arrow_left, (sfVector2f){1, 1});
-    s_graphics->vsync_right = create_sprite(
-        GUI, R_ARROW, p_arrow_right, (sfVector2f){-1, 1});
+    s_graphics->vsync_left = create_arrow(p_arrow_left, scale);
+    s_graphics->vsync_right = create_arrow(p_arrow_right, invert_scale);
     s_graphics->vsync = malloc(sizeof(sfText *) * 3);
     s_graphics->vsync[0] = create_text(FONT_BUENARD, sfWhite, 36, "OFF");
     s_graphics->vsync[1] = create_text(FONT_BUENARD, sfWhite, 36, "ON");
