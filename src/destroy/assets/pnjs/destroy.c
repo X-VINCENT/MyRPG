@@ -16,5 +16,8 @@ void destroy_pnj(assets_t *assets)
             destroy_text(assets->pnj[i]->text_to_display[x]);
         if (assets->pnj[i]->timer_display_text)
             sfClock_destroy(assets->pnj[i]->timer_display_text);
+        if (assets->pnj[i]->timer_move)
+            sfClock_destroy(assets->pnj[i]->timer_move);
+        free(assets->pnj[i]);
     }
 }
