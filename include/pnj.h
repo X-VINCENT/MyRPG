@@ -1,14 +1,15 @@
 /*
 ** EPITECH PROJECT, 2022
-** pnj
+** PNJ Header for my RPG
 ** File description:
-** pnj
+** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #ifndef PNJ_H_
     #define PNJ_H_
 
     #include "rpg.h"
+
     #define PNJ_BLACK_PATH "assets/images/characters/pnj/black.png"
 
     #define PNJ_NBR 540
