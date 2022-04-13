@@ -18,6 +18,7 @@ void destroy_all(game_t *game)
     destroy_audio(game->audio);
     destroy_keys(game->keys);
     destroy_inventory(game->inventory);
+    destroy_textures(game->textures);
     free(game);
 }
 
