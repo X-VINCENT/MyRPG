@@ -20,23 +20,23 @@ void change_bool_pnj_text(pnj_t *pnj)
         pnj->text_index_display = 0;
 }
 
-bool check_pnj_intersects(game_t *game)
+void check_pnj_intersects(pnj_t *pnj, game_t *game)
 {
-    sfFloatRect pnj;
-    sfFloatRect rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
+    sfFloatRect pnj_rect;
+    sfFloatRect rat;
 
-    for (int i = 0; game->assets->pnj[i] != NULL; i++) {
-        change_bool_pnj_text(game->assets->pnj[i]);
-        pnj = sfSprite_getGlobalBounds(game->assets->pnj[i]->sprite);
-        if (sfFloatRect_intersects(&pnj, &rat, NULL) == sfTrue) {
-            game->assets->pnj[i]->display_the_text = true;
-            return true;
-        } else {
-            game->assets->pnj[i]->display_the_text = false;
-            sfClock_restart(game->assets->pnj[i]->timer_display_text);
-            game->assets->pnj[i]->text_index_display = 0;
-            return false;
-        }
+    if (!pnj || !game || !pnj->sprite || !game->assets->rat->idle_front)
+        return;
+    rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
+    change_bool_pnj_text(pnj);
+    pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
+    if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
+        pnj->display_the_text = true;
+        return;
+    } else {
+        pnj->display_the_text = false;
+        sfClock_restart(pnj->timer_display_text);
+        pnj->text_index_display = 0;
+        return;
     }
-    return false;
 }

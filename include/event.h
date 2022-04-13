@@ -48,7 +48,7 @@
         void location_museum_city(game_t *game);
 
         //pnjs
-        bool check_pnj_intersects(game_t *game);
+        void check_pnj_intersects(pnj_t *pnj, game_t *game);
 
     // key_pressed.c
     void city_key_pressed(game_t *game);
