@@ -99,8 +99,8 @@
     #define FRENCH_INTERACT "Interagir"
     #define FRENCH_ZOOM_IN "Vue : Zoomer"
     #define FRENCH_ZOOM_OUT "Vue : Dezoomer"
-    #define FRENCH_ROTATE_LEFT "Vue : Tourner à gauche"
-    #define FRENCH_ROTATE_RIGHT "Vue : Tourner à droite"
+    #define FRENCH_ROTATE_LEFT "Vue : Tourner a gauche"
+    #define FRENCH_ROTATE_RIGHT "Vue : Tourner a droite"
     #define FRENCH_RESET_VIEW "Vue : Reinitialiser"
     #define FRENCH_ESCAPE "Echap"
 //////////////////////////////////////////////////////////////////////////////

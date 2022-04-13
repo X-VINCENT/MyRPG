@@ -15,14 +15,14 @@ void zoom_view(game_t *game)
     float zoom_y = sfSprite_getScale(game->assets->cursor).y;
     float offset = VIEW_ZOOM_VALUE;
 
-    if (event->key.code == game->keys->zoom_in &&
+    if (event->key.code == game->keys[ZOOM_IN] &&
         sfView_getSize(game->view).y > VIEW_MAX_ZOOM_IN) {
         sfView_setSize(game->view, (sfVector2f){
             view_size.x - offset * 16 / 9, view_size.y - offset});
         sfSprite_setScale(game->assets->cursor, (sfVector2f){
             zoom_x - offset / 100, zoom_y - offset / 100});
     }
-    if (event->key.code == game->keys->zoom_out &&
+    if (event->key.code == game->keys[ZOOM_OUT] &&
         sfView_getSize(game->view).y < VIEW_MAX_ZOOM_OUT) {
         sfView_setSize(game->view, (sfVector2f){
             view_size.x + offset * 16 / 9, view_size.y + offset});
@@ -36,9 +36,9 @@ void rotate_view(game_t *game)
     sfEvent *event = game->event->event;
     float rotation = sfView_getRotation(game->view);
 
-    if (event->key.code == game->keys->rotate_left)
+    if (event->key.code == game->keys[ROTATE_LEFT])
         sfView_setRotation(game->view, rotation + VIEW_ROTATE_VALUE);
-    if (event->key.code == game->keys->rotate_right)
+    if (event->key.code == game->keys[ROTATE_RIGHT])
         sfView_setRotation(game->view, rotation - VIEW_ROTATE_VALUE);
 }
 
@@ -46,7 +46,7 @@ void reset_view(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    if (event->key.code == game->keys->reset_view) {
+    if (event->key.code == game->keys[RESET_VIEW]) {
         if (game->stage == CITY_STAGE) {
             sfView_setSize(game->view, VIEW_CITY_SIZE);
             sfView_setRotation(game->view, VIEW_DEFAULT_ROTATION);

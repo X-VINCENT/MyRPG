@@ -30,7 +30,7 @@ void destroy_event(event_t *event)
     free(event);
 }
 
-void destroy_keys(keys_t *keys)
+void destroy_keys(int *keys)
 {
     if (!keys)
         return;
