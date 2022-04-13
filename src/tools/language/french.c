@@ -27,6 +27,8 @@ void set_texts_french_settings(game_t *game)
     sfText_setString(settings->graphics->title_fps, FRENCH_FRAMERATE);
     sfText_setString(settings->graphics->title_vsync, FRENCH_VSYNC);
     sfText_setString(settings->graphics->fps[4], FRENCH_UNLIMITED);
+    sfText_setString(settings->audio->title_music, FRENCH_MUSIC_VOLUME);
+    sfText_setString(settings->audio->title_effects, FRENCH_EFFECTS_VOLUME);
 }
 
 void set_texts_french(game_t *game)

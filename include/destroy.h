@@ -28,7 +28,7 @@
         void destroy_market(market_t *market);
 
     // Clothe
-        //destroy.c
+        // destroy.c
         void destroy_clothe(clothe_t *clothe);
 
     // Home Menu
@@ -38,7 +38,7 @@
         void destroy_parallax(parallax_t *parallax);
 
     // Inventory
-        //destroy.c
+        // destroy.c
         void destroy_inventory(inventory_t *inventory);
 
     // Museum1
@@ -49,11 +49,17 @@
         // destroy.c
         void destroy_museum2(museum2_t *museum2);
 
+    // Pnj
+    void destroy_pnj(assets_t *assets);
+
     // Rat
         // destroy.c
         void destroy_rat(rat_t *rat);
 
     // Settings
+        // controls.c
+        void destroy_settings_controls(settings_controls_t *s_controls);
+
         // destroy.c
         void destroy_settings(settings_t *settings);
 
@@ -61,8 +67,9 @@
         // destroy.c
         void destroy_top_bar(top_bar_t *bar);
 
-    //pnjs
-        void destroy_pnj(assets_t *assets);
+    // Textures
+        // destroy.c
+        void destroy_textures(textures_t *textures);
 
     // destroy.c
     void destroy_assets(assets_t *assets);

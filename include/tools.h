@@ -10,16 +10,9 @@
 
     #include "rpg.h"
 
-// audio.c
-void down_volume(game_t *game);
-void up_volume(game_t *game);
-void down_sounds(game_t *game);
-void up_sounds(game_t *game);
-void stop_musics(game_t *game);
-
-// fps.c
-void down_fps(game_t *game);
-void up_fps(game_t *game);
+// Keys
+    // get_name.c
+    const char *get_key_name(sfKeyCode key);
 
 // Language
     // english.c
@@ -40,6 +33,20 @@ void up_fps(game_t *game);
     // spanish.c
     void set_texts_spanish(game_t *game);
 
+// arrow.c
+sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
+
+// audio.c
+void down_volume(game_t *game);
+void up_volume(game_t *game);
+void down_sounds(game_t *game);
+void up_sounds(game_t *game);
+void stop_musics(game_t *game);
+
+// fps.c
+void down_fps(game_t *game);
+void up_fps(game_t *game);
+
 // location.c
 bool check_location_rect(
     sfSprite *character, sfVector2f location, int width, int height);
@@ -56,5 +63,9 @@ void rotate_view(game_t *game);
 void reset_view(game_t *game);
 void check_and_center_view(
     game_t *game, sfSprite *character, sfSprite *background);
+
+// volume.c
+void set_music_volume(game_t *game);
+void set_effects_volume(game_t *game);
 
 #endif /* !TOOLS_H_ */

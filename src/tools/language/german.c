@@ -27,6 +27,8 @@ void set_texts_german_settings(game_t *game)
     sfText_setString(settings->graphics->title_fps, GERMAN_FRAMERATE);
     sfText_setString(settings->graphics->title_vsync, GERMAN_VSYNC);
     sfText_setString(settings->graphics->fps[4], GERMAN_UNLIMITED);
+    sfText_setString(settings->audio->title_music, GERMAN_MUSIC_VOLUME);
+    sfText_setString(settings->audio->title_effects, GERMAN_EFFECTS_VOLUME);
 }
 
 void set_texts_german(game_t *game)

@@ -41,12 +41,23 @@ void destroy_settings_graphics(settings_graphics_t *s_graphics)
 
 void destroy_settings_audio(settings_audio_t *s_audio)
 {
+    destroy_text(s_audio->title_music);
+    destroy_sprite(s_audio->music_left);
+    destroy_sprite(s_audio->music_right);
+    destroy_sprite(s_audio->music_empty_bar);
+    destroy_sprite(s_audio->music_circle_bar);
+    for (int idx = 0; s_audio->music_bar[idx] != NULL; idx += 1)
+        destroy_sprite(s_audio->music_bar[idx]);
+    free(s_audio->music_bar);
+    destroy_text(s_audio->title_effects);
+    destroy_sprite(s_audio->effects_left);
+    destroy_sprite(s_audio->effects_right);
+    destroy_sprite(s_audio->effects_empty_bar);
+    destroy_sprite(s_audio->effects_circle_bar);
+    for (int idx = 0; s_audio->effects_bar[idx] != NULL; idx += 1)
+        destroy_sprite(s_audio->effects_bar[idx]);
+    free(s_audio->effects_bar);
     free(s_audio);
-}
-
-void destroy_settings_controls(settings_controls_t *s_controls)
-{
-    free(s_controls);
 }
 
 void destroy_settings(settings_t *settings)

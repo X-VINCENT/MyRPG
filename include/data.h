@@ -120,14 +120,46 @@
     } settings_graphics_t;
 
     typedef struct settings_audio {
+        sfText *title_music;
+        sfSprite *music_left;
+        sfSprite *music_right;
+        sfSprite *music_empty_bar;
+        sfSprite *music_circle_bar;
+        sfSprite **music_bar;
+        sfText *title_effects;
+        sfSprite *effects_left;
+        sfSprite *effects_right;
+        sfSprite *effects_empty_bar;
+        sfSprite *effects_circle_bar;
+        sfSprite **effects_bar;
     } settings_audio_t;
 
+    typedef struct settings_key {
+        sfText *title;
+        sfSprite *key_rect;
+        sfText *key;
+        sfSprite *reset;
+    } settings_key_t;
+
     typedef struct settings_controls {
-        sfText *up;
-        sfText *down;
-        sfText *left;
-        sfText *right;
-        sfText *interact;
+        sfSprite *scrolling_bar;
+        sfSprite *scrolling_bar_inside;
+        settings_key_t *up;
+        settings_key_t *down;
+        settings_key_t *left;
+        settings_key_t *right;
+        settings_key_t *jump;
+        settings_key_t *dodge;
+        settings_key_t *attack;
+        settings_key_t *interact;
+        settings_key_t *zoom_in;
+        settings_key_t *zoom_out;
+        settings_key_t *rotate_left;
+        settings_key_t *rotate_right;
+        settings_key_t *reset_view;
+        settings_key_t *escape;
+        sfClock *scrolling_clock;
+        sfClock *clock;
     } settings_controls_t;
 
     typedef struct settings {
@@ -187,10 +219,14 @@
     } event_t;
 
     typedef struct keys {
-        int move_left;
-        int move_right;
-        int move_up;
-        int move_down;
+        int up;
+        int down;
+        int left;
+        int right;
+        int jump;
+        int dodge;
+        int attack;
+        int interact;
         int zoom_in;
         int zoom_out;
         int rotate_left;
@@ -211,9 +247,42 @@
         sounds_t *sounds;
     } audio_t;
 
+    typedef struct textures {
+        sfTexture *black_pnj;
+        sfTexture *rat_blue;
+        sfTexture *rat_green;
+        sfTexture *rat_purple;
+        sfTexture *rat_red;
+        sfTexture *apart_top;
+        sfTexture *apart;
+        sfTexture *city_view;
+        sfTexture *city_rat_door;
+        sfTexture *clothe_view;
+        sfTexture *ice_cream_view;
+        sfTexture *market_view;
+        sfTexture *museum_view1;
+        sfTexture *museum_view2;
+        sfTexture *cursor_icon;
+        sfTexture *window_icon;
+        sfTexture *slot_off;
+        sfTexture *slot_on;
+        sfTexture *home_menu_bg0;
+        sfTexture *home_menu_bg1;
+        sfTexture *home_menu_bg2;
+        sfTexture *home_menu_bg3;
+        sfTexture *home_menu_press;
+        sfTexture *home_menu_title;
+        sfTexture *settings_bg;
+        sfTexture *transition_enter;
+        sfTexture *transition_quit;
+        sfTexture *buttons_1;
+        sfTexture *gui;
+    } textures_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        textures_t *textures;
         event_t *event;
         assets_t *assets;
         audio_t *audio;
@@ -226,6 +295,8 @@
         int res;
         int vsync;
         int language;
+        int music_volume;
+        int effects_volume;
     } game_t;
 
 #endif /* !DATA_H_ */

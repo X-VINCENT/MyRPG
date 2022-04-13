@@ -14,8 +14,10 @@ void init_transitions_rat(game_t *game)
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = init_scale(2, 2);
 
-    transitions->rat_enter = create_sprite(RAT_ENTER, rect, pos, scale);
-    transitions->rat_quit = create_sprite(RAT_QUIT, rect, pos, scale);
+    transitions->rat_enter = create_sprite(
+        game->textures->transition_enter, rect, pos, scale);
+    transitions->rat_quit = create_sprite(
+        game->textures->transition_quit, rect, pos, scale);
 }
 
 void init_transitions(game_t *game)

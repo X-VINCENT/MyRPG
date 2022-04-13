@@ -51,7 +51,7 @@
 
     // Rat
         // init.c
-        void init_rat(game_t *game, const char *filename_color);
+        void init_rat(game_t *game, sfTexture *color_texture);
 
     // Settings
         // audio.c
@@ -76,8 +76,9 @@
     // Transitions
         // init.c
         void init_transitions(game_t *game);
-    
-    //pnjs
+
+    // Pnj
+        // init.c
         void init_struct_pnjs(game_t *game);
 
     // init.c
@@ -95,8 +96,18 @@
     void init_sounds(game_t *game);
 
 // Inventory
-    //init.c
+    // init.c
     void init_inventory(game_t *game);
+
+// Textures
+    // characters.c
+    void init_textures_characters(game_t *game);
+    void init_textures_environnment(game_t *game);
+    void init_textures_icons(game_t *game);
+    void init_textures(game_t *game);
+    void init_textures_inventory(game_t *game);
+    void init_textures_menus(game_t *game);
+    void init_textures_objects(game_t *game);
 
 // game.c
 game_t *init_game(void);

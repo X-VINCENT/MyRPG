@@ -33,7 +33,7 @@ void init_texts_settings(game_t *game)
 
     settings->settings_text = create_text(
         FONT_BUENARD, color, 48, ENGLISH_SETTINGS);
-    sfSprite_setPosition(settings->settings_text, pos_settings);
+    sfText_setPosition(settings->settings_text, pos_settings);
     set_text_origin_middle_left(settings->settings_text);
     settings->game_text = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_GAME);
@@ -56,9 +56,9 @@ void init_settings(game_t *game)
 
     game->assets->settings = malloc(sizeof(settings_t));
     game->assets->settings->bg = create_sprite(
-        SETTINGS_BG, r_bg, p_bg, scale);
+        game->textures->settings_bg, r_bg, p_bg, scale);
     game->assets->settings->scrolling_rect = create_sprite(
-        GUI, r_scrolling_rect, p_scrolling_rect, scale);
+        game->textures->gui, r_scrolling_rect, p_scrolling_rect, scale);
     set_sprite_origin(
         game->assets->settings->scrolling_rect, r_scrolling_rect);
     init_texts_settings(game);

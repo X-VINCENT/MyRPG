@@ -7,17 +7,14 @@
 
 #include "csfml.h"
 
-sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
+sfSprite *create_sprite(sfTexture *texture, sfIntRect rect,
     sfVector2f position, sfVector2f scale)
 {
     sfSprite *sprite = NULL;
-    sfTexture *texture = NULL;
 
-    if (!texture_path)
+    if (!texture)
         return NULL;
     if (!(sprite = sfSprite_create()))
-        return NULL;
-    if (!(texture = sfTexture_createFromFile(texture_path, NULL)))
         return NULL;
     sfSprite_setPosition(sprite, position);
     sfSprite_setScale(sprite, scale);
@@ -54,6 +51,5 @@ void destroy_sprite(sfSprite *sprite)
 {
     if (!sprite)
         return;
-    sfTexture_destroy((sfTexture *)sfSprite_getTexture(sprite));
     sfSprite_destroy(sprite);
 }

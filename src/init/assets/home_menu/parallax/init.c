@@ -16,12 +16,12 @@ void init_parallax(game_t *game)
 
     menu->parallax = malloc(sizeof(parallax_t));
     menu->parallax->bg0 = create_sprite(
-        "assets/images/menus/home/bg0.png", rect, pos, scale);
+        game->textures->home_menu_bg0, rect, pos, scale);
     menu->parallax->bg1 = create_sprite(
-        "assets/images/menus/home/bg1.png", rect, pos, scale);
+        game->textures->home_menu_bg1, rect, pos, scale);
     menu->parallax->bg2 = create_sprite(
-        "assets/images/menus/home/bg2.png", rect, pos, scale);
+        game->textures->home_menu_bg2, rect, pos, scale);
     menu->parallax->bg3 = create_sprite(
-        "assets/images/menus/home/bg3.png", rect, pos, scale);
+        game->textures->home_menu_bg3, rect, pos, scale);
     menu->parallax->clock = sfClock_create();
 }
