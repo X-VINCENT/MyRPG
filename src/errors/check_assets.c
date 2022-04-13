@@ -14,6 +14,7 @@ int check_assets(void)
     error += check_audio();
     error += check_fonts();
     error += check_images();
+    error += check_data();
     if (error > 0)
         return ERROR;
     return SUCCESS;

@@ -83,6 +83,10 @@
     // Pnj
         // init.c
         void init_struct_pnjs(game_t *game);
+    
+    // Data
+        //rat_position
+        void init_file_rat_position(game_t *game);
 
     // init.c
     void init_assets(game_t *game);

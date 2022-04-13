@@ -28,6 +28,9 @@ int check_fonts(void);
 // Check Images
 int check_images(void);
 
+// Check Data
+int check_assets(void);
+
 // Help
 int print_help(void);
 
