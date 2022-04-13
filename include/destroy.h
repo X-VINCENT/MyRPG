@@ -87,7 +87,5 @@
 
 // destroy.c
 void destroy_all(game_t *game);
-void destroy_event(event_t *event);
-void destroy_keys(int *keys);
 
 #endif /* !DESTROY_H_ */

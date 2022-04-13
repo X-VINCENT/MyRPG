@@ -301,6 +301,7 @@
         assets_t *assets;
         audio_t *audio;
         int *keys;
+        int *default_keys;
         inventory_t *inventory;
         int stage;
         int last_stage;

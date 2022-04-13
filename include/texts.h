@@ -43,6 +43,7 @@
 
     #define ENGLISH_CONTROLS "Controls"
     #define ENGLISH_PRESS_KEY "Press a Key"
+    #define ENGLISH_KEY_BIND "Key already binded\nPress another key"
     #define ENGLISH_QUIT "Quit"
     #define ENGLISH_UP "Up"
     #define ENGLISH_DOWN "Down"
@@ -88,6 +89,7 @@
 
     #define FRENCH_CONTROLS "Controles"
     #define FRENCH_PRESS_KEY "Appuyez sur une touche"
+    #define FRENCH_KEY_BIND "Touche deja liee\nAppuyez sur une autre touche"
     #define FRENCH_QUIT "Quitter"
     #define FRENCH_UP "Haut"
     #define FRENCH_DOWN "Bas"
@@ -133,6 +135,7 @@
 
     #define GERMAN_CONTROLS "Steuert"
     #define GERMAN_PRESS_KEY "Drucke eine Taste"
+    #define GERMAN_KEY_BIND "Schlussel bereits verbunden\nDrucke eine andere"
     #define GERMAN_QUIT "Verlassen"
     #define GERMAN_UP "Hoch"
     #define GERMAN_DOWN "Niedrig"
@@ -178,6 +181,7 @@
 
     #define SPANISH_CONTROLS "Control S"
     #define SPANISH_PRESS_KEY "Presione una tecla"
+    #define SPANISH_KEY_BIND "La tecla ya esta enlazada\nPresiona otra tecla"
     #define SPANISH_QUIT "Abandonar"
     #define SPANISH_UP "Alto"
     #define SPANISH_DOWN "Bajo"
