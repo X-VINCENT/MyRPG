@@ -16,6 +16,7 @@ void home_menu_mouse_moved(game_t *game)
         game->window, mouse, NULL);
     sfFloatRect r_q = sfSprite_getGlobalBounds(h->quit[h->quit_state]);
     sfFloatRect r_o = sfSprite_getGlobalBounds(h->options[h->options_state]);
+    sfFloatRect r_p = sfSprite_getGlobalBounds(h->press);
 
     if (sfFloatRect_contains(&r_q, coords.x, coords.y))
         h->quit_state = 1;
