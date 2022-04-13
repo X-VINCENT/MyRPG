@@ -13,20 +13,22 @@ void set_texts_english_controls(game_t *game)
 
     sfText_setString(s_controls->choose_key->text, ENGLISH_PRESS_KEY);
     sfText_setString(s_controls->choose_key->quit, ENGLISH_QUIT);
-    sfText_setString(s_controls->up->title, ENGLISH_UP);
-    sfText_setString(s_controls->down->title, ENGLISH_DOWN);
-    sfText_setString(s_controls->left->title, ENGLISH_LEFT);
-    sfText_setString(s_controls->right->title, ENGLISH_RIGHT);
-    sfText_setString(s_controls->jump->title, ENGLISH_JUMP);
-    sfText_setString(s_controls->dodge->title, ENGLISH_DODGE);
-    sfText_setString(s_controls->attack->title, ENGLISH_ATTACK);
-    sfText_setString(s_controls->interact->title, ENGLISH_INTERACT);
-    sfText_setString(s_controls->zoom_in->title, ENGLISH_ZOOM_IN);
-    sfText_setString(s_controls->zoom_out->title, ENGLISH_ZOOM_OUT);
-    sfText_setString(s_controls->rotate_left->title, ENGLISH_ROTATE_LEFT);
-    sfText_setString(s_controls->rotate_right->title, ENGLISH_ROTATE_RIGHT);
-    sfText_setString(s_controls->reset_view->title, ENGLISH_RESET_VIEW);
-    sfText_setString(s_controls->escape->title, ENGLISH_ESCAPE);
+    sfText_setString(s_controls->keys[UP]->title, ENGLISH_UP);
+    sfText_setString(s_controls->keys[DOWN]->title, ENGLISH_DOWN);
+    sfText_setString(s_controls->keys[LEFT]->title, ENGLISH_LEFT);
+    sfText_setString(s_controls->keys[RIGHT]->title, ENGLISH_RIGHT);
+    sfText_setString(s_controls->keys[JUMP]->title, ENGLISH_JUMP);
+    sfText_setString(s_controls->keys[DODGE]->title, ENGLISH_DODGE);
+    sfText_setString(s_controls->keys[ATTACK]->title, ENGLISH_ATTACK);
+    sfText_setString(s_controls->keys[INTERACT]->title, ENGLISH_INTERACT);
+    sfText_setString(s_controls->keys[ZOOM_IN]->title, ENGLISH_ZOOM_IN);
+    sfText_setString(s_controls->keys[ZOOM_OUT]->title, ENGLISH_ZOOM_OUT);
+    sfText_setString(s_controls->keys[ROTATE_LEFT]->title,
+        ENGLISH_ROTATE_LEFT);
+    sfText_setString(s_controls->keys[ROTATE_RIGHT]->title,
+        ENGLISH_ROTATE_RIGHT);
+    sfText_setString(s_controls->keys[RESET_VIEW]->title, ENGLISH_RESET_VIEW);
+    sfText_setString(s_controls->keys[ESCAPE]->title, ENGLISH_ESCAPE);
 }
 
 void set_texts_english_settings(game_t *game)
