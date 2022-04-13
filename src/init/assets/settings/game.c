@@ -17,8 +17,8 @@ void init_settings_game_language(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_game->arrow_language_left = create_arrow(p_arrow_left, scale);
-    s_game->arrow_language_right = create_arrow(p_arrow_right, invert_scale);
+    s_game->arrow_language_left = create_arrow(game, p_arrow_left, scale);
+    s_game->arrow_language_right = create_arrow(game, p_arrow_right, invert_scale);
     s_game->title_language = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_LANGUAGE);
     set_text_origin_middle_left(s_game->title_language);

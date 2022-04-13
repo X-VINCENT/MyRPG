@@ -37,8 +37,8 @@ void init_settings_graphics_res(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->res_left = create_arrow(p_arrow_left, scale);
-    s_graphics->res_right = create_arrow(p_arrow_right, invert_scale);
+    s_graphics->res_left = create_arrow(game, p_arrow_left, scale);
+    s_graphics->res_right = create_arrow(game, p_arrow_right, invert_scale);
     s_graphics->res = malloc(sizeof(sfText *) * 6);
     s_graphics->res[0] = create_text(FONT_BUENARD, sfWhite, 36, "640x480");
     s_graphics->res[1] = create_text(FONT_BUENARD, sfWhite, 36, "1280x720");
@@ -61,8 +61,8 @@ void init_settings_graphics_fps(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->fps_left = create_arrow(p_arrow_left, scale);
-    s_graphics->fps_right = create_arrow(p_arrow_right, invert_scale);
+    s_graphics->fps_left = create_arrow(game, p_arrow_left, scale);
+    s_graphics->fps_right = create_arrow(game, p_arrow_right, invert_scale);
     s_graphics->fps = malloc(sizeof(sfText *) * 6);
     s_graphics->fps[0] = create_text(FONT_BUENARD, sfWhite, 36, "30");
     s_graphics->fps[1] = create_text(FONT_BUENARD, sfWhite, 36, "60");
@@ -85,8 +85,8 @@ void init_settings_graphics_vsync(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_graphics->vsync_left = create_arrow(p_arrow_left, scale);
-    s_graphics->vsync_right = create_arrow(p_arrow_right, invert_scale);
+    s_graphics->vsync_left = create_arrow(game, p_arrow_left, scale);
+    s_graphics->vsync_right = create_arrow(game, p_arrow_right, invert_scale);
     s_graphics->vsync = malloc(sizeof(sfText *) * 3);
     s_graphics->vsync[0] = create_text(FONT_BUENARD, sfWhite, 36, "OFF");
     s_graphics->vsync[1] = create_text(FONT_BUENARD, sfWhite, 36, "ON");

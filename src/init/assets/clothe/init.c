@@ -14,6 +14,7 @@ void init_clothe(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->clothe = malloc(sizeof(clothe_t));
-    game->assets->clothe->bg = create_sprite(CLOTHE, rect, pos, scale);
+    game->assets->clothe->bg = create_sprite(
+        game->textures->clothe_view, rect, pos, scale);
     //game->assets->ice->hitbox = create_image(CLOTHE_HITBOX);
 }

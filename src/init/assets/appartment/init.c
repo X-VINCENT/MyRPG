@@ -15,8 +15,8 @@ void init_appartment(game_t *game)
 
     game->assets->appartment = malloc(sizeof(appartment_t));
     game->assets->appartment->bg = create_sprite(
-        APPARTMENT, rect, pos, scale);
+        game->textures->apart, rect, pos, scale);
     game->assets->appartment->bg_top = create_sprite(
-        APPARTMENT_TOP, rect, pos, scale);
-    game->assets->appartment->hitbox = create_image(APPART_HITBOX);
+        game->textures->apart_top, rect, pos, scale);
+    game->assets->appartment->hitbox = create_image(APART_HITBOX);
 }

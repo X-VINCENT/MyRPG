@@ -19,9 +19,11 @@ void init_inventory(game_t *game)
         * INVENTORY_SIZE + 1);
     game->inventory->selected = 0;
     for (int i = 0; i < INVENTORY_SIZE; i++) {
-        game->inventory->slots_on[i] = create_sprite(SLOT_PATH_ON,
+        game->inventory->slots_on[i] = create_sprite(
+            game->textures->slot_on,
             rect, position, (sfVector2f){0.05, 0.05});
-        game->inventory->slots_off[i] = create_sprite(SLOT_PATH_OFF,
+        game->inventory->slots_off[i] = create_sprite(
+            game->textures->slot_off,
             rect, position, (sfVector2f){0.05, 0.05});
     }
     game->inventory->slots_on[INVENTORY_SIZE] = NULL;
