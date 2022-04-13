@@ -94,4 +94,5 @@ void init_settings_controls(game_t *game)
     init_settings_controls_scrolling_bar(game);
     init_settings_controls_keys(game);
     game->assets->settings->controls->scrolling_clock = sfClock_create();
+    game->assets->settings->controls->clock = sfClock_create();
 }

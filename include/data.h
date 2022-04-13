@@ -159,6 +159,7 @@
         settings_key_t *reset_view;
         settings_key_t *escape;
         sfClock *scrolling_clock;
+        sfClock *clock;
     } settings_controls_t;
 
     typedef struct settings {

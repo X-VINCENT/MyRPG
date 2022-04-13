@@ -45,5 +45,6 @@ void destroy_settings_controls(settings_controls_t *s_controls)
     destroy_settings_controls_scrolling_bar(s_controls);
     destroy_settings_controls_keys(s_controls);
     sfClock_destroy(s_controls->scrolling_clock);
+    sfClock_destroy(s_controls->clock);
     free(s_controls);
 }
