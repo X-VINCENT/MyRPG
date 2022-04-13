@@ -135,6 +135,12 @@
         sfSprite **effects_bar;
     } settings_audio_t;
 
+    typedef struct settings_choose_key {
+        sfSprite *bg_rect;
+        sfText *text;
+        sfText *quit;
+    } settings_choose_key_t;
+
     typedef struct settings_key {
         sfText *title;
         sfSprite *key_rect;
@@ -143,6 +149,7 @@
     } settings_key_t;
 
     typedef struct settings_controls {
+        settings_choose_key_t *choose_key;
         sfSprite *scrolling_bar;
         sfSprite *scrolling_bar_inside;
         settings_key_t *up;
@@ -161,6 +168,7 @@
         settings_key_t *escape;
         sfClock *scrolling_clock;
         sfClock *clock;
+        int key_selected;
     } settings_controls_t;
 
     typedef struct settings {

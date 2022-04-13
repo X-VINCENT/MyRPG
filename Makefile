@@ -102,6 +102,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/settings/audio/key_pressed.c           \
 								event/settings/audio/mouse_moved.c           \
 								event/settings/audio/mouse_pressed.c         \
+								event/settings/choose_key/key_pressed.c      \
+								event/settings/choose_key/mouse_moved.c      \
+								event/settings/choose_key/mouse_pressed.c    \
 								event/settings/controls/key_pressed.c        \
 								event/settings/controls/mouse_moved.c        \
 								event/settings/controls/mouse_pressed.c      \
@@ -137,6 +140,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/rat/init.c                       \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/settings/audio.c                 \
+								init/assets/settings/controls_choose_key.c   \
 								init/assets/settings/controls.c              \
 								init/assets/settings/game.c                  \
 								init/assets/settings/graphics.c              \
