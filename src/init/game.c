@@ -27,6 +27,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
+    init_file_rat_position(game);
     init_game_variables(game);
     init_textures(game);
     init_window(game);
