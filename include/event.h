@@ -184,6 +184,9 @@
         // mouse_pressed.c
         void settings_controls_mouse_pressed(game_t *game);
 
+        // move_controls.c
+        void settings_controls_scrolling_bar_event(game_t *game);
+
     // Game
         // key_pressed.c
         void settings_game_key_pressed(game_t *game);

@@ -16,7 +16,13 @@ void destroy_key(settings_key_t *s_key)
     free(s_key);
 }
 
-void destroy_settings_controls(settings_controls_t *s_controls)
+void destroy_settings_controls_scrolling_bar(settings_controls_t *s_controls)
+{
+    destroy_sprite(s_controls->scrolling_bar);
+    destroy_sprite(s_controls->scrolling_bar_inside);
+}
+
+void destroy_settings_controls_keys(settings_controls_t *s_controls)
 {
     destroy_key(s_controls->up);
     destroy_key(s_controls->down);
@@ -32,5 +38,13 @@ void destroy_settings_controls(settings_controls_t *s_controls)
     destroy_key(s_controls->rotate_right);
     destroy_key(s_controls->reset_view);
     destroy_key(s_controls->escape);
+}
+
+void destroy_settings_controls(settings_controls_t *s_controls)
+{
+    destroy_settings_controls_scrolling_bar(s_controls);
+    destroy_settings_controls_keys(s_controls);
+    sfClock_destroy(s_controls->scrolling_clock);
+    sfClock_destroy(s_controls->clock);
     free(s_controls);
 }
