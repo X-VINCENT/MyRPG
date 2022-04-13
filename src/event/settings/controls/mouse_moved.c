@@ -45,7 +45,7 @@ void key_button_hover(game_t *game, settings_key_t *s_key)
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
     sfFloatRect r_key_rect = sfSprite_getGlobalBounds(s_key->key_rect);
-    sfFloatRect r_key = sfSprite_getGlobalBounds(s_key->key);
+    sfFloatRect r_key = sfText_getGlobalBounds(s_key->key);
 
     button_hover(s_key->key_rect, s_controls->clock, &r_key_rect, coords);
     text_hover(s_key->key, s_controls->clock, &r_key, coords);

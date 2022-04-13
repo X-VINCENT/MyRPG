@@ -11,10 +11,10 @@ int check_menu_pictures(void)
 {
     int error = 0;
 
-    error += is_file(BG0);
-    error += is_file(BG1);
-    error += is_file(BG2);
-    error += is_file(BG3);
+    error += is_file(HOME_BG0);
+    error += is_file(HOME_BG1);
+    error += is_file(HOME_BG2);
+    error += is_file(HOME_BG3);
     error += is_file(HOME_PRESS);
     error += is_file(HOME_TITLE);
     error += is_file(RAT_ENTER);
@@ -42,7 +42,8 @@ int check_environment_assets(void)
 {
     int error = 0;
 
-    error += is_file(APPARTMENT);
+    error += is_file(APART);
+    error += is_file(APART_TOP);
     error += is_file(CITY);
     error += is_file(RAT_DOOR);
     error += is_file(ICE);

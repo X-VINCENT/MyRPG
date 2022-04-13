@@ -32,8 +32,7 @@ int engine(game_t *game)
 
 void display_cursor(game_t *game)
 {
-    sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(
-        game->window);
+    sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse_pos, NULL);
 

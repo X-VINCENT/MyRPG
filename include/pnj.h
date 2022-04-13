@@ -9,10 +9,12 @@
     #define PNJ_H_
 
     #include "rpg.h"
-
-    #define PNJ_NBR 1
-    #define PNJ_BLACK 0
     #define PNJ_BLACK_PATH "assets/images/characters/pnj/black.png"
+
+    #define PNJ_NBR 3
+    #define PNJ_BLACK 0
+    #define PNJ_BLACK_TWO 1
+    #define PNJ_BLACK_THREE 2
 
     typedef struct pnj {
         int pnj_stage;

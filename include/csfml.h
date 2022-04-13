@@ -72,7 +72,7 @@
     void destroy_circle_shape(sfCircleShape *circle);
 
 // Sprite
-    sfSprite *create_sprite(const char *texture_path, sfIntRect rect,
+    sfSprite *create_sprite(sfTexture *texture, sfIntRect rect,
         sfVector2f position, sfVector2f scale);
     void animate_sprite(
         sfSprite *sprite, float shift, int max_value, int offset_from_left);

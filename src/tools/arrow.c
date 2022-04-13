@@ -7,9 +7,9 @@
 
 #include "rpg.h"
 
-sfSprite *create_arrow(sfVector2f pos, sfVector2f scale)
+sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale)
 {
-    sfSprite *arrow = create_sprite(GUI, R_ARROW, pos, scale);
+    sfSprite *arrow = create_sprite(game->textures->gui, R_ARROW, pos, scale);
 
     set_sprite_origin(arrow, R_ARROW);
     return arrow;

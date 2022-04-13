@@ -16,7 +16,7 @@ void init_assets(game_t *game)
     init_city(game);
     init_clothe(game);
     init_home_menu(game);
-    init_rat(game, BLUE_RAT);
+    init_rat(game, game->textures->rat_blue);
     init_appartment(game);
     init_ice_cream(game);
     init_museum1(game);
@@ -34,5 +34,6 @@ void init_cursor(game_t *game)
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = {0.05, 0.05};
 
-    game->assets->cursor = create_sprite(CURSOR, rect, pos, scale);
+    game->assets->cursor = create_sprite(
+        game->textures->cursor_icon, rect, pos, scale);
 }
