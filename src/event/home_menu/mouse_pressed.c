@@ -16,11 +16,16 @@ void home_menu_mouse_pressed(game_t *game)
         game->window, mouse, NULL);
     sfFloatRect r_q = sfSprite_getGlobalBounds(h->quit[h->quit_state]);
     sfFloatRect r_o = sfSprite_getGlobalBounds(h->options[h->options_state]);
+    sfFloatRect r_p = sfSprite_getGlobalBounds(h->press);
 
     if (sfFloatRect_contains(&r_q, coords.x, coords.y))
         sfRenderWindow_close(game->window);
     if (sfFloatRect_contains(&r_o, coords.x, coords.y)) {
         game->last_stage = game->stage;
         game->stage = SETTINGS_STAGE;
+    }
+    if (sfFloatRect_contains(&r_p, coords.x, coords.y)) {
+        game->last_stage = game->stage;
+        game->stage = CITY_STAGE;
     }
 }
