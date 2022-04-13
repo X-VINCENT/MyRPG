@@ -8,7 +8,8 @@
 #ifndef DATA_H_
     #define DATA_H_
 
-    #include "csfml.h"
+    #include "rpg.h"
+    #include "inventory.h"
     #include "pnj.h"
 
     typedef struct parallax {
@@ -60,6 +61,7 @@
 
     typedef struct city {
         sfSprite *bg;
+        sfSprite *bg_top;
         doors_t *doors;
         sfImage *hitbox;
     } city_t;
@@ -134,6 +136,12 @@
         sfSprite **effects_bar;
     } settings_audio_t;
 
+    typedef struct settings_choose_key {
+        sfSprite *bg_rect;
+        sfText *text;
+        sfText *quit;
+    } settings_choose_key_t;
+
     typedef struct settings_key {
         sfText *title;
         sfSprite *key_rect;
@@ -142,6 +150,7 @@
     } settings_key_t;
 
     typedef struct settings_controls {
+        settings_choose_key_t *choose_key;
         sfSprite *scrolling_bar;
         sfSprite *scrolling_bar_inside;
         settings_key_t *up;
@@ -160,6 +169,7 @@
         settings_key_t *escape;
         sfClock *scrolling_clock;
         sfClock *clock;
+        int key_selected;
     } settings_controls_t;
 
     typedef struct settings {
@@ -237,6 +247,7 @@
 
     typedef struct musics {
         sfMusic *rat_transition;
+        sfMusic *music_menu;
     } musics_t;
 
     typedef struct sounds {
@@ -256,6 +267,7 @@
         sfTexture *apart_top;
         sfTexture *apart;
         sfTexture *city_view;
+        sfTexture *city_view_top;
         sfTexture *city_rat_door;
         sfTexture *clothe_view;
         sfTexture *ice_cream_view;

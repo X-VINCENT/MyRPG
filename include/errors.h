@@ -10,21 +10,23 @@
 
     #include "rpg.h"
 
+// Check Assets
+int check_assets(void);
+
+// Check Audio
+int check_audio(void);
+
 // Check Env
 int env(char **arge);
-int check_display(char *environment);
 
 // Check File
-int check_assets(void);
-int check_audio(void);
-int check_fonts(void);
 int is_file(const char *filepath);
 
-// Check Pictures
-int check_pictures(void);
-int check_environment_assets(void);
-int check_gui(void);
-int check_icons(void);
+// Check Fonts
+int check_fonts(void);
+
+// Check Images
+int check_images(void);
 
 // Help
 int print_help(void);

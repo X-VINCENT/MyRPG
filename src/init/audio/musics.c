@@ -10,4 +10,5 @@
 void init_musics(game_t *game)
 {
     game->audio->musics = malloc(sizeof(musics_t));
+    game->audio->musics->music_menu = create_music(MUSIC_HOME_MENU);
 }

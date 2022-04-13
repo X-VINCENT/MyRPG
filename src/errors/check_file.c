@@ -7,34 +7,6 @@
 
 #include "rpg.h"
 
-int check_assets(void)
-{
-    int error = 0;
-
-    error += check_audio();
-    error += check_fonts();
-    error += check_pictures();
-    if (error > 0)
-        return ERROR;
-    return SUCCESS;
-}
-
-int check_audio(void)
-{
-    int error = 0;
-
-    return error;
-}
-
-int check_fonts(void)
-{
-    int error = 0;
-
-    error += is_file(FONT_RPG);
-    error += is_file(FONT_BUENARD);
-    return error;
-}
-
 int is_file(const char *filepath)
 {
     FILE *file;

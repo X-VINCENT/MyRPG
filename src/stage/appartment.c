@@ -11,6 +11,7 @@ void appartment_stage(game_t *game)
 {
     appartment_t *apart = game->assets->appartment;
 
+    sfMusic_stop(game->audio->musics->music_menu);
     display_appartment(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, apart->bg_top, NULL);

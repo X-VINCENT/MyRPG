@@ -15,4 +15,5 @@ void home_menu_stage(game_t *game)
     display_home_menu(game);
     display_cursor(game);
     check_rat_key_pressed(game);
+    play_music(game->audio->musics->music_menu);
 }

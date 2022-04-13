@@ -7,6 +7,16 @@
 
 #include "rpg.h"
 
+void display_settings_controls_choose_key(game_t *game)
+{
+    settings_choose_key_t *s_choose_key =
+    game->assets->settings->controls->choose_key;
+
+    sfRenderWindow_drawSprite(game->window, s_choose_key->bg_rect, NULL);
+    sfRenderWindow_drawText(game->window, s_choose_key->text, NULL);
+    sfRenderWindow_drawText(game->window, s_choose_key->quit, NULL);
+}
+
 void display_settings_controls_scrolling_bar(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
@@ -48,7 +58,10 @@ void display_settings_controls(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    settings_controls_scrolling_bar_event(game);
+    if (s_controls->key_selected == 0)
+        settings_controls_scrolling_bar_event(game);
     display_settings_controls_scrolling_bar(game);
     display_settings_controls_keys(game);
+    if (s_controls->key_selected == 1)
+        display_settings_controls_choose_key(game);
 }
