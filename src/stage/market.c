@@ -9,6 +9,7 @@
 
 void market_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_menu);
     display_market(game);
     display_rat(game);
     check_rat_key_pressed(game);

@@ -41,6 +41,8 @@
 // Assets
 // Audio
     // Musics
+    //Home menu music
+    #define MUSIC_HOME_MENU "assets/Audio/Musics/home_menu_music.ogg"
     // Sounds
 
 // Fonts
@@ -171,7 +173,7 @@
         #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
         #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
 
-        #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 272}
+        #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 252}
         #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
         #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 342}
@@ -199,17 +201,17 @@
     #define LOCATION_APPARTMENT (sfVector2f){2450, 1690}
     #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
     #define LOCATION_CLOTHE_SHOP (sfVector2f) {573, 1666}
-    #define LOCATION_MARKET (sfVector2f) {1522, 1683}
+    #define LOCATION_MARKET (sfVector2f) {1510, 1683}
     #define LOCATION_MUSEUM1 (sfVector2f) {2022, 556}
 
     // Ice Cream Shop
-    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){243, 385}
+    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){235, 395}
 
     //Clothe
     #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){50, 226}
 
     // Market
-    #define LOCATION_DOOR_MARKET (sfVector2f){12, 334}
+    #define LOCATION_DOOR_MARKET (sfVector2f){0, 320}
 
 // Rects
     #define R_ARROW (sfIntRect){240, 0, 35, 51}

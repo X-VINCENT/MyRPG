@@ -18,6 +18,7 @@ void pnjs_display_city(game_t *game)
 
 void city_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_menu);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);
