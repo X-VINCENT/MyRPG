@@ -14,5 +14,7 @@ void city_stage(game_t *game)
     display_city(game);
     display_rat(game);
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
+    display_pnj(game, game->assets->pnj[PNJ_BLACK_TWO]);
+    display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
     check_rat_key_pressed(game);
 }
