@@ -7,6 +7,14 @@
 
 #include "rpg.h"
 
+void destroy_event(event_t *event)
+{
+    if (!event)
+        return;
+    free(event->event);
+    free(event);
+}
+
 void destroy_all(game_t *game)
 {
     if (!game)
@@ -16,23 +24,9 @@ void destroy_all(game_t *game)
     destroy_event(game->event);
     destroy_assets(game->assets);
     destroy_audio(game->audio);
-    destroy_keys(game->keys);
+    free(game->keys);
+    free(game->default_keys);
     destroy_inventory(game->inventory);
     destroy_textures(game->textures);
     free(game);
-}
-
-void destroy_event(event_t *event)
-{
-    if (!event)
-        return;
-    free(event->event);
-    free(event);
-}
-
-void destroy_keys(int *keys)
-{
-    if (!keys)
-        return;
-    free(keys);
 }
