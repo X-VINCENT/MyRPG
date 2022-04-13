@@ -35,6 +35,10 @@ void settings_mouse_pressed(game_t *game)
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
 
+    if (settings->controls->key_selected == 1) {
+        settings_mouse_pressed_choose_key(game);
+        return;
+    }
     settings_texts_mouse_pressed(game);
     if (settings->current == SETTINGS_STAGE_GAME)
         settings_game_mouse_pressed(game);

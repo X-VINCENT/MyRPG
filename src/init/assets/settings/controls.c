@@ -93,8 +93,10 @@ void init_settings_controls(game_t *game)
 {
     game->assets->settings->controls = malloc(sizeof(settings_controls_t));
 
+    init_settings_controls_choose_key(game);
     init_settings_controls_scrolling_bar(game);
     init_settings_controls_keys(game);
     game->assets->settings->controls->scrolling_clock = sfClock_create();
     game->assets->settings->controls->clock = sfClock_create();
+    game->assets->settings->controls->key_selected = 0;
 }
