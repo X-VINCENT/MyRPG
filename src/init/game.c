@@ -7,24 +7,32 @@
 
 #include "rpg.h"
 
+void init_game_variables(game_t *game)
+{
+    game->stage = START_STAGE;
+    game->last_stage = START_STAGE;
+    game->next_stage = START_STAGE;
+    game->fps = DEFAULT_FPS;
+    game->res = DEFAULT_WINDOW_RESOLUTION;
+    game->vsync = 0;
+    game->view = create_view(VIEW_DEFAULT_SIZE, 0);
+    game->language = ENGLISH;
+    game->music_volume = 100;
+    game->effects_volume = 100;
+}
+
 game_t *init_game(void)
 {
     game_t *game = NULL;
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    game->stage = START_STAGE;
-    game->last_stage = START_STAGE;
-    game->next_stage = START_STAGE;
-    game->fps = DEFAULT_FPS;
-    game->res = DEFAULT_WINDOW_RESOLUTION;
-    game->view = create_view(VIEW_DEFAULT_SIZE, 0);
-    game->language = ENGLISH;
+    init_game_variables(game);
     init_window(game);
     init_event(game);
+    init_keys(game);
     init_assets(game);
     init_audio(game);
-    init_keys(game);
     init_inventory(game);
     return game;
 }
@@ -49,10 +57,14 @@ void init_keys(game_t *game)
 {
     game->keys = malloc(sizeof(keys_t));
 
-    game->keys->move_left = sfKeyLeft;
-    game->keys->move_right = sfKeyRight;
-    game->keys->move_up = sfKeyUp;
-    game->keys->move_down = sfKeyDown;
+    game->keys->up = sfKeyUp;
+    game->keys->down = sfKeyDown;
+    game->keys->left = sfKeyLeft;
+    game->keys->right = sfKeyRight;
+    game->keys->jump = sfKeySpace;
+    game->keys->dodge = sfKeyLControl;
+    game->keys->attack = sfKeyA;
+    game->keys->interact = sfKeyE;
     game->keys->rotate_left = sfKeyQ;
     game->keys->rotate_right = sfKeyD;
     game->keys->zoom_in = sfKeyZ;

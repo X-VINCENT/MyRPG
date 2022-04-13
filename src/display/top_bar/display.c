@@ -11,10 +11,10 @@ void display_top_bar(game_t *game)
 {
     top_bar_t *bar = game->assets->top_bar;
 
-    sfRenderWindow_drawSprite(game->window, bar->menu1, NULL);
-    sfRenderWindow_drawSprite(game->window, bar->menu2, NULL);
-    sfRenderWindow_drawSprite(game->window, bar->menu3, NULL);
-    sfRenderWindow_drawSprite(game->window, bar->menu4, NULL);
+    sfRenderWindow_drawText(game->window, bar->menu1, NULL);
+    sfRenderWindow_drawText(game->window, bar->menu2, NULL);
+    sfRenderWindow_drawText(game->window, bar->menu3, NULL);
+    sfRenderWindow_drawText(game->window, bar->menu4, NULL);
     if (game->stage == SETTINGS_STAGE)
         sfRenderWindow_drawSprite(game->window, bar->settings_on, NULL);
     else

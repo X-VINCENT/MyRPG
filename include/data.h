@@ -100,21 +100,66 @@
     typedef struct settings_game {
         sfSprite *arrow_language_right;
         sfSprite *arrow_language_left;
-        sfText **language;
+        sfText *title_language;
+        sfText *language;
     } settings_game_t;
 
     typedef struct settings_graphics {
+        sfText *title_res;
+        sfText **res;
+        sfSprite *res_left;
+        sfSprite *res_right;
+        sfText *title_fps;
+        sfText **fps;
+        sfSprite *fps_left;
+        sfSprite *fps_right;
+        sfText *title_vsync;
+        sfText **vsync;
+        sfSprite *vsync_left;
+        sfSprite *vsync_right;
     } settings_graphics_t;
 
     typedef struct settings_audio {
+        sfText *title_music;
+        sfSprite *music_left;
+        sfSprite *music_right;
+        sfSprite *music_empty_bar;
+        sfSprite *music_circle_bar;
+        sfSprite **music_bar;
+        sfText *title_effects;
+        sfSprite *effects_left;
+        sfSprite *effects_right;
+        sfSprite *effects_empty_bar;
+        sfSprite *effects_circle_bar;
+        sfSprite **effects_bar;
     } settings_audio_t;
 
+    typedef struct settings_key {
+        sfText *title;
+        sfSprite *key_rect;
+        sfText *key;
+        sfSprite *reset;
+    } settings_key_t;
+
     typedef struct settings_controls {
-        sfText *up;
-        sfText *down;
-        sfText *left;
-        sfText *right;
-        sfText *interact;
+        sfSprite *scrolling_bar;
+        sfSprite *scrolling_bar_inside;
+        settings_key_t *up;
+        settings_key_t *down;
+        settings_key_t *left;
+        settings_key_t *right;
+        settings_key_t *jump;
+        settings_key_t *dodge;
+        settings_key_t *attack;
+        settings_key_t *interact;
+        settings_key_t *zoom_in;
+        settings_key_t *zoom_out;
+        settings_key_t *rotate_left;
+        settings_key_t *rotate_right;
+        settings_key_t *reset_view;
+        settings_key_t *escape;
+        sfClock *scrolling_clock;
+        sfClock *clock;
     } settings_controls_t;
 
     typedef struct settings {
@@ -174,10 +219,14 @@
     } event_t;
 
     typedef struct keys {
-        int move_left;
-        int move_right;
-        int move_up;
-        int move_down;
+        int up;
+        int down;
+        int left;
+        int right;
+        int jump;
+        int dodge;
+        int attack;
+        int interact;
         int zoom_in;
         int zoom_out;
         int rotate_left;
@@ -211,7 +260,10 @@
         int next_stage;
         int fps;
         int res;
+        int vsync;
         int language;
+        int music_volume;
+        int effects_volume;
     } game_t;
 
 #endif /* !DATA_H_ */

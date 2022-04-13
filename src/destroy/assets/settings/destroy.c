@@ -11,25 +11,53 @@ void destroy_settings_game(settings_game_t *s_game)
 {
     destroy_sprite(s_game->arrow_language_left);
     destroy_sprite(s_game->arrow_language_right);
-    for (int idx = 0; s_game->language[idx] != NULL; idx += 1)
-        destroy_text(s_game->language[idx]);
-    free(s_game->language);
+    destroy_text(s_game->title_language);
+    destroy_text(s_game->language);
     free(s_game);
 }
 
 void destroy_settings_graphics(settings_graphics_t *s_graphics)
 {
+    destroy_text(s_graphics->title_res);
+    for (int idx = 0; s_graphics->res[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->res[idx]);
+    free(s_graphics->res);
+    destroy_sprite(s_graphics->res_left);
+    destroy_sprite(s_graphics->res_right);
+    destroy_text(s_graphics->title_fps);
+    for (int idx = 0; s_graphics->fps[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->fps[idx]);
+    free(s_graphics->fps);
+    destroy_sprite(s_graphics->fps_left);
+    destroy_sprite(s_graphics->fps_right);
+    destroy_text(s_graphics->title_vsync);
+    for (int idx = 0; s_graphics->vsync[idx] != NULL; idx += 1)
+        destroy_text(s_graphics->vsync[idx]);
+    free(s_graphics->vsync);
+    destroy_sprite(s_graphics->vsync_left);
+    destroy_sprite(s_graphics->vsync_right);
     free(s_graphics);
 }
 
 void destroy_settings_audio(settings_audio_t *s_audio)
 {
+    destroy_text(s_audio->title_music);
+    destroy_sprite(s_audio->music_left);
+    destroy_sprite(s_audio->music_right);
+    destroy_sprite(s_audio->music_empty_bar);
+    destroy_sprite(s_audio->music_circle_bar);
+    for (int idx = 0; s_audio->music_bar[idx] != NULL; idx += 1)
+        destroy_sprite(s_audio->music_bar[idx]);
+    free(s_audio->music_bar);
+    destroy_text(s_audio->title_effects);
+    destroy_sprite(s_audio->effects_left);
+    destroy_sprite(s_audio->effects_right);
+    destroy_sprite(s_audio->effects_empty_bar);
+    destroy_sprite(s_audio->effects_circle_bar);
+    for (int idx = 0; s_audio->effects_bar[idx] != NULL; idx += 1)
+        destroy_sprite(s_audio->effects_bar[idx]);
+    free(s_audio->effects_bar);
     free(s_audio);
-}
-
-void destroy_settings_controls(settings_controls_t *s_controls)
-{
-    free(s_controls);
 }
 
 void destroy_settings(settings_t *settings)

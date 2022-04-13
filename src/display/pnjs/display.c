@@ -15,6 +15,7 @@ void display_pnj(game_t *game, pnj_t *pnj)
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     if (pnj->display_the_text == true
         && pnj->text_to_display[pnj->text_index_display])
-        sfRenderWindow_drawText(game->window, pnj->text_to_display[pnj->text_index_display], NULL);
+        sfRenderWindow_drawText(game->window,
+            pnj->text_to_display[pnj->text_index_display], NULL);
     return;
 }

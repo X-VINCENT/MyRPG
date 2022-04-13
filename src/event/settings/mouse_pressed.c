@@ -30,14 +30,19 @@ void settings_texts_mouse_pressed(game_t *game)
 
 void settings_mouse_pressed(game_t *game)
 {
+    settings_t *settings = game->assets->settings;
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
 
     settings_texts_mouse_pressed(game);
-    settings_audio_mouse_pressed(game);
-    settings_controls_mouse_pressed(game);
-    settings_game_mouse_pressed(game);
-    settings_graphics_mouse_pressed(game);
+    if (settings->current == SETTINGS_STAGE_GAME)
+        settings_game_mouse_pressed(game);
+    if (settings->current == SETTINGS_STAGE_GRAPHICS)
+        settings_graphics_mouse_pressed(game);
+    if (settings->current == SETTINGS_STAGE_AUDIO)
+        settings_audio_mouse_pressed(game);
+    if (settings->current == SETTINGS_STAGE_CONTROLS)
+        settings_controls_mouse_pressed(game);
     top_bar_mouse_pressed(game);
 }

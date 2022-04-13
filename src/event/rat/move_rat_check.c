@@ -1,4 +1,4 @@
-    /*
+/*
 ** EPITECH PROJECT, 2022
 ** Move Rat Check for My RPG
 ** File description:
