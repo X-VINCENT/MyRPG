@@ -31,6 +31,10 @@ void settings_key_pressed(game_t *game)
     settings_t *settings = game->assets->settings;
     sfEvent *event = game->event->event;
 
+    if (settings->controls->key_selected == 1) {
+        settings_key_pressed_choose_key(game);
+        return;
+    }
     settings_navigate_menus(game);
     if (settings->current == SETTINGS_STAGE_GAME)
         settings_game_key_pressed(game);

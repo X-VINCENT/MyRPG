@@ -174,6 +174,16 @@
         // mouse_pressed.c
         void settings_audio_mouse_pressed(game_t *game);
 
+    // Choose
+        // key_pressed.c
+        void settings_key_pressed_choose_key(game_t *game);
+
+        // mouse_moved.c
+        void settings_mouse_moved_choose_key(game_t *game);
+
+        // mouse_pressed.c
+        void settings_mouse_pressed_choose_key(game_t *game);
+
     // Controls
         // key_pressed.c
         void settings_controls_key_pressed(game_t *game);

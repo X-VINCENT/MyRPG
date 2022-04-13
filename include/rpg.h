@@ -218,6 +218,7 @@
     #define R_BAR (sfIntRect){0, 660, 500, 20}
     #define R_KEY_BG (sfIntRect){0, 724, 204, 64}
     #define R_CROSS (sfIntRect){0, 794, 38, 38}
+    #define R_CHOOSE_KEY (sfIntRect){0, 1606, 504, 219}
 
 // Texts
 #define ENGLISH_MENU_1 "Menu 1"
@@ -259,6 +260,8 @@
     #define ENGLISH_EFFECTS_VOLUME "Sound Effects Volume"
 
     #define ENGLISH_CONTROLS "Controls"
+    #define ENGLISH_PRESS_KEY "Press a Key"
+    #define ENGLISH_QUIT "Quit"
     #define ENGLISH_UP "Up"
     #define ENGLISH_DOWN "Down"
     #define ENGLISH_LEFT "Left"
@@ -294,6 +297,8 @@
     #define FRENCH_EFFECTS_VOLUME "Volume des effets sonores"
 
     #define FRENCH_CONTROLS "Controles"
+    #define FRENCH_PRESS_KEY "Appuyez sur une touche"
+    #define FRENCH_QUIT "Quitter"
     #define FRENCH_UP "Haut"
     #define FRENCH_DOWN "Bas"
     #define FRENCH_LEFT "Gauche"
@@ -329,6 +334,8 @@
     #define GERMAN_EFFECTS_VOLUME "Lautstarke der Soundeffekte"
 
     #define GERMAN_CONTROLS "Steuert"
+    #define GERMAN_PRESS_KEY "Drucke eine Taste"
+    #define GERMAN_QUIT "Verlassen"
     #define GERMAN_UP "Hoch"
     #define GERMAN_DOWN "Niedrig"
     #define GERMAN_LEFT "Links"
@@ -364,6 +371,8 @@
     #define SPANISH_EFFECTS_VOLUME "Volumen de efectos de sonido"
 
     #define SPANISH_CONTROLS "Control S"
+    #define SPANISH_PRESS_KEY "Presione una tecla"
+    #define SPANISH_QUIT "Abandonar"
     #define SPANISH_UP "Alto"
     #define SPANISH_DOWN "Bajo"
     #define SPANISH_LEFT "Izquierda"
