@@ -13,9 +13,12 @@ void display_pnj(game_t *game, pnj_t *pnj)
         return;
     check_pnj_intersects(pnj, game);
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
+    if (pnj->text == false)
+        return;
     if (pnj->display_the_text == true
-        && pnj->text_to_display[pnj->text_index_display])
+        && pnj->text_to_display[pnj->text_index_display]) {
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
+    }
     return;
 }

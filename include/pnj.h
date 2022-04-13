@@ -11,7 +11,7 @@
     #include "rpg.h"
     #define PNJ_BLACK_PATH "assets/images/characters/pnj/black.png"
 
-    #define PNJ_NBR 3
+    #define PNJ_NBR 540
     #define PNJ_BLACK 0
     #define PNJ_BLACK_TWO 1
     #define PNJ_BLACK_THREE 2
@@ -25,6 +25,7 @@
         float time_between_text;
         int text_index_display;
         bool display_the_text;
+        bool text;
     } pnj_t;
 
 #endif /* !PNJ_H_ */
