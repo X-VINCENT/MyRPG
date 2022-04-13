@@ -22,8 +22,8 @@ void init_assets(game_t *game)
     init_museum1(game);
     init_museum2(game);
     init_market(game);
-    init_settings(game);
-    init_top_bar(game);
+    //init_settings(game);
+    //init_top_bar(game);
     init_transitions(game);
     init_struct_pnjs(game);
 }
