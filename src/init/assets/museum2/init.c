@@ -14,6 +14,7 @@ void init_museum2(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->museum2 = malloc(sizeof(museum2_t));
-    game->assets->museum2->bg = create_sprite(MUSEUM2, rect, pos, scale);
+    game->assets->museum2->bg = create_sprite(
+        game->textures->museum_view2, rect, pos, scale);
     //game->assets->ice->hitbox = create_image(MUSEUM2_HITBOX);
 }

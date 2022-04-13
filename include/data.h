@@ -247,9 +247,42 @@
         sounds_t *sounds;
     } audio_t;
 
+    typedef struct textures {
+        sfTexture *black_pnj;
+        sfTexture *rat_blue;
+        sfTexture *rat_green;
+        sfTexture *rat_purple;
+        sfTexture *rat_red;
+        sfTexture *apart_top;
+        sfTexture *apart;
+        sfTexture *city_view;
+        sfTexture *city_rat_door;
+        sfTexture *clothe_view;
+        sfTexture *ice_cream_view;
+        sfTexture *market_view;
+        sfTexture *museum_view1;
+        sfTexture *museum_view2;
+        sfTexture *cursor_icon;
+        sfTexture *window_icon;
+        sfTexture *slot_off;
+        sfTexture *slot_on;
+        sfTexture *home_menu_bg0;
+        sfTexture *home_menu_bg1;
+        sfTexture *home_menu_bg2;
+        sfTexture *home_menu_bg3;
+        sfTexture *home_menu_press;
+        sfTexture *home_menu_title;
+        sfTexture *settings_bg;
+        sfTexture *transition_enter;
+        sfTexture *transition_quit;
+        sfTexture *buttons_1;
+        sfTexture *gui;
+    } textures_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        textures_t *textures;
         event_t *event;
         assets_t *assets;
         audio_t *audio;

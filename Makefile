@@ -147,6 +147,13 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
 								init/inventory/init.c                        \
+								init/textures/characters.c                   \
+								init/textures/environnment.c                 \
+								init/textures/icons.c                        \
+								init/textures/init.c                         \
+								init/textures/inventory.c                    \
+								init/textures/menus.c                        \
+								init/textures/objects.c                      \
 								init/game.c                                  \
 								stage/appartment.c                           \
 								stage/city.c                                 \

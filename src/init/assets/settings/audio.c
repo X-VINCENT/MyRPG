@@ -17,14 +17,15 @@ void init_settings_audio_music_bar(game_t *game)
     sfVector2f scale = {1, 1};
 
     s_audio->music_empty_bar = create_sprite(
-        GUI, R_EMPTY_BAR, p_empty_bar, scale);
+        game->textures->gui, R_EMPTY_BAR, p_empty_bar, scale);
     set_sprite_origin(s_audio->music_empty_bar, R_EMPTY_BAR);
     s_audio->music_circle_bar = create_sprite(
-        GUI, R_CIRCLE_BAR, p_circle_bar, scale);
+        game->textures->gui, R_CIRCLE_BAR, p_circle_bar, scale);
     set_sprite_origin(s_audio->music_circle_bar, R_CIRCLE_BAR);
     s_audio->music_bar = malloc(sizeof(sfSprite *) * 11);
     for (int idx = 0; idx != 10; idx += 1) {
-        s_audio->music_bar[idx] = create_sprite(GUI, r_bar, p_bar, scale);
+        s_audio->music_bar[idx] = create_sprite(
+            game->textures->gui, r_bar, p_bar, scale);
         p_bar.x += 50;
         r_bar.left += 50;
     }
@@ -40,8 +41,8 @@ void init_settings_audio_music(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_audio->music_left = create_arrow(p_arrow_left, scale);
-    s_audio->music_right = create_arrow(p_arrow_right, invert_scale);
+    s_audio->music_left = create_arrow(game, p_arrow_left, scale);
+    s_audio->music_right = create_arrow(game, p_arrow_right, invert_scale);
     s_audio->title_music = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_MUSIC_VOLUME);
     set_text_origin_middle_left(s_audio->title_music);
@@ -58,15 +59,16 @@ void init_settings_audio_effects_bar(game_t *game)
     sfVector2f p_bar = init_pos(1300, 400);
     sfVector2f scale = init_scale(1, 1);
 
-    s_audio->effects_empty_bar = create_sprite(GUI, R_EMPTY_BAR,
-        p_empty_bar, scale);
+    s_audio->effects_empty_bar = create_sprite(game->textures->gui,
+        R_EMPTY_BAR, p_empty_bar, scale);
     set_sprite_origin(s_audio->effects_empty_bar, R_EMPTY_BAR);
-    s_audio->effects_circle_bar = create_sprite(GUI, R_CIRCLE_BAR,
-        p_circle_bar, scale);
+    s_audio->effects_circle_bar = create_sprite(game->textures->gui,
+        R_CIRCLE_BAR, p_circle_bar, scale);
     set_sprite_origin(s_audio->effects_circle_bar, R_CIRCLE_BAR);
     s_audio->effects_bar = malloc(sizeof(sfSprite *) * 11);
     for (int idx = 0; idx != 10; idx += 1) {
-        s_audio->effects_bar[idx] = create_sprite(GUI, r_bar, p_bar, scale);
+        s_audio->effects_bar[idx] = create_sprite(
+            game->textures->gui, r_bar, p_bar, scale);
         p_bar.x += 50;
         r_bar.left += 50;
     }
@@ -82,8 +84,8 @@ void init_settings_audio_effects(game_t *game)
     sfVector2f scale = {0.5, 0.5};
     sfVector2f invert_scale = {-0.5, 0.5};
 
-    s_audio->effects_left = create_arrow(p_arrow_left, scale);
-    s_audio->effects_right = create_arrow(p_arrow_right, invert_scale);
+    s_audio->effects_left = create_arrow(game, p_arrow_left, scale);
+    s_audio->effects_right = create_arrow(game, p_arrow_right, invert_scale);
     s_audio->title_effects = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_EFFECTS_VOLUME);
     set_text_origin_middle_left(s_audio->title_effects);

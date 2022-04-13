@@ -56,9 +56,9 @@
         #define PURPLE_RAT "assets/images/characters/rat/purple.png"
 
     // Environments
-    #define APPARTMENT "assets/images/environments/appartment/apart.png"
-#define APPARTMENT_TOP "assets/images/environments/appartment/apart_top.png"
-    #define APPART_HITBOX "assets/images/environments/appartment/hitbox.png"
+    #define APART "assets/images/environments/appartment/apart.png"
+    #define APART_TOP "assets/images/environments/appartment/apart_top.png"
+    #define APART_HITBOX "assets/images/environments/appartment/hitbox.png"
 
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
@@ -80,10 +80,10 @@
 
     // Menus
         // Home
-            #define BG0 "assets/images/menus/home/bg0.png"
-            #define BG1 "assets/images/menus/home/bg1.png"
-            #define BG2 "assets/images/menus/home/bg2.png"
-            #define BG3 "assets/images/menus/home/bg3.png"
+            #define HOME_BG0 "assets/images/menus/home/bg0.png"
+            #define HOME_BG1 "assets/images/menus/home/bg1.png"
+            #define HOME_BG2 "assets/images/menus/home/bg2.png"
+            #define HOME_BG3 "assets/images/menus/home/bg3.png"
             #define HOME_TITLE "assets/images/menus/home/title.png"
             #define HOME_PRESS "assets/images/menus/home/press.png"
 
@@ -96,6 +96,9 @@
             #define RAT_QUIT "assets/images/menus/transitions/rat/quit.png"
 
     // Objects
+        // Buttons
+        #define BUTTONS_1 "assets/images/objects/buttons/buttons_1.png"
+
         // GUI
             #define GUI "assets/images/objects/gui.png"
 

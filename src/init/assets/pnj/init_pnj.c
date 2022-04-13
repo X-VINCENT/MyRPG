@@ -7,12 +7,12 @@
 
 #include "rpg.h"
 
-void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *name)
+void init_black_pnj(game_t *game, pnj_t *pnj, sfVector2f pos, char *name)
 {
     int nbr_text = 2;
 
-    pnj->sprite = create_sprite(PNJ_BLACK_PATH, (sfIntRect){0, 30, 45, 65},
-        pos, (sfVector2f){0.5, 0.5});
+    pnj->sprite = create_sprite(game->textures->black_pnj,
+        (sfIntRect){0, 30, 45, 65}, pos, (sfVector2f){0.5, 0.5});
     set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
     pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text);
     pnj->text_to_display[nbr_text] = NULL;
@@ -42,10 +42,10 @@ void init_struct_pnjs(game_t *game)
         assets->pnj[i] = malloc(sizeof(pnj_t));
     }
     assets->pnj[PNJ_NBR] = NULL;
-    init_black_pnj(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1800},
-        "Hello, I'm Jacques");
-    init_black_pnj(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1750},
-        "Hello, I'm Harry the brother of Jacques");
-    init_black_pnj(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1700},
-        "Hello, I'm Harry the dad of Harry !");
+    init_black_pnj(game, assets->pnj[PNJ_BLACK],
+        (sfVector2f){2324, 1800}, "Hello, I'm Jacques");
+    init_black_pnj(game, assets->pnj[PNJ_BLACK_TWO],
+        (sfVector2f){2280, 1750}, "Hello, I'm Harry the brother of Jacques");
+    init_black_pnj(game, assets->pnj[PNJ_BLACK_THREE],
+        (sfVector2f){2400, 1700}, "Hello, I'm Harry the dad of Harry !");
 }

@@ -34,7 +34,7 @@
     void set_texts_spanish(game_t *game);
 
 // arrow.c
-sfSprite *create_arrow(sfVector2f pos, sfVector2f scale);
+sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
 
 // audio.c
 void down_volume(game_t *game);
