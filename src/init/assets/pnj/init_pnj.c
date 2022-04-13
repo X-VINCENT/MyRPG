@@ -24,10 +24,11 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
 
     pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text);
     pnj->text_to_display[nbr_text] = NULL;
-    pnj->text_to_display[0] = create_text(FONT_BUENARD, sfBlack,
-        10, first_message);
-    pnj->text_to_display[1] = create_text(FONT_BUENARD, sfBlack,
-        10, "I'm the blacksmith of the city\n");
+    pnj->text_to_display[0] = create_text(FONT_TEXT_PNJ, sfWhite,
+        30, first_message);
+    pnj->text_to_display[1] = create_text(FONT_TEXT_PNJ, sfWhite,
+        30, "You are a fucking\n\
+        fucking rat !\n");
     pos.y -= 25;
     for (int i = 0; pnj->text_to_display[i] != NULL; i++) {
         set_text_origin(pnj->text_to_display[i]);
@@ -74,8 +75,8 @@ void init_struct_pnjs(game_t *game)
     init_black_pnj(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1800},
         "Hello, I'm Jacques", true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1750},
-        "Hello, I'm Harry the brother of Jacques", true, game);
+        "Hello, I'm Harry\nthe brother of Jacques", true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1700},
-        "Hello, I'm Harry the dad of Harry !", true, game);
+        "Hello, I'm Charles the dad of Harry !", true, game);
     citizens_png(game);
 }

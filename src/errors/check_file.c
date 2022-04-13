@@ -32,6 +32,7 @@ int check_fonts(void)
 
     error += is_file(FONT_RPG);
     error += is_file(FONT_BUENARD);
+    error += is_file(FONT_TEXT_PNJ);
     return error;
 }
 

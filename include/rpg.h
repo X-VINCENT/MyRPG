@@ -46,6 +46,7 @@
 // Fonts
     #define FONT_RPG "assets/fonts/rpg.ttf"
     #define FONT_BUENARD "assets/fonts/Buenard.ttf"
+    #define FONT_TEXT_PNJ "assets/fonts/Bebas-Regular.ttf"
 
 // Images
     // Characters
