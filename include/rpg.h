@@ -170,6 +170,7 @@
     // Pos
         #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
         #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f){915, 1675}
+        #define RAT_DEFAULT_POS_CITY_MUSEUM1 (sfVector2f){2034, 590}
         #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
         #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
 
@@ -212,6 +213,9 @@
 
     // Market
     #define LOCATION_DOOR_MARKET (sfVector2f){0, 320}
+
+    //Museum1
+    #define LOCATION_DOOR_MUSEUM1 (sfVector2f){0, 765}
 
 // Rects
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
