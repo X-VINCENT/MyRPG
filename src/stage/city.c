@@ -26,6 +26,6 @@ void city_stage(game_t *game)
     display_city(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
-    pnjs_display_city(game, 50);
+    pnjs_display_city(game, 25);
     check_rat_key_pressed(game);
 }

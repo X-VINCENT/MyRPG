@@ -16,6 +16,9 @@ int check_assets(void);
 // Check Audio
 int check_audio(void);
 
+// Check Data
+int check_data(void);
+
 // Check Env
 int env(char **arge);
 
