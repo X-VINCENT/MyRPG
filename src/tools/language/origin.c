@@ -11,8 +11,8 @@ void set_texts_origin_controls(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    set_text_origin_middle_left(s_controls->choose_key->text);
-    set_text_origin_middle_left(s_controls->choose_key->quit);
+    set_text_origin(s_controls->choose_key->text);
+    set_text_origin(s_controls->choose_key->quit);
     set_text_origin_middle_left(s_controls->keys[UP]->title);
     set_text_origin_middle_left(s_controls->keys[DOWN]->title);
     set_text_origin_middle_left(s_controls->keys[LEFT]->title);
