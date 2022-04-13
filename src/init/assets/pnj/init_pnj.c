@@ -56,8 +56,8 @@ void citizens_png(game_t *game)
 
     srand((unsigned) time(&t));
     for (int i = PNJ_BLACK_THREE + 1; i < PNJ_NBR; i++) {
-        default_pnj_position.x = 1500 + rand() % (2900 + 1 - 1500);;
-        default_pnj_position.y = 1700 + rand() % (1950 + 1 - 1700);;
+        default_pnj_position.x = 1500 + rand() % (2500 + 1 - 1000);;
+        default_pnj_position.y = 1700 + rand() % (1730 + 1 - 1705);;
         init_black_pnj(assets->pnj[i], default_pnj_position, "", false, game);
     }
 }

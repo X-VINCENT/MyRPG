@@ -12,7 +12,7 @@ void pnjs_display_city(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
-    for (int i = PNJ_BLACK_THREE + 1; i < 5; i++)
+    for (int i = PNJ_BLACK_THREE + 1; i < 15; i++)
         display_pnj(game, game->assets->pnj[i]);
 }
 
