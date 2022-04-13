@@ -225,7 +225,7 @@ TESTED              =           "*******  TESTS FINISHED.  *******"
 
 all: $(NAME)
 
-$(NAME): zip $(OBJ_MAIN) $(OBJ) unzip
+$(NAME): $(OBJ_MAIN) $(OBJ)
 	@echo ""
 	@echo $(COMPILING_LIBS)
 	make -C lib re
