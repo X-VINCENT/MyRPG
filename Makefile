@@ -33,10 +33,6 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
-								errors/check_env.c                           \
-								errors/check_file.c                          \
-								errors/check_pictures.c                      \
-								errors/help.c                                \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
@@ -56,6 +52,13 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/graphics.c                  \
 								display/settings/game.c                      \
 								display/top_bar/display.c                    \
+								errors/check_assets.c                        \
+								errors/check_audio.c                         \
+								errors/check_env.c                           \
+								errors/check_file.c                          \
+								errors/check_fonts.c                         \
+								errors/check_images.c                        \
+								errors/help.c                                \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \

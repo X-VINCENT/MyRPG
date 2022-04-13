@@ -8,7 +8,8 @@
 #ifndef DATA_H_
     #define DATA_H_
 
-    #include "csfml.h"
+    #include "rpg.h"
+    #include "inventory.h"
     #include "pnj.h"
 
     typedef struct parallax {

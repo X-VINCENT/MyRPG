@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** header_inventory
+** Inventory Header for MyRPG
 ** File description:
-** inventory
+** Xavier VINCENT - Gautier BONHUR - Hugo DUBOIS - Max PEIXOTO
 */
 
 #ifndef INVENTORY_H_
@@ -12,7 +12,7 @@
 
     #define SLOT_PATH_ON "assets/images/inventory/slot_on.png"
     #define SLOT_PATH_OFF "assets/images/inventory/slot_off.png"
-    #define INVENTORY_SIZE (9)
+    #define INVENTORY_SIZE 9
 
     enum item {
         NOTHING,
