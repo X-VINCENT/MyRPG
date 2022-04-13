@@ -17,6 +17,8 @@ void init_city(game_t *game)
     game->assets->city->doors = malloc(sizeof(doors_t));
     game->assets->city->bg = create_sprite(
         game->textures->city_view, rect, pos, scale);
+    game->assets->city->bg_top = create_sprite(
+        game->textures->city_view_top, rect, pos, scale);
     game->assets->city->hitbox = create_image(CITY_HITBOX);
     init_doors(game);
 }
