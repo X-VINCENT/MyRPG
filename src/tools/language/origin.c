@@ -13,20 +13,20 @@ void set_texts_origin_controls(game_t *game)
 
     set_text_origin_middle_left(s_controls->choose_key->text);
     set_text_origin_middle_left(s_controls->choose_key->quit);
-    set_text_origin_middle_left(s_controls->up->title);
-    set_text_origin_middle_left(s_controls->down->title);
-    set_text_origin_middle_left(s_controls->left->title);
-    set_text_origin_middle_left(s_controls->right->title);
-    set_text_origin_middle_left(s_controls->jump->title);
-    set_text_origin_middle_left(s_controls->dodge->title);
-    set_text_origin_middle_left(s_controls->attack->title);
-    set_text_origin_middle_left(s_controls->interact->title);
-    set_text_origin_middle_left(s_controls->zoom_in->title);
-    set_text_origin_middle_left(s_controls->zoom_out->title);
-    set_text_origin_middle_left(s_controls->rotate_left->title);
-    set_text_origin_middle_left(s_controls->rotate_right->title);
-    set_text_origin_middle_left(s_controls->reset_view->title);
-    set_text_origin_middle_left(s_controls->escape->title);
+    set_text_origin_middle_left(s_controls->keys[UP]->title);
+    set_text_origin_middle_left(s_controls->keys[DOWN]->title);
+    set_text_origin_middle_left(s_controls->keys[LEFT]->title);
+    set_text_origin_middle_left(s_controls->keys[RIGHT]->title);
+    set_text_origin_middle_left(s_controls->keys[JUMP]->title);
+    set_text_origin_middle_left(s_controls->keys[DODGE]->title);
+    set_text_origin_middle_left(s_controls->keys[ATTACK]->title);
+    set_text_origin_middle_left(s_controls->keys[INTERACT]->title);
+    set_text_origin_middle_left(s_controls->keys[ZOOM_IN]->title);
+    set_text_origin_middle_left(s_controls->keys[ZOOM_OUT]->title);
+    set_text_origin_middle_left(s_controls->keys[ROTATE_LEFT]->title);
+    set_text_origin_middle_left(s_controls->keys[ROTATE_RIGHT]->title);
+    set_text_origin_middle_left(s_controls->keys[RESET_VIEW]->title);
+    set_text_origin_middle_left(s_controls->keys[ESCAPE]->title);
 }
 
 void set_texts_origin_settings(game_t *game)

@@ -16,6 +16,5 @@ void settings_mouse_pressed_choose_key(game_t *game)
     sfFloatRect r_quit = sfText_getGlobalBounds(s_controls->choose_key->quit);
 
     if (sfFloatRect_contains(&r_quit, coords.x, coords.y))
-        s_controls->key_selected = 0;
-
+        s_controls->key_selected = -1;
 }

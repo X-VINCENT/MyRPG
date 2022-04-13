@@ -57,20 +57,21 @@ void init_event(game_t *game)
 
 void init_keys(game_t *game)
 {
-    game->keys = malloc(sizeof(keys_t));
+    game->keys = malloc(sizeof(int) * NB_KEYS + 1);
 
-    game->keys->up = sfKeyUp;
-    game->keys->down = sfKeyDown;
-    game->keys->left = sfKeyLeft;
-    game->keys->right = sfKeyRight;
-    game->keys->jump = sfKeySpace;
-    game->keys->dodge = sfKeyLControl;
-    game->keys->attack = sfKeyA;
-    game->keys->interact = sfKeyE;
-    game->keys->rotate_left = sfKeyQ;
-    game->keys->rotate_right = sfKeyD;
-    game->keys->zoom_in = sfKeyZ;
-    game->keys->zoom_out = sfKeyS;
-    game->keys->reset_view = sfKeyR;
-    game->keys->escape = sfKeyEscape;
+    game->keys[UP] = sfKeyUp;
+    game->keys[DOWN] = sfKeyDown;
+    game->keys[LEFT] = sfKeyLeft;
+    game->keys[RIGHT] = sfKeyRight;
+    game->keys[JUMP] = sfKeySpace;
+    game->keys[DODGE] = sfKeyLControl;
+    game->keys[ATTACK] = sfKeyA;
+    game->keys[INTERACT] = sfKeyE;
+    game->keys[ROTATE_LEFT] = sfKeyQ;
+    game->keys[ROTATE_RIGHT] = sfKeyD;
+    game->keys[ZOOM_IN] = sfKeyZ;
+    game->keys[ZOOM_OUT] = sfKeyS;
+    game->keys[RESET_VIEW] = sfKeyR;
+    game->keys[ESCAPE] = sfKeyEscape;
+    game->keys[NB_KEYS] = -1;
 }
