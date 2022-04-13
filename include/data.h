@@ -60,6 +60,7 @@
 
     typedef struct city {
         sfSprite *bg;
+        sfSprite *bg_top;
         doors_t *doors;
         sfImage *hitbox;
     } city_t;
@@ -264,6 +265,7 @@
         sfTexture *apart_top;
         sfTexture *apart;
         sfTexture *city_view;
+        sfTexture *city_view_top;
         sfTexture *city_rat_door;
         sfTexture *clothe_view;
         sfTexture *ice_cream_view;

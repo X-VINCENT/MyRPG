@@ -46,6 +46,7 @@
 // Fonts
     #define FONT_RPG "assets/fonts/rpg.ttf"
     #define FONT_BUENARD "assets/fonts/Buenard.ttf"
+    #define FONT_TEXT_PNJ "assets/fonts/Bebas-Regular.ttf"
 
 // Images
     // Characters
@@ -61,7 +62,8 @@
     #define APART_HITBOX "assets/images/environments/appartment/hitbox.png"
 
     #define CITY "assets/images/environments/city/view.png"
-    #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
+    #define CITY_TOP "assets/images/environments/city/map_top.png"
+    #define CITY_HITBOX "assets/images/environments/city/hitbox.png"
     #define RAT_DOOR "assets/images/environments/city/rat_door.png"
 
     #define ICE "assets/images/environments/ice_cream_shop/view.png"

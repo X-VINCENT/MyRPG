@@ -50,7 +50,7 @@
         void destroy_museum2(museum2_t *museum2);
 
     // Pnj
-    void destroy_pnj(assets_t *assets);
+    void destroy_pnjs(pnj_t **pnj);
 
     // Rat
         // destroy.c
