@@ -7,6 +7,52 @@
 
 #include "rpg.h"
 
+void change_direction(game_t *game, int i, sfVector2f position)
+{
+    pnj_t *pnj = game->assets->pnj[i];
+
+    if (position.x >= 2584) {
+        pnj->move_left_or_right = 0;
+        sfClock_restart(pnj->walk);
+    }
+    if (position.x <= 500) {
+        pnj->move_left_or_right = 1;
+        sfClock_restart(pnj->walk);
+    }
+    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->walk)) > pnj->change_t) {
+        pnj->move_left_or_right = (pnj->move_left_or_right == 0) ? 1 : 0;
+        sfClock_restart(pnj->walk);
+    }
+}
+
+void check_second_move_pnj(game_t *game, int i)
+{
+    pnj_t *pnj = game->assets->pnj[i];
+    sfVector2f position = sfSprite_getPosition(pnj->sprite);
+    sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
+
+    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) > 0.1) {
+        if (pnj->move_left_or_right == 0) {
+            position.x -= 1;
+            rect.left = 96;
+        } else {
+            position.x += 1;
+            rect.left = 0;
+        }
+        sfClock_restart(pnj->timer_move);
+    }
+    change_direction(game, i, position);
+    sfSprite_setTextureRect(pnj->sprite, rect);
+    sfSprite_setPosition(pnj->sprite, position);
+}
+
+void move_pnj(game_t *game, int nbr_animated_pnj)
+{
+    for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++) {
+        check_second_move_pnj(game, i);
+    }
+}
+
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     if (!pnj || !game || !pnj->sprite || !game->window)

@@ -12,6 +12,7 @@ void city_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
 
     if (event->key.code == game->keys->escape) {
+        sfView_setRotation(game->view, 0);
         game->last_stage = game->stage;
         game->stage = SETTINGS_STAGE;
     }

@@ -22,8 +22,11 @@
         sfSprite *sprite;
         sfText **text_to_display;
         sfClock *timer_display_text;
+        sfClock *walk;
         float time_between_text;
+        int move_left_or_right;
         int text_index_display;
+        int change_t;
         bool display_the_text;
         bool text;
     } pnj_t;
