@@ -15,6 +15,7 @@ void destroy_pnjs(pnj_t **pnj)
             destroy_text(pnj[i]->text_to_display[x]);
         sfClock_destroy(pnj[i]->timer_display_text);
         sfClock_destroy(pnj[i]->timer_move);
+        sfClock_destroy(pnj[i]->walk);
         free(pnj[i]);
     }
     free(pnj);
