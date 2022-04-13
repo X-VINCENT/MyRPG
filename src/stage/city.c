@@ -16,5 +16,7 @@ void city_stage(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
+    for (int i = PNJ_BLACK_THREE + 1; i < PNJ_NBR; i++)
+        display_pnj(game, game->assets->pnj[i]);
     check_rat_key_pressed(game);
 }
