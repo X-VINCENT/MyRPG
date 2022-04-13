@@ -17,5 +17,4 @@ void settings_mouse_pressed_choose_key(game_t *game)
 
     if (sfFloatRect_contains(&r_quit, coords.x, coords.y))
         s_controls->key_selected = -1;
-
 }
