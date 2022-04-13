@@ -32,6 +32,7 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->apart_top);
     sfTexture_destroy(textures->apart);
     sfTexture_destroy(textures->city_view);
+    sfTexture_destroy(textures->city_view_top);
     sfTexture_destroy(textures->city_rat_door);
     sfTexture_destroy(textures->clothe_view);
     sfTexture_destroy(textures->ice_cream_view);
