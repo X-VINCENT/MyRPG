@@ -58,6 +58,7 @@ SRC                 =           $(addprefix src/,                            \
 								errors/check_file.c                          \
 								errors/check_fonts.c                         \
 								errors/check_images.c                        \
+								errors/check_data.c                          \
 								errors/help.c                                \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
@@ -135,6 +136,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_1.c                              \
 								event/event_2.c					             \
 								event/event_3.c					             \
+								init/data/init_rat_position.c                \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
