@@ -9,6 +9,7 @@
 
 void ice_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_menu);
     display_ice_cream(game);
     display_rat(game);
     check_rat_key_pressed(game);
