@@ -7,6 +7,15 @@
 
 #include "rpg.h"
 
+void init_settings_base(pnj_t *pnj, float time_between_text)
+{
+    pnj->time_between_text = 2;
+    pnj->display_the_text = false;
+    pnj->text_index_display = 0;
+    pnj->timer_display_text = sfClock_create();
+    pnj->timer_move = sfClock_create();
+}
+
 void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *name)
 {
     int nbr_text = 2;
@@ -22,13 +31,10 @@ void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *name)
         10, "I'm the blacksmith of the city\n");
     set_text_origin(pnj->text_to_display[0]);
     set_text_origin(pnj->text_to_display[1]);
-    pos.y -= 15;
+    pos.y -= 25;
     sfText_setPosition(pnj->text_to_display[0], pos);
     sfText_setPosition(pnj->text_to_display[1], pos);
-    pnj->time_between_text = 2;
-    pnj->display_the_text = false;
-    pnj->text_index_display = 0;
-    pnj->timer_display_text = sfClock_create();
+    init_settings_base(pnj, 2);
 }
 
 void init_struct_pnjs(game_t *game)

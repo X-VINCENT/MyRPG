@@ -17,6 +17,7 @@
     #define PNJ_BLACK_THREE 2
 
     typedef struct pnj {
+        sfClock *timer_move;
         int pnj_stage;
         sfSprite *sprite;
         sfText **text_to_display;
