@@ -27,6 +27,8 @@
         sfFloatRect *global_bounds, sfVector2f coords);
     void button_hover_little(sfSprite *sprite, sfClock *clock,
         sfFloatRect *global_bounds, sfVector2f coords);
+    void button_hover_micro(sfSprite *sprite, sfClock *clock,
+        sfFloatRect *global_bounds, sfVector2f coords);
     void text_hover(sfText *text, sfClock *clock,
         sfFloatRect *global_bounds, sfVector2f coords);
 

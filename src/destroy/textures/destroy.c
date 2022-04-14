@@ -9,17 +9,19 @@
 
 void destroy_textures_2(textures_t *textures)
 {
+    sfTexture_destroy(textures->slot_off);
+    sfTexture_destroy(textures->slot_on);
     sfTexture_destroy(textures->home_menu_bg0);
     sfTexture_destroy(textures->home_menu_bg1);
     sfTexture_destroy(textures->home_menu_bg2);
     sfTexture_destroy(textures->home_menu_bg3);
-    sfTexture_destroy(textures->home_menu_press);
     sfTexture_destroy(textures->home_menu_title);
     sfTexture_destroy(textures->settings_bg);
     sfTexture_destroy(textures->transition_enter);
     sfTexture_destroy(textures->transition_quit);
     sfTexture_destroy(textures->buttons_1);
     sfTexture_destroy(textures->gui);
+    sfTexture_destroy(textures->message_box);
 }
 
 void destroy_textures(textures_t *textures)
@@ -41,8 +43,6 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->museum_view2);
     sfTexture_destroy(textures->cursor_icon);
     sfTexture_destroy(textures->window_icon);
-    sfTexture_destroy(textures->slot_off);
-    sfTexture_destroy(textures->slot_on);
     destroy_textures_2(textures);
     free(textures);
 }

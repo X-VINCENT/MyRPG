@@ -15,7 +15,7 @@ void destroy_home_menu(home_menu_t *menu)
         destroy_sprite(menu->options[idx]);
     }
     destroy_sprite(menu->title);
-    destroy_sprite(menu->press);
+    destroy_text(menu->press);
     free(menu->quit);
     free(menu->options);
     free(menu);

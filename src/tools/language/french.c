@@ -56,6 +56,7 @@ void set_texts_french(game_t *game)
     sfText_setString(game->assets->top_bar->menu2, FRENCH_MENU_2);
     sfText_setString(game->assets->top_bar->menu3, FRENCH_MENU_3);
     sfText_setString(game->assets->top_bar->menu4, FRENCH_MENU_4);
+    sfText_setString(game->assets->home_menu->press, FRENCH_PRESS_ENTER);
     set_texts_french_settings(game);
     set_texts_french_controls(game);
 }

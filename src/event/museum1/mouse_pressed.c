@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void museum1_mouse_pressed(game_t *game)
+void museum2_mouse_pressed(game_t *game)
 {
     appartment_t *appartment = game->assets->appartment;
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);

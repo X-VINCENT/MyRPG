@@ -37,11 +37,20 @@ int check_environnments(void)
     return error;
 }
 
+int check_message_box(void)
+{
+    int error = 0;
+
+    error += is_file(MESSAGE_BOX);
+    return error;
+}
+
 int check_images(void)
 {
     int error = 0;
 
     error += check_characters();
     error += check_environnments();
+    error += check_message_box();
     return error;
 }

@@ -71,7 +71,7 @@
         sfSprite **quit;
         sfSprite **options;
         sfSprite *title;
-        sfSprite *press;
+        sfText *press;
         int quit_state;
         int options_state;
         sfClock *button_clock;
@@ -254,6 +254,7 @@
     typedef struct musics {
         sfMusic *rat_transition;
         sfMusic *music_menu;
+        sfMusic *music_city;
     } musics_t;
 
     typedef struct sounds {
@@ -288,13 +289,13 @@
         sfTexture *home_menu_bg1;
         sfTexture *home_menu_bg2;
         sfTexture *home_menu_bg3;
-        sfTexture *home_menu_press;
         sfTexture *home_menu_title;
         sfTexture *settings_bg;
         sfTexture *transition_enter;
         sfTexture *transition_quit;
         sfTexture *buttons_1;
         sfTexture *gui;
+        sfTexture *message_box;
     } textures_t;
 
     typedef struct game {

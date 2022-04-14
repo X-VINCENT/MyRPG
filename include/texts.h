@@ -24,6 +24,10 @@
     #define ENGLISH_MENU_3 "Menu 3"
     #define ENGLISH_MENU_4 "Menu 4"
 
+    // Home
+
+    #define ENGLISH_PRESS_ENTER "PRESS ENTER TO CONTINUE"
+
     // Settings
     #define ENGLISH_SETTINGS "Settings"
 
@@ -69,6 +73,10 @@
     #define FRENCH_MENU_2 "Menu 2"
     #define FRENCH_MENU_3 "Menu 3"
     #define FRENCH_MENU_4 "Menu 4"
+
+    // Home
+
+    #define FRENCH_PRESS_ENTER "APPUYEZ SUR ENTRER POUR CONTINUER"
 
     // Settings
     #define FRENCH_SETTINGS "Parametres"
@@ -116,6 +124,10 @@
     #define GERMAN_MENU_3 "Menu 3"
     #define GERMAN_MENU_4 "Menu 4"
 
+    // Home
+
+    #define GERMAN_PRESS_ENTER "DRUCK ENTER UM FORTSETZEN"
+
     // Settings
     #define GERMAN_SETTINGS "Einstellungen"
 
@@ -161,6 +173,10 @@
     #define SPANISH_MENU_2 "Menu 2"
     #define SPANISH_MENU_3 "Menu 3"
     #define SPANISH_MENU_4 "Menu 4"
+
+    // Home
+
+    #define SPANISH_PRESS_ENTER "PRESIONA ENTER PARA CONTINUAR"
 
     // Settings
     #define SPANISH_SETTINGS "Configuraciones"
