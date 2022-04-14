@@ -7,20 +7,6 @@
 
 #include "rpg.h"
 
-void init_settings_base(pnj_t *pnj, float time_between_text)
-{
-    int random = 0;
-    int n = 0;
-
-    pnj->time_between_text = time_between_text;
-    pnj->display_the_text = false;
-    pnj->text_index_display = 0;
-    pnj->timer_display_text = sfClock_create();
-    pnj->timer_move = sfClock_create();
-    pnj->walk = sfClock_create();
-    pnj->text = true;
-}
-
 void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
 {
     int nbr_text = 2;
@@ -37,6 +23,20 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
         set_text_origin_middle_left(pnj->text_to_display[i]);
         sfText_setPosition(pnj->text_to_display[i], pos);
     }
+}
+
+void init_settings_base(pnj_t *pnj, float time_between_text)
+{
+    int random = 0;
+    int n = 0;
+
+    pnj->time_between_text = time_between_text;
+    pnj->display_the_text = false;
+    pnj->text_index_display = 0;
+    pnj->timer_display_text = sfClock_create();
+    pnj->timer_move = sfClock_create();
+    pnj->walk = sfClock_create();
+    pnj->text = true;
 }
 
 void init_pnj(game_t *game, pnj_t *pnj, sfTexture *texture, sfVector2f pos)
