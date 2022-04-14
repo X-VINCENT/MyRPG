@@ -19,7 +19,8 @@ void change_direction(game_t *game, int i, sfVector2f position)
         pnj->move_left_or_right = 1;
         sfClock_restart(pnj->walk);
     }
-    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->walk)) > pnj->change_t) {
+    if (sfTime_asSeconds(
+        sfClock_getElapsedTime(pnj->walk)) > pnj->change_t) {
         pnj->move_left_or_right = (pnj->move_left_or_right == 0) ? 1 : 0;
         sfClock_restart(pnj->walk);
     }
@@ -54,8 +55,27 @@ void move_pnj(game_t *game, int nbr_animated_pnj)
     }
 }
 
+void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
+{
+    int enter_touched = 0;
+
+    sfVector2f position = sfSprite_getPosition(game->assets->rat->idle_front);
+    sfVector2f position_box = sfSprite_getPosition(pnj->message_box);
+    sfVector2f position_text =
+        sfText_getPosition(pnj->text_to_display[pnj->text_index_display]);
+
+    position_box.x = position.x - 200;
+    position_box.y = position.y - 200;
+    position_text.x = position.x - 380;
+    position_text.y = position.y - 225;
+    sfText_setPosition(
+        pnj->text_to_display[pnj->text_index_display], position_text);
+    sfSprite_setPosition(pnj->message_box, position_box);
+}
+
 void display_pnj(game_t *game, pnj_t *pnj)
 {
+    int stop = 0;
     if (!pnj || !game || !pnj->sprite || !game->window)
         return;
     check_pnj_intersects(pnj, game);
@@ -64,6 +84,8 @@ void display_pnj(game_t *game, pnj_t *pnj)
         return;
     if (pnj->display_the_text == true
         && pnj->text_to_display[pnj->text_index_display]) {
+        change_text_and_box_message_pos(game, pnj);
+        sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
     }

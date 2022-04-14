@@ -24,6 +24,7 @@
         sfText **text_to_display;
         sfClock *timer_display_text;
         sfClock *walk;
+        sfSprite *message_box;
         float time_between_text;
         int move_left_or_right;
         int text_index_display;

@@ -14,7 +14,7 @@ void init_settings_base(pnj_t *pnj, float time_between_text, bool text)
     int n = 0;
     time_t t;
 
-    pnj->time_between_text = 2;
+    pnj->time_between_text = time_between_text;
     pnj->display_the_text = false;
     pnj->text_index_display = 0;
     pnj->timer_display_text = sfClock_create();
@@ -30,13 +30,13 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
     pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text);
     pnj->text_to_display[nbr_text] = NULL;
     pnj->text_to_display[0] = create_text(FONT_TEXT_PNJ, sfWhite,
-        30, first_message);
+        15, first_message);
     pnj->text_to_display[1] = create_text(FONT_TEXT_PNJ, sfWhite,
-        30, "You are a fucking\n\
-        fucking rat !\n");
+        15, "You are a fucking");
     pos.y -= 25;
+    pos.x -= 185;
     for (int i = 0; pnj->text_to_display[i] != NULL; i++) {
-        set_text_origin(pnj->text_to_display[i]);
+        set_text_origin_middle_left(pnj->text_to_display[i]);
         sfText_setPosition(pnj->text_to_display[i], pos);
     }
 }
@@ -47,8 +47,13 @@ void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *first_mess, bool text,
     pnj->sprite = create_sprite(game->textures->black_pnj,
         (sfIntRect){0, 30, 45, 65}, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
+    pos.y -= 200;
+    pos.x -= 210;
+    pnj->message_box = create_sprite(game->textures->message_box,
+        (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
+    set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
     init_text_pnj(pnj, pos, first_mess);
-    init_settings_base(pnj, 2, text);
+    init_settings_base(pnj, 5, text);
 }
 
 void citizens_png(game_t *game)
@@ -85,7 +90,7 @@ void init_struct_pnjs(game_t *game)
     init_black_pnj(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1900},
         "Hello, I'm Jacques", true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1900},
-        "Hello, I'm Harry\nthe brother of Jacques", true, game);
+        "Hello, I'm Harry the brother of Jacques", true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1900},
         "Hello, I'm Charles the dad of Harry !", true, game);
     citizens_png(game);
