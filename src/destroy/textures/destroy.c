@@ -13,7 +13,6 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->home_menu_bg1);
     sfTexture_destroy(textures->home_menu_bg2);
     sfTexture_destroy(textures->home_menu_bg3);
-    sfTexture_destroy(textures->home_menu_press);
     sfTexture_destroy(textures->home_menu_title);
     sfTexture_destroy(textures->settings_bg);
     sfTexture_destroy(textures->transition_enter);

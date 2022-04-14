@@ -288,7 +288,6 @@
         sfTexture *home_menu_bg1;
         sfTexture *home_menu_bg2;
         sfTexture *home_menu_bg3;
-        sfTexture *home_menu_press;
         sfTexture *home_menu_title;
         sfTexture *settings_bg;
         sfTexture *transition_enter;
