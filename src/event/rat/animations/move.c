@@ -75,18 +75,14 @@ void move_rat_right(game_t *game)
     sfClock_restart(rat->latency_status_clock);
 }
 
-void move_rat(game_t *game)
+void move_rat_once(game_t *game)
 {
-    sfEvent *event = game->event->event;
-    rat_t *rat = game->assets->rat;
-    sfKeyCode code = event->key.code;
-
     if (sfKeyboard_isKeyPressed(game->keys[UP]))
-        move_rat_up(game);
+        return move_rat_up(game);
     if (sfKeyboard_isKeyPressed(game->keys[DOWN]))
-        move_rat_down(game);
+        return move_rat_down(game);
     if (sfKeyboard_isKeyPressed(game->keys[LEFT]))
-        move_rat_left(game);
+        return move_rat_left(game);
     if (sfKeyboard_isKeyPressed(game->keys[RIGHT]))
-        move_rat_right(game);
+        return move_rat_right(game);
 }
