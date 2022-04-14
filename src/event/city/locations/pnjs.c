@@ -9,9 +9,7 @@
 
 void change_bool_pnj_text(pnj_t *pnj)
 {
-    if (sfTime_asSeconds(
-        sfClock_getElapsedTime(pnj->timer_display_text))
-        > pnj->time_between_text) {
+    if (time_elapsed(pnj->timer_display_text) > pnj->time_between_text) {
         pnj->text_index_display += 1;
         sfClock_restart(pnj->timer_display_text);
     }
