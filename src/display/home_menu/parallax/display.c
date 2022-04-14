@@ -15,6 +15,6 @@ void display_parallax(game_t *game)
     sfRenderWindow_drawSprite(game->window, parallax->bg0, NULL);
     sfRenderWindow_drawSprite(game->window, parallax->bg1, NULL);
     sfRenderWindow_drawSprite(game->window, parallax->bg2, NULL);
-    sfRenderWindow_drawSprite(game->window, home->press, NULL);
+    sfRenderWindow_drawText(game->window, home->press, NULL);
     sfRenderWindow_drawSprite(game->window, parallax->bg3, NULL);
 }
