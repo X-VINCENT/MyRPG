@@ -61,6 +61,6 @@ void init_top_bar(game_t *game)
     game->assets->top_bar = malloc(sizeof(top_bar_t));
     init_texts_top_bar(game);
     init_sprites_top_bar(game);
-    bar->dot = create_sprite(gui, r_dot, p_dot, scale);
+    game->assets->top_bar->dot = create_sprite(gui, r_dot, p_dot, scale);
     game->assets->top_bar->clock = sfClock_create();
 }
