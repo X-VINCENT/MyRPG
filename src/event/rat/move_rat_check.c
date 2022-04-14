@@ -10,7 +10,7 @@
 void check_locations_rat_move(game_t *game)
 {
     if (game->stage == CITY_STAGE)
-        city_locations(game);(game);
+        city_locations(game);
     if (game->stage == APPARTMENT_STAGE)
         appartment_locations(game);
     if (game->stage == ICE_STAGE)

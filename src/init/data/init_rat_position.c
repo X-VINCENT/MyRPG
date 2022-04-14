@@ -14,11 +14,6 @@ void init_file_rat_position(game_t *game)
 
     if (!buff)
         return;
-    //à faire
-    /*if (my_strlen(buff) == 0) {
-        file_ptr = fopen("data/.rat_position", "w");
-        fput
-    }*/
     my_putstr(buff);
     free(buff);
     return;

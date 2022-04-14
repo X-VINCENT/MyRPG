@@ -7,6 +7,12 @@
 
 #include "rpg.h"
 
+void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset)
+{
+    (*pos).x += offset;
+    (*rect).left += offset;
+}
+
 void init_texts_settings_2(game_t *game)
 {
     settings_t *settings = game->assets->settings;
