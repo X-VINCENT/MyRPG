@@ -37,11 +37,30 @@ int check_environnments(void)
     return error;
 }
 
-int check_message_box(void)
+int check_menus(void)
 {
     int error = 0;
 
+    error += is_file(HOME_BG0);
+    error += is_file(HOME_BG1);
+    error += is_file(HOME_BG2);
+    error += is_file(HOME_BG3);
+    error += is_file(HOME_TITLE);
+    error += is_file(SETTINGS_BG);
+    error += is_file(RAT_ENTER);
+    error += is_file(RAT_QUIT);
+    return error;
+}
+
+int check_objects(void)
+{
+    int error = 0;
+
+    error += is_file(BUTTONS_1);
+    error += is_file(SLOT_PATH_OFF);
+    error += is_file(SLOT_PATH_ON);
     error += is_file(MESSAGE_BOX);
+    error += is_file(GUI);
     return error;
 }
 
@@ -51,6 +70,9 @@ int check_images(void)
 
     error += check_characters();
     error += check_environnments();
-    error += check_message_box();
+    error += is_file(CURSOR);
+    error += is_file(WINDOW_ICON);
+    error += check_menus();
+    error += check_objects();
     return error;
 }
