@@ -14,13 +14,13 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/city/destroy.c                \
-								destroy/assets/clothe/destroy.c              \
+								destroy/assets/clothe/destroy.c 			 \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
-								destroy/assets/ice_shop/destroy.c            \
-								destroy/assets/market/destroy.c              \
-								destroy/assets/museum1/destroy.c             \
-								destroy/assets/museum2/destroy.c             \
+								destroy/assets/ice_shop/destroy.c 			 \
+								destroy/assets/market/destroy.c 			 \
+								destroy/assets/museum1/destroy.c 			 \
+								destroy/assets/museum2/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
@@ -65,15 +65,25 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/key_pressed.c               \
 								event/appartment/mouse_moved.c               \
 								event/appartment/mouse_pressed.c             \
-								event/inventory/key_pressed.c                \
+								event/inventory/key_pressed.c				 \
 								event/city/locations/appartment.c            \
 								event/city/locations/pnjs.c                  \
-								event/city/locations/clothe_shop.c           \
+								event/city/locations/clothe_shop.c 			 \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
 								event/city/locations/market.c                \
 								event/city/locations/museum1.c 				 \
-								event/city/locations/museum.c                \
+								event/city/key_pressed.c                     \
+								event/city/mouse_moved.c                     \
+								event/city/mouse_pressed.c                   \
+								event/clothe/locations/door.c 				 \
+								event/clothe/locations/locations.c 			 \
+								event/clothe/key_pressed.c 					 \
+								event/clothe/mouse_moved.c 					 \
+								event/clothe/mouse_pressed.c 				 \
+								event/home_menu/key_pressed.c                \
+								event/home_menu/mouse_moved.c                \
+								event/home_menu/mouse_pressed.c              \
 								event/market/locations/door.c 				 \
 								event/market/locations/locations.c 			 \
 								event/market/key_pressed.c 		             \
