@@ -108,13 +108,15 @@
     // Buttons
     #define BUTTONS_1 "assets/images/objects/buttons/buttons_1.png"
 
+    // Inventory
+    #define SLOT_PATH_ON "assets/images/objects/inventory/slot_on.png"
+    #define SLOT_PATH_OFF "assets/images/objects/inventory/slot_off.png"
+
+    // Message Box
+    #define MESSAGE_BOX "assets/images/objects/message_box/boxs.png"
+
     // GUI
     #define GUI "assets/images/objects/gui.png"
 //////////////////////////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////////////////////
-// message_box
-    #define MESSAGE_BOX "assets/images/message_box/message_box.png"
 
 #endif /* !ASSETS_H_ */
