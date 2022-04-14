@@ -16,9 +16,13 @@ void set_rats_position(game_t *game, sfVector2f position)
     sfSprite_setPosition(rat->idle_back, position);
     sfSprite_setPosition(rat->idle_left, position);
     sfSprite_setPosition(rat->idle_right, position);
+    sfSprite_setPosition(rat->idle_back_left, position);
+    sfSprite_setPosition(rat->idle_back_right, position);
     sfSprite_setPosition(rat->movement_up, position);
     sfSprite_setPosition(rat->movement_down, position);
     sfSprite_setPosition(rat->movement_left, position);
     sfSprite_setPosition(rat->movement_right, position);
+    sfSprite_setPosition(rat->movement_up_left, position);
+    sfSprite_setPosition(rat->movement_up_right, position);
     sfSprite_setPosition(rat->shadow, shadow_position);
 }

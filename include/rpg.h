@@ -112,6 +112,7 @@
         #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
         #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 342}
         #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f){47, 793}
+
     // Idle
         #define RAT_IDLE_FRONT_OFFSET 18
         #define RAT_IDLE_FRONT_MAX 94
@@ -119,6 +120,9 @@
         #define RAT_IDLE_BACK_MAX 94
         #define RAT_IDLE_SIDE_OFFSET 27
         #define RAT_IDLE_SIDE_MAX 130
+        #define RAT_IDLE_DIAGONAL_OFFSET 20
+        #define RAT_IDLE_DIAGONAL_MAX 102
+
     // Movement
         #define RAT_UP_OFFSET 20
         #define RAT_UP_MAX 135
@@ -126,6 +130,8 @@
         #define RAT_DOWN_MAX 140
         #define RAT_SIDE_OFFSET 27
         #define RAT_SIDE_MAX 177
+        #define RAT_DIAGONAL_OFFSET 23
+        #define RAT_DIAGONAL_MAX 156
 //////////////////////////////////////////////////////////////////////////////
 
 
