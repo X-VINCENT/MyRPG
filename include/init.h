@@ -83,6 +83,8 @@
     // Pnj
         // init.c
         void init_struct_pnjs(game_t *game);
+        void citizens_png(game_t *game);
+        void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
     
     // Data
         //rat_position
