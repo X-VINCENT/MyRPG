@@ -120,6 +120,23 @@
         // mouse_pressed.c
         void market_mouse_pressed(game_t *game);
 
+// Museum1
+    // Locations
+        //door.c
+        void location_door_museum1(game_t *game);
+
+        //locations.c
+        void museum1_locations(game_t *game);
+
+        //key_pressed.c
+        void museum1_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void museum1_mouse_moved(game_t *game);
+
+        // mouse_pressed.c
+        void museum1_mouse_pressed(game_t *game);
+
 // Inventory
     // key_pressed.c
     void inventory_key_pressed(game_t *game);
@@ -127,28 +144,29 @@
 // Rat
     // Animations
         // Check
-            // appartment.c
-            int rat_can_move_left_appartment(game_t *game);
-            int rat_can_move_right_appartment(game_t *game);
-            int rat_can_move_up_appartment(game_t *game);
-            int rat_can_move_down_appartment(game_t *game);
-
             // check.c
-            int rat_can_move_left(game_t *game);
-            int rat_can_move_right(game_t *game);
             int rat_can_move_up(game_t *game);
             int rat_can_move_down(game_t *game);
+            int rat_can_move_left(game_t *game);
+            int rat_can_move_right(game_t *game);
 
-            // city.c
-            int rat_can_move_left_city(game_t *game);
-            int rat_can_move_right_city(game_t *game);
-            int rat_can_move_up_city(game_t *game);
-            int rat_can_move_down_city(game_t *game);
+            // check_2.c
+            int rat_can_move_up_left(game_t *game);
+            int rat_can_move_up_right(game_t *game);
+            int rat_can_move_down_left(game_t *game);
+            int rat_can_move_down_right(game_t *game);
+
+            // rat_collision.c
+            int check_rat_collision(
+                game_t *game, sfImage *hitbox, int offset_x, int offset_y);
 
         // animate.c
         void animate_rats(game_t *game);
 
         // move.c
+        void move_rat_once(game_t *game);
+
+        // move2.c
         void move_rat(game_t *game);
 
         // position.c
@@ -173,6 +191,16 @@
 
         // mouse_pressed.c
         void settings_audio_mouse_pressed(game_t *game);
+
+    // Choose
+        // key_pressed.c
+        void settings_key_pressed_choose_key(game_t *game);
+
+        // mouse_moved.c
+        void settings_mouse_moved_choose_key(game_t *game);
+
+        // mouse_pressed.c
+        void settings_mouse_pressed_choose_key(game_t *game);
 
     // Controls
         // key_pressed.c

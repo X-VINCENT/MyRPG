@@ -20,11 +20,12 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 
 void city_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_menu);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
-    pnjs_display_city(game, 50);
+    pnjs_display_city(game, 25);
     check_rat_key_pressed(game);
 }

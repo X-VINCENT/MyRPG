@@ -7,6 +7,16 @@
 
 #include "rpg.h"
 
+void display_settings_controls_choose_key(game_t *game)
+{
+    settings_choose_key_t *s_choose_key =
+        game->assets->settings->controls->choose_key;
+
+    sfRenderWindow_drawSprite(game->window, s_choose_key->bg_rect, NULL);
+    sfRenderWindow_drawText(game->window, s_choose_key->text, NULL);
+    sfRenderWindow_drawText(game->window, s_choose_key->quit, NULL);
+}
+
 void display_settings_controls_scrolling_bar(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
@@ -28,27 +38,18 @@ void display_settings_controls_keys(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    display_key(game->window, s_controls->up);
-    display_key(game->window, s_controls->down);
-    display_key(game->window, s_controls->left);
-    display_key(game->window, s_controls->right);
-    display_key(game->window, s_controls->jump);
-    display_key(game->window, s_controls->dodge);
-    display_key(game->window, s_controls->attack);
-    display_key(game->window, s_controls->interact);
-    display_key(game->window, s_controls->zoom_in);
-    display_key(game->window, s_controls->zoom_out);
-    display_key(game->window, s_controls->rotate_left);
-    display_key(game->window, s_controls->rotate_right);
-    display_key(game->window, s_controls->reset_view);
-    display_key(game->window, s_controls->escape);
+    for (int idx = 0; idx != NB_KEYS; idx += 1)
+        display_key(game->window, s_controls->keys[idx]);
 }
 
 void display_settings_controls(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    settings_controls_scrolling_bar_event(game);
+    if (s_controls->key_selected == -1)
+        settings_controls_scrolling_bar_event(game);
     display_settings_controls_scrolling_bar(game);
     display_settings_controls_keys(game);
+    if (s_controls->key_selected >= 0)
+        display_settings_controls_choose_key(game);
 }

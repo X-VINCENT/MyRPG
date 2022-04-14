@@ -57,6 +57,9 @@
         // audio.c
         void init_settings_audio(game_t *game);
 
+        // controls_choose_key.c
+        void init_settings_controls_choose_key(game_t *game);
+
         // controls.c
         void init_settings_controls(game_t *game);
 
@@ -80,6 +83,10 @@
     // Pnj
         // init.c
         void init_struct_pnjs(game_t *game);
+    
+    // Data
+        //rat_position
+        void init_file_rat_position(game_t *game);
 
     // init.c
     void init_assets(game_t *game);

@@ -52,40 +52,42 @@ void init_settings_controls_keys_2(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    s_controls->zoom_in = create_key(game, 1065, ENGLISH_ZOOM_IN,
-        get_key_name(game->keys->zoom_in));
-    s_controls->zoom_out = create_key(game, 1165, ENGLISH_ZOOM_OUT,
-        get_key_name(game->keys->zoom_out));
-    s_controls->rotate_left = create_key(game, 1265, ENGLISH_ROTATE_LEFT,
-        get_key_name(game->keys->rotate_left));
-    s_controls->rotate_right = create_key(game, 1365, ENGLISH_ROTATE_RIGHT,
-        get_key_name(game->keys->rotate_right));
-    s_controls->reset_view = create_key(game, 1465, ENGLISH_RESET_VIEW,
-        get_key_name(game->keys->reset_view));
-    s_controls->escape = create_key(game, 1565, ENGLISH_ESCAPE,
-        get_key_name(game->keys->escape));
+    s_controls->keys[ZOOM_IN] = create_key(game, 1065,
+        ENGLISH_ZOOM_IN, get_key_name(game->keys[ZOOM_IN]));
+    s_controls->keys[ZOOM_OUT] = create_key(game, 1165,
+        ENGLISH_ZOOM_OUT, get_key_name(game->keys[ZOOM_OUT]));
+    s_controls->keys[ROTATE_LEFT] = create_key(game, 1265,
+        ENGLISH_ROTATE_LEFT, get_key_name(game->keys[ROTATE_LEFT]));
+    s_controls->keys[ROTATE_RIGHT] = create_key(game, 1365,
+        ENGLISH_ROTATE_RIGHT, get_key_name(game->keys[ROTATE_RIGHT]));
+    s_controls->keys[RESET_VIEW] = create_key(game, 1465,
+        ENGLISH_RESET_VIEW, get_key_name(game->keys[RESET_VIEW]));
+    s_controls->keys[ESCAPE] = create_key(game, 1565,
+        ENGLISH_ESCAPE, get_key_name(game->keys[ESCAPE]));
 }
 
 void init_settings_controls_keys(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
-    s_controls->up = create_key(game, 265, ENGLISH_UP,
-        get_key_name(game->keys->up));
-    s_controls->down = create_key(game, 365, ENGLISH_DOWN,
-        get_key_name(game->keys->down));
-    s_controls->left = create_key(game, 465, ENGLISH_LEFT,
-        get_key_name(game->keys->left));
-    s_controls->right = create_key(game, 565, ENGLISH_RIGHT,
-        get_key_name(game->keys->right));
-    s_controls->jump = create_key(game, 665, ENGLISH_JUMP,
-        get_key_name(game->keys->up));
-    s_controls->dodge = create_key(game, 765, ENGLISH_DODGE,
-        get_key_name(game->keys->down));
-    s_controls->attack = create_key(game, 865, ENGLISH_ATTACK,
-        get_key_name(game->keys->left));
-    s_controls->interact = create_key(game, 965, ENGLISH_INTERACT,
-        get_key_name(game->keys->right));
+    s_controls->keys = malloc(sizeof(settings_key_t *) * NB_KEYS + 1);
+    s_controls->keys[NB_KEYS] = NULL;
+    s_controls->keys[UP] = create_key(game, 265, ENGLISH_UP,
+        get_key_name(game->keys[UP]));
+    s_controls->keys[DOWN] = create_key(game, 365, ENGLISH_DOWN,
+        get_key_name(game->keys[DOWN]));
+    s_controls->keys[LEFT] = create_key(game, 465, ENGLISH_LEFT,
+        get_key_name(game->keys[LEFT]));
+    s_controls->keys[RIGHT] = create_key(game, 565, ENGLISH_RIGHT,
+        get_key_name(game->keys[RIGHT]));
+    s_controls->keys[JUMP] = create_key(game, 665, ENGLISH_JUMP,
+        get_key_name(game->keys[JUMP]));
+    s_controls->keys[DODGE] = create_key(game, 765, ENGLISH_DODGE,
+        get_key_name(game->keys[DODGE]));
+    s_controls->keys[ATTACK] = create_key(game, 865, ENGLISH_ATTACK,
+        get_key_name(game->keys[ATTACK]));
+    s_controls->keys[INTERACT] = create_key(game, 965, ENGLISH_INTERACT,
+        get_key_name(game->keys[INTERACT]));
     init_settings_controls_keys_2(game);
 }
 
@@ -93,8 +95,10 @@ void init_settings_controls(game_t *game)
 {
     game->assets->settings->controls = malloc(sizeof(settings_controls_t));
 
+    init_settings_controls_choose_key(game);
     init_settings_controls_scrolling_bar(game);
     init_settings_controls_keys(game);
     game->assets->settings->controls->scrolling_clock = sfClock_create();
     game->assets->settings->controls->clock = sfClock_create();
+    game->assets->settings->controls->key_selected = -1;
 }

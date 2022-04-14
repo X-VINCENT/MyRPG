@@ -12,13 +12,13 @@ void settings_navigate_menus(game_t *game)
     settings_t *settings = game->assets->settings;
     sfEvent *event = game->event->event;
 
-    if (event->key.code == game->keys->down) {
+    if (event->key.code == game->keys[DOWN]) {
         if (settings->current == 3)
             settings->current = 0;
         else
             settings->current += 1;
     }
-    if (event->key.code == game->keys->up) {
+    if (event->key.code == game->keys[UP]) {
         if (settings->current == 0)
             settings->current = 3;
         else
@@ -31,6 +31,10 @@ void settings_key_pressed(game_t *game)
     settings_t *settings = game->assets->settings;
     sfEvent *event = game->event->event;
 
+    if (settings->controls->key_selected >= 0) {
+        settings_key_pressed_choose_key(game);
+        return;
+    }
     settings_navigate_menus(game);
     if (settings->current == SETTINGS_STAGE_GAME)
         settings_game_key_pressed(game);

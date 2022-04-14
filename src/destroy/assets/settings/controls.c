@@ -7,6 +7,14 @@
 
 #include "rpg.h"
 
+void destroy_settings_controls_choose_key(settings_choose_key_t *s_choose_key)
+{
+    destroy_sprite(s_choose_key->bg_rect);
+    destroy_text(s_choose_key->text);
+    destroy_text(s_choose_key->quit);
+    free(s_choose_key);
+}
+
 void destroy_key(settings_key_t *s_key)
 {
     destroy_text(s_key->title);
@@ -24,24 +32,14 @@ void destroy_settings_controls_scrolling_bar(settings_controls_t *s_controls)
 
 void destroy_settings_controls_keys(settings_controls_t *s_controls)
 {
-    destroy_key(s_controls->up);
-    destroy_key(s_controls->down);
-    destroy_key(s_controls->left);
-    destroy_key(s_controls->right);
-    destroy_key(s_controls->jump);
-    destroy_key(s_controls->dodge);
-    destroy_key(s_controls->attack);
-    destroy_key(s_controls->interact);
-    destroy_key(s_controls->zoom_in);
-    destroy_key(s_controls->zoom_out);
-    destroy_key(s_controls->rotate_left);
-    destroy_key(s_controls->rotate_right);
-    destroy_key(s_controls->reset_view);
-    destroy_key(s_controls->escape);
+    for (int idx = 0; s_controls->keys[idx] != NULL; idx += 1)
+        destroy_key(s_controls->keys[idx]);
+    free(s_controls->keys);
 }
 
 void destroy_settings_controls(settings_controls_t *s_controls)
 {
+    destroy_settings_controls_choose_key(s_controls->choose_key);
     destroy_settings_controls_scrolling_bar(s_controls);
     destroy_settings_controls_keys(s_controls);
     sfClock_destroy(s_controls->scrolling_clock);
