@@ -6,22 +6,6 @@
 */
 
 #include "rpg.h"
-#include <time.h>
-
-void init_settings_base(pnj_t *pnj, float time_between_text, bool text)
-{
-    int random = 0;
-    int n = 0;
-    time_t t;
-
-    pnj->time_between_text = time_between_text;
-    pnj->display_the_text = false;
-    pnj->text_index_display = 0;
-    pnj->timer_display_text = sfClock_create();
-    pnj->timer_move = sfClock_create();
-    pnj->walk = sfClock_create();
-    pnj->text = text;
-}
 
 void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
 {
@@ -41,10 +25,23 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
     }
 }
 
-void init_black_pnj(pnj_t *pnj, sfVector2f pos, bool text,
-                        game_t *game)
+void init_settings_base(pnj_t *pnj, float time_between_text)
 {
-    pnj->sprite = create_sprite(game->textures->black_pnj,
+    int random = 0;
+    int n = 0;
+
+    pnj->time_between_text = time_between_text;
+    pnj->display_the_text = false;
+    pnj->text_index_display = 0;
+    pnj->timer_display_text = sfClock_create();
+    pnj->timer_move = sfClock_create();
+    pnj->walk = sfClock_create();
+    pnj->text = true;
+}
+
+void init_pnj(game_t *game, pnj_t *pnj, sfTexture *texture, sfVector2f pos)
+{
+    pnj->sprite = create_sprite(texture,
         (sfIntRect){0, 30, 45, 65}, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
     pos.y -= 200;
@@ -53,28 +50,7 @@ void init_black_pnj(pnj_t *pnj, sfVector2f pos, bool text,
         (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
     init_text_pnj(pnj, pos, "un deux trois soleil");
-    init_settings_base(pnj, 5, text);
-}
-
-void citizens_png(game_t *game)
-{
-    assets_t *assets = game->assets;
-    sfVector2f default_pnj_position;
-    int random = 0;
-    int n = 0;
-    time_t t;
-
-    srand((unsigned) time(&t));
-    for (int i = PNJ_BLACK_THREE + 1; i < PNJ_NBR; i++) {
-        default_pnj_position.x = rand() % 2500;
-        default_pnj_position.y = 1700 + rand() % (1740 + 1 - 1700);
-        assets->pnj[i]->speed = rand() % (3 + 1 - 1);
-        if (assets->pnj[i]->speed == 0)
-            assets->pnj[i]->speed += 1;
-        assets->pnj[i]->move_left_or_right = rand() % (1 + 1 - 0);
-        assets->pnj[i]->change_t = rand() % (60 + 1 - 10);
-        init_black_pnj(assets->pnj[i], default_pnj_position, false, game);
-    }
+    init_settings_base(pnj, 5);
 }
 
 void init_struct_pnjs(game_t *game)
@@ -87,11 +63,11 @@ void init_struct_pnjs(game_t *game)
     for (int i = 0; i < PNJ_NBR; i++)
         assets->pnj[i] = malloc(sizeof(pnj_t));
     assets->pnj[PNJ_NBR] = NULL;
-    init_black_pnj(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1900},
-        true, game);
-    init_black_pnj(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1900},
-        true, game);
-    init_black_pnj(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1900},
-        true, game);
+    init_pnj(game, assets->pnj[PNJ_BLACK],
+        game->textures->black_pnj, (sfVector2f){2324, 1900});
+    init_pnj(game, assets->pnj[PNJ_BLACK_TWO],
+        game->textures->black_pnj, (sfVector2f){2280, 1900});
+    init_pnj(game, assets->pnj[PNJ_BLACK_THREE],
+        game->textures->black_pnj, (sfVector2f){2400, 1900});
     citizens_png(game);
 }
