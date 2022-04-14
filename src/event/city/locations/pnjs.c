@@ -9,9 +9,7 @@
 
 void change_bool_pnj_text(pnj_t *pnj)
 {
-    if (sfTime_asSeconds(
-        sfClock_getElapsedTime(pnj->timer_display_text))
-        > pnj->time_between_text) {
+    if (time_elapsed(pnj->timer_display_text) > pnj->time_between_text) {
         pnj->text_index_display += 1;
         sfClock_restart(pnj->timer_display_text);
     }
@@ -42,7 +40,7 @@ void check_pnj_intersects(pnj_t *pnj, game_t *game)
     pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
     if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
         pnj->display_the_text = true;
-        if (game->event->event->key.code == sfKeyEnter && stop == 0) {
+        if (game->event->event->key.code == sfKeyReturn && stop == 0) {
             game->event->event->key.code = -1;
             skip_text(pnj);
             stop = 1;

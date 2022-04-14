@@ -7,6 +7,12 @@
 
 #include "rpg.h"
 
+void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset)
+{
+    (*pos).x += offset;
+    (*rect).left += offset;
+}
+
 void init_settings_audio_music_bar(game_t *game)
 {
     settings_audio_t *s_audio = game->assets->settings->audio;
@@ -26,8 +32,7 @@ void init_settings_audio_music_bar(game_t *game)
     for (int idx = 0; idx != 10; idx += 1) {
         s_audio->music_bar[idx] = create_sprite(
             game->textures->gui, r_bar, p_bar, scale);
-        p_bar.x += 50;
-        r_bar.left += 50;
+        move_rect_pos_offset(&p_bar, &r_bar, 50);
     }
     s_audio->music_bar[10] = NULL;
 }
@@ -69,8 +74,7 @@ void init_settings_audio_effects_bar(game_t *game)
     for (int idx = 0; idx != 10; idx += 1) {
         s_audio->effects_bar[idx] = create_sprite(
             game->textures->gui, r_bar, p_bar, scale);
-        p_bar.x += 50;
-        r_bar.left += 50;
+        move_rect_pos_offset(&p_bar, &r_bar, 50);
     }
     s_audio->effects_bar[10] = NULL;
 }
