@@ -17,20 +17,8 @@ void move_key(settings_key_t *s_key, int offset)
 
 void move_keys(settings_controls_t *s_controls, int offset)
 {
-    move_key(s_controls->up, offset);
-    move_key(s_controls->down, offset);
-    move_key(s_controls->left, offset);
-    move_key(s_controls->right, offset);
-    move_key(s_controls->jump, offset);
-    move_key(s_controls->dodge, offset);
-    move_key(s_controls->attack, offset);
-    move_key(s_controls->interact, offset);
-    move_key(s_controls->zoom_in, offset);
-    move_key(s_controls->zoom_out, offset);
-    move_key(s_controls->rotate_left, offset);
-    move_key(s_controls->rotate_right, offset);
-    move_key(s_controls->reset_view, offset);
-    move_key(s_controls->escape, offset);
+    for (int idx = 0; idx != NB_KEYS; idx += 1)
+        move_key(s_controls->keys[idx], offset);
 }
 
 void move_controls_up(game_t *game)
@@ -63,9 +51,9 @@ void settings_controls_scrolling_bar_event(game_t *game)
         game->window, mouse, NULL);
 
     if (time_elapsed(s_controls->scrolling_clock) > 0.01) {
-        if (sfKeyboard_isKeyPressed(game->keys->zoom_in))
+        if (sfKeyboard_isKeyPressed(game->keys[ZOOM_IN]))
             move_controls_up(game);
-        else if (sfKeyboard_isKeyPressed(game->keys->zoom_out))
+        else if (sfKeyboard_isKeyPressed(game->keys[ZOOM_OUT]))
             move_controls_down(game);
         sfClock_restart(s_controls->scrolling_clock);
     }

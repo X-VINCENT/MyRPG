@@ -8,7 +8,8 @@
 #ifndef DATA_H_
     #define DATA_H_
 
-    #include "csfml.h"
+    #include "rpg.h"
+    #include "inventory.h"
     #include "pnj.h"
 
     typedef struct parallax {
@@ -81,10 +82,14 @@
         sfSprite *idle_back;
         sfSprite *idle_left;
         sfSprite *idle_right;
+        sfSprite *idle_back_left;
+        sfSprite *idle_back_right;
         sfSprite *movement_up;
         sfSprite *movement_down;
         sfSprite *movement_left;
         sfSprite *movement_right;
+        sfSprite *movement_up_left;
+        sfSprite *movement_up_right;
         sfSprite *shadow;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
@@ -148,10 +153,29 @@
         sfSprite *reset;
     } settings_key_t;
 
+    enum keys_name {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT,
+        JUMP,
+        DODGE,
+        ATTACK,
+        INTERACT,
+        ZOOM_IN,
+        ZOOM_OUT,
+        ROTATE_LEFT,
+        ROTATE_RIGHT,
+        RESET_VIEW,
+        ESCAPE,
+        NB_KEYS
+    };
+
     typedef struct settings_controls {
         settings_choose_key_t *choose_key;
         sfSprite *scrolling_bar;
         sfSprite *scrolling_bar_inside;
+        settings_key_t **keys;
         settings_key_t *up;
         settings_key_t *down;
         settings_key_t *left;
@@ -227,23 +251,6 @@
         sfSound *click;
     } event_t;
 
-    typedef struct keys {
-        int up;
-        int down;
-        int left;
-        int right;
-        int jump;
-        int dodge;
-        int attack;
-        int interact;
-        int zoom_in;
-        int zoom_out;
-        int rotate_left;
-        int rotate_right;
-        int reset_view;
-        int escape;
-    } keys_t;
-
     typedef struct musics {
         sfMusic *rat_transition;
         sfMusic *music_menu;
@@ -297,7 +304,8 @@
         event_t *event;
         assets_t *assets;
         audio_t *audio;
-        keys_t *keys;
+        int *keys;
+        int *default_keys;
         inventory_t *inventory;
         int stage;
         int last_stage;

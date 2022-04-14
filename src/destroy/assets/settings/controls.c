@@ -32,20 +32,9 @@ void destroy_settings_controls_scrolling_bar(settings_controls_t *s_controls)
 
 void destroy_settings_controls_keys(settings_controls_t *s_controls)
 {
-    destroy_key(s_controls->up);
-    destroy_key(s_controls->down);
-    destroy_key(s_controls->left);
-    destroy_key(s_controls->right);
-    destroy_key(s_controls->jump);
-    destroy_key(s_controls->dodge);
-    destroy_key(s_controls->attack);
-    destroy_key(s_controls->interact);
-    destroy_key(s_controls->zoom_in);
-    destroy_key(s_controls->zoom_out);
-    destroy_key(s_controls->rotate_left);
-    destroy_key(s_controls->rotate_right);
-    destroy_key(s_controls->reset_view);
-    destroy_key(s_controls->escape);
+    for (int idx = 0; s_controls->keys[idx] != NULL; idx += 1)
+        destroy_key(s_controls->keys[idx]);
+    free(s_controls->keys);
 }
 
 void destroy_settings_controls(settings_controls_t *s_controls)

@@ -33,10 +33,6 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
-								errors/check_env.c                           \
-								errors/check_file.c                          \
-								errors/check_pictures.c                      \
-								errors/help.c                                \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
@@ -56,6 +52,14 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/graphics.c                  \
 								display/settings/game.c                      \
 								display/top_bar/display.c                    \
+								errors/check_assets.c                        \
+								errors/check_audio.c                         \
+								errors/check_env.c                           \
+								errors/check_file.c                          \
+								errors/check_fonts.c                         \
+								errors/check_images.c                        \
+								errors/check_data.c                          \
+								errors/help.c                                \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
@@ -95,11 +99,12 @@ SRC                 =           $(addprefix src/,                            \
 								event/ice_cream_shop/key_pressed.c           \
 								event/ice_cream_shop/mouse_moved.c           \
 								event/ice_cream_shop/mouse_pressed.c         \
-								event/rat/animations/check/appartment.c      \
 								event/rat/animations/check/check.c           \
-								event/rat/animations/check/city.c            \
+								event/rat/animations/check/check2.c          \
+								event/rat/animations/check/collision.c       \
 								event/rat/animations/animate.c               \
 								event/rat/animations/move.c                  \
+								event/rat/animations/move2.c                 \
 								event/rat/animations/position.c              \
 								event/rat/mouse_moved.c                      \
 								event/rat/mouse_pressed.c                    \
@@ -132,6 +137,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_1.c                              \
 								event/event_2.c					             \
 								event/event_3.c					             \
+								init/data/init_rat_position.c                \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
