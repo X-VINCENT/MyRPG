@@ -14,13 +14,13 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/city/destroy.c                \
-								destroy/assets/clothe/destroy.c 			 \
+								destroy/assets/clothe/destroy.c              \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
-								destroy/assets/ice_shop/destroy.c 			 \
-								destroy/assets/market/destroy.c 			 \
-								destroy/assets/museum1/destroy.c 			 \
-								destroy/assets/museum2/destroy.c 			 \
+								destroy/assets/ice_shop/destroy.c            \
+								destroy/assets/market/destroy.c              \
+								destroy/assets/museum1/destroy.c             \
+								destroy/assets/museum2/destroy.c             \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
@@ -65,35 +65,35 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/key_pressed.c               \
 								event/appartment/mouse_moved.c               \
 								event/appartment/mouse_pressed.c             \
-								event/inventory/key_pressed.c				 \
+								event/inventory/key_pressed.c                \
 								event/city/locations/appartment.c            \
 								event/city/locations/pnjs.c                  \
-								event/city/locations/clothe_shop.c 			 \
+								event/city/locations/clothe_shop.c           \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
 								event/city/locations/market.c                \
-								event/city/locations/museum.c 				 \
+								event/city/locations/museum.c                \
 								event/city/key_pressed.c                     \
 								event/city/mouse_moved.c                     \
 								event/city/mouse_pressed.c                   \
-								event/clothe/locations/door.c 				 \
-								event/clothe/locations/locations.c 			 \
-								event/clothe/key_pressed.c 					 \
-								event/clothe/mouse_moved.c 					 \
-								event/clothe/mouse_pressed.c 				 \
+								event/clothe/locations/door.c                \
+								event/clothe/locations/locations.c           \
+								event/clothe/key_pressed.c                   \
+								event/clothe/mouse_moved.c                   \
+								event/clothe/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
-								event/market/locations/door.c 				 \
-								event/market/locations/locations.c 			 \
-								event/market/key_pressed.c 		             \
-								event/market/mouse_moved.c 		             \
-								event/market/mouse_pressed.c 		         \
-								event/museum1/locations/door.c 				 \
-								event/museum1/locations/locations.c 		 \
-								event/museum1/key_pressed.c 				 \
-								event/museum1/mouse_moved.c 				 \
-								event/museum1/mouse_pressed.c 				 \
+								event/market/locations/door.c                \
+								event/market/locations/locations.c           \
+								event/market/key_pressed.c                   \
+								event/market/mouse_moved.c                   \
+								event/market/mouse_pressed.c                 \
+								event/museum1/locations/door.c               \
+								event/museum1/locations/locations.c          \
+								event/museum1/key_pressed.c                  \
+								event/museum1/mouse_moved.c                  \
+								event/museum1/mouse_pressed.c                \
 								event/ice_cream_shop/locations/door.c        \
 								event/ice_cream_shop/locations/locations.c   \
 								event/ice_cream_shop/key_pressed.c           \
@@ -135,21 +135,22 @@ SRC                 =           $(addprefix src/,                            \
 								event/transitions/mouse_moved.c              \
 								event/transitions/mouse_pressed.c            \
 								event/event_1.c                              \
-								event/event_2.c					             \
-								event/event_3.c					             \
+								event/event_2.c                              \
+								event/event_3.c                              \
 								init/data/init_rat_position.c                \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
-								init/assets/clothe/init.c 					 \
+								init/assets/clothe/init.c                    \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
-								init/assets/museum1/init.c 					 \
-								init/assets/museum2/init.c 					 \
+								init/assets/museum1/init.c                   \
+								init/assets/museum2/init.c                   \
 								init/assets/rat/init.c                       \
 								init/assets/pnj/init_pnj.c                   \
+								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls_choose_key.c   \
 								init/assets/settings/controls.c              \
@@ -177,9 +178,9 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/museum1.c								 \
-								stage/museum2.c 							 \
-								stage/settings.c 							 \
+								stage/museum1.c                              \
+								stage/museum2.c                              \
+								stage/settings.c                             \
 								stage/stage.c                                \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
