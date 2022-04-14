@@ -11,12 +11,15 @@ void init_title(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 1920, 1080);
     sfVector2f pos = init_pos(0, 0);
+    sfVector2f pos_p = init_pos(315, 280);
     sfVector2f scale = {0.33, 0.33};
 
     game->assets->home_menu->title = create_sprite(
         game->textures->home_menu_title, rect, pos, scale);
-    game->assets->home_menu->press = create_sprite(
-        game->textures->home_menu_press, rect, pos, scale);
+    game->assets->home_menu->press = create_text(
+        FONT_RPG, sfWhite, 30, ENGLISH_PRESS_ENTER);
+    set_text_origin(game->assets->home_menu->press);
+    sfText_setPosition(game->assets->home_menu->press, pos_p);
 }
 
 void init_quit_button(game_t *game)

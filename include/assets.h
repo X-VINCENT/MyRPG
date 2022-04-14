@@ -92,7 +92,6 @@
     #define HOME_BG2 "assets/images/menus/home/bg2.png"
     #define HOME_BG3 "assets/images/menus/home/bg3.png"
     #define HOME_TITLE "assets/images/menus/home/title.png"
-    #define HOME_PRESS "assets/images/menus/home/press.png"
 
     // Settings
     #define SETTINGS_BG "assets/images/menus/settings/bg.png"
