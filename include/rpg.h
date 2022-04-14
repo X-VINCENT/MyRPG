@@ -167,7 +167,8 @@
     #define LOCATION_TO_MUSEUM2 (sfVector2f){667, 765}
 
     //Back to museum1
-    #define BACK_TO_MUSEUM1 (sfVector2f){0, 575}
+    #define DOOR_BACK_TO_MUSEUM1 (sfVector2f) {0, 573}
+    #define LOCATION_BACK_TO_MUSEUM2 (sfVector2f) {667, 805}
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !MY_RPG_H_ */

@@ -48,7 +48,7 @@ void mouse_moved_3(game_t *game)
         case MUSEUM1_STAGE:
             museum1_mouse_moved(game);
         case MUSEUM2_STAGE:
-            museum1_mouse_moved(game);
+            museum2_mouse_moved(game);
             break;
         default:
             break;
