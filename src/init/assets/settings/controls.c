@@ -52,6 +52,8 @@ void init_settings_controls_keys_2(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
 
+    s_controls->keys[INTERACT] = create_key(game, 965, ENGLISH_INTERACT,
+        get_key_name(game->keys[INTERACT]));
     s_controls->keys[ZOOM_IN] = create_key(game, 1065,
         ENGLISH_ZOOM_IN, get_key_name(game->keys[ZOOM_IN]));
     s_controls->keys[ZOOM_OUT] = create_key(game, 1165,
@@ -86,8 +88,6 @@ void init_settings_controls_keys(game_t *game)
         get_key_name(game->keys[DODGE]));
     s_controls->keys[ATTACK] = create_key(game, 865, ENGLISH_ATTACK,
         get_key_name(game->keys[ATTACK]));
-    s_controls->keys[INTERACT] = create_key(game, 965, ENGLISH_INTERACT,
-        get_key_name(game->keys[INTERACT]));
     init_settings_controls_keys_2(game);
 }
 
