@@ -11,5 +11,5 @@ void market_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    market_locations(game);
+    return;
 }

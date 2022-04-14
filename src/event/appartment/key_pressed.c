@@ -11,5 +11,5 @@ void appartment_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    appartment_locations(game);
+    return;
 }

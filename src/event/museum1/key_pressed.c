@@ -11,5 +11,5 @@ void museum1_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    museum1_locations(game);
+    return;
 }
