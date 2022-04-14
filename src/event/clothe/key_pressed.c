@@ -11,5 +11,5 @@ void clothe_store_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    clothe_store_locations(game);
+    return;
 }
