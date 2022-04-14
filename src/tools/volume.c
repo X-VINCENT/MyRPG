@@ -13,6 +13,7 @@ void set_music_volume(game_t *game)
     sfVector2f pos_circle = init_pos(1300 + 5 * game->music_volume, 310);
 
     sfMusic_setVolume(game->audio->musics->music_menu, game->music_volume);
+    sfMusic_setVolume(game->audio->musics->music_city, game->music_volume);
     sfSprite_setPosition(circle, pos_circle);
 }
 

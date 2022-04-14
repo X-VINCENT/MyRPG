@@ -21,6 +21,7 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->transition_quit);
     sfTexture_destroy(textures->buttons_1);
     sfTexture_destroy(textures->gui);
+    sfTexture_destroy(textures->message_box);
 }
 
 void destroy_textures(textures_t *textures)

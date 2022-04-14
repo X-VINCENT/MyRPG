@@ -27,7 +27,7 @@
 // Audio
     // Musics
     #define MUSIC_HOME_MENU "assets/audio/musics/home_menu.ogg"
-
+    #define MUSIC_CITY "assets/audio/musics/music_city.ogg"
     // Sounds
 
 //////////////////////////////////////////////////////////////////////////////
@@ -111,5 +111,10 @@
     // GUI
     #define GUI "assets/images/objects/gui.png"
 //////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////
+// message_box
+    #define MESSAGE_BOX "assets/images/message_box/message_box.png"
 
 #endif /* !ASSETS_H_ */

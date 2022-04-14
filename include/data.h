@@ -254,6 +254,7 @@
     typedef struct musics {
         sfMusic *rat_transition;
         sfMusic *music_menu;
+        sfMusic *music_city;
     } musics_t;
 
     typedef struct sounds {
@@ -294,6 +295,7 @@
         sfTexture *transition_quit;
         sfTexture *buttons_1;
         sfTexture *gui;
+        sfTexture *message_box;
     } textures_t;
 
     typedef struct game {
