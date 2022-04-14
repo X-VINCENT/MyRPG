@@ -20,6 +20,10 @@ void animate_idle_rats(game_t *game)
             RAT_IDLE_SIDE_OFFSET, RAT_IDLE_SIDE_MAX, 22);
         animate_sprite(rat->idle_right,
             RAT_IDLE_SIDE_OFFSET, RAT_IDLE_SIDE_MAX, 22);
+        animate_sprite(rat->idle_back_left,
+            RAT_IDLE_DIAGONAL_OFFSET, RAT_IDLE_DIAGONAL_MAX, 22);
+        animate_sprite(rat->idle_back_right,
+            RAT_IDLE_DIAGONAL_OFFSET, RAT_IDLE_DIAGONAL_MAX, 22);
         sfClock_restart(rat->idle_anim_clock);
     }
 }
@@ -34,6 +38,10 @@ void animate_movement_rats(game_t *game)
         animate_sprite(rat->movement_left, RAT_SIDE_OFFSET, RAT_SIDE_MAX, 22);
         animate_sprite(
             rat->movement_right, RAT_SIDE_OFFSET, RAT_SIDE_MAX, 22);
+        animate_sprite(
+            rat->movement_up_left, RAT_DIAGONAL_OFFSET, RAT_DIAGONAL_MAX, 22);
+        animate_sprite(
+            rat->movement_up_right, RAT_DIAGONAL_OFFSET, RAT_DIAGONAL_MAX, 22);
         sfClock_restart(rat->movement_anim_clock);
     }
 }

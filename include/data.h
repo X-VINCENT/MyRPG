@@ -82,10 +82,14 @@
         sfSprite *idle_back;
         sfSprite *idle_left;
         sfSprite *idle_right;
+        sfSprite *idle_back_left;
+        sfSprite *idle_back_right;
         sfSprite *movement_up;
         sfSprite *movement_down;
         sfSprite *movement_left;
         sfSprite *movement_right;
+        sfSprite *movement_up_left;
+        sfSprite *movement_up_right;
         sfSprite *shadow;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
