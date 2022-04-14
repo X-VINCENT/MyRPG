@@ -6,7 +6,6 @@
 */
 
 #include "rpg.h"
-#include <time.h>
 
 void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
 {

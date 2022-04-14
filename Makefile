@@ -140,19 +140,19 @@ SRC                 =           $(addprefix src/,                            \
 								event/transitions/mouse_moved.c              \
 								event/transitions/mouse_pressed.c            \
 								event/event_1.c                              \
-								event/event_2.c					             \
-								event/event_3.c					             \
+								event/event_2.c                              \
+								event/event_3.c                              \
 								init/data/init_rat_position.c                \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
-								init/assets/clothe/init.c 					 \
+								init/assets/clothe/init.c                    \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
-								init/assets/museum1/init.c 					 \
-								init/assets/museum2/init.c 					 \
+								init/assets/museum1/init.c                   \
+								init/assets/museum2/init.c                   \
 								init/assets/rat/init.c                       \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/init_pnj_citizens.c          \
@@ -183,9 +183,9 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/museum1.c								 \
-								stage/museum2.c 							 \
-								stage/settings.c 							 \
+								stage/museum1.c                              \
+								stage/museum2.c                              \
+								stage/settings.c                             \
 								stage/stage.c                                \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
