@@ -21,6 +21,8 @@ void check_locations_rat_move(game_t *game)
         museum1_locations(game);
     if (game->stage == MUSEUM2_STAGE)
         museum2_locations(game);
+    if (game->stage == CLOTHE_STAGE)
+        clothe_store_locations(game);
 }
 
 void check_rat_key_pressed(game_t *game)
