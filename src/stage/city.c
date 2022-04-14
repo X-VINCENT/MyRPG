@@ -29,4 +29,5 @@ void city_stage(game_t *game)
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
     pnjs_display_city(game, 10);
     check_rat_key_pressed(game);
+    display_inventory(game);
 }

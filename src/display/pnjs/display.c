@@ -34,10 +34,10 @@ void check_second_move_pnj(game_t *game, int i)
     if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move))
         > (float)pnj->speed / 100) {
         if (pnj->move_left_or_right == 0) {
-            position.x -= 1;
+            position.x -= 0.5;
             rect.left = 96;
         } else {
-            position.x += 1;
+            position.x += 0.5;
             rect.left = 0;
         }
         sfClock_restart(pnj->timer_move);

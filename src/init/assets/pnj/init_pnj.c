@@ -21,8 +21,6 @@ void init_settings_base(pnj_t *pnj, float time_between_text, bool text)
     pnj->timer_move = sfClock_create();
     pnj->walk = sfClock_create();
     pnj->text = text;
-    if (pnj->change_t == 0 || pnj->change_t == 1)
-        pnj->change_t = 15;
 }
 
 void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
@@ -65,7 +63,9 @@ void citizens_png(game_t *game)
     for (int i = PNJ_BLACK_THREE + 1; i < PNJ_NBR; i++) {
         default_pnj_position.x = rand() % 2500;
         default_pnj_position.y = 1700 + rand() % (1740 + 1 - 1700);
-        assets->pnj[i]->speed = rand() % (4 + 4 - 1);
+        assets->pnj[i]->speed = rand() % (3 + 1 - 1);
+        if (assets->pnj[i]->speed == 0)
+            assets->pnj[i]->speed += 1;
         assets->pnj[i]->move_left_or_right = rand() % (1 + 1 - 0);
         assets->pnj[i]->change_t = rand() % (60 + 1 - 10);
         init_black_pnj(assets->pnj[i], default_pnj_position, "", false, game);
