@@ -30,6 +30,7 @@
         int change_t;
         bool display_the_text;
         bool text;
+        int speed;
     } pnj_t;
 
 #endif /* !PNJ_H_ */
