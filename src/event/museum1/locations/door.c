@@ -19,4 +19,12 @@ void location_door_museum1(game_t *game)
         set_rats_position(game, RAT_DEFAULT_POS_CITY_MUSEUM1);
         rat->speed = RAT_SPEED_CITY;
     }
+    if (game->stage == MUSEUM1_STAGE && check_location_rect(rat->idle_front,
+        LOCATION_TO_MUSEUM2, 37, 98) == true && rat->right == 1) {
+        game->stage = MUSEUM2_STAGE;
+        sfView_setCenter(game->view, VIEW_MUSEUM2_POS);
+        sfView_setSize(game->view, VIEW_MUSEUM2_SIZE );
+        set_rats_position(game, RAT_DEFAULT_POS_MUSEUM2);
+        rat->speed = RAT_SPEED_MUSEUM2;
+    }
 }

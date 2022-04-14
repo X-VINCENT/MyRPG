@@ -12,5 +12,6 @@ void destroy_musics(musics_t *musics)
     if (!musics)
         return;
     destroy_music(musics->music_menu);
+    destroy_music(musics->music_city);
     free(musics);
 }

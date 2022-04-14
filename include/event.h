@@ -137,6 +137,23 @@
         // mouse_pressed.c
         void museum1_mouse_pressed(game_t *game);
 
+//Museum2
+    //Locations
+        //door.c
+        void location_door_back_to_museum1(game_t *game);
+
+        //locations.c
+        void museum2_locations(game_t *game);
+
+        //key_pressed.c
+        void museum2_key_pressed(game_t *game);
+
+        //mouse_moved.c
+        void museum2_mouse_moved(game_t *game);
+
+        //mouse_pressed.c
+        void museum2_mouse_pressed(game_t *game);
+
 // Inventory
     // key_pressed.c
     void inventory_key_pressed(game_t *game);

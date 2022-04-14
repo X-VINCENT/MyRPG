@@ -254,6 +254,7 @@
     typedef struct musics {
         sfMusic *rat_transition;
         sfMusic *music_menu;
+        sfMusic *music_city;
     } musics_t;
 
     typedef struct sounds {
