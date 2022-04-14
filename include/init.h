@@ -70,6 +70,7 @@
         void init_settings_graphics(game_t *game);
 
         // init.c
+        void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
     // Top Bar
@@ -85,7 +86,7 @@
         void init_struct_pnjs(game_t *game);
         void citizens_png(game_t *game);
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
-    
+
     // Data
         //rat_position
         void init_file_rat_position(game_t *game);
