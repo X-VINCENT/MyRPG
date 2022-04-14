@@ -10,10 +10,10 @@
 bool check_location_rect(
     sfSprite *character, sfVector2f location, int width, int height)
 {
+    sfFloatRect square = {location.x, location.y, width, height};
     sfVector2f pos = sfSprite_getPosition(character);
 
-    if (pos.x >= location.x && pos.x <= location.x + width &&
-        pos.y >= location.y && pos.y <= location.y + height)
+    if (sfFloatRect_contains(&square, pos.x, pos.y))
         return true;
     return false;
 }
