@@ -32,7 +32,7 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
     pnj->text_to_display[0] = create_text(FONT_TEXT_PNJ, sfWhite,
         15, first_message);
     pnj->text_to_display[1] = create_text(FONT_TEXT_PNJ, sfWhite,
-        15, "You are a fucking");
+        15, "You are a fucking rat");
     pos.y -= 25;
     pos.x -= 185;
     for (int i = 0; pnj->text_to_display[i] != NULL; i++) {
@@ -41,7 +41,7 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
     }
 }
 
-void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *first_mess, bool text,
+void init_black_pnj(pnj_t *pnj, sfVector2f pos, bool text,
                         game_t *game)
 {
     pnj->sprite = create_sprite(game->textures->black_pnj,
@@ -52,7 +52,7 @@ void init_black_pnj(pnj_t *pnj, sfVector2f pos, char *first_mess, bool text,
     pnj->message_box = create_sprite(game->textures->message_box,
         (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
-    init_text_pnj(pnj, pos, first_mess);
+    init_text_pnj(pnj, pos, "un deux trois soleil");
     init_settings_base(pnj, 5, text);
 }
 
@@ -73,7 +73,7 @@ void citizens_png(game_t *game)
             assets->pnj[i]->speed += 1;
         assets->pnj[i]->move_left_or_right = rand() % (1 + 1 - 0);
         assets->pnj[i]->change_t = rand() % (60 + 1 - 10);
-        init_black_pnj(assets->pnj[i], default_pnj_position, "", false, game);
+        init_black_pnj(assets->pnj[i], default_pnj_position, false, game);
     }
 }
 
@@ -88,10 +88,10 @@ void init_struct_pnjs(game_t *game)
         assets->pnj[i] = malloc(sizeof(pnj_t));
     assets->pnj[PNJ_NBR] = NULL;
     init_black_pnj(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1900},
-        "Hello, I'm Jacques", true, game);
+        true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1900},
-        "Hello, I'm Harry the brother of Jacques", true, game);
+        true, game);
     init_black_pnj(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1900},
-        "Hello, I'm Charles the dad of Harry !", true, game);
+        true, game);
     citizens_png(game);
 }
