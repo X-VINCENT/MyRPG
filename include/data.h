@@ -294,6 +294,7 @@
         sfTexture *transition_quit;
         sfTexture *buttons_1;
         sfTexture *gui;
+        sfTexture *message_box;
     } textures_t;
 
     typedef struct game {

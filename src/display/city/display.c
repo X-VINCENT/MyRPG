@@ -13,5 +13,4 @@ void display_city(game_t *game)
 
     sfRenderWindow_drawSprite(game->window, city->bg, NULL);
     sfRenderWindow_drawSprite(game->window, city->doors->rat, NULL);
-    display_inventory(game);
 }
