@@ -27,7 +27,7 @@
 // Audio
     // Musics
     #define MUSIC_HOME_MENU "assets/audio/musics/home_menu.ogg"
-
+    #define MUSIC_CITY "assets/audio/musics/music_city.ogg"
     // Sounds
 
 //////////////////////////////////////////////////////////////////////////////

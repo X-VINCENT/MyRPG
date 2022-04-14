@@ -29,4 +29,5 @@ void city_stage(game_t *game)
     pnjs_display_city(game, 5);
     check_rat_key_pressed(game);
     display_inventory(game);
+    play_music(game->audio->musics->music_city);
 }
