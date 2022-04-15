@@ -31,6 +31,9 @@ void check_escape_key_pressed(game_t *game)
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
+        case ABILITIES_STAGE:
+            abilities_stage(game);
+            break;
         case SETTINGS_STAGE:
             settings_stage(game);
             break;

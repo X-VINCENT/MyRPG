@@ -53,10 +53,11 @@ void set_texts_german_settings(game_t *game)
 void set_texts_german(game_t *game)
 {
     sfText_setString(game->assets->top_bar->menu1, GERMAN_MENU_1);
-    sfText_setString(game->assets->top_bar->menu2, GERMAN_MENU_2);
+    sfText_setString(game->assets->top_bar->abilities, GERMAN_ABILITIES);
     sfText_setString(game->assets->top_bar->menu3, GERMAN_MENU_3);
     sfText_setString(game->assets->top_bar->menu4, GERMAN_MENU_4);
     sfText_setString(game->assets->home_menu->press, GERMAN_PRESS_ENTER);
+    set_texts_german_abilities(game);
     set_texts_german_settings(game);
     set_texts_german_controls(game);
 }
