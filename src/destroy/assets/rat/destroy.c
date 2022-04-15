@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+void destroy_rat_actions(rat_t *rat)
+{
+    destroy_sprite(rat->dodge_up);
+    destroy_sprite(rat->dodge_down);
+    destroy_sprite(rat->dodge_left);
+    destroy_sprite(rat->dodge_right);
+    destroy_sprite(rat->dodge_up_left);
+    destroy_sprite(rat->dodge_up_right);
+    sfClock_destroy(rat->dodge_anim_clock);
+}
+
 void destroy_rat(rat_t *rat)
 {
     destroy_sprite(rat->idle_front);
@@ -21,6 +32,7 @@ void destroy_rat(rat_t *rat)
     destroy_sprite(rat->movement_right);
     destroy_sprite(rat->movement_up_left);
     destroy_sprite(rat->movement_up_right);
+    destroy_rat_actions(rat);
     destroy_sprite(rat->shadow);
     sfClock_destroy(rat->idle_anim_clock);
     sfClock_destroy(rat->movement_anim_clock);

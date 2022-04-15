@@ -90,9 +90,16 @@
         sfSprite *movement_right;
         sfSprite *movement_up_left;
         sfSprite *movement_up_right;
+        sfSprite *dodge_up;
+        sfSprite *dodge_down;
+        sfSprite *dodge_left;
+        sfSprite *dodge_right;
+        sfSprite *dodge_up_left;
+        sfSprite *dodge_up_right;
         sfSprite *shadow;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
+        sfClock *dodge_anim_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
         int up;
@@ -101,6 +108,7 @@
         int right;
         int speed;
         int is_moving;
+        int is_dodging;
     } rat_t;
 
     typedef struct settings_game {
