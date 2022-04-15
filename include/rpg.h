@@ -171,10 +171,10 @@
     #define LOCATION_DOOR_MARKET (sfVector2f) {0, 320}
 
     // Museum1
-    #define LOCATION_DOOR_MUSEUM1 (sfVector2f) {0, 765}
+    #define LOCATION_DOOR_MUSEUM1 (sfVector2f) {0, 758}
 
     //Museum2
-    #define LOCATION_TO_MUSEUM2 (sfVector2f) {667, 765}
+    #define LOCATION_TO_MUSEUM2 (sfVector2f) {707, 765}
 
     //Back to museum1
     #define DOOR_BACK_TO_MUSEUM1 (sfVector2f) {0, 573}
