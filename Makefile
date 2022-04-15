@@ -12,6 +12,7 @@ SRC_MAIN            =           $(addprefix src/,                            \
 								main.c)
 
 SRC                 =           $(addprefix src/,                            \
+								destroy/abilities/destroy.c                  \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
@@ -33,6 +34,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
+								display/abilities/display.c                  \
 								display/appartment/display.c                 \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
@@ -60,6 +62,9 @@ SRC                 =           $(addprefix src/,                            \
 								errors/check_images.c                        \
 								errors/check_data.c                          \
 								errors/help.c                                \
+								event/abilities/key_pressed.c                \
+								event/abilities/mouse_moved.c                \
+								event/abilities/mouse_pressed.c              \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
@@ -142,7 +147,8 @@ SRC                 =           $(addprefix src/,                            \
 								event/event_1.c                              \
 								event/event_2.c                              \
 								event/event_3.c                              \
-								init/data/init_rat_position.c                \
+								init/abilities/init.c                        \
+								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
@@ -169,6 +175,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
+								init/data/init_rat_position.c                \
 								init/inventory/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
@@ -178,6 +185,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/textures/menus.c                        \
 								init/textures/objects.c                      \
 								init/game.c                                  \
+								stage/abilities.c                            \
 								stage/appartment.c                           \
 								stage/city.c                                 \
 								stage/clothe.c                               \
@@ -191,6 +199,11 @@ SRC                 =           $(addprefix src/,                            \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \
+								tools/language/abilities/english.c           \
+								tools/language/abilities/french.c            \
+								tools/language/abilities/german.c            \
+								tools/language/abilities/origin.c            \
+								tools/language/abilities/spanish.c           \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \

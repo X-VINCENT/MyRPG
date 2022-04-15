@@ -33,7 +33,6 @@ void settings_key_pressed(game_t *game)
 
     if (settings->controls->key_selected >= 0)
         return settings_key_pressed_choose_key(game);
-        return;
     settings_navigate_menus(game);
     if (settings->current == SETTINGS_STAGE_GAME)
         settings_game_key_pressed(game);
