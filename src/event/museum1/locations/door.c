@@ -12,7 +12,7 @@ void location_door_museum1(game_t *game)
     rat_t *rat = game->assets->rat;
 
     if (check_location_rect(rat->idle_front,
-        LOCATION_DOOR_MUSEUM1, 47, 49) == true && rat->left == 1) {
+        LOCATION_DOOR_MUSEUM1, 10, 57) == true && rat->left == 1) {
         game->stage = CITY_STAGE;
         sfView_setCenter(game->view, VIEW_CITY_POS);
         sfView_setSize(game->view, VIEW_CITY_SIZE);
@@ -20,7 +20,7 @@ void location_door_museum1(game_t *game)
         rat->speed = RAT_SPEED_CITY;
     }
     if (check_location_rect(rat->idle_front,
-        LOCATION_TO_MUSEUM2, 50, 98) == true && rat->right == 1) {
+        LOCATION_TO_MUSEUM2, 10, 98) == true && rat->right == 1) {
         game->stage = MUSEUM2_STAGE;
         sfView_setCenter(game->view, VIEW_MUSEUM2_POS);
         sfView_setSize(game->view, VIEW_MUSEUM2_SIZE);
