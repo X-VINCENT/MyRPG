@@ -46,10 +46,54 @@ void animate_movement_rats(game_t *game)
     }
 }
 
+int animate_sprite_one_time(
+    sfSprite *sprite, float shift, int max_value, int offset_from_left)
+{
+    sfIntRect rect;
+    int is_done = 0;
+
+    if (!sprite)
+        return -1;
+    rect = sfSprite_getTextureRect(sprite);
+    if (rect.left >= max_value - shift) {
+        rect.left = offset_from_left;
+        is_done = 1;
+    } else
+        rect.left += shift;
+    sfSprite_setTextureRect(sprite, rect);
+    return is_done;
+}
+
+void animate_dodge_rats(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+    int is_done = 0;
+
+    if (time_elapsed(rat->dodge_anim_clock) > 0.075) {
+        is_done += animate_sprite_one_time(rat->dodge_up,
+            RAT_DODGE_UP_OFFSET, RAT_DODGE_UP_MAX, 22);
+        is_done += animate_sprite_one_time(rat->dodge_down,
+            RAT_DODGE_DOWN_OFFSET, RAT_DODGE_DOWN_MAX, 22);
+        is_done += animate_sprite_one_time(rat->dodge_left,
+            RAT_DODGE_SIDE_OFFSET, RAT_DODGE_SIDE_MAX, 22);
+        is_done += animate_sprite_one_time(rat->dodge_right,
+            RAT_DODGE_SIDE_OFFSET, RAT_DODGE_SIDE_MAX, 22);
+        is_done += animate_sprite_one_time(rat->dodge_up_left,
+            RAT_DODGE_DIAGONAL_OFFSET, RAT_DODGE_DIAGONAL_MAX, 22);
+        is_done += animate_sprite_one_time(rat->dodge_up_right,
+            RAT_DODGE_DIAGONAL_OFFSET, RAT_DODGE_DIAGONAL_MAX, 22);
+        sfClock_restart(rat->dodge_anim_clock);
+    }
+    if (is_done > 0)
+        rat->is_dodging = 0;
+}
+
 void animate_rats(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
     animate_idle_rats(game);
     animate_movement_rats(game);
+    if (rat->is_dodging == 1)
+        animate_dodge_rats(game);
 }

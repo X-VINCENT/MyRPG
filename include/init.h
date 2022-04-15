@@ -50,8 +50,11 @@
         void init_museum2(game_t *game);
 
     // Rat
+        // actions.c
+        void init_rat_dodge(game_t *game, sfTexture *texture);
+
         // init.c
-        void init_rat(game_t *game, sfTexture *color_texture);
+        void init_rat(game_t *game, sfTexture *texture);
 
     // Settings
         // audio.c
