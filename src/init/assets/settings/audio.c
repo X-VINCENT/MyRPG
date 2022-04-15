@@ -7,12 +7,6 @@
 
 #include "rpg.h"
 
-void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset)
-{
-    (*pos).x += offset;
-    (*rect).left += offset;
-}
-
 void init_settings_audio_music_bar(game_t *game)
 {
     settings_audio_t *s_audio = game->assets->settings->audio;

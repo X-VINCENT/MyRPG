@@ -7,6 +7,26 @@
 
 #include "rpg.h"
 
+void display_rat_dodge(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+    sfRenderWindow *w = game->window;
+
+    sfRenderWindow_drawSprite(w, rat->shadow, NULL);
+    if (rat->up == 1 && rat->left == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_up_left, NULL);
+    if (rat->up == 1 && rat->right == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_up_right, NULL);
+    if (rat->up == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_up, NULL);
+    if (rat->down == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_down, NULL);
+    if (rat->left == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_left, NULL);
+    if (rat->right == 1)
+        return sfRenderWindow_drawSprite(w, rat->dodge_right, NULL);
+}
+
 void display_rat_movement(game_t *game)
 {
     rat_t *rat = game->assets->rat;
@@ -56,6 +76,8 @@ void display_rat(game_t *game)
     rat_t *rat = game->assets->rat;
 
     animate_rats(game);
+    if (rat->is_dodging == 1)
+        return display_rat_dodge(game);
     switch (rat->is_moving) {
         case 0:
             display_rat_idle(game);

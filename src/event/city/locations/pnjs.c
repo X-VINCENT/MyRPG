@@ -32,7 +32,7 @@ void check_skip_text_touch(game_t *game, pnj_t *pnj)
     int stop = 0;
 
     if (game->event->event->key.code == sfKeyReturn && stop == 0) {
-        game->event->event->key.code = -1;
+        game->event->event->key.code = sfKeyUnknown;
         skip_text(pnj);
         stop = 1;
     }

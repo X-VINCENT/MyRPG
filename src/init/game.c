@@ -64,8 +64,8 @@ void init_keys(game_t *game)
     game->keys[DOWN] = sfKeyS;
     game->keys[LEFT] = sfKeyQ;
     game->keys[RIGHT] = sfKeyD;
-    game->keys[JUMP] = sfKeySpace;
-    game->keys[DODGE] = sfKeyLControl;
+    game->keys[JUMP] = sfKeyLShift;
+    game->keys[DODGE] = sfKeySpace;
     game->keys[ATTACK] = sfKeyA;
     game->keys[INTERACT] = sfKeyE;
     game->keys[ROTATE_LEFT] = sfKeyLeft;

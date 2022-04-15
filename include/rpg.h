@@ -95,47 +95,57 @@
 // Rat
     #define SCALE_RAT (sfVector2f) {1.00, 1.00}
     // Speed
-        #define RAT_SPEED_APPARTMENT 1
-        #define RAT_SPEED_CITY 4
-        #define RAT_SPEED_ICE_CREAM_SHOP 1
-        #define RAT_SPEED_CLOTHE_SHOP 1
-        #define RAT_SPEED_MARKET 2
-        #define RAT_SPEED_MUSEUM1 2
-        #define RAT_SPEED_MUSEUM2 2
+    #define RAT_SPEED_APPARTMENT 1
+    #define RAT_SPEED_CITY 4
+    #define RAT_SPEED_ICE_CREAM_SHOP 1
+    #define RAT_SPEED_CLOTHE_SHOP 1
+    #define RAT_SPEED_MARKET 2
+    #define RAT_SPEED_MUSEUM1 2
+    #define RAT_SPEED_MUSEUM2 2
 
     // Pos
-        #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f) {2468, 1710}
-        #define RAT_DEFAULT_POS_CITY_APPARTMENT_ICE_SHOP (sfVector2f) {915, 1675}
-        #define RAT_DEFAULT_POS_CITY_MUSEUM1 (sfVector2f) {2034, 590}
-        #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f) {588, 1672}
-        #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f) {1524, 1690}
+    #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f) {2468, 1710}
+    #define RAT_DEFAULT_POS_CITY_ICE_SHOP (sfVector2f) {915, 1675}
+    #define RAT_DEFAULT_POS_CITY_MUSEUM1 (sfVector2f) {2034, 590}
+    #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f) {588, 1672}
+    #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f) {1524, 1690}
 
-        #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f) {166, 252}
-        #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f) {288, 380}
-        #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
-        #define RAT_DEFAULT_POS_MARKET (sfVector2f) {30, 342}
-        #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f) {47, 793}
-        #define RAT_DEFAULT_POS_MUSEUM2 (sfVector2f) {47, 622}
+    #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f) {166, 252}
+    #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f) {288, 380}
+    #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
+    #define RAT_DEFAULT_POS_MARKET (sfVector2f) {30, 342}
+    #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f) {47, 793}
+    #define RAT_DEFAULT_POS_MUSEUM2 (sfVector2f) {47, 622}
 
     // Idle
-        #define RAT_IDLE_FRONT_OFFSET 18
-        #define RAT_IDLE_FRONT_MAX 94
-        #define RAT_IDLE_BACK_OFFSET 18
-        #define RAT_IDLE_BACK_MAX 94
-        #define RAT_IDLE_SIDE_OFFSET 27
-        #define RAT_IDLE_SIDE_MAX 130
-        #define RAT_IDLE_DIAGONAL_OFFSET 20
-        #define RAT_IDLE_DIAGONAL_MAX 102
+    #define RAT_IDLE_FRONT_OFFSET 18
+    #define RAT_IDLE_FRONT_MAX 94
+    #define RAT_IDLE_BACK_OFFSET 18
+    #define RAT_IDLE_BACK_MAX 94
+    #define RAT_IDLE_SIDE_OFFSET 27
+    #define RAT_IDLE_SIDE_MAX 130
+    #define RAT_IDLE_DIAGONAL_OFFSET 20
+    #define RAT_IDLE_DIAGONAL_MAX 102
 
     // Movement
-        #define RAT_UP_OFFSET 20
-        #define RAT_UP_MAX 135
-        #define RAT_DOWN_OFFSET 20
-        #define RAT_DOWN_MAX 140
-        #define RAT_SIDE_OFFSET 27
-        #define RAT_SIDE_MAX 177
-        #define RAT_DIAGONAL_OFFSET 23
-        #define RAT_DIAGONAL_MAX 156
+    #define RAT_UP_OFFSET 20
+    #define RAT_UP_MAX 135
+    #define RAT_DOWN_OFFSET 20
+    #define RAT_DOWN_MAX 140
+    #define RAT_SIDE_OFFSET 27
+    #define RAT_SIDE_MAX 177
+    #define RAT_DIAGONAL_OFFSET 23
+    #define RAT_DIAGONAL_MAX 156
+
+    // Dodge
+    #define RAT_DODGE_UP_OFFSET 22
+    #define RAT_DODGE_UP_MAX 214
+    #define RAT_DODGE_DOWN_OFFSET 22
+    #define RAT_DODGE_DOWN_MAX 214
+    #define RAT_DODGE_SIDE_OFFSET 31
+    #define RAT_DODGE_SIDE_MAX 290
+    #define RAT_DODGE_DIAGONAL_OFFSET 27
+    #define RAT_DODGE_DIAGONAL_MAX 255
 //////////////////////////////////////////////////////////////////////////////
 
 

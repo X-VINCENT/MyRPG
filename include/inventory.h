@@ -10,8 +10,6 @@
 
     #include "rpg.h"
 
-    #define SLOT_PATH_ON "assets/images/inventory/slot_on.png"
-    #define SLOT_PATH_OFF "assets/images/inventory/slot_off.png"
     #define INVENTORY_SIZE 9
 
     enum item {
