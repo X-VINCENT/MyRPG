@@ -29,6 +29,10 @@ void check_rat_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
+    if (event->key.code == game->keys[DODGE]) {
+        game->assets->rat->is_dodging = 1;
+        event->key.code = sfKeyUnknown;
+    }
     if (time_elapsed(game->assets->rat->movement_clock) > 0.01) {
         move_rat(game);
         check_locations_rat_move(game);

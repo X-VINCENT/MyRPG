@@ -136,6 +136,16 @@
     #define RAT_SIDE_MAX 177
     #define RAT_DIAGONAL_OFFSET 23
     #define RAT_DIAGONAL_MAX 156
+
+    // Dodge
+    #define RAT_DODGE_UP_OFFSET 22
+    #define RAT_DODGE_UP_MAX 214
+    #define RAT_DODGE_DOWN_OFFSET 22
+    #define RAT_DODGE_DOWN_MAX 214
+    #define RAT_DODGE_SIDE_OFFSET 31
+    #define RAT_DODGE_SIDE_MAX 290
+    #define RAT_DODGE_DIAGONAL_OFFSET 27
+    #define RAT_DODGE_DIAGONAL_MAX 255
 //////////////////////////////////////////////////////////////////////////////
 
 

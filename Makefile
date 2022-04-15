@@ -153,6 +153,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/market/init.c                    \
 								init/assets/museum1/init.c                   \
 								init/assets/museum2/init.c                   \
+								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/init_pnj_citizens.c          \

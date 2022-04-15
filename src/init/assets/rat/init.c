@@ -7,22 +7,22 @@
 
 #include "rpg.h"
 
-void init_rat_idle_2(game_t *game, sfTexture *color_texture)
+void init_rat_idle_2(game_t *game, sfTexture *texture)
 {
     rat_t *rat = game->assets->rat;
     sfIntRect r_diagonal = init_rect(22, 124, 20, 23);
     sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
 
-    rat->idle_back_left = create_sprite(
-        color_texture, r_diagonal, pos, (sfVector2f){-scale.x, scale.y});
-    rat->idle_back_right = create_sprite(
-        color_texture, r_diagonal, pos, scale);
+    rat->idle_back_left = create_sprite(texture, r_diagonal, pos, i_scale);
+    rat->idle_back_right = create_sprite(texture, r_diagonal, pos, scale);
     set_sprite_origin(rat->idle_back_left, r_diagonal);
     set_sprite_origin(rat->idle_back_right, r_diagonal);
+    rat->dodge_anim_clock = sfClock_create();
 }
 
-void init_rat_idle(game_t *game, sfTexture *color_texture)
+void init_rat_idle(game_t *game, sfTexture *texture)
 {
     rat_t *rat = game->assets->rat;
     sfIntRect r_front = init_rect(22, 39, 16, 21);
@@ -31,36 +31,35 @@ void init_rat_idle(game_t *game, sfTexture *color_texture)
     sfIntRect r_diagonal = init_rect(22, 124, 20, 23);
     sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
 
-    rat->idle_front = create_sprite(color_texture, r_front, pos, scale);
-    rat->idle_back = create_sprite(color_texture, r_back, pos, scale);
-    rat->idle_left = create_sprite(
-        color_texture, r_sides, pos, (sfVector2f){-scale.x, scale.y});
-    rat->idle_right = create_sprite(color_texture, r_sides, pos, scale);
+    rat->idle_front = create_sprite(texture, r_front, pos, scale);
+    rat->idle_back = create_sprite(texture, r_back, pos, scale);
+    rat->idle_left = create_sprite(texture, r_sides, pos, i_scale);
+    rat->idle_right = create_sprite(texture, r_sides, pos, scale);
     set_sprite_origin(rat->idle_front, r_front);
     set_sprite_origin(rat->idle_back, r_back);
     set_sprite_origin(rat->idle_left, r_sides);
     set_sprite_origin(rat->idle_right, r_sides);
-    init_rat_idle_2(game, color_texture);
+    init_rat_idle_2(game, texture);
     rat->idle_anim_clock = sfClock_create();
 }
 
-void init_rat_movement_2(game_t *game, sfTexture *color_texture)
+void init_rat_movement_2(game_t *game, sfTexture *texture)
 {
     rat_t *rat = game->assets->rat;
     sfIntRect r_diagonal = init_rect(22, 259, 23, 27);
     sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
 
-    rat->movement_up_left = create_sprite(
-        color_texture, r_diagonal, pos, (sfVector2f){-scale.x, scale.y});
-    rat->movement_up_right = create_sprite(
-        color_texture, r_diagonal, pos, scale);
+    rat->movement_up_left = create_sprite(texture, r_diagonal, pos, i_scale);
+    rat->movement_up_right = create_sprite(texture, r_diagonal, pos, scale);
     set_sprite_origin(rat->movement_up_left, r_diagonal);
     set_sprite_origin(rat->movement_up_right, r_diagonal);
 }
 
-void init_rat_movement(game_t *game, sfTexture *color_texture)
+void init_rat_movement(game_t *game, sfTexture *texture)
 {
     rat_t *rat = game->assets->rat;
     sfIntRect r_up = init_rect(22, 226, 16, 26);
@@ -68,22 +67,23 @@ void init_rat_movement(game_t *game, sfTexture *color_texture)
     sfIntRect r_sides = init_rect(22, 194, 25, 26);
     sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
 
-    rat->movement_up = create_sprite(color_texture, r_up, pos, scale);
-    rat->movement_down = create_sprite(color_texture, r_down, pos, scale);
-    rat->movement_left = create_sprite(
-        color_texture, r_sides, pos, (sfVector2f){-scale.x, scale.y});
-    rat->movement_right = create_sprite(color_texture, r_sides, pos, scale);
-    init_rat_movement_2(game, color_texture);
+    rat->movement_up = create_sprite(texture, r_up, pos, scale);
+    rat->movement_down = create_sprite(texture, r_down, pos, scale);
+    rat->movement_left = create_sprite(texture, r_sides, pos, i_scale);
+    rat->movement_right = create_sprite(texture, r_sides, pos, scale);
     set_sprite_origin(rat->movement_up, r_up);
     set_sprite_origin(rat->movement_down, r_down);
     set_sprite_origin(rat->movement_left, r_sides);
     set_sprite_origin(rat->movement_right, r_sides);
+    init_rat_movement_2(game, texture);
+    rat->movement_clock = sfClock_create();
     rat->movement_anim_clock = sfClock_create();
     rat->latency_status_clock = sfClock_create();
 }
 
-void init_rat(game_t *game, sfTexture *color_texture)
+void init_rat(game_t *game, sfTexture *texture)
 {
     rat_t *rat = NULL;
     sfIntRect r_shadow = init_rect(202, 40, 12, 4);
@@ -92,11 +92,15 @@ void init_rat(game_t *game, sfTexture *color_texture)
 
     game->assets->rat = malloc(sizeof(rat_t));
     rat = game->assets->rat;
+    rat->up = 1;
+    rat->down = 0;
+    rat->left = 0;
+    rat->right = 0;
     rat->speed = RAT_SPEED_CITY;
     rat->is_moving = 0;
-    rat->movement_clock = sfClock_create();
-    rat->shadow = create_sprite(color_texture, r_shadow, pos, scale);
+    rat->shadow = create_sprite(texture, r_shadow, pos, scale);
     set_sprite_origin(rat->shadow, r_shadow);
-    init_rat_idle(game, color_texture);
-    init_rat_movement(game, color_texture);
+    init_rat_idle(game, texture);
+    init_rat_movement(game, texture);
+    init_rat_dodge(game, texture);
 }

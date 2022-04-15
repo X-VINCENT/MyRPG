@@ -7,6 +7,18 @@
 
 #include "rpg.h"
 
+void set_rats_position_actions(game_t *game, sfVector2f position)
+{
+    rat_t *rat = game->assets->rat;
+
+    sfSprite_setPosition(rat->dodge_up, position);
+    sfSprite_setPosition(rat->dodge_down, position);
+    sfSprite_setPosition(rat->dodge_left, position);
+    sfSprite_setPosition(rat->dodge_right, position);
+    sfSprite_setPosition(rat->dodge_up_left, position);
+    sfSprite_setPosition(rat->dodge_up_right, position);
+}
+
 void set_rats_position(game_t *game, sfVector2f position)
 {
     rat_t *rat = game->assets->rat;
@@ -25,4 +37,5 @@ void set_rats_position(game_t *game, sfVector2f position)
     sfSprite_setPosition(rat->movement_up_left, position);
     sfSprite_setPosition(rat->movement_up_right, position);
     sfSprite_setPosition(rat->shadow, shadow_position);
+    set_rats_position_actions(game, position);
 }
