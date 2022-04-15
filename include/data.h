@@ -266,6 +266,7 @@
     } musics_t;
 
     typedef struct sounds {
+        sfSound *jump_sound;
     } sounds_t;
 
     typedef struct audio {

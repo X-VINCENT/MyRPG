@@ -11,5 +11,6 @@ void destroy_sounds(sounds_t *sounds)
 {
     if (!sounds)
         return;
+    destroy_sound(sounds->jump_sound);
     free(sounds);
 }
