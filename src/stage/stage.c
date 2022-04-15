@@ -7,6 +7,18 @@
 
 #include "rpg.h"
 
+void check_escape_key_pressed(game_t *game)
+{
+    sfEvent *event = game->event->event;
+
+    if (event->key.code == game->keys[ESCAPE]) {
+        sfView_setRotation(game->view, 0);
+        game->last_stage = game->stage;
+        game->stage = SETTINGS_STAGE;
+        event->key.code = sfKeyUnknown;
+    }
+}
+
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
@@ -16,6 +28,8 @@ void select_game_stage_3(game_t *game)
         default:
             break;
     }
+    if (game->stage != SETTINGS_STAGE)
+        return check_escape_key_pressed(game);
 }
 
 void select_game_stage_2(game_t *game)
@@ -41,8 +55,6 @@ void select_game_stage_2(game_t *game)
 
 void select_game_stage(game_t *game)
 {
-    if (!game)
-        return;
     switch (game->stage) {
         case START_STAGE:
             home_menu_stage(game);
