@@ -19,6 +19,7 @@
     #include "csfml.h"
 
 // RPG Headers
+    #include "abilities.h"
     #include "assets.h"
     #include "data.h"
     #include "destroy.h"

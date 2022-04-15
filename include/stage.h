@@ -23,7 +23,7 @@
     #define RAT_TRANSITION_QUIT 9
 
     #define MENU1_STAGE 10
-    #define MENU2_STAGE 11
+    #define ABILITIES_STAGE 11
     #define MENU3_STAGE 12
     #define MENU4_STAGE 13
     #define SETTINGS_STAGE 14
@@ -33,6 +33,9 @@
     #define SETTINGS_STAGE_GRAPHICS 1
     #define SETTINGS_STAGE_AUDIO 2
     #define SETTINGS_STAGE_CONTROLS 3
+
+// abilities.c
+void abilities_stage(game_t *game);
 
 // appartment.c
 void appartment_stage(game_t *game);

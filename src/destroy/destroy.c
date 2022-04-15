@@ -26,6 +26,7 @@ void destroy_all(game_t *game)
     destroy_audio(game->audio);
     free(game->keys);
     free(game->default_keys);
+    destroy_abilities(game->abilities);
     destroy_inventory(game->inventory);
     destroy_textures(game->textures);
     free(game);
