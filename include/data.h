@@ -237,8 +237,66 @@
         sfClock *clock;
     } top_bar_t;
 
+    enum status {
+        LOCKED,
+        UNLOCKED
+    };
+
+    typedef struct ability {
+        sfSprite **rect;
+        sfText *text;
+        enum ability_status status;
+        int price;
+        sfClock *clock;
+    } ability_t;
+
+    enum abilities {
+        UTILITY_SELL_10,
+        UTILITY_SELL_20,
+        UTILITY_SELL_30,
+        UTILITY_SELL_40,
+        UTILITY_SELL_50,
+        UTILITY_CAN_BUY,
+        UTILITY_SPEED_30,
+        UTILITY_SPEED_40,
+        UTILITY_SPEED_50,
+        UTILITY_SELL_100_SPEED_100,
+        STEALTH_ILLEGAL_1,
+        STEALTH_ESCAPE_20,
+        STEALTH_ESCAPE_40,
+        STEALTH_ESCAPE_60,
+        STEALTH_ESCAPE_80,
+        STEALTH_RANGE_10,
+        STEALTH_DODGE,
+        STEALTH_ILLEGAL_2,
+        STEALTH_RANGE_30,
+        STEALTH_CARDBOARD,
+        FIGHT_BITE,
+        FIGHT_HP_20,
+        FIGHT_HP_30,
+        FIGHT_ATTACK_5,
+        FIGHT_WEAPON,
+        FIGHT_ATTACK_30,
+        FIGHT_HP_50_ATTACK_50,
+        NB_ABILITIES
+    };
+
+    typedef struct abilities {
+        ability_t **ability;
+        enum abilities abilities;
+        sfSprite *bg;
+        sfText *title;
+        sfText *title_utility;
+        sfText *title_stealth;
+        sfText *title_fight;
+        sfSprite *tree;
+        sfSprite *scrolling_bar;
+        sfSprite *scrolling_bar_inside;
+    } abilities_t;
+
     typedef struct assets {
         sfSprite *cursor;
+        abilities_t *abilities;
         appartment_t *appartment;
         museum1_t *museum1;
         museum2_t *museum2;

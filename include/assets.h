@@ -22,8 +22,7 @@
     #define R_CROSS (sfIntRect) {0, 794, 38, 38}
     #define R_CHOOSE_KEY (sfIntRect) {0, 1606, 504, 219}
 
-    #define R_TREE (sfIntRect) {0, 1842, 1621, 1657}
-    #define R_ABILITIES_BLUE_BLOCK (sfIntRect) {1691, 1846, 1720, 1816}
+    #define R_TREE (sfIntRect) {1691, 1846, 1720, 1816}
     #define R_RECT_UNLOCKED (sfIntRect) {0, 3547, 400, 111}
     #define R_LITTLE_RECT_UNLOCKED (sfIntRect) {193, 3547, 180, 111}
     #define R_RECT_LOCKED (sfIntRect) {0, 3675, 400, 111}
