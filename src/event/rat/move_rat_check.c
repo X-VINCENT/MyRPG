@@ -67,8 +67,14 @@ void check_rat_key_pressed(game_t *game)
         increase_speed_jump_rat(game);
     else
         decrease_speed_jump_rat(game);
-    if (sfKeyboard_isKeyPressed(game->keys[DODGE]))
+    if (sfKeyboard_isKeyPressed(game->keys[DODGE])) {
         game->assets->rat->is_dodging = 1;
+        if (sfTime_asSeconds(
+            sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) > 0.7 ||
+            sfTime_asSeconds(
+            sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) == 0)
+            sfSound_play(game->audio->sounds->jump_sound);
+    }
     if (time_elapsed(game->assets->rat->movement_clock) > 0.01) {
         move_rat(game);
         check_locations_rat_move(game);
