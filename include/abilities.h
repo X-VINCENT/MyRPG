@@ -63,6 +63,7 @@
         sfSprite *tree;
         sfSprite *scrolling_bar;
         sfSprite *scrolling_bar_inside;
+        sfClock *scrolling_clock;
         sfClock *clock;
     } abilities_menu_t;
 
