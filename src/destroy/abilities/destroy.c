@@ -17,6 +17,7 @@ void destroy_abilities_menu(abilities_menu_t *menu)
     destroy_sprite(menu->tree);
     destroy_sprite(menu->scrolling_bar);
     destroy_sprite(menu->scrolling_bar_inside);
+    sfClock_destroy(menu->scrolling_clock);
     sfClock_destroy(menu->clock);
     free(menu);
 }

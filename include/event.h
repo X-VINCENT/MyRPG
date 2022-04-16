@@ -20,6 +20,9 @@
     // mouse_pressed.c
     void abilities_mouse_pressed(game_t *game);
 
+    // move_tree.c
+    void abilities_scrolling_bar_event(game_t *game);
+
 // Appartment
     // Locations
         // door.c

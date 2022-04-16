@@ -26,6 +26,7 @@ void display_abilities(game_t *game)
     abilities_t *abilities = game->assets->abilities;
     sfColor color = sfColor_fromRGBA(244, 154, 78, 255);
 
+    abilities_scrolling_bar_event(game);
     display_abilities_menu(game);
     display_top_bar(game);
 }
