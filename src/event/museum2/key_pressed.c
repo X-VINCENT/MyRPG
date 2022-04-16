@@ -9,7 +9,5 @@
 
 void museum2_key_pressed(game_t *game)
 {
-    sfEvent *event = game->event->event;
-
     return;
 }

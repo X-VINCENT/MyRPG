@@ -12,7 +12,7 @@ void location_door_back_to_museum1(game_t *game)
     rat_t *rat = game->assets->rat;
 
     if (check_location_rect(rat->idle_front,
-        DOOR_BACK_TO_MUSEUM1, 50, 96) == true && rat->left == 1) {
+        DOOR_BACK_TO_MUSEUM1, 10, 96) == true && rat->left == 1) {
         game->stage = MUSEUM1_STAGE;
         sfView_setCenter(game->view, VIEW_MUSEUM1_POS);
         sfView_setSize(game->view, VIEW_MUSEUM1_SIZE );
