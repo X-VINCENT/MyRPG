@@ -19,6 +19,7 @@
     #include "csfml.h"
 
 // RPG Headers
+    #include "abilities.h"
     #include "assets.h"
     #include "data.h"
     #include "destroy.h"
@@ -96,7 +97,7 @@
     #define SCALE_RAT (sfVector2f) {1.00, 1.00}
     // Speed
     #define RAT_SPEED_APPARTMENT 1
-    #define RAT_SPEED_CITY 4
+    #define RAT_SPEED_CITY 3
     #define RAT_SPEED_ICE_CREAM_SHOP 1
     #define RAT_SPEED_CLOTHE_SHOP 1
     #define RAT_SPEED_MARKET 2
@@ -171,10 +172,10 @@
     #define LOCATION_DOOR_MARKET (sfVector2f) {0, 320}
 
     // Museum1
-    #define LOCATION_DOOR_MUSEUM1 (sfVector2f) {0, 765}
+    #define LOCATION_DOOR_MUSEUM1 (sfVector2f) {0, 758}
 
     //Museum2
-    #define LOCATION_TO_MUSEUM2 (sfVector2f) {667, 765}
+    #define LOCATION_TO_MUSEUM2 (sfVector2f) {707, 765}
 
     //Back to museum1
     #define DOOR_BACK_TO_MUSEUM1 (sfVector2f) {0, 573}

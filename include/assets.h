@@ -12,15 +12,24 @@
 
 //////////////////////////////////////////////////////////////////////////////
 // Rects
-    #define R_ARROW (sfIntRect){240, 0, 35, 51}
-    #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
-    #define R_SCROLLING_BAR_INSIDE (sfIntRect){39, 169, 28, 150}
-    #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
-    #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34}
-    #define R_BAR (sfIntRect){0, 660, 500, 20}
-    #define R_KEY_BG (sfIntRect){0, 724, 204, 64}
-    #define R_CROSS (sfIntRect){0, 794, 38, 38}
-    #define R_CHOOSE_KEY (sfIntRect){0, 1606, 504, 219}
+    #define R_ARROW (sfIntRect) {240, 0, 35, 51}
+    #define R_SCROLLING_BAR (sfIntRect) {0, 169, 28, 450}
+    #define R_SCROLLING_BAR_INSIDE (sfIntRect) {39, 169, 28, 150}
+    #define R_EMPTY_BAR (sfIntRect) {0, 637, 500, 18}
+    #define R_CIRCLE_BAR (sfIntRect) {0, 686, 34, 34}
+    #define R_BAR (sfIntRect) {0, 660, 500, 20}
+    #define R_KEY_BG (sfIntRect) {0, 724, 204, 64}
+    #define R_CROSS (sfIntRect) {0, 794, 38, 38}
+    #define R_CHOOSE_KEY (sfIntRect) {0, 1606, 504, 219}
+
+    #define R_TREE (sfIntRect) {1691, 1846, 1720, 1816}
+    #define R_RECT_UNLOCKED (sfIntRect) {0, 3547, 400, 111}
+    #define R_LITTLE_RECT_UNLOCKED (sfIntRect) {193, 3547, 180, 111}
+    #define R_RECT_LOCKED (sfIntRect) {0, 3675, 400, 111}
+    #define R_LITTLE_RECT_LOCKED (sfIntRect) {193, 3675, 180, 111}
+    #define R_KICK (sfIntRect) {0, 3801, 400, 111}
+    #define R_VERTICAL_BAR (sfIntRect) {0, 3930, 16, 170}
+    #define R_HORIZONTAL_BAR (sfIntRect) {20, 3930, 170, 16}
 //////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////
@@ -86,6 +95,9 @@
 
 //////////////////////////////////////////////////////////////////////////////
 // Menus
+    // Abilities
+    #define ABILITIES_BG "assets/images/menus/abilities/bg.png"
+
     // Home
     #define HOME_BG0 "assets/images/menus/home/bg0.png"
     #define HOME_BG1 "assets/images/menus/home/bg1.png"

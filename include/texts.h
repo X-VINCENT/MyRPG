@@ -20,13 +20,18 @@
 // ENGLISH
     // Menus
     #define ENGLISH_MENU_1 "Menu 1"
-    #define ENGLISH_MENU_2 "Menu 2"
+    #define ENGLISH_ABILITIES "Abilities"
     #define ENGLISH_MENU_3 "Menu 3"
     #define ENGLISH_MENU_4 "Menu 4"
 
     // Home
-
     #define ENGLISH_PRESS_ENTER "PRESS ENTER TO CONTINUE"
+
+    // Abilities
+    #define ENGLISH_ABILITIES "Abilities"
+    #define ENGLISH_UTILITY "Utility"
+    #define ENGLISH_STEALTH "Stealth"
+    #define ENGLISH_FIGHT "Fight"
 
     // Settings
     #define ENGLISH_SETTINGS "Settings"
@@ -70,13 +75,18 @@
 // FRENCH
     // Menus
     #define FRENCH_MENU_1 "Menu 1"
-    #define FRENCH_MENU_2 "Menu 2"
+    #define FRENCH_ABILITIES "Competences"
     #define FRENCH_MENU_3 "Menu 3"
     #define FRENCH_MENU_4 "Menu 4"
 
     // Home
-
     #define FRENCH_PRESS_ENTER "APPUYEZ SUR ENTRER POUR CONTINUER"
+
+    // Abilities
+    #define FRENCH_ABILITIES "Competences"
+    #define FRENCH_UTILITY "Utilitaire"
+    #define FRENCH_STEALTH "Discretion"
+    #define FRENCH_FIGHT "Combat"
 
     // Settings
     #define FRENCH_SETTINGS "Parametres"
@@ -120,13 +130,18 @@
 // GERMAN
     // Menus
     #define GERMAN_MENU_1 "Menu 1"
-    #define GERMAN_MENU_2 "Menu 2"
+    #define GERMAN_ABILITIES "Fahigkeiten"
     #define GERMAN_MENU_3 "Menu 3"
     #define GERMAN_MENU_4 "Menu 4"
 
     // Home
-
     #define GERMAN_PRESS_ENTER "DRUCK ENTER UM FORTSETZEN"
+
+    // Abilities
+    #define GERMAN_ABILITIES "Fahigkeiten"
+    #define GERMAN_UTILITY "Nutzlichkeit"
+    #define GERMAN_STEALTH "Heimlichkeit"
+    #define GERMAN_FIGHT "Kampf"
 
     // Settings
     #define GERMAN_SETTINGS "Einstellungen"
@@ -170,13 +185,18 @@
 // SPANISH
     // Menus
     #define SPANISH_MENU_1 "Menu 1"
-    #define SPANISH_MENU_2 "Menu 2"
+    #define SPANISH_ABILITIES "Habilidades"
     #define SPANISH_MENU_3 "Menu 3"
     #define SPANISH_MENU_4 "Menu 4"
 
     // Home
-
     #define SPANISH_PRESS_ENTER "PRESIONA ENTER PARA CONTINUAR"
+
+    // Abilities
+    #define SPANISH_ABILITIES "Habilidades"
+    #define SPANISH_UTILITY "Utilidad"
+    #define SPANISH_STEALTH "Sigilo"
+    #define SPANISH_FIGHT "Combate"
 
     // Settings
     #define SPANISH_SETTINGS "Configuraciones"

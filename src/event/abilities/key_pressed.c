@@ -1,18 +1,16 @@
 /*
 ** EPITECH PROJECT, 2022
-** City Key Pressed for My RPG
+** Key Pressed Abilities for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #include "rpg.h"
 
-void city_key_pressed(game_t *game)
+void abilities_key_pressed(game_t *game)
 {
+    abilities_t *abilities = game->abilities;
     sfEvent *event = game->event->event;
 
-    inventory_key_pressed(game);
-    zoom_view(game);
-    rotate_view(game);
-    reset_view(game);
+    top_bar_key_pressed(game);
 }

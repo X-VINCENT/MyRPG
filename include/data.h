@@ -226,7 +226,7 @@
 
     typedef struct top_bar {
         sfText *menu1;
-        sfText *menu2;
+        sfText *abilities;
         sfText *menu3;
         sfText *menu4;
         sfSprite *settings_off;
@@ -239,6 +239,7 @@
 
     typedef struct assets {
         sfSprite *cursor;
+        abilities_t *abilities;
         appartment_t *appartment;
         museum1_t *museum1;
         museum2_t *museum2;
@@ -299,6 +300,7 @@
         sfTexture *home_menu_bg2;
         sfTexture *home_menu_bg3;
         sfTexture *home_menu_title;
+        sfTexture *abilities_bg;
         sfTexture *settings_bg;
         sfTexture *transition_enter;
         sfTexture *transition_quit;
@@ -317,6 +319,7 @@
         int *keys;
         int *default_keys;
         inventory_t *inventory;
+        abilities_t *abilities;
         int stage;
         int last_stage;
         int next_stage;

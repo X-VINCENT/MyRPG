@@ -35,6 +35,7 @@ game_t *init_game(void)
     init_keys(game);
     init_assets(game);
     init_audio(game);
+    init_abilities(game);
     init_inventory(game);
     return game;
 }
