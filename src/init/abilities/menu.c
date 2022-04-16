@@ -52,5 +52,6 @@ void init_abilities_menu(game_t *game)
 
     init_abilities_menu_titles(game);
     init_abilities_menu_sprites(game);
+    game->abilities->menu->scrolling_clock = sfClock_create();
     game->abilities->menu->clock = sfClock_create();
 }

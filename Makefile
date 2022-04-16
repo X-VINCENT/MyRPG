@@ -65,6 +65,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/abilities/key_pressed.c                \
 								event/abilities/mouse_moved.c                \
 								event/abilities/mouse_pressed.c              \
+								event/abilities/move_tree.c                  \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
