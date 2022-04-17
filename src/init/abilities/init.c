@@ -24,10 +24,10 @@ const char *english_abilities_texts[] = {
     "   20% more  \nescape chance",
     "   40% more  \nescape chance",
     "   60% more  \nescape chance",
-    "Reduce detection\n  range by 20%  ",
+    "Reduces detection\n  range by 20%  ",
     "Can dodge",
     "    Can wield    \n2 illegals objects",
-    "Reduce detection\n  range by 40%  ",
+    "Reduces detection\n  range by 40%  ",
     "Can become a cardboard",
     "Can bite",
     "20% more HP",
@@ -37,7 +37,7 @@ const char *english_abilities_texts[] = {
     "Can use weapons",
     "10% more damage",
     "Bite and kick deal 30% more damage",
-    "50% more HP and 20% more damage",
+    "50% more HP and 50% more damage",
     NULL
 };
 
