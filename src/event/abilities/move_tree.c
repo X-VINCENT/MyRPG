@@ -9,12 +9,17 @@
 
 void move_ability(ability_t *ability, int offset)
 {
-    return;
+    sfSprite_move(ability->rect[LOCKED], (sfVector2f){0, offset});
+    sfSprite_move(ability->rect[UNLOCKED], (sfVector2f){0, offset});
+    sfText_move(ability->text, (sfVector2f){0, offset});
+    sfText_move(ability->text_price, (sfVector2f){0, offset});
 }
 
 void move_abilities(abilities_t *abilities, int offset)
 {
     sfSprite_move(abilities->menu->tree, (sfVector2f){0, offset});
+    for (int idx = 0; abilities->ability[idx] != NULL; idx += 1)
+        move_ability(abilities->ability[idx], offset);
 }
 
 void move_abilities_up(game_t *game)

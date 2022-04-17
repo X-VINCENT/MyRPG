@@ -22,8 +22,27 @@ void destroy_abilities_menu(abilities_menu_t *menu)
     free(menu);
 }
 
+void destroy_ability(ability_t *ability)
+{
+    destroy_sprite(ability->rect[0]);
+    destroy_sprite(ability->rect[1]);
+    free(ability->rect);
+    destroy_text(ability->text);
+    destroy_text(ability->text_price);
+    sfClock_destroy(ability->clock);
+    free(ability);
+}
+
+void destroy_all_abilities(ability_t **ability)
+{
+    for (int idx = 0; ability[idx] != NULL; idx += 1)
+        destroy_ability(ability[idx]);
+    free(ability);
+}
+
 void destroy_abilities(abilities_t *abilities)
 {
     destroy_abilities_menu(abilities->menu);
+    destroy_all_abilities(abilities->ability);
     free(abilities);
 }

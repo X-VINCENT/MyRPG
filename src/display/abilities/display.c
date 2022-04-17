@@ -7,11 +7,28 @@
 
 #include "rpg.h"
 
+void display_ability(game_t *game, ability_t *ability)
+{
+    sfRenderWindow_drawSprite(
+        game->window, ability->rect[ability->status], NULL);
+    sfRenderWindow_drawText(game->window, ability->text, NULL);
+    sfRenderWindow_drawText(game->window, ability->text_price, NULL);
+}
+
+void display_all_abilities(game_t *game)
+{
+    abilities_t *abilities = game->abilities;
+
+    for (int idx = 0; abilities->ability[idx] != NULL; idx += 1)
+        display_ability(game, abilities->ability[idx]);
+}
+
 void display_abilities_menu(game_t *game)
 {
     abilities_menu_t *menu = game->abilities->menu;
 
     sfRenderWindow_drawSprite(game->window, menu->tree, NULL);
+    display_all_abilities(game);
     sfRenderWindow_drawSprite(game->window, menu->bg, NULL);
     sfRenderWindow_drawSprite(game->window, menu->scrolling_bar, NULL);
     sfRenderWindow_drawSprite(game->window, menu->scrolling_bar_inside, NULL);

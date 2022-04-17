@@ -23,10 +23,10 @@
     #define R_CHOOSE_KEY (sfIntRect) {0, 1606, 504, 219}
 
     #define R_TREE (sfIntRect) {1691, 1846, 1720, 1816}
-    #define R_RECT_UNLOCKED (sfIntRect) {0, 3547, 400, 111}
-    #define R_LITTLE_RECT_UNLOCKED (sfIntRect) {193, 3547, 180, 111}
-    #define R_RECT_LOCKED (sfIntRect) {0, 3675, 400, 111}
-    #define R_LITTLE_RECT_LOCKED (sfIntRect) {193, 3675, 180, 111}
+    #define R_LITTLE_RECT_UNLOCKED (sfIntRect) {0, 3547, 180, 111}
+    #define R_RECT_UNLOCKED (sfIntRect) {193, 3547, 400, 111}
+    #define R_LITTLE_RECT_LOCKED (sfIntRect) {0, 3675, 180, 111}
+    #define R_RECT_LOCKED (sfIntRect) {193, 3675, 400, 111}
     #define R_KICK (sfIntRect) {0, 3801, 400, 111}
     #define R_VERTICAL_BAR (sfIntRect) {0, 3930, 16, 170}
     #define R_HORIZONTAL_BAR (sfIntRect) {20, 3930, 170, 16}
