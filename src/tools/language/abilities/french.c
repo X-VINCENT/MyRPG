@@ -37,7 +37,7 @@ const char *french_abilities_texts_language[] = {
     "Peut utiliser\n   des armes   ",
     " 10% de degats\n      en plus",
     "Coups de pieds et morsure\ninfligent 30% plus de degats",
-    "50% de vie en plus et\n 20% de degats en plus",
+    "50% de vie en plus et\n 50% de degats en plus",
     NULL
 };
 

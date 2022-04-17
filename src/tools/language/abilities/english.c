@@ -37,7 +37,7 @@ const char *english_abilities_texts_language[] = {
     "Can use weapons",
     "10% more damage",
     "Bite and kick deal 30% more damage",
-    "50% more HP and 20% more damage",
+    "50% more HP and 50% more damage",
     NULL
 };
 
