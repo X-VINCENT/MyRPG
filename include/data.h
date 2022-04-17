@@ -329,6 +329,7 @@
         int language;
         int music_volume;
         int effects_volume;
+        int nb_abilities;
     } game_t;
 
 #endif /* !DATA_H_ */
