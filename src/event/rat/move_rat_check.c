@@ -67,7 +67,8 @@ void check_rat_key_pressed(game_t *game)
         increase_speed_jump_rat(game);
     else
         decrease_speed_jump_rat(game);
-    if (sfKeyboard_isKeyPressed(game->keys[DODGE])) {
+    if (sfKeyboard_isKeyPressed(game->keys[DODGE]) &&
+        game->abilities->ability[STEALTH_DODGE]->status == UNLOCKED) {
         game->assets->rat->is_dodging = 1;
         if (sfTime_asSeconds(
             sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) > 0.7 ||

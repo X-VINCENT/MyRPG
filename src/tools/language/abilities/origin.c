@@ -20,4 +20,6 @@ void set_texts_origin_abilities_menu(game_t *game)
 void set_texts_origin_abilities(game_t *game)
 {
     set_texts_origin_abilities_menu(game);
+    for (int idx = 0; game->abilities->ability[idx]; idx += 1)
+        set_text_origin(game->abilities->ability[idx]->text);
 }
