@@ -31,6 +31,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
+								destroy/data/destroy.c                       \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
@@ -176,7 +177,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
-								init/data/init_rat_position.c                \
+								init/data/init.c                             \
 								init/inventory/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
@@ -216,6 +217,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
+								tools/save.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)

@@ -97,10 +97,6 @@
         void citizens_png(game_t *game);
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
 
-    // Data
-        //rat_position
-        void init_file_rat_position(game_t *game);
-
     // init.c
     void init_assets(game_t *game);
     void init_cursor(game_t *game);
@@ -115,8 +111,13 @@
     // sounds.c
     void init_sounds(game_t *game);
 
+// Data
+    // init.c
+    void init_data(game_t *game);
+
 // Inventory
     // init.c
+    save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
 
 // Textures

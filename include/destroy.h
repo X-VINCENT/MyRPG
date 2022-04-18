@@ -89,6 +89,11 @@
     // sounds.c
     void destroy_sounds(sounds_t *sounds);
 
+// Data
+    // destroy.c
+    void destroy_save(save_t *save);
+    void destroy_data(data_t *data);
+
 // destroy.c
 void destroy_all(game_t *game);
 

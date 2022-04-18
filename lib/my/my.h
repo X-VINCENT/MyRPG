@@ -15,6 +15,10 @@
     #include <sys/stat.h>
 
 // Functions
+char **str_to_array(char *, char *);
+char *next_word(char *, char *);
+int lenght_word_in_string(char *, char *);
+int count_sep(char *, char *);
 int my_arrlen(char **arr);
 void my_putchar(char);
 int my_isneg(int);

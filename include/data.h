@@ -309,9 +309,23 @@
         sfTexture *message_box;
     } textures_t;
 
+    typedef struct save {
+        int nb_golds;
+        int nb_xps;
+        int nb_abilities;
+        int *abilities;
+    } save_t;
+
+    typedef struct data {
+        save_t *save1;
+        save_t *save2;
+        save_t *save3;
+    } data_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        data_t *data;
         textures_t *textures;
         event_t *event;
         assets_t *assets;
@@ -329,6 +343,8 @@
         int language;
         int music_volume;
         int effects_volume;
+        int nb_golds;
+        int nb_xps;
         int nb_abilities;
     } game_t;
 
