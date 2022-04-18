@@ -24,6 +24,21 @@ int get_value_from_file(const char path[])
     return value;
 }
 
+void free_and_close(char *str, char **arr, FILE *fp)
+{
+    for (int idx = 0; arr[idx] != NULL; idx += 1) {
+        if (arr[idx])
+            free(arr[idx]);
+    }
+    if (arr)
+        free(arr);
+    if (str)
+        free(str);
+    if (fp)
+        fclose(fp);
+    return NULL;
+}
+
 int *load_int_arr_from_file(const char path[])
 {
     FILE *fp = fopen(path, "rb");
@@ -34,10 +49,16 @@ int *load_int_arr_from_file(const char path[])
     if (!fp) {
         for (int idx = 0; idx != 100; idx += 1)
             values[idx] = 0;
+        free(str);
         return values;
     }
-    for (int idx = 0; idx != 100; idx += 1)
-        values[idx] = 0;
-    free(str);
+    if (fread(str, 1, 10000, fp) == -1)
+        return NULL;
+    if (!(arr = my_str_to_word_array(str, '\n')))
+        return NULL;
+    for (int idx = 0; arr[idx] != NULL; idx += 1)
+        if ((values[idx] = my_getnbr(arr[idx])) == -1)
+            return NULL;
+    free_and_close(str, arr, fp);
     return values;
 }

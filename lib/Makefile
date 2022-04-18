@@ -8,10 +8,6 @@
 NAME			=	libmy.a
 
 SRC_MY			=	$(addprefix my/,                \
-					str_to_array/count_size_argv.c  \
-					str_to_array/maintab.c          \
-					str_to_array/strmanipulation.c  \
-					str_to_array/count_separators.c \
 					my_arrlen.c                     \
 					my_compute_power_rec.c          \
 					my_compute_square_root.c        \
@@ -46,6 +42,7 @@ SRC_MY			=	$(addprefix my/,                \
 					my_strncmp.c                    \
 					my_strncpy.c                    \
 					my_strstr.c                     \
+					my_str_to_word_array.c          \
 					my_strupcase.c                  \
 					my_swap.c)
 
