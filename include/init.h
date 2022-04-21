@@ -58,6 +58,7 @@
 
         // init.c
         void init_rat(game_t *game, sfTexture *texture);
+        void init_rat_circle(game_t *game);
 
     // Settings
         // audio.c

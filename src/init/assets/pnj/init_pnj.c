@@ -37,6 +37,7 @@ void init_settings_base(pnj_t *pnj, float time_between_text)
     pnj->timer_move = sfClock_create();
     pnj->walk = sfClock_create();
     pnj->text = true;
+    pnj->display_the_text = 0;
 }
 
 void init_pnj(game_t *game, pnj_t *pnj, sfTexture *texture, sfVector2f pos)

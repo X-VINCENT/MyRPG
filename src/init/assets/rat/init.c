@@ -103,4 +103,5 @@ void init_rat(game_t *game, sfTexture *texture)
     init_rat_idle(game, texture);
     init_rat_movement(game, texture);
     init_rat_dodge(game, texture);
+    init_rat_circle(game);
 }

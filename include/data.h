@@ -93,6 +93,7 @@
         sfSprite *dodge_up_left;
         sfSprite *dodge_up_right;
         sfSprite *shadow;
+        sfCircleShape *circle;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *dodge_anim_clock;
@@ -105,6 +106,7 @@
         int speed;
         int is_moving;
         int is_dodging;
+        float radius_circle;
     } rat_t;
 
     typedef struct settings_game {
@@ -172,7 +174,8 @@
         ROTATE_RIGHT,
         RESET_VIEW,
         ESCAPE,
-        NB_KEYS
+        NB_KEYS,
+        HITBOX
     };
 
     typedef struct settings_controls {

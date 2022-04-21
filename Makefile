@@ -159,6 +159,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/museum/init.c                   \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
+								init/assets/rat/init_rat_2.c                 \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/settings/audio.c                 \

@@ -32,6 +32,7 @@
         bool display_the_text;
         bool text;
         int speed;
+        int displaying_text;
     } pnj_t;
 
 #endif /* !PNJ_H_ */
