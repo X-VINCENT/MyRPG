@@ -16,6 +16,9 @@ void event_key_pressed_2(game_t *game)
         case ABILITIES_STAGE:
             abilities_key_pressed(game);
             break;
+        case STATS_STAGE:
+            stats_key_pressed(game);
+            break;
         case SETTINGS_STAGE:
             settings_key_pressed(game);
             break;
@@ -34,6 +37,9 @@ void mouse_pressed_2(game_t *game)
         case ABILITIES_STAGE:
             abilities_mouse_pressed(game);
             break;
+        case STATS_STAGE:
+            stats_mouse_pressed(game);
+            break;
         case SETTINGS_STAGE:
             settings_mouse_pressed(game);
             break;
@@ -51,6 +57,9 @@ void mouse_moved_2(game_t *game)
             break;
         case ABILITIES_STAGE:
             abilities_mouse_moved(game);
+            break;
+        case STATS_STAGE:
+            stats_mouse_moved(game);
             break;
         case SETTINGS_STAGE:
             settings_mouse_moved(game);

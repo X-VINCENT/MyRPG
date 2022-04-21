@@ -218,16 +218,28 @@
         int current;
     } settings_t;
 
+    typedef struct stats {
+        sfSprite *bg;
+        sfSprite *maxpd;
+        sfSprite *gold;
+        sfSprite *xp;
+        sfSprite *abilities;
+        sfText *nb_xps;
+        sfText *nb_golds;
+        sfText *nb_abilities;
+        sfClock *clock;
+    } stats_t;
+
     typedef struct transitions {
         sfSprite *rat_enter;
         sfSprite *rat_quit;
     } transitions_t;
 
     typedef struct top_bar {
-        sfText *menu1;
+        sfText *game;
         sfText *abilities;
-        sfText *menu3;
-        sfText *menu4;
+        sfText *stats;
+        sfText *howtoplay;
         sfSprite *settings_off;
         sfSprite *settings_on;
         sfSprite *quit_off;
@@ -249,6 +261,7 @@
         rat_t *rat;
         pnj_t **pnj;
         settings_t *settings;
+        stats_t *stats;
         transitions_t *transitions;
         top_bar_t *top_bar;
     } assets_t;
@@ -302,14 +315,29 @@
         sfTexture *settings_bg;
         sfTexture *transition_enter;
         sfTexture *transition_quit;
+        sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
         sfTexture *message_box;
     } textures_t;
 
+    typedef struct save {
+        int nb_golds;
+        int nb_xps;
+        int nb_abilities;
+        int *abilities;
+    } save_t;
+
+    typedef struct data {
+        save_t *save1;
+        save_t *save2;
+        save_t *save3;
+    } data_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        data_t *data;
         textures_t *textures;
         event_t *event;
         assets_t *assets;
@@ -327,6 +355,8 @@
         int language;
         int music_volume;
         int effects_volume;
+        int nb_golds;
+        int nb_xps;
         int nb_abilities;
     } game_t;
 

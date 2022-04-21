@@ -29,7 +29,7 @@ int my_compute_square_root(int);
 int my_is_prime(int);
 int my_find_prime_sup(int);
 char *my_strcpy(const char *);
-char *my_strncpy(char *, char const *, int);
+char *my_strncpy(char const *, int);
 char *my_revstr(char *);
 char *my_strstr(char *, char const *);
 int my_strcmp(char const *, char const *);
@@ -53,5 +53,6 @@ char *my_put_nbr_in_str(int);
 char *my_convert_base(long long, char *);
 char *my_convert_base_bis(long long, int, char *, char *);
 char *my_load_file_in_mem(const char *);
+char **my_str_to_word_array(const char *str, char separator);
 
 #endif /* !MY_H_ */

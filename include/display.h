@@ -76,6 +76,10 @@
     // graphics.c
     void display_settings_graphics(game_t *game);
 
+// Stats
+    // display.c
+    void display_stats(game_t *game);
+
 // Top Bar
     void display_top_bar(game_t *game);
 

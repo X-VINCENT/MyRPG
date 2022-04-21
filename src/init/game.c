@@ -19,6 +19,8 @@ void init_game_variables(game_t *game)
     game->language = ENGLISH;
     game->music_volume = 100;
     game->effects_volume = 100;
+    game->nb_golds = 0;
+    game->nb_xps = 0;
     game->nb_abilities = 100;
 }
 
@@ -28,7 +30,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    init_file_rat_position(game);
+    init_data(game);
     init_game_variables(game);
     init_textures(game);
     init_window(game);

@@ -24,12 +24,14 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
+								destroy/assets/stats/destroy.c               \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
 								destroy/assets/pnjs/destroy.c                \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
+								destroy/data/destroy.c                       \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
@@ -51,6 +53,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/display.c                   \
 								display/settings/graphics.c                  \
 								display/settings/game.c                      \
+								display/stats/display.c                      \
 								display/top_bar/display.c                    \
 								errors/check_assets.c                        \
 								errors/check_audio.c                         \
@@ -137,6 +140,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/settings/key_pressed.c                 \
 								event/settings/mouse_moved.c                 \
 								event/settings/mouse_pressed.c               \
+								event/stats/key_pressed.c                    \
+								event/stats/mouse_moved.c                    \
+								event/stats/mouse_pressed.c                  \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
@@ -168,13 +174,14 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/game.c                  \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
+								init/assets/stats/init.c                     \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
-								init/data/init_rat_position.c                \
+								init/data/init.c                             \
 								init/inventory/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
@@ -194,6 +201,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/museum.c                              \
 								stage/settings.c                             \
 								stage/stage.c                                \
+								stage/stats.c                                \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \
@@ -213,6 +221,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
+								tools/save.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)

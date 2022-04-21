@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** destroy inventory
+** Destroy Inventory for My RPG
 ** File description:
-** destroy
+** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #include "rpg.h"

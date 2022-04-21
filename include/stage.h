@@ -22,10 +22,10 @@
     #define RAT_TRANSITION_ENTER 8
     #define RAT_TRANSITION_QUIT 9
 
-    #define MENU1_STAGE 10
+    #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
-    #define MENU3_STAGE 12
-    #define MENU4_STAGE 13
+    #define STATS_STAGE 12
+    #define HOW_TO_PLAY_STAGE 13
     #define SETTINGS_STAGE 14
 
 // Settings Stage
@@ -65,5 +65,8 @@ void settings_stage(game_t *game);
 void select_game_stage(game_t *game);
 void select_game_stage_2(game_t *game);
 void select_game_stage_3(game_t *game);
+
+// stats.c
+void stats_stage(game_t *game);
 
 #endif /* !STAGE_H_ */

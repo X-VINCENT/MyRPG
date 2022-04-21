@@ -274,6 +274,17 @@
     // mouse_pressed.c
     void settings_mouse_pressed(game_t *game);
 
+// Stats
+    // key_pressed.c
+    void stats_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void stats_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void stats_mouse_pressed(game_t *game);
+
+
 // Top Bar
     // key_pressed.c
     void top_bar_key_pressed(game_t *game);

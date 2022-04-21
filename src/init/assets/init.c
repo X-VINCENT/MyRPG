@@ -25,6 +25,7 @@ void init_assets(game_t *game)
     init_top_bar(game);
     init_transitions(game);
     init_struct_pnjs(game);
+    init_stats(game);
 }
 
 void init_cursor(game_t *game)

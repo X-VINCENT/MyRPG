@@ -50,10 +50,10 @@ void set_texts_origin_settings(game_t *game)
 
 void set_texts_origin(game_t *game)
 {
-    set_text_origin(game->assets->top_bar->menu1);
+    set_text_origin(game->assets->top_bar->game);
     set_text_origin(game->assets->top_bar->abilities);
-    set_text_origin(game->assets->top_bar->menu3);
-    set_text_origin(game->assets->top_bar->menu4);
+    set_text_origin(game->assets->top_bar->stats);
+    set_text_origin(game->assets->top_bar->howtoplay);
     set_text_origin(game->assets->home_menu->press);
     set_texts_origin_abilities(game);
     set_texts_origin_settings(game);

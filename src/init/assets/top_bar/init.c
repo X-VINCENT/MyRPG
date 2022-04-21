@@ -11,22 +11,22 @@ void init_texts_top_bar(game_t *game)
 {
     top_bar_t *bar = game->assets->top_bar;
     sfVector2f pos1 = init_pos(384, 64);
-    sfVector2f pos2 = init_pos(684, 64);
-    sfVector2f pos3 = init_pos(984, 64);
-    sfVector2f pos4 = init_pos(1284, 64);
+    sfVector2f pos2 = init_pos(654, 64);
+    sfVector2f pos3 = init_pos(940, 64);
+    sfVector2f pos4 = init_pos(1255, 64);
 
-    bar->menu1 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_1);
+    bar->game = create_text(FONT_RPG, sfWhite, 48, ENGLISH_GAME);
     bar->abilities = create_text(FONT_RPG, sfWhite, 48, ENGLISH_ABILITIES);
-    bar->menu3 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_3);
-    bar->menu4 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_4);
-    set_text_origin(bar->menu1);
+    bar->stats = create_text(FONT_RPG, sfWhite, 48, ENGLISH_STATS);
+    bar->howtoplay = create_text(FONT_RPG, sfWhite, 48, ENGLISH_HOW_TO_GAME);
+    set_text_origin(bar->game);
     set_text_origin(bar->abilities);
-    set_text_origin(bar->menu3);
-    set_text_origin(bar->menu4);
-    sfText_setPosition(bar->menu1, pos1);
+    set_text_origin(bar->stats);
+    set_text_origin(bar->howtoplay);
+    sfText_setPosition(bar->game, pos1);
     sfText_setPosition(bar->abilities, pos2);
-    sfText_setPosition(bar->menu3, pos3);
-    sfText_setPosition(bar->menu4, pos4);
+    sfText_setPosition(bar->stats, pos3);
+    sfText_setPosition(bar->howtoplay, pos4);
 }
 
 void init_sprites_top_bar(game_t *game)

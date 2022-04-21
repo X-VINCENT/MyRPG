@@ -19,10 +19,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // ENGLISH
     // Menus
-    #define ENGLISH_MENU_1 "Menu 1"
+    #define ENGLISH_GAME "Game"
     #define ENGLISH_ABILITIES "Abilities"
-    #define ENGLISH_MENU_3 "Menu 3"
-    #define ENGLISH_MENU_4 "Menu 4"
+    #define ENGLISH_STATS "Stats"
+    #define ENGLISH_HOW_TO_GAME "How To Play"
 
     // Home
     #define ENGLISH_PRESS_ENTER "PRESS ENTER TO CONTINUE"
@@ -74,10 +74,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // FRENCH
     // Menus
-    #define FRENCH_MENU_1 "Menu 1"
+    #define FRENCH_GAME "Jeu"
     #define FRENCH_ABILITIES "Competences"
-    #define FRENCH_MENU_3 "Menu 3"
-    #define FRENCH_MENU_4 "Menu 4"
+    #define FRENCH_STATS "Statistiques"
+    #define FRENCH_HOW_TO_GAME "Comment jouer"
 
     // Home
     #define FRENCH_PRESS_ENTER "APPUYEZ SUR ENTRER POUR CONTINUER"
@@ -129,10 +129,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // GERMAN
     // Menus
-    #define GERMAN_MENU_1 "Menu 1"
+    #define GERMAN_GAME "Spiel"
     #define GERMAN_ABILITIES "Fahigkeiten"
-    #define GERMAN_MENU_3 "Menu 3"
-    #define GERMAN_MENU_4 "Menu 4"
+    #define GERMAN_STATS "Statistiken"
+    #define GERMAN_HOW_TO_GAME "Spielanleitung"
 
     // Home
     #define GERMAN_PRESS_ENTER "DRUCK ENTER UM FORTSETZEN"
@@ -184,10 +184,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // SPANISH
     // Menus
-    #define SPANISH_MENU_1 "Menu 1"
+    #define SPANISH_GAME "Juego"
     #define SPANISH_ABILITIES "Habilidades"
-    #define SPANISH_MENU_3 "Menu 3"
-    #define SPANISH_MENU_4 "Menu 4"
+    #define SPANISH_STATS "Estadisticas"
+    #define SPANISH_HOW_TO_GAME "Como jugar"
 
     // Home
     #define SPANISH_PRESS_ENTER "PRESIONA ENTER PARA CONTINUAR"
