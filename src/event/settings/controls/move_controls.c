@@ -51,10 +51,15 @@ void settings_controls_scrolling_bar_event(game_t *game)
         game->window, mouse, NULL);
 
     if (time_elapsed(s_controls->scrolling_clock) > 0.01) {
-        if (sfKeyboard_isKeyPressed(game->keys[ZOOM_IN]))
+        if (game->event->event->mouseWheel.delta > 0 &&
+            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved) {
             move_controls_up(game);
-        else if (sfKeyboard_isKeyPressed(game->keys[ZOOM_OUT]))
+            game->event->event->mouseWheel.delta = 0;
+        } else if (game->event->event->mouseWheel.delta < 0 &&
+            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved)  {
             move_controls_down(game);
+            game->event->event->mouseWheel.delta = 0;
+        }
         sfClock_restart(s_controls->scrolling_clock);
     }
 }
