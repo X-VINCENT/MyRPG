@@ -62,6 +62,7 @@
 // Rat
     // display.c
     void display_rat(game_t *game);
+    void display_circle_rat(game_t *game);
 
 // Settings
     // audio.c

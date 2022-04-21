@@ -86,7 +86,6 @@ void display_rat(game_t *game)
     rat_t *rat = game->assets->rat;
 
     animate_rats(game);
-    display_circle_rat(game);
     if (rat->is_dodging == 1)
         return display_rat_dodge(game);
     switch (rat->is_moving) {
