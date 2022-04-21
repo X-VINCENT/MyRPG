@@ -16,8 +16,10 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
+								destroy/assets/game_menu/destroy.c           \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
+								destroy/assets/howtoplay/destroy.c           \
 								destroy/assets/ice_shop/destroy.c 			 \
 								destroy/assets/market/destroy.c 			 \
 								destroy/assets/museum/destroy.c 			 \
@@ -40,9 +42,11 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
 								display/home_menu/display.c                  \
+								display/howtoplay/display.c                  \
 								display/ice_shop/display.c 					 \
 								display/market/display.c 					 \
 								display/museum/display.c 					 \
@@ -88,9 +92,15 @@ SRC                 =           $(addprefix src/,                            \
 								event/clothe/key_pressed.c 					 \
 								event/clothe/mouse_moved.c 					 \
 								event/clothe/mouse_pressed.c 				 \
+								event/game_menu/key_pressed.c                \
+								event/game_menu/mouse_moved.c                \
+								event/game_menu/mouse_pressed.c              \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
+								event/howtoplay/key_pressed.c                \
+								event/howtoplay/mouse_moved.c                \
+								event/howtoplay/mouse_pressed.c              \
 								event/market/locations/door.c 				 \
 								event/market/locations/locations.c 			 \
 								event/market/key_pressed.c 		             \
@@ -158,11 +168,13 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
+								init/assets/game_menu/init.c                 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
+								init/assets/howtoplay/init.c                 \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
-								init/assets/museum/init.c                   \
+								init/assets/museum/init.c                    \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init_rat_2.c                 \
@@ -196,7 +208,9 @@ SRC                 =           $(addprefix src/,                            \
 								stage/appartment.c                           \
 								stage/city.c                                 \
 								stage/clothe.c                               \
+								stage/game_menu.c                            \
 								stage/home_menu.c                            \
+								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
 								stage/museum.c                               \

@@ -22,7 +22,7 @@ void set_top_bar_title_color(game_t *game)
         sfText_setColor(bar->abilities, color);
     if (game->stage == STATS_STAGE)
         sfText_setColor(bar->stats, color);
-    if (game->stage == HOW_TO_PLAY_STAGE)
+    if (game->stage == HOWTOPLAY_STAGE)
         sfText_setColor(bar->howtoplay, color);
 }
 
