@@ -225,10 +225,10 @@
     } transitions_t;
 
     typedef struct top_bar {
-        sfText *menu1;
+        sfText *game;
         sfText *abilities;
-        sfText *menu3;
-        sfText *menu4;
+        sfText *stats;
+        sfText *howtoplay;
         sfSprite *settings_off;
         sfSprite *settings_on;
         sfSprite *quit_off;

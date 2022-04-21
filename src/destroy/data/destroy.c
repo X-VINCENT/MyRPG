@@ -11,7 +11,8 @@ void destroy_save(save_t *save)
 {
     if (!save)
         return;
-    free(save->abilities);
+    if (save->abilities)
+        free(save->abilities);
     free(save);
 }
 
@@ -19,8 +20,7 @@ void destroy_data(data_t *data)
 {
     if (!data)
         return;
-    destroy_save(data->save1);
-    destroy_save(data->save2);
-    destroy_save(data->save3);
+    if (data->save1)
+        destroy_save(data->save1);
     free(data);
 }
