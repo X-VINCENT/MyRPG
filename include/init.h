@@ -50,11 +50,7 @@
 
     // Museum1
         //init.c
-        void init_museum1(game_t *game);
-
-    // Museum2
-        //init.c
-        void init_museum2(game_t *game);
+        void init_museum(game_t *game);
 
     // Rat
         // actions.c
@@ -62,6 +58,7 @@
 
         // init.c
         void init_rat(game_t *game, sfTexture *texture);
+        void init_rat_circle(game_t *game);
 
     // Settings
         // audio.c

@@ -53,15 +53,12 @@
 
 // Museum1
     // display.c
-    void display_museum1(game_t *game);
-
-// Museum2
-    // display.c
-    void display_museum2(game_t *game);
+    void display_museum(game_t *game);
 
 // Rat
     // display.c
     void display_rat(game_t *game);
+    void display_circle_rat(game_t *game);
 
 // Settings
     // audio.c

@@ -26,15 +26,11 @@
         sfImage *hitbox;
     } appartment_t;
 
-    typedef struct museum1 {
+    typedef struct museum {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
-    } museum1_t;
-
-    typedef struct museum2 {
-        sfSprite *bg;
-        sfImage *hitbox;
-    } museum2_t;
+    } museum_t;
 
     typedef struct ice {
         sfSprite *bg;
@@ -97,6 +93,7 @@
         sfSprite *dodge_up_left;
         sfSprite *dodge_up_right;
         sfSprite *shadow;
+        sfCircleShape *circle;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *dodge_anim_clock;
@@ -109,6 +106,7 @@
         int speed;
         int is_moving;
         int is_dodging;
+        float radius_circle;
     } rat_t;
 
     typedef struct settings_game {
@@ -176,7 +174,8 @@
         ROTATE_RIGHT,
         RESET_VIEW,
         ESCAPE,
-        NB_KEYS
+        NB_KEYS,
+        HITBOX
     };
 
     typedef struct settings_controls {
@@ -253,8 +252,7 @@
         sfSprite *cursor;
         abilities_t *abilities;
         appartment_t *appartment;
-        museum1_t *museum1;
-        museum2_t *museum2;
+        museum_t *museum;
         ice_t *ice;
         market_t *market;
         clothe_t *clothe;
@@ -302,8 +300,8 @@
         sfTexture *clothe_view;
         sfTexture *ice_cream_view;
         sfTexture *market_view;
-        sfTexture *museum_view1;
-        sfTexture *museum_view2;
+        sfTexture *museum_bg;
+        sfTexture *museum_bg_top;
         sfTexture *cursor_icon;
         sfTexture *window_icon;
         sfTexture *slot_off;

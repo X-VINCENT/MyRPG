@@ -81,8 +81,9 @@
     #define MARKET "assets/images/environments/market/view.png"
 
     // Museum
-    #define MUSEUM1 "assets/images/environments/museum/view1.png"
-    #define MUSEUM2 "assets/images/environments/museum/view2.png"
+    #define MUSEUM "assets/images/environments/museum/museum.png"
+    #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
+    #define MUSEUM_HBOX "assets/images/environments/museum/museum_hitbox.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

@@ -68,10 +68,7 @@ void select_game_stage_2(game_t *game)
             clothe_stage(game);
             break;
         case MUSEUM1_STAGE:
-            museum1_stage(game);
-            break;
-        case MUSEUM2_STAGE:
-            museum2_stage(game);
+            museum_stage(game);
             break;
         default:
             break;

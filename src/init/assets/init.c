@@ -19,8 +19,7 @@ void init_assets(game_t *game)
     init_rat(game, game->textures->rat_blue);
     init_appartment(game);
     init_ice_cream(game);
-    init_museum1(game);
-    init_museum2(game);
+    init_museum(game);
     init_market(game);
     init_settings(game);
     init_top_bar(game);
