@@ -219,6 +219,18 @@
         int current;
     } settings_t;
 
+    typedef struct stats {
+        sfSprite *bg;
+        sfSprite *maxpd;
+        sfSprite *gold;
+        sfSprite *xp;
+        sfSprite *abilities;
+        sfText *nb_xps;
+        sfText *nb_golds;
+        sfText *nb_abilities;
+        sfClock *clock;
+    } stats_t;
+
     typedef struct transitions {
         sfSprite *rat_enter;
         sfSprite *rat_quit;
@@ -251,6 +263,7 @@
         rat_t *rat;
         pnj_t **pnj;
         settings_t *settings;
+        stats_t *stats;
         transitions_t *transitions;
         top_bar_t *top_bar;
     } assets_t;
@@ -304,6 +317,7 @@
         sfTexture *settings_bg;
         sfTexture *transition_enter;
         sfTexture *transition_quit;
+        sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
         sfTexture *message_box;

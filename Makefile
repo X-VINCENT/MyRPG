@@ -25,6 +25,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
+								destroy/assets/stats/destroy.c               \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
 								destroy/assets/pnjs/destroy.c                \
@@ -54,6 +55,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/display.c                   \
 								display/settings/graphics.c                  \
 								display/settings/game.c                      \
+								display/stats/display.c                      \
 								display/top_bar/display.c                    \
 								errors/check_assets.c                        \
 								errors/check_audio.c                         \
@@ -140,6 +142,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/settings/key_pressed.c                 \
 								event/settings/mouse_moved.c                 \
 								event/settings/mouse_pressed.c               \
+								event/stats/key_pressed.c                    \
+								event/stats/mouse_moved.c                    \
+								event/stats/mouse_pressed.c                  \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
@@ -171,6 +176,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/game.c                  \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
+								init/assets/stats/init.c                     \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
@@ -198,6 +204,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/museum2.c                              \
 								stage/settings.c                             \
 								stage/stage.c                                \
+								stage/stats.c                                \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \

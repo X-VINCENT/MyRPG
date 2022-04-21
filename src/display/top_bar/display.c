@@ -16,8 +16,14 @@ void set_top_bar_title_color(game_t *game)
     sfText_setColor(bar->abilities, sfWhite);
     sfText_setColor(bar->stats, sfWhite);
     sfText_setColor(bar->howtoplay, sfWhite);
+    if (game->stage == GAME_STAGE)
+        sfText_setColor(bar->game, color);
     if (game->stage == ABILITIES_STAGE)
         sfText_setColor(bar->abilities, color);
+    if (game->stage == STATS_STAGE)
+        sfText_setColor(bar->stats, color);
+    if (game->stage == HOW_TO_PLAY_STAGE)
+        sfText_setColor(bar->howtoplay, color);
 }
 
 void display_top_bar(game_t *game)

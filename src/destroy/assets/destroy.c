@@ -21,6 +21,7 @@ void destroy_assets(assets_t *assets)
     destroy_museum1(assets->museum1);
     destroy_museum2(assets->museum2);
     destroy_settings(assets->settings);
+    destroy_stats(assets->stats);
     destroy_top_bar(assets->top_bar);
     destroy_pnjs(assets->pnj);
     free(assets);

@@ -20,4 +20,5 @@ void init_textures_menus(game_t *game)
     textures->settings_bg = sfTexture_createFromFile(SETTINGS_BG, NULL);
     textures->transition_enter = sfTexture_createFromFile(RAT_ENTER, NULL);
     textures->transition_quit = sfTexture_createFromFile(RAT_QUIT, NULL);
+    textures->menu_bg = sfTexture_createFromFile(MENU_BG, NULL);
 }

@@ -83,6 +83,10 @@
         void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
+    // Stats
+        // init.c
+        void init_stats(game_t *game);
+
     // Top Bar
         // init.c
         void init_top_bar(game_t *game);

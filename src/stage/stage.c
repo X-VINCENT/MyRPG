@@ -8,10 +8,10 @@
 #include "rpg.h"
 
 bool is_it_a_menu(int stage) {
-    if (stage != MENU1_STAGE &&
+    if (stage != GAME_STAGE &&
         stage != ABILITIES_STAGE &&
-        stage != MENU3_STAGE &&
-        stage != MENU4_STAGE &&
+        stage != STATS_STAGE &&
+        stage != HOW_TO_PLAY_STAGE &&
         stage != SETTINGS_STAGE)
         return false;
     return true;
@@ -39,8 +39,15 @@ void check_escape_key_pressed(game_t *game)
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
+        case GAME_STAGE:
+            break;
         case ABILITIES_STAGE:
             abilities_stage(game);
+            break;
+        case STATS_STAGE:
+            stats_stage(game);
+            break;
+        case HOW_TO_PLAY_STAGE:
             break;
         case SETTINGS_STAGE:
             settings_stage(game);

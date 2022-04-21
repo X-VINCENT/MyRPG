@@ -68,6 +68,10 @@
         // destroy.c
         void destroy_settings(settings_t *settings);
 
+    // Stats
+        // destroy.c
+        void destroy_stats(stats_t *stats);
+
     // Top Bar
         // destroy.c
         void destroy_top_bar(top_bar_t *bar);
