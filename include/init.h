@@ -30,8 +30,12 @@
             void init_doors(game_t *game);
 
     // Clothe
-        //init.c
+        // init.c
         void init_clothe(game_t *game);
+
+    // Game Menu
+        // init.c
+        void init_game_menu(game_t *game);
 
     // Home Menu
         // Parallax
@@ -39,6 +43,10 @@
             void init_parallax(game_t *game);
         // init.c
         void init_home_menu(game_t *game);
+
+    // Howtoplay
+        // init.c
+        void init_howtoplay(game_t *game);
 
     // Ice Cream
         // init.c

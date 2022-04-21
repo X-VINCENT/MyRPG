@@ -15,7 +15,9 @@ void init_assets(game_t *game)
     init_cursor(game);
     init_city(game);
     init_clothe(game);
+    init_game_menu(game);
     init_home_menu(game);
+    init_howtoplay(game);
     init_rat(game, game->textures->rat_blue);
     init_appartment(game);
     init_ice_cream(game);

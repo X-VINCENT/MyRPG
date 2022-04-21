@@ -22,6 +22,10 @@
     // display.c
     void display_city(game_t *game);
 
+// Game Menu
+    // display.c
+    void display_game_menu(game_t *game);
+
 // Home Menu
     // Parallax
         // display.c
@@ -29,6 +33,10 @@
         void display_parallax(game_t *game);
     // display.c
     void display_home_menu(game_t *game);
+
+// HowToPlay
+    // display.c
+    void display_howtoplay(game_t *game);
 
 // Ice Shop
     // display.c

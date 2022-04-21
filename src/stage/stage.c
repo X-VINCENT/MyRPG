@@ -11,7 +11,7 @@ bool is_it_a_menu(int stage) {
     if (stage != GAME_STAGE &&
         stage != ABILITIES_STAGE &&
         stage != STATS_STAGE &&
-        stage != HOW_TO_PLAY_STAGE &&
+        stage != HOWTOPLAY_STAGE &&
         stage != SETTINGS_STAGE)
         return false;
     return true;
@@ -40,6 +40,7 @@ void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
         case GAME_STAGE:
+            game_menu_stage(game);
             break;
         case ABILITIES_STAGE:
             abilities_stage(game);
@@ -47,7 +48,8 @@ void select_game_stage_3(game_t *game)
         case STATS_STAGE:
             stats_stage(game);
             break;
-        case HOW_TO_PLAY_STAGE:
+        case HOWTOPLAY_STAGE:
+            howtoplay_stage(game);
             break;
         case SETTINGS_STAGE:
             settings_stage(game);

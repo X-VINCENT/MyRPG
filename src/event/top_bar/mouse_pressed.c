@@ -25,7 +25,7 @@ void top_bar_mouse_pressed_texts(game_t *game)
     if (sfFloatRect_contains(&r_stats, coords.x, coords.y))
         game->stage = STATS_STAGE;
     if (sfFloatRect_contains(&r_howtoplay, coords.x, coords.y))
-        game->stage = HOW_TO_PLAY_STAGE;
+        game->stage = HOWTOPLAY_STAGE;
 }
 
 void top_bar_mouse_pressed(game_t *game)

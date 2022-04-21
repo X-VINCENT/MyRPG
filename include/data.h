@@ -44,7 +44,6 @@
 
     typedef struct clothe {
         sfSprite *bg;
-
         sfImage *hitbox;
     } clothe_t;
 
@@ -62,6 +61,11 @@
         sfImage *hitbox;
     } city_t;
 
+    typedef struct game_menu {
+        sfSprite *bg;
+        sfClock *clock;
+    } game_menu_t;
+
     typedef struct home_menu {
         parallax_t *parallax;
         sfSprite **quit;
@@ -72,6 +76,11 @@
         int options_state;
         sfClock *button_clock;
     } home_menu_t;
+
+    typedef struct howtoplay {
+        sfSprite *bg;
+        sfClock *clock;
+    } howtoplay_t;
 
     typedef struct rat {
         sfSprite *idle_front;
@@ -252,6 +261,8 @@
         sfSprite *cursor;
         abilities_t *abilities;
         appartment_t *appartment;
+        game_menu_t *game_menu;
+        howtoplay_t *howtoplay;
         museum_t *museum;
         ice_t *ice;
         market_t *market;

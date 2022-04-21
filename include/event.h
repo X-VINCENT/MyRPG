@@ -89,6 +89,16 @@
         // mouse_pressed.c
         void clothe_store_mouse_pressed(game_t *game);
 
+// Game Menu
+    // key_pressed.c
+    void game_menu_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void game_menu_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void game_menu_mouse_pressed(game_t *game);
+
 // Home Menu
     // key_pressed.c
     void home_menu_key_pressed(game_t *game);
@@ -98,6 +108,16 @@
 
     // mouse_pressed.c
     void home_menu_mouse_pressed(game_t *game);
+
+// HowToPlay
+    // key_pressed.c
+    void howtoplay_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void howtoplay_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void howtoplay_mouse_pressed(game_t *game);
 
 // Ice Cream Shop
     // Locations
@@ -150,8 +170,8 @@
         // mouse_pressed.c
         void museum1_mouse_pressed(game_t *game);
 
-//Museum2
-    //Locations
+// Museum2
+    // Locations
         //door.c
         void location_door_back_to_museum1(game_t *game);
 

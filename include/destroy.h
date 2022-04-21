@@ -35,11 +35,19 @@
         // destroy.c
         void destroy_clothe(clothe_t *clothe);
 
+    // Game Menu
+        // destroy.c
+        void destroy_game_menu(game_menu_t *game_menu);
+
     // Home Menu
         // destroy.c
         void destroy_home_menu(home_menu_t *home_menu);
         // parallax.c
         void destroy_parallax(parallax_t *parallax);
+
+    // HowToPlay
+        // destroy.c
+        void destroy_howtoplay(howtoplay_t *howtoplay);
 
     // Inventory
         // destroy.c
