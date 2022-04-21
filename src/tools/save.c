@@ -46,7 +46,6 @@ void free_and_close(char *str, char **arr, FILE *fp)
         free(str);
     if (fp)
         fclose(fp);
-    return NULL;
 }
 
 int *load_int_arr_from_file(const char path[])
@@ -64,7 +63,7 @@ int *load_int_arr_from_file(const char path[])
         return NULL;
     for (int idx = 0; arr[idx] != NULL; idx += 1)
         if ((values[idx] = my_getnbr(arr[idx])) == -1)
-            return -1;
+            return NULL;
     values[my_arrlen(arr)] = -1;
     free_and_close(str, arr, fp);
     return values;
