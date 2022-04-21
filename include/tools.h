@@ -15,6 +15,22 @@
     const char *get_key_name(sfKeyCode key);
 
 // Language
+    // Abilities
+        // english.c
+        void set_texts_english_abilities(game_t *game);
+
+        // french.c
+        void set_texts_french_abilities(game_t *game);
+
+        // german.c
+        void set_texts_german_abilities(game_t *game);
+
+        // origin.c
+        void set_texts_origin_abilities(game_t *game);
+
+        // spanish.c
+        void set_texts_spanish_abilities(game_t *game);
+
     // english.c
     void set_texts_english(game_t *game);
 

@@ -10,6 +10,19 @@
 
     #include "rpg.h"
 
+// Abilities
+    // key_pressed.c
+    void abilities_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void abilities_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void abilities_mouse_pressed(game_t *game);
+
+    // move_tree.c
+    void abilities_scrolling_bar_event(game_t *game);
+
 // Appartment
     // Locations
         // door.c

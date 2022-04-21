@@ -16,15 +16,15 @@ void init_texts_top_bar(game_t *game)
     sfVector2f pos4 = init_pos(1284, 64);
 
     bar->menu1 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_1);
-    bar->menu2 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_2);
+    bar->abilities = create_text(FONT_RPG, sfWhite, 48, ENGLISH_ABILITIES);
     bar->menu3 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_3);
     bar->menu4 = create_text(FONT_RPG, sfWhite, 48, ENGLISH_MENU_4);
     set_text_origin(bar->menu1);
-    set_text_origin(bar->menu2);
+    set_text_origin(bar->abilities);
     set_text_origin(bar->menu3);
     set_text_origin(bar->menu4);
     sfText_setPosition(bar->menu1, pos1);
-    sfText_setPosition(bar->menu2, pos2);
+    sfText_setPosition(bar->abilities, pos2);
     sfText_setPosition(bar->menu3, pos3);
     sfText_setPosition(bar->menu4, pos4);
 }

@@ -53,10 +53,11 @@ void set_texts_english_settings(game_t *game)
 void set_texts_english(game_t *game)
 {
     sfText_setString(game->assets->top_bar->menu1, ENGLISH_MENU_1);
-    sfText_setString(game->assets->top_bar->menu2, ENGLISH_MENU_2);
+    sfText_setString(game->assets->top_bar->abilities, ENGLISH_ABILITIES);
     sfText_setString(game->assets->top_bar->menu3, ENGLISH_MENU_3);
     sfText_setString(game->assets->top_bar->menu4, ENGLISH_MENU_4);
     sfText_setString(game->assets->home_menu->press, ENGLISH_PRESS_ENTER);
+    set_texts_english_abilities(game);
     set_texts_english_settings(game);
     set_texts_english_controls(game);
 }

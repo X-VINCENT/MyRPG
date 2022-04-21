@@ -1,13 +1,16 @@
 /*
 ** EPITECH PROJECT, 2022
-** Key Pressed Top Bar for My RPG
+** Key Pressed Abilities for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
 
 #include "rpg.h"
 
-void top_bar_key_pressed(game_t *game)
+void abilities_key_pressed(game_t *game)
 {
+    abilities_t *abilities = game->abilities;
     sfEvent *event = game->event->event;
+
+    top_bar_key_pressed(game);
 }

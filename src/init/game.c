@@ -19,6 +19,7 @@ void init_game_variables(game_t *game)
     game->language = ENGLISH;
     game->music_volume = 100;
     game->effects_volume = 100;
+    game->nb_abilities = 100;
 }
 
 game_t *init_game(void)
@@ -35,6 +36,7 @@ game_t *init_game(void)
     init_keys(game);
     init_assets(game);
     init_audio(game);
+    init_abilities(game);
     init_inventory(game);
     return game;
 }

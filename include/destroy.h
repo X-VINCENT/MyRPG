@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Abilities
+    // destroy.c
+    void destroy_abilities(abilities_t *abilities);
+
 // Assets
     // Appartment
         // destroy.c

@@ -10,6 +10,10 @@
 
     #include "rpg.h"
 
+// Abilities
+    // display.c
+    void display_abilities(game_t *game);
+
 // Appartment
     // display.c
     void display_appartment(game_t *game);
@@ -34,8 +38,8 @@
     // display.c
     void display_inventory(game_t *game);
 
-//pnjs
-    //display.c
+// Pnj
+    // display.c
     void display_pnj(game_t *game, pnj_t *pnj);
     void move_pnj(game_t *game, int nbr_animated_pnj);
 

@@ -10,6 +10,13 @@
 
     #include "rpg.h"
 
+// Abilities
+    // init.c
+    void init_abilities(game_t *game);
+
+    // menu.c
+    void init_abilities_menu(game_t *game);
+
 // Assets
     // Appartment
         // init.c

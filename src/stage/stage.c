@@ -7,20 +7,28 @@
 
 #include "rpg.h"
 
+bool is_it_a_menu(int stage) {
+    if (stage != MENU1_STAGE &&
+        stage != ABILITIES_STAGE &&
+        stage != MENU3_STAGE &&
+        stage != MENU4_STAGE &&
+        stage != SETTINGS_STAGE)
+        return false;
+    return true;
+}
+
 void check_escape_key_pressed(game_t *game)
 {
     sfEvent *event = game->event->event;
 
-    if (game->stage != SETTINGS_STAGE) {
-        if (event->key.code == game->keys[ESCAPE]) {
+    if (event->key.code == game->keys[ESCAPE]) {
+        if (!is_it_a_menu(game->stage)) {
             sfView_setRotation(game->view, 0);
             game->last_stage = game->stage;
             game->stage = SETTINGS_STAGE;
             event->key.code = sfKeyUnknown;
+            return;
         }
-        return;
-    }
-    if (event->key.code == game->keys[ESCAPE]) {
         if (game->last_stage == CITY_STAGE)
             sfView_setSize(game->view, VIEW_CITY_SIZE);
         game->stage = game->last_stage;
@@ -31,6 +39,9 @@ void check_escape_key_pressed(game_t *game)
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
+        case ABILITIES_STAGE:
+            abilities_stage(game);
+            break;
         case SETTINGS_STAGE:
             settings_stage(game);
             break;
