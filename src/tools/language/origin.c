@@ -26,6 +26,7 @@ void set_texts_origin_controls(game_t *game)
     set_text_origin_middle_left(s_controls->keys[ROTATE_LEFT]->title);
     set_text_origin_middle_left(s_controls->keys[ROTATE_RIGHT]->title);
     set_text_origin_middle_left(s_controls->keys[RESET_VIEW]->title);
+    set_text_origin_middle_left(s_controls->keys[HITBOX]->title);
     set_text_origin_middle_left(s_controls->keys[ESCAPE]->title);
 }
 

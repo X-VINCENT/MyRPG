@@ -64,7 +64,9 @@ void init_settings_controls_keys_2(game_t *game)
         ENGLISH_ROTATE_RIGHT, get_key_name(game->keys[ROTATE_RIGHT]));
     s_controls->keys[RESET_VIEW] = create_key(game, 1465,
         ENGLISH_RESET_VIEW, get_key_name(game->keys[RESET_VIEW]));
-    s_controls->keys[ESCAPE] = create_key(game, 1565,
+    s_controls->keys[HITBOX] = create_key(game, 1565,
+        ENGLISH_HITBOX, get_key_name(game->keys[HITBOX]));
+    s_controls->keys[ESCAPE] = create_key(game, 1665,
         ENGLISH_ESCAPE, get_key_name(game->keys[ESCAPE]));
 }
 

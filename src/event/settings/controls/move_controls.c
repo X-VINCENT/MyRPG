@@ -28,7 +28,7 @@ void move_controls_up(game_t *game)
     if (sfSprite_getPosition(s_controls->scrolling_bar_inside).y > 329) {
         sfSprite_move(s_controls->scrolling_bar_inside,
             (sfVector2f){0, -10});
-        move_keys(s_controls, 30);
+        move_keys(s_controls, 10 * (NB_KEYS / 3.9));
     }
 }
 
@@ -39,7 +39,7 @@ void move_controls_down(game_t *game)
     if (sfSprite_getPosition(s_controls->scrolling_bar_inside).y < 629) {
         sfSprite_move(s_controls->scrolling_bar_inside,
             (sfVector2f){0, 10});
-        move_keys(s_controls, -30);
+        move_keys(s_controls, -10 * (NB_KEYS / 3.9));
     }
 }
 

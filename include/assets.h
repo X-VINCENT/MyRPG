@@ -83,7 +83,7 @@
     // Museum
     #define MUSEUM "assets/images/environments/museum/museum.png"
     #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
-    #define MUSEUM_HBOX "assets/images/environments/museum/museum_hitbox.png"
+    #define MUSEUM_HITBOX "assets/images/environments/museum/museum_hitbox.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

@@ -67,6 +67,7 @@
     #define ENGLISH_ROTATE_LEFT "View : Rotate Left"
     #define ENGLISH_ROTATE_RIGHT "View : Rotate Right"
     #define ENGLISH_RESET_VIEW "View : Reset"
+    #define ENGLISH_HITBOX "Display Hitbox"
     #define ENGLISH_ESCAPE "Escape"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -122,6 +123,7 @@
     #define FRENCH_ROTATE_LEFT "Vue : Tourner a gauche"
     #define FRENCH_ROTATE_RIGHT "Vue : Tourner a droite"
     #define FRENCH_RESET_VIEW "Vue : Reinitialiser"
+    #define FRENCH_HITBOX "Afficher la hitbox"
     #define FRENCH_ESCAPE "Echap"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -177,6 +179,7 @@
     #define GERMAN_ROTATE_LEFT "Ansicht : Biegen Links"
     #define GERMAN_ROTATE_RIGHT "Ansicht : Biegen Rechts"
     #define GERMAN_RESET_VIEW "Ansicht : Zurucksetzen"
+    #define GERMAN_HITBOX "Hitbox anzeigen"
     #define GERMAN_ESCAPE "Fliehen"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -232,6 +235,7 @@
     #define SPANISH_ROTATE_LEFT "Ver : Gire a la izquierda"
     #define SPANISH_ROTATE_RIGHT "Ver : Gire a la derecha"
     #define SPANISH_RESET_VIEW "Ver : Restablecer"
+    #define SPANISH_HITBOX "Mostrar hitbox"
     #define SPANISH_ESCAPE "Escapar"
 //////////////////////////////////////////////////////////////////////////////
 

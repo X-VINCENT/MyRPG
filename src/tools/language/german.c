@@ -28,6 +28,13 @@ void set_texts_german_controls(game_t *game)
     sfText_setString(s_controls->keys[ROTATE_RIGHT]->title,
         GERMAN_ROTATE_RIGHT);
     sfText_setString(s_controls->keys[RESET_VIEW]->title, GERMAN_RESET_VIEW);
+    sfText_setString(s_controls->keys[HITBOX]->title, GERMAN_HITBOX);
+}
+
+void set_texts_german_controls_2(game_t *game)
+{
+    settings_controls_t *s_controls = game->assets->settings->controls;
+
     sfText_setString(s_controls->keys[ESCAPE]->title, GERMAN_ESCAPE);
 }
 
@@ -74,4 +81,5 @@ void set_texts_german(game_t *game)
     set_texts_german_abilities(game);
     set_texts_german_settings(game);
     set_texts_german_controls(game);
+    set_texts_german_controls_2(game);
 }

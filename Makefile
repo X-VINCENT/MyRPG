@@ -191,6 +191,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/textures/menus.c                        \
 								init/textures/objects.c                      \
 								init/game.c                                  \
+								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
 								stage/city.c                                 \
@@ -198,7 +199,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/museum.c                              \
+								stage/museum.c                               \
 								stage/settings.c                             \
 								stage/stage.c                                \
 								stage/stats.c                                \
