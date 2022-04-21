@@ -7,8 +7,10 @@
 
 #include "rpg.h"
 
-void destroy_museum1(museum1_t *museum1)
+void destroy_museum(museum_t *museum)
 {
-    destroy_sprite(museum1->bg);
-    free(museum1);
+    destroy_sprite(museum->bg);
+    destroy_sprite(museum->bg_top);
+    destroy_image(museum->hitbox);
+    free(museum);
 }

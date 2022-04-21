@@ -85,7 +85,7 @@
     #define VIEW_MARKET_POS (sfVector2f) {370, 225}
 
     // Museum
-    #define VIEW_MUSEUM1_SIZE (sfVector2f) {1920, 1080}
+    #define VIEW_MUSEUM1_SIZE (sfVector2f) {3000, 3000}
     #define VIEW_MUSEUM1_POS (sfVector2f) {384, 528}
     #define VIEW_MUSEUM2_SIZE (sfVector2f) {1600, 900}
     #define VIEW_MUSEUM2_POS (sfVector2f) {480, 408}
