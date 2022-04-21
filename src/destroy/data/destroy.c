@@ -20,7 +20,5 @@ void destroy_data(data_t *data)
 {
     if (!data)
         return;
-    if (data->save1)
-        destroy_save(data->save1);
     free(data);
 }

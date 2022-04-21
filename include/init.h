@@ -135,6 +135,8 @@
 game_t *init_game(void);
 void init_window(game_t *game);
 void init_event(game_t *game);
+
+// keys.c
 void init_keys(game_t *game);
 
 #endif /* !INIT_H_ */

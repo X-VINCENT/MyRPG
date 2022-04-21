@@ -28,6 +28,13 @@ void set_texts_french_controls(game_t *game)
     sfText_setString(s_controls->keys[ROTATE_RIGHT]->title,
         FRENCH_ROTATE_RIGHT);
     sfText_setString(s_controls->keys[RESET_VIEW]->title, FRENCH_RESET_VIEW);
+    sfText_setString(s_controls->keys[HITBOX]->title,FRENCH_HITBOX);
+}
+
+void set_texts_french_controls_2(game_t *game)
+{
+    settings_controls_t *s_controls = game->assets->settings->controls;
+
     sfText_setString(s_controls->keys[ESCAPE]->title, FRENCH_ESCAPE);
 }
 
@@ -74,4 +81,5 @@ void set_texts_french(game_t *game)
     set_texts_french_abilities(game);
     set_texts_french_settings(game);
     set_texts_french_controls(game);
+    set_texts_french_controls_2(game);
 }

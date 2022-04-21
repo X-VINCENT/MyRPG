@@ -174,8 +174,8 @@
         ROTATE_RIGHT,
         RESET_VIEW,
         ESCAPE,
-        NB_KEYS,
-        HITBOX
+        HITBOX,
+        NB_KEYS
     };
 
     typedef struct settings_controls {
@@ -196,6 +196,7 @@
         settings_key_t *rotate_left;
         settings_key_t *rotate_right;
         settings_key_t *reset_view;
+        settings_key_t *hitbox;
         settings_key_t *escape;
         sfClock *scrolling_clock;
         sfClock *clock;
@@ -220,12 +221,11 @@
 
     typedef struct stats {
         sfSprite *bg;
-        sfSprite *maxpd;
         sfSprite *gold;
         sfSprite *xp;
         sfSprite *abilities;
-        sfText *nb_xps;
         sfText *nb_golds;
+        sfText *nb_xps;
         sfText *nb_abilities;
         sfClock *clock;
     } stats_t;
