@@ -6,7 +6,8 @@ push_code
 .vscode
 *.dat
 unit_tests
-data
+/data
+vgcore*
 
 # Object files
 *.o

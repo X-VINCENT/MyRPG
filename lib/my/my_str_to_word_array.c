@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int count_words(char *str, char separator)
+int count_words(const char *str, char separator)
 {
     int nb_words = 0;
 
