@@ -7,9 +7,9 @@
 
 #include "rpg.h"
 
-void display_museum1(game_t *game)
+void display_museum(game_t *game)
 {
-    museum1_t *museum1 = game->assets->museum1;
+    museum_t *museum = game->assets->museum;
 
-    sfRenderWindow_drawSprite(game->window, museum1->bg, NULL);
+    sfRenderWindow_drawSprite(game->window, museum->bg, NULL);
 }

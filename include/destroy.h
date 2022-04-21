@@ -47,11 +47,7 @@
 
     // Museum1
         // destroy.c
-        void destroy_museum1(museum1_t *museum1);
-
-    // Museum2
-        // destroy.c
-        void destroy_museum2(museum2_t *museum2);
+        void destroy_museum(museum_t *museum);
 
     // Pnj
         // destroy.c

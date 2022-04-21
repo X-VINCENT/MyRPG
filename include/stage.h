@@ -56,10 +56,7 @@ void clothe_stage(game_t *game);
 void market_stage(game_t *game);
 
 // museum1.c
-void museum1_stage(game_t *game);
-
-// museum2.c
-void museum2_stage(game_t *game);
+void museum_stage(game_t *game);
 
 // settings.c
 void settings_stage(game_t *game);

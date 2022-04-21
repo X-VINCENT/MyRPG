@@ -20,8 +20,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/home_menu/parallax/destroy.c  \
 								destroy/assets/ice_shop/destroy.c 			 \
 								destroy/assets/market/destroy.c 			 \
-								destroy/assets/museum1/destroy.c 			 \
-								destroy/assets/museum2/destroy.c 			 \
+								destroy/assets/museum/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
@@ -44,8 +43,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/home_menu/display.c                  \
 								display/ice_shop/display.c 					 \
 								display/market/display.c 					 \
-								display/museum1/display.c 					 \
-								display/museum2/display.c 					 \
+								display/museum/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
 								display/settings/audio.c                     \
@@ -158,8 +156,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
-								init/assets/museum1/init.c                   \
-								init/assets/museum2/init.c                   \
+								init/assets/museum/init.c                   \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/pnj/init_pnj.c                   \
@@ -193,8 +190,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/museum1.c                              \
-								stage/museum2.c                              \
+								stage/museum.c                              \
 								stage/settings.c                             \
 								stage/stage.c                                \
 								tools/keys/get_name.c                        \
@@ -325,6 +321,9 @@ tests_run:
 	$(RM) $(TEST_NAME)
 	@echo $(TESTED)
 	@echo ""
+
+xavier:
+	@echo "xavierpd"
 
 cover:
 	gcovr --exclude tests/
