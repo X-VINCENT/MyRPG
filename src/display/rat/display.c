@@ -71,11 +71,22 @@ void display_rat_idle(game_t *game)
         return sfRenderWindow_drawSprite(w, rat->idle_right, NULL);
 }
 
+void display_circle_rat(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+
+    if (sfKeyboard_isKeyPressed(game->keys[HITBOX])) {
+        sfCircleShape_setRadius(rat->circle, rat->radius_circle);
+        sfRenderWindow_drawCircleShape(game->window, rat->circle, NULL);
+    }
+}
+
 void display_rat(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
     animate_rats(game);
+    display_circle_rat(game);
     if (rat->is_dodging == 1)
         return display_rat_dodge(game);
     switch (rat->is_moving) {

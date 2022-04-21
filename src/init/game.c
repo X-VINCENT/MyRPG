@@ -74,6 +74,7 @@ void init_keys(game_t *game)
     game->keys[ZOOM_OUT] = sfKeyDown;
     game->keys[RESET_VIEW] = sfKeyRControl;
     game->keys[ESCAPE] = sfKeyEscape;
+    game->keys[HITBOX] = sfKeyH;
     game->keys[NB_KEYS] = -1;
     for (int idx = 0; idx <= NB_KEYS; idx += 1)
         game->default_keys[idx] = game->keys[idx];
