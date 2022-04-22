@@ -59,7 +59,7 @@
     // display.c
     void display_market(game_t *game);
 
-// Museum1
+// Museum
     // display.c
     void display_museum(game_t *game);
 

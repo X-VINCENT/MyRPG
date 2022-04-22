@@ -14,7 +14,7 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
     for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++)
         display_pnj(game, game->assets->pnj[i]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
-    display_pnj(game, game->assets->pnj[PNJ_BLACK_TWO]);
+    display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
 }
 
