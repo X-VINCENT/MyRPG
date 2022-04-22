@@ -16,10 +16,8 @@ void event_key_pressed_3(game_t *game)
         case MARKET_STAGE:
             market_key_pressed(game);
             break;
-        case MUSEUM1_STAGE:
-            museum1_key_pressed(game);
-        case MUSEUM2_STAGE:
-            museum2_key_pressed(game);
+        case MUSEUM_STAGE:
+            museum_key_pressed(game);
             break;
         default:
             break;
@@ -35,10 +33,8 @@ void mouse_pressed_3(game_t *game)
         case MARKET_STAGE:
             market_mouse_pressed(game);
             break;
-        case MUSEUM1_STAGE:
-            museum1_mouse_pressed(game);
-        case MUSEUM2_STAGE:
-            museum2_mouse_pressed(game);
+        case MUSEUM_STAGE:
+            museum_mouse_pressed(game);
             break;
         default:
             break;
@@ -54,10 +50,8 @@ void mouse_moved_3(game_t *game)
         case MARKET_STAGE:
             market_mouse_moved(game);
             break;
-        case MUSEUM1_STAGE:
-            museum1_mouse_moved(game);
-        case MUSEUM2_STAGE:
-            museum2_mouse_moved(game);
+        case MUSEUM_STAGE:
+            museum_mouse_moved(game);
             break;
         default:
             break;
