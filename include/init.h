@@ -105,6 +105,8 @@
         void init_struct_pnjs(game_t *game);
         void citizens_png(game_t *game);
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
+        void init_text_pnj_one(pnj_t *pnj, sfVector2f pos);
+        void init_text_pnj_two(pnj_t *pnj, sfVector2f pos);
 
     // init.c
     void init_assets(game_t *game);

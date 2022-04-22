@@ -75,7 +75,8 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     int stop = 0;
-    if (!pnj || !game || !pnj->sprite || !game->window)
+    if (!pnj || !game || !pnj->sprite || !game->window ||
+        !game->assets->rat->idle_front)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     if (pnj->text == false)
