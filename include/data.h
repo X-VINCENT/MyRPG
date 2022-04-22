@@ -228,14 +228,28 @@
         int current;
     } settings_t;
 
+    typedef struct wallet {
+        sfSprite *logo;
+        sfText *title;
+        sfText *value;
+    } wallet_t;
+
+    typedef struct stat_data {
+        sfText *title;
+        sfText *value;
+    } stat_data_t;
+
     typedef struct stats {
         sfSprite *bg;
-        sfSprite *gold;
-        sfSprite *xp;
-        sfSprite *abilities;
-        sfText *nb_golds;
-        sfText *nb_xps;
-        sfText *nb_abilities;
+        sfText *stats;
+        sfSprite *frame;
+        wallet_t *money;
+        wallet_t *xp;
+        wallet_t *abilities;
+        stat_data_t *time_played;
+        stat_data_t *fights;
+        stat_data_t *money_saved;
+        stat_data_t *stolen_items;
         sfClock *clock;
     } stats_t;
 
