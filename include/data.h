@@ -30,6 +30,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        int curent_room;
     } museum_t;
 
     typedef struct ice {

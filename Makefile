@@ -206,6 +206,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
+								stage/check_escape.c                         \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
@@ -225,6 +226,16 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/abilities/german.c            \
 								tools/language/abilities/origin.c            \
 								tools/language/abilities/spanish.c           \
+								tools/language/settings/english.c            \
+								tools/language/settings/french.c             \
+								tools/language/settings/german.c             \
+								tools/language/settings/origin.c             \
+								tools/language/settings/spanish.c            \
+								tools/language/stats/english.c               \
+								tools/language/stats/french.c                \
+								tools/language/stats/german.c                \
+								tools/language/stats/origin.c                \
+								tools/language/stats/spanish.c               \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \
