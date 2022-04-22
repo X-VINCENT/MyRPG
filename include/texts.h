@@ -19,10 +19,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // ENGLISH
     // Menus
-    #define ENGLISH_MENU_1 "Menu 1"
+    #define ENGLISH_GAME "Game"
     #define ENGLISH_ABILITIES "Abilities"
-    #define ENGLISH_MENU_3 "Menu 3"
-    #define ENGLISH_MENU_4 "Menu 4"
+    #define ENGLISH_STATS "Stats"
+    #define ENGLISH_HOW_TO_GAME "How To Play"
 
     // Home
     #define ENGLISH_PRESS_ENTER "PRESS ENTER TO CONTINUE"
@@ -67,6 +67,7 @@
     #define ENGLISH_ROTATE_LEFT "View : Rotate Left"
     #define ENGLISH_ROTATE_RIGHT "View : Rotate Right"
     #define ENGLISH_RESET_VIEW "View : Reset"
+    #define ENGLISH_HITBOX "Display Hitbox"
     #define ENGLISH_ESCAPE "Escape"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -74,10 +75,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // FRENCH
     // Menus
-    #define FRENCH_MENU_1 "Menu 1"
+    #define FRENCH_GAME "Jeu"
     #define FRENCH_ABILITIES "Competences"
-    #define FRENCH_MENU_3 "Menu 3"
-    #define FRENCH_MENU_4 "Menu 4"
+    #define FRENCH_STATS "Statistiques"
+    #define FRENCH_HOW_TO_GAME "Comment jouer"
 
     // Home
     #define FRENCH_PRESS_ENTER "APPUYEZ SUR ENTRER POUR CONTINUER"
@@ -122,6 +123,7 @@
     #define FRENCH_ROTATE_LEFT "Vue : Tourner a gauche"
     #define FRENCH_ROTATE_RIGHT "Vue : Tourner a droite"
     #define FRENCH_RESET_VIEW "Vue : Reinitialiser"
+    #define FRENCH_HITBOX "Afficher la hitbox"
     #define FRENCH_ESCAPE "Echap"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -129,10 +131,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // GERMAN
     // Menus
-    #define GERMAN_MENU_1 "Menu 1"
+    #define GERMAN_GAME "Spiel"
     #define GERMAN_ABILITIES "Fahigkeiten"
-    #define GERMAN_MENU_3 "Menu 3"
-    #define GERMAN_MENU_4 "Menu 4"
+    #define GERMAN_STATS "Statistiken"
+    #define GERMAN_HOW_TO_GAME "Spielanleitung"
 
     // Home
     #define GERMAN_PRESS_ENTER "DRUCK ENTER UM FORTSETZEN"
@@ -177,6 +179,7 @@
     #define GERMAN_ROTATE_LEFT "Ansicht : Biegen Links"
     #define GERMAN_ROTATE_RIGHT "Ansicht : Biegen Rechts"
     #define GERMAN_RESET_VIEW "Ansicht : Zurucksetzen"
+    #define GERMAN_HITBOX "Hitbox anzeigen"
     #define GERMAN_ESCAPE "Fliehen"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -184,10 +187,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // SPANISH
     // Menus
-    #define SPANISH_MENU_1 "Menu 1"
+    #define SPANISH_GAME "Juego"
     #define SPANISH_ABILITIES "Habilidades"
-    #define SPANISH_MENU_3 "Menu 3"
-    #define SPANISH_MENU_4 "Menu 4"
+    #define SPANISH_STATS "Estadisticas"
+    #define SPANISH_HOW_TO_GAME "Como jugar"
 
     // Home
     #define SPANISH_PRESS_ENTER "PRESIONA ENTER PARA CONTINUAR"
@@ -232,6 +235,7 @@
     #define SPANISH_ROTATE_LEFT "Ver : Gire a la izquierda"
     #define SPANISH_ROTATE_RIGHT "Ver : Gire a la derecha"
     #define SPANISH_RESET_VIEW "Ver : Restablecer"
+    #define SPANISH_HITBOX "Mostrar hitbox"
     #define SPANISH_ESCAPE "Escapar"
 //////////////////////////////////////////////////////////////////////////////
 

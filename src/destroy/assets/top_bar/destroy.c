@@ -11,10 +11,10 @@ void destroy_texts_top_bar(top_bar_t *bar)
 {
     if (!bar)
         return;
-    destroy_text(bar->menu1);
+    destroy_text(bar->game);
     destroy_text(bar->abilities);
-    destroy_text(bar->menu3);
-    destroy_text(bar->menu4);
+    destroy_text(bar->stats);
+    destroy_text(bar->howtoplay);
 }
 
 void destroy_sprites_top_bar(top_bar_t *bar)

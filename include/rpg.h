@@ -43,7 +43,7 @@
     void display_cursor(game_t *game);
 
 // Window
-    #define DEFAULT_FPS 0
+    #define DEFAULT_FPS 80
     #define DEFAULT_WINDOW_RESOLUTION 1080
 
 //////////////////////////////////////////////////////////////////////////////
@@ -85,10 +85,12 @@
     #define VIEW_MARKET_POS (sfVector2f) {370, 225}
 
     // Museum
-    #define VIEW_MUSEUM1_SIZE (sfVector2f) {1920, 1080}
-    #define VIEW_MUSEUM1_POS (sfVector2f) {384, 528}
-    #define VIEW_MUSEUM2_SIZE (sfVector2f) {1600, 900}
-    #define VIEW_MUSEUM2_POS (sfVector2f) {480, 408}
+    #define VIEW_MUSEUM_SIZE (sfVector2f) {1280, 720}
+    #define VIEW_MUSEUM_POS (sfVector2f) {256, 342}
+    #define VIEW_MUSEUM_POS_1 (sfVector2f) {693, 1427}
+    #define VIEW_MUSEUM_POS_2 (sfVector2f) {2776, 518}
+    #define VIEW_MUSEUM_POS_3 (sfVector2f) {2337, 1655}
+    #define VIEW_MUSEUM_POS_4 (sfVector2f) {256, 2277}
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -101,13 +103,12 @@
     #define RAT_SPEED_ICE_CREAM_SHOP 1
     #define RAT_SPEED_CLOTHE_SHOP 1
     #define RAT_SPEED_MARKET 2
-    #define RAT_SPEED_MUSEUM1 2
-    #define RAT_SPEED_MUSEUM2 2
+    #define RAT_SPEED_MUSEUM 2
 
     // Pos
     #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f) {2468, 1710}
     #define RAT_DEFAULT_POS_CITY_ICE_SHOP (sfVector2f) {915, 1675}
-    #define RAT_DEFAULT_POS_CITY_MUSEUM1 (sfVector2f) {2034, 590}
+    #define RAT_DEFAULT_POS_CITY_MUSEUM (sfVector2f) {2034, 590}
     #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f) {588, 1672}
     #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f) {1524, 1690}
 
@@ -115,8 +116,15 @@
     #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f) {288, 380}
     #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
     #define RAT_DEFAULT_POS_MARKET (sfVector2f) {30, 342}
-    #define RAT_DEFAULT_POS_MUSEUM1 (sfVector2f) {47, 793}
-    #define RAT_DEFAULT_POS_MUSEUM2 (sfVector2f) {47, 622}
+    #define RAT_DEFAULT_POS_MUSEUM (sfVector2f) {15, 530}
+    #define RAT_DEFAULT_POS_MUSEUM_1_TO_E (sfVector2f) {420, 540}
+    #define RAT_DEFAULT_POS_MUSEUM_E_TO_1 (sfVector2f) {435, 1650}
+    #define RAT_DEFAULT_POS_MUSEUM_1_TO_2 (sfVector2f) {2570, 750}
+    #define RAT_DEFAULT_POS_MUSEUM_2_TO_1 (sfVector2f) {940, 1650}
+    #define RAT_DEFAULT_POS_MUSEUM_2_TO_3 (sfVector2f) {2030, 1790}
+    #define RAT_DEFAULT_POS_MUSEUM_3_TO_2 (sfVector2f) {2980, 760}
+    #define RAT_DEFAULT_POS_MUSEUM_3_TO_4 (sfVector2f) {15, 2375}
+    #define RAT_DEFAULT_POS_MUSEUM_4_TO_3 (sfVector2f) {2645, 1790}
 
     // Idle
     #define RAT_IDLE_FRONT_OFFSET 18
@@ -160,7 +168,7 @@
     #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
     #define LOCATION_CLOTHE_SHOP (sfVector2f) {573, 1666}
     #define LOCATION_MARKET (sfVector2f) {1510, 1683}
-    #define LOCATION_MUSEUM1 (sfVector2f) {2022, 556}
+    #define LOCATION_MUSEUM (sfVector2f) {2022, 556}
 
     // Ice Cream Shop
     #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f) {235, 395}
@@ -171,15 +179,20 @@
     // Market
     #define LOCATION_DOOR_MARKET (sfVector2f) {0, 320}
 
-    // Museum1
-    #define LOCATION_DOOR_MUSEUM1 (sfVector2f) {0, 758}
+    // Museum
+    #define LOCATION_DOOR_MUSEUM (sfVector2f) {10, 500}
+    #define LOCATION_DOOR_MUSEUM_E_TO_1 (sfVector2f) {450, 500}
+    #define LOCATION_DOOR_MUSEUM_1_TO_E (sfVector2f) {430, 1625}
+    #define LOCATION_DOOR_MUSEUM_1_TO_2 (sfVector2f) {950, 1625}
+    #define LOCATION_DOOR_MUSEUM_2_TO_1 (sfVector2f) {2560, 725}
+    #define LOCATION_DOOR_MUSEUM_2_TO_3 (sfVector2f) {2996, 725}
+    #define LOCATION_DOOR_MUSEUM_3_TO_2 (sfVector2f) {2025, 1725}
+    #define LOCATION_DOOR_MUSEUM_3_TO_4 (sfVector2f) {2650, 1725}
+    #define LOCATION_DOOR_MUSEUM_4_TO_3 (sfVector2f) {10, 2325}
+    #define LOCATION_DOOR_MUSEUM_4_TO_CITY (sfVector2f) {500, 2325}
 
-    //Museum2
-    #define LOCATION_TO_MUSEUM2 (sfVector2f) {707, 765}
-
-    //Back to museum1
-    #define DOOR_BACK_TO_MUSEUM1 (sfVector2f) {0, 573}
-    #define LOCATION_BACK_TO_MUSEUM2 (sfVector2f) {667, 805}
+    //Back to museum
+    #define DOOR_BACK_TO_MUSEUM (sfVector2f) {0, 573}
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !MY_RPG_H_ */

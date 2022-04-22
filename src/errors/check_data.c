@@ -11,6 +11,5 @@ int check_data(void)
 {
     int error = 0;
 
-    error += is_file("data/.rat_position");
     return error;
 }

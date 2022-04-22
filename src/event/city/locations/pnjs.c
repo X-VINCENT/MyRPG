@@ -14,8 +14,11 @@ void change_bool_pnj_text(pnj_t *pnj)
         sfClock_restart(pnj->timer_display_text);
     }
     if (!pnj->text_to_display[
-        pnj->text_index_display])
+        pnj->text_index_display]) {
         pnj->text_index_display = 0;
+        pnj->displaying_text = 0;
+        pnj->display_the_text = false;
+    }
 }
 
 void skip_text(pnj_t *pnj)
@@ -23,8 +26,11 @@ void skip_text(pnj_t *pnj)
     pnj->text_index_display += 1;
     sfClock_restart(pnj->timer_display_text);
     if (!pnj->text_to_display[
-        pnj->text_index_display])
+        pnj->text_index_display]) {
         pnj->text_index_display = 0;
+        pnj->displaying_text = 0;
+        pnj->display_the_text = false;
+    }
 }
 
 void check_skip_text_touch(game_t *game, pnj_t *pnj)
@@ -38,20 +44,42 @@ void check_skip_text_touch(game_t *game, pnj_t *pnj)
     }
 }
 
+void check_interact(game_t *game, pnj_t *pnj)
+{
+    if (game->event->event->key.code == game->keys[INTERACT]
+        && pnj->displaying_text == 0) {
+        game->event->event->key.code = sfKeyUnknown;
+        pnj->displaying_text = 1;
+        return;
+    }
+    if (game->event->event->key.code == game->keys[INTERACT]
+        && pnj->displaying_text == 1) {
+        game->event->event->key.code = sfKeyUnknown;
+        pnj->displaying_text = 0;
+        pnj->text_index_display = 0;
+        pnj->display_the_text = false;
+        return;
+    }
+    return;
+}
+
 void check_pnj_intersects(pnj_t *pnj, game_t *game)
 {
-    sfFloatRect pnj_rect;
-    sfFloatRect rat;
+    sfFloatRect pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
+    sfFloatRect rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
 
-    if (!pnj || !game || !pnj->sprite || !game->assets->rat->idle_front)
+    if (!pnj || !game)
         return;
-    rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
     change_bool_pnj_text(pnj);
-    pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
     if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
-        pnj->display_the_text = true;
-        check_skip_text_touch(game, pnj);
+        check_interact(game, pnj);
+        if (pnj->displaying_text == 1) {
+            pnj->display_the_text = true;
+            check_skip_text_touch(game, pnj);
+        } else
+        sfClock_restart(pnj->timer_display_text);
     } else {
+        pnj->displaying_text = 0;
         pnj->display_the_text = false;
         sfClock_restart(pnj->timer_display_text);
         pnj->text_index_display = 0;

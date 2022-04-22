@@ -73,6 +73,10 @@ void down_res_2(game_t *game);
 void up_res(game_t *game);
 void up_res_2(game_t *game);
 
+// save.c
+int get_value_from_file(const char path[]);
+int *load_int_arr_from_file(const char path[]);
+
 // view.c
 void zoom_view(game_t *game);
 void rotate_view(game_t *game);

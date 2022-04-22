@@ -35,23 +35,27 @@
         // destroy.c
         void destroy_clothe(clothe_t *clothe);
 
+    // Game Menu
+        // destroy.c
+        void destroy_game_menu(game_menu_t *game_menu);
+
     // Home Menu
         // destroy.c
         void destroy_home_menu(home_menu_t *home_menu);
         // parallax.c
         void destroy_parallax(parallax_t *parallax);
 
+    // HowToPlay
+        // destroy.c
+        void destroy_howtoplay(howtoplay_t *howtoplay);
+
     // Inventory
         // destroy.c
         void destroy_inventory(inventory_t *inventory);
 
-    // Museum1
+    // Museum
         // destroy.c
-        void destroy_museum1(museum1_t *museum1);
-
-    // Museum2
-        // destroy.c
-        void destroy_museum2(museum2_t *museum2);
+        void destroy_museum(museum_t *museum);
 
     // Pnj
         // destroy.c
@@ -67,6 +71,10 @@
 
         // destroy.c
         void destroy_settings(settings_t *settings);
+
+    // Stats
+        // destroy.c
+        void destroy_stats(stats_t *stats);
 
     // Top Bar
         // destroy.c
@@ -88,6 +96,11 @@
 
     // sounds.c
     void destroy_sounds(sounds_t *sounds);
+
+// Data
+    // destroy.c
+    void destroy_save(save_t *save);
+    void destroy_data(data_t *data);
 
 // destroy.c
 void destroy_all(game_t *game);

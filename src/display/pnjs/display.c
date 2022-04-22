@@ -50,9 +50,8 @@ void check_second_move_pnj(game_t *game, int i)
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
-    for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++) {
+    for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
-    }
 }
 
 void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
@@ -76,14 +75,16 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     int stop = 0;
-    if (!pnj || !game || !pnj->sprite || !game->window)
+    if (!pnj || !game || !pnj->sprite || !game->window ||
+        !game->assets->rat->idle_front)
         return;
-    check_pnj_intersects(pnj, game);
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     if (pnj->text == false)
         return;
+    check_pnj_intersects(pnj, game);
     if (pnj->display_the_text == true
-        && pnj->text_to_display[pnj->text_index_display]) {
+        && pnj->text_to_display[pnj->text_index_display]
+        && pnj->displaying_text == 1) {
         change_text_and_box_message_pos(game, pnj);
         sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,

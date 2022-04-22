@@ -17,10 +17,8 @@ void check_locations_rat_move(game_t *game)
         ice_cream_shop_locations(game);
     if (game->stage == MARKET_STAGE)
         market_locations(game);
-    if (game->stage == MUSEUM1_STAGE)
-        museum1_locations(game);
-    if (game->stage == MUSEUM2_STAGE)
-        museum2_locations(game);
+    if (game->stage == MUSEUM_STAGE)
+        museum_locations(game);
     if (game->stage == CLOTHE_STAGE)
         clothe_store_locations(game);
 }
@@ -35,10 +33,8 @@ void increase_speed_jump_rat(game_t *game)
         game->assets->rat->speed = RAT_SPEED_ICE_CREAM_SHOP * 1.5;
     if (game->stage == MARKET_STAGE)
         game->assets->rat->speed = RAT_SPEED_CITY * 1.5;
-    if (game->stage == MUSEUM1_STAGE)
-        game->assets->rat->speed = RAT_SPEED_MUSEUM1 * 1.5;
-    if (game->stage == MUSEUM2_STAGE)
-        game->assets->rat->speed = RAT_SPEED_MUSEUM2 * 1.5;
+    if (game->stage == MUSEUM_STAGE)
+        game->assets->rat->speed = RAT_SPEED_MUSEUM * 1.5;
     if (game->stage == CLOTHE_STAGE)
         game->assets->rat->speed = RAT_SPEED_CLOTHE_SHOP * 1.5;
 }
@@ -53,10 +49,8 @@ void decrease_speed_jump_rat(game_t *game)
         game->assets->rat->speed = RAT_SPEED_ICE_CREAM_SHOP;
     if (game->stage == MARKET_STAGE)
         game->assets->rat->speed = RAT_SPEED_CITY;
-    if (game->stage == MUSEUM1_STAGE)
-        game->assets->rat->speed = RAT_SPEED_MUSEUM1;
-    if (game->stage == MUSEUM2_STAGE)
-        game->assets->rat->speed = RAT_SPEED_MUSEUM2;
+    if (game->stage == MUSEUM_STAGE)
+        game->assets->rat->speed = RAT_SPEED_MUSEUM;
     if (game->stage == CLOTHE_STAGE)
         game->assets->rat->speed = RAT_SPEED_CLOTHE_SHOP;
 }

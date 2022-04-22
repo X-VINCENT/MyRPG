@@ -22,6 +22,10 @@
     // display.c
     void display_city(game_t *game);
 
+// Game Menu
+    // display.c
+    void display_game_menu(game_t *game);
+
 // Home Menu
     // Parallax
         // display.c
@@ -29,6 +33,10 @@
         void display_parallax(game_t *game);
     // display.c
     void display_home_menu(game_t *game);
+
+// HowToPlay
+    // display.c
+    void display_howtoplay(game_t *game);
 
 // Ice Shop
     // display.c
@@ -51,17 +59,14 @@
     // display.c
     void display_market(game_t *game);
 
-// Museum1
+// Museum
     // display.c
-    void display_museum1(game_t *game);
-
-// Museum2
-    // display.c
-    void display_museum2(game_t *game);
+    void display_museum(game_t *game);
 
 // Rat
     // display.c
     void display_rat(game_t *game);
+    void display_circle_rat(game_t *game);
 
 // Settings
     // audio.c
@@ -78,6 +83,10 @@
 
     // graphics.c
     void display_settings_graphics(game_t *game);
+
+// Stats
+    // display.c
+    void display_stats(game_t *game);
 
 // Top Bar
     void display_top_bar(game_t *game);

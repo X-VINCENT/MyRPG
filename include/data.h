@@ -26,15 +26,11 @@
         sfImage *hitbox;
     } appartment_t;
 
-    typedef struct museum1 {
+    typedef struct museum {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
-    } museum1_t;
-
-    typedef struct museum2 {
-        sfSprite *bg;
-        sfImage *hitbox;
-    } museum2_t;
+    } museum_t;
 
     typedef struct ice {
         sfSprite *bg;
@@ -48,7 +44,6 @@
 
     typedef struct clothe {
         sfSprite *bg;
-
         sfImage *hitbox;
     } clothe_t;
 
@@ -66,6 +61,11 @@
         sfImage *hitbox;
     } city_t;
 
+    typedef struct game_menu {
+        sfSprite *bg;
+        sfClock *clock;
+    } game_menu_t;
+
     typedef struct home_menu {
         parallax_t *parallax;
         sfSprite **quit;
@@ -76,6 +76,11 @@
         int options_state;
         sfClock *button_clock;
     } home_menu_t;
+
+    typedef struct howtoplay {
+        sfSprite *bg;
+        sfClock *clock;
+    } howtoplay_t;
 
     typedef struct rat {
         sfSprite *idle_front;
@@ -97,6 +102,7 @@
         sfSprite *dodge_up_left;
         sfSprite *dodge_up_right;
         sfSprite *shadow;
+        sfCircleShape *circle;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *dodge_anim_clock;
@@ -109,6 +115,7 @@
         int speed;
         int is_moving;
         int is_dodging;
+        float radius_circle;
     } rat_t;
 
     typedef struct settings_game {
@@ -176,6 +183,7 @@
         ROTATE_RIGHT,
         RESET_VIEW,
         ESCAPE,
+        HITBOX,
         NB_KEYS
     };
 
@@ -197,6 +205,7 @@
         settings_key_t *rotate_left;
         settings_key_t *rotate_right;
         settings_key_t *reset_view;
+        settings_key_t *hitbox;
         settings_key_t *escape;
         sfClock *scrolling_clock;
         sfClock *clock;
@@ -219,16 +228,27 @@
         int current;
     } settings_t;
 
+    typedef struct stats {
+        sfSprite *bg;
+        sfSprite *gold;
+        sfSprite *xp;
+        sfSprite *abilities;
+        sfText *nb_golds;
+        sfText *nb_xps;
+        sfText *nb_abilities;
+        sfClock *clock;
+    } stats_t;
+
     typedef struct transitions {
         sfSprite *rat_enter;
         sfSprite *rat_quit;
     } transitions_t;
 
     typedef struct top_bar {
-        sfText *menu1;
+        sfText *game;
         sfText *abilities;
-        sfText *menu3;
-        sfText *menu4;
+        sfText *stats;
+        sfText *howtoplay;
         sfSprite *settings_off;
         sfSprite *settings_on;
         sfSprite *quit_off;
@@ -241,8 +261,9 @@
         sfSprite *cursor;
         abilities_t *abilities;
         appartment_t *appartment;
-        museum1_t *museum1;
-        museum2_t *museum2;
+        game_menu_t *game_menu;
+        howtoplay_t *howtoplay;
+        museum_t *museum;
         ice_t *ice;
         market_t *market;
         clothe_t *clothe;
@@ -251,6 +272,7 @@
         rat_t *rat;
         pnj_t **pnj;
         settings_t *settings;
+        stats_t *stats;
         transitions_t *transitions;
         top_bar_t *top_bar;
     } assets_t;
@@ -277,6 +299,7 @@
 
     typedef struct textures {
         sfTexture *black_pnj;
+        sfTexture *blue_girl_pnj;
         sfTexture *rat_blue;
         sfTexture *rat_green;
         sfTexture *rat_purple;
@@ -289,8 +312,8 @@
         sfTexture *clothe_view;
         sfTexture *ice_cream_view;
         sfTexture *market_view;
-        sfTexture *museum_view1;
-        sfTexture *museum_view2;
+        sfTexture *museum_bg;
+        sfTexture *museum_bg_top;
         sfTexture *cursor_icon;
         sfTexture *window_icon;
         sfTexture *slot_off;
@@ -304,14 +327,29 @@
         sfTexture *settings_bg;
         sfTexture *transition_enter;
         sfTexture *transition_quit;
+        sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
         sfTexture *message_box;
     } textures_t;
 
+    typedef struct save {
+        int nb_golds;
+        int nb_xps;
+        int nb_abilities;
+        int *abilities;
+    } save_t;
+
+    typedef struct data {
+        save_t *save1;
+        save_t *save2;
+        save_t *save3;
+    } data_t;
+
     typedef struct game {
         sfRenderWindow *window;
         sfView *view;
+        data_t *data;
         textures_t *textures;
         event_t *event;
         assets_t *assets;
@@ -329,6 +367,8 @@
         int language;
         int music_volume;
         int effects_volume;
+        int nb_golds;
+        int nb_xps;
         int nb_abilities;
     } game_t;
 

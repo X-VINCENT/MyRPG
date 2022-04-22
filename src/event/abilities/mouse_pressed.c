@@ -12,7 +12,7 @@ int is_ability_unlockable_2(game_t *game, int idx)
     abilities_t *abilities = game->abilities;
 
     if ((idx == UTILITY_SELL_10 || idx == STEALTH_RANGE_10 ||
-         idx == FIGHT_BITE) && abilities->ability[KICK]->status == UNLOCKED)
+        idx == FIGHT_BITE) && abilities->ability[KICK]->status == UNLOCKED)
         return 1;
     if (idx == UTILITY_CAN_BUY &&
         abilities->ability[UTILITY_SELL_10]->status == UNLOCKED)
