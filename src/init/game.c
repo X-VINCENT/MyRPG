@@ -19,6 +19,8 @@ void init_game_variables(game_t *game)
     game->language = ENGLISH;
     game->music_volume = 100;
     game->effects_volume = 100;
+    game->nb_golds = 0;
+    game->nb_xps = 0;
     game->nb_abilities = 100;
 }
 
@@ -28,7 +30,7 @@ game_t *init_game(void)
 
     if (!(game = malloc(sizeof(game_t))))
         return NULL;
-    init_file_rat_position(game);
+    init_data(game);
     init_game_variables(game);
     init_textures(game);
     init_window(game);
@@ -55,29 +57,4 @@ void init_event(game_t *game)
         return;
     game->event = malloc(sizeof(event_t));
     game->event->event = malloc(sizeof(sfEvent));
-}
-
-void init_keys(game_t *game)
-{
-    game->keys = malloc(sizeof(int) * NB_KEYS + 1);
-    game->default_keys = malloc(sizeof(int) * NB_KEYS + 1);
-
-    game->keys[UP] = sfKeyZ;
-    game->keys[DOWN] = sfKeyS;
-    game->keys[LEFT] = sfKeyQ;
-    game->keys[RIGHT] = sfKeyD;
-    game->keys[JUMP] = sfKeyLShift;
-    game->keys[DODGE] = sfKeySpace;
-    game->keys[ATTACK] = sfKeyA;
-    game->keys[INTERACT] = sfKeyE;
-    game->keys[ROTATE_LEFT] = sfKeyLeft;
-    game->keys[ROTATE_RIGHT] = sfKeyRight;
-    game->keys[ZOOM_IN] = sfKeyUp;
-    game->keys[ZOOM_OUT] = sfKeyDown;
-    game->keys[RESET_VIEW] = sfKeyRControl;
-    game->keys[ESCAPE] = sfKeyEscape;
-    game->keys[HITBOX] = sfKeyH;
-    game->keys[NB_KEYS] = -1;
-    for (int idx = 0; idx <= NB_KEYS; idx += 1)
-        game->default_keys[idx] = game->keys[idx];
 }

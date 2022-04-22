@@ -35,11 +35,19 @@
         // destroy.c
         void destroy_clothe(clothe_t *clothe);
 
+    // Game Menu
+        // destroy.c
+        void destroy_game_menu(game_menu_t *game_menu);
+
     // Home Menu
         // destroy.c
         void destroy_home_menu(home_menu_t *home_menu);
         // parallax.c
         void destroy_parallax(parallax_t *parallax);
+
+    // HowToPlay
+        // destroy.c
+        void destroy_howtoplay(howtoplay_t *howtoplay);
 
     // Inventory
         // destroy.c
@@ -64,6 +72,10 @@
         // destroy.c
         void destroy_settings(settings_t *settings);
 
+    // Stats
+        // destroy.c
+        void destroy_stats(stats_t *stats);
+
     // Top Bar
         // destroy.c
         void destroy_top_bar(top_bar_t *bar);
@@ -84,6 +96,11 @@
 
     // sounds.c
     void destroy_sounds(sounds_t *sounds);
+
+// Data
+    // destroy.c
+    void destroy_save(save_t *save);
+    void destroy_data(data_t *data);
 
 // destroy.c
 void destroy_all(game_t *game);

@@ -30,8 +30,12 @@
             void init_doors(game_t *game);
 
     // Clothe
-        //init.c
+        // init.c
         void init_clothe(game_t *game);
+
+    // Game Menu
+        // init.c
+        void init_game_menu(game_t *game);
 
     // Home Menu
         // Parallax
@@ -39,6 +43,10 @@
             void init_parallax(game_t *game);
         // init.c
         void init_home_menu(game_t *game);
+
+    // Howtoplay
+        // init.c
+        void init_howtoplay(game_t *game);
 
     // Ice Cream
         // init.c
@@ -80,6 +88,10 @@
         void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
+    // Stats
+        // init.c
+        void init_stats(game_t *game);
+
     // Top Bar
         // init.c
         void init_top_bar(game_t *game);
@@ -93,10 +105,6 @@
         void init_struct_pnjs(game_t *game);
         void citizens_png(game_t *game);
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
-
-    // Data
-        //rat_position
-        void init_file_rat_position(game_t *game);
 
     // init.c
     void init_assets(game_t *game);
@@ -112,8 +120,13 @@
     // sounds.c
     void init_sounds(game_t *game);
 
+// Data
+    // init.c
+    void init_data(game_t *game);
+
 // Inventory
     // init.c
+    save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
 
 // Textures
@@ -130,6 +143,8 @@
 game_t *init_game(void);
 void init_window(game_t *game);
 void init_event(game_t *game);
+
+// keys.c
 void init_keys(game_t *game);
 
 #endif /* !INIT_H_ */

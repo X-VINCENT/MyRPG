@@ -196,8 +196,8 @@ void init_all_abilities(game_t *game)
     game->abilities->ability = malloc(sizeof(ability_t *) * NB_ABILITIES + 1);
 
     for (int idx = 0; idx != NB_ABILITIES; idx += 1)
-         game->abilities->ability[idx] = init_ability(game, idx);
-     game->abilities->ability[NB_ABILITIES] = NULL;
+        game->abilities->ability[idx] = init_ability(game, idx);
+    game->abilities->ability[NB_ABILITIES] = NULL;
 }
 
 void init_abilities(game_t *game)

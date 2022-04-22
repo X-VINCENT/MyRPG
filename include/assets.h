@@ -83,7 +83,7 @@
     // Museum
     #define MUSEUM "assets/images/environments/museum/museum.png"
     #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
-    #define MUSEUM_HBOX "assets/images/environments/museum/museum_hitbox.png"
+    #define MUSEUM_HITBOX "assets/images/environments/museum/museum_hitbox.png"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -113,6 +113,8 @@
     // Rat
     #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"
     #define RAT_QUIT "assets/images/menus/transitions/rat/quit.png"
+
+#define MENU_BG "assets/images/menus/menu.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

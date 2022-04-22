@@ -18,5 +18,5 @@ void init_museum(game_t *game)
         game->textures->museum_bg, rect, pos, scale);
     game->assets->museum->bg_top = create_sprite(
         game->textures->museum_bg_top, rect, pos, scale);
-    game->assets->ice->hitbox = create_image(MUSEUM_HBOX);
+    game->assets->museum->hitbox = create_image(MUSEUM_HITBOX);
 }

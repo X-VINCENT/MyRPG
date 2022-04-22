@@ -29,5 +29,6 @@ void destroy_all(game_t *game)
     destroy_abilities(game->abilities);
     destroy_inventory(game->inventory);
     destroy_textures(game->textures);
+    destroy_data(game->data);
     free(game);
 }

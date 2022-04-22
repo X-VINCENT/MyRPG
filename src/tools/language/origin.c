@@ -26,6 +26,7 @@ void set_texts_origin_controls(game_t *game)
     set_text_origin_middle_left(s_controls->keys[ROTATE_LEFT]->title);
     set_text_origin_middle_left(s_controls->keys[ROTATE_RIGHT]->title);
     set_text_origin_middle_left(s_controls->keys[RESET_VIEW]->title);
+    set_text_origin_middle_left(s_controls->keys[HITBOX]->title);
     set_text_origin_middle_left(s_controls->keys[ESCAPE]->title);
 }
 
@@ -50,10 +51,10 @@ void set_texts_origin_settings(game_t *game)
 
 void set_texts_origin(game_t *game)
 {
-    set_text_origin(game->assets->top_bar->menu1);
+    set_text_origin(game->assets->top_bar->game);
     set_text_origin(game->assets->top_bar->abilities);
-    set_text_origin(game->assets->top_bar->menu3);
-    set_text_origin(game->assets->top_bar->menu4);
+    set_text_origin(game->assets->top_bar->stats);
+    set_text_origin(game->assets->top_bar->howtoplay);
     set_text_origin(game->assets->home_menu->press);
     set_texts_origin_abilities(game);
     set_texts_origin_settings(game);
