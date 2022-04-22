@@ -50,7 +50,6 @@ void init_pnj(game_t *game, pnj_t *pnj, sfTexture *texture, sfVector2f pos)
     pnj->message_box = create_sprite(game->textures->message_box,
         (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
-    init_text_pnj(pnj, pos, "un deux trois soleil");
     init_settings_base(pnj, 5);
 }
 
@@ -66,9 +65,12 @@ void init_struct_pnjs(game_t *game)
     assets->pnj[PNJ_NBR] = NULL;
     init_pnj(game, assets->pnj[PNJ_BLACK],
         game->textures->black_pnj, (sfVector2f){2324, 1900});
+    init_text_pnj_one(assets->pnj[PNJ_BLACK], (sfVector2f){2324, 1900});
     init_pnj(game, assets->pnj[PNJ_BLACK_TWO],
         game->textures->black_pnj, (sfVector2f){2280, 1900});
+    init_text_pnj_two(assets->pnj[PNJ_BLACK_TWO], (sfVector2f){2280, 1900});
     init_pnj(game, assets->pnj[PNJ_BLACK_THREE],
         game->textures->black_pnj, (sfVector2f){2400, 1900});
+    init_text_pnj_one(assets->pnj[PNJ_BLACK_THREE], (sfVector2f){2400, 1900});
     citizens_png(game);
 }
