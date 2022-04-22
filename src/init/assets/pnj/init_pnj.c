@@ -35,12 +35,11 @@ void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
     }
 }
 
-void init_settings_base(pnj_t *pnj, float time_between_text)
+void init_settings_base(pnj_t *pnj)
 {
     int random = 0;
     int n = 0;
 
-    pnj->time_between_text = time_between_text;
     pnj->display_the_text = false;
     pnj->text_index_display = 0;
     pnj->timer_display_text = sfClock_create();
@@ -50,14 +49,14 @@ void init_settings_base(pnj_t *pnj, float time_between_text)
     pnj->display_the_text = 0;
 }
 
-void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos)
+void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
 {
     pnj->sprite = create_sprite(texture,
-        (sfIntRect){0, 30, 45, 65}, pos, (sfVector2f){0.42, 0.42});
+        rect, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
     pos.y -= 200;
     pos.x -= 210;
-    init_settings_base(pnj, 5);
+    init_settings_base(pnj);
 }
 
 void init_struct_pnjs(game_t *game)

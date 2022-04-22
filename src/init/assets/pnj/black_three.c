@@ -35,9 +35,11 @@ void init_three(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_BLACK_THREE];
     sfTexture *texture = game->textures->black_pnj;
-    sfVector2f position = {2400, 1900};
+    sfVector2f position = {2100, 1710};
+    sfIntRect rect = {0, 30, 45, 65};
 
-    init_pnj(pnj, texture, (sfVector2f){2324, 1900});
+    init_pnj(pnj, texture, position, rect);
     create_box_message(game, pnj, position);
-    init_text_pnj_three(pnj, (sfVector2f){2324, 1900});
+    init_text_pnj_three(pnj, position);
+    pnj->time_between_text = 0.5;
 }

@@ -9,11 +9,12 @@
 
 char *message_two[] = {
     "wesh chacal",
-    "ca dit quoi\n",
-    "\nAbbaye Saint-Wandrille, anciennement abbaye\n de Fontenelle, est\
-    une abbaye de la\ncongregation de Solesmes situee sur\
-    \nl'ancienne commune de AOUDOUBILAH en BULGARIE",
+    "ca dit quoi",
+    "Abbaye Saint-Wandrille, anciennement abbaye",
+    "Une abbaye de la congregation de Solesmes situee sur",
+    "l'ancienne commune de AOUDOUBILAH en BULGARIE",
     "va au musée et ARCHI la joconque",
+    "fdp",
     NULL
 };
 
@@ -38,11 +39,13 @@ void init_text_pnj_one(pnj_t *pnj, sfVector2f pos)
 void init_one(game_t *game)
 {
     assets_t *assets = game->assets;
-    pnj_t *pnj = assets->pnj[PNJ_GIRL_TWO];
+    pnj_t *pnj = assets->pnj[PNJ_BLACK];
     sfTexture *texture = game->textures->black_pnj;
-    sfVector2f position = {2500, 1900};
+    sfVector2f position = {2000, 1700};
+    sfIntRect rect = {0, 30, 45, 65};
 
-    init_pnj(pnj, texture, position);
+    init_pnj(pnj, texture, position, rect);
     create_box_message(game, pnj, position);
     init_text_pnj_one(pnj, position);
+    pnj->time_between_text = 2;
 }
