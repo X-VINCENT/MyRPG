@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void museum1_locations(game_t *game)
+void museum_locations(game_t *game)
 {
-    location_door_museum1(game);
+    location_door_museum(game);
 }

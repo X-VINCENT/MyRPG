@@ -56,7 +56,7 @@
         // init.c
         void init_market(game_t *game);
 
-    // Museum1
+    // Museum
         //init.c
         void init_museum(game_t *game);
 

@@ -83,7 +83,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/city/locations/ice_cream_shop.c        \
 								event/city/locations/locations.c             \
 								event/city/locations/market.c                \
-								event/city/locations/museum1.c 				 \
+								event/city/locations/museum.c 				 \
 								event/city/key_pressed.c                     \
 								event/city/mouse_moved.c                     \
 								event/city/mouse_pressed.c                   \
@@ -106,16 +106,11 @@ SRC                 =           $(addprefix src/,                            \
 								event/market/key_pressed.c 		             \
 								event/market/mouse_moved.c 		             \
 								event/market/mouse_pressed.c 		         \
-								event/museum1/locations/door.c 				 \
-								event/museum1/locations/locations.c 		 \
-								event/museum1/key_pressed.c 				 \
-								event/museum1/mouse_moved.c 				 \
-								event/museum1/mouse_pressed.c				 \
-								event/museum2/locations/door.c 				 \
-								event/museum2/locations/locations.c 		 \
-								event/museum2/key_pressed.c 				 \
-								event/museum2/mouse_moved.c 				 \
-								event/museum2/mouse_pressed.c  				 \
+								event/museum/locations/door.c 				 \
+								event/museum/locations/locations.c 			 \
+								event/museum/key_pressed.c 					 \
+								event/museum/mouse_moved.c 					 \
+								event/museum/mouse_pressed.c 				 \
 								event/ice_cream_shop/locations/door.c        \
 								event/ice_cream_shop/locations/locations.c   \
 								event/ice_cream_shop/key_pressed.c           \
