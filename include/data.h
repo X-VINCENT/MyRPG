@@ -293,6 +293,8 @@
         sfMusic *rat_transition;
         sfMusic *music_menu;
         sfMusic *music_city;
+        sfMusic *music_bar;
+        sfMusic *music_ice_cream;
     } musics_t;
 
     typedef struct sounds {

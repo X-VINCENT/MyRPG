@@ -37,6 +37,8 @@
     // Musics
     #define MUSIC_HOME_MENU "assets/audio/musics/home_menu.ogg"
     #define MUSIC_CITY "assets/audio/musics/music_city.ogg"
+    #define MUSIC_BAR "assets/audio/musics/music_bar.ogg"
+    #define MUSIC_ICE_CREAM_SHOP "assets/audio/musics/music_ice_cream.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////
