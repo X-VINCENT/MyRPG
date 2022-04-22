@@ -226,6 +226,11 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/abilities/german.c            \
 								tools/language/abilities/origin.c            \
 								tools/language/abilities/spanish.c           \
+								tools/language/settings/english.c            \
+								tools/language/settings/french.c             \
+								tools/language/settings/german.c             \
+								tools/language/settings/origin.c             \
+								tools/language/settings/spanish.c            \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \
