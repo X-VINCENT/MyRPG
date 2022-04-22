@@ -28,6 +28,7 @@ void set_texts_spanish_top_bar(game_t *game)
 void set_texts_spanish(game_t *game)
 {
     set_texts_spanish_top_bar(game);
+    set_texts_spanish_stats(game);
     set_texts_spanish_abilities(game);
     set_texts_spanish_settings(game);
 }

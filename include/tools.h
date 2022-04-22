@@ -47,6 +47,22 @@
         // spanish.c
         void set_texts_spanish_settings(game_t *game);
 
+    // Stats
+        // english.c
+        void set_texts_english_stats(game_t *game);
+
+        // french.c
+        void set_texts_french_stats(game_t *game);
+
+        // german.c
+        void set_texts_german_stats(game_t *game);
+
+        // origin.c
+        void set_texts_origin_stats(game_t *game);
+
+        // spanish.c
+        void set_texts_spanish_stats(game_t *game);
+
     // english.c
     void set_texts_english(game_t *game);
 
