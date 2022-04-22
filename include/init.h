@@ -85,7 +85,8 @@
         void init_settings_graphics(game_t *game);
 
         // init.c
-        void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset);
+        void move_rect_pos_offset(sfVector2f *pos,
+            sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
     // Stats
@@ -107,6 +108,13 @@
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
         void init_text_pnj_one(pnj_t *pnj, sfVector2f pos);
         void init_text_pnj_two(pnj_t *pnj, sfVector2f pos);
+        void init_pnj(pnj_t *pnj, sfTexture *texture,
+            sfVector2f pos, sfIntRect rect);
+        void create_box_message(game_t *game, pnj_t *pnj,
+            sfVector2f position);
+        void init_one(game_t *game);
+        void init_two(game_t *game);
+        void init_three(game_t *game);
 
     // init.c
     void init_assets(game_t *game);

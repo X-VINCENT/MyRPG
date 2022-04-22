@@ -19,6 +19,8 @@ void change_bool_pnj_text(pnj_t *pnj)
         pnj->displaying_text = 0;
         pnj->display_the_text = false;
     }
+    if (pnj->display_the_text == false)
+        sfClock_restart(pnj->timer_display_text);
 }
 
 void skip_text(pnj_t *pnj)
