@@ -32,8 +32,9 @@ int check_environnments(void)
     error += is_file(CLOTHE);
     error += is_file(ICE);
     error += is_file(MARKET);
-    error += is_file(MUSEUM1);
-    error += is_file(MUSEUM2);
+    error += is_file(MUSEUM);
+    error += is_file(MUSEUM_TOP);
+    error += is_file(MUSEUM_HITBOX);
     return error;
 }
 
@@ -49,6 +50,7 @@ int check_menus(void)
     error += is_file(SETTINGS_BG);
     error += is_file(RAT_ENTER);
     error += is_file(RAT_QUIT);
+    error += is_file(MENU_BG);
     return error;
 }
 

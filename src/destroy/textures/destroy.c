@@ -19,6 +19,7 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->settings_bg);
     sfTexture_destroy(textures->transition_enter);
     sfTexture_destroy(textures->transition_quit);
+    sfTexture_destroy(textures->menu_bg);
     sfTexture_destroy(textures->buttons_1);
     sfTexture_destroy(textures->gui);
     sfTexture_destroy(textures->message_box);
@@ -39,8 +40,8 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->clothe_view);
     sfTexture_destroy(textures->ice_cream_view);
     sfTexture_destroy(textures->market_view);
-    sfTexture_destroy(textures->museum_view1);
-    sfTexture_destroy(textures->museum_view2);
+    sfTexture_destroy(textures->museum_bg);
+    sfTexture_destroy(textures->museum_bg_top);
     sfTexture_destroy(textures->cursor_icon);
     sfTexture_destroy(textures->window_icon);
     destroy_textures_2(textures);

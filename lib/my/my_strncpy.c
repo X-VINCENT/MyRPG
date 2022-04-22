@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-char *my_strncpy(char *dest, char const *src, int nb)
+char *my_strncpy(const char *src, int nb)
 {
     char *new_str = NULL;
 

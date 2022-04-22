@@ -22,10 +22,10 @@
     #define RAT_TRANSITION_ENTER 8
     #define RAT_TRANSITION_QUIT 9
 
-    #define MENU1_STAGE 10
+    #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
-    #define MENU3_STAGE 12
-    #define MENU4_STAGE 13
+    #define STATS_STAGE 12
+    #define HOWTOPLAY_STAGE 13
     #define SETTINGS_STAGE 14
 
 // Settings Stage
@@ -43,8 +43,14 @@ void appartment_stage(game_t *game);
 // city.c
 void city_stage(game_t *game);
 
+// game_menu.c
+void game_menu_stage(game_t *game);
+
 // home_menu.c
 void home_menu_stage(game_t *game);
+
+// howtoplay.c
+void howtoplay_stage(game_t *game);
 
 // ice_shop.c
 void ice_stage(game_t *game);
@@ -56,10 +62,7 @@ void clothe_stage(game_t *game);
 void market_stage(game_t *game);
 
 // museum1.c
-void museum1_stage(game_t *game);
-
-// museum2.c
-void museum2_stage(game_t *game);
+void museum_stage(game_t *game);
 
 // settings.c
 void settings_stage(game_t *game);
@@ -68,5 +71,8 @@ void settings_stage(game_t *game);
 void select_game_stage(game_t *game);
 void select_game_stage_2(game_t *game);
 void select_game_stage_3(game_t *game);
+
+// stats.c
+void stats_stage(game_t *game);
 
 #endif /* !STAGE_H_ */

@@ -32,6 +32,8 @@ int my_getnbr(char const *str)
     int i = 0;
     int minus = 0;
 
+    if (!str)
+        return -1;
     while (!(str[i] >= '0' && str[i] <= '9')) {
         if (str[i] == '-')
             minus += 1;

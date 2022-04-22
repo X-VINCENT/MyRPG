@@ -16,21 +16,24 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/appartment/destroy.c          \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
+								destroy/assets/game_menu/destroy.c           \
 								destroy/assets/home_menu/destroy.c           \
 								destroy/assets/home_menu/parallax/destroy.c  \
+								destroy/assets/howtoplay/destroy.c           \
 								destroy/assets/ice_shop/destroy.c 			 \
 								destroy/assets/market/destroy.c 			 \
-								destroy/assets/museum1/destroy.c 			 \
-								destroy/assets/museum2/destroy.c 			 \
+								destroy/assets/museum/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
 								destroy/assets/settings/controls.c           \
 								destroy/assets/settings/destroy.c            \
+								destroy/assets/stats/destroy.c               \
 								destroy/assets/top_bar/destroy.c             \
 								destroy/assets/destroy.c                     \
 								destroy/assets/pnjs/destroy.c                \
 								destroy/audio/destroy.c                      \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
+								destroy/data/destroy.c                       \
 								destroy/inventory/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
@@ -39,13 +42,14 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
 								display/home_menu/display.c                  \
+								display/howtoplay/display.c                  \
 								display/ice_shop/display.c 					 \
 								display/market/display.c 					 \
-								display/museum1/display.c 					 \
-								display/museum2/display.c 					 \
+								display/museum/display.c 					 \
 								display/clothe/display.c 					 \
 								display/rat/display.c                        \
 								display/settings/audio.c                     \
@@ -53,6 +57,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/display.c                   \
 								display/settings/graphics.c                  \
 								display/settings/game.c                      \
+								display/stats/display.c                      \
 								display/top_bar/display.c                    \
 								errors/check_assets.c                        \
 								errors/check_audio.c                         \
@@ -87,9 +92,15 @@ SRC                 =           $(addprefix src/,                            \
 								event/clothe/key_pressed.c 					 \
 								event/clothe/mouse_moved.c 					 \
 								event/clothe/mouse_pressed.c 				 \
+								event/game_menu/key_pressed.c                \
+								event/game_menu/mouse_moved.c                \
+								event/game_menu/mouse_pressed.c              \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
+								event/howtoplay/key_pressed.c                \
+								event/howtoplay/mouse_moved.c                \
+								event/howtoplay/mouse_pressed.c              \
 								event/market/locations/door.c 				 \
 								event/market/locations/locations.c 			 \
 								event/market/key_pressed.c 		             \
@@ -139,6 +150,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/settings/key_pressed.c                 \
 								event/settings/mouse_moved.c                 \
 								event/settings/mouse_pressed.c               \
+								event/stats/key_pressed.c                    \
+								event/stats/mouse_moved.c                    \
+								event/stats/mouse_pressed.c                  \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
@@ -154,12 +168,13 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
+								init/assets/game_menu/init.c                 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
+								init/assets/howtoplay/init.c                 \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
-								init/assets/museum1/init.c                   \
-								init/assets/museum2/init.c                   \
+								init/assets/museum/init.c                    \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init_rat_2.c                 \
@@ -171,13 +186,14 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/game.c                  \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
+								init/assets/stats/init.c                     \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
-								init/data/init_rat_position.c                \
+								init/data/init.c                             \
 								init/inventory/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
@@ -187,17 +203,20 @@ SRC                 =           $(addprefix src/,                            \
 								init/textures/menus.c                        \
 								init/textures/objects.c                      \
 								init/game.c                                  \
+								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
 								stage/city.c                                 \
 								stage/clothe.c                               \
+								stage/game_menu.c                            \
 								stage/home_menu.c                            \
+								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \
 								stage/market.c                               \
-								stage/museum1.c                              \
-								stage/museum2.c                              \
+								stage/museum.c                               \
 								stage/settings.c                             \
 								stage/stage.c                                \
+								stage/stats.c                                \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \
@@ -217,6 +236,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
+								tools/save.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)
@@ -326,6 +346,9 @@ tests_run:
 	$(RM) $(TEST_NAME)
 	@echo $(TESTED)
 	@echo ""
+
+xavier:
+	@echo "xavierpd"
 
 cover:
 	gcovr --exclude tests/
