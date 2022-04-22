@@ -109,6 +109,7 @@
     #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f) {2468, 1710}
     #define RAT_DEFAULT_POS_CITY_ICE_SHOP (sfVector2f) {915, 1675}
     #define RAT_DEFAULT_POS_CITY_MUSEUM (sfVector2f) {2034, 590}
+    #define RAT_DEFAULT_POS_CITY_MUSEUM_OUT (sfVector2f) {2664, 590}
     #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f) {588, 1672}
     #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f) {1524, 1690}
 

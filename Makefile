@@ -206,6 +206,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
+								stage/check_escape.c                         \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
