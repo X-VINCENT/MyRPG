@@ -299,6 +299,7 @@
 
     typedef struct textures {
         sfTexture *black_pnj;
+        sfTexture *blue_girl_pnj;
         sfTexture *rat_blue;
         sfTexture *rat_green;
         sfTexture *rat_purple;
