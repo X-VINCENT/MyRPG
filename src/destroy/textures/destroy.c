@@ -34,6 +34,7 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->rat_red);
     sfTexture_destroy(textures->apart_top);
     sfTexture_destroy(textures->apart);
+    sfTexture_destroy(textures->bar);
     sfTexture_destroy(textures->city_view);
     sfTexture_destroy(textures->city_view_top);
     sfTexture_destroy(textures->city_rat_door);
@@ -45,5 +46,5 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->cursor_icon);
     sfTexture_destroy(textures->window_icon);
     destroy_textures_2(textures);
-    free(textures);
+    free(textures->bar);
 }

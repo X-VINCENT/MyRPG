@@ -65,6 +65,9 @@
     #define APART_TOP "assets/images/environments/appartment/apart_top.png"
     #define APART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
 
+    // Bar
+    #define BAR "assets/images/environments/bar/view.png"
+
     // City
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_TOP "assets/images/environments/city/map_top.png"

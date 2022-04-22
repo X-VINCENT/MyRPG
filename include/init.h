@@ -22,6 +22,10 @@
         // init.c
         void init_appartment(game_t *game);
 
+    // Bar
+        // init.c
+        void init_bar(game_t *game);
+
     // City
         // init.c
         void init_city(game_t *game);

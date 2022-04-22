@@ -40,10 +40,30 @@
     // mouse_pressed.c
     void appartment_mouse_pressed(game_t *game);
 
+// bar
+    // Locations
+        // door.c
+        void location_door_bar(game_t *game);
+
+        // locations.c
+        void bar_locations(game_t *game);
+
+    // key_pressed.c
+    void bar_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void bar_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void bar_mouse_pressed(game_t *game);
+
 // City
     // Locations
         // appartment.c
         void location_appartment_city(game_t *game);
+
+        // bar.c
+        void location_bar_city(game_t *game);
 
         //ice_cream_shop.c
         void location_ice_cream_city(game_t *game);

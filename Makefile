@@ -14,6 +14,7 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                            \
 								destroy/abilities/destroy.c                  \
 								destroy/assets/appartment/destroy.c          \
+								destroy/assets/bar/destroy.c			   	 \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
 								destroy/assets/game_menu/destroy.c           \
@@ -39,6 +40,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/destroy.c                            \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
+								display/bar/display.c                        \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
@@ -76,8 +78,14 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/key_pressed.c               \
 								event/appartment/mouse_moved.c               \
 								event/appartment/mouse_pressed.c             \
+								event/bar/locations/door.c                   \
+								event/bar/locations/locations.c              \
+								event/bar/key_pressed.c                      \
+								event/bar/mouse_moved.c                      \
+								event/bar/mouse_pressed.c                    \
 								event/inventory/key_pressed.c				 \
 								event/city/locations/appartment.c            \
+								event/city/locations/bar.c   	             \
 								event/city/locations/pnjs.c                  \
 								event/city/locations/clothe_shop.c 			 \
 								event/city/locations/ice_cream_shop.c        \
@@ -165,6 +173,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
@@ -206,6 +215,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
+								stage/bar.c                                  \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
