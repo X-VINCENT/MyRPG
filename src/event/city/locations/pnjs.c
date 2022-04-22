@@ -19,8 +19,6 @@ void change_bool_pnj_text(pnj_t *pnj)
         pnj->displaying_text = 0;
         pnj->display_the_text = false;
     }
-    if (pnj->display_the_text == false)
-        sfClock_restart(pnj->timer_display_text);
 }
 
 void skip_text(pnj_t *pnj)
@@ -78,7 +76,8 @@ void check_pnj_intersects(pnj_t *pnj, game_t *game)
         if (pnj->displaying_text == 1) {
             pnj->display_the_text = true;
             check_skip_text_touch(game, pnj);
-        }
+        } else
+        sfClock_restart(pnj->timer_display_text);
     } else {
         pnj->displaying_text = 0;
         pnj->display_the_text = false;
