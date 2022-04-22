@@ -93,6 +93,12 @@
         // init.c
         void init_stats(game_t *game);
 
+        // stat.c
+        void init_stats_stats(game_t *game);
+
+        // wallet.c
+        void init_wallets_stats(game_t *game);
+
     // Top Bar
         // init.c
         void init_top_bar(game_t *game);

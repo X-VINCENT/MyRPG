@@ -185,6 +185,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
 								init/assets/stats/init.c                     \
+								init/assets/stats/stat.c                     \
+								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
