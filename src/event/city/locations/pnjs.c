@@ -14,8 +14,11 @@ void change_bool_pnj_text(pnj_t *pnj)
         sfClock_restart(pnj->timer_display_text);
     }
     if (!pnj->text_to_display[
-        pnj->text_index_display])
+        pnj->text_index_display]) {
         pnj->text_index_display = 0;
+        pnj->displaying_text = 0;
+        pnj->display_the_text = false;
+    }
 }
 
 void skip_text(pnj_t *pnj)
@@ -26,6 +29,7 @@ void skip_text(pnj_t *pnj)
         pnj->text_index_display]) {
         pnj->text_index_display = 0;
         pnj->displaying_text = 0;
+        pnj->display_the_text = false;
     }
 }
 
