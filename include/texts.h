@@ -33,6 +33,15 @@
     #define ENGLISH_STEALTH "Stealth"
     #define ENGLISH_FIGHT "Fight"
 
+    // Stats
+    #define ENGLISH_MONEY "Money"
+    #define ENGLISH_XP "XPs"
+    #define ENGLISH_ABILITIES_POINTS "Abilities Points"
+    #define ENGLISH_TIME_PLAYED "Time Played"
+    #define ENGLISH_FIGHTS "Fights"
+    #define ENGLISH_MONEY_SAVED "Money Saved"
+    #define ENGLISH_STOLEN_ITEMS "Stolen Items"
+
     // Settings
     #define ENGLISH_SETTINGS "Settings"
 
@@ -88,6 +97,15 @@
     #define FRENCH_UTILITY "Utilitaire"
     #define FRENCH_STEALTH "Discretion"
     #define FRENCH_FIGHT "Combat"
+
+    // Stats
+    #define FRENCH_MONEY "Argent"
+    #define FRENCH_XP "XPs"
+    #define FRENCH_ABILITIES_POINTS "Points de competences"
+    #define FRENCH_TIME_PLAYED "Temps de jeu"
+    #define FRENCH_FIGHTS "Combats"
+    #define FRENCH_MONEY_SAVED "Argent economisee"
+    #define FRENCH_STOLEN_ITEMS "Objets voles"
 
     // Settings
     #define FRENCH_SETTINGS "Parametres"
@@ -145,6 +163,15 @@
     #define GERMAN_STEALTH "Heimlichkeit"
     #define GERMAN_FIGHT "Kampf"
 
+    // Stats
+    #define GERMAN_MONEY "Geld"
+    #define GERMAN_XP "XPs"
+    #define GERMAN_ABILITIES_POINTS "Fahigkeitspunkte"
+    #define GERMAN_TIME_PLAYED "Zeit gespielt"
+    #define GERMAN_FIGHTS "Kampft"
+    #define GERMAN_MONEY_SAVED "Geld sparen"
+    #define GERMAN_STOLEN_ITEMS "Gestohlene Gegenstande"
+
     // Settings
     #define GERMAN_SETTINGS "Einstellungen"
 
@@ -200,6 +227,15 @@
     #define SPANISH_UTILITY "Utilidad"
     #define SPANISH_STEALTH "Sigilo"
     #define SPANISH_FIGHT "Combate"
+
+    // Stats
+    #define SPANISH_MONEY "Dinero"
+    #define SPANISH_XP "XPs"
+    #define SPANISH_ABILITIES_POINTS "Puntos de habilidad"
+    #define SPANISH_TIME_PLAYED "Tiempo jugado"
+    #define SPANISH_FIGHTS "Peleas"
+    #define SPANISH_MONEY_SAVED "Ahorrar dinero"
+    #define SPANISH_STOLEN_ITEMS "Articulos robados"
 
     // Settings
     #define SPANISH_SETTINGS "Configuraciones"

@@ -6,22 +6,25 @@
 */
 
 #include "my.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 char *my_load_file_in_mem(const char *file)
 {
-    int fd = 0;
+    FILE *fp = NULL;
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
     char *buff = NULL;
 
-    if (!file)
+    fp = fopen(file, "r");
+    if (!fp)
         return NULL;
-    if ((fd = open(file, O_RDONLY)) == -1) {
-        my_puterror("File not found.\n");
-        return NULL;
-    }
-    if ((buff = malloc(sizeof(char) * 1000000 + 1)) == NULL)
-        return NULL;
-    read(fd, buff, 1000000);
-    buff[my_strlen(buff) + 1] = '\0';
-    close(fd);
+    while ((read = getline(&line, &len, fp)) != -1)
+        if (!(buff = my_strcat(buff, line)))
+            return NULL;
+    if (line)
+        free(line);
+    fclose(fp);
     return buff;
 }

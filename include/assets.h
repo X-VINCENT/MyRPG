@@ -22,6 +22,10 @@
     #define R_CROSS (sfIntRect) {0, 794, 38, 38}
     #define R_CHOOSE_KEY (sfIntRect) {0, 1606, 504, 219}
 
+    #define R_RAT_FRAME (sfIntRect) {0, 1841, 398, 496}
+    #define R_COIN (sfIntRect) {0, 2355, 50, 60}
+    #define R_XP (sfIntRect) {69, 2355, 70, 67}
+    #define R_ABILITIES (sfIntRect) {0, 2356, 50, 60}
     #define R_TREE (sfIntRect) {1691, 1846, 1720, 1816}
     #define R_LITTLE_RECT_UNLOCKED (sfIntRect) {0, 3547, 180, 111}
     #define R_RECT_UNLOCKED (sfIntRect) {193, 3547, 400, 111}
