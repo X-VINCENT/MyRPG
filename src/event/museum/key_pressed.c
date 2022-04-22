@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void museum2_key_pressed(game_t *game)
+void museum_key_pressed(game_t *game)
 {
     return;
 }

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Destroy museum1 for My RPG
+** Destroy museum for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */

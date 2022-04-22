@@ -53,7 +53,7 @@
         // destroy.c
         void destroy_inventory(inventory_t *inventory);
 
-    // Museum1
+    // Museum
         // destroy.c
         void destroy_museum(museum_t *museum);
 
