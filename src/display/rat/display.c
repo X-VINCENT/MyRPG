@@ -75,10 +75,8 @@ void display_circle_rat(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
-    if (sfKeyboard_isKeyPressed(game->keys[HITBOX])) {
-        sfCircleShape_setRadius(rat->circle, rat->radius_circle);
+    if (sfKeyboard_isKeyPressed(game->keys[HITBOX]))
         sfRenderWindow_drawCircleShape(game->window, rat->circle, NULL);
-    }
 }
 
 void display_rat(game_t *game)
