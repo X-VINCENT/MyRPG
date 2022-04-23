@@ -95,6 +95,7 @@ void abilities_mouse_pressed(game_t *game)
             is_ability_unlockable(game, idx)) {
             game->nb_abilities -= abilities->ability[idx]->price;
             abilities->ability[idx]->status = UNLOCKED;
+            set_ability(game, idx);
         }
     }
     top_bar_mouse_pressed(game);

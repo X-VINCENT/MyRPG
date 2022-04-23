@@ -352,6 +352,11 @@
         int nb_golds;
         int nb_xps;
         int nb_abilities;
+        int time_played;
+        int stolen_items;
+        int fights_won;
+        int fights_lost;
+        int money_saved;
         int *abilities;
     } save_t;
 
