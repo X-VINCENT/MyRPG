@@ -56,7 +56,7 @@ void settings_controls_scrolling_bar_event(game_t *game)
             move_controls_up(game);
             game->event->event->mouseWheel.delta = 0;
         } else if (game->event->event->mouseWheel.delta < 0 &&
-            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved)  {
+            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved) {
             move_controls_down(game);
             game->event->event->mouseWheel.delta = 0;
         }

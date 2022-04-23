@@ -19,7 +19,6 @@ save_t *load_save(char *dir)
     save->fights_won = get_value_from_file(my_strcat(dir, "fights_won.dat"));
     save->fights_lost = get_value_from_file(my_strcat(dir, "fights_lost.dat"));
     save->money_saved = get_value_from_file(my_strcat(dir, "money_saved.dat"));
-    //save->abilities = load_int_arr_from_file(my_strcat(dir, "abilities.dat"));
     return save;
 }
 
