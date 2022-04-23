@@ -32,8 +32,8 @@ void check_second_move_pnj(game_t *game, int i)
     sfVector2f position = sfSprite_getPosition(pnj->sprite);
     sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
 
-    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move))
-        > (float)pnj->speed / 100) {
+    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) >
+        (float)pnj->speed / 100) {
         if (pnj->move_left_or_right == 0) {
             position.x -= 0.5;
             rect.left = 96;
