@@ -7,22 +7,18 @@
 
 #include "rpg.h"
 
-save_t *load_save(char *save_directory)
+save_t *load_save(char *dir)
 {
     save_t *save = malloc(sizeof(save_t));
-    char *nb_golds_path = my_strcat(save_directory, "nb_golds.dat");
-    char *nb_xps_path = my_strcat(save_directory, "nb_xps.dat");
-    char *nb_abilities_path = my_strcat(save_directory, "nb_abilities.dat");
-    char *abilities_path = my_strcat(save_directory, "abilities.dat");
 
-    save->nb_golds = get_value_from_file(nb_golds_path);
-    save->nb_xps = get_value_from_file(nb_xps_path);
-    save->nb_abilities = get_value_from_file(nb_abilities_path);
-    //save->abilities = load_int_arr_from_file(abilities_path);
-    free(nb_golds_path);
-    free(nb_xps_path);
-    free(nb_abilities_path);
-    free(abilities_path);
+    save->nb_golds = get_value_from_file(my_strcat(dir, "nb_golds.dat"));
+    save->nb_xps = get_value_from_file(my_strcat(dir, "nb_xps.dat"));
+    save->nb_abilities = get_value_from_file(my_strcat(dir, "nb_abilities.dat"));
+    save->time_played = get_value_from_file(my_strcat(dir, "time_played.dat"));
+    save->stolen_items = get_value_from_file(my_strcat(dir, "stolen_items.dat"));
+    save->fights_won = get_value_from_file(my_strcat(dir, "fights_won.dat"));
+    save->fights_lost = get_value_from_file(my_strcat(dir, "fights_lost.dat"));
+    save->money_saved = get_value_from_file(my_strcat(dir, "money_saved.dat"));
     return save;
 }
 
