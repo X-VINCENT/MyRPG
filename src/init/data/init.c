@@ -18,7 +18,6 @@ save_t *load_save(char *save_directory)
     save->nb_golds = get_value_from_file(nb_golds_path);
     save->nb_xps = get_value_from_file(nb_xps_path);
     save->nb_abilities = get_value_from_file(nb_abilities_path);
-    //save->abilities = load_int_arr_from_file(abilities_path);
     free(nb_golds_path);
     free(nb_xps_path);
     free(nb_abilities_path);
