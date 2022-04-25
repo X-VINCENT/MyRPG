@@ -13,5 +13,7 @@ void destroy_musics(musics_t *musics)
         return;
     destroy_music(musics->music_menu);
     destroy_music(musics->music_city);
+    destroy_music(musics->music_bar);
+    destroy_music(musics->music_ice_cream);
     free(musics);
 }

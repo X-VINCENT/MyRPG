@@ -14,6 +14,7 @@
     #define START_STAGE 0
     #define CITY_STAGE 1
     #define APPARTMENT_STAGE 2
+    #define BAR_STAGE 15
     #define ICE_STAGE 3
     #define MARKET_STAGE 4
     #define CLOTHE_STAGE 5
@@ -41,6 +42,9 @@ void appartment_stage(game_t *game);
 
 // check_escape.c
 void check_escape(game_t *game);
+
+// bar.c
+void bar_stage(game_t *game);
 
 // city.c
 void city_stage(game_t *game);

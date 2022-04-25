@@ -19,6 +19,10 @@
         // destroy.c
         void destroy_appartment(appartment_t *appartment);
 
+    // Bar
+        // destroy.c
+        void destroy_bar(bar_t *bar);
+
     // Ice cream shop
         // destroy.c
         void destroy_ice(ice_t *ice);

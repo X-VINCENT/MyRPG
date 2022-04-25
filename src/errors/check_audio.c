@@ -12,6 +12,9 @@ int check_musics(void)
     int error = 0;
 
     error += is_file(MUSIC_HOME_MENU);
+    error += is_file(MUSIC_CITY);
+    error += is_file(MUSIC_BAR);
+    error += is_file(MUSIC_ICE_CREAM_SHOP);
     return error;
 }
 

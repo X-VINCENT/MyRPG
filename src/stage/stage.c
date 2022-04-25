@@ -43,6 +43,9 @@ void select_game_stage_2(game_t *game)
         case MUSEUM_STAGE:
             museum_stage(game);
             break;
+        case BAR_STAGE:
+            bar_stage(game);
+            break;
         default:
             break;
     }
