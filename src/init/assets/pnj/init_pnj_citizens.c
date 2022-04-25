@@ -8,6 +8,24 @@
 #include "rpg.h"
 #include <time.h>
 
+void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message)
+{
+    int nbr_text = 2;
+
+    pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text);
+    pnj->text_to_display[nbr_text] = NULL;
+    pnj->text_to_display[0] = create_text(FONT_TEXT_PNJ, sfWhite,
+        15, first_message);
+    pnj->text_to_display[1] = create_text(FONT_TEXT_PNJ, sfWhite,
+        15, "You are a fucking rat");
+    pos.y -= 25;
+    pos.x -= 185;
+    for (int i = 0; pnj->text_to_display[i] != NULL; i++) {
+        set_text_origin_middle_left(pnj->text_to_display[i]);
+        sfText_setPosition(pnj->text_to_display[i], pos);
+    }
+}
+
 void init_settings_base_citizens(pnj_t *pnj, float time_between_text)
 {
     pnj->time_between_text = time_between_text;

@@ -8,9 +8,8 @@
 #include "rpg.h"
 
 char *message_g_right[] = {
-    "Bienvenue dans ma ville !",
-    "N'essayes pas de voler ici",
-    "Personne aime les rats ! Fais toi discret",
+    "Attention à ne rien voler !",
+    "Sinon la prison tu visiteras",
     NULL
 };
 
@@ -36,9 +35,9 @@ void init_pnj_guard_right(game_t *game)
 {
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_GUARD_RIGHT];
-    sfTexture *texture = game->textures->blue_girl_pnj;
-    sfVector2f position = {2440, 1760};
-    sfIntRect rect = {95, 18, 36, 47};
+    sfTexture *texture = game->textures->guard_pnj;
+    sfVector2f position = {2060, 582};
+    sfIntRect rect = {97, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});

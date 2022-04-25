@@ -12,6 +12,7 @@
 
     #define PNJ_BLACK_PATH "assets/images/characters/pnj/black.png"
     #define PNJ_BLUE_GIRL "assets/images/characters/pnj/blue_girl.png"
+    #define PNJ_GUARD "assets/images/characters/pnj/guard_pnj.png"
 
     #define PNJ_NBR 540
     #define PNJ_BLACK 0

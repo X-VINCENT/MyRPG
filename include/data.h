@@ -392,6 +392,7 @@
         sfTexture *message_box;
         sfTexture *rain;
         sfTexture *wind;
+        sfTexture *guard_pnj;
     } textures_t;
 
     typedef struct save {
