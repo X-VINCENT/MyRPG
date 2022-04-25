@@ -67,7 +67,9 @@
         doors_t *doors;
         sfImage *hitbox;
         int is_raining;
+        int is_windy;
         particle_t *rain;
+        particle_t *wind;
     } city_t;
 
     typedef struct load_save {
@@ -376,6 +378,7 @@
         sfTexture *gui;
         sfTexture *message_box;
         sfTexture *rain;
+        sfTexture *wind;
     } textures_t;
 
     typedef struct save {

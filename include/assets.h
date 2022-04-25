@@ -146,6 +146,8 @@
     // Particles
     #define RAIN "assets/images/objects/rain.png"
     #define RAIN_NUMBER 10000
+    #define WIND "assets/images/objects/wind.png"
+    #define WIND_NUMBER 500
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !ASSETS_H_ */

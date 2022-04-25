@@ -151,6 +151,7 @@
 // Particles
     // init.c
     void init_rain(game_t *game);
+    void init_wind(game_t *game);
 
 // Textures
     // characters.c
