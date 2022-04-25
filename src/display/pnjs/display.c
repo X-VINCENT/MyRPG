@@ -88,7 +88,6 @@ void display_pnj(game_t *game, pnj_t *pnj)
         sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
-        my_putstr("ok\n");
     }
     return;
 }
