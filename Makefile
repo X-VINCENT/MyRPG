@@ -39,6 +39,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
+								destroy/save.c                               \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
 								display/bar/display.c                        \
@@ -206,6 +207,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
+								init/data/load_save.c                        \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \
 								init/textures/characters.c                   \

@@ -9,6 +9,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+char **my_load_file_in_arr(const char *file)
+{
+    FILE *fp = NULL;
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
+    char **arr = NULL;
+    int idx = 0;
+
+    fp = fopen(file, "r");
+    if (!fp)
+        return NULL;
+    if (!(arr = malloc(sizeof(char *) * 10000)))
+        return NULL;
+    while ((read = getline(&line, &len, fp)) != -1) {
+        if (!(arr[idx] = my_strcpy(line)))
+            return NULL;
+        idx += 1;
+    }
+    arr[idx] = NULL;
+    if (line)
+        free(line);
+    fclose(fp);
+    return arr;
+}
+
 char *my_load_file_in_mem(const char *file)
 {
     FILE *fp = NULL;
