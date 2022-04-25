@@ -28,5 +28,8 @@ void init_game_menu(game_t *game)
 
     init_game_menu_sprites(game);
     init_game_menu_texts(game);
+    game->assets->game_menu->save_1 = init_load_save(game, 430);
+    game->assets->game_menu->save_2 = init_load_save(game, 960);
+    game->assets->game_menu->save_3 = init_load_save(game, 1490);
     game->assets->game_menu->clock = sfClock_create();
 }

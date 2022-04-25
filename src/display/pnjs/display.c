@@ -32,8 +32,8 @@ void check_second_move_pnj(game_t *game, int i)
     sfVector2f position = sfSprite_getPosition(pnj->sprite);
     sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
 
-    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move))
-        > (float)pnj->speed / 100) {
+    if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) >
+        (float)pnj->speed / 100) {
         if (pnj->move_left_or_right == 0) {
             position.x -= 0.5;
             rect.left = 96;
@@ -75,7 +75,8 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     int stop = 0;
-    if (!pnj || !game || !pnj->sprite || !game->window)
+    if (!pnj || !game || !pnj->sprite || !game->window ||
+        !game->assets->rat->idle_front)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     if (pnj->text == false)

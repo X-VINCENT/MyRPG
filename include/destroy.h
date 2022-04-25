@@ -57,7 +57,11 @@
         // destroy.c
         void destroy_inventory(inventory_t *inventory);
 
-    // Museum1
+    // Particless
+        // destroy.c
+        void destroy_particles(game_t *game);
+
+    // Museum
         // destroy.c
         void destroy_museum(museum_t *museum);
 

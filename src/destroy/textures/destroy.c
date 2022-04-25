@@ -23,6 +23,7 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->buttons_1);
     sfTexture_destroy(textures->gui);
     sfTexture_destroy(textures->message_box);
+    sfTexture_destroy(textures->blue_girl_pnj);
 }
 
 void destroy_textures(textures_t *textures)

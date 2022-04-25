@@ -1,40 +1,11 @@
 /*
 ** EPITECH PROJECT, 2022
-** stage
+** Stage for My RPG
 ** File description:
-** stage
+** Xavier VINCENT - Max PEIXOTO - Hugo DUBOIS - Gautier BONHUR
 */
 
 #include "rpg.h"
-
-bool is_it_a_menu(int stage) {
-    if (stage != GAME_STAGE &&
-        stage != ABILITIES_STAGE &&
-        stage != STATS_STAGE &&
-        stage != HOWTOPLAY_STAGE &&
-        stage != SETTINGS_STAGE)
-        return false;
-    return true;
-}
-
-void check_escape_key_pressed(game_t *game)
-{
-    sfEvent *event = game->event->event;
-
-    if (event->key.code == game->keys[ESCAPE]) {
-        if (!is_it_a_menu(game->stage)) {
-            sfView_setRotation(game->view, 0);
-            game->last_stage = game->stage;
-            game->stage = SETTINGS_STAGE;
-            event->key.code = sfKeyUnknown;
-            return;
-        }
-        if (game->last_stage == CITY_STAGE)
-            sfView_setSize(game->view, VIEW_CITY_SIZE);
-        game->stage = game->last_stage;
-        event->key.code = sfKeyUnknown;
-    }
-}
 
 void select_game_stage_3(game_t *game)
 {
@@ -57,7 +28,7 @@ void select_game_stage_3(game_t *game)
         default:
             break;
     }
-    return check_escape_key_pressed(game);
+    return check_escape(game);
 }
 
 void select_game_stage_2(game_t *game)
@@ -69,7 +40,7 @@ void select_game_stage_2(game_t *game)
         case CLOTHE_STAGE:
             clothe_stage(game);
             break;
-        case MUSEUM1_STAGE:
+        case MUSEUM_STAGE:
             museum_stage(game);
             break;
         case BAR_STAGE:

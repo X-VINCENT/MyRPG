@@ -41,6 +41,9 @@
         // init.c
         void init_game_menu(game_t *game);
 
+        // save.c
+        load_save_t *init_load_save(game_t *game, int pos_x);
+
     // Home Menu
         // Parallax
             // init.c
@@ -60,7 +63,7 @@
         // init.c
         void init_market(game_t *game);
 
-    // Museum1
+    // Museum
         //init.c
         void init_museum(game_t *game);
 
@@ -89,12 +92,19 @@
         void init_settings_graphics(game_t *game);
 
         // init.c
-        void move_rect_pos_offset(sfVector2f *pos, sfIntRect *rect, int offset);
+        void move_rect_pos_offset(sfVector2f *pos,
+            sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
     // Stats
         // init.c
         void init_stats(game_t *game);
+
+        // stat.c
+        void init_stats_stats(game_t *game);
+
+        // wallet.c
+        void init_wallets_stats(game_t *game);
 
     // Top Bar
         // init.c
@@ -109,6 +119,15 @@
         void init_struct_pnjs(game_t *game);
         void citizens_png(game_t *game);
         void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
+        void init_text_pnj_one(pnj_t *pnj, sfVector2f pos);
+        void init_text_pnj_two(pnj_t *pnj, sfVector2f pos);
+        void init_pnj(pnj_t *pnj, sfTexture *texture,
+            sfVector2f pos, sfIntRect rect);
+        void create_box_message(game_t *game, pnj_t *pnj,
+            sfVector2f position);
+        void init_one(game_t *game);
+        void init_two(game_t *game);
+        void init_three(game_t *game);
 
     // init.c
     void init_assets(game_t *game);
@@ -132,6 +151,10 @@
     // init.c
     save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
+
+// Particles
+    // init.c
+    void init_rain(game_t *game);
 
 // Textures
     // characters.c

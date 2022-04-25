@@ -18,10 +18,9 @@
     #define ICE_STAGE 3
     #define MARKET_STAGE 4
     #define CLOTHE_STAGE 5
-    #define MUSEUM1_STAGE 6
-    #define MUSEUM2_STAGE 7
-    #define RAT_TRANSITION_ENTER 8
-    #define RAT_TRANSITION_QUIT 9
+    #define MUSEUM_STAGE 6
+    #define RAT_TRANSITION_ENTER 7
+    #define RAT_TRANSITION_QUIT 8
 
     #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
@@ -40,6 +39,9 @@ void abilities_stage(game_t *game);
 
 // appartment.c
 void appartment_stage(game_t *game);
+
+// check_escape.c
+void check_escape(game_t *game);
 
 // bar.c
 void bar_stage(game_t *game);
@@ -65,7 +67,7 @@ void clothe_stage(game_t *game);
 // market.c
 void market_stage(game_t *game);
 
-// museum1.c
+// museum.c
 void museum_stage(game_t *game);
 
 // settings.c
