@@ -165,6 +165,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
 								init/assets/game_menu/init.c                 \
+								init/assets/game_menu/save.c                 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/howtoplay/init.c                 \
@@ -249,6 +250,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/save.c                                 \
+								tools/set_save_values.c                      \
+								tools/time.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)

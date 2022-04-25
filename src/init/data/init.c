@@ -19,6 +19,8 @@ save_t *load_save(char *dir)
     save->fights_won = get_value_from_file(my_strcat(dir, "fights_won.dat"));
     save->fights_lost = get_value_from_file(my_strcat(dir, "fights_lost.dat"));
     save->money_saved = get_value_from_file(my_strcat(dir, "money_saved.dat"));
+    save->abilities = malloc(sizeof(int) * NB_ABILITIES + 1);
+    save->abilities[NB_ABILITIES] = -1;
     return save;
 }
 
@@ -26,6 +28,7 @@ void init_data(game_t *game)
 {
     game->data = malloc(sizeof(data_t));
 
+    game->data->current = load_save("data/save1/");
     game->data->save1 = load_save("data/save1/");
     game->data->save2 = load_save("data/save2/");
     game->data->save3 = load_save("data/save3/");
