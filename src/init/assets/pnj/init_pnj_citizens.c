@@ -39,7 +39,7 @@ void citizens_png(game_t *game)
     assets_t *assets = game->assets;
     sfVector2f default_pnj_position;
 
-    for (int i = PNJ_BLACK_THREE + 1; i < PNJ_NBR; i++) {
+    for (int i = PNJ_GUARD_RIGHT + 1; i < PNJ_NBR; i++) {
         default_pnj_position.x = rand() % 2500;
         default_pnj_position.y = 1700 + rand() % (1740 + 1 - 1700);
         assets->pnj[i]->speed = rand() % (3 + 1 - 1);
