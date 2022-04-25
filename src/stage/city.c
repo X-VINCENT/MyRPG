@@ -7,39 +7,29 @@
 
 #include "rpg.h"
 
-void display_rain(particle_t *rain, sfRenderWindow *window)
-{
-    while (rain != NULL) {
-        sfRenderWindow_drawSprite(window, rain->sprite, NULL);
-        rain = rain->next;
-    }
-}
-
-void animate_rain(particle_t *rain, sfRenderWindow *window)
-{
-    sfVector2f pos = init_pos(0, 0);
-
-    while (rain != NULL) {
-        sfSprite_move(rain->sprite, init_pos(-2, 4));
-        if ((sfSprite_getPosition(rain->sprite).y > 2000) ||
-            sfSprite_getPosition(rain->sprite).x < 0) {
-            pos.x = rand() % (3001);
-            pos.y = rand() % (2001);
-            sfSprite_setPosition(rain->sprite, pos);
-        }
-        rain = rain->next;
-    }
-}
-
 void rain(game_t *game)
 {
-    if (rand() % 2000 == 1)
+    if (game->assets->city->is_windy == 0 && rand() % 2000 == 1)
         game->assets->city->is_raining = 1;
-    if (game->assets->city->is_raining == 1) {
+    if (game->assets->city->is_raining == 1 &&
+        game->assets->city->is_windy == 0) {
         animate_rain(game->assets->city->rain, game->window);
         display_rain(game->assets->city->rain, game->window);
         if (rand() % 1000 == 1)
             game->assets->city->is_raining = 0;
+    }
+}
+
+void wind(game_t *game)
+{
+    if (game->assets->city->is_raining == 0 && rand() % 2000 == 1)
+        game->assets->city->is_windy = 1;
+    if (game->assets->city->is_windy == 1 &&
+        game->assets->city->is_raining == 0) {
+        display_wind(game->assets->city->wind, game->window);
+        animate_wind(game->assets->city->wind, game->window);
+        if (rand() % 1000 == 1)
+            game->assets->city->is_windy = 0;
     }
 }
 
@@ -68,6 +58,7 @@ void city_stage(game_t *game)
     pnjs_display_city(game, 5);
     check_rat_key_pressed(game);
     rain(game);
+    wind(game);
     display_inventory(game);
     play_music(game->audio->musics->music_city);
 }

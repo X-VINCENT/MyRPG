@@ -41,6 +41,7 @@ game_t *init_game(void)
     init_abilities(game);
     init_inventory(game);
     init_rain(game);
+    init_wind(game);
     return game;
 }
 

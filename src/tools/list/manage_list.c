@@ -8,12 +8,12 @@
 #include "rpg.h"
 
 particle_t *create_particle_list(sfTexture *texture,
-    sfIntRect rect, sfVector2f pos)
+    sfIntRect rect, sfVector2f pos, sfVector2f scale)
 {
     particle_t *list = malloc(sizeof(particle_t));
 
     list->sprite = create_sprite(texture,
-        rect, pos, init_scale(1, 1));
+        rect, pos, scale);
     list->next = NULL;
     list->previous = NULL;
     return list;
