@@ -36,6 +36,7 @@ int check_environnments(void)
     error += is_file(MUSEUM);
     error += is_file(MUSEUM_TOP);
     error += is_file(MUSEUM_HITBOX);
+    error += is_file(BAR);
     return error;
 }
 

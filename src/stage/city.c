@@ -47,6 +47,8 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 void city_stage(game_t *game)
 {
     sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);

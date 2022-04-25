@@ -47,6 +47,8 @@
     // Musics
     #define MUSIC_HOME_MENU "assets/audio/musics/home_menu.ogg"
     #define MUSIC_CITY "assets/audio/musics/music_city.ogg"
+    #define MUSIC_BAR "assets/audio/musics/music_bar.ogg"
+    #define MUSIC_ICE_CREAM_SHOP "assets/audio/musics/music_ice_cream.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////
@@ -74,6 +76,9 @@
     #define APART "assets/images/environments/appartment/apart.png"
     #define APART_TOP "assets/images/environments/appartment/apart_top.png"
     #define APART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
+
+    // Bar
+    #define BAR "assets/images/environments/bar/view.png"
 
     // City
     #define CITY "assets/images/environments/city/view.png"

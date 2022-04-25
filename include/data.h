@@ -29,8 +29,17 @@
     typedef struct appartment {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *sign;
+        sfText *press_interact;
         sfImage *hitbox;
+        int is_saving;
     } appartment_t;
+
+    typedef struct bar {
+        sfSprite *bg;
+        sfSprite *bg_top;
+        sfImage *hitbox;
+    } bar_t;
 
     typedef struct museum {
         sfSprite *bg;
@@ -312,6 +321,7 @@
         museum_t *museum;
         ice_t *ice;
         market_t *market;
+        bar_t *bar;
         clothe_t *clothe;
         city_t *city;
         home_menu_t *home_menu;
@@ -332,6 +342,8 @@
         sfMusic *rat_transition;
         sfMusic *music_menu;
         sfMusic *music_city;
+        sfMusic *music_bar;
+        sfMusic *music_ice_cream;
     } musics_t;
 
     typedef struct sounds {
@@ -352,6 +364,7 @@
         sfTexture *rat_red;
         sfTexture *apart_top;
         sfTexture *apart;
+        sfTexture *bar;
         sfTexture *city_view;
         sfTexture *city_view_top;
         sfTexture *city_rat_door;
