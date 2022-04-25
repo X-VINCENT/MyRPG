@@ -142,6 +142,10 @@
 
     // GUI
     #define GUI "assets/images/objects/gui.png"
+
+    // Particles
+    #define RAIN "assets/images/objects/rain.png"
+    #define RAIN_NUMBER 10000
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !ASSETS_H_ */

@@ -148,6 +148,10 @@
     save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
 
+// Particles
+    // init.c
+    void init_rain(game_t *game);
+
 // Textures
     // characters.c
     void init_textures_characters(game_t *game);

@@ -12,6 +12,12 @@
     #include "inventory.h"
     #include "pnj.h"
 
+    typedef struct particle {
+        sfSprite *sprite;
+        struct particle *next;
+        struct particle *previous;
+    } particle_t;
+
     typedef struct parallax {
         sfSprite *bg0;
         sfSprite *bg1;
@@ -60,6 +66,8 @@
         sfSprite *bg_top;
         doors_t *doors;
         sfImage *hitbox;
+        int is_raining;
+        particle_t *rain;
     } city_t;
 
     typedef struct load_save {
@@ -137,6 +145,7 @@
         int is_moving;
         int is_dodging;
         float radius_circle;
+        particle_t *run;
     } rat_t;
 
     typedef struct settings_game {
@@ -366,6 +375,7 @@
         sfTexture *buttons_1;
         sfTexture *gui;
         sfTexture *message_box;
+        sfTexture *rain;
     } textures_t;
 
     typedef struct save {
