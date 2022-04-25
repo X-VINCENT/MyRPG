@@ -197,6 +197,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
 								init/inventory/init.c                        \
+								init/particles/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
 								init/textures/icons.c                        \
@@ -244,6 +245,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/language.c                    \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
+								tools/list/manage_list.c                     \
 								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
