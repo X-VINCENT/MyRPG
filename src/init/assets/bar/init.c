@@ -9,7 +9,7 @@
 
 void init_bar(game_t *game)
 {
-    sfIntRect rect = init_rect(0, 0, 517, 292);
+    sfIntRect rect = init_rect(0, 0, 416, 268);
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = init_scale(1, 1);
 
