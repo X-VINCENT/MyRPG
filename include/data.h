@@ -29,7 +29,10 @@
     typedef struct appartment {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *sign;
+        sfText *press_interact;
         sfImage *hitbox;
+        int is_saving;
     } appartment_t;
 
     typedef struct bar {
