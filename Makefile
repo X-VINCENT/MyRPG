@@ -188,6 +188,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/rat/init_rat_2.c                 \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/black_first.c                \
+								init/assets/pnj/pnj_guard_museum_left.c      \
+								init/assets/pnj/pnj_guard_museum_right.c     \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/init_pnj_citizens.c          \
@@ -259,12 +261,13 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
 								tools/list/manage_list.c                     \
+								tools/save/read.c                            \
+								tools/save/write.c                           \
 								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
-								tools/save.c                                 \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
 								tools/view.c                                 \
