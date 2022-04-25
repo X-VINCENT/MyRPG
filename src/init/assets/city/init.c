@@ -20,5 +20,7 @@ void init_city(game_t *game)
     game->assets->city->bg_top = create_sprite(
         game->textures->city_view_top, rect, pos, scale);
     game->assets->city->hitbox = create_image(CITY_HITBOX);
+    game->assets->city->is_raining = 0;
+    game->assets->city->is_windy = 0;
     init_doors(game);
 }

@@ -17,6 +17,8 @@ int rat_can_move_up_left(game_t *game)
     if (game->stage == MUSEUM_STAGE)
         return check_rat_collision(
             game, game->assets->museum->hitbox, -1, -1);
+    if (game->stage == BAR_STAGE)
+        return 1;
     return 0;
 }
 
@@ -30,6 +32,8 @@ int rat_can_move_up_right(game_t *game)
     if (game->stage == MUSEUM_STAGE)
         return check_rat_collision(
             game, game->assets->museum->hitbox, 1, -1);
+    if (game->stage == BAR_STAGE)
+        return 1;
     return 0;
 }
 
@@ -43,6 +47,8 @@ int rat_can_move_down_left(game_t *game)
     if (game->stage == MUSEUM_STAGE)
         return check_rat_collision(
             game, game->assets->museum->hitbox, -1, 1);
+    if (game->stage == BAR_STAGE)
+        return 1;
     return 0;
 }
 
@@ -56,5 +62,7 @@ int rat_can_move_down_right(game_t *game)
     if (game->stage == MUSEUM_STAGE)
         return check_rat_collision(
             game, game->assets->museum->hitbox, 1, 1);
+    if (game->stage == BAR_STAGE)
+        return 1;
     return 0;
 }

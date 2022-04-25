@@ -68,6 +68,10 @@
     #define VIEW_APPARTMENT_SIZE (sfVector2f) {600, 320}
     #define VIEW_APPARTMENT_POS (sfVector2f) {258.5, 146}
 
+    // Bar
+    #define VIEW_BAR_SIZE (sfVector2f) {852, 480}
+    #define VIEW_BAR_POS (sfVector2f) {208, 134}
+
     // City
     #define VIEW_CITY_SIZE (sfVector2f) {853, 480}
     #define VIEW_CITY_POS (sfVector2f) {2468, 1710}
@@ -77,7 +81,7 @@
     #define VIEW_ICE_POS (sfVector2f) {288, 240}
 
     // Clothe shop
-    #define VIEW_CLOTHE_SIZE (sfVector2f) {1024, 768}
+    #define VIEW_CLOTHE_SIZE (sfVector2f) {672, 642}
     #define VIEW_CLOTHE_POS (sfVector2f) {336, 321}
 
     // Market
@@ -102,11 +106,13 @@
     #define RAT_SPEED_CITY 3
     #define RAT_SPEED_ICE_CREAM_SHOP 1
     #define RAT_SPEED_CLOTHE_SHOP 1
+    #define RAT_SPEED_BAR 2
     #define RAT_SPEED_MARKET 2
     #define RAT_SPEED_MUSEUM 2
 
     // Pos
     #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f) {2468, 1710}
+    #define RAT_DEFAULT_POS_CITY_BAR (sfVector2f) {1022, 1708}
     #define RAT_DEFAULT_POS_CITY_ICE_SHOP (sfVector2f) {915, 1675}
     #define RAT_DEFAULT_POS_CITY_MUSEUM (sfVector2f) {2034, 590}
     #define RAT_DEFAULT_POS_CITY_MUSEUM_OUT (sfVector2f) {2664, 590}
@@ -114,6 +120,7 @@
     #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f) {1524, 1690}
 
     #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f) {166, 252}
+    #define RAT_DEFAULT_POS_BAR (sfVector2f) {31, 162}
     #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f) {288, 380}
     #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f) {36, 232}
     #define RAT_DEFAULT_POS_MARKET (sfVector2f) {30, 342}
@@ -164,8 +171,12 @@
     // Appartment
     #define LOCATION_DOOR_APPARTMENT (sfVector2f) {145, 280}
 
+    // Bar
+    #define LOCATION_DOOR_BAR (sfVector2f) {0, 126}
+
     // City
     #define LOCATION_APPARTMENT (sfVector2f) {2450, 1690}
+    #define LOCATION_BAR (sfVector2f) {1008, 1681}
     #define LOCATION_ICE_SHOP (sfVector2f) {904, 1667}
     #define LOCATION_CLOTHE_SHOP (sfVector2f) {573, 1666}
     #define LOCATION_MARKET (sfVector2f) {1510, 1683}

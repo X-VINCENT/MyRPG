@@ -81,6 +81,14 @@
     // spanish.c
     void set_texts_spanish(game_t *game);
 
+// list
+    //manage_list.c
+    particle_t *create_particle_list(sfTexture *texture,
+    sfIntRect rect, sfVector2f pos, sfVector2f scale);
+
+    particle_t *add_node(particle_t *list, sfTexture *texture,
+    sfIntRect rect, sfVector2f pos);
+
 // arrow.c
 sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
 

@@ -9,6 +9,8 @@
 
 void market_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
     display_market(game);

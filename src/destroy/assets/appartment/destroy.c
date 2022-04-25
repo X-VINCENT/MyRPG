@@ -10,5 +10,8 @@
 void destroy_appartment(appartment_t *appartment)
 {
     destroy_sprite(appartment->bg);
+    destroy_sprite(appartment->bg_top);
+    destroy_sprite(appartment->sign);
+    destroy_image(appartment->hitbox);
     free(appartment);
 }

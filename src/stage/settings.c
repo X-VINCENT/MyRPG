@@ -9,7 +9,10 @@
 
 void settings_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
+    sfMusic_play(game->audio->musics->music_menu);
     sfView_setSize(game->view, VIEW_MENUS_SIZE);
     sfView_setCenter(game->view, VIEW_MENUS_POS);
     display_settings(game);
