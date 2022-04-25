@@ -22,6 +22,10 @@
         // init.c
         void init_appartment(game_t *game);
 
+    // Bar
+        // init.c
+        void init_bar(game_t *game);
+
     // City
         // init.c
         void init_city(game_t *game);
@@ -143,10 +147,17 @@
     // init.c
     void init_data(game_t *game);
 
+    // load_save.c
+    save_t *load_save(const char *filename);
+
 // Inventory
     // init.c
-    save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
+
+// Particles
+    // init.c
+    void init_rain(game_t *game);
+    void init_wind(game_t *game);
 
 // Textures
     // characters.c

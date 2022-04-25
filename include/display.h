@@ -18,9 +18,17 @@
     // display.c
     void display_appartment(game_t *game);
 
+// Bar
+    //display.c
+    void display_bar(game_t *game);
+
 // City
     // display.c
     void display_city(game_t *game);
+    void display_rain(particle_t *rain, sfRenderWindow *window);
+    void animate_rain(particle_t *rain, sfRenderWindow *window);
+    void display_wind(particle_t *wind, sfRenderWindow *window);
+    void animate_wind(particle_t *rain, sfRenderWindow *window);
 
 // Game Menu
     // display.c

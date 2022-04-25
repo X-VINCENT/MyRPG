@@ -19,6 +19,9 @@ void event_key_pressed_3(game_t *game)
         case MUSEUM_STAGE:
             museum_key_pressed(game);
             break;
+        case BAR_STAGE:
+            bar_key_pressed(game);
+            break;
         default:
             break;
     }
@@ -36,6 +39,9 @@ void mouse_pressed_3(game_t *game)
         case MUSEUM_STAGE:
             museum_mouse_pressed(game);
             break;
+        case BAR_STAGE:
+            bar_mouse_pressed(game);
+            break;
         default:
             break;
     }
@@ -52,6 +58,9 @@ void mouse_moved_3(game_t *game)
             break;
         case MUSEUM_STAGE:
             museum_mouse_moved(game);
+            break;
+        case BAR_STAGE:
+            bar_mouse_moved(game);
             break;
         default:
             break;

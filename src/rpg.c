@@ -17,6 +17,7 @@ int my_rpg(void)
         event(game);
         engine(game);
     }
+    save_all_data(game);
     destroy_all(game);
     return SUCCESS;
 }

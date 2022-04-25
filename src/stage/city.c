@@ -7,6 +7,32 @@
 
 #include "rpg.h"
 
+void rain(game_t *game)
+{
+    if (game->assets->city->is_windy == 0 && rand() % 2000 == 1)
+        game->assets->city->is_raining = 1;
+    if (game->assets->city->is_raining == 1 &&
+        game->assets->city->is_windy == 0) {
+        animate_rain(game->assets->city->rain, game->window);
+        display_rain(game->assets->city->rain, game->window);
+        if (rand() % 1000 == 1)
+            game->assets->city->is_raining = 0;
+    }
+}
+
+void wind(game_t *game)
+{
+    if (game->assets->city->is_raining == 0 && rand() % 2000 == 1)
+        game->assets->city->is_windy = 1;
+    if (game->assets->city->is_windy == 1 &&
+        game->assets->city->is_raining == 0) {
+        display_wind(game->assets->city->wind, game->window);
+        animate_wind(game->assets->city->wind, game->window);
+        if (rand() % 1000 == 1)
+            game->assets->city->is_windy = 0;
+    }
+}
+
 void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 {
     nbr_animated_pnj += PNJ_BLACK_THREE + 1;
@@ -21,6 +47,8 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 void city_stage(game_t *game)
 {
     sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);
@@ -29,6 +57,8 @@ void city_stage(game_t *game)
     display_circle_rat(game);
     pnjs_display_city(game, 5);
     check_rat_key_pressed(game);
+    rain(game);
+    wind(game);
     display_inventory(game);
     play_music(game->audio->musics->music_city);
 }
