@@ -7,6 +7,15 @@
 
 #include "rpg.h"
 
+void save_abilities(game_t *game)
+{
+    ability_t **abilities = game->abilities->ability;
+    save_t *save = game->data->current;
+
+    for (int idx = 0; abilities[idx] != NULL; idx += 1)
+        save->abilities[idx] = abilities[idx]->status;
+}
+
 void appartment_key_pressed(game_t *game)
 {
     sfVector2f rat_pos = sfSprite_getPosition(game->assets->rat->idle_front);
@@ -16,6 +25,7 @@ void appartment_key_pressed(game_t *game)
     if (sfFloatRect_contains(&r_bed, rat_pos.x, rat_pos.y)) {
         if (event->key.code == game->keys[INTERACT]) {
             get_time(game);
+            save_abilities(game);
             save_data(game->data->save2, game->data->current);
         }
         game->assets->appartment->is_saving = 1;
