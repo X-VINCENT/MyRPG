@@ -54,5 +54,6 @@ char *my_convert_base(long long, char *);
 char *my_convert_base_bis(long long, int, char *, char *);
 char *my_load_file_in_mem(const char *);
 char **my_str_to_word_array(const char *str, char separator);
+char **my_load_file_in_arr(const char *file);
 
 #endif /* !MY_H_ */
