@@ -37,6 +37,9 @@
         // init.c
         void init_game_menu(game_t *game);
 
+        // save.c
+        load_save_t *init_load_save(game_t *game, int pos_x);
+
     // Home Menu
         // Parallax
             // init.c

@@ -62,8 +62,28 @@
         sfImage *hitbox;
     } city_t;
 
+    typedef struct load_save {
+        sfSprite *box;
+        sfSprite *map;
+        sfText *title_time_played;
+        sfText *title_money;
+        sfText *title_xp;
+        sfText *time_played;
+        sfText *money;
+        sfText *xp;
+        sfSprite *play;
+        sfSprite *erase;
+        sfText *empty;
+        sfSprite *new_game;
+        sfClock *clock;
+        int status;
+    } load_save_t;
+
     typedef struct game_menu {
         sfSprite *bg;
+        load_save_t *save_1;
+        load_save_t *save_2;
+        load_save_t *save_3;
         sfClock *clock;
     } game_menu_t;
 
@@ -361,6 +381,7 @@
     } save_t;
 
     typedef struct data {
+        save_t *current;
         save_t *save1;
         save_t *save2;
         save_t *save3;
@@ -390,6 +411,7 @@
         int nb_golds;
         int nb_xps;
         int nb_abilities;
+        sfClock *time_playing_clock;
     } game_t;
 
 #endif /* !DATA_H_ */
