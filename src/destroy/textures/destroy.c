@@ -47,5 +47,4 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->cursor_icon);
     sfTexture_destroy(textures->window_icon);
     destroy_textures_2(textures);
-    free(textures->bar);
 }

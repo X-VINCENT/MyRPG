@@ -22,6 +22,7 @@ void destroy_all(game_t *game)
     destroy_window(game->window);
     destroy_view(game->view);
     destroy_event(game->event);
+    destroy_particles(game);
     destroy_assets(game->assets);
     destroy_audio(game->audio);
     free(game->keys);
@@ -31,6 +32,5 @@ void destroy_all(game_t *game)
     destroy_textures(game->textures);
     destroy_data(game->data);
     sfClock_destroy(game->time_playing_clock);
-    destroy_particles(game);
     free(game);
 }
