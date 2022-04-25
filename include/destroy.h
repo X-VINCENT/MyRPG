@@ -113,4 +113,7 @@
 // destroy.c
 void destroy_all(game_t *game);
 
+// save.c
+void save_all_data(game_t *game);
+
 #endif /* !DESTROY_H_ */

@@ -39,6 +39,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
+								destroy/save.c                               \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
 								display/bar/display.c                        \
