@@ -18,10 +18,9 @@ void init_text_pnj_gleft(pnj_t *pnj, sfVector2f pos)
 
     pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text + 1);
     pnj->text_to_display[nbr_text] = NULL;
-    for (int i = 0; message_gleft[i] != NULL; i++) {
+    for (int i = 0; message_gleft[i] != NULL; i++)
         pnj->text_to_display[i] = create_text(FONT_TEXT_PNJ, sfWhite,
             13, message_gleft[i]);
-    }
     pos.y -= 220;
     pos.x -= 395;
     for (int i = 0; pnj->text_to_display[i] != NULL; i++) {

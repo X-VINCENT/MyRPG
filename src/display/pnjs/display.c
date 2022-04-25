@@ -81,10 +81,11 @@ void display_pnj(game_t *game, pnj_t *pnj)
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     if (pnj->text == false)
         return;
-    check_pnj_intersects(pnj, game);
-    if (pnj->display_the_text == true
+    if (check_pnj_intersects(pnj, game) == 1
+        && pnj->display_the_text == true
         && pnj->text_to_display[pnj->text_index_display]
         && pnj->displaying_text == 1) {
+        printf("%d\n", pnj->text_index_display);
         change_text_and_box_message_pos(game, pnj);
         sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,
