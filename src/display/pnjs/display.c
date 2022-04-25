@@ -50,7 +50,7 @@ void check_second_move_pnj(game_t *game, int i)
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
-    for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++)
+    for (int i = PNJ_GUARD_RIGHT + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
 }
 
@@ -79,16 +79,16 @@ void display_pnj(game_t *game, pnj_t *pnj)
         !game->assets->rat->idle_front)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
-    if (pnj->text == false)
-        return;
-    check_pnj_intersects(pnj, game);
-    if (pnj->display_the_text == true
+    if (check_pnj_intersects(pnj, game) == 1
+        && pnj->text == true
+        && pnj->display_the_text == true
         && pnj->text_to_display[pnj->text_index_display]
         && pnj->displaying_text == 1) {
         change_text_and_box_message_pos(game, pnj);
         sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
+        my_putstr("ok\n");
     }
     return;
 }
