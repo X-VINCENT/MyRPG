@@ -11,10 +11,11 @@
     #include "rpg.h"
 
     #define PNJ_BLACK_PATH "assets/images/characters/pnj/black.png"
+    #define PNJ_BLUE_GIRL "assets/images/characters/pnj/blue_girl.png"
 
     #define PNJ_NBR 540
     #define PNJ_BLACK 0
-    #define PNJ_BLACK_TWO 1
+    #define PNJ_GIRL_TWO 1
     #define PNJ_BLACK_THREE 2
 
     typedef struct pnj {

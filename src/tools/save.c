@@ -14,11 +14,11 @@ int get_value_from_file(const char path[])
     char *value_str = malloc(sizeof(char) * 100);
 
     if (!fp)
-        return -1;
+        return 0;
     if (fread(value_str, 1, 100, fp) == -1)
-        return -1;
+        return 0;
     if ((value = my_getnbr(value_str)) == -1)
-        return -1;
+        return 0;
     free(value_str);
     fclose(fp);
     return value;

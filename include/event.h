@@ -23,6 +23,9 @@
     // move_tree.c
     void abilities_scrolling_bar_event(game_t *game);
 
+    // set_ability.c
+    void set_ability(game_t *game, int idx);
+
 // Appartment
     // Locations
         // door.c
@@ -291,7 +294,6 @@
 
     // mouse_pressed.c
     void stats_mouse_pressed(game_t *game);
-
 
 // Top Bar
     // key_pressed.c

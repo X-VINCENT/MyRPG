@@ -71,6 +71,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/abilities/mouse_moved.c                \
 								event/abilities/mouse_pressed.c              \
 								event/abilities/move_tree.c                  \
+								event/abilities/set_ability.c                \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
@@ -164,6 +165,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
 								init/assets/game_menu/init.c                 \
+								init/assets/game_menu/save.c                 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/howtoplay/init.c                 \
@@ -174,7 +176,9 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init_rat_2.c                 \
 								init/assets/pnj/init_pnj.c                   \
-								init/assets/pnj/message_one.c                \
+								init/assets/pnj/black_first.c                \
+								init/assets/pnj/girl_pnj_appart_front.c      \
+								init/assets/pnj/black_three.c                \
 								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls_choose_key.c   \
@@ -183,6 +187,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
 								init/assets/stats/init.c                     \
+								init/assets/stats/stat.c                     \
+								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
@@ -202,6 +208,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
+								stage/check_escape.c                         \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
@@ -221,6 +228,16 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/abilities/german.c            \
 								tools/language/abilities/origin.c            \
 								tools/language/abilities/spanish.c           \
+								tools/language/settings/english.c            \
+								tools/language/settings/french.c             \
+								tools/language/settings/german.c             \
+								tools/language/settings/origin.c             \
+								tools/language/settings/spanish.c            \
+								tools/language/stats/english.c               \
+								tools/language/stats/french.c                \
+								tools/language/stats/german.c                \
+								tools/language/stats/origin.c                \
+								tools/language/stats/spanish.c               \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \
@@ -233,6 +250,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/save.c                                 \
+								tools/set_save_values.c                      \
+								tools/time.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)
