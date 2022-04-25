@@ -81,13 +81,26 @@
     // spanish.c
     void set_texts_spanish(game_t *game);
 
-// list
-    //manage_list.c
+// List
+    // manage_list.c
     particle_t *create_particle_list(sfTexture *texture,
     sfIntRect rect, sfVector2f pos, sfVector2f scale);
 
     particle_t *add_node(particle_t *list, sfTexture *texture,
     sfIntRect rect, sfVector2f pos);
+
+// Save
+    // read.c
+    int get_value_from_file(const char path[]);
+    int *init_int_array(int size);
+    int *load_int_arr_from_file(const char path[]);
+    int *load_int_arr_from_file(const char path[]);
+
+    // write.c
+    void append_data_in_file(
+        char *data, const char *filename, int should_free_data);
+    void write_data_in_file(char *data, const char *filename);
+    char *str_to_save(char *title, int value);
 
 // arrow.c
 sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
@@ -112,10 +125,6 @@ void down_res(game_t *game);
 void down_res_2(game_t *game);
 void up_res(game_t *game);
 void up_res_2(game_t *game);
-
-// save.c
-int get_value_from_file(const char path[]);
-int *load_int_arr_from_file(const char path[]);
 
 // set_save_values.c
 void save_data(save_t *target, save_t *source);

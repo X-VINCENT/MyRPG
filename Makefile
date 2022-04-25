@@ -259,12 +259,13 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
 								tools/list/manage_list.c                     \
+								tools/save/read.c                            \
+								tools/save/write.c                           \
 								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
-								tools/save.c                                 \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
 								tools/view.c                                 \
