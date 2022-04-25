@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_g_right[] = {
-    "Attention à toi !",
+    "Fais attention !",
     "Sinon la prison tu visiteras",
     NULL
 };
@@ -41,6 +41,6 @@ void init_pnj_guard_right(game_t *game)
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
     create_box_message(game, pnj, position);
-    init_text_pnj_two(pnj, position);
-    pnj->time_between_text = 3;
+    init_text_pnj_gright(pnj, position);
+    pnj->time_between_text = 2;
 }
