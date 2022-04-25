@@ -12,6 +12,12 @@
     #include "inventory.h"
     #include "pnj.h"
 
+    typedef struct particle {
+        sfSprite *sprite;
+        struct particle *next;
+        struct particle *previous;
+    } particle_t;
+
     typedef struct parallax {
         sfSprite *bg0;
         sfSprite *bg1;
@@ -23,13 +29,23 @@
     typedef struct appartment {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *sign;
+        sfText *press_interact;
         sfImage *hitbox;
+        int is_saving;
     } appartment_t;
+
+    typedef struct bar {
+        sfSprite *bg;
+        sfSprite *bg_top;
+        sfImage *hitbox;
+    } bar_t;
 
     typedef struct museum {
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        int curent_room;
     } museum_t;
 
     typedef struct ice {
@@ -59,10 +75,32 @@
         sfSprite *bg_top;
         doors_t *doors;
         sfImage *hitbox;
+        int is_raining;
+        particle_t *rain;
     } city_t;
+
+    typedef struct load_save {
+        sfSprite *box;
+        sfSprite *map;
+        sfText *title_time_played;
+        sfText *title_money;
+        sfText *title_xp;
+        sfText *time_played;
+        sfText *money;
+        sfText *xp;
+        sfSprite *play;
+        sfSprite *erase;
+        sfText *empty;
+        sfSprite *new_game;
+        sfClock *clock;
+        int status;
+    } load_save_t;
 
     typedef struct game_menu {
         sfSprite *bg;
+        load_save_t *save_1;
+        load_save_t *save_2;
+        load_save_t *save_3;
         sfClock *clock;
     } game_menu_t;
 
@@ -116,6 +154,7 @@
         int is_moving;
         int is_dodging;
         float radius_circle;
+        particle_t *run;
     } rat_t;
 
     typedef struct settings_game {
@@ -228,14 +267,28 @@
         int current;
     } settings_t;
 
+    typedef struct wallet {
+        sfSprite *logo;
+        sfText *title;
+        sfText *value;
+    } wallet_t;
+
+    typedef struct stat_data {
+        sfText *title;
+        sfText *value;
+    } stat_data_t;
+
     typedef struct stats {
         sfSprite *bg;
-        sfSprite *gold;
-        sfSprite *xp;
-        sfSprite *abilities;
-        sfText *nb_golds;
-        sfText *nb_xps;
-        sfText *nb_abilities;
+        sfText *stats;
+        sfSprite *frame;
+        wallet_t *money;
+        wallet_t *xp;
+        wallet_t *abilities;
+        stat_data_t *time_played;
+        stat_data_t *fights;
+        stat_data_t *money_saved;
+        stat_data_t *stolen_items;
         sfClock *clock;
     } stats_t;
 
@@ -266,6 +319,7 @@
         museum_t *museum;
         ice_t *ice;
         market_t *market;
+        bar_t *bar;
         clothe_t *clothe;
         city_t *city;
         home_menu_t *home_menu;
@@ -286,6 +340,8 @@
         sfMusic *rat_transition;
         sfMusic *music_menu;
         sfMusic *music_city;
+        sfMusic *music_bar;
+        sfMusic *music_ice_cream;
     } musics_t;
 
     typedef struct sounds {
@@ -306,6 +362,7 @@
         sfTexture *rat_red;
         sfTexture *apart_top;
         sfTexture *apart;
+        sfTexture *bar;
         sfTexture *city_view;
         sfTexture *city_view_top;
         sfTexture *city_rat_door;
@@ -331,16 +388,23 @@
         sfTexture *buttons_1;
         sfTexture *gui;
         sfTexture *message_box;
+        sfTexture *rain;
     } textures_t;
 
     typedef struct save {
         int nb_golds;
         int nb_xps;
         int nb_abilities;
+        int time_played;
+        int stolen_items;
+        int fights_won;
+        int fights_lost;
+        int money_saved;
         int *abilities;
     } save_t;
 
     typedef struct data {
+        save_t *current;
         save_t *save1;
         save_t *save2;
         save_t *save3;
@@ -370,6 +434,7 @@
         int nb_golds;
         int nb_xps;
         int nb_abilities;
+        sfClock *time_playing_clock;
     } game_t;
 
 #endif /* !DATA_H_ */

@@ -22,6 +22,10 @@
         // init.c
         void init_appartment(game_t *game);
 
+    // Bar
+        // init.c
+        void init_bar(game_t *game);
+
     // City
         // init.c
         void init_city(game_t *game);
@@ -36,6 +40,9 @@
     // Game Menu
         // init.c
         void init_game_menu(game_t *game);
+
+        // save.c
+        load_save_t *init_load_save(game_t *game, int pos_x);
 
     // Home Menu
         // Parallax
@@ -93,6 +100,12 @@
         // init.c
         void init_stats(game_t *game);
 
+        // stat.c
+        void init_stats_stats(game_t *game);
+
+        // wallet.c
+        void init_wallets_stats(game_t *game);
+
     // Top Bar
         // init.c
         void init_top_bar(game_t *game);
@@ -138,6 +151,10 @@
     // init.c
     save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
+
+// Particles
+    // init.c
+    void init_rain(game_t *game);
 
 // Textures
     // characters.c

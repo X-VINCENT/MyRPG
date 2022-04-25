@@ -18,6 +18,10 @@
     // display.c
     void display_appartment(game_t *game);
 
+// Bar
+    //display.c
+    void display_bar(game_t *game);
+
 // City
     // display.c
     void display_city(game_t *game);

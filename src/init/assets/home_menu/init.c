@@ -29,7 +29,7 @@ void init_quit_button(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->home_menu->quit = malloc(sizeof(sfSprite *) * 4);
-    for (int idx  = 0; idx < 3; idx += 1) {
+    for (int idx = 0; idx < 3; idx += 1) {
         game->assets->home_menu->quit[idx] = create_sprite(
             game->textures->buttons_1, rect, pos, scale);
         set_sprite_origin(game->assets->home_menu->quit[idx], rect);
@@ -46,7 +46,7 @@ void init_option_button(game_t *game)
     sfVector2f scale = init_scale(1, 1);
 
     game->assets->home_menu->options = malloc(sizeof(sfSprite *) * 4);
-    for (int idx  = 0; idx < 3; idx += 1) {
+    for (int idx = 0; idx < 3; idx += 1) {
         game->assets->home_menu->options[idx] = create_sprite(
             game->textures->buttons_1, rect, pos, scale);
         set_sprite_origin(game->assets->home_menu->options[idx], rect);

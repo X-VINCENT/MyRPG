@@ -13,6 +13,7 @@ void init_textures_environnment(game_t *game)
 
     textures->apart_top = sfTexture_createFromFile(APART_TOP, NULL);
     textures->apart = sfTexture_createFromFile(APART, NULL);
+    textures->bar = sfTexture_createFromFile(BAR, NULL);
     textures->city_view = sfTexture_createFromFile(CITY, NULL);
     textures->city_view_top = sfTexture_createFromFile(CITY_TOP, NULL);
     textures->city_rat_door = sfTexture_createFromFile(RAT_DOOR, NULL);
@@ -21,4 +22,5 @@ void init_textures_environnment(game_t *game)
     textures->market_view = sfTexture_createFromFile(MARKET, NULL);
     textures->museum_bg = sfTexture_createFromFile(MUSEUM, NULL);
     textures->museum_bg_top = sfTexture_createFromFile(MUSEUM_TOP, NULL);
+    textures->rain = sfTexture_createFromFile(RAIN, NULL);
 }

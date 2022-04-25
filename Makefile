@@ -14,6 +14,7 @@ SRC_MAIN            =           $(addprefix src/,                            \
 SRC                 =           $(addprefix src/,                            \
 								destroy/abilities/destroy.c                  \
 								destroy/assets/appartment/destroy.c          \
+								destroy/assets/bar/destroy.c			   	 \
 								destroy/assets/city/destroy.c                \
 								destroy/assets/clothe/destroy.c 			 \
 								destroy/assets/game_menu/destroy.c           \
@@ -35,10 +36,12 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/sounds.c                       \
 								destroy/data/destroy.c                       \
 								destroy/inventory/destroy.c                  \
+								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
+								display/bar/display.c                        \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
@@ -71,13 +74,20 @@ SRC                 =           $(addprefix src/,                            \
 								event/abilities/mouse_moved.c                \
 								event/abilities/mouse_pressed.c              \
 								event/abilities/move_tree.c                  \
+								event/abilities/set_ability.c                \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
 								event/appartment/mouse_moved.c               \
 								event/appartment/mouse_pressed.c             \
+								event/bar/locations/door.c                   \
+								event/bar/locations/locations.c              \
+								event/bar/key_pressed.c                      \
+								event/bar/mouse_moved.c                      \
+								event/bar/mouse_pressed.c                    \
 								event/inventory/key_pressed.c				 \
 								event/city/locations/appartment.c            \
+								event/city/locations/bar.c   	             \
 								event/city/locations/pnjs.c                  \
 								event/city/locations/clothe_shop.c 			 \
 								event/city/locations/ice_cream_shop.c        \
@@ -160,10 +170,12 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
 								init/assets/clothe/init.c                    \
 								init/assets/game_menu/init.c                 \
+								init/assets/game_menu/save.c                 \
 								init/assets/home_menu/init.c                 \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/howtoplay/init.c                 \
@@ -185,6 +197,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/settings/graphics.c              \
 								init/assets/settings/init.c                  \
 								init/assets/stats/init.c                     \
+								init/assets/stats/stat.c                     \
+								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
 								init/assets/transitions/init.c               \
 								init/assets/init.c                           \
@@ -193,6 +207,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
 								init/inventory/init.c                        \
+								init/particles/init.c                        \
 								init/textures/characters.c                   \
 								init/textures/environnment.c                 \
 								init/textures/icons.c                        \
@@ -204,6 +219,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/keys.c                                  \
 								stage/abilities.c                            \
 								stage/appartment.c                           \
+								stage/check_escape.c                         \
+								stage/bar.c                                  \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
@@ -223,18 +240,31 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/abilities/german.c            \
 								tools/language/abilities/origin.c            \
 								tools/language/abilities/spanish.c           \
+								tools/language/settings/english.c            \
+								tools/language/settings/french.c             \
+								tools/language/settings/german.c             \
+								tools/language/settings/origin.c             \
+								tools/language/settings/spanish.c            \
+								tools/language/stats/english.c               \
+								tools/language/stats/french.c                \
+								tools/language/stats/german.c                \
+								tools/language/stats/origin.c                \
+								tools/language/stats/spanish.c               \
 								tools/language/english.c                     \
 								tools/language/french.c                      \
 								tools/language/german.c                      \
 								tools/language/language.c                    \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
+								tools/list/manage_list.c                     \
 								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
 								tools/save.c                                 \
+								tools/set_save_values.c                      \
+								tools/time.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
 								rpg.c)
@@ -344,9 +374,6 @@ tests_run:
 	$(RM) $(TEST_NAME)
 	@echo $(TESTED)
 	@echo ""
-
-xavier:
-	@echo "xavierpd"
 
 cover:
 	gcovr --exclude tests/

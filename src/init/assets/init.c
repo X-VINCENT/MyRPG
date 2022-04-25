@@ -20,6 +20,7 @@ void init_assets(game_t *game)
     init_howtoplay(game);
     init_rat(game, game->textures->rat_blue);
     init_appartment(game);
+    init_bar(game);
     init_ice_cream(game);
     init_museum(game);
     init_market(game);

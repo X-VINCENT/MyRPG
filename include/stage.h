@@ -14,13 +14,13 @@
     #define START_STAGE 0
     #define CITY_STAGE 1
     #define APPARTMENT_STAGE 2
+    #define BAR_STAGE 15
     #define ICE_STAGE 3
     #define MARKET_STAGE 4
     #define CLOTHE_STAGE 5
     #define MUSEUM_STAGE 6
-    #define MUSEUM2_STAGE 7
-    #define RAT_TRANSITION_ENTER 8
-    #define RAT_TRANSITION_QUIT 9
+    #define RAT_TRANSITION_ENTER 7
+    #define RAT_TRANSITION_QUIT 8
 
     #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
@@ -39,6 +39,12 @@ void abilities_stage(game_t *game);
 
 // appartment.c
 void appartment_stage(game_t *game);
+
+// check_escape.c
+void check_escape(game_t *game);
+
+// bar.c
+void bar_stage(game_t *game);
 
 // city.c
 void city_stage(game_t *game);
