@@ -35,13 +35,17 @@ void wind(game_t *game)
 
 void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 {
-    nbr_animated_pnj += PNJ_BLACK_THREE + 1;
+    int last_pnj_not_citizens = PNJ_GUARD_RIGHT + 1;
+
+    nbr_animated_pnj += last_pnj_not_citizens;
     move_pnj(game, nbr_animated_pnj);
-    for (int i = PNJ_BLACK_THREE + 1; i < nbr_animated_pnj; i++)
+    for (int i = last_pnj_not_citizens; i < nbr_animated_pnj; i++)
         display_pnj(game, game->assets->pnj[i]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
     display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
+    display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
+    display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
 }
 
 void city_stage(game_t *game)
