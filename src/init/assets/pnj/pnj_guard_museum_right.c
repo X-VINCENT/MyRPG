@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_g_right[] = {
-    "Attention à ne rien voler !",
+    "Attention à toi !",
     "Sinon la prison tu visiteras",
     NULL
 };
