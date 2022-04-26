@@ -20,6 +20,7 @@ void set_texts_origin(game_t *game)
 {
     set_texts_origin_top_bar(game);
     set_texts_origin_stats(game);
+    set_texts_origin_game_menu(game);
     set_texts_origin_abilities(game);
     set_texts_origin_settings(game);
 }
