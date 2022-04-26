@@ -30,6 +30,10 @@
     void display_wind(particle_t *wind, sfRenderWindow *window);
     void animate_wind(particle_t *rain, sfRenderWindow *window);
 
+// Fights
+    // display.c
+    void display_fights(game_t *game);
+
 // Game Menu
     // display.c
     void display_game_menu(game_t *game);

@@ -34,9 +34,6 @@ void select_game_stage_3(game_t *game)
 void select_game_stage_2(game_t *game)
 {
     switch (game->stage) {
-        case MARKET_STAGE:
-            market_stage(game);
-            break;
         case CLOTHE_STAGE:
             clothe_stage(game);
             break;
@@ -45,6 +42,9 @@ void select_game_stage_2(game_t *game)
             break;
         case BAR_STAGE:
             bar_stage(game);
+            break;
+        case FIGHTS_STAGE:
+            fights_stage(game);
             break;
         default:
             break;
@@ -66,6 +66,9 @@ void select_game_stage(game_t *game)
             break;
         case ICE_STAGE:
             ice_stage(game);
+            break;
+        case MARKET_STAGE:
+            market_stage(game);
             break;
         default:
             break;
