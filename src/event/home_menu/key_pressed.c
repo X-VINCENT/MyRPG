@@ -12,7 +12,8 @@ void home_menu_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
 
     if (event->key.code == sfKeyReturn) {
-        sfView_setSize(game->view, VIEW_CITY_SIZE);
-        game->stage = CITY_STAGE;
+        game->last_stage = game->stage;
+        sfView_setSize(game->view, VIEW_MENUS_SIZE);
+        game->stage = GAME_STAGE;
     }
 }
