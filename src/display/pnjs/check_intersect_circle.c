@@ -18,6 +18,7 @@ void check_intersect_circle(game_t *game, pnj_t *pnj)
     string = my_strcat(string, "]");
     if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
         sfText_setString(pnj->touch_talk, string);
+        set_text_origin(pnj->touch_talk);
         sfRenderWindow_drawText(game->window, pnj->touch_talk, NULL);
     }
     free(string);
