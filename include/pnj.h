@@ -40,6 +40,7 @@
         int change_t;
         bool display_the_text;
         bool text;
+        sfText *touch_talk;
         int speed;
         int displaying_text;
     } pnj_t;

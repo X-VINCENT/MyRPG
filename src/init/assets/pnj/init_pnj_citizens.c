@@ -47,6 +47,8 @@ void init_pnj_citizens(sfTexture *texture,
     pos.x -= 210;
     pnj->message_box = create_sprite(game->textures->message_box,
         (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
+    pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 0, "");
+    sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x - 13, pos.y - 45});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
     init_text_pnj(pnj, pos, "");
     init_settings_base_citizens(pnj, 5);
