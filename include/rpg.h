@@ -43,7 +43,7 @@
     void display_cursor(game_t *game);
 
 // Window
-    #define DEFAULT_FPS 80
+    #define DEFAULT_FPS 60
     #define DEFAULT_WINDOW_RESOLUTION 1080
 
 //////////////////////////////////////////////////////////////////////////////
