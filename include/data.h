@@ -11,6 +11,7 @@
     #include "rpg.h"
     #include "inventory.h"
     #include "pnj.h"
+    #include "fights.h"
 
     typedef struct particle {
         sfSprite *sprite;
@@ -427,6 +428,7 @@
         int *default_keys;
         inventory_t *inventory;
         abilities_t *abilities;
+        fights_t *fights;
         int stage;
         int last_stage;
         int next_stage;

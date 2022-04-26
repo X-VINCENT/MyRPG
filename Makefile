@@ -35,6 +35,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
 								destroy/data/destroy.c                       \
+								destroy/fights/destroy.c                     \
 								destroy/inventory/destroy.c                  \
 								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
@@ -47,6 +48,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
 								display/pnjs/check_intersect_circle.c        \
+								display/fights/display.c                     \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -107,6 +109,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/key_pressed.c                   \
+								event/fights/mouse_moved.c                   \
+								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
@@ -214,6 +219,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
 								init/data/load_save.c                        \
+								init/fights/init.c                           \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \
 								init/textures/characters.c                   \
@@ -232,6 +238,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
+								stage/fights.c                               \
 								stage/home_menu.c                            \
 								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \

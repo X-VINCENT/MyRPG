@@ -110,6 +110,10 @@
     void destroy_save(save_t *save);
     void destroy_data(data_t *data);
 
+// Fights
+    // destroy.c
+    void destroy_fights(fights_t *fights);
+
 // destroy.c
 void destroy_all(game_t *game);
 
