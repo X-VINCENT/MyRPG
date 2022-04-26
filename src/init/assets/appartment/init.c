@@ -12,7 +12,7 @@ void init_sign_appartment(game_t *game)
     appartment_t *apart = game->assets->appartment;
     sfIntRect r_sign = init_rect(0, 560, 320, 80);
     sfVector2f p_sign = {258, 20};
-    sfVector2f s_sign = {0.6, 0.6};
+    sfVector2f s_sign = {0.8, 0.6};
 
    apart->sign = create_sprite(
         game->textures->message_box, r_sign, p_sign, s_sign);
@@ -29,7 +29,7 @@ void init_appartment(game_t *game)
     sfIntRect rect = init_rect(0, 0, 517, 292);
     sfVector2f pos = init_pos(0, 0);
     sfVector2f scale = init_scale(1, 1);
-    
+
     game->assets->appartment = malloc(sizeof(appartment_t));
     game->assets->appartment->bg = create_sprite(
         game->textures->apart, rect, pos, scale);

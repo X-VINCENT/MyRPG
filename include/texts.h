@@ -81,6 +81,10 @@
     #define ENGLISH_RESET_VIEW "View : Reset"
     #define ENGLISH_HITBOX "Display Hitbox"
     #define ENGLISH_ESCAPE "Escape"
+
+    // Other
+    #define ENGLISH_PRESS "Press "
+    #define ENGLISH_TO_SAVE " to save"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -149,6 +153,10 @@
     #define FRENCH_RESET_VIEW "Vue : Reinitialiser"
     #define FRENCH_HITBOX "Afficher la hitbox"
     #define FRENCH_ESCAPE "Echap"
+
+    // Other
+    #define FRENCH_PRESS "Appuyer sur "
+    #define FRENCH_TO_SAVE " pour sauvegarder"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -217,6 +225,10 @@
     #define GERMAN_RESET_VIEW "Ansicht : Zurucksetzen"
     #define GERMAN_HITBOX "Hitbox anzeigen"
     #define GERMAN_ESCAPE "Fliehen"
+
+    // Other
+    #define GERMAN_PRESS "Drucken "
+    #define GERMAN_TO_SAVE " um zu speichern"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -285,6 +297,10 @@
     #define SPANISH_RESET_VIEW "Ver : Restablecer"
     #define SPANISH_HITBOX "Mostrar hitbox"
     #define SPANISH_ESCAPE "Escapar"
+
+    // Other
+    #define SPANISH_PRESS "Presione "
+    #define SPANISH_TO_SAVE " para guardar"
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !TEXTS_H_ */
