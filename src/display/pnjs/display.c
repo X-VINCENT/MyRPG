@@ -75,6 +75,7 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     int stop = 0;
+
     if (!pnj || !game || !pnj->sprite || !game->window ||
         !game->assets->rat->idle_front)
         return;
@@ -89,5 +90,6 @@ void display_pnj(game_t *game, pnj_t *pnj)
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
     }
+    check_intersect_circle(game, pnj);
     return;
 }
