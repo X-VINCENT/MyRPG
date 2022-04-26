@@ -50,7 +50,7 @@ void check_second_move_pnj(game_t *game, int i)
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
-    for (int i = PNJ_GUARD_RIGHT + 1; i < nbr_animated_pnj; i++)
+    for (int i = LAST_PNJ + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
 }
 
@@ -88,7 +88,6 @@ void display_pnj(game_t *game, pnj_t *pnj)
         sfRenderWindow_drawSprite(game->window, pnj->message_box, NULL);
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
-        my_putstr("ok\n");
     }
     return;
 }

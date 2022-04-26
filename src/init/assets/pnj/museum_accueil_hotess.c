@@ -1,26 +1,27 @@
 /*
 ** EPITECH PROJECT, 2022
-** message_one
+** museum left pnj
 ** File description:
-** message_one
+** museum_start_left
 */
 
 #include "rpg.h"
 
-char *message_gleft[] = {
-    "Ecoutes ce que mon collegue dit, il dit vrai",
+char *message_hotess[] = {
+    "Bienvenue au musee du rat !",
+    "Attention ne touches rien. Sinon je vais devoir appeler la securite.",
     NULL
 };
 
-void init_text_pnj_gleft(pnj_t *pnj, sfVector2f pos)
+void init_text_pnj_museum_hotess(pnj_t *pnj, sfVector2f pos)
 {
-    int nbr_text = my_arrlen(message_gleft);
+    int nbr_text = my_arrlen(message_hotess);
 
     pnj->text_to_display = malloc(sizeof(sfText *) * nbr_text + 1);
     pnj->text_to_display[nbr_text] = NULL;
-    for (int i = 0; message_gleft[i] != NULL; i++)
+    for (int i = 0; message_hotess[i] != NULL; i++)
         pnj->text_to_display[i] = create_text(FONT_TEXT_PNJ, sfWhite,
-            13, message_gleft[i]);
+            13, message_hotess[i]);
     pos.y -= 220;
     pos.x -= 395;
     for (int i = 0; pnj->text_to_display[i] != NULL; i++) {
@@ -29,17 +30,17 @@ void init_text_pnj_gleft(pnj_t *pnj, sfVector2f pos)
     }
 }
 
-void init_pnj_guard_left(game_t *game)
+void init_pnj_museum_hotess(game_t *game)
 {
     assets_t *assets = game->assets;
-    pnj_t *pnj = assets->pnj[PNJ_GUARD_LEFT];
-    sfTexture *texture = game->textures->guard_pnj;
-    sfVector2f position = {2010, 582};
+    pnj_t *pnj = assets->pnj[PNJ_MUSEUM_HOTESS];
+    sfTexture *texture = game->textures->hotess_pnj;
+    sfVector2f position = {53, 492};
     sfIntRect rect = {97, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
     create_box_message(game, pnj, position);
-    init_text_pnj_gleft(pnj, position);
+    init_text_pnj_museum_hotess(pnj, position);
     pnj->time_between_text = 2;
 }

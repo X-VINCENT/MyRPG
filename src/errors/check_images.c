@@ -15,8 +15,10 @@ int check_characters(void)
     error += is_file(RED_RAT);
     error += is_file(GREEN_RAT);
     error += is_file(PURPLE_RAT);
-    error += is_file(PNJ_BLUE_GIRL);
-    error += is_file(PNJ_GUARD);
+    error += is_file(PNJ_BLUE_GIRL_PATH);
+    error += is_file(PNJ_GUARD_PATH);
+    error += is_file(PNJ_BLACK_PATH);
+    error += is_file(PNJ_HOTESS_PATH);
     return error;
 }
 

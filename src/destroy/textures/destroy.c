@@ -25,11 +25,12 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->message_box);
     sfTexture_destroy(textures->blue_girl_pnj);
     sfTexture_destroy(textures->guard_pnj);
+    sfTexture_destroy(textures->hotess_pnj);
+    sfTexture_destroy(textures->black_pnj);
 }
 
 void destroy_textures(textures_t *textures)
 {
-    sfTexture_destroy(textures->black_pnj);
     sfTexture_destroy(textures->rat_blue);
     sfTexture_destroy(textures->rat_green);
     sfTexture_destroy(textures->rat_purple);
