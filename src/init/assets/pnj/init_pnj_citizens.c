@@ -47,8 +47,6 @@ void init_pnj_citizens(sfTexture *texture,
     pos.x -= 210;
     pnj->message_box = create_sprite(game->textures->message_box,
         (sfIntRect){0, 560, 320, 80}, pos, (sfVector2f){1.2, 1});
-    pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 0, "");
-    sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x - 13, pos.y - 45});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
     init_text_pnj(pnj, pos, "");
     init_settings_base_citizens(pnj, 5);
@@ -59,7 +57,7 @@ void citizens_png(game_t *game)
     assets_t *assets = game->assets;
     sfVector2f default_pnj_position;
 
-    for (int i = LAST_PNJ + 1; i < PNJ_NBR; i++) {
+    for (int i = PNJ_GUARD_RIGHT + 1; i < PNJ_NBR; i++) {
         default_pnj_position.x = rand() % 2500;
         default_pnj_position.y = 1700 + rand() % (1740 + 1 - 1700);
         assets->pnj[i]->speed = rand() % (3 + 1 - 1);

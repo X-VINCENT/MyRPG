@@ -57,7 +57,6 @@
 // Pnj
     // display.c
     void display_pnj(game_t *game, pnj_t *pnj);
-    void check_intersect_circle(game_t *game, pnj_t *pnj);
     void move_pnj(game_t *game, int nbr_animated_pnj);
 
 // Clothe
