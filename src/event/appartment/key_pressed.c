@@ -23,11 +23,8 @@ void appartment_key_pressed(game_t *game)
     sfFloatRect r_bed = {4.00, 82.00, 67.00, 47.00};
 
     if (sfFloatRect_contains(&r_bed, rat_pos.x, rat_pos.y)) {
-        if (event->key.code == game->keys[INTERACT]) {
-            get_time(game);
-            save_abilities(game);
+        if (event->key.code == game->keys[INTERACT])
             save_data(game->data->save2, game->data->current);
-        }
         game->assets->appartment->is_saving = 1;
         return;
     }

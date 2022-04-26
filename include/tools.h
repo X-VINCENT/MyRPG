@@ -31,6 +31,22 @@
         // spanish.c
         void set_texts_spanish_abilities(game_t *game);
 
+    // Game Menu
+        // english.c
+        void set_texts_english_game_menu(game_t *game);
+
+        // french.c
+        void set_texts_french_game_menu(game_t *game);
+
+        // german.c
+        void set_texts_german_game_menu(game_t *game);
+
+        // origin.c
+        void set_texts_origin_game_menu(game_t *game);
+
+        // spanish.c
+        void set_texts_spanish_game_menu(game_t *game);
+
     // Settings
         // english.c
         void set_texts_english_settings(game_t *game);
