@@ -25,7 +25,6 @@
         sfSprite *sprite;
         int is_legal;
         int price_for_sell;
-        
     } item_t;
 
     typedef struct inventory {

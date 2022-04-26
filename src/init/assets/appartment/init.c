@@ -14,12 +14,13 @@ void init_sign_appartment(game_t *game)
     sfVector2f p_sign = {258, 20};
     sfVector2f s_sign = {0.8, 0.6};
 
-   apart->sign = create_sprite(
+    apart->sign = create_sprite(
         game->textures->message_box, r_sign, p_sign, s_sign);
     set_sprite_origin(game->assets->appartment->sign, r_sign);
     apart->press_interact = create_text(FONT_BUENARD,
         (sfColor){255, 255, 255, 255}, 16, "Press E to save");
-    sfText_setPosition(apart->press_interact, (sfVector2f) {p_sign.x, p_sign.y - 4});
+    sfText_setPosition(apart->press_interact,
+        (sfVector2f) {p_sign.x, p_sign.y - 4});
     set_text_origin(apart->press_interact);
     apart->is_saving = 0;
 }
