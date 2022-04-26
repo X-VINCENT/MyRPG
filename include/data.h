@@ -436,9 +436,6 @@
         int language;
         int music_volume;
         int effects_volume;
-        int nb_golds;
-        int nb_xps;
-        int nb_abilities;
         sfClock *time_playing_clock;
     } game_t;
 
