@@ -35,7 +35,7 @@ void wind(game_t *game)
 
 void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 {
-    int last_pnj_not_citizens = LAST_PNJ + 1;
+    int last_pnj_not_citizens = PNJ_GUARD_RIGHT + 1;
 
     nbr_animated_pnj += last_pnj_not_citizens;
     move_pnj(game, nbr_animated_pnj);
