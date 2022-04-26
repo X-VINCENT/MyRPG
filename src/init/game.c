@@ -19,9 +19,6 @@ void init_game_variables(game_t *game)
     game->language = ENGLISH;
     game->music_volume = 100;
     game->effects_volume = 100;
-    game->nb_golds = 0;
-    game->nb_xps = 0;
-    game->nb_abilities = 100;
     game->time_playing_clock = sfClock_create();
 }
 
