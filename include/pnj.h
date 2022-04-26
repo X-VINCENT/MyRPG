@@ -15,7 +15,7 @@
     #define PNJ_GUARD_PATH "assets/images/characters/pnj/guard_pnj.png"
     #define PNJ_HOTESS_PATH "assets/images/characters/pnj/hotesse.png"
 
-    #define PNJ_NBR 540
+    #define PNJ_NBR 13
     #define LAST_PNJ 7
     #define PNJ_BLACK 0
     #define PNJ_GIRL_TWO 1
