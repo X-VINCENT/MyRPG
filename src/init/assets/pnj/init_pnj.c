@@ -36,6 +36,8 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
     pnj->sprite = create_sprite(texture,
         rect, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
+    pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 25, "[E]");
+    sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x - 13, pos.y - 45});
     pos.y -= 200;
     pos.x -= 210;
     init_settings_base(pnj);
@@ -58,5 +60,8 @@ void init_struct_pnjs(game_t *game)
     init_three(game);
     init_pnj_guard_left(game);
     init_pnj_guard_right(game);
+    init_pnj_museum_hotess(game);
+    init_pnj_g_museum_left(game);
+    init_pnj_g_museum_right(game);
     citizens_png(game);
 }
