@@ -12,17 +12,25 @@
 
     #define INVENTORY_SIZE 9
 
-    enum item {
-        NOTHING,
-        CONSUMABLES,
-        SCORE,
-        SCORE_2,
+    enum item_name {
+        EMPTY,
+        BOMB,
+        MONA,
+        COIN,
         WEAPON
     };
 
+    typedef struct item {
+        enum item_name name;
+        sfSprite *sprite;
+        int is_legal;
+        int price_for_sell;
+        
+    } item_t;
+
     typedef struct inventory {
         int selected;
-        int *items;
+        item_t **items;
         sfSprite **slots_on;
         sfSprite **slots_off;
     } inventory_t;
