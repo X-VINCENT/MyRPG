@@ -60,7 +60,6 @@ void display_stats(game_t *game)
 {
     stats_t *stats = game->assets->stats;
 
-    get_time(game);
     set_stats_values(game);
     sfRenderWindow_drawSprite(game->window, stats->bg, NULL);
     sfRenderWindow_drawSprite(game->window, stats->frame, NULL);
