@@ -25,7 +25,7 @@
     #define R_RAT_FRAME (sfIntRect) {0, 1841, 398, 496}
     #define R_COIN (sfIntRect) {0, 2355, 50, 60}
     #define R_XP (sfIntRect) {69, 2355, 70, 67}
-    #define R_ABILITIES (sfIntRect) {0, 2356, 50, 60}
+    #define R_ABILITIES (sfIntRect) {152, 2355, 50, 50}
 
     #define R_SAVE (sfIntRect) {0, 2445, 395, 513}
     #define R_PLAY (sfIntRect) {0, 2979, 78, 78}

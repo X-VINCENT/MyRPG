@@ -26,6 +26,7 @@ void home_menu_mouse_pressed(game_t *game)
     }
     if (sfFloatRect_contains(&r_p, coords.x, coords.y)) {
         game->last_stage = game->stage;
-        game->stage = CITY_STAGE;
+        sfView_setSize(game->view, VIEW_MENUS_SIZE);
+        game->stage = GAME_STAGE;
     }
 }

@@ -150,6 +150,7 @@
 
 // Data
     // init.c
+    save_t *init_empty_save(void);
     void init_data(game_t *game);
 
     // load_save.c
