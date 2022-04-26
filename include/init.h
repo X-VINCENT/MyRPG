@@ -156,6 +156,10 @@
     // load_save.c
     save_t *load_save(const char *filename);
 
+// Fights
+    // init.c
+    void init_fights(game_t *game);
+
 // Inventory
     // init.c
     void init_inventory(game_t *game);

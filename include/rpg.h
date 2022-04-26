@@ -26,12 +26,14 @@
     #include "display.h"
     #include "errors.h"
     #include "event.h"
+    #include "fights.h"
     #include "init.h"
     #include "inventory.h"
     #include "pnj.h"
     #include "stage.h"
     #include "texts.h"
     #include "tools.h"
+    #include "rpg.h"
 
 // Basic Macros
     #define SUCCESS 0
@@ -63,6 +65,10 @@
 
     #define VIEW_HOME_MENU_SIZE (sfVector2f) {640, 360}
     #define VIEW_HOME_MENU_POS (sfVector2f) {320, 180}
+
+    // FIGHTS
+    #define VIEW_FIGHTS_SIZE (sfVector2f) {520, 307}
+    #define VIEW_FIGHTS_POS (sfVector2f) {260, 153.50}
 
     // Appartment
     #define VIEW_APPARTMENT_SIZE (sfVector2f) {600, 320}
