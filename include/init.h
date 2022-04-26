@@ -126,6 +126,8 @@
         void create_box_message(game_t *game, pnj_t *pnj,
             sfVector2f position);
         void init_one(game_t *game);
+        void init_pnj_guard_left(game_t *game);
+        void init_pnj_guard_right(game_t *game);
         void init_two(game_t *game);
         void init_three(game_t *game);
 
@@ -147,9 +149,11 @@
     // init.c
     void init_data(game_t *game);
 
+    // load_save.c
+    save_t *load_save(const char *filename);
+
 // Inventory
     // init.c
-    save_t *load_save(char *save_directory);
     void init_inventory(game_t *game);
 
 // Particles

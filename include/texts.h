@@ -27,6 +27,9 @@
     // Home
     #define ENGLISH_PRESS_ENTER "PRESS ENTER TO CONTINUE"
 
+    // Game Menu
+    #define ENGLISH_EMPTY "EMPTY"
+
     // Abilities
     #define ENGLISH_ABILITIES "Abilities"
     #define ENGLISH_UTILITY "Utility"
@@ -91,6 +94,9 @@
 
     // Home
     #define FRENCH_PRESS_ENTER "APPUYEZ SUR ENTRER POUR CONTINUER"
+
+    // Game Menu
+    #define FRENCH_EMPTY "VIDE"
 
     // Abilities
     #define FRENCH_ABILITIES "Competences"
@@ -157,6 +163,9 @@
     // Home
     #define GERMAN_PRESS_ENTER "DRUCK ENTER UM FORTSETZEN"
 
+    // Game Menu
+    #define GERMAN_EMPTY "LEER"
+
     // Abilities
     #define GERMAN_ABILITIES "Fahigkeiten"
     #define GERMAN_UTILITY "Nutzlichkeit"
@@ -221,6 +230,9 @@
 
     // Home
     #define SPANISH_PRESS_ENTER "PRESIONA ENTER PARA CONTINUAR"
+
+    // Game Menu
+    #define SPANISH_EMPTY "VACIO"
 
     // Abilities
     #define SPANISH_ABILITIES "Habilidades"

@@ -11,10 +11,11 @@ void get_time(game_t *game)
 {
     if (!game)
         return;
-    game->data->current->time_played += time_elapsed(
-        game->time_playing_clock);
-    if (time_elapsed(game->time_playing_clock) >= 1)
+    if (time_elapsed(game->time_playing_clock) >= 1) {
+        game->data->current->time_played += time_elapsed(
+            game->time_playing_clock);
         sfClock_restart(game->time_playing_clock);
+    }
 }
 
 char *put_time_in_str(int time_played)

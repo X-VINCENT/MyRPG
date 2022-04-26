@@ -29,6 +29,7 @@ void set_texts_german(game_t *game)
 {
     set_texts_german_top_bar(game);
     set_texts_german_stats(game);
+    set_texts_german_game_menu(game);
     set_texts_german_abilities(game);
     set_texts_german_settings(game);
 }

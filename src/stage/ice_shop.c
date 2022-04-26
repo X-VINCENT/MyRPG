@@ -9,7 +9,7 @@
 
 void ice_stage(game_t *game)
 {
-    sfMusic_play(game->audio->musics->music_ice_cream);
+    play_music(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
     sfMusic_stop(game->audio->musics->music_bar);

@@ -63,13 +63,11 @@ void check_interact(game_t *game, pnj_t *pnj)
     return;
 }
 
-void check_pnj_intersects(pnj_t *pnj, game_t *game)
+int check_pnj_intersects(pnj_t *pnj, game_t *game)
 {
     sfFloatRect pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
     sfFloatRect rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
 
-    if (!pnj || !game)
-        return;
     change_bool_pnj_text(pnj);
     if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
         check_interact(game, pnj);
@@ -77,11 +75,14 @@ void check_pnj_intersects(pnj_t *pnj, game_t *game)
             pnj->display_the_text = true;
             check_skip_text_touch(game, pnj);
         } else
-        sfClock_restart(pnj->timer_display_text);
+            sfClock_restart(pnj->timer_display_text);
+        return 1;
     } else {
         pnj->displaying_text = 0;
         pnj->display_the_text = false;
         sfClock_restart(pnj->timer_display_text);
         pnj->text_index_display = 0;
+        return 1;
     }
+    return 0;
 }
