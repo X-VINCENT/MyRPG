@@ -50,7 +50,7 @@ void check_second_move_pnj(game_t *game, int i)
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
-    for (int i = PNJ_GUARD_RIGHT + 1; i < nbr_animated_pnj; i++)
+    for (int i = LAST_PNJ + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
 }
 

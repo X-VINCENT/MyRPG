@@ -58,5 +58,8 @@ void init_struct_pnjs(game_t *game)
     init_three(game);
     init_pnj_guard_left(game);
     init_pnj_guard_right(game);
+    init_pnj_museum_hotess(game);
+    init_pnj_g_museum_left(game);
+    init_pnj_g_museum_right(game);
     citizens_png(game);
 }
