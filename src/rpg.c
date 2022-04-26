@@ -36,9 +36,12 @@ void display_cursor(game_t *game)
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse_pos, NULL);
+    sfVector2f scale = {sfView_getSize(game->view).y / 4000,
+        sfView_getSize(game->view).y / 4000};
 
     if (!game)
         return;
+    sfSprite_setScale(game->assets->cursor, scale);
     sfSprite_setPosition(game->assets->cursor, coords);
     sfRenderWindow_drawSprite(game->window, game->assets->cursor, NULL);
 }
