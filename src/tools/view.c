@@ -11,23 +11,17 @@ void zoom_view(game_t *game)
 {
     sfEvent *event = game->event->event;
     sfVector2f view_size = sfView_getSize(game->view);
-    float zoom_x = sfSprite_getScale(game->assets->cursor).x;
-    float zoom_y = sfSprite_getScale(game->assets->cursor).y;
     float offset = VIEW_ZOOM_VALUE;
 
     if (event->key.code == game->keys[ZOOM_IN] &&
         sfView_getSize(game->view).y > VIEW_MAX_ZOOM_IN) {
         sfView_setSize(game->view, (sfVector2f){
             view_size.x - offset * 16 / 9, view_size.y - offset});
-        sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            zoom_x - offset / 100, zoom_y - offset / 100});
     }
     if (event->key.code == game->keys[ZOOM_OUT] &&
         sfView_getSize(game->view).y < VIEW_MAX_ZOOM_OUT) {
         sfView_setSize(game->view, (sfVector2f){
             view_size.x + offset * 16 / 9, view_size.y + offset});
-        sfSprite_setScale(game->assets->cursor, (sfVector2f){
-            zoom_x + offset / 100, zoom_y + offset / 100});
     }
 }
 
