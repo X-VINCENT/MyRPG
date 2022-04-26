@@ -247,6 +247,11 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/abilities/german.c            \
 								tools/language/abilities/origin.c            \
 								tools/language/abilities/spanish.c           \
+								tools/language/game_menu/english.c           \
+								tools/language/game_menu/french.c            \
+								tools/language/game_menu/german.c            \
+								tools/language/game_menu/origin.c            \
+								tools/language/game_menu/spanish.c           \
 								tools/language/settings/english.c            \
 								tools/language/settings/french.c             \
 								tools/language/settings/german.c             \
@@ -264,12 +269,13 @@ SRC                 =           $(addprefix src/,                            \
 								tools/language/origin.c                      \
 								tools/language/spanish.c                     \
 								tools/list/manage_list.c                     \
+								tools/save/read.c                            \
+								tools/save/write.c                           \
 								tools/arrow.c                                \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/res.c                                  \
-								tools/save.c                                 \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
 								tools/view.c                                 \
