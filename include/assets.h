@@ -44,10 +44,10 @@
     #define R_BG_FIGHTS (sfIntRect) {1265, 0, 520, 307}
     #define R_FIGHT_BUTTON (sfIntRect) {1791, 0, 74, 26}
     #define R_RUN_BUTTON (sfIntRect) {1873, 0, 46, 26}
+    #define R_ATTACK_BG (sfIntRect) {1790, 70, 100, 50}
     #define R_RAT_BITE (sfIntRect) {1921 , 0, 20, 21}
     #define R_BOMB_IDLE (sfIntRect) {1941, 0, 20, 21}
     #define R_BOMB_EXPLOSION (sfIntRect) {1880, 31, 65, 32}
-    #define R_BUTTONS_BG (sfIntRect) {1790, 70, 100, 50}
     #define R_RAT_HEALTH_BAR_FULL (sfIntRect) {1945, 0, 64, 4}
     #define R_RAT_HEALTH_BAR_EMPTY (sfIntRect) {1945, 5, 85, 8}
     #define R_ENEMY_HEALTH_BAR_FULL (sfIntRect) {1945, 14, 64, 4}

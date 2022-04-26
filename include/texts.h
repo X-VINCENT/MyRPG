@@ -36,6 +36,9 @@
     #define ENGLISH_STEALTH "Stealth"
     #define ENGLISH_FIGHT "Fight"
 
+    // Fights
+    #define ENGLISH_BITE "Bite"
+
     // Stats
     #define ENGLISH_MONEY "Money"
     #define ENGLISH_XP "XPs"

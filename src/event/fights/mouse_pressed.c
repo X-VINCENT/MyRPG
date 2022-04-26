@@ -16,7 +16,7 @@ void fights_mouse_pressed(game_t *game)
     sfFloatRect r_fight = sfSprite_getGlobalBounds(fights->fight_button);
 
     if (sfFloatRect_contains(&r_fight, coords.x, coords.y)) {
-        if (fights->fight_button == 0)
+        if (fights->fight_status == 0)
             fights->fight_status = 1;
         else
             fights->fight_status = 0;

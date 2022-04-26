@@ -7,6 +7,20 @@
 
 #include "rpg.h"
 
+void attack_hover(attack_t *attack, sfVector2f coords)
+{
+    sfFloatRect r_attack;
+
+    if (!attack)
+        return;
+    r_attack = sfSprite_getGlobalBounds(attack->bg);
+    button_hover(attack->bg, attack->clock, &r_attack, coords);
+    if (sfFloatRect_contains(&r_attack, coords.x, coords.y))
+        attack->is_hover = 1;
+    else
+        attack->is_hover = 0;
+}
+
 void fights_mouse_moved(game_t *game)
 {
     fights_t *fights = game->fights;
@@ -19,4 +33,7 @@ void fights_mouse_moved(game_t *game)
     button_hover(
         fights->fight_button, fights->button_clock, &r_fight, coords);
     button_hover(fights->run_button, fights->button_clock, &r_run, coords);
+    attack_hover(fights->attack_1, coords);
+    attack_hover(fights->attack_2, coords);
+    attack_hover(fights->attack_3, coords);
 }
