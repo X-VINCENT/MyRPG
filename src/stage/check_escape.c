@@ -68,6 +68,7 @@ void check_escape(game_t *game)
 {
     sfEvent *event = game->event->event;
 
+    get_time(game);
     if (event->key.code == game->keys[ESCAPE]) {
         if (!is_it_a_menu(game->stage)) {
             sfView_setRotation(game->view, 0);

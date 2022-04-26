@@ -29,6 +29,7 @@ void set_texts_french(game_t *game)
 {
     set_texts_french_top_bar(game);
     set_texts_french_stats(game);
+    set_texts_french_game_menu(game);
     set_texts_french_abilities(game);
     set_texts_french_settings(game);
 }

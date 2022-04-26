@@ -24,6 +24,7 @@ void destroy_textures_2(textures_t *textures)
     sfTexture_destroy(textures->gui);
     sfTexture_destroy(textures->message_box);
     sfTexture_destroy(textures->blue_girl_pnj);
+    sfTexture_destroy(textures->guard_pnj);
 }
 
 void destroy_textures(textures_t *textures)
@@ -47,5 +48,4 @@ void destroy_textures(textures_t *textures)
     sfTexture_destroy(textures->cursor_icon);
     sfTexture_destroy(textures->window_icon);
     destroy_textures_2(textures);
-    free(textures->bar);
 }

@@ -23,4 +23,5 @@ void init_textures_environnment(game_t *game)
     textures->museum_bg = sfTexture_createFromFile(MUSEUM, NULL);
     textures->museum_bg_top = sfTexture_createFromFile(MUSEUM_TOP, NULL);
     textures->rain = sfTexture_createFromFile(RAIN, NULL);
+    textures->wind = sfTexture_createFromFile(WIND, NULL);
 }
