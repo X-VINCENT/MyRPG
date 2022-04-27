@@ -11,7 +11,7 @@ void init_sprites_fights(game_t *game)
 {
     fights_t *fights = game->fights;
     sfVector2f p_fight = {150, 289};
-    sfVector2f p_run= {370, 289};
+    sfVector2f p_run = {370, 289};
     sfVector2f scale = {1, 1};
 
     game->fights->fight_button = create_sprite(
