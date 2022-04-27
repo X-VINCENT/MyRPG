@@ -25,7 +25,7 @@ int *get_words_sizes(const char *str, char separator)
     int line = 0;
     int nb_lines = 0;
 
-    if (!str )
+    if (!str)
         return NULL;
     for (int idx = 0; str[idx] != '\0'; idx += 1)
         if (str[idx] == separator)

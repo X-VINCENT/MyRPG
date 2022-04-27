@@ -88,6 +88,7 @@
     // Other
     #define ENGLISH_PRESS "Press "
     #define ENGLISH_TO_SAVE " to save"
+    #define ENGLISH_CHOOSE_SKIN "Choose your skin"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -160,6 +161,7 @@
     // Other
     #define FRENCH_PRESS "Appuyer sur "
     #define FRENCH_TO_SAVE " pour sauvegarder"
+    #define FRENCH_CHOOSE_SKIN "Choisi ton rat"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -232,6 +234,7 @@
     // Other
     #define GERMAN_PRESS "Drucken "
     #define GERMAN_TO_SAVE " um zu speichern"
+    #define GERMAN_CHOOSE_SKIN "Wahle deine Haut"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -304,6 +307,7 @@
     // Other
     #define SPANISH_PRESS "Presione "
     #define SPANISH_TO_SAVE " para guardar"
+    #define SPANISH_CHOOSE_SKIN "Elige tu piel"
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !TEXTS_H_ */

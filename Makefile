@@ -177,6 +177,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/appartment/skin_selector.c       \
 								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \

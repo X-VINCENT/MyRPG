@@ -22,6 +22,9 @@
         // init.c
         void init_appartment(game_t *game);
 
+        // skin_selector.c
+        skin_selector_t *init_skin_selector(game_t *game);
+
     // Bar
         // init.c
         void init_bar(game_t *game);
