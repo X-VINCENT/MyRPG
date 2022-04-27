@@ -53,8 +53,6 @@ void city_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_menu);
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
-    check_and_center_view(
-        game, game->assets->rat->idle_front, game->assets->city->bg);
     display_city(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
@@ -65,4 +63,6 @@ void city_stage(game_t *game)
     wind(game);
     display_inventory(game);
     play_music(game->audio->musics->music_city);
+    check_and_center_view(
+        game, game->assets->rat->idle_front, game->assets->city->bg);
 }

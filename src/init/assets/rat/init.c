@@ -19,7 +19,6 @@ void init_rat_idle_2(game_t *game, sfTexture *texture)
     rat->idle_back_right = create_sprite(texture, r_diagonal, pos, scale);
     set_sprite_origin(rat->idle_back_left, r_diagonal);
     set_sprite_origin(rat->idle_back_right, r_diagonal);
-    rat->dodge_anim_clock = sfClock_create();
 }
 
 void init_rat_idle(game_t *game, sfTexture *texture)
@@ -96,7 +95,8 @@ void init_rat(game_t *game, sfTexture *texture)
     rat->down = 0;
     rat->left = 0;
     rat->right = 0;
-    rat->speed = RAT_SPEED_CITY;
+    rat->speed = 1;
+    rat->speed_multiplier = 1;
     rat->is_moving = 0;
     rat->shadow = create_sprite(texture, r_shadow, pos, scale);
     set_sprite_origin(rat->shadow, r_shadow);

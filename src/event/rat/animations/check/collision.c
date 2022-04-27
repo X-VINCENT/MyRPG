@@ -29,8 +29,8 @@ int check_rat_collision(
     sfVector2f rat_pos = sfSprite_getPosition(rat->movement_up);
     sfColor color;
 
-    rat_pos.x += rat->speed * offset_x;
-    rat_pos.y += rat->speed * offset_y;
+    rat_pos.x += rat->speed * rat->speed_multiplier * offset_x;
+    rat_pos.y += rat->speed * rat->speed_multiplier * offset_y;
     color = sfImage_getPixel(hitbox, rat_pos.x, rat_pos.y);
     if (color.r == 0 && color.g == 0 && color.b == 0 &&
         check_contact_pnj(game, rat_pos))

@@ -12,8 +12,10 @@ void detroy_attack(attack_t *attack)
     if (!attack)
         return;
     destroy_sprite(attack->bg);
+    destroy_sprite(attack->filter);
     destroy_sprite(attack->sprite);
     destroy_text(attack->name);
+    sfClock_destroy(attack->anim_clock);
     sfClock_destroy(attack->clock);
     free(attack);
 }

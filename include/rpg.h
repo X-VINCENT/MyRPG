@@ -53,7 +53,7 @@
     #define VIEW_ZOOM_VALUE 5
     #define VIEW_MAX_ZOOM_IN 250
     #define VIEW_MAX_ZOOM_OUT 700
-    #define VIEW_ROTATE_VALUE 1
+    #define VIEW_ROTATE_VALUE 0.1
 
     // MENUS
     #define VIEW_MENUS_SIZE (sfVector2f){1920, 1080}
@@ -104,13 +104,23 @@
 // Rat
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
     // Speed
-    #define RAT_SPEED_APPARTMENT 1
-    #define RAT_SPEED_CITY 3
-    #define RAT_SPEED_ICE_CREAM_SHOP 1
-    #define RAT_SPEED_CLOTHE_SHOP 1
-    #define RAT_SPEED_BAR 2
-    #define RAT_SPEED_MARKET 2
-    #define RAT_SPEED_MUSEUM 2
+    #define RAT_SPEED_APPARTMENT 0.3
+    #define RAT_SPEED_CITY 1
+    #define RAT_SPEED_ICE_CREAM_SHOP 0.3
+    #define RAT_SPEED_CLOTHE_SHOP 0.3
+    #define RAT_SPEED_BAR 0.5
+    #define RAT_SPEED_MARKET 0.5
+    #define RAT_SPEED_MUSEUM 0.5
+
+    // Competencies
+    #define RAT_RADIUS_0 150
+    #define RAT_RADIUS_10 135
+    #define RAT_RADIUS_20 120
+    #define RAT_RADIUS_40 90
+    #define RAT_SPEED_MULTIPLIER_30 1.3
+    #define RAT_SPEED_MULTIPLIER_40 1.4
+    #define RAT_SPEED_MULTIPLIER_50 1.5
+    #define RAT_SPEED_MULTIPLIER_100 2.0
 
     // Pos
     #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}

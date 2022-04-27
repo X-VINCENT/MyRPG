@@ -12,13 +12,19 @@
 
     typedef struct attack {
         sfSprite *bg;
+        sfSprite *filter;
         sfSprite *sprite;
         sfText *name;
         sfText *damage_text;
+        sfClock *anim_clock;
         sfClock *clock;
         int damage;
         int is_unlocked;
         int is_hover;
+        float anim_time;
+        float shift;
+        int max_value;
+        int offset_from_left;
     } attack_t;
 
     typedef struct fights {
