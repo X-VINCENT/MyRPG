@@ -27,6 +27,7 @@ void set_texts_french_top_bar(game_t *game)
 
 void set_texts_french(game_t *game)
 {
+    sfText_setString(game->assets->home_menu->press, FRENCH_PRESS_ENTER);
     set_texts_french_top_bar(game);
     set_texts_french_stats(game);
     set_texts_french_game_menu(game);

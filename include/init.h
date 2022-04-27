@@ -156,6 +156,9 @@
     save_t *init_empty_save(void);
     void init_data(game_t *game);
 
+    // load_game.c
+    save_game_t *load_game_save(const char *filename);
+
     // load_save.c
     save_t *load_save(const char *filename);
 

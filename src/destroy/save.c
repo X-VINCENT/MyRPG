@@ -81,11 +81,25 @@ void save_data_in_file(save_t *save, const char *filename)
     write_data_in_file("## SAVE FILE ##\n\n", filename);
     save_stats_in_file(save, filename);
     save_abilities_in_file(save, filename);
-    return;
+}
+
+void save_data_in_game_save(game_t *game, save_game_t *save)
+{
+    save->fps = game->fps;
+    save->res = game->res;
+    save->vsync = game->vsync;
+    save->language = game->language;
+    save->music_volume = game->music_volume;
+    save->effects_volume = game->effects_volume;
+    for (int idx = 0; save->keys[idx] != -1 &&
+        game->keys[idx] != -1; idx += 1)
+        save->keys[idx] = game->keys[idx];
 }
 
 void save_all_data(game_t *game)
 {
+    save_data_in_game_save(game, game->data->game);
+    save_game_data_in_file(game->data->game, "game.dat");
     save_data_in_file(game->data->save1, "save1.dat");
     save_data_in_file(game->data->save2, "save2.dat");
     save_data_in_file(game->data->save3, "save3.dat");

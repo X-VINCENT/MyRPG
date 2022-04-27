@@ -420,6 +420,16 @@
         sfTexture *hotess_pnj;
     } textures_t;
 
+    typedef struct save_game {
+        int fps;
+        int res;
+        int vsync;
+        int language;
+        int music_volume;
+        int effects_volume;
+        int *keys;
+    } save_game_t;
+
     typedef struct save {
         int nb_golds;
         int nb_xps;
@@ -433,6 +443,7 @@
     } save_t;
 
     typedef struct data {
+        save_game_t *game;
         save_t *current;
         save_t *save1;
         save_t *save2;
