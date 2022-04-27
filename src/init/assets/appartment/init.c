@@ -20,7 +20,7 @@ void init_sign_appartment(game_t *game)
     apart->press_interact = create_text(FONT_BUENARD,
         (sfColor){255, 255, 255, 255}, 16, "Press E to save");
     sfText_setPosition(apart->press_interact,
-        (sfVector2f) {p_sign.x, p_sign.y - 4});
+        (sfVector2f){p_sign.x, p_sign.y - 4});
     set_text_origin(apart->press_interact);
     apart->is_saving = 0;
 }
