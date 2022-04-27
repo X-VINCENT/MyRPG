@@ -298,7 +298,6 @@ SRC_CSFML           =           $(addprefix csfml/,                          \
 								audio.c                                      \
 								audio2.c                                     \
 								clock.c                                      \
-								convex_shape.c                               \
 								image.c                                      \
 								init.c                                       \
 								shape.c                                      \
