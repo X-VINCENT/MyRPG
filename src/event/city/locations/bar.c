@@ -14,8 +14,6 @@ void location_bar_city(game_t *game)
     if (check_location_rect(rat->idle_front,
         LOCATION_BAR, 26, 20) == true && rat->up == 1) {
         game->stage = BAR_STAGE;
-        sfView_setCenter(game->view, VIEW_BAR_POS);
-        sfView_setSize(game->view, VIEW_BAR_SIZE);
         set_rats_position(game, RAT_DEFAULT_POS_BAR);
         rat->speed = RAT_SPEED_BAR;
     }
