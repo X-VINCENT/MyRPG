@@ -176,11 +176,11 @@
         int down;
         int left;
         int right;
-        int speed;
+        float speed;
+        float speed_multiplier;
         int is_moving;
         int is_dodging;
         float radius_circle;
-        particle_t *run;
     } rat_t;
 
     typedef struct settings_game {

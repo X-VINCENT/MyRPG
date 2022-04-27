@@ -16,7 +16,4 @@ void init_bar(game_t *game)
     game->assets->bar = malloc(sizeof(bar_t));
     game->assets->bar->bg = create_sprite(
         game->textures->bar, rect, pos, scale);
-    //game->assets->appartment->bg_top = create_sprite(
-    //    game->textures->apart_top, rect, pos, scale);
-    //game->assets->appartment->hitbox = create_image(BAR_HITBOX);
 }

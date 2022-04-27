@@ -28,7 +28,7 @@ void set_texts_french_controls(game_t *game)
     sfText_setString(s_controls->keys[ROTATE_RIGHT]->title,
         FRENCH_ROTATE_RIGHT);
     sfText_setString(s_controls->keys[RESET_VIEW]->title, FRENCH_RESET_VIEW);
-    sfText_setString(s_controls->keys[HITBOX]->title,FRENCH_HITBOX);
+    sfText_setString(s_controls->keys[HITBOX]->title, FRENCH_HITBOX);
 }
 
 void set_texts_french_controls_2(game_t *game)

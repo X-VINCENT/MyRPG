@@ -10,7 +10,7 @@
 char *message_girl_front_appart[] = {
     "Bienvenue dans ma ville !",
     "N'essayes pas de voler ici",
-    "Personne aime les rats ! Fais toi discret",
+    "Personne aime les rats !Fais toi discret",
     NULL
 };
 

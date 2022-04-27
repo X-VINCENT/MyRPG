@@ -11,6 +11,11 @@ void display_attack(sfRenderWindow *window, attack_t *attack)
 {
     if (!attack)
         return;
+    if (time_elapsed(attack->anim_clock) > attack->anim_time) {
+        animate_sprite(attack->sprite, attack->shift,
+            attack->max_value, attack->offset_from_left);
+        sfClock_restart(attack->anim_clock);
+    }
     sfRenderWindow_drawSprite(window, attack->bg, NULL);
     if (attack->is_hover == 0) {
         sfRenderWindow_drawSprite(window, attack->sprite, NULL);
@@ -18,6 +23,8 @@ void display_attack(sfRenderWindow *window, attack_t *attack)
         sfRenderWindow_drawText(window, attack->name, NULL);
         sfRenderWindow_drawText(window, attack->damage_text, NULL);
     }
+    if (attack->is_unlocked == 1)
+        sfRenderWindow_drawSprite(window, attack->filter, NULL);
 }
 
 void display_fights(game_t *game)
