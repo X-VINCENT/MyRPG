@@ -41,6 +41,10 @@
     #define R_VERTICAL_BAR (sfIntRect) {0, 3930, 16, 170}
     #define R_HORIZONTAL_BAR (sfIntRect) {20, 3930, 170, 16}
 
+    #define R_BG_SKIN (sfIntRect) {0, 4136, 517, 292}
+    #define R_SKIN_UNLOCKED (sfIntRect) {0, 4446, 78, 111}
+    #define R_SKIN_LOCKED (sfIntRect) {89, 4446, 78, 111}
+
     #define R_BG_FIGHTS (sfIntRect) {1265, 0, 520, 307}
     #define R_FIGHT_BUTTON (sfIntRect) {1791, 0, 74, 26}
     #define R_RUN_BUTTON (sfIntRect) {1873, 0, 46, 26}

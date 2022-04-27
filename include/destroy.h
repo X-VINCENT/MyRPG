@@ -117,6 +117,9 @@
 // destroy.c
 void destroy_all(game_t *game);
 
+// save_game.c
+void save_game_data_in_file(save_game_t *save, const char *filename);
+
 // save.c
 void save_all_data(game_t *game);
 

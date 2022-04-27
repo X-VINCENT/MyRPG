@@ -7,6 +7,15 @@
 
 #include "rpg.h"
 
+void destroy_game_save(save_game_t *save)
+{
+    if (!save)
+        return;
+    if (save->keys)
+        free(save->keys);
+    free(save);
+}
+
 void destroy_save(save_t *save)
 {
     if (!save)
@@ -20,6 +29,7 @@ void destroy_data(data_t *data)
 {
     if (!data)
         return;
+    destroy_game_save(data->game);
     destroy_save(data->current);
     destroy_save(data->save1);
     destroy_save(data->save2);
