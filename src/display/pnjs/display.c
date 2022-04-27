@@ -31,6 +31,8 @@ void check_second_move_pnj(game_t *game, int i)
     pnj_t *pnj = game->assets->pnj[i];
     sfVector2f position = sfSprite_getPosition(pnj->sprite);
     sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
+    sfFloatRect r_rat = sfSprite_getGlobalBounds(
+        game->assets->rat->idle_front);
 
     if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) >
         (float)pnj->speed / 100) {

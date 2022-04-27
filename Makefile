@@ -35,10 +35,12 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
 								destroy/data/destroy.c                       \
+								destroy/fights/destroy.c                     \
 								destroy/inventory/destroy.c                  \
 								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
+								destroy/save_game.c                          \
 								destroy/save.c                               \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
@@ -47,6 +49,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
 								display/pnjs/check_intersect_circle.c        \
+								display/fights/display.c                     \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -107,6 +110,9 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/key_pressed.c                   \
+								event/fights/mouse_moved.c                   \
+								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
@@ -172,6 +178,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/appartment/skin_selector.c       \
 								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
@@ -213,7 +220,9 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
+								init/data/load_game.c                        \
 								init/data/load_save.c                        \
+								init/fights/init.c                           \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \
 								init/textures/characters.c                   \
@@ -232,6 +241,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
+								stage/fights.c                               \
 								stage/home_menu.c                            \
 								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \
@@ -288,7 +298,6 @@ SRC_CSFML           =           $(addprefix csfml/,                          \
 								audio.c                                      \
 								audio2.c                                     \
 								clock.c                                      \
-								convex_shape.c                               \
 								image.c                                      \
 								init.c                                       \
 								shape.c                                      \
