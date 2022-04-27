@@ -27,13 +27,36 @@
         sfClock *clock;
     } parallax_t;
 
+    typedef struct skin {
+        sfSprite *bg;
+        sfSprite *preview;
+        sfText *value_text;
+        sfClock *clock;
+        int value;
+        int is_unlocked;
+    } skin_t;
+
+    typedef struct skin_selector {
+        sfSprite *bg;
+        sfText *title;
+        sfText *money;
+        sfSprite *gold;
+        skin_t *blue;
+        skin_t *green;
+        skin_t *purple;
+        skin_t *red;
+    } skin_selector_t;
+
     typedef struct appartment {
         sfSprite *bg;
         sfSprite *bg_top;
         sfSprite *sign;
         sfText *press_interact;
         sfImage *hitbox;
+        skin_selector_t *skin_selector;
         int is_saving;
+        int is_choosing_skin;
+        int is_skin_selector_opened;
     } appartment_t;
 
     typedef struct bar {
@@ -397,6 +420,16 @@
         sfTexture *hotess_pnj;
     } textures_t;
 
+    typedef struct save_game {
+        int fps;
+        int res;
+        int vsync;
+        int language;
+        int music_volume;
+        int effects_volume;
+        int *keys;
+    } save_game_t;
+
     typedef struct save {
         int nb_golds;
         int nb_xps;
@@ -410,6 +443,7 @@
     } save_t;
 
     typedef struct data {
+        save_game_t *game;
         save_t *current;
         save_t *save1;
         save_t *save2;

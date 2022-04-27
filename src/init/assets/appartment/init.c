@@ -38,4 +38,6 @@ void init_appartment(game_t *game)
         game->textures->apart_top, rect, pos, scale);
     game->assets->appartment->hitbox = create_image(APART_HITBOX);
     init_sign_appartment(game);
+    game->assets->appartment->skin_selector = init_skin_selector(game);
+    game->assets->appartment->is_choosing_skin = 0;
 }
