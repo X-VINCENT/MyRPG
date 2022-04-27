@@ -19,6 +19,7 @@ void init_rat_dodge_2(game_t *game, sfTexture *texture)
     rat->dodge_up_right = create_sprite(texture, r_diagonal, pos, scale);
     set_sprite_origin(rat->dodge_up_left, r_diagonal);
     set_sprite_origin(rat->dodge_up_right, r_diagonal);
+    rat->dodge_anim_clock = sfClock_create();
 }
 
 void init_rat_dodge(game_t *game, sfTexture *texture)

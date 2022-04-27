@@ -52,6 +52,7 @@
     #define R_FIGHT_BUTTON (sfIntRect){1791, 0, 74, 26}
     #define R_RUN_BUTTON (sfIntRect){1873, 0, 46, 26}
     #define R_ATTACK_BG (sfIntRect){1790, 70, 100, 50}
+    #define R_FILTER (sfIntRect){1890, 127, 100, 50}
     #define R_BOMB_IDLE (sfIntRect){1788, 31, 24, 21}
     #define R_BOMB_EXPLOSION (sfIntRect){1880, 31, 65, 32}
     #define R_RAT_HEALTH_BAR_FULL (sfIntRect){1945, 0, 64, 4}

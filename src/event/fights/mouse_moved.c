@@ -14,7 +14,6 @@ void attack_hover(attack_t *attack, sfVector2f coords)
     if (!attack)
         return;
     r_attack = sfSprite_getGlobalBounds(attack->bg);
-    button_hover(attack->bg, attack->clock, &r_attack, coords);
     if (sfFloatRect_contains(&r_attack, coords.x, coords.y))
         attack->is_hover = 1;
     else
