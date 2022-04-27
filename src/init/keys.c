@@ -33,21 +33,12 @@ void init_keys(game_t *game)
 {
     game->keys = malloc(sizeof(int) * NB_KEYS + 1);
 
-    game->keys[UP] = game->data->game->keys[UP];
-    game->keys[DOWN] = game->data->game->keys[DOWN];
-    game->keys[LEFT] = game->data->game->keys[LEFT];
-    game->keys[RIGHT] = game->data->game->keys[RIGHT];
-    game->keys[JUMP] = game->data->game->keys[JUMP];
-    game->keys[DODGE] = game->data->game->keys[DODGE];
-    game->keys[ATTACK] = game->data->game->keys[ATTACK];
-    game->keys[INTERACT] = game->data->game->keys[INTERACT];
-    game->keys[ROTATE_LEFT] = game->data->game->keys[ROTATE_LEFT];
-    game->keys[ROTATE_RIGHT] = game->data->game->keys[ROTATE_RIGHT];
-    game->keys[ZOOM_IN] = game->data->game->keys[ZOOM_IN];
-    game->keys[ZOOM_OUT] = game->data->game->keys[ZOOM_OUT];
-    game->keys[RESET_VIEW] = game->data->game->keys[RESET_VIEW];
-    game->keys[ESCAPE] = game->data->game->keys[ESCAPE];
-    game->keys[HITBOX] = game->data->game->keys[HITBOX];
-    game->keys[NB_KEYS] = game->data->game->keys[NB_KEYS];
     init_default_keys(game);
+    for (int idx = 0; idx != NB_KEYS; idx += 1) {
+        if (game->data->game->keys[idx] != sfKeyUnknown)
+            game->keys[idx] = game->data->game->keys[idx];
+        else
+            game->keys[idx] = game->default_keys[idx];
+    }
+    game->keys[NB_KEYS] = sfKeyUnknown;
 }
