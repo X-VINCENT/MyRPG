@@ -37,7 +37,9 @@
     #define ENGLISH_FIGHT "Fight"
 
     // Fights
+    #define ENGLISH_KICK "Kick"
     #define ENGLISH_BITE "Bite"
+    #define ENGLISH_BOMB "Bomb"
 
     // Stats
     #define ENGLISH_MONEY "Money"
@@ -112,6 +114,11 @@
     #define FRENCH_STEALTH "Discretion"
     #define FRENCH_FIGHT "Combat"
 
+    // Fights
+    #define French_KICK "Frapper"
+    #define French_BITE "Mordre"
+    #define French_BOMB "Bombe"
+
     // Stats
     #define FRENCH_MONEY "Argent"
     #define FRENCH_XP "XPs"
@@ -185,6 +192,11 @@
     #define GERMAN_STEALTH "Heimlichkeit"
     #define GERMAN_FIGHT "Kampf"
 
+    // Fights
+    #define GERMAN_KICK "Trete"
+    #define GERMAN_BITE "Beissen"
+    #define GERMAN_BOMB "Bombe"
+
     // Stats
     #define GERMAN_MONEY "Geld"
     #define GERMAN_XP "XPs"
@@ -257,6 +269,11 @@
     #define SPANISH_UTILITY "Utilidad"
     #define SPANISH_STEALTH "Sigilo"
     #define SPANISH_FIGHT "Combate"
+
+    // Fights
+    #define SPANISH_KICK "Patear"
+    #define SPANISH_BITE "Morder"
+    #define SPANISH_BOMB "Bomba"
 
     // Stats
     #define SPANISH_MONEY "Dinero"

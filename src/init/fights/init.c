@@ -22,17 +22,17 @@ void init_sprites_fights(game_t *game)
     set_sprite_origin(game->fights->run_button, R_RUN_BUTTON);
 }
 
-attack_t *init_attack(
-    game_t *game, sfIntRect rect, sfVector2f pos, const char *name)
+attack_t *init_attack(game_t *game, sfTexture *texture,
+    sfIntRect rect, sfVector2f pos, const char *name)
 {
     attack_t *attack = malloc(sizeof(attack_t));
-    sfVector2f p_s = init_pos(pos.x, pos.y - 5);
+    sfVector2f p_s = init_pos(pos.x, pos.y);
     sfVector2f p_name = init_pos(pos.x, pos.y - 14);
     sfVector2f p_damage_text = init_pos(pos.x, pos.y + 4);
     sfVector2f scale = init_scale(1, 1);
 
     attack->bg = create_sprite(game->textures->gui, R_ATTACK_BG, pos, scale);
-    attack->sprite = create_sprite(game->textures->gui, rect, p_s, scale);
+    attack->sprite = create_sprite(texture, rect, p_s, scale);
     attack->name = create_text(FONT_BUENARD, sfBlack, 14, name);
     attack->damage_text = create_text(FONT_BUENARD, sfBlack, 14, "0");
     set_sprite_origin(attack->bg, R_ATTACK_BG);
@@ -54,9 +54,12 @@ void init_fights_attacks(game_t *game)
     sfVector2f p_2 = init_pos(270, 79);
     sfVector2f p_3 = init_pos(400, 79);
 
-    fights->attack_1 = init_attack(game, R_RAT_BITE, p_1, ENGLISH_BITE);
-    fights->attack_2 = init_attack(game, R_RAT_BITE, p_2, ENGLISH_BITE);
-    fights->attack_3 = init_attack(game, R_RAT_BITE, p_3, ENGLISH_BITE);
+    fights->attack_1 = init_attack(
+        game, game->textures->rat_blue, R_RAT_KICK, p_1, ENGLISH_KICK);
+    fights->attack_2 = init_attack(
+        game, game->textures->rat_blue, R_RAT_BITE, p_2, ENGLISH_BITE);
+    fights->attack_3 = init_attack(
+        game, game->textures->gui, R_BOMB_IDLE, p_3, ENGLISH_BOMB);
 }
 
 void init_fights(game_t *game)
