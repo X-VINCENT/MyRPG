@@ -12,7 +12,7 @@ const sfIntRect r_items[] = {
     R_MONA,
     R_THE_WAVE,
     R_TROPHY,
-    R_WEAPON,
+    R_BOMB,
     R_KEY,
     R_GARBAGE_BAG,
     R_TEE_SHIRT,
@@ -20,7 +20,6 @@ const sfIntRect r_items[] = {
     R_CAP,
     R_ICE_CREAM,
     R_KNACKI,
-    R_PROMO_CODE,
     R_TOILET_PAPER,
     R_WATER_BOTTLE,
     {0, 0, 0, 0}
@@ -31,7 +30,7 @@ const int item_price[] = {
     MONA_PRICE,
     THE_WAVE_PRICE,
     TROPHY_PRICE,
-    WEAPON_PRICE,
+    BOMB_PRICE,
     KEY_PRICE,
     GARBAGE_BAG_PRICE,
     TEE_SHIRT_PRICE,
@@ -39,7 +38,6 @@ const int item_price[] = {
     CAP_PRICE,
     ICE_CREAM_PRICE,
     KNACKI_PRICE,
-    PROMO_CODE_PRICE,
     TOILET_PAPER_PRICE,
     WATER_BOTTLE_PRICE,
     -1
@@ -59,7 +57,6 @@ const int item_legality[] = {
     LEGAL,
     LEGAL,
     LEGAL,
-    LEGAL,
     -1
 };
 
@@ -68,7 +65,7 @@ const float item_scale[] = {
     S_MONA,
     S_THE_WAVE,
     S_TROPHY,
-    S_WEAPON,
+    S_BOMB,
     S_KEY,
     S_GARBAGE_BAG,
     S_TEE_SHIRT,
@@ -76,7 +73,6 @@ const float item_scale[] = {
     S_CAP,
     S_ICE_CREAM,
     S_KNACKI,
-    S_PROMO_CODE,
     S_TOILET_PAPER,
     S_WATER_BOTTLE,
     -1
@@ -110,7 +106,7 @@ item_t *init_item(game_t *game)
     sfVector2f pos = {0, 0};
     sfVector2f scale = {1, 1};
 
-    item->name = EMPTY;
+    item->name = WATER_BOTTLE;
     item->selling_price = init_int_array(NB_ITEMS);
     item->legality = init_int_array(NB_ITEMS);
     item->scale = init_float_array(NB_ITEMS);

@@ -15,6 +15,7 @@ void destroy_item(item_t *item)
         destroy_sprite(item->sprite[idx]);
     free(item->selling_price);
     free(item->legality);
+    free(item->scale);
     free(item);
 }
 
