@@ -81,6 +81,7 @@
     typedef struct object {
         enum item_name name;
         sfSprite *sprite;
+        sfCircleShape *area;
         int is_picked;
     } object_t;
 

@@ -7,6 +7,14 @@
 
 #include "rpg.h"
 
+void set_appartment_music(game_t *game)
+{
+    sfMusic_stop(game->audio->musics->music_city);
+    sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
+}
+
 void display_skin(sfRenderWindow *window, skin_t *skin)
 {
     if (skin->is_unlocked == 0)
@@ -40,10 +48,7 @@ void appartment_stage(game_t *game)
 {
     appartment_t *apart = game->assets->appartment;
 
-    sfMusic_stop(game->audio->musics->music_city);
-    sfMusic_stop(game->audio->musics->music_menu);
-    sfMusic_stop(game->audio->musics->music_bar);
-    sfMusic_stop(game->audio->musics->music_ice_cream);
+    set_appartment_music(game);
     sfRenderWindow_drawSprite(game->window, apart->bg, NULL);
     display_appartment(game);
     display_rat(game);
@@ -57,5 +62,7 @@ void appartment_stage(game_t *game)
     else
         check_rat_key_pressed(game);
     display_objects(game->window, apart->objects);
+    event_objects(game->assets->rat->idle_front, game->inventory->items,
+        apart->objects, game->keys[INTERACT]);
     display_cursor(game);
 }

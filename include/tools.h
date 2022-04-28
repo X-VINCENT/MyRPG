@@ -138,14 +138,18 @@ bool check_location_rect(
     sfSprite *character, sfVector2f location, int width, int height);
 
 // object.c
-object_t *create_object(
-    sfTexture *texture, enum item_name name, sfVector2f pos);
-object_t **create_objects(sfTexture *texture,
-    const int objects_names[], const sfVector2f objects_positions[]);
+object_t *create_object(sfTexture *texture, enum item_name name,
+    sfVector2f pos, const int radius);
+object_t **create_objects(sfTexture *texture, const int objects_names[],
+    const sfVector2f objects_positions[], const int objects_areas[]);
 void display_object(sfRenderWindow *window, object_t *object);
 void display_objects(sfRenderWindow *window, object_t **objects);
 
 // object2.c
+void event_object(sfSprite *player,
+    item_t **items, object_t *object, sfKeyCode key_interact);
+void event_objects(sfSprite *player,
+    item_t **items, object_t **objects, sfKeyCode key_interact);
 void destroy_object(object_t *object);
 void destroy_objects(object_t **objects);
 

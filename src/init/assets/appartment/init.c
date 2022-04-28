@@ -17,6 +17,11 @@ const sfVector2f pos_apart_objects[] = {
     {0, 0}
 };
 
+const int objects_areas[] = {
+    30,
+    -1
+};
+
 void init_sign_appartment(game_t *game)
 {
     appartment_t *apart = game->assets->appartment;
@@ -49,7 +54,7 @@ void init_appartment(game_t *game)
     game->assets->appartment->hitbox = create_image(APART_HITBOX);
     game->assets->appartment->skin_selector = init_skin_selector(game);
     game->assets->appartment->is_choosing_skin = 0;
-    game->assets->appartment->objects = create_objects(
-        game->textures->gui, name_apart_objects, pos_apart_objects);
+    game->assets->appartment->objects = create_objects(game->textures->gui,
+        name_apart_objects, pos_apart_objects, objects_areas);
     init_sign_appartment(game);
 }
