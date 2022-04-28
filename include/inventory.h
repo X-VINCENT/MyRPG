@@ -12,6 +12,9 @@
 
     #define INVENTORY_SIZE 9
 
+    #define LEGAL 0
+    #define ILLEGAL 1
+
     #define R_EMPTY (sfIntRect){0, 0, 0, 0}
     #define R_BOMB (sfIntRect){0, 0, 0, 0}
     #define R_MONA (sfIntRect){0, 0, 0, 0}
@@ -35,11 +38,19 @@
         NB_ITEMS
     };
 
+    typedef struct object {
+        enum item_name name;
+        sfSprite *sprite;
+        int selling_price;
+        int buying_price;
+        int is_legal;
+    } object_t;
+
     typedef struct item {
         enum item_name name;
         sfSprite **sprite;
-        int *price_for_sell;
-        int is_legal;
+        int *selling_price;
+        int *legality;
     } item_t;
 
     typedef struct inventory {
