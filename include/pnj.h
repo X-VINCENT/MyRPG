@@ -30,6 +30,7 @@
         sfClock *timer_move;
         int pnj_stage;
         sfSprite *sprite;
+        sfCircleShape *circle;
         sfText **text_to_display;
         sfClock *timer_display_text;
         sfClock *walk;
