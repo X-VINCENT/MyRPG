@@ -9,5 +9,5 @@
 
 void ice_cream_shop_key_pressed(game_t *game)
 {
-    return;
+    inventory_key_pressed(game);
 }

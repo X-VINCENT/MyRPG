@@ -22,4 +22,5 @@ void museum_stage(game_t *game)
     sfRenderWindow_drawSprite(game->window,
         game->assets->museum->bg_top, NULL);
     display_circle_rat(game);
+    display_inventory(game);
 }
