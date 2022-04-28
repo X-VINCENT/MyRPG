@@ -14,11 +14,12 @@ void museum_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
     display_museum(game);
-    display_rat(game);
     sfRenderWindow_drawSprite(game->window,
         game->assets->museum->bg_top, NULL);
     check_rat_key_pressed(game);
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
+    display_circle_rat(game);
+    display_rat(game);
 }
