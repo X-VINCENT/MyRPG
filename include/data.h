@@ -104,6 +104,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        object_t **objects;
     } city_t;
 
     typedef struct load_save {
