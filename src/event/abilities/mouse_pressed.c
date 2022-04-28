@@ -68,8 +68,6 @@ int is_ability_unlockable(game_t *game, int idx)
 {
     abilities_t *abilities = game->abilities;
 
-    if (abilities->ability[idx]->status = UNLOCKED)
-        return 0;
     if (is_ability_unlockable_2(game, idx))
         return 1;
     if (is_ability_crossing_unlockable(game, idx))
