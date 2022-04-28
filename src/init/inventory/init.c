@@ -8,21 +8,79 @@
 #include "rpg.h"
 
 const sfIntRect r_items[] = {
-    R_EMPTY, R_BOMB,
-    R_MONA, R_GOLD,
-    R_WEAPON, R_PROMO_CODE};
+    R_EMPTY,
+    R_MONA,
+    R_THE_WAVE,
+    R_TROPHY,
+    R_WEAPON,
+    R_KEY,
+    R_GARBAGE_BAG,
+    R_TEE_SHIRT,
+    R_PANTS,
+    R_CAP,
+    R_ICE_CREAM,
+    R_KNACKI,
+    R_PROMO_CODE,
+    R_TOILET_PAPER,
+    R_WATER_BOTTLE,
+    {0, 0, 0, 0}
+};
 
 const int item_price[] = {
-    EMPTY_PRICE, BOMB_PRICE,
-    MONA_PRICE, COIN_PRICE,
-    WEAPON_PRICE, PROMO_CODE_PRICE,
-    -1};
+    EMPTY_PRICE,
+    MONA_PRICE,
+    THE_WAVE_PRICE,
+    TROPHY_PRICE,
+    WEAPON_PRICE,
+    KEY_PRICE,
+    GARBAGE_BAG_PRICE,
+    TEE_SHIRT_PRICE,
+    PANTS_PRICE,
+    CAP_PRICE,
+    ICE_CREAM_PRICE,
+    KNACKI_PRICE,
+    PROMO_CODE_PRICE,
+    TOILET_PAPER_PRICE,
+    WATER_BOTTLE_PRICE,
+    -1
+};
 
 const int item_legality[] = {
-    LEGAL, ILLEGAL,
-    ILLEGAL, LEGAL,
-    ILLEGAL, LEGAL,
-    -1};
+    LEGAL,
+    ILLEGAL,
+    ILLEGAL,
+    ILLEGAL,
+    LEGAL,
+    LEGAL,
+    ILLEGAL,
+    ILLEGAL,
+    ILLEGAL,
+    LEGAL,
+    LEGAL,
+    LEGAL,
+    LEGAL,
+    LEGAL,
+    -1
+};
+
+const float item_scale[] = {
+    S_EMPTY,
+    S_MONA,
+    S_THE_WAVE,
+    S_TROPHY,
+    S_WEAPON,
+    S_KEY,
+    S_GARBAGE_BAG,
+    S_TEE_SHIRT,
+    S_PANTS,
+    S_CAP,
+    S_ICE_CREAM,
+    S_KNACKI,
+    S_PROMO_CODE,
+    S_TOILET_PAPER,
+    S_WATER_BOTTLE,
+    -1
+};
 
 void init_slots(game_t *game)
 {
@@ -55,12 +113,14 @@ item_t *init_item(game_t *game)
     item->name = EMPTY;
     item->selling_price = init_int_array(NB_ITEMS);
     item->legality = init_int_array(NB_ITEMS);
+    item->scale = init_float_array(NB_ITEMS);
     item->sprite = malloc(sizeof(sfSprite *) * NB_ITEMS + 1);
     for (int idx = 0; idx != NB_ITEMS; idx += 1) {
         item->sprite[idx] = create_sprite(
             game->textures->gui, r_items[idx], pos, scale);
         item->selling_price[idx] = item_price[idx];
         item->legality[idx] = item_legality[idx];
+        item->scale[idx] = item_scale[idx];
         set_sprite_origin(item->sprite[idx], r_items[idx]);
     }
     item->sprite[NB_ITEMS] = NULL;

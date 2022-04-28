@@ -109,6 +109,7 @@
     // read.c
     int get_value_from_file(const char path[]);
     int *init_int_array(int size);
+    float *init_float_array(int size);
     int *load_int_arr_from_file(const char path[]);
     int *load_int_arr_from_file(const char path[]);
 
