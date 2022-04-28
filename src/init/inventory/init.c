@@ -18,6 +18,12 @@ const int item_price[] = {
     WEAPON_PRICE, PROMO_CODE_PRICE,
     -1};
 
+const int item_legality[] = {
+    LEGAL, ILLEGAL,
+    ILLEGAL, LEGAL,
+    ILLEGAL, LEGAL,
+    -1};
+
 void init_slots(game_t *game)
 {
     inventory_t *inventory = game->inventory;
@@ -47,16 +53,17 @@ item_t *init_item(game_t *game)
     sfVector2f scale = {1, 1};
 
     item->name = EMPTY;
-    item->price_for_sell = init_int_array(NB_ITEMS);
+    item->selling_price = init_int_array(NB_ITEMS);
+    item->legality = init_int_array(NB_ITEMS);
     item->sprite = malloc(sizeof(sfSprite *) * NB_ITEMS + 1);
     for (int idx = 0; idx != NB_ITEMS; idx += 1) {
         item->sprite[idx] = create_sprite(
             game->textures->gui, r_items[idx], pos, scale);
-        item->price_for_sell[idx] = item_price[idx];
+        item->selling_price[idx] = item_price[idx];
+        item->legality[idx] = item_legality[idx];
         set_sprite_origin(item->sprite[idx], r_items[idx]);
     }
     item->sprite[NB_ITEMS] = NULL;
-    item->is_legal = 0;
     return item;
 }
 
