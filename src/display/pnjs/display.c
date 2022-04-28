@@ -82,6 +82,8 @@ void display_pnj(game_t *game, pnj_t *pnj)
         !game->assets->rat->idle_front)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
+    move_circle(game, pnj);
+    check_intersect_circle(game, pnj);
     if (check_pnj_intersects(pnj, game) == 1
         && pnj->text == true
         && pnj->display_the_text == true
@@ -92,6 +94,5 @@ void display_pnj(game_t *game, pnj_t *pnj)
         sfRenderWindow_drawText(game->window,
             pnj->text_to_display[pnj->text_index_display], NULL);
     }
-    check_intersect_circle(game, pnj);
     return;
 }

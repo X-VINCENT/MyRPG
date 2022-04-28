@@ -65,11 +65,11 @@ void check_interact(game_t *game, pnj_t *pnj)
 
 int check_pnj_intersects(pnj_t *pnj, game_t *game)
 {
-    sfFloatRect pnj_rect = sfSprite_getGlobalBounds(pnj->sprite);
+    sfFloatRect circle = sfCircleShape_getGlobalBounds(pnj->circle);
     sfFloatRect rat = sfSprite_getGlobalBounds(game->assets->rat->idle_front);
 
     change_bool_pnj_text(pnj);
-    if (sfFloatRect_intersects(&pnj_rect, &rat, NULL) == sfTrue) {
+    if (sfFloatRect_intersects(&circle, &rat, NULL) == sfTrue) {
         check_interact(game, pnj);
         if (pnj->displaying_text == 1) {
             pnj->display_the_text = true;
