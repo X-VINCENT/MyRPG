@@ -106,7 +106,7 @@ item_t *init_item(game_t *game)
     sfVector2f pos = {0, 0};
     sfVector2f scale = {1, 1};
 
-    item->name = WATER_BOTTLE;
+    item->name = EMPTY;
     item->selling_price = init_int_array(NB_ITEMS);
     item->legality = init_int_array(NB_ITEMS);
     item->scale = init_float_array(NB_ITEMS);
