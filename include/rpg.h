@@ -104,13 +104,13 @@
 // Rat
     #define SCALE_RAT (sfVector2f){1.00, 1.00}
     // Speed
-    #define RAT_SPEED_APPARTMENT 0.3
-    #define RAT_SPEED_CITY 1
-    #define RAT_SPEED_ICE_CREAM_SHOP 0.3
-    #define RAT_SPEED_CLOTHE_SHOP 0.3
-    #define RAT_SPEED_BAR 0.5
-    #define RAT_SPEED_MARKET 0.5
-    #define RAT_SPEED_MUSEUM 0.5
+    #define RAT_SPEED_APPARTMENT 1.3
+    #define RAT_SPEED_CITY 2.2
+    #define RAT_SPEED_ICE_CREAM_SHOP 1.3
+    #define RAT_SPEED_CLOTHE_SHOP 1
+    #define RAT_SPEED_BAR 1.3
+    #define RAT_SPEED_MARKET 1.3
+    #define RAT_SPEED_MUSEUM 1.3
 
     // Competencies
     #define RAT_RADIUS_0 150
