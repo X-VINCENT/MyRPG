@@ -13,8 +13,9 @@ int check_contact_pnj(game_t *game, sfVector2f rat_pos)
 
     for (int idx = 0; game->assets->pnj[idx] != NULL; idx += 1) {
         r_pnj = sfSprite_getGlobalBounds(game->assets->pnj[idx]->sprite);
-        r_pnj.left -= 11;
-        r_pnj.width += 11;
+        r_pnj.top -= 11;
+        r_pnj.left -= 10;
+        r_pnj.width += 21;
         r_pnj.height += 11;
         if (sfFloatRect_contains(&r_pnj, rat_pos.x, rat_pos.y))
             return 0;
