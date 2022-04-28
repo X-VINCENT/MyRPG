@@ -7,6 +7,25 @@
 
 #include "rpg.h"
 
+void destroy_item(item_t *item)
+{
+    if (!item)
+        return;
+    for (int idx = 0; item->sprite[idx] != NULL; idx += 1)
+        destroy_sprite(item->sprite[idx]);
+    free(item->price_for_sell);
+    free(item);
+}
+
+void destroy_items(item_t **items)
+{
+    if (!items)
+        return;
+    for (int idx = 0; items[idx] != NULL; idx += 1)
+        destroy_item(items[idx]);
+    free(items);
+}
+
 void destroy_inventory(inventory_t *inventory)
 {
     if (!inventory)
@@ -21,6 +40,7 @@ void destroy_inventory(inventory_t *inventory)
         free(inventory->slots_off);
     if (inventory->slots_on)
         free(inventory->slots_on);
+    destroy_items(inventory->items);
     if (inventory)
         free(inventory);
 }
