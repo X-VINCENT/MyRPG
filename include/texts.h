@@ -88,8 +88,7 @@
     #define ENGLISH_ESCAPE "Escape"
 
     // Other
-    #define ENGLISH_PRESS "Press "
-    #define ENGLISH_TO_SAVE " to save"
+    #define ENGLISH_PRESS_TO_SAVE "Press 1, 2 or 3 to save"
     #define ENGLISH_CHOOSE_SKIN "Choose your skin"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -166,8 +165,7 @@
     #define FRENCH_ESCAPE "Echap"
 
     // Other
-    #define FRENCH_PRESS "Appuyer sur "
-    #define FRENCH_TO_SAVE " pour sauvegarder"
+    #define FRENCH_PRESS_TO_SAVE "Appuyer sur 1, 2 ou 3 pour sauvegarder"
     #define FRENCH_CHOOSE_SKIN "Choisi ton rat"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -244,8 +242,7 @@
     #define GERMAN_ESCAPE "Fliehen"
 
     // Other
-    #define GERMAN_PRESS "Drucken "
-    #define GERMAN_TO_SAVE " um zu speichern"
+    #define GERMAN_PRESS_TO_SAVE "Drucken 1, 2 oder 3 um zu speichern"
     #define GERMAN_CHOOSE_SKIN "Wahle deine Haut"
 //////////////////////////////////////////////////////////////////////////////
 
@@ -322,7 +319,7 @@
     #define SPANISH_ESCAPE "Escapar"
 
     // Other
-    #define SPANISH_PRESS "Presione "
+    #define SPANISH_PRESS_TO_SAVE "Presiona 1, 2 o 3 para guardar"
     #define SPANISH_TO_SAVE " para guardar"
     #define SPANISH_CHOOSE_SKIN "Elige tu piel"
 //////////////////////////////////////////////////////////////////////////////

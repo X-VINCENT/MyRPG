@@ -55,8 +55,18 @@ void check_and_center_view(
     game_t *game, sfSprite *character, sfSprite *background)
 {
     sfVector2f pos = sfSprite_getPosition(character);
-    sfVector2f view = sfView_getSize(game->view);
+    sfVector2f size = sfView_getSize(game->view);
+    sfVector2f center = sfView_getCenter(game->view);
     sfFloatRect rect = sfSprite_getGlobalBounds(background);
 
-    sfView_setCenter(game->view, pos);
+    if (pos.x - size.x / 2 <= 0)
+        pos.x = size.x / 2;
+    else if (pos.x + size.x / 2 >= rect.width)
+        pos.x = rect.width - size.x / 2;
+    if (pos.y - size.y / 2 <= 0)
+        pos.y = size.y / 2;
+    else if (pos.y + size.y / 2 >= rect.height)
+        pos.y = rect.height - size.y / 2;
+    if (pos.x != center.x || pos.y != center.y)
+        sfView_setCenter(game->view, pos);
 }

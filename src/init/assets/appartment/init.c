@@ -12,7 +12,7 @@ void init_sign_appartment(game_t *game)
     appartment_t *apart = game->assets->appartment;
     sfIntRect r_sign = init_rect(0, 560, 320, 80);
     sfVector2f p_sign = {258, 20};
-    sfVector2f s_sign = {0.8, 0.6};
+    sfVector2f s_sign = {1, 0.6};
 
     apart->sign = create_sprite(
         game->textures->message_box, r_sign, p_sign, s_sign);

@@ -28,6 +28,8 @@ void set_texts_german_top_bar(game_t *game)
 void set_texts_german(game_t *game)
 {
     sfText_setString(game->assets->home_menu->press, GERMAN_PRESS_ENTER);
+    sfText_setString(game->assets->appartment->press_interact,
+        GERMAN_PRESS_TO_SAVE);
     set_texts_german_top_bar(game);
     set_texts_german_stats(game);
     set_texts_german_game_menu(game);

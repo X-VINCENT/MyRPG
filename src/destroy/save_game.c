@@ -51,7 +51,7 @@ void save_keys_in_file(save_game_t *save, const char *filename)
     char *data = NULL;
 
     append_data_in_file("## Keys ##\n", filename, false);
-    for (int idx = 0; save->keys[idx] != -1; idx += 1) {
+    for (int idx = 0; save->keys[idx] != sfKeyUnknown; idx += 1) {
         data = str_to_save(
             keys_data_int_value_save[idx], save->keys[idx]);
         append_data_in_file(data, filename, true);

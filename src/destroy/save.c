@@ -91,8 +91,7 @@ void save_data_in_game_save(game_t *game, save_game_t *save)
     save->language = game->language;
     save->music_volume = game->music_volume;
     save->effects_volume = game->effects_volume;
-    for (int idx = 0; save->keys[idx] != -1 &&
-        game->keys[idx] != -1; idx += 1)
+    for (int idx = 0; game->keys[idx] != sfKeyUnknown; idx += 1)
         save->keys[idx] = game->keys[idx];
 }
 
