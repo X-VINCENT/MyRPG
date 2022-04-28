@@ -30,6 +30,10 @@
     void display_wind(particle_t *wind, sfRenderWindow *window);
     void animate_wind(particle_t *rain, sfRenderWindow *window);
 
+// Fights
+    // display.c
+    void display_fights(game_t *game);
+
 // Game Menu
     // display.c
     void display_game_menu(game_t *game);
@@ -57,6 +61,8 @@
 // Pnj
     // display.c
     void display_pnj(game_t *game, pnj_t *pnj);
+    void move_circle(game_t *game, pnj_t *pnj);
+    void check_intersect_circle(game_t *game, pnj_t *pnj);
     void move_pnj(game_t *game, int nbr_animated_pnj);
 
 // Clothe

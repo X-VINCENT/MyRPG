@@ -23,8 +23,8 @@
     // move_tree.c
     void abilities_scrolling_bar_event(game_t *game);
 
-    // set_ability.c
-    void set_ability(game_t *game, int idx);
+    // set_abilities.c
+    void set_abilities(game_t *game);
 
 // Appartment
     // Locations
@@ -43,7 +43,7 @@
     // mouse_pressed.c
     void appartment_mouse_pressed(game_t *game);
 
-// bar
+// Bar
     // Locations
         // door.c
         void location_door_bar(game_t *game);
@@ -111,6 +111,16 @@
 
         // mouse_pressed.c
         void clothe_store_mouse_pressed(game_t *game);
+
+// Fights
+    // key_pressed.c
+    void fights_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void fights_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void fights_mouse_pressed(game_t *game);
 
 // Game Menu
     // key_pressed.c

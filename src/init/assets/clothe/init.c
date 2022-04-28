@@ -16,5 +16,4 @@ void init_clothe(game_t *game)
     game->assets->clothe = malloc(sizeof(clothe_t));
     game->assets->clothe->bg = create_sprite(
         game->textures->clothe_view, rect, pos, scale);
-    //game->assets->ice->hitbox = create_image(CLOTHE_HITBOX);
 }

@@ -31,6 +31,8 @@ void check_second_move_pnj(game_t *game, int i)
     pnj_t *pnj = game->assets->pnj[i];
     sfVector2f position = sfSprite_getPosition(pnj->sprite);
     sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
+    sfFloatRect r_rat = sfSprite_getGlobalBounds(
+        game->assets->rat->idle_front);
 
     if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) >
         (float)pnj->speed / 100) {
@@ -50,7 +52,7 @@ void check_second_move_pnj(game_t *game, int i)
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
-    for (int i = PNJ_GUARD_RIGHT + 1; i < nbr_animated_pnj; i++)
+    for (int i = LAST_PNJ + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
 }
 
@@ -75,10 +77,13 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
 void display_pnj(game_t *game, pnj_t *pnj)
 {
     int stop = 0;
+
     if (!pnj || !game || !pnj->sprite || !game->window ||
         !game->assets->rat->idle_front)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
+    move_circle(game, pnj);
+    check_intersect_circle(game, pnj);
     if (check_pnj_intersects(pnj, game) == 1
         && pnj->text == true
         && pnj->display_the_text == true

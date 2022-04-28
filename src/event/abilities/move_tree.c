@@ -52,12 +52,14 @@ void abilities_scrolling_bar_event(game_t *game)
         game->window, mouse, NULL);
 
     if (time_elapsed(abilities->menu->scrolling_clock) > 0.01) {
-        if (game->event->event->mouseWheel.delta > 0 &&
-            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved) {
+        if ((game->event->event->mouseWheel.delta > 0 &&
+            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved) ||
+            sfKeyboard_isKeyPressed(game->keys[ZOOM_IN])) {
             move_abilities_up(game);
             game->event->event->mouseWheel.delta = 0;
         } else if (game->event->event->mouseWheel.delta < 0 &&
-            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved) {
+            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved ||
+            sfKeyboard_isKeyPressed(game->keys[ZOOM_OUT])) {
             move_abilities_down(game);
             game->event->event->mouseWheel.delta = 0;
         }

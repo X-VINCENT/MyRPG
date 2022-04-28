@@ -28,6 +28,8 @@
     #define HOWTOPLAY_STAGE 13
     #define SETTINGS_STAGE 14
 
+    #define FIGHTS_STAGE 20
+
 // Settings Stage
     #define SETTINGS_STAGE_GAME 0
     #define SETTINGS_STAGE_GRAPHICS 1
@@ -48,6 +50,9 @@ void bar_stage(game_t *game);
 
 // city.c
 void city_stage(game_t *game);
+
+// fights.c
+void fights_stage(game_t *game);
 
 // game_menu.c
 void game_menu_stage(game_t *game);

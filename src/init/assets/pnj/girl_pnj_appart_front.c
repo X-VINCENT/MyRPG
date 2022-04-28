@@ -10,7 +10,7 @@
 char *message_girl_front_appart[] = {
     "Bienvenue dans ma ville !",
     "N'essayes pas de voler ici",
-    "Personne aime les rats ! Fais toi discret",
+    "Personne aime les rats !Fais toi discret",
     NULL
 };
 
@@ -37,7 +37,7 @@ void init_two(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_GIRL_TWO];
     sfTexture *texture = game->textures->blue_girl_pnj;
-    sfVector2f position = {2450, 1710};
+    sfVector2f position = {2570, 1650};
     sfIntRect rect = {95, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);

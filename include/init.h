@@ -22,6 +22,9 @@
         // init.c
         void init_appartment(game_t *game);
 
+        // skin_selector.c
+        skin_selector_t *init_skin_selector(game_t *game);
+
     // Bar
         // init.c
         void init_bar(game_t *game);
@@ -127,6 +130,9 @@
             sfVector2f position);
         void init_one(game_t *game);
         void init_pnj_guard_left(game_t *game);
+        void init_pnj_museum_hotess(game_t *game);
+        void init_pnj_g_museum_left(game_t *game);
+        void init_pnj_g_museum_right(game_t *game);
         void init_pnj_guard_right(game_t *game);
         void init_two(game_t *game);
         void init_three(game_t *game);
@@ -147,10 +153,18 @@
 
 // Data
     // init.c
+    save_t *init_empty_save(void);
     void init_data(game_t *game);
+
+    // load_game.c
+    save_game_t *load_game_save(const char *filename);
 
     // load_save.c
     save_t *load_save(const char *filename);
+
+// Fights
+    // init.c
+    void init_fights(game_t *game);
 
 // Inventory
     // init.c

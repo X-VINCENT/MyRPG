@@ -41,5 +41,5 @@ void init_pnj_guard_left(game_t *game)
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
     create_box_message(game, pnj, position);
     init_text_pnj_gleft(pnj, position);
-    pnj->time_between_text = 1;
+    pnj->time_between_text = 2;
 }

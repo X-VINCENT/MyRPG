@@ -12,17 +12,21 @@ void init_game_variables(game_t *game)
     game->stage = START_STAGE;
     game->last_stage = START_STAGE;
     game->next_stage = START_STAGE;
-    game->fps = DEFAULT_FPS;
-    game->res = DEFAULT_WINDOW_RESOLUTION;
-    game->vsync = 0;
+    game->fps = game->data->game->fps;
+    game->res = game->data->game->res;
+    game->vsync = game->data->game->vsync;
     game->view = create_view(VIEW_DEFAULT_SIZE, 0);
-    game->language = ENGLISH;
-    game->music_volume = 100;
-    game->effects_volume = 100;
-    game->nb_golds = 0;
-    game->nb_xps = 0;
-    game->nb_abilities = 100;
+    game->language = game->data->game->language;
+    game->music_volume = game->data->game->music_volume;
+    game->effects_volume = game->data->game->effects_volume;
     game->time_playing_clock = sfClock_create();
+}
+
+void set_game_data(game_t *game)
+{
+    set_language_texts(game);
+    set_music_volume(game);
+    set_effects_volume(game);
 }
 
 game_t *init_game(void)
@@ -43,6 +47,8 @@ game_t *init_game(void)
     init_inventory(game);
     init_rain(game);
     init_wind(game);
+    init_fights(game);
+    set_game_data(game);
     return game;
 }
 

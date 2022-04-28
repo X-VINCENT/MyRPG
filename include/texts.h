@@ -36,6 +36,11 @@
     #define ENGLISH_STEALTH "Stealth"
     #define ENGLISH_FIGHT "Fight"
 
+    // Fights
+    #define ENGLISH_KICK "Kick"
+    #define ENGLISH_BITE "Bite"
+    #define ENGLISH_BOMB "Bomb"
+
     // Stats
     #define ENGLISH_MONEY "Money"
     #define ENGLISH_XP "XPs"
@@ -81,6 +86,10 @@
     #define ENGLISH_RESET_VIEW "View : Reset"
     #define ENGLISH_HITBOX "Display Hitbox"
     #define ENGLISH_ESCAPE "Escape"
+
+    // Other
+    #define ENGLISH_PRESS_TO_SAVE "Press 1, 2 or 3 to save"
+    #define ENGLISH_CHOOSE_SKIN "Choose your skin"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -103,6 +112,11 @@
     #define FRENCH_UTILITY "Utilitaire"
     #define FRENCH_STEALTH "Discretion"
     #define FRENCH_FIGHT "Combat"
+
+    // Fights
+    #define French_KICK "Frapper"
+    #define French_BITE "Mordre"
+    #define French_BOMB "Bombe"
 
     // Stats
     #define FRENCH_MONEY "Argent"
@@ -149,6 +163,10 @@
     #define FRENCH_RESET_VIEW "Vue : Reinitialiser"
     #define FRENCH_HITBOX "Afficher la hitbox"
     #define FRENCH_ESCAPE "Echap"
+
+    // Other
+    #define FRENCH_PRESS_TO_SAVE "Appuyer sur 1, 2 ou 3 pour sauvegarder"
+    #define FRENCH_CHOOSE_SKIN "Choisi ton rat"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -171,6 +189,11 @@
     #define GERMAN_UTILITY "Nutzlichkeit"
     #define GERMAN_STEALTH "Heimlichkeit"
     #define GERMAN_FIGHT "Kampf"
+
+    // Fights
+    #define GERMAN_KICK "Trete"
+    #define GERMAN_BITE "Beissen"
+    #define GERMAN_BOMB "Bombe"
 
     // Stats
     #define GERMAN_MONEY "Geld"
@@ -217,6 +240,10 @@
     #define GERMAN_RESET_VIEW "Ansicht : Zurucksetzen"
     #define GERMAN_HITBOX "Hitbox anzeigen"
     #define GERMAN_ESCAPE "Fliehen"
+
+    // Other
+    #define GERMAN_PRESS_TO_SAVE "Drucken 1, 2 oder 3 um zu speichern"
+    #define GERMAN_CHOOSE_SKIN "Wahle deine Haut"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -239,6 +266,11 @@
     #define SPANISH_UTILITY "Utilidad"
     #define SPANISH_STEALTH "Sigilo"
     #define SPANISH_FIGHT "Combate"
+
+    // Fights
+    #define SPANISH_KICK "Patear"
+    #define SPANISH_BITE "Morder"
+    #define SPANISH_BOMB "Bomba"
 
     // Stats
     #define SPANISH_MONEY "Dinero"
@@ -285,6 +317,11 @@
     #define SPANISH_RESET_VIEW "Ver : Restablecer"
     #define SPANISH_HITBOX "Mostrar hitbox"
     #define SPANISH_ESCAPE "Escapar"
+
+    // Other
+    #define SPANISH_PRESS_TO_SAVE "Presiona 1, 2 o 3 para guardar"
+    #define SPANISH_TO_SAVE " para guardar"
+    #define SPANISH_CHOOSE_SKIN "Elige tu piel"
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !TEXTS_H_ */

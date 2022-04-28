@@ -18,6 +18,8 @@ void set_texts_origin_top_bar(game_t *game)
 
 void set_texts_origin(game_t *game)
 {
+    set_text_origin(game->assets->home_menu->press);
+    set_text_origin(game->assets->appartment->press_interact);
     set_texts_origin_top_bar(game);
     set_texts_origin_stats(game);
     set_texts_origin_game_menu(game);

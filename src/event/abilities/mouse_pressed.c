@@ -68,6 +68,8 @@ int is_ability_unlockable(game_t *game, int idx)
 {
     abilities_t *abilities = game->abilities;
 
+    if (abilities->ability[idx]->status = UNLOCKED)
+        return 0;
     if (is_ability_unlockable_2(game, idx))
         return 1;
     if (is_ability_crossing_unlockable(game, idx))
@@ -91,11 +93,12 @@ void abilities_mouse_pressed(game_t *game)
         r_ability = sfSprite_getGlobalBounds(
             abilities->ability[idx]->rect[LOCKED]);
         if (sfFloatRect_contains(&r_ability, coords.x, coords.y) &&
-            game->nb_abilities >= abilities->ability[idx]->price &&
+            game->data->current->nb_abilities >=
+            abilities->ability[idx]->price &&
             is_ability_unlockable(game, idx)) {
-            game->nb_abilities -= abilities->ability[idx]->price;
+            game->data->current->nb_abilities -=
+            abilities->ability[idx]->price;
             abilities->ability[idx]->status = UNLOCKED;
-            set_ability(game, idx);
         }
     }
     top_bar_mouse_pressed(game);

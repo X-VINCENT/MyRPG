@@ -41,7 +41,7 @@ void init_one(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_BLACK];
     sfTexture *texture = game->textures->black_pnj;
-    sfVector2f position = {2315, 1700};
+    sfVector2f position = {2315, 1850};
     sfIntRect rect = {0, 30, 45, 65};
 
     init_pnj(pnj, texture, position, rect);

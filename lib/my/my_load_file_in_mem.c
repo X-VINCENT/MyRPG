@@ -9,6 +9,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+char **end_arr_and_free_line(FILE *fp, char **arr, char *line, int idx)
+{
+    if (!arr || !line)
+        return NULL;
+    arr[idx] = NULL;
+    if (line)
+        free(line);
+    fclose(fp);
+    return arr;
+}
+
 char **my_load_file_in_arr(const char *file)
 {
     FILE *fp = NULL;
@@ -28,11 +39,7 @@ char **my_load_file_in_arr(const char *file)
             return NULL;
         idx += 1;
     }
-    arr[idx] = NULL;
-    if (line)
-        free(line);
-    fclose(fp);
-    return arr;
+    return end_arr_and_free_line(fp, arr, line, idx);
 }
 
 char *my_load_file_in_mem(const char *file)

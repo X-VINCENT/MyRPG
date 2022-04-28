@@ -16,5 +16,4 @@ void init_ice_cream(game_t *game)
     game->assets->ice = malloc(sizeof(ice_t));
     game->assets->ice->bg = create_sprite(
         game->textures->ice_cream_view, rect, pos, scale);
-    //game->assets->ice->hitbox = create_image(ICE_HITBOX);
 }

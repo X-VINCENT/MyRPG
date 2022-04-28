@@ -27,6 +27,9 @@ void set_texts_english_top_bar(game_t *game)
 
 void set_texts_english(game_t *game)
 {
+    sfText_setString(game->assets->home_menu->press, ENGLISH_PRESS_ENTER);
+    sfText_setString(game->assets->appartment->press_interact,
+        ENGLISH_PRESS_TO_SAVE);
     set_texts_english_top_bar(game);
     set_texts_english_stats(game);
     set_texts_english_game_menu(game);
