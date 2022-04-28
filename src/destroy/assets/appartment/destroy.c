@@ -36,5 +36,6 @@ void destroy_appartment(appartment_t *appartment)
     destroy_sprite(appartment->sign);
     destroy_image(appartment->hitbox);
     destroy_skin_selector(appartment->skin_selector);
+    destroy_objects(appartment->objects);
     free(appartment);
 }

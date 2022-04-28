@@ -54,6 +54,7 @@
         sfText *press_interact;
         sfImage *hitbox;
         skin_selector_t *skin_selector;
+        object_t **objects;
         int is_saving;
         int is_choosing_skin;
         int is_skin_selector_opened;

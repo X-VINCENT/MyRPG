@@ -56,5 +56,6 @@ void appartment_stage(game_t *game)
         display_skin_selector(game);
     else
         check_rat_key_pressed(game);
+    display_objects(game->window, apart->objects);
     display_cursor(game);
 }

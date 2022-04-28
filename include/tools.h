@@ -137,6 +137,18 @@ void up_fps(game_t *game);
 bool check_location_rect(
     sfSprite *character, sfVector2f location, int width, int height);
 
+// object.c
+object_t *create_object(
+    sfTexture *texture, enum item_name name, sfVector2f pos);
+object_t **create_objects(sfTexture *texture,
+    const int objects_names[], const sfVector2f objects_positions[]);
+void display_object(sfRenderWindow *window, object_t *object);
+void display_objects(sfRenderWindow *window, object_t **objects);
+
+// object2.c
+void destroy_object(object_t *object);
+void destroy_objects(object_t **objects);
+
 // res.c
 void down_res(game_t *game);
 void down_res_2(game_t *game);

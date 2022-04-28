@@ -81,9 +81,7 @@
     typedef struct object {
         enum item_name name;
         sfSprite *sprite;
-        int selling_price;
-        int buying_price;
-        int is_legal;
+        int is_picked;
     } object_t;
 
     typedef struct item {
