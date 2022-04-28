@@ -18,6 +18,11 @@ void destroy_sprites_howtoplay(howtoplay_t *howtoplay)
     if (!howtoplay)
         return;
     destroy_sprite(howtoplay->bg);
+    destroy_sprite(howtoplay->l_arrow);
+    destroy_sprite(howtoplay->r_arrow);
+    for (int idx = 0; howtoplay->sprite[idx] != NULL; idx++)
+        destroy_sprite(howtoplay->sprite[idx]);
+    free(howtoplay->sprite);
 }
 
 void destroy_howtoplay(howtoplay_t *howtoplay)
