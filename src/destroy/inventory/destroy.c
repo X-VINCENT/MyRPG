@@ -13,7 +13,8 @@ void destroy_item(item_t *item)
         return;
     for (int idx = 0; item->sprite[idx] != NULL; idx += 1)
         destroy_sprite(item->sprite[idx]);
-    free(item->price_for_sell);
+    free(item->selling_price);
+    free(item->legality);
     free(item);
 }
 
