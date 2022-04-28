@@ -142,8 +142,12 @@
     } home_menu_t;
 
     typedef struct howtoplay {
+        int screen;
         sfSprite *bg;
         sfClock *clock;
+        sfSprite **sprite;
+        sfSprite *l_arrow;
+        sfSprite *r_arrow;
     } howtoplay_t;
 
     typedef struct rat {
