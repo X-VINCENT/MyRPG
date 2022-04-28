@@ -42,6 +42,8 @@
         bool display_the_text;
         bool text;
         sfText *touch_talk;
+        int life;
+        int damage;
         int speed;
         int displaying_text;
     } pnj_t;
