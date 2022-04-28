@@ -7,6 +7,27 @@
 
 #include "rpg.h"
 
+const int name_objects_city[] = {
+    GARBAGE_BAG,
+    GARBAGE_BAG,
+    ICE_CREAM,
+    -1
+};
+
+const sfVector2f pos_objects_city[] = {
+    {602, 566},
+    {2281, 1691},
+    {870, 1688},
+    {0, 0}
+};
+
+const int objects_areas_city[] = {
+    40,
+    40,
+    30,
+    -1
+};
+
 void init_city(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 3000, 2000);
@@ -22,5 +43,7 @@ void init_city(game_t *game)
     game->assets->city->hitbox = create_image(CITY_HITBOX);
     game->assets->city->is_raining = 0;
     game->assets->city->is_windy = 0;
+    game->assets->city->objects = create_objects(game->textures->gui,
+        name_objects_city, pos_objects_city, objects_areas_city);
     init_doors(game);
 }

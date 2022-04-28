@@ -36,9 +36,13 @@ void display_slots_inventory(game_t *game, sfVector2f slot_pos,
 void set_scale_position_inventory_items(
     item_t *item, sfVector2f pos, sfVector2f scale)
 {
+    sfVector2f new_scale;
+
     for (int idx = 0; item->sprite[idx] != NULL; idx += 1) {
+        new_scale = (sfVector2f){scale.x * item->scale[idx],
+            scale.y * item->scale[idx]};
         sfSprite_setPosition(item->sprite[idx], pos);
-        sfSprite_setScale(item->sprite[idx], scale);
+        sfSprite_setScale(item->sprite[idx], new_scale);
     }
 }
 

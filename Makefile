@@ -287,6 +287,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
+								tools/object.c                               \
+								tools/object2.c                              \
 								tools/res.c                                  \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
