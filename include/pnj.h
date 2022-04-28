@@ -30,6 +30,7 @@
         sfClock *timer_move;
         int pnj_stage;
         sfSprite *sprite;
+        sfCircleShape *circle;
         sfText **text_to_display;
         sfClock *timer_display_text;
         sfClock *walk;
@@ -41,6 +42,8 @@
         bool display_the_text;
         bool text;
         sfText *touch_talk;
+        int life;
+        int damage;
         int speed;
         int displaying_text;
     } pnj_t;

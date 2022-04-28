@@ -35,11 +35,15 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
 {
     pnj->sprite = create_sprite(texture,
         rect, pos, (sfVector2f){0.42, 0.42});
-    set_sprite_origin(pnj->sprite, (sfIntRect){0, 30, 45, 65});
+    set_sprite_origin(pnj->sprite, rect);
+    pnj->life = 100;
+    pnj->damage = 5;
     pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 25, "0");
     set_text_origin(pnj->touch_talk);
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x, pos.y - 45});
     init_settings_base(pnj);
+    pnj->circle = create_circle_shape(sfRed, (sfVector2f){0, 0}, 35, sfRed);
+    sfCircleShape_setOrigin(pnj->circle, (sfVector2f){35, 35});
 }
 
 void init_struct_pnjs(game_t *game)

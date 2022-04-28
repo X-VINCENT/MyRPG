@@ -48,6 +48,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/pnjs/move_circle.c                   \
 								display/pnjs/check_intersect_circle.c        \
 								display/fights/display.c                     \
 								display/game_menu/display.c                  \

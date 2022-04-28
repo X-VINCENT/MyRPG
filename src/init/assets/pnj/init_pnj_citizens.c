@@ -51,6 +51,8 @@ void init_pnj_citizens(sfTexture *texture,
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x - 13, pos.y - 45});
     set_sprite_origin(pnj->message_box, (sfIntRect){0, 560, 320, 80});
     init_text_pnj(pnj, pos, "");
+    pnj->circle = create_circle_shape(sfRed, (sfVector2f){0, 0}, 0, sfRed);
+    sfCircleShape_setOrigin(pnj->circle, (sfVector2f){0, 0});
     init_settings_base_citizens(pnj, 5);
 }
 

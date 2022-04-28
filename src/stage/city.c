@@ -54,10 +54,10 @@ void city_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     display_city(game);
+    pnjs_display_city(game, 5);
+    display_circle_rat(game);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
-    display_circle_rat(game);
-    pnjs_display_city(game, 5);
     check_rat_key_pressed(game);
     rain(game);
     wind(game);
