@@ -119,6 +119,9 @@
     // mouse_moved.c
     void fights_mouse_moved(game_t *game);
 
+    // create fight
+    void create_fight(game_t *game, pnj_t *pnj);
+
     // mouse_pressed.c
     void fights_mouse_pressed(game_t *game);
 
