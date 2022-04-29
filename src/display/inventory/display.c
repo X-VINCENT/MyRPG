@@ -67,7 +67,7 @@ void display_inventory(game_t *game)
     sfVector2f view = sfView_getCenter(game->view);
     sfVector2f size = sfView_getSize(game->view);
     int offset = size.y / 12;
-    sfVector2f slot_pos = {view.x - (((INVENTORY_SIZE + 2) * offset) / 2),
+    sfVector2f slot_pos = {view.x - (((INVENTORY_SIZE + 1) * offset) / 2),
         view.y + size.y / 2 - (size.y / 10)};
     sfVector2f scale = {sfView_getSize(game->view).y / 7000,
         sfView_getSize(game->view).y / 7000};
