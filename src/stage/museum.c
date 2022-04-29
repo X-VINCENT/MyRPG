@@ -19,11 +19,11 @@ void museum_stage(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
     display_rat(game);
-    sfRenderWindow_drawSprite(game->window,
-        game->assets->museum->bg_top, NULL);
     display_objects(game->window, game->assets->museum->objects);
     event_objects(game->assets->rat->idle_front, game->inventory->items,
         game->assets->museum->objects, game->keys[INTERACT]);
+    sfRenderWindow_drawSprite(game->window,
+        game->assets->museum->bg_top, NULL);
     display_circle_rat(game);
     display_inventory(game);
 }

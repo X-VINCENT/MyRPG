@@ -12,6 +12,7 @@ const int name_objects_museum[] = {
     TROPHY,
     THE_WAVE,
     MONA,
+    KEY,
     -1
 };
 
@@ -20,6 +21,7 @@ const sfVector2f pos_objects_museum[] = {
     {416, 75},
     {2113, 1440},
     {2529, 1437},
+    {513, 1320},
     {0, 0}
 };
 
@@ -28,6 +30,7 @@ const int objects_areas_museum[] = {
     65,
     65,
     60,
+    30,
     -1
 };
 
