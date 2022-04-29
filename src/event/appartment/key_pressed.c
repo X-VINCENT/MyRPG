@@ -37,6 +37,7 @@ void appartment_key_pressed(game_t *game)
     sfEvent *event = game->event->event;
     sfFloatRect r_bed = {4.00, 82.00, 67.00, 47.00};
 
+    inventory_key_pressed(game);
     if (sfFloatRect_contains(&r_bed, rat_pos.x, rat_pos.y)) {
         save_abilities(game);
         if (event->key.code == sfKeyNum1 || event->key.code == sfKeyNumpad1)

@@ -8,8 +8,7 @@
 #include "rpg.h"
 
 char *message_pnj_m_right[] = {
-    "Fais attention !",
-    "Tu as l'air suspect.",
+    "HMM",
     NULL
 };
 

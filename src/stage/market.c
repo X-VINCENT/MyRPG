@@ -17,4 +17,5 @@ void market_stage(game_t *game)
     display_rat(game);
     display_circle_rat(game);
     check_rat_key_pressed(game);
+    display_inventory(game);
 }

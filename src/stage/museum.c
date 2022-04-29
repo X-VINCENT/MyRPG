@@ -18,8 +18,10 @@ void museum_stage(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
+    display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window,
         game->assets->museum->bg_top, NULL);
     display_circle_rat(game);
+    display_inventory(game);
 }

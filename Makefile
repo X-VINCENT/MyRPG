@@ -112,6 +112,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/key_pressed.c                   \
+								event/fights/create_fight.c                  \
 								event/fights/mouse_moved.c                   \
 								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
@@ -198,12 +199,14 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/black_first.c                \
 								init/assets/pnj/pnj_guard_museum_left.c      \
+								init/assets/pnj/guard_scene_two_m.c          \
 								init/assets/pnj/museum_accueil_hotess.c      \
 								init/assets/pnj/pnj_g_m_left_inside.c        \
 								init/assets/pnj/pnj_g_m_right_inside.c       \
 								init/assets/pnj/pnj_guard_museum_right.c     \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
+								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls_choose_key.c   \
@@ -287,6 +290,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
+								tools/object.c                               \
+								tools/object2.c                              \
 								tools/res.c                                  \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
