@@ -375,6 +375,7 @@
         sfMusic *music_city;
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
+        sfMusic *music_museum;
     } musics_t;
 
     typedef struct sounds {

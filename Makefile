@@ -112,6 +112,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/key_pressed.c                   \
+								event/fights/create_fight.c                  \
 								event/fights/mouse_moved.c                   \
 								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
