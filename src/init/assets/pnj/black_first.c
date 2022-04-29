@@ -8,13 +8,10 @@
 #include "rpg.h"
 
 char *message_two[] = {
-    "wesh chacal",
-    "ca dit quoi",
-    "Abbaye Saint-Wandrille, anciennement abbaye",
-    "Une abbaye de la congregation de Solesmes situee sur",
-    "l'ancienne commune de AOUDOUBILAH en BULGARIE",
-    "va au musée et ARCHI la joconque",
-    "fdp",
+    "Hi, I just got out of a nightclub",
+    "Can you give me some money please?",
+    "I lost my keys I need to call a locksmith",
+    "find a key",
     NULL
 };
 

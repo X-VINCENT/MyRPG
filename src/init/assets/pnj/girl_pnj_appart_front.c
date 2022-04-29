@@ -8,9 +8,14 @@
 #include "rpg.h"
 
 char *message_girl_front_appart[] = {
-    "Bienvenue dans ma ville !",
-    "N'essayes pas de voler ici",
-    "Personne aime les rats !Fais toi discret",
+    "Welcome in the city !",
+    "Your goal here is to steal and save the most money",
+    "You must not get caught by the various guards",
+    "Higher in the city you can find a museum",
+    "Inside there are valuable objects",
+    "You will have to bring back objects and earn the most money",
+    "You can sell your objects in the rat bar",
+    "Good luck !",
     NULL
 };
 
@@ -42,6 +47,7 @@ void init_two(game_t *game)
 
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
+    position.y += 100;
     create_box_message(game, pnj, position);
     init_text_pnj_two(pnj, position);
     pnj->time_between_text = 3;
