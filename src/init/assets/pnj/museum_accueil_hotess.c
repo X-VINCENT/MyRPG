@@ -8,8 +8,9 @@
 #include "rpg.h"
 
 char *message_hotess[] = {
-    "Bienvenue au musee du rat !",
-    "Attention ne touches rien. Sinon je vais devoir appeler la securite.",
+    "Welcome to the museum !",
+    "Be careful not to touch anything",
+    "The guards are on the lookout",
     NULL
 };
 

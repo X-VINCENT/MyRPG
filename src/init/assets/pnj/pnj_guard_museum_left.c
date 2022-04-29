@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_gleft[] = {
-    "Ecoutes ce que mon collegue dit, il dit vrai",
+    "It's a beautiful day today",
     NULL
 };
 

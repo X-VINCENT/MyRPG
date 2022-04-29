@@ -208,8 +208,8 @@
     #define LOCATION_DOOR_MUSEUM_E_TO_1 (sfVector2f){450, 500}
     #define LOCATION_DOOR_MUSEUM_1_TO_E (sfVector2f){430, 1625}
     #define LOCATION_DOOR_MUSEUM_1_TO_2 (sfVector2f){950, 1625}
-    #define LOCATION_DOOR_MUSEUM_2_TO_1 (sfVector2f){2560, 725}
-    #define LOCATION_DOOR_MUSEUM_2_TO_3 (sfVector2f){2996, 725}
+    #define LOCATION_DOOR_MUSEUM_2_TO_1 (sfVector2f){2565, 725}
+    #define LOCATION_DOOR_MUSEUM_2_TO_3 (sfVector2f){2968, 725}
     #define LOCATION_DOOR_MUSEUM_3_TO_2 (sfVector2f){2025, 1725}
     #define LOCATION_DOOR_MUSEUM_3_TO_4 (sfVector2f){2650, 1725}
     #define LOCATION_DOOR_MUSEUM_4_TO_3 (sfVector2f){10, 2325}

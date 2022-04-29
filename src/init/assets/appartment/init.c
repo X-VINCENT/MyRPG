@@ -7,6 +7,18 @@
 
 #include "rpg.h"
 
+const int name_objects_apart[] = {
+    -1
+};
+
+const sfVector2f pos_objects_apart[] = {
+    {0, 0}
+};
+
+const int objects_areas_apart[] = {
+    -1
+};
+
 void init_sign_appartment(game_t *game)
 {
     appartment_t *apart = game->assets->appartment;
@@ -37,7 +49,9 @@ void init_appartment(game_t *game)
     game->assets->appartment->bg_top = create_sprite(
         game->textures->apart_top, rect, pos, scale);
     game->assets->appartment->hitbox = create_image(APART_HITBOX);
-    init_sign_appartment(game);
     game->assets->appartment->skin_selector = init_skin_selector(game);
     game->assets->appartment->is_choosing_skin = 0;
+    game->assets->appartment->objects = create_objects(game->textures->gui,
+        name_objects_apart, pos_objects_apart, objects_areas_apart);
+    init_sign_appartment(game);
 }

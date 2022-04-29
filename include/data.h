@@ -54,6 +54,7 @@
         sfText *press_interact;
         sfImage *hitbox;
         skin_selector_t *skin_selector;
+        object_t **objects;
         int is_saving;
         int is_choosing_skin;
         int is_skin_selector_opened;
@@ -68,8 +69,11 @@
     typedef struct museum {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *lasers;
         sfImage *hitbox;
+        object_t **objects;
         int curent_room;
+        int are_lasers_unlocked;
     } museum_t;
 
     typedef struct ice {
@@ -103,6 +107,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        object_t **objects;
     } city_t;
 
     typedef struct load_save {
@@ -372,6 +377,7 @@
         sfMusic *music_city;
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
+        sfMusic *music_museum;
     } musics_t;
 
     typedef struct sounds {
