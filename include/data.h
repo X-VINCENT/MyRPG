@@ -54,6 +54,7 @@
         sfText *press_interact;
         sfImage *hitbox;
         skin_selector_t *skin_selector;
+        object_t **objects;
         int is_saving;
         int is_choosing_skin;
         int is_skin_selector_opened;
@@ -103,6 +104,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        object_t **objects;
     } city_t;
 
     typedef struct load_save {
@@ -142,8 +144,12 @@
     } home_menu_t;
 
     typedef struct howtoplay {
+        int screen;
         sfSprite *bg;
         sfClock *clock;
+        sfSprite **sprite;
+        sfSprite *l_arrow;
+        sfSprite *r_arrow;
     } howtoplay_t;
 
     typedef struct rat {

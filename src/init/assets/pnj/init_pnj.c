@@ -36,6 +36,8 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
     pnj->sprite = create_sprite(texture,
         rect, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, rect);
+    pnj->life = 100;
+    pnj->damage = 5;
     pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 25, "0");
     set_text_origin(pnj->touch_talk);
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x, pos.y - 45});

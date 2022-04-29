@@ -13,6 +13,8 @@ void howtoplay_mouse_moved(game_t *game)
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
+    sfFloatRect r_left = sfSprite_getGlobalBounds(howtoplay->l_arrow);
+    sfFloatRect r_right = sfSprite_getGlobalBounds(howtoplay->r_arrow);
 
     top_bar_mouse_moved(game);
 }
