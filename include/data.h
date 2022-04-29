@@ -70,6 +70,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
         int curent_room;
     } museum_t;
 

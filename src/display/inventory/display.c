@@ -20,6 +20,7 @@ void display_slots_inventory(game_t *game, sfVector2f slot_pos,
     sfVector2f scale, int offset)
 {
     inventory_t *inventory = game->inventory;
+
     for (int i = 0; inventory->slots_on[i] != NULL; i++) {
         slot_pos.x += offset;
         set_scale_position_inventory_slots(

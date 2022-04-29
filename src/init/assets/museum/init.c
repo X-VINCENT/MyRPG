@@ -7,6 +7,33 @@
 
 #include "rpg.h"
 
+const int name_objects_museum[] = {
+    TROPHY,
+    TROPHY,
+    THE_WAVE,
+    MONA,
+    KEY,
+    -1
+};
+
+const sfVector2f pos_objects_museum[] = {
+    {160, 76},
+    {416, 75},
+    {2113, 1440},
+    {2529, 1437},
+    {513, 1320},
+    {0, 0}
+};
+
+const int objects_areas_museum[] = {
+    65,
+    65,
+    65,
+    60,
+    30,
+    -1
+};
+
 void init_museum(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 3000, 3000);
@@ -20,4 +47,6 @@ void init_museum(game_t *game)
         game->textures->museum_bg_top, rect, pos, scale);
     game->assets->museum->hitbox = create_image(MUSEUM_HITBOX);
     game->assets->museum->curent_room = 0;
+    game->assets->museum->objects = create_objects(game->textures->gui,
+        name_objects_museum, pos_objects_museum, objects_areas_museum);
 }
