@@ -11,6 +11,7 @@ void destroy_museum(museum_t *museum)
 {
     destroy_sprite(museum->bg);
     destroy_sprite(museum->bg_top);
+    destroy_sprite(museum->lasers);
     destroy_image(museum->hitbox);
     destroy_objects(museum->objects);
     free(museum);

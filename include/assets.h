@@ -18,6 +18,7 @@
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
     #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
     #define R_SCROLLING_BAR_INSIDE (sfIntRect){39, 169, 28, 150}
+    #define R_LASERS (sfIntRect){133, 113, 212, 174}
     #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
     #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34}
     #define R_BAR (sfIntRect){0, 660, 500, 20}

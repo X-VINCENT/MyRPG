@@ -37,4 +37,6 @@ void display_museum(game_t *game)
 
     set_view_museum(game);
     sfRenderWindow_drawSprite(game->window, museum->bg, NULL);
+    if (museum->are_lasers_unlocked == 0)
+        sfRenderWindow_drawSprite(game->window, museum->lasers, NULL);
 }
