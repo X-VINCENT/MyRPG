@@ -13,6 +13,7 @@ void museum_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
+    play_music(game->audio->musics->music_museum);
     display_museum(game);
     check_rat_key_pressed(game);
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);

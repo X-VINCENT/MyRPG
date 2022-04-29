@@ -13,6 +13,7 @@ void ice_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
     sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_museum);
     display_ice_cream(game);
     display_rat(game);
     display_circle_rat(game);
