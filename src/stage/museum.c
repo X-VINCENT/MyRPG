@@ -19,6 +19,7 @@ void museum_stage(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
+    display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
     display_rat(game);
     display_objects(game->window, game->assets->museum->objects);
     event_objects(game->assets->rat->idle_front, game->inventory->items,

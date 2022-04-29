@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_pnj_m_left[] = {
-    "Je te surveille.",
+    "Be careful",
     NULL
 };
 
