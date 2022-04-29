@@ -15,7 +15,7 @@ void bar_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_menu);
     display_bar(game);
     display_rat(game);
-    if (time_elapsed(game->assets->pnj[PNJ_CASHIER]->animation) > 0.1) {
+    if (time_elapsed(game->assets->pnj[PNJ_CASHIER]->animation) > 0.3) {
         animate_sprite(game->assets->pnj[PNJ_CASHIER]->sprite,
             48, 762, 426);
             sfClock_restart(game->assets->pnj[PNJ_CASHIER]->animation);
