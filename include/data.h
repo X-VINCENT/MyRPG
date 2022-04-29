@@ -69,8 +69,11 @@
     typedef struct museum {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *lasers;
         sfImage *hitbox;
+        object_t **objects;
         int curent_room;
+        int are_lasers_unlocked;
     } museum_t;
 
     typedef struct ice {
@@ -374,6 +377,7 @@
         sfMusic *music_city;
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
+        sfMusic *music_museum;
     } musics_t;
 
     typedef struct sounds {

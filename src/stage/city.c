@@ -12,6 +12,7 @@ void set_city_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_menu);
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
+    sfMusic_stop(game->audio->musics->music_museum);
     play_music(game->audio->musics->music_city);
 }
 

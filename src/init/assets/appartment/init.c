@@ -8,17 +8,14 @@
 #include "rpg.h"
 
 const int name_objects_apart[] = {
-    KEY,
     -1
 };
 
 const sfVector2f pos_objects_apart[] = {
-    {317, 15},
     {0, 0}
 };
 
 const int objects_areas_apart[] = {
-    30,
     -1
 };
 

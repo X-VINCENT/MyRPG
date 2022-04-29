@@ -13,6 +13,7 @@ void bar_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_museum);
     display_bar(game);
     display_rat(game);
     if (time_elapsed(game->assets->pnj[PNJ_CASHIER]->animation) > 0.3) {
