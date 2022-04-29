@@ -135,6 +135,7 @@
         void init_pnj_g_museum_left(game_t *game);
         void init_pnj_g_museum_right(game_t *game);
         void init_pnj_guard_right(game_t *game);
+        void init_pnj_museum_cashier(game_t *game);
         void init_two(game_t *game);
         void init_three(game_t *game);
 
