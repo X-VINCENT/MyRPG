@@ -34,6 +34,16 @@ int *init_int_array(int size)
     return arr;
 }
 
+float *init_float_array(int size)
+{
+    float *arr = malloc(sizeof(float) * size + 1);
+
+    for (int idx = 0; idx != size; idx += 1)
+        arr[idx] = 0.0;
+    arr[size] = -1.0;
+    return arr;
+}
+
 void free_and_close(char *str, char **arr, FILE *fp)
 {
     for (int idx = 0; arr[idx] != NULL; idx += 1) {

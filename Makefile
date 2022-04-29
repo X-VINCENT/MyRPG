@@ -112,6 +112,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/key_pressed.c                   \
+								event/fights/create_fight.c                  \
 								event/fights/mouse_moved.c                   \
 								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
@@ -287,6 +288,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
+								tools/object.c                               \
+								tools/object2.c                              \
 								tools/res.c                                  \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
