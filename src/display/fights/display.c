@@ -27,11 +27,10 @@ void display_attack(sfRenderWindow *window, attack_t *attack)
         sfRenderWindow_drawSprite(window, attack->filter, NULL);
 }
 
-void display_fights(game_t *game)
+void display_fights_gui(game_t *game)
 {
     fights_t *fights = game->fights;
 
-    sfRenderWindow_drawSprite(game->window, fights->bg, NULL);
     sfRenderWindow_drawSprite(game->window, fights->fight_button, NULL);
     sfRenderWindow_drawSprite(game->window, fights->run_button, NULL);
     if (fights->fight_status == 1) {
@@ -39,4 +38,33 @@ void display_fights(game_t *game)
         display_attack(game->window, fights->attack_2);
         display_attack(game->window, fights->attack_3);
     }
+}
+
+void display_fights_enemy(game_t *game)
+{
+    fights_t *fights = game->fights;
+
+    sfRenderWindow_drawSprite(game->window, fights->enemy->sprite, NULL);
+}
+
+void display_fights_rat(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+
+    rat->is_moving = 0;
+    rat->left = 0;
+    rat->right = 1;
+    rat->up = 0;
+    rat->down = 0;
+    display_rat(game);
+}
+
+void display_fights(game_t *game)
+{
+    fights_t *fights = game->fights;
+
+    sfRenderWindow_drawSprite(game->window, fights->bg, NULL);
+    display_fights_gui(game);
+    display_fights_enemy(game);
+    display_fights_rat(game);
 }

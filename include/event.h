@@ -113,14 +113,14 @@
         void clothe_store_mouse_pressed(game_t *game);
 
 // Fights
+    // create_fight.c
+    void create_fight(game_t *game, pnj_t *pnj);
+
     // key_pressed.c
     void fights_key_pressed(game_t *game);
 
     // mouse_moved.c
     void fights_mouse_moved(game_t *game);
-
-    // create fight
-    void create_fight(game_t *game, pnj_t *pnj);
 
     // mouse_pressed.c
     void fights_mouse_pressed(game_t *game);

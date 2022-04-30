@@ -7,6 +7,13 @@
 
 #include "rpg.h"
 
+void destroy_enemy(enemy_t *enemy)
+{
+    if (enemy->sprite)
+        sfSprite_destroy(enemy->sprite);
+    free(enemy);
+}
+
 void detroy_attack(attack_t *attack)
 {
     if (!attack)
@@ -27,6 +34,7 @@ void destroy_fights(fights_t *fights)
     destroy_sprite(fights->bg);
     destroy_sprite(fights->fight_button);
     destroy_sprite(fights->run_button);
+    destroy_enemy(fights->enemy);
     detroy_attack(fights->attack_1);
     detroy_attack(fights->attack_2);
     detroy_attack(fights->attack_3);

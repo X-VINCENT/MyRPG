@@ -226,6 +226,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/data/init.c                             \
 								init/data/load_game.c                        \
 								init/data/load_save.c                        \
+								init/fights/enemy.c                          \
 								init/fights/init.c                           \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \

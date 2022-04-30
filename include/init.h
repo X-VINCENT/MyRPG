@@ -165,6 +165,9 @@
     save_t *load_save(const char *filename);
 
 // Fights
+    // enemy.c
+    void init_fights_enemy(game_t *game);
+
     // init.c
     void init_fights(game_t *game);
 
