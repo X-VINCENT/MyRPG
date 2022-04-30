@@ -41,7 +41,7 @@ void check_intersect_circle(game_t *game, pnj_t *pnj)
         sfCircleShape_getGlobalBounds(game->assets->rat->circle);
 
     if (sfFloatRect_intersects(&r_rat_circle, &r_pnj_circle, NULL) &&
-        check_inventory_illegal(game))
+        pnj->is_guard && check_inventory_illegal(game))
         return create_fight(game, pnj);
     check_intersect_circle_key(game, pnj);
 }
