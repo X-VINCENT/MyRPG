@@ -70,7 +70,7 @@ void check_rat_key_pressed(game_t *game)
             sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) == 0)
             sfSound_play(game->audio->sounds->jump_sound);
     }
-    if (time_elapsed(game->assets->rat->movement_clock) > 0.01) {
+    if (time_elapsed(game->assets->rat->movement_clock) > 0.02) {
         move_rat(game);
         check_locations_rat_move(game);
         sfClock_restart(game->assets->rat->movement_clock);

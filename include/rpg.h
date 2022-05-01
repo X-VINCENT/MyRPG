@@ -215,7 +215,7 @@
     #define LOCATION_DOOR_MUSEUM_4_TO_3 (sfVector2f){10, 2325}
     #define LOCATION_DOOR_MUSEUM_4_TO_CITY (sfVector2f){500, 2325}
 
-    //Back to museum
+    // Back to museum
     #define DOOR_BACK_TO_MUSEUM (sfVector2f){0, 573}
 //////////////////////////////////////////////////////////////////////////////
 
