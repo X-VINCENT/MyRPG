@@ -84,6 +84,7 @@ void init_fights(game_t *game)
     init_sprites_fights(game);
     init_fights_attacks(game);
     init_fights_enemy(game);
+    init_fights_lifebar(game);
     game->fights->button_clock = sfClock_create();
     game->fights->fight_status = 0;
 }

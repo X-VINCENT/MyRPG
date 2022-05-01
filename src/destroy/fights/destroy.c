@@ -7,11 +7,14 @@
 
 #include "rpg.h"
 
-void destroy_enemy(enemy_t *enemy)
+void destroy_lifebar(lifebar_t *lifebar)
 {
-    if (enemy->sprite)
-        sfSprite_destroy(enemy->sprite);
-    free(enemy);
+    destroy_sprite(lifebar->empty_bar);
+    for (int idx = 0; lifebar->ticks[idx] != NULL; idx += 1) {
+        sfSprite_destroy(lifebar->ticks[idx]);
+    }
+    free(lifebar->ticks);
+    free(lifebar);
 }
 
 void detroy_attack(attack_t *attack)
@@ -27,6 +30,13 @@ void detroy_attack(attack_t *attack)
     free(attack);
 }
 
+void destroy_enemy(enemy_t *enemy)
+{
+    if (enemy->sprite)
+        sfSprite_destroy(enemy->sprite);
+    free(enemy);
+}
+
 void destroy_fights(fights_t *fights)
 {
     if (!fights)
@@ -34,6 +44,8 @@ void destroy_fights(fights_t *fights)
     destroy_sprite(fights->bg);
     destroy_sprite(fights->fight_button);
     destroy_sprite(fights->run_button);
+    destroy_lifebar(fights->rat_lifebar);
+    destroy_lifebar(fights->enemy_lifebar);
     destroy_enemy(fights->enemy);
     detroy_attack(fights->attack_1);
     detroy_attack(fights->attack_2);

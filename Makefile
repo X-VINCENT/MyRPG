@@ -50,7 +50,9 @@ SRC                 =           $(addprefix src/,                            \
 								display/pnjs/display.c                       \
 								display/pnjs/move_circle.c                   \
 								display/pnjs/check_intersect_circle.c        \
+								display/fights/characters.c                  \
 								display/fights/display.c                     \
+								display/fights/gui.c                         \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -193,9 +195,6 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
 								init/assets/museum/init.c                    \
-								init/assets/rat/actions.c                    \
-								init/assets/rat/init.c                       \
-								init/assets/rat/init_rat_2.c                 \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/black_first.c                \
 								init/assets/pnj/pnj_guard_museum_left.c      \
@@ -208,6 +207,9 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
+								init/assets/rat/actions.c                    \
+								init/assets/rat/init.c                       \
+								init/assets/rat/init2.c                      \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls_choose_key.c   \
 								init/assets/settings/controls.c              \
@@ -228,6 +230,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/data/load_save.c                        \
 								init/fights/enemy.c                          \
 								init/fights/init.c                           \
+								init/fights/lifebars.c                       \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \
 								init/textures/characters.c                   \

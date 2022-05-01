@@ -91,13 +91,7 @@ void init_rat(game_t *game, sfTexture *texture)
 
     game->assets->rat = malloc(sizeof(rat_t));
     rat = game->assets->rat;
-    rat->up = 1;
-    rat->down = 0;
-    rat->left = 0;
-    rat->right = 0;
-    rat->speed = 1;
-    rat->speed_multiplier = 1;
-    rat->is_moving = 0;
+    init_rat_data(game);
     rat->shadow = create_sprite(texture, r_shadow, pos, scale);
     set_sprite_origin(rat->shadow, r_shadow);
     init_rat_idle(game, texture);
