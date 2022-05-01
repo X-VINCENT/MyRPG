@@ -190,6 +190,8 @@
         int is_moving;
         int is_dodging;
         float radius_circle;
+        int damage;
+        int life;
     } rat_t;
 
     typedef struct settings_game {

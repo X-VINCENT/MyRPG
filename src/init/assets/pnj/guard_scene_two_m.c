@@ -42,4 +42,5 @@ void init_pnj_g2_museum_left(game_t *game)
     create_box_message(game, pnj, position);
     init_text_g2_museum_left(pnj, position);
     pnj->time_between_text = 3;
+    pnj->is_guard = true;
 }

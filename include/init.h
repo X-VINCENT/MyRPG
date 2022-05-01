@@ -76,7 +76,10 @@
 
         // init.c
         void init_rat(game_t *game, sfTexture *texture);
+
+        // init2.c
         void init_rat_circle(game_t *game);
+        void init_rat_data(game_t *game);
 
     // Settings
         // audio.c
@@ -165,8 +168,14 @@
     save_t *load_save(const char *filename);
 
 // Fights
+    // enemy.c
+    void init_fights_enemy(game_t *game);
+
     // init.c
     void init_fights(game_t *game);
+
+    // lifebars.c
+    void init_fights_lifebar(game_t *game);
 
 // Inventory
     // init.c

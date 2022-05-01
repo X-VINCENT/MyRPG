@@ -59,10 +59,8 @@
     #define R_FILTER (sfIntRect){1890, 127, 100, 50}
     #define R_BOMB_IDLE (sfIntRect){1788, 31, 24, 21}
     #define R_BOMB_EXPLOSION (sfIntRect){1880, 31, 65, 32}
-    #define R_RAT_HEALTH_BAR_FULL (sfIntRect){1945, 0, 64, 4}
-    #define R_RAT_HEALTH_BAR_EMPTY (sfIntRect){1945, 5, 85, 8}
-    #define R_ENEMY_HEALTH_BAR_FULL (sfIntRect){1945, 14, 64, 4}
-    #define R_ENEMY_HEALTH_BAR_EMPTY (sfIntRect){1945, 19, 85, 8}
+    #define R_RAT_LIFEBAR (sfIntRect){1945, 5, 85, 8}
+    #define R_ENEMY_LIFEBAR (sfIntRect){1945, 19, 85, 8}
 //////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////

@@ -29,6 +29,7 @@ void init_settings_base(pnj_t *pnj)
     pnj->walk = sfClock_create();
     pnj->text = true;
     pnj->display_the_text = 0;
+    pnj->is_guard = false;
 }
 
 void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
