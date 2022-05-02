@@ -18,6 +18,7 @@
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
     #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
     #define R_SCROLLING_BAR_INSIDE (sfIntRect){39, 169, 28, 150}
+    #define R_LASERS (sfIntRect){133, 113, 212, 174}
     #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
     #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34}
     #define R_BAR (sfIntRect){0, 660, 500, 20}
@@ -58,10 +59,8 @@
     #define R_FILTER (sfIntRect){1890, 127, 100, 50}
     #define R_BOMB_IDLE (sfIntRect){1788, 31, 24, 21}
     #define R_BOMB_EXPLOSION (sfIntRect){1880, 31, 65, 32}
-    #define R_RAT_HEALTH_BAR_FULL (sfIntRect){1945, 0, 64, 4}
-    #define R_RAT_HEALTH_BAR_EMPTY (sfIntRect){1945, 5, 85, 8}
-    #define R_ENEMY_HEALTH_BAR_FULL (sfIntRect){1945, 14, 64, 4}
-    #define R_ENEMY_HEALTH_BAR_EMPTY (sfIntRect){1945, 19, 85, 8}
+    #define R_RAT_LIFEBAR (sfIntRect){1945, 5, 85, 8}
+    #define R_ENEMY_LIFEBAR (sfIntRect){1945, 19, 85, 8}
 //////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////
@@ -71,6 +70,7 @@
     #define MUSIC_CITY "assets/audio/musics/music_city.ogg"
     #define MUSIC_BAR "assets/audio/musics/music_bar.ogg"
     #define MUSIC_ICE_CREAM_SHOP "assets/audio/musics/music_ice_cream.ogg"
+    #define MUSIC_MUSEUM "assets/audio/musics/music_museum.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////

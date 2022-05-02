@@ -35,6 +35,7 @@ void init_settings_base_citizens(pnj_t *pnj, float time_between_text)
     pnj->timer_move = sfClock_create();
     pnj->walk = sfClock_create();
     pnj->text = false;
+    pnj->is_guard = false;
 }
 
 void init_pnj_citizens(sfTexture *texture,
