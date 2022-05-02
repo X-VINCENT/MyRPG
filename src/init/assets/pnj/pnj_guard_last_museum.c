@@ -42,6 +42,6 @@ void init_pnj_guard_last_museum(game_t *game)
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
     create_box_message(game, pnj, position);
     init_text_guard_last(pnj, position);
-    pnj->time_between_text = 2;
+    pnj->time_between_text = 3;
     pnj->is_guard = true;
 }
