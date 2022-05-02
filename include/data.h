@@ -78,16 +78,19 @@
 
     typedef struct ice {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } ice_t;
 
     typedef struct market {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } market_t;
 
     typedef struct clothe {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } clothe_t;
 
@@ -402,12 +405,16 @@
         sfTexture *apart_top;
         sfTexture *apart;
         sfTexture *bar;
+        sfTexture *bar_top;
         sfTexture *city_view;
         sfTexture *city_view_top;
         sfTexture *city_rat_door;
-        sfTexture *clothe_view;
-        sfTexture *ice_cream_view;
-        sfTexture *market_view;
+        sfTexture *clothe;
+        sfTexture *clothe_top;
+        sfTexture *ice_cream;
+        sfTexture *ice_cream_top;
+        sfTexture *market;
+        sfTexture *market_top;
         sfTexture *museum_bg;
         sfTexture *museum_bg_top;
         sfTexture *cursor_icon;

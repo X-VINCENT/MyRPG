@@ -10,5 +10,7 @@
 void destroy_bar(bar_t *bar)
 {
     destroy_sprite(bar->bg);
+    destroy_sprite(bar->bg_top);
+    destroy_image(bar->hitbox);
     free(bar);
 }
