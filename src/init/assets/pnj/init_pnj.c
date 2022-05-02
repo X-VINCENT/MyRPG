@@ -69,5 +69,7 @@ void init_struct_pnjs(game_t *game)
     init_pnj_g_museum_right(game);
     init_pnj_g2_museum_left(game);
     init_pnj_museum_cashier(game);
+    init_pnj_guide_top_right(game);
+    init_pnj_museum_indicator(game);
     citizens_png(game);
 }

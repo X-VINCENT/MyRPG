@@ -203,6 +203,8 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/pnj_g_m_left_inside.c        \
 								init/assets/pnj/pnj_g_m_right_inside.c       \
 								init/assets/pnj/pnj_guard_museum_right.c     \
+								init/assets/pnj/pnj_museum_indicator.c       \
+								init/assets/pnj/guide_pnj_top_right.c        \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/cashier.c                    \
