@@ -47,18 +47,8 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
     sfCircleShape_setOrigin(pnj->circle, (sfVector2f){35, 35});
 }
 
-void init_struct_pnjs(game_t *game)
+void init_all_pnj(game_t *game)
 {
-    assets_t *assets = game->assets;
-
-    if (!game)
-        return;
-    assets->pnj = malloc(sizeof(pnj_t *) * PNJ_NBR + 1);
-    for (int i = 0; i < PNJ_NBR; i++) {
-        assets->pnj[i] = malloc(sizeof(pnj_t));
-    }
-    assets->pnj[PNJ_NBR] = NULL;
-
     init_one(game);
     init_two(game);
     init_three(game);
@@ -71,5 +61,19 @@ void init_struct_pnjs(game_t *game)
     init_pnj_museum_cashier(game);
     init_pnj_guide_top_right(game);
     init_pnj_museum_indicator(game);
+    init_pnj_guard_last_museum(game);
+}
+
+void init_struct_pnjs(game_t *game)
+{
+    assets_t *assets = game->assets;
+
+    if (!game)
+        return;
+    assets->pnj = malloc(sizeof(pnj_t *) * PNJ_NBR + 1);
+    for (int i = 0; i < PNJ_NBR; i++)
+        assets->pnj[i] = malloc(sizeof(pnj_t));
+    assets->pnj[PNJ_NBR] = NULL;
+    init_all_pnj(game);
     citizens_png(game);
 }

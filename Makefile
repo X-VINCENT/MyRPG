@@ -209,6 +209,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
+								init/assets/pnj/pnj_guard_last_museum.c      \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init2.c                      \

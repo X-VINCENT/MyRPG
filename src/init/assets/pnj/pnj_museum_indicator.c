@@ -43,7 +43,7 @@ void init_pnj_museum_indicator(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_MUSEUM_INDICATOR];
     sfTexture *texture = game->textures->blue_girl_pnj;
-    sfVector2f position = {324, 138};
+    sfVector2f position = {472, 238};
     sfIntRect rect = {97, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);

@@ -14,6 +14,7 @@ void display_pnj_museum(game_t *game)
     display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
     display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_INDICATOR]);
+    display_pnj(game, game->assets->pnj[PNJ_GUARD_LAST_MUSEUM]);
 }
 
 void museum_stage(game_t *game)

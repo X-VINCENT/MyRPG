@@ -15,8 +15,8 @@
     #define PNJ_GUARD_PATH "assets/images/characters/pnj/guard_pnj.png"
     #define PNJ_HOTESS_PATH "assets/images/characters/pnj/hotesse.png"
 
-    #define PNJ_NBR 17
-    #define LAST_PNJ 11
+    #define PNJ_NBR 18
+    #define LAST_PNJ 12
     #define PNJ_BLACK 0
     #define PNJ_GIRL_TWO 1
     #define PNJ_BLACK_THREE 2
@@ -29,6 +29,7 @@
     #define PNJ_CASHIER 9
     #define PNJ_GUIDE_TOP_RIGHT 10
     #define PNJ_MUSEUM_INDICATOR 11
+    #define PNJ_GUARD_LAST_MUSEUM 12
 
     typedef struct pnj {
         sfClock *timer_move;
