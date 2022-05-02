@@ -20,6 +20,7 @@
 
 // RPG Headers
     #include "abilities.h"
+    #include "car.h"
     #include "assets.h"
     #include "data.h"
     #include "destroy.h"

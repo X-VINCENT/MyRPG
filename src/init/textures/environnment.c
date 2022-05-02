@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+void init_textures_environnment_two(game_t *game)
+{
+    textures_t *textures = game->textures;
+
+    textures->museum_bg = sfTexture_createFromFile(MUSEUM, NULL);
+    textures->museum_bg_top = sfTexture_createFromFile(MUSEUM_TOP, NULL);
+    textures->rain = sfTexture_createFromFile(RAIN, NULL);
+    textures->wind = sfTexture_createFromFile(WIND, NULL);
+    textures->car = sfTexture_createFromFile(CAR, NULL);
+}
+
 void init_textures_environnment(game_t *game)
 {
     textures_t *textures = game->textures;
@@ -24,8 +35,5 @@ void init_textures_environnment(game_t *game)
     textures->ice_cream_top = sfTexture_createFromFile(ICE_TOP, NULL);
     textures->market = sfTexture_createFromFile(MARKET, NULL);
     textures->market_top = sfTexture_createFromFile(MARKET_TOP, NULL);
-    textures->museum_bg = sfTexture_createFromFile(MUSEUM, NULL);
-    textures->museum_bg_top = sfTexture_createFromFile(MUSEUM_TOP, NULL);
-    textures->rain = sfTexture_createFromFile(RAIN, NULL);
-    textures->wind = sfTexture_createFromFile(WIND, NULL);
+    init_textures_environnment_two(game);
 }
