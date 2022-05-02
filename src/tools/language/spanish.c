@@ -27,6 +27,9 @@ void set_texts_spanish_top_bar(game_t *game)
 
 void set_texts_spanish(game_t *game)
 {
+    sfText_setString(game->assets->home_menu->press, SPANISH_PRESS_ENTER);
+    sfText_setString(game->assets->appartment->press_interact,
+        SPANISH_PRESS_TO_SAVE);
     set_texts_spanish_top_bar(game);
     set_texts_spanish_stats(game);
     set_texts_spanish_game_menu(game);

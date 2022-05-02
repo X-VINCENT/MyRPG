@@ -7,6 +7,15 @@
 
 #include "rpg.h"
 
+void set_city_music(game_t *game)
+{
+    sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
+    sfMusic_stop(game->audio->musics->music_museum);
+    play_music(game->audio->musics->music_city);
+}
+
 void rain(game_t *game)
 {
     if (game->assets->city->is_windy == 0 && rand() % 2000 == 1)
@@ -35,7 +44,7 @@ void wind(game_t *game)
 
 void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 {
-    int last_pnj_not_citizens = PNJ_GUARD_RIGHT + 1;
+    int last_pnj_not_citizens = LAST_PNJ + 1;
 
     nbr_animated_pnj += last_pnj_not_citizens;
     move_pnj(game, nbr_animated_pnj);
@@ -50,19 +59,19 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
 
 void city_stage(game_t *game)
 {
-    sfMusic_stop(game->audio->musics->music_menu);
-    sfMusic_stop(game->audio->musics->music_bar);
-    sfMusic_stop(game->audio->musics->music_ice_cream);
-    check_and_center_view(
-        game, game->assets->rat->idle_front, game->assets->city->bg);
+    set_city_music(game);
     display_city(game);
+    pnjs_display_city(game, 5);
     display_rat(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
     display_circle_rat(game);
-    pnjs_display_city(game, 5);
     check_rat_key_pressed(game);
+    display_objects(game->window, game->assets->city->objects);
+    event_objects(game->assets->rat->idle_front, game->inventory->items,
+        game->assets->city->objects, game->keys[INTERACT]);
     rain(game);
     wind(game);
     display_inventory(game);
-    play_music(game->audio->musics->music_city);
+    check_and_center_view(
+        game, game->assets->rat->idle_front, game->assets->city->bg);
 }

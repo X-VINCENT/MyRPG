@@ -11,6 +11,7 @@
     #include "rpg.h"
     #include "inventory.h"
     #include "pnj.h"
+    #include "fights.h"
 
     typedef struct particle {
         sfSprite *sprite;
@@ -26,13 +27,37 @@
         sfClock *clock;
     } parallax_t;
 
+    typedef struct skin {
+        sfSprite *bg;
+        sfSprite *preview;
+        sfText *value_text;
+        sfClock *clock;
+        int value;
+        int is_unlocked;
+    } skin_t;
+
+    typedef struct skin_selector {
+        sfSprite *bg;
+        sfText *title;
+        sfText *money;
+        sfSprite *gold;
+        skin_t *blue;
+        skin_t *green;
+        skin_t *purple;
+        skin_t *red;
+    } skin_selector_t;
+
     typedef struct appartment {
         sfSprite *bg;
         sfSprite *bg_top;
         sfSprite *sign;
         sfText *press_interact;
         sfImage *hitbox;
+        skin_selector_t *skin_selector;
+        object_t **objects;
         int is_saving;
+        int is_choosing_skin;
+        int is_skin_selector_opened;
     } appartment_t;
 
     typedef struct bar {
@@ -44,8 +69,11 @@
     typedef struct museum {
         sfSprite *bg;
         sfSprite *bg_top;
+        sfSprite *lasers;
         sfImage *hitbox;
+        object_t **objects;
         int curent_room;
+        int are_lasers_unlocked;
     } museum_t;
 
     typedef struct ice {
@@ -79,6 +107,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        object_t **objects;
     } city_t;
 
     typedef struct load_save {
@@ -118,8 +147,12 @@
     } home_menu_t;
 
     typedef struct howtoplay {
+        int screen;
         sfSprite *bg;
         sfClock *clock;
+        sfSprite **sprite;
+        sfSprite *l_arrow;
+        sfSprite *r_arrow;
     } howtoplay_t;
 
     typedef struct rat {
@@ -152,11 +185,13 @@
         int down;
         int left;
         int right;
-        int speed;
+        float speed;
+        float speed_multiplier;
         int is_moving;
         int is_dodging;
         float radius_circle;
-        particle_t *run;
+        int damage;
+        int life;
     } rat_t;
 
     typedef struct settings_game {
@@ -344,6 +379,7 @@
         sfMusic *music_city;
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
+        sfMusic *music_museum;
     } musics_t;
 
     typedef struct sounds {
@@ -393,7 +429,18 @@
         sfTexture *rain;
         sfTexture *wind;
         sfTexture *guard_pnj;
+        sfTexture *hotess_pnj;
     } textures_t;
+
+    typedef struct save_game {
+        int fps;
+        int res;
+        int vsync;
+        int language;
+        int music_volume;
+        int effects_volume;
+        int *keys;
+    } save_game_t;
 
     typedef struct save {
         int nb_golds;
@@ -408,6 +455,7 @@
     } save_t;
 
     typedef struct data {
+        save_game_t *game;
         save_t *current;
         save_t *save1;
         save_t *save2;
@@ -426,6 +474,7 @@
         int *default_keys;
         inventory_t *inventory;
         abilities_t *abilities;
+        fights_t *fights;
         int stage;
         int last_stage;
         int next_stage;
@@ -435,9 +484,6 @@
         int language;
         int music_volume;
         int effects_volume;
-        int nb_golds;
-        int nb_xps;
-        int nb_abilities;
         sfClock *time_playing_clock;
     } game_t;
 

@@ -8,13 +8,10 @@
 #include "rpg.h"
 
 char *message_two[] = {
-    "wesh chacal",
-    "ca dit quoi",
-    "Abbaye Saint-Wandrille, anciennement abbaye",
-    "Une abbaye de la congregation de Solesmes situee sur",
-    "l'ancienne commune de AOUDOUBILAH en BULGARIE",
-    "va au musée et ARCHI la joconque",
-    "fdp",
+    "Hi, I just got out of a nightclub",
+    "Can you give me some money please?",
+    "I lost my keys I need to call a locksmith",
+    "find a key",
     NULL
 };
 
@@ -41,7 +38,7 @@ void init_one(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_BLACK];
     sfTexture *texture = game->textures->black_pnj;
-    sfVector2f position = {2315, 1700};
+    sfVector2f position = {2315, 1713};
     sfIntRect rect = {0, 30, 45, 65};
 
     init_pnj(pnj, texture, position, rect);

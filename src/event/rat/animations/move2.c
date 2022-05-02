@@ -16,8 +16,8 @@ void move_rat_up_left(game_t *game)
     rat->right = 0;
     if (!rat_can_move_up_left(game))
         return;
-    pos.y -= rat->speed;
-    pos.x -= rat->speed;
+    pos.y -= rat->speed * rat->speed_multiplier;
+    pos.x -= rat->speed * rat->speed_multiplier;
     set_rats_position(game, pos);
     rat->up = 1;
     rat->left = 1;
@@ -34,8 +34,8 @@ void move_rat_up_right(game_t *game)
     rat->left = 0;
     if (!rat_can_move_up_right(game))
         return;
-    pos.y -= rat->speed;
-    pos.x += rat->speed;
+    pos.y -= rat->speed * rat->speed_multiplier;
+    pos.x += rat->speed * rat->speed_multiplier;
     set_rats_position(game, pos);
     rat->up = 1;
     rat->right = 1;
@@ -52,8 +52,8 @@ void move_rat_down_left(game_t *game)
     rat->right = 0;
     if (!rat_can_move_down_left(game))
         return;
-    pos.y += rat->speed;
-    pos.x -= rat->speed;
+    pos.y += rat->speed * rat->speed_multiplier;
+    pos.x -= rat->speed * rat->speed_multiplier;
     set_rats_position(game, pos);
     rat->down = 1;
     rat->left = 1;
@@ -70,8 +70,8 @@ void move_rat_down_right(game_t *game)
     rat->left = 0;
     if (!rat_can_move_down_right(game))
         return;
-    pos.y += rat->speed;
-    pos.x += rat->speed;
+    pos.y += rat->speed * rat->speed_multiplier;
+    pos.x += rat->speed * rat->speed_multiplier;
     set_rats_position(game, pos);
     rat->down = 1;
     rat->right = 1;

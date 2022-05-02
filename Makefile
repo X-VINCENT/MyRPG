@@ -35,10 +35,12 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/audio/musics.c                       \
 								destroy/audio/sounds.c                       \
 								destroy/data/destroy.c                       \
+								destroy/fights/destroy.c                     \
 								destroy/inventory/destroy.c                  \
 								destroy/particles/destroy.c                  \
 								destroy/textures/destroy.c                   \
 								destroy/destroy.c                            \
+								destroy/save_game.c                          \
 								destroy/save.c                               \
 								display/abilities/display.c                  \
 								display/appartment/display.c                 \
@@ -46,6 +48,11 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/pnjs/move_circle.c                   \
+								display/pnjs/check_intersect_circle.c        \
+								display/fights/characters.c                  \
+								display/fights/display.c                     \
+								display/fights/gui.c                         \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -75,7 +82,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/abilities/mouse_moved.c                \
 								event/abilities/mouse_pressed.c              \
 								event/abilities/move_tree.c                  \
-								event/abilities/set_ability.c                \
+								event/abilities/set_abilities.c              \
 								event/appartment/locations/door.c            \
 								event/appartment/locations/locations.c       \
 								event/appartment/key_pressed.c               \
@@ -106,6 +113,10 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/key_pressed.c                   \
+								event/fights/create_fight.c                  \
+								event/fights/mouse_moved.c                   \
+								event/fights/mouse_pressed.c                 \
 								event/home_menu/key_pressed.c                \
 								event/home_menu/mouse_moved.c                \
 								event/home_menu/mouse_pressed.c              \
@@ -171,6 +182,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/appartment/skin_selector.c       \
 								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
 								init/assets/city/animated/init_doors.c       \
@@ -183,16 +195,21 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/ice_cream/init.c                 \
 								init/assets/market/init.c                    \
 								init/assets/museum/init.c                    \
-								init/assets/rat/actions.c                    \
-								init/assets/rat/init.c                       \
-								init/assets/rat/init_rat_2.c                 \
 								init/assets/pnj/init_pnj.c                   \
 								init/assets/pnj/black_first.c                \
 								init/assets/pnj/pnj_guard_museum_left.c      \
+								init/assets/pnj/guard_scene_two_m.c          \
+								init/assets/pnj/museum_accueil_hotess.c      \
+								init/assets/pnj/pnj_g_m_left_inside.c        \
+								init/assets/pnj/pnj_g_m_right_inside.c       \
 								init/assets/pnj/pnj_guard_museum_right.c     \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
+								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
+								init/assets/rat/actions.c                    \
+								init/assets/rat/init.c                       \
+								init/assets/rat/init2.c                      \
 								init/assets/settings/audio.c                 \
 								init/assets/settings/controls_choose_key.c   \
 								init/assets/settings/controls.c              \
@@ -209,7 +226,11 @@ SRC                 =           $(addprefix src/,                            \
 								init/audio/musics.c                          \
 								init/audio/sounds.c                          \
 								init/data/init.c                             \
+								init/data/load_game.c                        \
 								init/data/load_save.c                        \
+								init/fights/enemy.c                          \
+								init/fights/init.c                           \
+								init/fights/lifebars.c                       \
 								init/inventory/init.c                        \
 								init/particles/init.c                        \
 								init/textures/characters.c                   \
@@ -228,6 +249,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/city.c                                 \
 								stage/clothe.c                               \
 								stage/game_menu.c                            \
+								stage/fights.c                               \
 								stage/home_menu.c                            \
 								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \
@@ -272,6 +294,8 @@ SRC                 =           $(addprefix src/,                            \
 								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
+								tools/object.c                               \
+								tools/object2.c                              \
 								tools/res.c                                  \
 								tools/set_save_values.c                      \
 								tools/time.c                                 \
@@ -284,7 +308,6 @@ SRC_CSFML           =           $(addprefix csfml/,                          \
 								audio.c                                      \
 								audio2.c                                     \
 								clock.c                                      \
-								convex_shape.c                               \
 								image.c                                      \
 								init.c                                       \
 								shape.c                                      \
@@ -367,6 +390,7 @@ re: clean all
 fast:
 	make fclean -j
 	make -j
+	make clean
 	./my_rpg
 
 tests_run:
