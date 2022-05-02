@@ -12,7 +12,7 @@ void location_door_clothe_store(game_t *game)
     rat_t *rat = game->assets->rat;
 
     if (check_location_rect(rat->idle_front,
-        LOCATION_DOOR_CLOTHE_STORE, 90, 22) == true && rat->left == 1) {
+        LOCATION_DOOR_CLOTHE_STORE, 20, 100) == true && rat->left == 1) {
         game->stage = CITY_STAGE;
         sfView_setCenter(game->view, VIEW_CITY_POS);
         sfView_setSize(game->view, VIEW_CITY_SIZE);

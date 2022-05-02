@@ -10,5 +10,7 @@
 void destroy_ice(ice_t *ice)
 {
     destroy_sprite(ice->bg);
+    destroy_sprite(ice->bg_top);
+    destroy_image(ice->hitbox);
     free(ice);
 }
