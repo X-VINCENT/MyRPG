@@ -129,6 +129,9 @@
     #define MUSEUM "assets/images/environments/museum/museum.png"
     #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
     #define MUSEUM_HITBOX "assets/images/environments/museum/museum_hitbox.png"
+
+    // Car
+    #define CAR "assets/images/characters/car/car.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

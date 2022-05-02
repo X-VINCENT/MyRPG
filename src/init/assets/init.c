@@ -14,6 +14,7 @@ void init_assets(game_t *game)
     game->assets = malloc(sizeof(assets_t));
     init_cursor(game);
     init_city(game);
+    init_car(game);
     init_clothe(game);
     init_game_menu(game);
     init_home_menu(game);

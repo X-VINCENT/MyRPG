@@ -48,6 +48,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/city/car.c                           \
 								display/pnjs/move_circle.c                   \
 								display/pnjs/check_intersect_circle.c        \
 								display/fights/characters.c                  \
@@ -183,6 +184,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/car/init_car.c                   \
 								init/assets/appartment/skin_selector.c       \
 								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \

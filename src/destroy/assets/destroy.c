@@ -7,6 +7,23 @@
 
 #include "rpg.h"
 
+void destroy_assets_2(assets_t *assets)
+{
+    destroy_market(assets->market);
+    destroy_clothe(assets->clothe);
+    destroy_museum(assets->museum);
+    destroy_settings(assets->settings);
+    destroy_stats(assets->stats);
+    destroy_top_bar(assets->top_bar);
+    sfClock_destroy(assets->car->clock);
+    sfClock_destroy(assets->car->clock_turn);
+    sfClock_destroy(assets->car->clock_animation);
+    destroy_sprite(assets->car->car);
+    free(assets->car);
+    destroy_pnjs(assets->pnj);
+    free(assets);
+}
+
 void destroy_assets(assets_t *assets)
 {
     if (!assets)
@@ -18,12 +35,5 @@ void destroy_assets(assets_t *assets)
     destroy_howtoplay(assets->howtoplay);
     destroy_rat(assets->rat);
     destroy_ice(assets->ice);
-    destroy_market(assets->market);
-    destroy_clothe(assets->clothe);
-    destroy_museum(assets->museum);
-    destroy_settings(assets->settings);
-    destroy_stats(assets->stats);
-    destroy_top_bar(assets->top_bar);
-    destroy_pnjs(assets->pnj);
-    free(assets);
+    destroy_assets_2(assets);
 }
