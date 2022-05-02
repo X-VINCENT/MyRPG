@@ -60,6 +60,9 @@
     // mouse_pressed.c
     void bar_mouse_pressed(game_t *game);
 
+    //sell.c
+    void sell(game_t *game);
+
 // City
     // Locations
         // appartment.c

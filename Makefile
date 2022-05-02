@@ -90,6 +90,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/mouse_pressed.c             \
 								event/bar/locations/door.c                   \
 								event/bar/locations/locations.c              \
+								event/bar/sell.c 		                     \
 								event/bar/key_pressed.c                      \
 								event/bar/mouse_moved.c                      \
 								event/bar/mouse_pressed.c                    \
