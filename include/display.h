@@ -31,8 +31,15 @@
     void animate_wind(particle_t *rain, sfRenderWindow *window);
 
 // Fights
+    // characters.c
+    void display_fights_rat(game_t *game);
+    void display_fights_enemy(game_t *game);
+
     // display.c
     void display_fights(game_t *game);
+
+    // gui.c
+    void display_fights_gui(game_t *game);
 
 // Game Menu
     // display.c

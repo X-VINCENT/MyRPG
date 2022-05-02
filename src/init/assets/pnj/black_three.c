@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_three[] = {
-    "troisieme message",
+    "Where is my home??",
     NULL
 };
 

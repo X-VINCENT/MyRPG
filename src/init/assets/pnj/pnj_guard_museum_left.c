@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_gleft[] = {
-    "Ecoutes ce que mon collegue dit, il dit vrai",
+    "It's a beautiful day today",
     NULL
 };
 
@@ -42,4 +42,5 @@ void init_pnj_guard_left(game_t *game)
     create_box_message(game, pnj, position);
     init_text_pnj_gleft(pnj, position);
     pnj->time_between_text = 2;
+    pnj->is_guard = true;
 }

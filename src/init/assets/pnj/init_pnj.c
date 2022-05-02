@@ -29,6 +29,7 @@ void init_settings_base(pnj_t *pnj)
     pnj->walk = sfClock_create();
     pnj->text = true;
     pnj->display_the_text = 0;
+    pnj->is_guard = false;
 }
 
 void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
@@ -42,7 +43,7 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
     set_text_origin(pnj->touch_talk);
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x, pos.y - 45});
     init_settings_base(pnj);
-    pnj->circle = create_circle_shape(sfRed, (sfVector2f){0, 0}, 35, sfRed);
+    pnj->circle = create_circle_shape(sfRed, (sfVector2f){0, 0}, 25, sfRed);
     sfCircleShape_setOrigin(pnj->circle, (sfVector2f){35, 35});
 }
 
@@ -66,5 +67,7 @@ void init_struct_pnjs(game_t *game)
     init_pnj_museum_hotess(game);
     init_pnj_g_museum_left(game);
     init_pnj_g_museum_right(game);
+    init_pnj_g2_museum_left(game);
+    init_pnj_museum_cashier(game);
     citizens_png(game);
 }
