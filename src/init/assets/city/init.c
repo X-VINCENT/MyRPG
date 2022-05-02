@@ -11,6 +11,19 @@ const int name_objects_city[] = {
     GARBAGE_BAG,
     GARBAGE_BAG,
     ICE_CREAM,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
+    KNACKI,
     -1
 };
 
@@ -18,6 +31,19 @@ const sfVector2f pos_objects_city[] = {
     {602, 566},
     {2281, 1691},
     {870, 1688},
+    {1453, 1688},
+    {723, 795},
+    {80, 1192},
+    {2583, 1677},
+    {24, 1932},
+    {39, 640},
+    {662, 597},
+    {2810, 1014},
+    {1160, 1359},
+    {1396, 912},
+    {504, 1352},
+    {1851, 819},
+    {2003, 1890},
     {0, 0}
 };
 
@@ -25,6 +51,19 @@ const int objects_areas_city[] = {
     40,
     40,
     30,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
     -1
 };
 
