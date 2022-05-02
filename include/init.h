@@ -134,10 +134,13 @@
         void init_one(game_t *game);
         void init_pnj_guard_left(game_t *game);
         void init_pnj_museum_hotess(game_t *game);
+        void init_pnj_guide_top_right(game_t *game);
         void init_pnj_g2_museum_left(game_t *game);
         void init_pnj_g_museum_left(game_t *game);
         void init_pnj_g_museum_right(game_t *game);
         void init_pnj_guard_right(game_t *game);
+        void init_pnj_museum_indicator(game_t *game);
+        void init_pnj_guard_last_museum(game_t *game);
         void init_pnj_museum_cashier(game_t *game);
         void init_two(game_t *game);
         void init_three(game_t *game);
