@@ -47,11 +47,12 @@ attack_t *init_attack(game_t *game, sfIntRect r,
     return attack;
 }
 
-void set_attack_values(attack_t *attack, float anim_time, int max_value)
+void set_attack_values(attack_t *attack, float anim_time,
+    int max_value, int damage)
 {
     attack->anim_clock = sfClock_create();
     attack->clock = sfClock_create();
-    attack->damage = 0;
+    attack->damage = damage;
     attack->is_unlocked = 0;
     attack->is_hover = 0;
     attack->anim_time = anim_time;
@@ -68,9 +69,9 @@ void init_fights_attacks(game_t *game)
     fights->attack_1 = init_attack(game, R_RAT_KICK, p_1, ENGLISH_KICK);
     fights->attack_2 = init_attack(game, R_RAT_BITE, p_2, ENGLISH_BITE);
     fights->attack_3 = init_attack(game, R_BOMB_IDLE, p_3, ENGLISH_BOMB);
-    set_attack_values(fights->attack_1, 0.2, 87);
-    set_attack_values(fights->attack_2, 1000, 204);
-    set_attack_values(fights->attack_3, 0.2, 1881);
+    set_attack_values(fights->attack_1, 0.2, 87, 10);
+    set_attack_values(fights->attack_2, 1000, 204, 15);
+    set_attack_values(fights->attack_3, 0.2, 1881, 25);
 }
 
 void init_fights(game_t *game)
@@ -87,4 +88,8 @@ void init_fights(game_t *game)
     init_fights_lifebar(game);
     game->fights->button_clock = sfClock_create();
     game->fights->fight_status = 0;
+    game->fights->kick = 0;
+    game->fights->bite = 0;
+    game->fights->bomb = 0;
+    game->fights->as_touched = 0;
 }

@@ -11,11 +11,14 @@ void display_fights_rat(game_t *game)
 {
     rat_t *rat = game->assets->rat;
 
-    rat->is_moving = 0;
-    rat->left = 0;
-    rat->right = 1;
-    rat->up = 0;
-    rat->down = 0;
+    if (game->fights->kick == 0 && game->fights->bite == 0 &&
+        game->fights->bomb == 0) {
+        rat->is_moving = 0;
+        rat->left = 0;
+        rat->right = 1;
+        rat->up = 0;
+        rat->down = 0;
+    }
     display_rat(game);
 }
 
