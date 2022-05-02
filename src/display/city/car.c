@@ -16,7 +16,7 @@ void low_forward(game_t *game)
         sfSprite_setPosition(game->assets->car->car, position_car);
         sfClock_restart(game->assets->car->clock);
     }
-    if (time_elapsed(game->assets->car->clock_animation) > 0.1) {
+    if (time_elapsed(game->assets->car->clock_animation) > 0.2) {
         animate_sprite(game->assets->car->car, 160, 960, 0);
         sfClock_restart(game->assets->car->clock_animation);
     }
