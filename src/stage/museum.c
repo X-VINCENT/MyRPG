@@ -7,6 +7,16 @@
 
 #include "rpg.h"
 
+void display_pnj_museum(game_t *game)
+{
+    display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
+    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
+    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
+    display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
+    display_pnj(game, game->assets->pnj[PNJ_MUSEUM_INDICATOR]);
+    display_pnj(game, game->assets->pnj[PNJ_GUARD_LAST_MUSEUM]);
+}
+
 void museum_stage(game_t *game)
 {
     sfMusic_stop(game->audio->musics->music_bar);
@@ -16,10 +26,7 @@ void museum_stage(game_t *game)
     play_music(game->audio->musics->music_museum);
     display_museum(game);
     check_rat_key_pressed(game);
-    display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
-    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
-    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
-    display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
+    display_pnj_museum(game);
     display_rat(game);
     display_objects(game->window, game->assets->museum->objects);
     event_objects(game->assets->rat->idle_front, game->inventory->items,
