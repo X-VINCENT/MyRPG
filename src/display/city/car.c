@@ -49,7 +49,7 @@ void display_car(game_t *game)
     sfVector2f position_car;
     car_t *car = game->assets->car;
 
-    if (!car ||!car->car || !car->clock)
+    if (!car || !car->car || !car->clock)
         return;
     position_car = sfSprite_getPosition(game->assets->car->car);
     /*if (position_car.x > 2700 && car->turned_left_to_museum == 0)

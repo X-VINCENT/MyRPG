@@ -7,17 +7,8 @@
 
 #include "rpg.h"
 
-void init_assets(game_t *game)
+void init_assets_two(game_t *game)
 {
-    if (!game)
-        return;
-    game->assets = malloc(sizeof(assets_t));
-    init_cursor(game);
-    init_city(game);
-    init_car(game);
-    init_clothe(game);
-    init_game_menu(game);
-    init_home_menu(game);
     init_howtoplay(game);
     init_rat(game, game->textures->rat_blue);
     init_appartment(game);
@@ -30,6 +21,20 @@ void init_assets(game_t *game)
     init_transitions(game);
     init_struct_pnjs(game);
     init_stats(game);
+}
+
+void init_assets(game_t *game)
+{
+    if (!game)
+        return;
+    game->assets = malloc(sizeof(assets_t));
+    init_cursor(game);
+    init_city(game);
+    init_car(game);
+    init_clothe(game);
+    init_game_menu(game);
+    init_home_menu(game);
+    init_assets_two(game);
 }
 
 void init_cursor(game_t *game)
