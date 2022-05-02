@@ -113,6 +113,10 @@
         void clothe_store_mouse_pressed(game_t *game);
 
 // Fights
+    // Attacks
+        // kick.c
+        void fight_kick(game_t *game);
+
     // create_fight.c
     void create_fight(game_t *game, pnj_t *pnj);
 
@@ -235,6 +239,8 @@
                 game_t *game, sfImage *hitbox, int offset_x, int offset_y);
 
         // animate.c
+        int animate_sprite_one_time(sfSprite *sprite, float shift,
+            int max_value, int offset_from_left);
         void animate_rats(game_t *game);
 
         // move.c
