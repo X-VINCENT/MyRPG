@@ -54,6 +54,10 @@
         sfClock *button_clock;
         int fight_status;
         int to_attack;
+        int kick;
+        int bite;
+        int bomb;
+        int as_touched;
     } fights_t;
 
 #endif /* !FIGHTS_H_ */

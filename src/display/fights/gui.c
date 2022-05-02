@@ -30,8 +30,9 @@ void display_attack(sfRenderWindow *window, attack_t *attack)
 void display_lifebar(sfRenderWindow *window, lifebar_t *lifebar, int life)
 {
     sfRenderWindow_drawSprite(window, lifebar->empty_bar, NULL);
-    for (int idx = 0; idx != life && lifebar->ticks[idx] != NULL; idx += 1)
-        sfRenderWindow_drawSprite(window, lifebar->ticks[idx], NULL);
+    for (float idx = 0; idx * 1.5625 <= life &&
+        lifebar->ticks[(int)idx] != NULL; idx += 1)
+        sfRenderWindow_drawSprite(window, lifebar->ticks[(int)idx], NULL);
 }
 
 void display_fights_gui(game_t *game)
