@@ -18,7 +18,7 @@ lifebar_t *init_lifebar(game_t *game, sfVector2f pos, sfIntRect rect)
     lifebar->empty_bar = create_sprite(game->textures->gui, rect, pos, scale);
     set_sprite_origin(lifebar->empty_bar, rect);
     lifebar->ticks = malloc(sizeof(sfSprite *) * nb_ticks + 1);
-    for (int idx= 0; idx != nb_ticks; idx += 1) {
+    for (int idx = 0; idx != nb_ticks; idx += 1) {
         lifebar->ticks[idx] = create_sprite(
             game->textures->gui, r_tick, p_tick, scale);
         set_sprite_origin(lifebar->ticks[idx], r_tick);

@@ -107,6 +107,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        sfClock *weather_clock;
         object_t **objects;
     } city_t;
 
