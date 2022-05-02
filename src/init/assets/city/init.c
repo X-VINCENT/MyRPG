@@ -45,5 +45,6 @@ void init_city(game_t *game)
     game->assets->city->is_windy = 0;
     game->assets->city->objects = create_objects(game->textures->gui,
         name_objects_city, pos_objects_city, objects_areas_city);
+    game->assets->city->weather_clock = sfClock_create();
     init_doors(game);
 }
