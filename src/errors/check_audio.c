@@ -16,6 +16,8 @@ int check_musics(void)
     error += is_file(MUSIC_BAR);
     error += is_file(MUSIC_ICE_CREAM_SHOP);
     error += is_file(MUSIC_MUSEUM);
+    error += is_file(PNJ_SOUND);
+    error += is_file(JUMP_SOUND);
     return error;
 }
 

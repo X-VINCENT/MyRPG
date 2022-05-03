@@ -400,6 +400,7 @@
 
     typedef struct sounds {
         sfSound *jump_sound;
+        sfSound *pnj_sound;
     } sounds_t;
 
     typedef struct audio {
