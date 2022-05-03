@@ -58,10 +58,7 @@ void init_all_pnj(game_t *game)
     init_pnj_g_museum_left(game);
     init_pnj_g_museum_right(game);
     init_pnj_g2_museum_left(game);
-<<<<<<< HEAD
     init_pnj_bar_cashier(game);
-=======
-    init_pnj_museum_cashier(game);
     init_pnj_guide_top_right(game);
     init_pnj_museum_indicator(game);
     init_pnj_guard_last_museum(game);
@@ -78,6 +75,5 @@ void init_struct_pnjs(game_t *game)
         assets->pnj[i] = malloc(sizeof(pnj_t));
     assets->pnj[PNJ_NBR] = NULL;
     init_all_pnj(game);
->>>>>>> db97ec98333f3319c1decae8f7e4d1a69bdbb64e
     citizens_png(game);
 }

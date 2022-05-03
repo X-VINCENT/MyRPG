@@ -139,13 +139,10 @@
         void init_pnj_g_museum_left(game_t *game);
         void init_pnj_g_museum_right(game_t *game);
         void init_pnj_guard_right(game_t *game);
-<<<<<<< HEAD
         void init_pnj_bar_cashier(game_t *game);
-=======
         void init_pnj_museum_indicator(game_t *game);
         void init_pnj_guard_last_museum(game_t *game);
         void init_pnj_museum_cashier(game_t *game);
->>>>>>> db97ec98333f3319c1decae8f7e4d1a69bdbb64e
         void init_two(game_t *game);
         void init_three(game_t *game);
 
