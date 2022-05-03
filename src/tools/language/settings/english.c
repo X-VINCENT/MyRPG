@@ -17,7 +17,7 @@ void set_texts_english_controls(game_t *game)
     sfText_setString(s_controls->keys[DOWN]->title, ENGLISH_DOWN);
     sfText_setString(s_controls->keys[LEFT]->title, ENGLISH_LEFT);
     sfText_setString(s_controls->keys[RIGHT]->title, ENGLISH_RIGHT);
-    sfText_setString(s_controls->keys[JUMP]->title, ENGLISH_JUMP);
+    sfText_setString(s_controls->keys[BITE]->title, ENGLISH_BITE);
     sfText_setString(s_controls->keys[DODGE]->title, ENGLISH_DODGE);
     sfText_setString(s_controls->keys[ATTACK]->title, ENGLISH_ATTACK);
     sfText_setString(s_controls->keys[INTERACT]->title, ENGLISH_INTERACT);

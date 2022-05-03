@@ -16,6 +16,7 @@ void bar_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_museum);
     display_bar(game);
     display_rat(game);
+    sfRenderWindow_drawSprite(game->window, game->assets->bar->bg_top, NULL);
     if (time_elapsed(game->assets->pnj[PNJ_CASHIER]->animation) > 0.3) {
         animate_sprite(game->assets->pnj[PNJ_CASHIER]->sprite,
             48, 762, 426);
@@ -25,4 +26,5 @@ void bar_stage(game_t *game)
     display_circle_rat(game);
     check_rat_key_pressed(game);
     display_inventory(game);
+    sell(game);
 }

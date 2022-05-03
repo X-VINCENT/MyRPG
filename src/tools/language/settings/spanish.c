@@ -17,7 +17,7 @@ void set_texts_spanish_controls(game_t *game)
     sfText_setString(s_controls->keys[DOWN]->title, SPANISH_DOWN);
     sfText_setString(s_controls->keys[LEFT]->title, SPANISH_LEFT);
     sfText_setString(s_controls->keys[RIGHT]->title, SPANISH_RIGHT);
-    sfText_setString(s_controls->keys[JUMP]->title, SPANISH_JUMP);
+    sfText_setString(s_controls->keys[BITE]->title, SPANISH_BITE);
     sfText_setString(s_controls->keys[DODGE]->title, SPANISH_DODGE);
     sfText_setString(s_controls->keys[ATTACK]->title, SPANISH_ATTACK);
     sfText_setString(s_controls->keys[INTERACT]->title, SPANISH_INTERACT);

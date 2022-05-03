@@ -19,5 +19,6 @@ void create_fight(game_t *game, pnj_t *pnj)
     enemy->life = pnj->life;
     set_rats_position(game, (sfVector2f){140, 190});
     game->fights->to_attack = RAT;
+    game->last_stage = game->stage;
     game->stage = FIGHTS_STAGE;
 }

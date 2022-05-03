@@ -34,7 +34,7 @@ void init_pnj_guard_right(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_GUARD_RIGHT];
     sfTexture *texture = game->textures->guard_pnj;
-    sfVector2f position = {2060, 582};
+    sfVector2f position = {2068, 582};
     sfIntRect rect = {97, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);

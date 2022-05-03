@@ -48,6 +48,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/city/display.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
+								display/city/car.c                           \
 								display/pnjs/move_circle.c                   \
 								display/pnjs/check_intersect_circle.c        \
 								display/fights/characters.c                  \
@@ -62,6 +63,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/market/display.c 					 \
 								display/museum/display.c 					 \
 								display/clothe/display.c 					 \
+								display/rat/actions.c                        \
 								display/rat/display.c                        \
 								display/settings/audio.c                     \
 								display/settings/controls.c                  \
@@ -90,6 +92,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/appartment/mouse_pressed.c             \
 								event/bar/locations/door.c                   \
 								event/bar/locations/locations.c              \
+								event/bar/sell.c 		                     \
 								event/bar/key_pressed.c                      \
 								event/bar/mouse_moved.c                      \
 								event/bar/mouse_pressed.c                    \
@@ -113,6 +116,8 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/attacks/bite.c                  \
+								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
 								event/fights/mouse_moved.c                   \
@@ -182,6 +187,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
+								init/assets/car/init_car.c                   \
 								init/assets/appartment/skin_selector.c       \
 								init/assets/bar/init.c		                 \
 								init/assets/city/init.c                      \
@@ -203,10 +209,13 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/pnj_g_m_left_inside.c        \
 								init/assets/pnj/pnj_g_m_right_inside.c       \
 								init/assets/pnj/pnj_guard_museum_right.c     \
+								init/assets/pnj/pnj_museum_indicator.c       \
+								init/assets/pnj/guide_pnj_top_right.c        \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
+								init/assets/pnj/pnj_guard_last_museum.c      \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init2.c                      \

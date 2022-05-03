@@ -20,6 +20,7 @@
 
 // RPG Headers
     #include "abilities.h"
+    #include "car.h"
     #include "assets.h"
     #include "data.h"
     #include "destroy.h"
@@ -80,15 +81,15 @@
 
     // Ice Cream Shop
     #define VIEW_ICE_SIZE (sfVector2f){600, 320}
-    #define VIEW_ICE_POS (sfVector2f){288, 240}
+    #define VIEW_ICE_POS (sfVector2f){192, 160}
 
     // Clothe shop
-    #define VIEW_CLOTHE_SIZE (sfVector2f){672, 642}
-    #define VIEW_CLOTHE_POS (sfVector2f){336, 321}
+    #define VIEW_CLOTHE_SIZE (sfVector2f){853, 480}
+    #define VIEW_CLOTHE_POS (sfVector2f){207, 214}
 
     // Market
-    #define VIEW_MARKET_SIZE (sfVector2f){740, 450}
-    #define VIEW_MARKET_POS (sfVector2f){370, 225}
+    #define VIEW_MARKET_SIZE (sfVector2f){853, 480}
+    #define VIEW_MARKET_POS (sfVector2f){240, 150}
 
     // Museum
     #define VIEW_MUSEUM_SIZE (sfVector2f){1280, 720}
@@ -133,9 +134,9 @@
 
     #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 252}
     #define RAT_DEFAULT_POS_BAR (sfVector2f){31, 162}
-    #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){288, 380}
-    #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f){36, 232}
-    #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 342}
+    #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){195, 300}
+    #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f){50, 160}
+    #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 240}
     #define RAT_DEFAULT_POS_MUSEUM (sfVector2f){15, 530}
     #define RAT_DEFAULT_POS_MUSEUM_1_TO_E (sfVector2f){420, 540}
     #define RAT_DEFAULT_POS_MUSEUM_E_TO_1 (sfVector2f){435, 1650}
@@ -175,6 +176,14 @@
     #define RAT_DODGE_SIDE_MAX 290
     #define RAT_DODGE_DIAGONAL_OFFSET 27
     #define RAT_DODGE_DIAGONAL_MAX 255
+
+    // Kick
+    #define RAT_KICK_DOWN_OFFSET 22
+    #define RAT_KICK_DOWN_MAX 18
+    #define RAT_KICK_SIDE_OFFSET 23
+    #define RAT_KICK_SIDE_MAX 87
+    #define RAT_KICK_DIAGONAL_OFFSET 21
+    #define RAT_KICK_DIAGONAL_MAX 63
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -184,24 +193,24 @@
     #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
 
     // Bar
-    #define LOCATION_DOOR_BAR (sfVector2f){0, 126}
+    #define LOCATION_DOOR_BAR (sfVector2f){0, 110}
 
     // City
     #define LOCATION_APPARTMENT (sfVector2f){2450, 1690}
-    #define LOCATION_BAR (sfVector2f){1008, 1681}
+    #define LOCATION_BAR (sfVector2f){1008, 1667}
     #define LOCATION_ICE_SHOP (sfVector2f){904, 1667}
     #define LOCATION_CLOTHE_SHOP (sfVector2f){573, 1666}
     #define LOCATION_MARKET (sfVector2f){1510, 1683}
     #define LOCATION_MUSEUM (sfVector2f){2022, 556}
 
     // Ice Cream Shop
-    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){235, 395}
+    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){160, 310}
 
     // Clothe
-    #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){50, 226}
+    #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){0, 110}
 
     // Market
-    #define LOCATION_DOOR_MARKET (sfVector2f){0, 320}
+    #define LOCATION_DOOR_MARKET (sfVector2f){0, 180}
 
     // Museum
     #define LOCATION_DOOR_MUSEUM (sfVector2f){10, 500}

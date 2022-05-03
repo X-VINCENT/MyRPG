@@ -78,16 +78,19 @@
 
     typedef struct ice {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } ice_t;
 
     typedef struct market {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } market_t;
 
     typedef struct clothe {
         sfSprite *bg;
+        sfSprite *bg_top;
         sfImage *hitbox;
     } clothe_t;
 
@@ -107,6 +110,7 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        sfClock *weather_clock;
         object_t **objects;
     } city_t;
 
@@ -174,11 +178,20 @@
         sfSprite *dodge_right;
         sfSprite *dodge_up_left;
         sfSprite *dodge_up_right;
+        sfSprite *kick_down;
+        sfSprite *kick_left;
+        sfSprite *kick_right;
+        sfSprite *kick_up_left;
+        sfSprite *kick_up_right;
+        sfSprite *bite_left;
+        sfSprite *bite_right;
         sfSprite *shadow;
         sfCircleShape *circle;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *dodge_anim_clock;
+        sfClock *kick_anim_clock;
+        sfClock *bite_time_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
         int up;
@@ -189,6 +202,8 @@
         float speed_multiplier;
         int is_moving;
         int is_dodging;
+        int is_kicking;
+        int is_biting;
         float radius_circle;
         int damage;
         int life;
@@ -249,7 +264,7 @@
         DOWN,
         LEFT,
         RIGHT,
-        JUMP,
+        BITE,
         DODGE,
         ATTACK,
         INTERACT,
@@ -362,6 +377,7 @@
         home_menu_t *home_menu;
         rat_t *rat;
         pnj_t **pnj;
+        car_t *car;
         settings_t *settings;
         stats_t *stats;
         transitions_t *transitions;
@@ -401,12 +417,16 @@
         sfTexture *apart_top;
         sfTexture *apart;
         sfTexture *bar;
+        sfTexture *bar_top;
         sfTexture *city_view;
         sfTexture *city_view_top;
         sfTexture *city_rat_door;
-        sfTexture *clothe_view;
-        sfTexture *ice_cream_view;
-        sfTexture *market_view;
+        sfTexture *clothe;
+        sfTexture *clothe_top;
+        sfTexture *ice_cream;
+        sfTexture *ice_cream_top;
+        sfTexture *market;
+        sfTexture *market_top;
         sfTexture *museum_bg;
         sfTexture *museum_bg_top;
         sfTexture *cursor_icon;
@@ -430,6 +450,7 @@
         sfTexture *wind;
         sfTexture *guard_pnj;
         sfTexture *hotess_pnj;
+        sfTexture *car;
     } textures_t;
 
     typedef struct save_game {
