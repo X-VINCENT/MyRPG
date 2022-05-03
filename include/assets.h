@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////////
 // Rects
     #define R_HTP_EXPLANATION (sfIntRect){2177, 882, 1917, 647}
-    #define R_HTP_APART (sfIntRect){1446, 4352, 1917, 647} 
+    #define R_HTP_APART (sfIntRect){1446, 4352, 1917, 647}
     #define R_HTP_PNJ (sfIntRect){2203, 63, 1917, 647}
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
     #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
@@ -129,6 +129,9 @@
     #define MUSEUM "assets/images/environments/museum/museum.png"
     #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
     #define MUSEUM_HITBOX "assets/images/environments/museum/museum_hitbox.png"
+
+    // Car
+    #define CAR "assets/images/characters/car/car.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

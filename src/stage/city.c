@@ -70,6 +70,7 @@ void city_stage(game_t *game)
     display_city(game);
     pnjs_display_city(game, 5);
     display_rat(game);
+    display_car(game);
     sfRenderWindow_drawSprite(game->window, game->assets->city->bg_top, NULL);
     display_circle_rat(game);
     check_rat_key_pressed(game);

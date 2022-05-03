@@ -114,6 +114,9 @@
 
 // Fights
     // Attacks
+        // bite.c
+        void fight_bite(game_t *game);
+
         // kick.c
         void fight_kick(game_t *game);
 

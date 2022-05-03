@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+void set_text_damage_attack(attack_t *attack)
+{
+    char *damage_text = my_put_nbr_in_str(attack->damage);
+
+    if (!attack)
+        return;
+    sfText_setString(attack->damage_text, damage_text);
+    set_text_origin(attack->damage_text);
+    free(damage_text);
+}
+
 void display_attack(sfRenderWindow *window, attack_t *attack)
 {
     if (!attack)
@@ -20,6 +31,7 @@ void display_attack(sfRenderWindow *window, attack_t *attack)
     if (attack->is_hover == 0) {
         sfRenderWindow_drawSprite(window, attack->sprite, NULL);
     } else {
+        set_text_damage_attack(attack);
         sfRenderWindow_drawText(window, attack->name, NULL);
         sfRenderWindow_drawText(window, attack->damage_text, NULL);
     }

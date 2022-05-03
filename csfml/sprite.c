@@ -38,6 +38,24 @@ void animate_sprite(
     sfSprite_setTextureRect(sprite, rect);
 }
 
+int animate_sprite_one_time(
+    sfSprite *sprite, float shift, int max_value, int offset_from_left)
+{
+    sfIntRect rect;
+    int is_done = 0;
+
+    if (!sprite)
+        return -1;
+    rect = sfSprite_getTextureRect(sprite);
+    if (rect.left >= max_value - shift) {
+        rect.left = offset_from_left;
+        is_done = 1;
+    } else
+        rect.left += shift;
+    sfSprite_setTextureRect(sprite, rect);
+    return is_done;
+}
+
 void set_sprite_origin(sfSprite *sprite, sfIntRect rect)
 {
     sfVector2f origin = {rect.width / 2, rect.height / 2};

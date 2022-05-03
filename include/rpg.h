@@ -20,6 +20,7 @@
 
 // RPG Headers
     #include "abilities.h"
+    #include "car.h"
     #include "assets.h"
     #include "data.h"
     #include "destroy.h"
@@ -175,6 +176,14 @@
     #define RAT_DODGE_SIDE_MAX 290
     #define RAT_DODGE_DIAGONAL_OFFSET 27
     #define RAT_DODGE_DIAGONAL_MAX 255
+
+    // Kick
+    #define RAT_KICK_DOWN_OFFSET 22
+    #define RAT_KICK_DOWN_MAX 18
+    #define RAT_KICK_SIDE_OFFSET 23
+    #define RAT_KICK_SIDE_MAX 87
+    #define RAT_KICK_DIAGONAL_OFFSET 21
+    #define RAT_KICK_DIAGONAL_MAX 63
 //////////////////////////////////////////////////////////////////////////////
 
 
