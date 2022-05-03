@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 char *message_three[] = {
-    "Where is my home??",
+    "On my right you have the bar and of my left the market !",
     NULL
 };
 
@@ -34,13 +34,14 @@ void init_three(game_t *game)
 {
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_BLACK_THREE];
-    sfTexture *texture = game->textures->black_pnj;
-    sfVector2f position = {2100, 1710};
-    sfIntRect rect = {144, 30, 48, 66};
+    sfTexture *texture = game->textures->blue_girl_pnj;
+    sfVector2f position = {975, 1680};
+    sfIntRect rect = {0, 468, 31, 44};
 
     init_pnj(pnj, texture, position, rect);
+    sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
     create_box_message(game, pnj, position);
     init_text_pnj_three(pnj, position);
-    pnj->time_between_text = 0.5;
+    pnj->time_between_text = 4;
     pnj->stage = CITY_STAGE;
 }
