@@ -18,26 +18,32 @@ void set_city_music(game_t *game)
 
 void rain(game_t *game)
 {
-    if (game->assets->city->is_windy == 0 && rand() % 2000 == 1)
+    if (game->assets->city->is_windy == 0 && rand() % 4000 == 1)
         game->assets->city->is_raining = 1;
     if (game->assets->city->is_raining == 1 &&
         game->assets->city->is_windy == 0) {
-        animate_rain(game->assets->city->rain, game->window);
+        if (time_elapsed(game->assets->city->weather_clock) > 0.01) {
+            animate_rain(game->assets->city->rain, game->window);
+            sfClock_restart(game->assets->city->weather_clock);
+        }
         display_rain(game->assets->city->rain, game->window);
-        if (rand() % 1000 == 1)
+        if (rand() % 3000 == 1)
             game->assets->city->is_raining = 0;
     }
 }
 
 void wind(game_t *game)
 {
-    if (game->assets->city->is_raining == 0 && rand() % 2000 == 1)
+    if (game->assets->city->is_raining == 0 && rand() % 4000 == 1)
         game->assets->city->is_windy = 1;
     if (game->assets->city->is_windy == 1 &&
         game->assets->city->is_raining == 0) {
         display_wind(game->assets->city->wind, game->window);
-        animate_wind(game->assets->city->wind, game->window);
-        if (rand() % 1000 == 1)
+        if (time_elapsed(game->assets->city->weather_clock) > 0.01) {
+            animate_wind(game->assets->city->wind, game->window);
+            sfClock_restart(game->assets->city->weather_clock);
+        }
+        if (rand() % 3000 == 1)
             game->assets->city->is_windy = 0;
     }
 }
@@ -55,6 +61,7 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
     display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
     display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
+    display_pnj(game, game->assets->pnj[PNJ_GUIDE_TOP_RIGHT]);
 }
 
 void city_stage(game_t *game)

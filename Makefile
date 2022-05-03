@@ -114,6 +114,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
 								event/fights/mouse_moved.c                   \
@@ -204,10 +205,13 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/pnj_g_m_left_inside.c        \
 								init/assets/pnj/pnj_g_m_right_inside.c       \
 								init/assets/pnj/pnj_guard_museum_right.c     \
+								init/assets/pnj/pnj_museum_indicator.c       \
+								init/assets/pnj/guide_pnj_top_right.c        \
 								init/assets/pnj/girl_pnj_appart_front.c      \
 								init/assets/pnj/black_three.c                \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
+								init/assets/pnj/pnj_guard_last_museum.c      \
 								init/assets/rat/actions.c                    \
 								init/assets/rat/init.c                       \
 								init/assets/rat/init2.c                      \
