@@ -54,6 +54,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/fights/characters.c                  \
 								display/fights/display.c                     \
 								display/fights/gui.c                         \
+								display/fights/result.c                      \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -117,6 +118,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/attacks/bite.c                  \
+								event/fights/attacks/enemy.c                 \
 								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
