@@ -58,7 +58,7 @@ void init_all_pnj(game_t *game)
     init_pnj_g_museum_left(game);
     init_pnj_g_museum_right(game);
     init_pnj_g2_museum_left(game);
-    init_pnj_museum_cashier(game);
+    init_pnj_bar_cashier(game);
     init_pnj_guide_top_right(game);
     init_pnj_museum_indicator(game);
     init_pnj_guard_last_museum(game);
