@@ -132,6 +132,8 @@
 
     // Car
     #define CAR "assets/images/characters/car/car.png"
+    #define CAR_GREY "assets/images/characters/car/car_grey.png"
+
 //////////////////////////////////////////////////////////////////////////////
 
 
