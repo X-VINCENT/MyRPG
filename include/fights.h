@@ -14,9 +14,14 @@
     #define ENEMY 1
 
     typedef struct enemy {
-        sfSprite *sprite;
+        sfTexture *texture;
+        sfSprite *left;
+        sfSprite *right;
+        sfClock *anim_clock;
+        sfClock *clock;
         int damage;
         int life;
+        int direction;
     } enemy_t;
 
     typedef struct attack {
@@ -53,6 +58,9 @@
         attack_t *attack_3;
         sfClock *button_clock;
         sfClock *rat_bite_clock;
+        sfText *win;
+        sfText *loose;
+        sfClock *result_clock;
         int fight_status;
         int to_attack;
         int kick;
