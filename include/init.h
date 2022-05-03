@@ -123,7 +123,7 @@
 
     // Transitions
         // init.c
-        void init_transitions(game_t *game);
+        void init_transition(game_t *game);
 
     // Pnj
         // init.c

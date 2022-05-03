@@ -73,6 +73,7 @@
     #define MUSIC_MUSEUM "assets/audio/musics/music_museum.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
+    #define PNJ_SOUND "assets/audio/sounds/pnj_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////
 
 
@@ -158,11 +159,6 @@
 
     // Settings
     #define SETTINGS_BG "assets/images/menus/settings/bg.png"
-
-    // Transitions
-    // Rat
-    #define RAT_ENTER "assets/images/menus/transitions/rat/enter.png"
-    #define RAT_QUIT "assets/images/menus/transitions/rat/quit.png"
 
     #define MENU_BG "assets/images/menus/menu.png"
 //////////////////////////////////////////////////////////////////////////////

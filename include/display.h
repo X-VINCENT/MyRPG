@@ -122,7 +122,7 @@
 // Top Bar
     void display_top_bar(game_t *game);
 
-// Transitions
+// Transition
     // display.c
     void display_transition(game_t *game);
 

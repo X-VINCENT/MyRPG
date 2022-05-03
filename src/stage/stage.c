@@ -46,6 +46,9 @@ void select_game_stage_2(game_t *game)
         case FIGHTS_STAGE:
             fights_stage(game);
             break;
+        case TRANSITION_STAGE:
+            transition_stage(game);
+            break;
         default:
             break;
     }

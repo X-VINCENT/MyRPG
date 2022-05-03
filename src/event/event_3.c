@@ -10,9 +10,6 @@
 void event_key_pressed_3(game_t *game)
 {
     switch (game->stage) {
-        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
-            transitions_key_pressed(game);
-            break;
         case MARKET_STAGE:
             market_key_pressed(game);
             break;
@@ -33,9 +30,6 @@ void event_key_pressed_3(game_t *game)
 void mouse_pressed_3(game_t *game)
 {
     switch (game->stage) {
-        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
-            transitions_mouse_pressed(game);
-            break;
         case MARKET_STAGE:
             market_mouse_pressed(game);
             break;
@@ -56,9 +50,6 @@ void mouse_pressed_3(game_t *game)
 void mouse_moved_3(game_t *game)
 {
     switch (game->stage) {
-        case RAT_TRANSITION_ENTER: case RAT_TRANSITION_QUIT:
-            transitions_mouse_moved(game);
-            break;
         case MARKET_STAGE:
             market_mouse_moved(game);
             break;
