@@ -55,7 +55,7 @@ void decrease_speed_jump_rat(game_t *game)
         game->assets->rat->speed = RAT_SPEED_CLOTHE_SHOP;
 }
 
-void check_rat_key_pressed(game_t *game)
+void check_rat_key_pressed_actions(game_t *game)
 {
     if (game->assets->rat->is_dodging == 1)
         increase_speed_jump_rat(game);
@@ -64,12 +64,23 @@ void check_rat_key_pressed(game_t *game)
     if (sfKeyboard_isKeyPressed(game->keys[DODGE]) &&
         game->abilities->ability[STEALTH_DODGE]->status == UNLOCKED) {
         game->assets->rat->is_dodging = 1;
-        if (sfTime_asSeconds(
-            sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) > 0.7 ||
-            sfTime_asSeconds(
-            sfSound_getPlayingOffset(game->audio->sounds->jump_sound)) == 0)
+        if (sfTime_asSeconds(sfSound_getPlayingOffset(
+            game->audio->sounds->jump_sound)) > 0.7 ||
+            sfTime_asSeconds(sfSound_getPlayingOffset(
+            game->audio->sounds->jump_sound)) == 0)
             sfSound_play(game->audio->sounds->jump_sound);
     }
+    if (sfKeyboard_isKeyPressed(game->keys[ATTACK]) &&
+        game->abilities->ability[KICK]->status == UNLOCKED)
+        game->assets->rat->is_kicking = 1;
+    if (sfKeyboard_isKeyPressed(game->keys[BITE]) &&
+        game->abilities->ability[FIGHT_BITE]->status == UNLOCKED)
+        game->assets->rat->is_biting = 1;
+}
+
+void check_rat_key_pressed(game_t *game)
+{
+    check_rat_key_pressed_actions(game);
     if (time_elapsed(game->assets->rat->movement_clock) > 0.01) {
         move_rat(game);
         check_locations_rat_move(game);

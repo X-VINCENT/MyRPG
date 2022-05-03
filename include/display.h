@@ -85,6 +85,11 @@
     void display_museum(game_t *game);
 
 // Rat
+    // actions.c
+    void display_rat_dodge(game_t *game);
+    void display_rat_kick(game_t *game);
+    void display_rat_bite(game_t *game);
+
     // display.c
     void display_rat(game_t *game);
     void display_circle_rat(game_t *game);

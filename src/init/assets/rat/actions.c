@@ -42,3 +42,40 @@ void init_rat_dodge(game_t *game, sfTexture *texture)
     set_sprite_origin(rat->dodge_right, r_sides);
     init_rat_dodge_2(game, texture);
 }
+
+void init_rat_kick(game_t *game, sfTexture *texture)
+{
+    rat_t *rat = game->assets->rat;
+    sfIntRect r_down = init_rect(22, 457, 18, 24);
+    sfIntRect r_sides = init_rect(22, 487, 23, 22);
+    sfIntRect r_diagonal = init_rect(22, 515, 21, 20);
+    sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
+    sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
+
+    rat->kick_down = create_sprite(texture, r_down, pos, scale);
+    rat->kick_left = create_sprite(texture, r_sides, pos, i_scale);
+    rat->kick_right = create_sprite(texture, r_sides, pos, scale);
+    rat->kick_up_left = create_sprite(texture, r_diagonal, pos, i_scale);
+    rat->kick_up_right = create_sprite(texture, r_diagonal, pos, scale);
+    set_sprite_origin(rat->kick_down, r_down);
+    set_sprite_origin(rat->kick_left, r_sides);
+    set_sprite_origin(rat->kick_right, r_sides);
+    set_sprite_origin(rat->kick_up_left, r_diagonal);
+    set_sprite_origin(rat->kick_up_right, r_diagonal);
+    rat->kick_anim_clock = sfClock_create();
+}
+
+void init_rat_bite(game_t *game, sfTexture *texture)
+{
+    rat_t *rat = game->assets->rat;
+    sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
+    sfVector2f scale = SCALE_RAT;
+    sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};
+
+    rat->bite_left = create_sprite(texture, R_RAT_BITE, pos, i_scale);
+    rat->bite_right = create_sprite(texture, R_RAT_BITE, pos, scale);
+    set_sprite_origin(rat->bite_left, R_RAT_BITE);
+    set_sprite_origin(rat->bite_right, R_RAT_BITE);
+    rat->bite_time_clock = sfClock_create();
+}

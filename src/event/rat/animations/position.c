@@ -17,6 +17,13 @@ void set_rats_position_actions(game_t *game, sfVector2f position)
     sfSprite_setPosition(rat->dodge_right, position);
     sfSprite_setPosition(rat->dodge_up_left, position);
     sfSprite_setPosition(rat->dodge_up_right, position);
+    sfSprite_setPosition(rat->kick_down, position);
+    sfSprite_setPosition(rat->kick_left, position);
+    sfSprite_setPosition(rat->kick_right, position);
+    sfSprite_setPosition(rat->kick_up_left, position);
+    sfSprite_setPosition(rat->kick_up_right, position);
+    sfSprite_setPosition(rat->bite_left, position);
+    sfSprite_setPosition(rat->bite_right, position);
 }
 
 void set_rats_position_circle(game_t *game, sfVector2f position)

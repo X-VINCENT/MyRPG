@@ -17,7 +17,7 @@ void set_texts_french_controls(game_t *game)
     sfText_setString(s_controls->keys[DOWN]->title, FRENCH_DOWN);
     sfText_setString(s_controls->keys[LEFT]->title, FRENCH_LEFT);
     sfText_setString(s_controls->keys[RIGHT]->title, FRENCH_RIGHT);
-    sfText_setString(s_controls->keys[JUMP]->title, FRENCH_JUMP);
+    sfText_setString(s_controls->keys[BITE]->title, FRENCH_BITE);
     sfText_setString(s_controls->keys[DODGE]->title, FRENCH_DODGE);
     sfText_setString(s_controls->keys[ATTACK]->title, FRENCH_ATTACK);
     sfText_setString(s_controls->keys[INTERACT]->title, FRENCH_INTERACT);
