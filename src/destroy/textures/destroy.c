@@ -22,6 +22,7 @@ void destroy_textures_3(textures_t *textures)
     sfTexture_destroy(textures->hotess_pnj);
     sfTexture_destroy(textures->black_pnj);
     sfTexture_destroy(textures->car);
+    sfTexture_destroy(textures->car_grey);
 }
 
 void destroy_textures_2(textures_t *textures)

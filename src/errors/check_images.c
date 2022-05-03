@@ -20,6 +20,7 @@ int check_characters(void)
     error += is_file(PNJ_BLACK_PATH);
     error += is_file(PNJ_HOTESS_PATH);
     error += is_file(CAR);
+    error += is_file(CAR_GREY);
     return error;
 }
 

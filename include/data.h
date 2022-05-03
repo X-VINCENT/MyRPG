@@ -378,6 +378,7 @@
         rat_t *rat;
         pnj_t **pnj;
         car_t *car;
+        car_right_t *car_right;
         settings_t *settings;
         stats_t *stats;
         transitions_t *transitions;
@@ -452,6 +453,7 @@
         sfTexture *guard_pnj;
         sfTexture *hotess_pnj;
         sfTexture *car;
+        sfTexture *car_grey;
     } textures_t;
 
     typedef struct save_game {

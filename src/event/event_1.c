@@ -11,6 +11,7 @@ void event(game_t *game)
 {
     if (!game)
         return;
+    update_xp(game);
     while (sfRenderWindow_pollEvent(game->window, game->event->event)) {
         switch (game->event->event->type) {
             case sfEvtClosed:
