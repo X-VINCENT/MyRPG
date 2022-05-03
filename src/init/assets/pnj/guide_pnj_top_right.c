@@ -45,4 +45,5 @@ void init_pnj_guide_top_right(game_t *game)
     init_text_pnj_guide_right_top(pnj, position);
     pnj->time_between_text = 4;
     pnj->is_guard = false;
+    pnj->stage = CITY_STAGE;
 }

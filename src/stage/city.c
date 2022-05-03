@@ -13,6 +13,7 @@ void set_city_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
     play_music(game->audio->musics->music_city);
 }
 
@@ -75,11 +76,11 @@ void city_stage(game_t *game)
     display_circle_rat(game);
     check_rat_key_pressed(game);
     display_objects(game->window, game->assets->city->objects);
-    event_objects(game->assets->rat->idle_front, game->inventory->items,
-        game->assets->city->objects, game->keys[INTERACT]);
+    event_objects(game, game->assets->city->objects, game->keys[INTERACT]);
     rain(game);
     wind(game);
     display_inventory(game);
+    display_minimap(game);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
 }

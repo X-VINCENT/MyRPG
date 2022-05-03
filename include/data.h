@@ -86,6 +86,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } market_t;
 
     typedef struct clothe {
@@ -112,6 +113,7 @@
         particle_t *wind;
         sfClock *weather_clock;
         object_t **objects;
+        sfCircleShape *pos_minimap;
     } city_t;
 
     typedef struct load_save {
@@ -344,10 +346,12 @@
         sfClock *clock;
     } stats_t;
 
-    typedef struct transitions {
-        sfSprite *rat_enter;
-        sfSprite *rat_quit;
-    } transitions_t;
+    typedef struct transition {
+        sfRectangleShape *rectangle;
+        sfClock* clock;
+        int direction;
+        int done;
+    } transition_t;
 
     typedef struct top_bar {
         sfText *game;
@@ -378,9 +382,10 @@
         rat_t *rat;
         pnj_t **pnj;
         car_t *car;
+        car_right_t *car_right;
         settings_t *settings;
         stats_t *stats;
-        transitions_t *transitions;
+        transition_t *transition;
         top_bar_t *top_bar;
     } assets_t;
 
@@ -396,10 +401,12 @@
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
         sfMusic *music_museum;
+        sfMusic *music_fight;
     } musics_t;
 
     typedef struct sounds {
         sfSound *jump_sound;
+        sfSound *punch_sound;
     } sounds_t;
 
     typedef struct audio {
@@ -440,8 +447,6 @@
         sfTexture *home_menu_title;
         sfTexture *abilities_bg;
         sfTexture *settings_bg;
-        sfTexture *transition_enter;
-        sfTexture *transition_quit;
         sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
@@ -451,6 +456,7 @@
         sfTexture *guard_pnj;
         sfTexture *hotess_pnj;
         sfTexture *car;
+        sfTexture *car_grey;
     } textures_t;
 
     typedef struct save_game {

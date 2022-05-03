@@ -12,6 +12,8 @@ void destroy_pnjs(pnj_t **pnj)
     for (int i = 0; pnj[i] != NULL; i++) {
         if (i == PNJ_CASHIER)
             sfClock_destroy(pnj[PNJ_CASHIER]->animation);
+        if (i == PNJ_BLACK_THREE)
+            sfClock_destroy(pnj[PNJ_BLACK_THREE]->animation);
         destroy_sprite(pnj[i]->sprite);
         for (int x = 0; pnj[i]->text_to_display[x] != NULL; x++)
             destroy_text(pnj[i]->text_to_display[x]);

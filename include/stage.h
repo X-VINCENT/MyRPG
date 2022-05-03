@@ -19,8 +19,7 @@
     #define MARKET_STAGE 4
     #define CLOTHE_STAGE 5
     #define MUSEUM_STAGE 6
-    #define RAT_TRANSITION_ENTER 7
-    #define RAT_TRANSITION_QUIT 8
+    #define TRANSITION_STAGE 7
 
     #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
@@ -85,5 +84,8 @@ void select_game_stage_3(game_t *game);
 
 // stats.c
 void stats_stage(game_t *game);
+
+// transition.c
+void transition_stage(game_t *game);
 
 #endif /* !STAGE_H_ */

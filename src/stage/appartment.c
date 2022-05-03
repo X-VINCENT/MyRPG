@@ -14,6 +14,7 @@ void set_appartment_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
 }
 
 void display_skin(sfRenderWindow *window, skin_t *skin)
@@ -63,8 +64,7 @@ void appartment_stage(game_t *game)
     else
         check_rat_key_pressed(game);
     display_objects(game->window, apart->objects);
-    event_objects(game->assets->rat->idle_front, game->inventory->items,
-        apart->objects, game->keys[INTERACT]);
+    event_objects(game, apart->objects, game->keys[INTERACT]);
     display_inventory(game);
     display_cursor(game);
 }

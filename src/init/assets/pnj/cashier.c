@@ -45,4 +45,5 @@ void init_pnj_bar_cashier(game_t *game)
     sfCircleShape_setRadius(pnj->circle, 60);
     pnj->time_between_text = 100000;
     pnj->animation = sfClock_create();
+    pnj->stage = BAR_STAGE;
 }

@@ -19,7 +19,7 @@ void sell(game_t *game)
             game->data->current->nb_golds += item->selling_price[item->name];
             game->data->current->money_saved +=
                 item->selling_price[item->name];
-            game->data->current->nb_xps += 10;
+            game->data->current->nb_xps += 15;
             item->name = EMPTY;
         }
     }

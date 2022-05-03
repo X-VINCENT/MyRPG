@@ -7,6 +7,18 @@
 
 #include "rpg.h"
 
+void destroy_assets_car(assets_t *assets)
+{
+    sfClock_destroy(assets->car->clock);
+    sfClock_destroy(assets->car->clock_animation);
+    destroy_sprite(assets->car->car);
+    sfClock_destroy(assets->car_right->clock);
+    sfClock_destroy(assets->car_right->clock_animation);
+    destroy_sprite(assets->car_right->car);
+    free(assets->car);
+    free(assets->car_right);
+}
+
 void destroy_assets_2(assets_t *assets)
 {
     destroy_market(assets->market);
@@ -15,11 +27,6 @@ void destroy_assets_2(assets_t *assets)
     destroy_settings(assets->settings);
     destroy_stats(assets->stats);
     destroy_top_bar(assets->top_bar);
-    sfClock_destroy(assets->car->clock);
-    sfClock_destroy(assets->car->clock_turn);
-    sfClock_destroy(assets->car->clock_animation);
-    destroy_sprite(assets->car->car);
-    free(assets->car);
     destroy_pnjs(assets->pnj);
     free(assets);
 }

@@ -20,6 +20,7 @@ int check_characters(void)
     error += is_file(PNJ_BLACK_PATH);
     error += is_file(PNJ_HOTESS_PATH);
     error += is_file(CAR);
+    error += is_file(CAR_GREY);
     return error;
 }
 
@@ -54,8 +55,6 @@ int check_menus(void)
     error += is_file(HOME_BG3);
     error += is_file(HOME_TITLE);
     error += is_file(SETTINGS_BG);
-    error += is_file(RAT_ENTER);
-    error += is_file(RAT_QUIT);
     error += is_file(MENU_BG);
     return error;
 }

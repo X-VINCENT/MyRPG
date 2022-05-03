@@ -46,6 +46,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/appartment/display.c                 \
 								display/bar/display.c                        \
 								display/city/display.c                       \
+								display/city/minimap.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
 								display/city/car.c                           \
@@ -54,6 +55,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/fights/characters.c                  \
 								display/fights/display.c                     \
 								display/fights/gui.c                         \
+								display/fights/result.c                      \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -72,6 +74,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/game.c                      \
 								display/stats/display.c                      \
 								display/top_bar/display.c                    \
+								display/transition/display.c                 \
 								errors/check_assets.c                        \
 								errors/check_audio.c                         \
 								errors/check_env.c                           \
@@ -117,6 +120,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/attacks/bite.c                  \
+								event/fights/attacks/enemy.c                 \
 								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
@@ -178,9 +182,6 @@ SRC                 =           $(addprefix src/,                            \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
-								event/transitions/key_pressed.c              \
-								event/transitions/mouse_moved.c              \
-								event/transitions/mouse_pressed.c            \
 								event/event_1.c                              \
 								event/event_2.c                              \
 								event/event_3.c                              \
@@ -212,7 +213,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/pnj_museum_indicator.c       \
 								init/assets/pnj/guide_pnj_top_right.c        \
 								init/assets/pnj/girl_pnj_appart_front.c      \
-								init/assets/pnj/black_three.c                \
+								init/assets/pnj/pnj_market_bar.c             \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/pnj/pnj_guard_last_museum.c      \
@@ -229,7 +230,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/stats/stat.c                     \
 								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
-								init/assets/transitions/init.c               \
+								init/assets/transition/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
@@ -267,6 +268,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/settings.c                             \
 								stage/stage.c                                \
 								stage/stats.c                                \
+								stage/transition.c                           \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \
@@ -310,6 +312,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/time.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
+								tools/xp.c                               \
 								rpg.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \

@@ -44,4 +44,5 @@ void init_pnj_guard_last_museum(game_t *game)
     init_text_guard_last(pnj, position);
     pnj->time_between_text = 3;
     pnj->is_guard = true;
+    pnj->stage = MUSEUM_STAGE;
 }

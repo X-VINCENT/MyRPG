@@ -32,8 +32,14 @@ void detroy_attack(attack_t *attack)
 
 void destroy_enemy(enemy_t *enemy)
 {
-    if (enemy->sprite)
-        sfSprite_destroy(enemy->sprite);
+    if (enemy->left)
+        sfSprite_destroy(enemy->left);
+    if (enemy->right)
+        sfSprite_destroy(enemy->right);
+    if (enemy->anim_clock)
+        sfClock_destroy(enemy->anim_clock);
+    if (enemy->clock)
+        sfClock_destroy(enemy->clock);
     free(enemy);
 }
 

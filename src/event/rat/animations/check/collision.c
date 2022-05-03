@@ -16,9 +16,25 @@ int check_contact_pnj(game_t *game, sfVector2f rat_pos)
         r_pnj.top -= 11;
         r_pnj.left -= 10;
         r_pnj.width += 21;
-        if (sfFloatRect_contains(&r_pnj, rat_pos.x, rat_pos.y))
+        if (sfFloatRect_contains(&r_pnj, rat_pos.x, rat_pos.y) &&
+            game->stage == game->assets->pnj[idx]->stage)
             return 0;
     }
+    return 1;
+}
+
+int check_contact_car(game_t *game, sfVector2f rat_pos)
+{
+    sfFloatRect r_car = sfSprite_getGlobalBounds(game->assets->car->car);
+    sfFloatRect r_car_right = sfSprite_getGlobalBounds(
+        game->assets->car_right->car);
+
+    if (sfFloatRect_contains(&r_car, rat_pos.x, rat_pos.y) &&
+        game->stage == CITY_STAGE)
+        return 0;
+    if (sfFloatRect_contains(&r_car_right, rat_pos.x, rat_pos.y) &&
+        game->stage == CITY_STAGE)
+        return 0;
     return 1;
 }
 
@@ -48,6 +64,7 @@ int check_rat_collision(
     color = sfImage_getPixel(hitbox, rat_pos.x, rat_pos.y);
     if (color.r == 0 && color.g == 0 && color.b == 0 &&
         check_contact_pnj(game, rat_pos) &&
+        check_contact_car(game, rat_pos) &&
         check_lasers_collision(game, rat_pos))
         return 1;
     return 0;
