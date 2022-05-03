@@ -8,9 +8,8 @@
 #include "rpg.h"
 
 char *message_cashier[] = {
-    "Hello !",
-    "Do you want to sell anything ?",
-    "Press 'INTERACT' to sell",
+    "Hello do you want to sell anything ?",
+    "Select an item to sell in your inventory and press 'INTERACT' to sell it",
     NULL
 };
 
@@ -31,7 +30,7 @@ void init_text_pnj_cashier(pnj_t *pnj, sfVector2f pos)
     }
 }
 
-void init_pnj_museum_cashier(game_t *game)
+void init_pnj_bar_cashier(game_t *game)
 {
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_CASHIER];
@@ -44,7 +43,7 @@ void init_pnj_museum_cashier(game_t *game)
     create_box_message(game, pnj, position);
     init_text_pnj_cashier(pnj, position);
     sfCircleShape_setRadius(pnj->circle, 60);
-    pnj->time_between_text = 4;
+    pnj->time_between_text = 100000;
     pnj->animation = sfClock_create();
     pnj->stage = BAR_STAGE;
 }

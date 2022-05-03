@@ -14,11 +14,14 @@
         sfSprite *car;
         sfClock *clock;
         sfClock *clock_animation;
-        sfClock *clock_turn;
-        int turning;
-        int turned_left_to_museum;
 
     } car_t;
+
+    typedef struct car_right {
+        sfSprite *car;
+        sfClock *clock;
+        sfClock *clock_animation;
+    } car_right_t;
 
 
 #endif /* !CAR_H_ */
