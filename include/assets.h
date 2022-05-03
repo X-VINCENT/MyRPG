@@ -74,7 +74,6 @@
     #define MUSIC_FIGHT "assets/audio/musics/music_fight.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
-    #define PNJ_SOUND "assets/audio/sounds/pnj_sound.ogg"
     #define PUNCH_SOUND "assets/audio/sounds/punch_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////
 
