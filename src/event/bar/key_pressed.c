@@ -9,6 +9,5 @@
 
 void bar_key_pressed(game_t *game)
 {
-    sell(game);
     return;
 }

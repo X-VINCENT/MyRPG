@@ -25,5 +25,5 @@ void bar_stage(game_t *game)
     display_circle_rat(game);
     check_rat_key_pressed(game);
     display_inventory(game);
-    bar_key_pressed(game);
+    sell(game);
 }

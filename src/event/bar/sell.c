@@ -14,7 +14,7 @@ void sell(game_t *game)
     item_t *item = game->inventory->items[game->inventory->selected];
 
     if (check_location_rect(rat->idle_front, office, 60, 26)) {
-        if (sfKeyboard_isKeyPressed(game->keys[INTERACT]) &&
+        if (sfKeyboard_isKeyPressed(sfKeyY) &&
             item->name != EMPTY) {
             game->data->current->nb_golds += item->selling_price[item->name];
             game->data->current->money_saved +=
