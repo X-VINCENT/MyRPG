@@ -53,6 +53,7 @@
         int speed;
         int displaying_text;
         int is_guard;
+        int stage;
     } pnj_t;
 
 #endif /* !PNJ_H_ */

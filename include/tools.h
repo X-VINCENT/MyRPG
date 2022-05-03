@@ -180,4 +180,7 @@ void check_and_center_view(
 void set_music_volume(game_t *game);
 void set_effects_volume(game_t *game);
 
+//xp.c
+void update_xp(game_t *game);
+
 #endif /* !TOOLS_H_ */

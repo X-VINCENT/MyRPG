@@ -52,4 +52,5 @@ void init_pnj_museum_indicator(game_t *game)
     init_text_museum_indicator(pnj, position);
     pnj->time_between_text = 5;
     pnj->is_guard = false;
+    pnj->stage = MUSEUM_STAGE;
 }

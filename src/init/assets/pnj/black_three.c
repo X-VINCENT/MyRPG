@@ -42,4 +42,5 @@ void init_three(game_t *game)
     create_box_message(game, pnj, position);
     init_text_pnj_three(pnj, position);
     pnj->time_between_text = 0.5;
+    pnj->stage = CITY_STAGE;
 }
