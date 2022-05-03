@@ -36,7 +36,7 @@ void init_three(game_t *game)
     pnj_t *pnj = assets->pnj[PNJ_BLACK_THREE];
     sfTexture *texture = game->textures->blue_girl_pnj;
     sfVector2f position = {975, 1680};
-    sfIntRect rect = {0, 468, 31, 44};
+    sfIntRect rect = {0, 466, 31, 48};
 
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
@@ -44,4 +44,5 @@ void init_three(game_t *game)
     init_text_pnj_three(pnj, position);
     pnj->time_between_text = 4;
     pnj->stage = CITY_STAGE;
+    pnj->animation = sfClock_create();
 }
