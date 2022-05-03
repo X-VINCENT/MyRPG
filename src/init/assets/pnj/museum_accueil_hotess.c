@@ -44,4 +44,5 @@ void init_pnj_museum_hotess(game_t *game)
     create_box_message(game, pnj, position);
     init_text_pnj_museum_hotess(pnj, position);
     pnj->time_between_text = 2;
+    pnj->stage = MUSEUM_STAGE;
 }
