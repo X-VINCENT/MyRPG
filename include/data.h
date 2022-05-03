@@ -86,6 +86,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } market_t;
 
     typedef struct clothe {
@@ -400,10 +401,12 @@
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
         sfMusic *music_museum;
+        sfMusic *music_fight;
     } musics_t;
 
     typedef struct sounds {
         sfSound *jump_sound;
+        sfSound *punch_sound;
     } sounds_t;
 
     typedef struct audio {
