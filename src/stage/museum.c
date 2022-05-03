@@ -9,12 +9,16 @@
 
 void display_pnj_museum(game_t *game)
 {
+    if (game->assets->pnj[PNJ_M_GUARD_LEFT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
+    if (game->assets->pnj[PNJ_M_GUARD_RIGHT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
+    if (game->assets->pnj[PNJ_M2_GUARD_LEFT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
+    if (game->assets->pnj[PNJ_GUARD_LAST_MUSEUM]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_LAST_MUSEUM]);
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_HOTESS]);
-    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_LEFT]);
-    display_pnj(game, game->assets->pnj[PNJ_M_GUARD_RIGHT]);
-    display_pnj(game, game->assets->pnj[PNJ_M2_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_MUSEUM_INDICATOR]);
-    display_pnj(game, game->assets->pnj[PNJ_GUARD_LAST_MUSEUM]);
 }
 
 void museum_stage(game_t *game)

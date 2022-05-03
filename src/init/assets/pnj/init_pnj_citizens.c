@@ -37,6 +37,7 @@ void init_settings_base_citizens(pnj_t *pnj, float time_between_text)
     pnj->text = false;
     pnj->is_guard = false;
     pnj->stage = CITY_STAGE;
+    pnj->is_dead = 0;
 }
 
 void init_pnj_citizens(sfTexture *texture,
