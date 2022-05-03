@@ -16,6 +16,8 @@ void clothe_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_museum);
     display_clothe(game);
     display_rat(game);
+    sfRenderWindow_drawSprite(
+        game->window, game->assets->clothe->bg_top, NULL);
     display_circle_rat(game);
     check_rat_key_pressed(game);
     display_inventory(game);

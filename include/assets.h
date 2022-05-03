@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////////
 // Rects
     #define R_HTP_EXPLANATION (sfIntRect){2177, 882, 1917, 647}
-    #define R_HTP_APART (sfIntRect){1446, 4352, 1917, 647} 
+    #define R_HTP_APART (sfIntRect){1446, 4352, 1917, 647}
     #define R_HTP_PNJ (sfIntRect){2203, 63, 1917, 647}
     #define R_ARROW (sfIntRect){240, 0, 35, 51}
     #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
@@ -101,6 +101,8 @@
 
     // Bar
     #define BAR "assets/images/environments/bar/view.png"
+    #define BAR_TOP "assets/images/environments/bar/top.png"
+    #define BAR_HITBOX "assets/images/environments/bar/hitbox.png"
 
     // City
     #define CITY "assets/images/environments/city/view.png"
@@ -110,17 +112,26 @@
 
     // Clothe Store
     #define CLOTHE "assets/images/environments/clothe_store/view.png"
+    #define CLOTHE_TOP "assets/images/environments/clothe_store/top.png"
+    #define CLOTHE_HITBOX "assets/images/environments/clothe_store/hitbox.png"
 
     // Ice Cream Shop
     #define ICE "assets/images/environments/ice_cream_shop/view.png"
+    #define ICE_TOP "assets/images/environments/ice_cream_shop/top.png"
+    #define ICE_HITBOX "assets/images/environments/ice_cream_shop/hitbox.png"
 
     // Market
     #define MARKET "assets/images/environments/market/view.png"
+    #define MARKET_TOP "assets/images/environments/market/top.png"
+    #define MARKET_HITBOX "assets/images/environments/market/hitbox.png"
 
     // Museum
     #define MUSEUM "assets/images/environments/museum/museum.png"
     #define MUSEUM_TOP "assets/images/environments/museum/museum_top.png"
     #define MUSEUM_HITBOX "assets/images/environments/museum/museum_hitbox.png"
+
+    // Car
+    #define CAR "assets/images/characters/car/car.png"
 //////////////////////////////////////////////////////////////////////////////
 
 

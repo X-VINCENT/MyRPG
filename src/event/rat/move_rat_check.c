@@ -21,6 +21,8 @@ void check_locations_rat_move(game_t *game)
         museum_locations(game);
     if (game->stage == CLOTHE_STAGE)
         clothe_store_locations(game);
+    if (game->stage == BAR_STAGE)
+        bar_locations(game);
 }
 
 void increase_speed_jump_rat(game_t *game)

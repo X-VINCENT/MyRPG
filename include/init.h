@@ -35,6 +35,9 @@
         //animated
             //doors.c
             void init_doors(game_t *game);
+        //car
+            //init.c
+            void init_car(game_t *game);
 
     // Clothe
         // init.c

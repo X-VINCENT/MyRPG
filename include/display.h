@@ -29,6 +29,7 @@
     void animate_rain(particle_t *rain, sfRenderWindow *window);
     void display_wind(particle_t *wind, sfRenderWindow *window);
     void animate_wind(particle_t *rain, sfRenderWindow *window);
+    void display_car(game_t *game);
 
 // Fights
     // characters.c

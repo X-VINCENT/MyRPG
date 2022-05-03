@@ -9,11 +9,14 @@
 
 void init_ice_cream(game_t *game)
 {
-    sfIntRect rect = init_rect(0, 0, 576, 480);
-    sfVector2f pos = init_pos(115, 100);
-    sfVector2f scale = {0.6, 0.6};
+    sfIntRect rect = init_rect(0, 0, 384, 320);
+    sfVector2f pos = init_pos(0, 0);
+    sfVector2f scale = {1, 1};
 
     game->assets->ice = malloc(sizeof(ice_t));
     game->assets->ice->bg = create_sprite(
-        game->textures->ice_cream_view, rect, pos, scale);
+        game->textures->ice_cream, rect, pos, scale);
+    game->assets->ice->bg_top = create_sprite(
+        game->textures->ice_cream_top, rect, pos, scale);
+    game->assets->ice->hitbox = create_image(ICE_HITBOX);
 }
