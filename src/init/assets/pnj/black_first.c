@@ -39,10 +39,11 @@ void init_one(game_t *game)
     pnj_t *pnj = assets->pnj[PNJ_BLACK];
     sfTexture *texture = game->textures->black_pnj;
     sfVector2f position = {2315, 1713};
-    sfIntRect rect = {0, 30, 45, 65};
+    sfIntRect rect = {144, 30, 48, 66};
 
     init_pnj(pnj, texture, position, rect);
     create_box_message(game, pnj, position);
     init_text_pnj_one(pnj, position);
     pnj->time_between_text = 2;
+    pnj->stage = CITY_STAGE;
 }

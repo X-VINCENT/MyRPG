@@ -310,6 +310,7 @@ SRC                 =           $(addprefix src/,                            \
 								tools/time.c                                 \
 								tools/view.c                                 \
 								tools/volume.c                               \
+								tools/xp.c                               \
 								rpg.c)
 
 SRC_CSFML           =           $(addprefix csfml/,                          \

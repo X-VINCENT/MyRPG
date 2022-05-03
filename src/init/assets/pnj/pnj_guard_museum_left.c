@@ -43,4 +43,5 @@ void init_pnj_guard_left(game_t *game)
     init_text_pnj_gleft(pnj, position);
     pnj->time_between_text = 2;
     pnj->is_guard = true;
+    pnj->stage = CITY_STAGE;
 }
