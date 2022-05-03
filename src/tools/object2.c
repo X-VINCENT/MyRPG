@@ -19,28 +19,28 @@ void event_object_2(item_t **items, object_t *object)
     }
 }
 
-void event_object(sfSprite *player,
-    item_t **items, object_t *object, sfKeyCode key_interact)
+void event_object(game_t *game, object_t *object, sfKeyCode key_interact)
 {
-    sfFloatRect r_player = sfSprite_getGlobalBounds(player);
+    sfFloatRect r_player = sfSprite_getGlobalBounds(
+        game->assets->rat->idle_front);
     sfFloatRect r_object = sfCircleShape_getGlobalBounds(object->area);
 
-    if (!player || !items || !object)
+    if (!game->assets->rat->idle_front || !game->inventory->items || !object)
         return;
     if (sfFloatRect_intersects(&r_player, &r_object, NULL) &&
         sfKeyboard_isKeyPressed(key_interact) && object->is_picked == 0) {
         object->is_picked = 1;
-        event_object_2(items, object);
+        game->data->current->nb_xps += 10;
+        event_object_2(game->inventory->items, object);
     }
 }
 
-void event_objects(sfSprite *player,
-    item_t **items, object_t **objects, sfKeyCode key_interact)
+void event_objects(game_t *game, object_t **objects, sfKeyCode key_interact)
 {
-    if (!player || !items || !objects)
+    if (!game->assets->rat->idle_front || !game->inventory->items || !objects)
         return;
     for (int idx = 0; objects[idx] != NULL; idx += 1)
-        event_object(player, items, objects[idx], key_interact);
+        event_object(game, objects[idx], key_interact);
 }
 
 void destroy_object(object_t *object)
