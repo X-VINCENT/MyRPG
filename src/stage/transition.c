@@ -11,9 +11,9 @@ void up_alpha(transition_t *transition)
 {
     sfColor color = sfRectangleShape_getFillColor(transition->rectangle);
 
-    if (time_elapsed(transition->clock) > 0.0002) {
-        if (color.a < 255)
-            color.a += 5;
+    if (time_elapsed(transition->clock) > 0.005) {
+        if (color.a < 250)
+            color.a += 10;
         else
             transition->direction = 1;
         sfClock_restart(transition->clock);
@@ -26,9 +26,9 @@ void down_alpha(transition_t *transition)
 {
     sfColor color = sfRectangleShape_getFillColor(transition->rectangle);
 
-    if (time_elapsed(transition->clock) > 0.0002) {
+    if (time_elapsed(transition->clock) > 0.005) {
         if (color.a > 0)
-            color.a -= 5;
+            color.a -= 10;
         else {
             transition->direction = 0;
             transition->done = 1;

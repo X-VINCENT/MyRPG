@@ -13,6 +13,7 @@ void set_city_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
     play_music(game->audio->musics->music_city);
 }
 
@@ -79,6 +80,7 @@ void city_stage(game_t *game)
     rain(game);
     wind(game);
     display_inventory(game);
+    display_minimap(game);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
 }

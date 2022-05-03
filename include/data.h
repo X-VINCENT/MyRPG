@@ -113,6 +113,7 @@
         particle_t *wind;
         sfClock *weather_clock;
         object_t **objects;
+        sfCircleShape *pos_minimap;
     } city_t;
 
     typedef struct load_save {
@@ -400,11 +401,12 @@
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
         sfMusic *music_museum;
+        sfMusic *music_fight;
     } musics_t;
 
     typedef struct sounds {
         sfSound *jump_sound;
-        sfSound *pnj_sound;
+        sfSound *punch_sound;
     } sounds_t;
 
     typedef struct audio {

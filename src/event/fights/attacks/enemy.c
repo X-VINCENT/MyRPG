@@ -27,6 +27,7 @@ int fight_enemy_rush(game_t *game)
     }
     rat->life -= enemy->damage;
     fights->as_touched = 1;
+    sfSound_play(game->audio->sounds->punch_sound);
     return 0;
 }
 

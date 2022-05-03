@@ -13,6 +13,7 @@ void home_menu_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
     sfView_setSize(game->view, VIEW_HOME_MENU_SIZE);
     sfView_setCenter(game->view, VIEW_HOME_MENU_POS);
     animate_parallax(game);
