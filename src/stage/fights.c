@@ -14,15 +14,36 @@ void fight_bomb(game_t *game)
     fights->bomb = 0;
 }
 
-void fight_enemy(game_t *game)
+void remove_illegal_items_inventory(game_t *game)
 {
-    return;
+    item_t **items = game->inventory->items;
+
+    for (int idx = 0; items[idx] != NULL; idx += 1)
+        if (items[idx]->legality[items[idx]->name] > 0)
+            items[idx]->name = EMPTY;
+}
+
+void check_win_lose_fights(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+    enemy_t *enemy = game->fights->enemy;
+
+    if (enemy->life <= 0) {
+        game->data->current->fights_won += 1;
+        game->stage = game->last_stage;
+    }
+    if (rat->life <= 0) {
+        remove_illegal_items_inventory(game);
+        game->data->current->fights_lost += 1;
+        game->stage = game->last_stage;
+    }
 }
 
 void fights_stage(game_t *game)
 {
     sfView_setSize(game->view, VIEW_FIGHTS_SIZE);
     sfView_setCenter(game->view, VIEW_FIGHTS_POS);
+    check_win_lose_fights(game);
     if (game->fights->to_attack == RAT) {
         if (game->fights->kick == 1)
             fight_kick(game);

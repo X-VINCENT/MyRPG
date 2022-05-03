@@ -54,6 +54,15 @@ void move_pnj(game_t *game, int nbr_animated_pnj)
 {
     for (int i = LAST_PNJ + 1; i < nbr_animated_pnj; i++)
         check_second_move_pnj(game, i);
+    if (time_elapsed(game->assets->pnj[PNJ_BLACK_THREE]->animation) > 0.25
+        && game->assets->pnj[PNJ_BLACK_THREE]->displaying_text == 0
+        && game->assets->pnj[PNJ_GIRL_TWO]->displaying_text == 0) {
+        animate_sprite(game->assets->pnj[PNJ_BLACK_THREE]->sprite,
+            32, 384 - 32, 0);
+        animate_sprite(game->assets->pnj[PNJ_GIRL_TWO]->sprite,
+            32, 384 - 32, 0);
+        sfClock_restart(game->assets->pnj[PNJ_BLACK_THREE]->animation);
+    }
 }
 
 void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)

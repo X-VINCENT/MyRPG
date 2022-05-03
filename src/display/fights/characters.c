@@ -25,6 +25,15 @@ void display_fights_rat(game_t *game)
 void display_fights_enemy(game_t *game)
 {
     fights_t *fights = game->fights;
+    enemy_t *enemy = fights->enemy;
 
-    sfRenderWindow_drawSprite(game->window, fights->enemy->sprite, NULL);
+    if (time_elapsed(enemy->anim_clock) > 0.1) {
+        animate_sprite(enemy->left, 32, 576, 384);
+        animate_sprite(enemy->right, 32, 192, 0);
+        sfClock_restart(enemy->anim_clock);
+    }
+    if (enemy->direction == 0)
+        sfRenderWindow_drawSprite(game->window, enemy->left, NULL);
+    else
+        sfRenderWindow_drawSprite(game->window, enemy->right, NULL);
 }

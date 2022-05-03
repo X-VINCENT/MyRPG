@@ -345,10 +345,12 @@
         sfClock *clock;
     } stats_t;
 
-    typedef struct transitions {
-        sfSprite *rat_enter;
-        sfSprite *rat_quit;
-    } transitions_t;
+    typedef struct transition {
+        sfRectangleShape *rectangle;
+        sfClock* clock;
+        int direction;
+        int done;
+    } transition_t;
 
     typedef struct top_bar {
         sfText *game;
@@ -382,7 +384,7 @@
         car_right_t *car_right;
         settings_t *settings;
         stats_t *stats;
-        transitions_t *transitions;
+        transition_t *transition;
         top_bar_t *top_bar;
     } assets_t;
 
@@ -443,8 +445,6 @@
         sfTexture *home_menu_title;
         sfTexture *abilities_bg;
         sfTexture *settings_bg;
-        sfTexture *transition_enter;
-        sfTexture *transition_quit;
         sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
