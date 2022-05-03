@@ -53,7 +53,7 @@ void display_car(game_t *game)
     position_car = sfSprite_getPosition(car->car);
     if (position_car_right.y < 650)
         sfSprite_setPosition(car_right->car, (sfVector2f){2725, 1864});
-    if (position_car.x > 2750)
+    if (position_car.x > 2700)
         sfSprite_setPosition(car->car, (sfVector2f){100, 1838});
     low_car(game);
     right_car(game);
