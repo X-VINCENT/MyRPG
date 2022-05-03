@@ -24,20 +24,7 @@ void event(game_t *game)
         return;
     update_xp(game);
     while (sfRenderWindow_pollEvent(game->window, game->event->event)) {
-        switch (game->event->event->type) {
-            case sfEvtClosed:
-                return sfRenderWindow_close(game->window);
-            case sfEvtResized:
-                return resize_view(game);
-            case sfEvtKeyPressed:
-                return event_key_pressed(game);
-            case sfEvtMouseButtonPressed:
-                return mouse_pressed(game);
-            case sfEvtMouseMoved:
-                return mouse_moved(game);
-            default:
-                break;
-        }
+        call_different_events(game);
     }
 }
 
