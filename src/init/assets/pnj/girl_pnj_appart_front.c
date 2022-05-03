@@ -43,7 +43,7 @@ void init_two(game_t *game)
     pnj_t *pnj = assets->pnj[PNJ_GIRL_TWO];
     sfTexture *texture = game->textures->blue_girl_pnj;
     sfVector2f position = {2505, 1703};
-    sfIntRect rect = {95, 18, 36, 47};
+    sfIntRect rect = {0, 402, 31, 48};
 
     init_pnj(pnj, texture, position, rect);
     sfSprite_setScale(pnj->sprite, (sfVector2f){0.6, 0.6});
