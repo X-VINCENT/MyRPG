@@ -400,11 +400,12 @@
         sfMusic *music_bar;
         sfMusic *music_ice_cream;
         sfMusic *music_museum;
+        sfMusic *music_fight;
     } musics_t;
 
     typedef struct sounds {
         sfSound *jump_sound;
-        sfSound *pnj_sound;
+        sfSound *punch_sound;
     } sounds_t;
 
     typedef struct audio {
