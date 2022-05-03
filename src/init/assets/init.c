@@ -18,7 +18,7 @@ void init_assets_two(game_t *game)
     init_market(game);
     init_settings(game);
     init_top_bar(game);
-    init_transitions(game);
+    init_transition(game);
     init_struct_pnjs(game);
     init_stats(game);
 }
