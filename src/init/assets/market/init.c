@@ -9,16 +9,19 @@
 
 const int name_objects_market[] = {
     CHICKEN,
+    MONSTER,
     -1
 };
 
 const sfVector2f pos_objects_market[] = {
-    {106, 124},
+    {106, 134},
+    {410, 133},
     {0, 0}
 };
 
 const int objects_areas_market[] = {
-    50,
+    20,
+    20,
     -1
 };
 
