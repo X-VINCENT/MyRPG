@@ -54,6 +54,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/fights/characters.c                  \
 								display/fights/display.c                     \
 								display/fights/gui.c                         \
+								display/fights/result.c                      \
 								display/game_menu/display.c                  \
 								display/home_menu/parallax/animate.c         \
 								display/home_menu/parallax/display.c         \
@@ -117,6 +118,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
 								event/fights/attacks/bite.c                  \
+								event/fights/attacks/enemy.c                 \
 								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
@@ -212,7 +214,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/pnj/pnj_museum_indicator.c       \
 								init/assets/pnj/guide_pnj_top_right.c        \
 								init/assets/pnj/girl_pnj_appart_front.c      \
-								init/assets/pnj/black_three.c                \
+								init/assets/pnj/pnj_market_bar.c             \
 								init/assets/pnj/cashier.c                    \
 								init/assets/pnj/init_pnj_citizens.c          \
 								init/assets/pnj/pnj_guard_last_museum.c      \

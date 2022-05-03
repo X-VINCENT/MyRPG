@@ -42,6 +42,10 @@
     // gui.c
     void display_fights_gui(game_t *game);
 
+    // result.c
+    void display_fights_win(game_t *game);
+    void display_fights_loose(game_t *game);
+
 // Game Menu
     // display.c
     void display_game_menu(game_t *game);
