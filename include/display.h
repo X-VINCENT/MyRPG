@@ -31,6 +31,9 @@
     void animate_wind(particle_t *rain, sfRenderWindow *window);
     void display_car(game_t *game);
 
+    // minimap.c
+    void display_minimap(game_t *game);
+
 // Fights
     // characters.c
     void display_fights_rat(game_t *game);

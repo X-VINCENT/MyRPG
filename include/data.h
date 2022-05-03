@@ -113,6 +113,7 @@
         particle_t *wind;
         sfClock *weather_clock;
         object_t **objects;
+        sfCircleShape *pos_minimap;
     } city_t;
 
     typedef struct load_save {
