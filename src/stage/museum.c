@@ -29,8 +29,7 @@ void museum_stage(game_t *game)
     display_pnj_museum(game);
     display_rat(game);
     display_objects(game->window, game->assets->museum->objects);
-    event_objects(game->assets->rat->idle_front, game->inventory->items,
-        game->assets->museum->objects, game->keys[INTERACT]);
+    event_objects(game, game->assets->museum->objects, game->keys[INTERACT]);
     sfRenderWindow_drawSprite(game->window,
         game->assets->museum->bg_top, NULL);
     display_circle_rat(game);
