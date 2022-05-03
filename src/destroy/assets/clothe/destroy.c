@@ -10,5 +10,7 @@
 void destroy_clothe(clothe_t *clothe)
 {
     destroy_sprite(clothe->bg);
+    destroy_sprite(clothe->bg_top);
+    destroy_image(clothe->hitbox);
     free(clothe);
 }
