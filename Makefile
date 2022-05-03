@@ -73,6 +73,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/settings/game.c                      \
 								display/stats/display.c                      \
 								display/top_bar/display.c                    \
+								display/transition/display.c                 \
 								errors/check_assets.c                        \
 								errors/check_audio.c                         \
 								errors/check_env.c                           \
@@ -180,9 +181,6 @@ SRC                 =           $(addprefix src/,                            \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
-								event/transitions/key_pressed.c              \
-								event/transitions/mouse_moved.c              \
-								event/transitions/mouse_pressed.c            \
 								event/event_1.c                              \
 								event/event_2.c                              \
 								event/event_3.c                              \
@@ -231,7 +229,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/stats/stat.c                     \
 								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
-								init/assets/transitions/init.c               \
+								init/assets/transition/init.c               \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
@@ -269,6 +267,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/settings.c                             \
 								stage/stage.c                                \
 								stage/stats.c                                \
+								stage/transition.c                           \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
 								tools/keys/get_name3.c                       \
