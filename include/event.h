@@ -60,6 +60,9 @@
     // mouse_pressed.c
     void bar_mouse_pressed(game_t *game);
 
+    //sell.c
+    void sell(game_t *game);
+
 // City
     // Locations
         // appartment.c
@@ -114,6 +117,9 @@
 
 // Fights
     // Attacks
+        // bite.c
+        void fight_bite(game_t *game);
+
         // kick.c
         void fight_kick(game_t *game);
 

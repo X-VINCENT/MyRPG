@@ -7,13 +7,6 @@
 
 #include "rpg.h"
 
-void fight_bite(game_t *game)
-{
-    fights_t *fights = game->fights;
-
-    fights->bite = 0;
-}
-
 void fight_bomb(game_t *game)
 {
     fights_t *fights = game->fights;

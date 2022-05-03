@@ -76,6 +76,8 @@
     // Rat
         // actions.c
         void init_rat_dodge(game_t *game, sfTexture *texture);
+        void init_rat_kick(game_t *game, sfTexture *texture);
+        void init_rat_bite(game_t *game, sfTexture *texture);
 
         // init.c
         void init_rat(game_t *game, sfTexture *texture);
@@ -142,6 +144,7 @@
         void init_pnj_g_museum_left(game_t *game);
         void init_pnj_g_museum_right(game_t *game);
         void init_pnj_guard_right(game_t *game);
+        void init_pnj_bar_cashier(game_t *game);
         void init_pnj_museum_indicator(game_t *game);
         void init_pnj_guard_last_museum(game_t *game);
         void init_pnj_museum_cashier(game_t *game);

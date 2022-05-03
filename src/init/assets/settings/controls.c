@@ -84,8 +84,8 @@ void init_settings_controls_keys(game_t *game)
         get_key_name(game->keys[LEFT]));
     s_controls->keys[RIGHT] = create_key(game, 565, ENGLISH_RIGHT,
         get_key_name(game->keys[RIGHT]));
-    s_controls->keys[JUMP] = create_key(game, 665, ENGLISH_JUMP,
-        get_key_name(game->keys[JUMP]));
+    s_controls->keys[BITE] = create_key(game, 665, ENGLISH_BITE,
+        get_key_name(game->keys[BITE]));
     s_controls->keys[DODGE] = create_key(game, 765, ENGLISH_DODGE,
         get_key_name(game->keys[DODGE]));
     s_controls->keys[ATTACK] = create_key(game, 865, ENGLISH_ATTACK,

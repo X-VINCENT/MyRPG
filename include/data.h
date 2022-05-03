@@ -178,11 +178,20 @@
         sfSprite *dodge_right;
         sfSprite *dodge_up_left;
         sfSprite *dodge_up_right;
+        sfSprite *kick_down;
+        sfSprite *kick_left;
+        sfSprite *kick_right;
+        sfSprite *kick_up_left;
+        sfSprite *kick_up_right;
+        sfSprite *bite_left;
+        sfSprite *bite_right;
         sfSprite *shadow;
         sfCircleShape *circle;
         sfClock *idle_anim_clock;
         sfClock *movement_anim_clock;
         sfClock *dodge_anim_clock;
+        sfClock *kick_anim_clock;
+        sfClock *bite_time_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
         int up;
@@ -193,6 +202,8 @@
         float speed_multiplier;
         int is_moving;
         int is_dodging;
+        int is_kicking;
+        int is_biting;
         float radius_circle;
         int damage;
         int life;
@@ -253,7 +264,7 @@
         DOWN,
         LEFT,
         RIGHT,
-        JUMP,
+        BITE,
         DODGE,
         ATTACK,
         INTERACT,

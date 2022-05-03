@@ -27,6 +27,9 @@ void init_rat_data(game_t *game)
     rat->speed = 1;
     rat->speed_multiplier = 1;
     rat->is_moving = 0;
+    rat->is_dodging = 0;
+    rat->is_kicking = 0;
+    rat->is_biting = 0;
     rat->damage = 5;
     rat->life = 50;
 }
