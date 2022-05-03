@@ -146,10 +146,8 @@ void display_object(sfRenderWindow *window, object_t *object);
 void display_objects(sfRenderWindow *window, object_t **objects);
 
 // object2.c
-void event_object(sfSprite *player,
-    item_t **items, object_t *object, sfKeyCode key_interact);
-void event_objects(sfSprite *player,
-    item_t **items, object_t **objects, sfKeyCode key_interact);
+void event_object(game_t *game, object_t *object, sfKeyCode key_interact);
+void event_objects(game_t *game, object_t **objects, sfKeyCode key_interact);
 void destroy_object(object_t *object);
 void destroy_objects(object_t **objects);
 
