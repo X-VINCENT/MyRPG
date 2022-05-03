@@ -46,6 +46,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/appartment/display.c                 \
 								display/bar/display.c                        \
 								display/city/display.c                       \
+								display/city/minimap.c                       \
 								display/inventory/display.c                  \
 								display/pnjs/display.c                       \
 								display/city/car.c                           \
