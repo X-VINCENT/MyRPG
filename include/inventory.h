@@ -27,6 +27,9 @@
     #define R_CAP (sfIntRect){641, 0, 26, 24}
     #define R_ICE_CREAM (sfIntRect){679, 0, 10, 16}
     #define R_KNACKI (sfIntRect){699, 0, 15, 15}
+    #define R_MONSTER (sfIntRect){501, 580, 10, 19}
+    #define R_CHICKEN (sfIntRect){120, 447, 24, 12}
+    #define R_PIZZA (sfIntRect) {321, 546, 30, 18}
     #define R_TOILET_PAPER (sfIntRect){724, 0, 14, 18}
     #define R_WATER_BOTTLE (sfIntRect){750, 0, 10, 18}
 
@@ -42,6 +45,9 @@
     #define S_CAP 8
     #define S_ICE_CREAM 12
     #define S_KNACKI 12
+    #define S_MONSTER 4
+    #define S_CHICKEN 4
+    #define S_PIZZA 4
     #define S_TOILET_PAPER 12
     #define S_WATER_BOTTLE 12
 
@@ -57,6 +63,9 @@
     #define CAP_PRICE 25
     #define ICE_CREAM_PRICE 5
     #define KNACKI_PRICE 5
+    #define MONSTER_PRICE 10
+    #define CHICKEN_PRICE 10
+    #define PIZZA_PRICE 10
     #define TOILET_PAPER_PRICE 5
     #define WATER_BOTTLE_PRICE 5
 
@@ -73,6 +82,9 @@
         CAP,
         ICE_CREAM,
         KNACKI,
+        MONSTER,
+        CHICKEN,
+        PIZZA,
         TOILET_PAPER,
         WATER_BOTTLE,
         NB_ITEMS
