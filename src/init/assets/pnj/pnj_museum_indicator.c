@@ -13,11 +13,11 @@ char *message_museum_indicator[] = {
     "Some objects are next to us, it's up to you to find them",
     "Two of them are less than 10 meters from us, practice",
     "The most valuable object in this museum is the Mona Lisa",
-    "For this you'll need to find a key",
+    "You'll need to find a key",
     "After that you'll be able to cut the electricty from the laser",
     "It's up to you to find which one",
     "If you succeed to disable the laser you can steal the Mona lisa !",
-    "Be careful when near the guards or you will have to fight them...",
+    "Be careful when you're near the guards or you will have to fight them",
     NULL
 };
 
@@ -52,4 +52,5 @@ void init_pnj_museum_indicator(game_t *game)
     init_text_museum_indicator(pnj, position);
     pnj->time_between_text = 5;
     pnj->is_guard = false;
+    pnj->stage = MUSEUM_STAGE;
 }

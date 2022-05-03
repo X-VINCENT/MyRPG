@@ -36,6 +36,7 @@ void init_settings_base_citizens(pnj_t *pnj, float time_between_text)
     pnj->walk = sfClock_create();
     pnj->text = false;
     pnj->is_guard = false;
+    pnj->stage = CITY_STAGE;
 }
 
 void init_pnj_citizens(sfTexture *texture,
