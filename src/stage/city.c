@@ -79,6 +79,7 @@ void city_stage(game_t *game)
     rain(game);
     wind(game);
     display_inventory(game);
+    display_minimap(game);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);
 }
