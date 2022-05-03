@@ -43,4 +43,5 @@ void init_pnj_g_museum_left(game_t *game)
     init_text_g_museum_left(pnj, position);
     pnj->time_between_text = 1;
     pnj->is_guard = true;
+    pnj->stage = MUSEUM_STAGE;
 }
