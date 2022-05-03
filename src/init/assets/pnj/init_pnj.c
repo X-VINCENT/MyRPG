@@ -30,6 +30,7 @@ void init_settings_base(pnj_t *pnj)
     pnj->text = true;
     pnj->display_the_text = 0;
     pnj->is_guard = false;
+    pnj->is_dead = 0;
     pnj->stage = CITY_STAGE;
 }
 

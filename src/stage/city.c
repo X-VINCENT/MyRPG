@@ -60,8 +60,10 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
     display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
-    display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
-    display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
+    if (game->assets->pnj[PNJ_GUARD_RIGHT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
+    if (game->assets->pnj[PNJ_GUARD_LEFT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_GUIDE_TOP_RIGHT]);
 }
 

@@ -16,8 +16,9 @@ int check_contact_pnj(game_t *game, sfVector2f rat_pos)
         r_pnj.top -= 11;
         r_pnj.left -= 10;
         r_pnj.width += 21;
-        if (sfFloatRect_contains(&r_pnj, rat_pos.x, rat_pos.y) &&
-            game->stage == game->assets->pnj[idx]->stage)
+        if (sfFloatRect_contains(&r_pnj, rat_pos.x, rat_pos.y)
+            && game->assets->pnj[idx]->is_dead == 0
+            && game->stage == game->assets->pnj[idx]->stage)
             return 0;
     }
     return 1;
