@@ -41,6 +41,12 @@ void check_win_lose_fights(game_t *game)
 
 void fights_stage(game_t *game)
 {
+    sfMusic_stop(game->audio->musics->music_bar);
+    sfMusic_stop(game->audio->musics->music_ice_cream);
+    sfMusic_stop(game->audio->musics->music_city);
+    sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_museum);
+    play_music(game->audio->musics->music_fight);
     sfView_setSize(game->view, VIEW_FIGHTS_SIZE);
     sfView_setCenter(game->view, VIEW_FIGHTS_POS);
     check_win_lose_fights(game);

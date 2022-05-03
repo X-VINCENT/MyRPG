@@ -26,6 +26,7 @@ int fight_kick_rush(game_t *game)
     game->assets->rat->is_kicking = 1;
     fights->enemy->life -= attack->damage;
     fights->as_touched = 1;
+    sfSound_play(game->audio->sounds->punch_sound);
     return 0;
 }
 

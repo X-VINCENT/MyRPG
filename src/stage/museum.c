@@ -23,6 +23,7 @@ void museum_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
+    sfMusic_stop(game->audio->musics->music_fight);
     play_music(game->audio->musics->music_museum);
     display_museum(game);
     check_rat_key_pressed(game);

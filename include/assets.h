@@ -71,9 +71,11 @@
     #define MUSIC_BAR "assets/audio/musics/music_bar.ogg"
     #define MUSIC_ICE_CREAM_SHOP "assets/audio/musics/music_ice_cream.ogg"
     #define MUSIC_MUSEUM "assets/audio/musics/music_museum.ogg"
+    #define MUSIC_FIGHT "assets/audio/musics/music_fight.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
     #define PNJ_SOUND "assets/audio/sounds/pnj_sound.ogg"
+    #define PUNCH_SOUND "assets/audio/sounds/punch_sound.ogg"
 //////////////////////////////////////////////////////////////////////////////
 
 

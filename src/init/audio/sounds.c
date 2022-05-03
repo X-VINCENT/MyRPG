@@ -11,5 +11,5 @@ void init_sounds(game_t *game)
 {
     game->audio->sounds = malloc(sizeof(sounds_t));
     game->audio->sounds->jump_sound = create_sound(JUMP_SOUND);
-    game->audio->sounds->pnj_sound = create_sound(PNJ_SOUND);
+    game->audio->sounds->punch_sound = create_sound(PUNCH_SOUND);
 }
