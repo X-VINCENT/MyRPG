@@ -75,7 +75,6 @@
     #define ENGLISH_DOWN "Down"
     #define ENGLISH_LEFT "Left"
     #define ENGLISH_RIGHT "Right"
-    #define ENGLISH_JUMP "Jump"
     #define ENGLISH_DODGE "Dodge"
     #define ENGLISH_ATTACK "Attack"
     #define ENGLISH_INTERACT "Interact"
@@ -114,9 +113,9 @@
     #define FRENCH_FIGHT "Combat"
 
     // Fights
-    #define French_KICK "Frapper"
-    #define French_BITE "Mordre"
-    #define French_BOMB "Bombe"
+    #define FRENCH_KICK "Frapper"
+    #define FRENCH_BITE "Mordre"
+    #define FRENCH_BOMB "Bombe"
 
     // Stats
     #define FRENCH_MONEY "Argent"
@@ -152,7 +151,6 @@
     #define FRENCH_DOWN "Bas"
     #define FRENCH_LEFT "Gauche"
     #define FRENCH_RIGHT "Droite"
-    #define FRENCH_JUMP "Sauter"
     #define FRENCH_DODGE "Esquiver"
     #define FRENCH_ATTACK "Attaquer"
     #define FRENCH_INTERACT "Interagir"
@@ -229,7 +227,6 @@
     #define GERMAN_DOWN "Niedrig"
     #define GERMAN_LEFT "Links"
     #define GERMAN_RIGHT "Rechts"
-    #define GERMAN_JUMP "Springen"
     #define GERMAN_DODGE "Ausweichen"
     #define GERMAN_ATTACK "Angehen"
     #define GERMAN_INTERACT "Interagieren"
@@ -306,7 +303,6 @@
     #define SPANISH_DOWN "Bajo"
     #define SPANISH_LEFT "Izquierda"
     #define SPANISH_RIGHT "Derecha"
-    #define SPANISH_JUMP "Saltar"
     #define SPANISH_DODGE "Esquivar"
     #define SPANISH_ATTACK "Atacar"
     #define SPANISH_INTERACT "Interactuar"

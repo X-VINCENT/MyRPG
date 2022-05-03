@@ -78,6 +78,8 @@
         sfVector2f position, sfVector2f scale);
     void animate_sprite(
         sfSprite *sprite, float shift, int max_value, int offset_from_left);
+    int animate_sprite_one_time(
+        sfSprite *sprite, float shift, int max_value, int offset_from_left);
     void set_sprite_origin(sfSprite *sprite, sfIntRect rect);
     void destroy_sprite(sfSprite *sprite);
 

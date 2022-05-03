@@ -17,7 +17,7 @@ void set_texts_origin_controls(game_t *game)
     set_text_origin_middle_left(s_controls->keys[DOWN]->title);
     set_text_origin_middle_left(s_controls->keys[LEFT]->title);
     set_text_origin_middle_left(s_controls->keys[RIGHT]->title);
-    set_text_origin_middle_left(s_controls->keys[JUMP]->title);
+    set_text_origin_middle_left(s_controls->keys[BITE]->title);
     set_text_origin_middle_left(s_controls->keys[DODGE]->title);
     set_text_origin_middle_left(s_controls->keys[ATTACK]->title);
     set_text_origin_middle_left(s_controls->keys[INTERACT]->title);

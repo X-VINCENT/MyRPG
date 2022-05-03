@@ -52,6 +52,7 @@
         attack_t *attack_2;
         attack_t *attack_3;
         sfClock *button_clock;
+        sfClock *rat_bite_clock;
         int fight_status;
         int to_attack;
         int kick;

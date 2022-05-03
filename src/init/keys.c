@@ -15,7 +15,7 @@ void init_default_keys(game_t *game)
     game->default_keys[DOWN] = sfKeyS;
     game->default_keys[LEFT] = sfKeyQ;
     game->default_keys[RIGHT] = sfKeyD;
-    game->default_keys[JUMP] = sfKeyLShift;
+    game->default_keys[BITE] = sfKeyLShift;
     game->default_keys[DODGE] = sfKeySpace;
     game->default_keys[ATTACK] = sfKeyA;
     game->default_keys[INTERACT] = sfKeyE;

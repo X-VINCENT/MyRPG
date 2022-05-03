@@ -12,7 +12,7 @@ char *keys_data_int_value[] = {
     "DOWN",
     "LEFT",
     "RIGHT",
-    "JUMP",
+    "BITE",
     "DODGE",
     "ATTACK",
     "INTERACT",

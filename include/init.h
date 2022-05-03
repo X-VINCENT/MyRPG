@@ -76,6 +76,8 @@
     // Rat
         // actions.c
         void init_rat_dodge(game_t *game, sfTexture *texture);
+        void init_rat_kick(game_t *game, sfTexture *texture);
+        void init_rat_bite(game_t *game, sfTexture *texture);
 
         // init.c
         void init_rat(game_t *game, sfTexture *texture);

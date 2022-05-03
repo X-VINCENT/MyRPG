@@ -63,6 +63,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/market/display.c 					 \
 								display/museum/display.c 					 \
 								display/clothe/display.c 					 \
+								display/rat/actions.c                        \
 								display/rat/display.c                        \
 								display/settings/audio.c                     \
 								display/settings/controls.c                  \
@@ -114,6 +115,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/game_menu/key_pressed.c                \
 								event/game_menu/mouse_moved.c                \
 								event/game_menu/mouse_pressed.c              \
+								event/fights/attacks/bite.c                  \
 								event/fights/attacks/kick.c                  \
 								event/fights/key_pressed.c                   \
 								event/fights/create_fight.c                  \
