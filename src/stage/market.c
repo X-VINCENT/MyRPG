@@ -20,5 +20,7 @@ void market_stage(game_t *game)
         game->window, game->assets->market->bg_top, NULL);
     display_circle_rat(game);
     check_rat_key_pressed(game);
+    display_objects(game->window, game->assets->market->objects);
+    event_objects(game, game->assets->market->objects, game->keys[INTERACT]);
     display_inventory(game);
 }

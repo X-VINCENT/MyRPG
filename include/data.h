@@ -86,6 +86,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } market_t;
 
     typedef struct clothe {
