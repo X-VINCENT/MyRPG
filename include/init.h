@@ -73,7 +73,7 @@
         //init.c
         void init_museum(game_t *game);
 
-    // Rat
+    // Ratmake fa
         // actions.c
         void init_rat_dodge(game_t *game, sfTexture *texture);
         void init_rat_kick(game_t *game, sfTexture *texture);

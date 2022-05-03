@@ -12,6 +12,8 @@ void set_scale_position_minimap(sfSprite *minimap, sfSprite *minimap_top,
 {
     sfSprite_setPosition(minimap, pos);
     sfSprite_setScale(minimap, scale);
+    sfSprite_setPosition(minimap_top, pos);
+    sfSprite_setScale(minimap_top, scale);
 }
 
 void display_rat_minimap(game_t *game, sfVector2f pos, sfVector2f scale)
@@ -23,6 +25,8 @@ void display_rat_minimap(game_t *game, sfVector2f pos, sfVector2f scale)
 
     sfCircleShape_setPosition(city->pos_minimap, point_pos);
     sfCircleShape_setRadius(city->pos_minimap, scale.x * 50);
+    sfCircleShape_setOrigin(city->pos_minimap, (sfVector2f){scale.x * 50,
+        scale.y * 50});
     sfRenderWindow_drawCircleShape(game->window, city->pos_minimap, NULL);
 }
 
