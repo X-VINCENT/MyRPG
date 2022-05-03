@@ -10,10 +10,10 @@
 void sell(game_t *game)
 {
     rat_t *rat = game->assets->rat;
-    sfVector2f office = {208, 122};
+    sfVector2f office = {208, 110};
     item_t *item = game->inventory->items[game->inventory->selected];
 
-    if (check_location_rect(rat->idle_front, office, 60, 26)) {
+    if (check_location_rect(rat->idle_front, office, 75, 32)) {
         if (sfKeyboard_isKeyPressed(sfKeyY) &&
             item->name != EMPTY) {
             game->data->current->nb_golds += item->selling_price[item->name];
