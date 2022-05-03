@@ -49,18 +49,16 @@ void settings_controls_scrolling_bar_event(game_t *game)
     sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
+    float delta = game->event->event->mouseWheelScroll.delta;
 
     if (time_elapsed(s_controls->scrolling_clock) > 0.01) {
-        if (game->event->event->mouseWheel.delta > 0 &&
-            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved ||
-            sfKeyboard_isKeyPressed(game->keys[ZOOM_IN])) {
+        if (delta == 1 || sfKeyboard_isKeyPressed(game->keys[ZOOM_IN])) {
             move_controls_up(game);
-            game->event->event->mouseWheel.delta = 0;
-        } else if (game->event->event->mouseWheel.delta < 0 &&
-            game->event->event->mouseWheel.type == sfEvtMouseWheelMoved ||
+            game->event->event->mouseWheelScroll.delta = 0;
+        } else if (delta == -1 ||
             sfKeyboard_isKeyPressed(game->keys[ZOOM_OUT])) {
             move_controls_down(game);
-            game->event->event->mouseWheel.delta = 0;
+            game->event->event->mouseWheelScroll.delta = 0;
         }
         sfClock_restart(s_controls->scrolling_clock);
     }
