@@ -13,18 +13,7 @@ void resize_view(game_t *game)
     sfFloatRect visible_area = {0, 0, game->event->event->size.width,
         game->event->event->size.height};
     float scale = size.x / visible_area.width;
-    int delta = game->event->event->size.width - 16 / 9 *
-        game->event->event->size.height;
 
-    if (delta > 0) {
-        if (visible_area.width < 800)
-            visible_area.width = 800;
-        visible_area.height = game->event->event->size.width * 9 / 16;
-    } else {
-        if (visible_area.height < 600)
-            visible_area.height = 600;
-        visible_area.width = game->event->event->size.height * 16 / 9;
-    }
     sfRenderWindow_setSize(game->window,
         (sfVector2u){visible_area.width, visible_area.height});
     sfView_setSize(game->view, (sfVector2f){
