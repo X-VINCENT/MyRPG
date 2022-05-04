@@ -19,6 +19,13 @@
         struct particle *previous;
     } particle_t;
 
+    typedef struct fire {
+        sfRectangleShape *pixel;
+        int nb_move;
+        struct fire *next;
+        struct fire *previous;
+    } fire_t;
+
     typedef struct parallax {
         sfSprite *bg0;
         sfSprite *bg1;
@@ -111,7 +118,11 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        fire_t *fire;
+        fire_t *fire_car;
         sfClock *weather_clock;
+        sfClock *fire_clock;
+        sfClock *fire_car_clock;
         object_t **objects;
         sfCircleShape *pos_minimap;
     } city_t;
@@ -196,6 +207,7 @@
         sfClock *bite_time_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
+        sfClock *clock_jump;
         int up;
         int down;
         int left;
@@ -209,6 +221,7 @@
         float radius_circle;
         int damage;
         int life;
+        int is_jumping;
     } rat_t;
 
     typedef struct settings_game {

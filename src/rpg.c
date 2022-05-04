@@ -14,8 +14,10 @@ int my_rpg(void)
     if (!(game = init_game()))
         return ERROR;
     while (sfRenderWindow_isOpen(game->window)) {
-        event(game);
-        engine(game);
+        if (sfRenderWindow_hasFocus(game->window)) {
+            event(game);
+            engine(game);
+        }
     }
     save_all_data(game);
     destroy_all(game);

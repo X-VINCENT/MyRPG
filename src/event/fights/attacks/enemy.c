@@ -14,9 +14,10 @@ int fight_enemy_rush(game_t *game)
     rat_t *rat = game->assets->rat;
     sfFloatRect r_enemy = sfSprite_getGlobalBounds(enemy->left);
     sfFloatRect r_rat = sfSprite_getGlobalBounds(rat->idle_front);
+    sfVector2f p_enemy = sfSprite_getPosition(enemy->left);
     sfVector2f offset = {-1, 0};
 
-    if (!sfFloatRect_intersects(&r_enemy, &r_rat, NULL)) {
+    if (p_enemy.x > 140) {
         if (time_elapsed(enemy->clock) > 0.01) {
             sfSprite_move(enemy->left, offset);
             sfSprite_move(enemy->right, offset);
@@ -25,7 +26,8 @@ int fight_enemy_rush(game_t *game)
         enemy->direction = 0;
         return 1;
     }
-    rat->life -= enemy->damage;
+    if (sfFloatRect_intersects(&r_enemy, &r_rat, NULL))
+        rat->life -= enemy->damage;
     fights->as_touched = 1;
     sfSound_play(game->audio->sounds->punch_sound);
     return 0;

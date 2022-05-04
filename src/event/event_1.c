@@ -12,9 +12,8 @@ void event(game_t *game)
     if (!game)
         return;
     update_xp(game);
-    while (sfRenderWindow_pollEvent(game->window, game->event->event)) {
+    while (sfRenderWindow_pollEvent(game->window, game->event->event))
         call_different_events(game);
-    }
 }
 
 void event_key_pressed(game_t *game)

@@ -25,6 +25,7 @@ void destroy_rat_actions(rat_t *rat)
     destroy_sprite(rat->bite_left);
     destroy_sprite(rat->bite_right);
     sfClock_destroy(rat->bite_time_clock);
+    sfClock_destroy(rat->clock_jump);
 }
 
 void destroy_rat(rat_t *rat)
