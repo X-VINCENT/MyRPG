@@ -45,9 +45,9 @@
     #define S_CAP 8
     #define S_ICE_CREAM 12
     #define S_KNACKI 12
-    #define S_MONSTER 4
-    #define S_CHICKEN 4
-    #define S_PIZZA 4
+    #define S_MONSTER 10
+    #define S_CHICKEN 10
+    #define S_PIZZA 10
     #define S_TOILET_PAPER 12
     #define S_WATER_BOTTLE 12
 
