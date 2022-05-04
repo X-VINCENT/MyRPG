@@ -101,9 +101,12 @@
     // manage_list.c
     particle_t *create_particle_list(sfTexture *texture,
     sfIntRect rect, sfVector2f pos, sfVector2f scale);
+    fire_t *create_fire_list(sfVector2f pos, sfVector2f size, sfColor color);
 
     particle_t *add_node(particle_t *list, sfTexture *texture,
     sfIntRect rect, sfVector2f pos);
+    fire_t *add_node_fire(fire_t *list, sfVector2f pos,
+    sfVector2f size, sfColor color);
 
 // Save
     // read.c

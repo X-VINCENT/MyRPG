@@ -186,6 +186,7 @@
     #define RAIN_NUMBER 10000
     #define WIND "assets/images/objects/wind.png"
     #define WIND_NUMBER 500
+    #define FIRE_NUMBER 50
 //////////////////////////////////////////////////////////////////////////////
 
 #endif /* !ASSETS_H_ */

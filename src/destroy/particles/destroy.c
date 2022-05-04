@@ -29,8 +29,25 @@ void destroy_wind(game_t *game)
     free(game->assets->city->wind);
 }
 
+void destroy_fire(game_t *game)
+{
+    for (int i = 0; i < FIRE_NUMBER; i++) {
+        sfRectangleShape_destroy(game->assets->city->fire->pixel);
+        sfRectangleShape_destroy(game->assets->city->fire_car->pixel);
+        game->assets->city->fire = game->assets->city->fire->next;
+        game->assets->city->fire_car = game->assets->city->fire_car->next;
+        if (game->assets->city->fire->previous)
+            free(game->assets->city->fire->previous);
+        if (game->assets->city->fire_car->previous)
+            free(game->assets->city->fire_car->previous);
+    }
+    free(game->assets->city->fire);
+    free(game->assets->city->fire_car);
+}
+
 void destroy_particles(game_t *game)
 {
+    destroy_fire(game);
     destroy_rain(game);
     destroy_wind(game);
 }
