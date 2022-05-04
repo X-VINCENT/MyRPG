@@ -365,6 +365,7 @@
 
 // event_1.c
 void event(game_t *game);
+void call_different_events(game_t *game);
 void event_key_pressed(game_t *game);
 void mouse_pressed(game_t *game);
 void mouse_moved(game_t *game);
