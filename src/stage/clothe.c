@@ -14,6 +14,7 @@ void clothe_stage(game_t *game)
     sfMusic_stop(game->audio->musics->music_city);
     sfMusic_stop(game->audio->musics->music_menu);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
     display_clothe(game);
     display_rat(game);
     sfRenderWindow_drawSprite(

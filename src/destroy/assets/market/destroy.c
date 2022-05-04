@@ -12,5 +12,6 @@ void destroy_market(market_t *market)
     destroy_sprite(market->bg);
     destroy_sprite(market->bg_top);
     destroy_image(market->hitbox);
+    destroy_objects(market->objects);
     free(market);
 }

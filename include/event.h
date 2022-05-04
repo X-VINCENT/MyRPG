@@ -355,16 +355,17 @@
 
 // Transitions
     // key_pressed.c
-    void transitions_key_pressed(game_t *game);
+    void transition_key_pressed(game_t *game);
 
     // mouse_moved.c
-    void transitions_mouse_moved(game_t *game);
+    void transition_mouse_moved(game_t *game);
 
     // mouse_pressed.c
-    void transitions_mouse_pressed(game_t *game);
+    void transition_mouse_pressed(game_t *game);
 
 // event_1.c
 void event(game_t *game);
+void call_different_events(game_t *game);
 void event_key_pressed(game_t *game);
 void mouse_pressed(game_t *game);
 void mouse_moved(game_t *game);

@@ -13,6 +13,7 @@ void set_city_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
     play_music(game->audio->musics->music_city);
 }
 
@@ -59,8 +60,10 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
     display_pnj(game, game->assets->pnj[PNJ_BLACK]);
     display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO]);
     display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
-    display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
-    display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
+    if (game->assets->pnj[PNJ_GUARD_RIGHT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
+    if (game->assets->pnj[PNJ_GUARD_LEFT]->is_dead == 0)
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
     display_pnj(game, game->assets->pnj[PNJ_GUIDE_TOP_RIGHT]);
 }
 
@@ -78,6 +81,7 @@ void city_stage(game_t *game)
     event_objects(game, game->assets->city->objects, game->keys[INTERACT]);
     rain(game);
     wind(game);
+    display_minimap(game);
     display_inventory(game);
     check_and_center_view(
         game, game->assets->rat->idle_front, game->assets->city->bg);

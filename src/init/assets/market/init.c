@@ -7,6 +7,24 @@
 
 #include "rpg.h"
 
+const int name_objects_market[] = {
+    CHICKEN,
+    MONSTER,
+    -1
+};
+
+const sfVector2f pos_objects_market[] = {
+    {106, 134},
+    {410, 133},
+    {0, 0}
+};
+
+const int objects_areas_market[] = {
+    20,
+    20,
+    -1
+};
+
 void init_market(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 480, 301);
@@ -18,5 +36,7 @@ void init_market(game_t *game)
         game->textures->market, rect, pos, scale);
     game->assets->market->bg_top = create_sprite(
         game->textures->market_top, rect, pos, scale);
+    game->assets->market->objects = create_objects(game->textures->gui,
+        name_objects_market, pos_objects_market, objects_areas_market);
     game->assets->market->hitbox = create_image(MARKET_HITBOX);
 }

@@ -54,6 +54,7 @@
         int displaying_text;
         int is_guard;
         int stage;
+        int is_dead;
     } pnj_t;
 
 #endif /* !PNJ_H_ */

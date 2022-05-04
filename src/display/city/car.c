@@ -7,12 +7,37 @@
 
 #include "rpg.h"
 
+int check_car_interesect(game_t *game, car_t *car)
+{
+    sfFloatRect position_car =
+        sfSprite_getGlobalBounds(car->car);
+    sfFloatRect position_rat =
+        sfSprite_getGlobalBounds(game->assets->rat->idle_front);
+
+    if (sfFloatRect_intersects(&position_car, &position_rat, NULL))
+        return 1;
+    return 0;
+}
+
+int check_car_interesect_two(game_t *game, car_right_t *car)
+{
+    sfFloatRect position_car =
+        sfSprite_getGlobalBounds(car->car);
+    sfFloatRect position_rat =
+        sfSprite_getGlobalBounds(game->assets->rat->idle_front);
+
+    if (sfFloatRect_intersects(&position_car, &position_rat, NULL))
+        return 1;
+    return 0;
+}
+
 void low_car(game_t *game)
 {
     sfVector2f position_car =
         sfSprite_getPosition(game->assets->car->car);
 
-    if (time_elapsed(game->assets->car->clock) > 0.02) {
+    if (time_elapsed(game->assets->car->clock) > 0.02
+        && check_car_interesect(game, game->assets->car) == 0) {
         position_car.x += 2;
         sfSprite_setPosition(game->assets->car->car, position_car);
         sfClock_restart(game->assets->car->clock);
@@ -27,15 +52,17 @@ void right_car(game_t *game)
 {
     sfVector2f position_car =
         sfSprite_getPosition(game->assets->car_right->car);
+    sfFloatRect rect;
 
-    if (time_elapsed(game->assets->car_right->clock) > 0.02) {
+    if (time_elapsed(game->assets->car_right->clock) > 0.02
+        && check_car_interesect_two(game, game->assets->car_right) == 0) {
         position_car.y -= 2;
         sfSprite_setPosition(game->assets->car_right->car, position_car);
         sfClock_restart(game->assets->car_right->clock);
     }
     if (time_elapsed(game->assets->car_right->clock_animation) > 0.8) {
         animate_sprite(game->assets->car_right->car, 64, 384, 960);
-        sfFloatRect rect = sfSprite_getGlobalBounds(game->assets->car_right->car);
+        rect = sfSprite_getGlobalBounds(game->assets->car_right->car);
         sfClock_restart(game->assets->car_right->clock_animation);
     }
 }

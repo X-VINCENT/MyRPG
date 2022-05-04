@@ -14,6 +14,7 @@ void set_appartment_music(game_t *game)
     sfMusic_stop(game->audio->musics->music_bar);
     sfMusic_stop(game->audio->musics->music_ice_cream);
     sfMusic_stop(game->audio->musics->music_museum);
+    sfMusic_stop(game->audio->musics->music_fight);
 }
 
 void display_skin(sfRenderWindow *window, skin_t *skin)

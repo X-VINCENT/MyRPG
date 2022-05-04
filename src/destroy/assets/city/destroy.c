@@ -15,5 +15,6 @@ void destroy_city(city_t *city)
     sfClock_destroy(city->doors->clock);
     sfClock_destroy(city->weather_clock);
     destroy_objects(city->objects);
+    destroy_circle_shape(city->pos_minimap);
     free(city);
 }

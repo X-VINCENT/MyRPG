@@ -73,7 +73,7 @@
         //init.c
         void init_museum(game_t *game);
 
-    // Rat
+    // Ratmake fa
         // actions.c
         void init_rat_dodge(game_t *game, sfTexture *texture);
         void init_rat_kick(game_t *game, sfTexture *texture);
@@ -123,7 +123,7 @@
 
     // Transitions
         // init.c
-        void init_transitions(game_t *game);
+        void init_transition(game_t *game);
 
     // Pnj
         // init.c

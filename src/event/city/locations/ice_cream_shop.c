@@ -13,7 +13,8 @@ void location_ice_cream_city(game_t *game)
 
     if (check_location_rect(rat->idle_front,
         LOCATION_ICE_SHOP, 31, 15) == true && rat->up == 1) {
-        game->stage = ICE_STAGE;
+        game->stage = TRANSITION_STAGE;
+        game->next_stage = ICE_STAGE;
         set_rats_position(game, RAT_DEFAULT_POS_ICE_CREAM_SHOP);
         rat->speed = RAT_SPEED_ICE_CREAM_SHOP;
     }
