@@ -21,7 +21,7 @@
     #define R_SCROLLING_BAR_INSIDE ((sfIntRect){39, 169, 28, 150})
     #define R_LASERS ((sfIntRect){133, 113, 212, 174})
     #define R_EMPTY_BAR ((sfIntRect){0, 637, 500, 18})
-    #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34})
+    #define R_CIRCLE_BAR ((sfIntRect){0, 686, 34, 34})
     #define R_BAR ((sfIntRect){0, 660, 500, 20})
     #define R_KEY_BG ((sfIntRect){0, 724, 204, 64})
     #define R_CROSS ((sfIntRect){0, 794, 38, 38})
@@ -41,12 +41,12 @@
     #define R_LITTLE_RECT_UNLOCKED ((sfIntRect){0, 3547, 180, 111})
     #define R_RECT_UNLOCKED ((sfIntRect){193, 3547, 400, 111})
     #define R_LITTLE_RECT_LOCKED ((sfIntRect){0, 3675, 180, 111})
-    #define R_RECT_LOCKED (sfIntRect){193, 3675, 400, 111})
+    #define R_RECT_LOCKED ((sfIntRect){193, 3675, 400, 111})
     #define R_KICK ((sfIntRect){0, 3801, 400, 111})
     #define R_VERTICAL_BAR ((sfIntRect){0, 3930, 16, 170})
     #define R_HORIZONTAL_BAR ((sfIntRect){20, 3930, 170, 16})
 
-    #define R_BG_SKIN ((sfIntRect){0, 4136, 517, 292}
+    #define R_BG_SKIN ((sfIntRect){0, 4136, 517, 292})
     #define R_SKIN_UNLOCKED ((sfIntRect){0, 4446, 78, 111})
     #define R_SKIN_LOCKED ((sfIntRect){89, 4446, 78, 111})
 
