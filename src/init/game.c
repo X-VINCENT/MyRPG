@@ -47,6 +47,7 @@ game_t *init_game(void)
     init_inventory(game);
     init_rain(game);
     init_wind(game);
+    init_fire_trashcan(game);
     init_fights(game);
     set_game_data(game);
     return game;

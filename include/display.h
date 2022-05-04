@@ -29,6 +29,9 @@
     void animate_rain(particle_t *rain, sfRenderWindow *window);
     void display_wind(particle_t *wind, sfRenderWindow *window);
     void animate_wind(particle_t *rain, sfRenderWindow *window);
+    void display_fire(fire_t *fire, sfRenderWindow *window);
+    void animate_fire(fire_t *fire, sfRenderWindow *window, sfVector2f pos);
+    void fire(game_t *game);
     void display_car(game_t *game);
 
     // minimap.c

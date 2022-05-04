@@ -194,6 +194,8 @@
     // init.c
     void init_rain(game_t *game);
     void init_wind(game_t *game);
+    void init_fire_trashcan(game_t *game);
+    void init_fire_car(game_t *game);
 
 // Textures
     // characters.c
