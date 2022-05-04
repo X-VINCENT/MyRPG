@@ -45,8 +45,9 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
     set_text_origin(pnj->touch_talk);
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x, pos.y - 45});
     init_settings_base(pnj);
+    pnj->circle_citizens =
+        create_circle_shape(sfRed, (sfVector2f){0, 0}, 30, sfWhite);
     pnj->circle = create_circle_shape(sfRed, (sfVector2f){0, 0}, 25, sfRed);
-    sfCircleShape_setOrigin(pnj->circle, (sfVector2f){35, 35});
 }
 
 void init_all_pnj(game_t *game)

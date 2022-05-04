@@ -36,6 +36,7 @@
         int pnj_stage;
         sfSprite *sprite;
         sfCircleShape *circle;
+        sfCircleShape *circle_citizens;
         sfText **text_to_display;
         sfClock *timer_display_text;
         sfClock *walk;
