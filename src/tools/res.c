@@ -10,11 +10,8 @@
 void down_res(game_t *game)
 {
     switch (game->res) {
-        case 480:
-            game->res = 2160;
-            break;
         case 720:
-            game->res = 480;
+            game->res = 2160;
             break;
         case 1080:
             game->res = 720;
@@ -44,9 +41,6 @@ void down_res_2(game_t *game)
 void up_res(game_t *game)
 {
     switch (game->res) {
-        case 480:
-            game->res = 720;
-            break;
         case 720:
             game->res = 1080;
             break;
@@ -68,7 +62,7 @@ void up_res_2(game_t *game)
             game->res = 2160;
             break;
         case 2160:
-            game->res = 480;
+            game->res = 720;
             break;
         default:
             break;
