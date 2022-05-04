@@ -7,10 +7,9 @@
 
 #include "rpg.h"
 
-void change_direction(game_t *game, int i, sfVector2f position)
+void change_direction(game_t *game, pnj_t *pnj,
+                        sfVector2f position, sfIntRect rect)
 {
-    pnj_t *pnj = game->assets->pnj[i];
-
     if (position.x >= 2584) {
         pnj->move_left_or_right = 0;
         sfClock_restart(pnj->walk);
@@ -24,18 +23,21 @@ void change_direction(game_t *game, int i, sfVector2f position)
         pnj->move_left_or_right = (pnj->move_left_or_right == 0) ? 1 : 0;
         sfClock_restart(pnj->walk);
     }
+    sfSprite_setTextureRect(pnj->sprite, rect);
+    sfSprite_setPosition(pnj->sprite, position);
 }
 
-void check_second_move_pnj(game_t *game, int i)
+void check_second_move_pnj(game_t *game, pnj_t *pnj)
 {
-    pnj_t *pnj = game->assets->pnj[i];
     sfVector2f position = sfSprite_getPosition(pnj->sprite);
     sfIntRect rect = sfSprite_getTextureRect(pnj->sprite);
     sfFloatRect r_rat = sfSprite_getGlobalBounds(
         game->assets->rat->idle_front);
+    sfFloatRect position_rat = sfSprite_getGlobalBounds(pnj->sprite);
 
     if (sfTime_asSeconds(sfClock_getElapsedTime(pnj->timer_move)) >
-        (float)pnj->speed / 100) {
+        (float)pnj->speed / 100
+        && sfFloatRect_intersects(&r_rat, &position_rat, NULL) == sfFalse) {
         if (pnj->move_left_or_right == 0) {
             position.x -= 0.5;
             rect.left = 96;
@@ -45,15 +47,13 @@ void check_second_move_pnj(game_t *game, int i)
         }
         sfClock_restart(pnj->timer_move);
     }
-    change_direction(game, i, position);
-    sfSprite_setTextureRect(pnj->sprite, rect);
-    sfSprite_setPosition(pnj->sprite, position);
+    change_direction(game, pnj, position, rect);
 }
 
 void move_pnj(game_t *game, int nbr_animated_pnj)
 {
     for (int i = LAST_PNJ + 1; i < nbr_animated_pnj; i++)
-        check_second_move_pnj(game, i);
+        check_second_move_pnj(game, game->assets->pnj[i]);
     if (time_elapsed(game->assets->pnj[PNJ_BLACK_THREE]->animation) > 0.25
         && game->assets->pnj[PNJ_BLACK_THREE]->displaying_text == 0
         && game->assets->pnj[PNJ_GIRL_TWO]->displaying_text == 0) {
