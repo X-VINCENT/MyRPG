@@ -48,8 +48,8 @@
 //////////////////////////////////////////////////////////////////////////////
 // View
     // DEFAULT
-    #define VIEW_DEFAULT_SIZE (sfVector2f){640, 360}
-    #define VIEW_DEFAULT_POS (sfVector2f){2468, 1710}
+    #define VIEW_DEFAULT_SIZE ((sfVector2f){640, 360})
+    #define VIEW_DEFAULT_POS ((sfVector2f){2468, 1710})
     #define VIEW_DEFAULT_ROTATION 0
     #define VIEW_ZOOM_VALUE 5
     #define VIEW_MAX_ZOOM_IN 250
@@ -57,53 +57,53 @@
     #define VIEW_ROTATE_VALUE 0.1
 
     // MENUS
-    #define VIEW_MENUS_SIZE (sfVector2f){1920, 1080}
-    #define VIEW_MENUS_POS (sfVector2f){960, 540}
+    #define VIEW_MENUS_SIZE ((sfVector2f){1920, 1080})
+    #define VIEW_MENUS_POS ((sfVector2f){960, 540})
 
-    #define VIEW_HOME_MENU_SIZE (sfVector2f){640, 360}
-    #define VIEW_HOME_MENU_POS (sfVector2f){320, 180}
+    #define VIEW_HOME_MENU_SIZE ((sfVector2f){640, 360})
+    #define VIEW_HOME_MENU_POS ((sfVector2f){320, 180})
 
     // FIGHTS
-    #define VIEW_FIGHTS_SIZE (sfVector2f){520, 307}
-    #define VIEW_FIGHTS_POS (sfVector2f){260, 153.50}
+    #define VIEW_FIGHTS_SIZE ((sfVector2f){520, 307})
+    #define VIEW_FIGHTS_POS ((sfVector2f){260, 153.50})
 
     // Appartment
-    #define VIEW_APPARTMENT_SIZE (sfVector2f){600, 320}
-    #define VIEW_APPARTMENT_POS (sfVector2f){258.5, 146}
+    #define VIEW_APPARTMENT_SIZE ((sfVector2f){600, 320})
+    #define VIEW_APPARTMENT_POS ((sfVector2f){258.5, 146})
 
     // Bar
-    #define VIEW_BAR_SIZE (sfVector2f){852, 480}
-    #define VIEW_BAR_POS (sfVector2f){208, 134}
+    #define VIEW_BAR_SIZE ((sfVector2f){852, 480})
+    #define VIEW_BAR_POS ((sfVector2f){208, 134})
 
     // City
-    #define VIEW_CITY_SIZE (sfVector2f){853, 480}
-    #define VIEW_CITY_POS (sfVector2f){2468, 1710}
+    #define VIEW_CITY_SIZE ((sfVector2f){853, 480})
+    #define VIEW_CITY_POS ((sfVector2f){2468, 1710})
 
     // Ice Cream Shop
-    #define VIEW_ICE_SIZE (sfVector2f){600, 320}
-    #define VIEW_ICE_POS (sfVector2f){192, 160}
+    #define VIEW_ICE_SIZE ((sfVector2f){600, 320})
+    #define VIEW_ICE_POS ((sfVector2f){192, 160})
 
     // Clothe shop
-    #define VIEW_CLOTHE_SIZE (sfVector2f){853, 480}
-    #define VIEW_CLOTHE_POS (sfVector2f){207, 214}
+    #define VIEW_CLOTHE_SIZE ((sfVector2f){853, 480})
+    #define VIEW_CLOTHE_POS ((sfVector2f){207, 214})
 
     // Market
-    #define VIEW_MARKET_SIZE (sfVector2f){853, 480}
-    #define VIEW_MARKET_POS (sfVector2f){240, 150}
+    #define VIEW_MARKET_SIZE ((sfVector2f){853, 480})
+    #define VIEW_MARKET_POS ((sfVector2f){240, 150})
 
     // Museum
-    #define VIEW_MUSEUM_SIZE (sfVector2f){1280, 720}
-    #define VIEW_MUSEUM_POS (sfVector2f){256, 342}
-    #define VIEW_MUSEUM_POS_1 (sfVector2f){693, 1427}
-    #define VIEW_MUSEUM_POS_2 (sfVector2f){2776, 518}
-    #define VIEW_MUSEUM_POS_3 (sfVector2f){2337, 1655}
-    #define VIEW_MUSEUM_POS_4 (sfVector2f){256, 2277}
+    #define VIEW_MUSEUM_SIZE ((sfVector2f){1280, 720})
+    #define VIEW_MUSEUM_POS ((sfVector2f){256, 342})
+    #define VIEW_MUSEUM_POS_1 ((sfVector2f){693, 1427})
+    #define VIEW_MUSEUM_POS_2 ((sfVector2f){2776, 518})
+    #define VIEW_MUSEUM_POS_3 ((sfVector2f){2337, 1655})
+    #define VIEW_MUSEUM_POS_4 ((sfVector2f){256, 2277})
 //////////////////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////////////////////
 // Rat
-    #define SCALE_RAT (sfVector2f){1.00, 1.00}
+    #define SCALE_RAT ((sfVector2f){1.00, 1.00})
     // Speed
     #define RAT_SPEED_APPARTMENT 1.3
     #define RAT_SPEED_CITY 2.2
@@ -124,28 +124,28 @@
     #define RAT_SPEED_MULTIPLIER_100 2.0
 
     // Pos
-    #define RAT_DEFAULT_POS_CITY_APPARTMENT (sfVector2f){2468, 1710}
-    #define RAT_DEFAULT_POS_CITY_BAR (sfVector2f){1022, 1708}
-    #define RAT_DEFAULT_POS_CITY_ICE_SHOP (sfVector2f){915, 1675}
-    #define RAT_DEFAULT_POS_CITY_MUSEUM (sfVector2f){2034, 590}
-    #define RAT_DEFAULT_POS_CITY_MUSEUM_OUT (sfVector2f){2664, 590}
-    #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE (sfVector2f){588, 1672}
-    #define RAT_DEFAULT_POS_CITY_MARKET (sfVector2f){1524, 1690}
+    #define RAT_DEFAULT_POS_CITY_APPARTMENT ((sfVector2f){2468, 1710})
+    #define RAT_DEFAULT_POS_CITY_BAR ((sfVector2f){1022, 1708})
+    #define RAT_DEFAULT_POS_CITY_ICE_SHOP ((sfVector2f){915, 1675})
+    #define RAT_DEFAULT_POS_CITY_MUSEUM ((sfVector2f){2034, 590})
+    #define RAT_DEFAULT_POS_CITY_MUSEUM_OUT ((sfVector2f){2664, 590})
+    #define RAT_DEFAULT_POS_CITY_CLOTHE_STORE ((sfVector2f){588, 1672})
+    #define RAT_DEFAULT_POS_CITY_MARKET ((sfVector2f){1524, 1690})
 
-    #define RAT_DEFAULT_POS_APPARTMENT (sfVector2f){166, 252}
-    #define RAT_DEFAULT_POS_BAR (sfVector2f){31, 162}
-    #define RAT_DEFAULT_POS_ICE_CREAM_SHOP (sfVector2f){195, 300}
-    #define RAT_DEFAULT_POS_CLOTHE_SHOP (sfVector2f){50, 160}
-    #define RAT_DEFAULT_POS_MARKET (sfVector2f){30, 240}
-    #define RAT_DEFAULT_POS_MUSEUM (sfVector2f){15, 530}
-    #define RAT_DEFAULT_POS_MUSEUM_1_TO_E (sfVector2f){420, 540}
-    #define RAT_DEFAULT_POS_MUSEUM_E_TO_1 (sfVector2f){435, 1650}
-    #define RAT_DEFAULT_POS_MUSEUM_1_TO_2 (sfVector2f){2570, 750}
-    #define RAT_DEFAULT_POS_MUSEUM_2_TO_1 (sfVector2f){940, 1650}
-    #define RAT_DEFAULT_POS_MUSEUM_2_TO_3 (sfVector2f){2030, 1790}
-    #define RAT_DEFAULT_POS_MUSEUM_3_TO_2 (sfVector2f){2980, 760}
-    #define RAT_DEFAULT_POS_MUSEUM_3_TO_4 (sfVector2f){15, 2375}
-    #define RAT_DEFAULT_POS_MUSEUM_4_TO_3 (sfVector2f){2645, 1790}
+    #define RAT_DEFAULT_POS_APPARTMENT ((sfVector2f){166, 252})
+    #define RAT_DEFAULT_POS_BAR ((sfVector2f){31, 162})
+    #define RAT_DEFAULT_POS_ICE_CREAM_SHOP ((sfVector2f){195, 300})
+    #define RAT_DEFAULT_POS_CLOTHE_SHOP ((sfVector2f){50, 160})
+    #define RAT_DEFAULT_POS_MARKET ((sfVector2f){30, 240})
+    #define RAT_DEFAULT_POS_MUSEUM ((sfVector2f){15, 530})
+    #define RAT_DEFAULT_POS_MUSEUM_1_TO_E ((sfVector2f){420, 540})
+    #define RAT_DEFAULT_POS_MUSEUM_E_TO_1 ((sfVector2f){435, 1650})
+    #define RAT_DEFAULT_POS_MUSEUM_1_TO_2 ((sfVector2f){2570, 750})
+    #define RAT_DEFAULT_POS_MUSEUM_2_TO_1 ((sfVector2f){940, 1650})
+    #define RAT_DEFAULT_POS_MUSEUM_2_TO_3 ((sfVector2f){2030, 1790})
+    #define RAT_DEFAULT_POS_MUSEUM_3_TO_2 ((sfVector2f){2980, 760})
+    #define RAT_DEFAULT_POS_MUSEUM_3_TO_4 ((sfVector2f){15, 2375})
+    #define RAT_DEFAULT_POS_MUSEUM_4_TO_3 ((sfVector2f){2645, 1790})
 
     // Idle
     #define RAT_IDLE_FRONT_OFFSET 18
@@ -190,42 +190,42 @@
 //////////////////////////////////////////////////////////////////////////////
 // Locations
     // Appartment
-    #define LOCATION_DOOR_APPARTMENT (sfVector2f){145, 280}
+    #define LOCATION_DOOR_APPARTMENT ((sfVector2f){145, 280})
 
     // Bar
-    #define LOCATION_DOOR_BAR (sfVector2f){0, 110}
+    #define LOCATION_DOOR_BAR ((sfVector2f){0, 110})
 
     // City
-    #define LOCATION_APPARTMENT (sfVector2f){2450, 1690}
-    #define LOCATION_BAR (sfVector2f){1008, 1667}
-    #define LOCATION_ICE_SHOP (sfVector2f){904, 1667}
-    #define LOCATION_CLOTHE_SHOP (sfVector2f){573, 1666}
-    #define LOCATION_MARKET (sfVector2f){1510, 1683}
-    #define LOCATION_MUSEUM (sfVector2f){2022, 556}
+    #define LOCATION_APPARTMENT ((sfVector2f){2450, 1690})
+    #define LOCATION_BAR ((sfVector2f){1008, 1667})
+    #define LOCATION_ICE_SHOP ((sfVector2f){904, 1667})
+    #define LOCATION_CLOTHE_SHOP ((sfVector2f){573, 1666})
+    #define LOCATION_MARKET ((sfVector2f){1510, 1683})
+    #define LOCATION_MUSEUM ((sfVector2f){2022, 556})
 
     // Ice Cream Shop
-    #define LOCATION_DOOR_ICE_CREAM_SHOP (sfVector2f){160, 310}
+    #define LOCATION_DOOR_ICE_CREAM_SHOP ((sfVector2f){160, 310})
 
     // Clothe
-    #define LOCATION_DOOR_CLOTHE_STORE (sfVector2f){0, 110}
+    #define LOCATION_DOOR_CLOTHE_STORE ((sfVector2f){0, 110})
 
     // Market
-    #define LOCATION_DOOR_MARKET (sfVector2f){0, 180}
+    #define LOCATION_DOOR_MARKET ((sfVector2f){0, 180})
 
     // Museum
-    #define LOCATION_DOOR_MUSEUM (sfVector2f){10, 500}
-    #define LOCATION_DOOR_MUSEUM_E_TO_1 (sfVector2f){450, 500}
-    #define LOCATION_DOOR_MUSEUM_1_TO_E (sfVector2f){430, 1625}
-    #define LOCATION_DOOR_MUSEUM_1_TO_2 (sfVector2f){950, 1625}
-    #define LOCATION_DOOR_MUSEUM_2_TO_1 (sfVector2f){2565, 725}
-    #define LOCATION_DOOR_MUSEUM_2_TO_3 (sfVector2f){2968, 725}
-    #define LOCATION_DOOR_MUSEUM_3_TO_2 (sfVector2f){2025, 1725}
-    #define LOCATION_DOOR_MUSEUM_3_TO_4 (sfVector2f){2650, 1725}
-    #define LOCATION_DOOR_MUSEUM_4_TO_3 (sfVector2f){10, 2325}
-    #define LOCATION_DOOR_MUSEUM_4_TO_CITY (sfVector2f){500, 2325}
+    #define LOCATION_DOOR_MUSEUM ((sfVector2f){10, 500})
+    #define LOCATION_DOOR_MUSEUM_E_TO_1 ((sfVector2f){450, 500})
+    #define LOCATION_DOOR_MUSEUM_1_TO_E ((sfVector2f){430, 1625})
+    #define LOCATION_DOOR_MUSEUM_1_TO_2 ((sfVector2f){950, 1625})
+    #define LOCATION_DOOR_MUSEUM_2_TO_1 ((sfVector2f){2565, 725})
+    #define LOCATION_DOOR_MUSEUM_2_TO_3 ((sfVector2f){2968, 725})
+    #define LOCATION_DOOR_MUSEUM_3_TO_2 ((sfVector2f){2025, 1725})
+    #define LOCATION_DOOR_MUSEUM_3_TO_4 ((sfVector2f){2650, 1725})
+    #define LOCATION_DOOR_MUSEUM_4_TO_3 ((sfVector2f){10, 2325})
+    #define LOCATION_DOOR_MUSEUM_4_TO_CITY ((sfVector2f){500, 2325})
 
     // Back to museum
-    #define DOOR_BACK_TO_MUSEUM (sfVector2f){0, 573}
+    #define DOOR_BACK_TO_MUSEUM ((sfVector2f){0, 573})
 //////////////////////////////////////////////////////////////////////////////
 
 

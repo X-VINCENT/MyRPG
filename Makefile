@@ -183,6 +183,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
 								event/event_1.c                              \
+								event/check_event.c                          \
 								event/event_2.c                              \
 								event/event_3.c                              \
 								init/abilities/init.c                        \
