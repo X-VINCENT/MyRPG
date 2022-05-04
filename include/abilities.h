@@ -77,12 +77,12 @@
     } abilities_t;
 
     // Position
-    #define POS_ABILITY_TITLE (sfVector2f) {25, 195}
-    #define POS_ABILITY_TITLE_UTILITY (sfVector2f) {393, 195}
-    #define POS_ABILITY_TITLE_STEALTH (sfVector2f) {960, 195}
-    #define POS_ABILITY_TITLE_FIGHT (sfVector2f) {1520, 195}
-    #define POS_ABILITY_TREE (sfVector2f) {960, -169}
-    #define POS_ABILITY_SCROLLING_BAR (sfVector2f) {1845, 479}
-    #define POS_ABILITY_SCROLLING_BAR_INSIDE (sfVector2f) {1845, 629}
+    #define POS_ABILITY_TITLE ((sfVector2f){25, 195})
+    #define POS_ABILITY_TITLE_UTILITY ((sfVector2f){393, 195})
+    #define POS_ABILITY_TITLE_STEALTH ((sfVector2f){960, 195})
+    #define POS_ABILITY_TITLE_FIGHT ((sfVector2f){1520, 195})
+    #define POS_ABILITY_TREE ((sfVector2f){960, -169})
+    #define POS_ABILITY_SCROLLING_BAR ((sfVector2f){1845, 479})
+    #define POS_ABILITY_SCROLLING_BAR_INSIDE ((sfVector2f){1845, 629})
 
 #endif /* !ABILITIES_H_ */

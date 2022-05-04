@@ -13,55 +13,55 @@
     #define MAP_SIZE ((sfVector2f){3000, 2000})
 //////////////////////////////////////////////////////////////////////////////
 // Rects
-    #define R_HTP_EXPLANATION (sfIntRect){2177, 882, 1917, 647}
-    #define R_HTP_APART (sfIntRect){1446, 4352, 1917, 647}
-    #define R_HTP_PNJ (sfIntRect){2203, 63, 1917, 647}
-    #define R_ARROW (sfIntRect){240, 0, 35, 51}
-    #define R_SCROLLING_BAR (sfIntRect){0, 169, 28, 450}
-    #define R_SCROLLING_BAR_INSIDE (sfIntRect){39, 169, 28, 150}
-    #define R_LASERS (sfIntRect){133, 113, 212, 174}
-    #define R_EMPTY_BAR (sfIntRect){0, 637, 500, 18}
-    #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34}
-    #define R_BAR (sfIntRect){0, 660, 500, 20}
-    #define R_KEY_BG (sfIntRect){0, 724, 204, 64}
-    #define R_CROSS (sfIntRect){0, 794, 38, 38}
-    #define R_CHOOSE_KEY (sfIntRect){0, 1606, 504, 219}
+    #define R_HTP_EXPLANATION ((sfIntRect){2177, 882, 1917, 647})
+    #define R_HTP_APART ((sfIntRect){1446, 4352, 1917, 647})
+    #define R_HTP_PNJ ((sfIntRect){2203, 63, 1917, 647})
+    #define R_ARROW ((sfIntRect){240, 0, 35, 51})
+    #define R_SCROLLING_BAR ((sfIntRect){0, 169, 28, 450})
+    #define R_SCROLLING_BAR_INSIDE ((sfIntRect){39, 169, 28, 150})
+    #define R_LASERS ((sfIntRect){133, 113, 212, 174})
+    #define R_EMPTY_BAR ((sfIntRect){0, 637, 500, 18})
+    #define R_CIRCLE_BAR (sfIntRect){0, 686, 34, 34})
+    #define R_BAR ((sfIntRect){0, 660, 500, 20})
+    #define R_KEY_BG ((sfIntRect){0, 724, 204, 64})
+    #define R_CROSS ((sfIntRect){0, 794, 38, 38})
+    #define R_CHOOSE_KEY ((sfIntRect){0, 1606, 504, 219})
 
-    #define R_RAT_FRAME (sfIntRect){0, 1841, 398, 496}
-    #define R_COIN (sfIntRect){0, 2355, 50, 60}
-    #define R_XP (sfIntRect){69, 2355, 70, 67}
-    #define R_ABILITIES (sfIntRect){152, 2355, 50, 50}
+    #define R_RAT_FRAME ((sfIntRect){0, 1841, 398, 496})
+    #define R_COIN ((sfIntRect){0, 2355, 50, 60})
+    #define R_XP ((sfIntRect){69, 2355, 70, 67})
+    #define R_ABILITIES ((sfIntRect){152, 2355, 50, 50})
 
-    #define R_SAVE (sfIntRect){0, 2445, 395, 513}
-    #define R_PLAY (sfIntRect){0, 2979, 78, 78}
-    #define R_ERASE (sfIntRect){94, 2979, 79, 78}
-    #define R_SAVE_MAP (sfIntRect){0, 3074, 300, 200}
+    #define R_SAVE ((sfIntRect){0, 2445, 395, 513})
+    #define R_PLAY ((sfIntRect){0, 2979, 78, 78})
+    #define R_ERASE ((sfIntRect){94, 2979, 79, 78})
+    #define R_SAVE_MAP ((sfIntRect){0, 3074, 300, 200})
 
-    #define R_TREE (sfIntRect){1691, 1846, 1720, 1816}
-    #define R_LITTLE_RECT_UNLOCKED (sfIntRect){0, 3547, 180, 111}
-    #define R_RECT_UNLOCKED (sfIntRect){193, 3547, 400, 111}
-    #define R_LITTLE_RECT_LOCKED (sfIntRect){0, 3675, 180, 111}
-    #define R_RECT_LOCKED (sfIntRect){193, 3675, 400, 111}
-    #define R_KICK (sfIntRect){0, 3801, 400, 111}
-    #define R_VERTICAL_BAR (sfIntRect){0, 3930, 16, 170}
-    #define R_HORIZONTAL_BAR (sfIntRect){20, 3930, 170, 16}
+    #define R_TREE ((sfIntRect){1691, 1846, 1720, 1816})
+    #define R_LITTLE_RECT_UNLOCKED ((sfIntRect){0, 3547, 180, 111})
+    #define R_RECT_UNLOCKED ((sfIntRect){193, 3547, 400, 111})
+    #define R_LITTLE_RECT_LOCKED ((sfIntRect){0, 3675, 180, 111})
+    #define R_RECT_LOCKED (sfIntRect){193, 3675, 400, 111})
+    #define R_KICK ((sfIntRect){0, 3801, 400, 111})
+    #define R_VERTICAL_BAR ((sfIntRect){0, 3930, 16, 170})
+    #define R_HORIZONTAL_BAR ((sfIntRect){20, 3930, 170, 16})
 
-    #define R_BG_SKIN (sfIntRect){0, 4136, 517, 292}
-    #define R_SKIN_UNLOCKED (sfIntRect){0, 4446, 78, 111}
-    #define R_SKIN_LOCKED (sfIntRect){89, 4446, 78, 111}
+    #define R_BG_SKIN ((sfIntRect){0, 4136, 517, 292}
+    #define R_SKIN_UNLOCKED ((sfIntRect){0, 4446, 78, 111})
+    #define R_SKIN_LOCKED ((sfIntRect){89, 4446, 78, 111})
 
-    #define R_RAT_KICK (sfIntRect){22, 487, 23, 22}
-    #define R_RAT_BITE (sfIntRect){184, 534, 20, 21}
+    #define R_RAT_KICK ((sfIntRect){22, 487, 23, 22})
+    #define R_RAT_BITE ((sfIntRect){184, 534, 20, 21})
 
-    #define R_BG_FIGHTS (sfIntRect){1265, 0, 520, 307}
-    #define R_FIGHT_BUTTON (sfIntRect){1791, 0, 74, 26}
-    #define R_RUN_BUTTON (sfIntRect){1873, 0, 46, 26}
-    #define R_ATTACK_BG (sfIntRect){1790, 70, 100, 50}
-    #define R_FILTER (sfIntRect){1890, 127, 100, 50}
-    #define R_BOMB_IDLE (sfIntRect){1788, 31, 24, 21}
-    #define R_BOMB_EXPLOSION (sfIntRect){1880, 31, 65, 32}
-    #define R_RAT_LIFEBAR (sfIntRect){1945, 5, 85, 8}
-    #define R_ENEMY_LIFEBAR (sfIntRect){1945, 19, 85, 8}
+    #define R_BG_FIGHTS ((sfIntRect){1265, 0, 520, 307})
+    #define R_FIGHT_BUTTON ((sfIntRect){1791, 0, 74, 26})
+    #define R_RUN_BUTTON ((sfIntRect){1873, 0, 46, 26})
+    #define R_ATTACK_BG ((sfIntRect){1790, 70, 100, 50})
+    #define R_FILTER ((sfIntRect){1890, 127, 100, 50})
+    #define R_BOMB_IDLE ((sfIntRect){1788, 31, 24, 21})
+    #define R_BOMB_EXPLOSION ((sfIntRect){1880, 31, 65, 32)}
+    #define R_RAT_LIFEBAR ((sfIntRect){1945, 5, 85, 8})
+    #define R_ENEMY_LIFEBAR ((sfIntRect){1945, 19, 85, 8})
 //////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////
