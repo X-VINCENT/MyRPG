@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+void resize_view(game_t *game)
+{
+    sfVector2f size = sfView_getSize(game->view);
+    sfFloatRect visible_area = {0, 0, game->event->event->size.width,
+        game->event->event->size.height};
+    float scale = size.x / visible_area.width;
+
+    sfView_setSize(game->view, (sfVector2f){
+        visible_area.width * scale, visible_area.height * scale});
+}
+
 void call_different_events(game_t *game)
 {
     switch (game->event->event->type) {
