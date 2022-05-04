@@ -47,6 +47,14 @@ void display_rat_kick(game_t *game)
         return sfRenderWindow_drawSprite(w, rat->kick_right, NULL);
 }
 
+void restart_clock_and_reset_biting(game_t *game)
+{
+    rat_t *rat = game->assets->rat;
+
+    rat->is_biting = 0;
+    sfClock_restart(rat->bite_time_clock);
+}
+
 void display_rat_bite(game_t *game)
 {
     rat_t *rat = game->assets->rat;
@@ -66,8 +74,6 @@ void display_rat_bite(game_t *game)
             return sfRenderWindow_drawSprite(w, rat->bite_left, NULL);
         if (rat->right == 1)
             return sfRenderWindow_drawSprite(w, rat->bite_right, NULL);
-    } else {
-        rat->is_biting = 0;
-        sfClock_restart(rat->bite_time_clock);
-    }
+    } else
+        restart_clock_and_reset_biting(game);
 }
