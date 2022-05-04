@@ -81,6 +81,7 @@ void city_stage(game_t *game)
     event_objects(game, game->assets->city->objects, game->keys[INTERACT]);
     rain(game);
     wind(game);
+    fire(game);
     display_minimap(game);
     display_inventory(game);
     check_and_center_view(
