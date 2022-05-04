@@ -130,6 +130,7 @@
     void create_fight(game_t *game, pnj_t *pnj);
 
     // key_pressed.c
+    void rat_jump_in_fights(game_t *game);
     void fights_key_pressed(game_t *game);
 
     // mouse_moved.c
