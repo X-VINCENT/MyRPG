@@ -196,6 +196,7 @@
         sfClock *bite_time_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
+        sfClock *clock_jump;
         int up;
         int down;
         int left;
@@ -209,6 +210,7 @@
         float radius_circle;
         int damage;
         int life;
+        int is_jumping;
     } rat_t;
 
     typedef struct settings_game {
