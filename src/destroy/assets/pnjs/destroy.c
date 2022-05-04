@@ -23,6 +23,7 @@ void destroy_pnjs(pnj_t **pnj)
         sfClock_destroy(pnj[i]->timer_move);
         sfClock_destroy(pnj[i]->walk);
         sfCircleShape_destroy(pnj[i]->circle);
+        sfCircleShape_destroy(pnj[i]->circle_citizens);
         free(pnj[i]);
     }
     free(pnj);
