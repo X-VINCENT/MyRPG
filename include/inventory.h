@@ -30,6 +30,7 @@
     #define R_MONSTER ((sfIntRect){501, 580, 10, 19})
     #define R_CHICKEN ((sfIntRect){120, 447, 24, 12})
     #define R_PIZZA ((sfIntRect){321, 546, 30, 18})
+    #define R_BUCKET_KFC ((sfIntRect){770, 0, 26, 29})
     #define R_TOILET_PAPER ((sfIntRect){724, 0, 14, 18})
     #define R_WATER_BOTTLE ((sfIntRect){750, 0, 10, 18})
 
@@ -45,9 +46,10 @@
     #define S_CAP 8
     #define S_ICE_CREAM 12
     #define S_KNACKI 12
-    #define S_MONSTER 4
-    #define S_CHICKEN 4
-    #define S_PIZZA 4
+    #define S_MONSTER 10
+    #define S_CHICKEN 10
+    #define S_PIZZA 10
+    #define S_BUCKET_KFC 10
     #define S_TOILET_PAPER 12
     #define S_WATER_BOTTLE 12
 
@@ -66,6 +68,7 @@
     #define MONSTER_PRICE 10
     #define CHICKEN_PRICE 10
     #define PIZZA_PRICE 10
+    #define BUCKET_KFC_PRICE 999999
     #define TOILET_PAPER_PRICE 5
     #define WATER_BOTTLE_PRICE 5
 
@@ -85,6 +88,7 @@
         MONSTER,
         CHICKEN,
         PIZZA,
+        BUCKET_KFC,
         TOILET_PAPER,
         WATER_BOTTLE,
         NB_ITEMS

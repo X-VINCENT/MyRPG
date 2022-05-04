@@ -7,6 +7,15 @@
 
 #include "rpg.h"
 
+void check_coll(sfFloatRect r_enemy, sfFloatRect r_rat,
+    game_t *game, enemy_t *enemy)
+{
+    if (sfFloatRect_intersects(&r_enemy, &r_rat, NULL)) {
+        sfSound_play(game->audio->sounds->punch_sound);
+        game->assets->rat->life -= enemy->damage;
+    }
+}
+
 int fight_enemy_rush(game_t *game)
 {
     fights_t *fights = game->fights;
@@ -26,10 +35,8 @@ int fight_enemy_rush(game_t *game)
         enemy->direction = 0;
         return 1;
     }
-    if (sfFloatRect_intersects(&r_enemy, &r_rat, NULL))
-        rat->life -= enemy->damage;
+    check_coll(r_enemy, r_rat, game, enemy);
     fights->as_touched = 1;
-    sfSound_play(game->audio->sounds->punch_sound);
     return 0;
 }
 

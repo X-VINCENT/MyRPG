@@ -28,8 +28,9 @@ void check_win_lose_fights(game_t *game)
     rat_t *rat = game->assets->rat;
     enemy_t *enemy = game->fights->enemy;
 
-    if (enemy->life <= 0) {
+    if (enemy->life <= 0 || sfSprite_getPosition(rat->idle_front).x > 540) {
         game->data->current->fights_won += 1;
+        game->data->current->nb_xps += 75;
         game->stage = game->last_stage;
     }
     if (rat->life <= 0) {

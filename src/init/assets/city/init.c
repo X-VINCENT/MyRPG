@@ -24,6 +24,7 @@ const int name_objects_city[] = {
     KNACKI,
     KNACKI,
     KNACKI,
+    BUCKET_KFC,
     -1
 };
 
@@ -44,6 +45,7 @@ const sfVector2f pos_objects_city[] = {
     {504, 1352},
     {1851, 819},
     {2003, 1890},
+    {453, 288},
     {0, 0}
 };
 
@@ -64,6 +66,7 @@ const int objects_areas_city[] = {
     10,
     10,
     10,
+    1,
     -1
 };
 
