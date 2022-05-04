@@ -23,6 +23,7 @@ const sfIntRect r_objects[] = {
     R_MONSTER,
     R_CHICKEN,
     R_PIZZA,
+    R_BUCKET_KFC,
     R_TOILET_PAPER,
     R_WATER_BOTTLE,
     {0, 0, 0, 0}

@@ -23,6 +23,7 @@ const sfIntRect r_items[] = {
     R_MONSTER,
     R_CHICKEN,
     R_PIZZA,
+    R_BUCKET_KFC,
     R_TOILET_PAPER,
     R_WATER_BOTTLE,
     {0, 0, 0, 0}
@@ -44,6 +45,7 @@ const int item_price[] = {
     MONSTER_PRICE,
     CHICKEN_PRICE,
     PIZZA_PRICE,
+    BUCKET_KFC_PRICE,
     TOILET_PAPER_PRICE,
     WATER_BOTTLE_PRICE,
     -1
@@ -59,6 +61,7 @@ const int item_legality[] = {
     LEGAL,
     ILLEGAL,
     ILLEGAL,
+    LEGAL,
     LEGAL,
     LEGAL,
     LEGAL,
@@ -85,6 +88,7 @@ const float item_scale[] = {
     S_MONSTER,
     S_CHICKEN,
     S_PIZZA,
+    S_BUCKET_KFC,
     S_TOILET_PAPER,
     S_WATER_BOTTLE,
     -1
