@@ -14,6 +14,8 @@ void resize_view(game_t *game)
         game->event->event->size.height};
     float scale = size.x / visible_area.width;
 
+    sfRenderWindow_setSize(game->window,
+        (sfVector2u){visible_area.width, visible_area.height});
     sfView_setSize(game->view, (sfVector2f){
         visible_area.width * scale, visible_area.height * scale});
 }

@@ -39,13 +39,12 @@ void init_settings_graphics_res(game_t *game)
 
     s_graphics->res_left = create_arrow(game, p_arrow_left, scale);
     s_graphics->res_right = create_arrow(game, p_arrow_right, invert_scale);
-    s_graphics->res = malloc(sizeof(sfText *) * 6);
-    s_graphics->res[0] = create_text(FONT_BUENARD, sfWhite, 36, "640x480");
-    s_graphics->res[1] = create_text(FONT_BUENARD, sfWhite, 36, "1280x720");
-    s_graphics->res[2] = create_text(FONT_BUENARD, sfWhite, 36, "1920x1080");
-    s_graphics->res[3] = create_text(FONT_BUENARD, sfWhite, 36, "2560x1440");
-    s_graphics->res[4] = create_text(FONT_BUENARD, sfWhite, 36, "3840x2160");
-    s_graphics->res[5] = NULL;
+    s_graphics->res = malloc(sizeof(sfText *) * 5);
+    s_graphics->res[0] = create_text(FONT_BUENARD, sfWhite, 36, "1280x720");
+    s_graphics->res[1] = create_text(FONT_BUENARD, sfWhite, 36, "1920x1080");
+    s_graphics->res[2] = create_text(FONT_BUENARD, sfWhite, 36, "2560x1440");
+    s_graphics->res[3] = create_text(FONT_BUENARD, sfWhite, 36, "3840x2160");
+    s_graphics->res[4] = NULL;
     for (int idx = 0; s_graphics->res[idx] != NULL; idx += 1) {
         set_text_origin(s_graphics->res[idx]);
         sfText_setPosition(s_graphics->res[idx], p_res);
