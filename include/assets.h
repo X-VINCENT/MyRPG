@@ -63,17 +63,17 @@
     #define R_RAT_LIFEBAR ((sfIntRect){1945, 5, 85, 8})
     #define R_ENEMY_LIFEBAR ((sfIntRect){1945, 19, 85, 8})
 
-    #define R_BG_SHOP ((sfIntRect){4307, 0, 2482, 1892})
-    #define R_BUY_OFF ((sfIntRect){6893, 0, 718, 148})
-    #define R_EXIT_OFF ((sfIntRect){6984, 156, 537, 134})
-    #define R_BUY_ON ((sfIntRect){6891, 364, 722, 152})
-    #define R_EXIT_ON ((sfIntRect){6983, 525, 542, 136})
+    #define R_BG_SHOP ((sfIntRect){4283, 20, 3414, 1920})
+    #define R_BUY_OFF ((sfIntRect){6893, 2000, 718, 148})
+    #define R_EXIT_OFF ((sfIntRect){6984, 2156, 537, 134})
+    #define R_BUY_ON ((sfIntRect){6891, 2364, 722, 152})
+    #define R_EXIT_ON ((sfIntRect){6983, 2525, 542, 136})
     #define R_BOMB_OFF ((sfIntRect){4310, 1994, 718, 1273})
     #define R_KIT_OFF ((sfIntRect){5097, 1995, 718, 1273})
-    #define R_SOLD_OUT_OFF ((sfIntRect){5888, 1996, 718, 1273})
+    #define R_SOLD_OFF ((sfIntRect){5888, 1996, 718, 1273})
     #define R_BOMB_ON ((sfIntRect){4310, 3362, 728, 1285})
     #define R_KIT_ON ((sfIntRect){5093, 3362, 727, 1285})
-    #define R_SOLD_OUT_ON ((sfIntRect){5884, 3362, 727, 1285})
+    #define R_SOLD_ON ((sfIntRect){5884, 3362, 727, 1285})
 //////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////

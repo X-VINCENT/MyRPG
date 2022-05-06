@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+void select_game_stage_4(game_t *game)
+{
+    switch (game->stage) {
+        case SHOP_STAGE:
+            shop_stage(game);
+        default:
+            break;
+    }
+    return check_escape(game);
+}
+
 void select_game_stage_3(game_t *game)
 {
     switch (game->stage) {
@@ -28,7 +39,7 @@ void select_game_stage_3(game_t *game)
         default:
             break;
     }
-    return check_escape(game);
+    select_game_stage_4(game);
 }
 
 void select_game_stage_2(game_t *game)

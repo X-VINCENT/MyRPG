@@ -25,6 +25,7 @@ void destroy_assets_2(assets_t *assets)
     destroy_clothe(assets->clothe);
     destroy_museum(assets->museum);
     destroy_settings(assets->settings);
+    destroy_shop(assets->shop);
     destroy_stats(assets->stats);
     destroy_top_bar(assets->top_bar);
     destroy_pnjs(assets->pnj);

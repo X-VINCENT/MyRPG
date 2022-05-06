@@ -45,6 +45,7 @@ void set_stats_values(game_t *game)
 
 void display_wallet(game_t *game, wallet_t *wallet)
 {
+    set_text_origin_middle_right(wallet->value);
     sfRenderWindow_drawSprite(game->window, wallet->logo, NULL);
     sfRenderWindow_drawText(game->window, wallet->title, NULL);
     sfRenderWindow_drawText(game->window, wallet->value, NULL);
@@ -52,6 +53,7 @@ void display_wallet(game_t *game, wallet_t *wallet)
 
 void display_stat(game_t *game, stat_data_t *stat_data)
 {
+    set_text_origin_middle_right(stat_data->value);
     sfRenderWindow_drawText(game->window, stat_data->title, NULL);
     sfRenderWindow_drawText(game->window, stat_data->value, NULL);
 }

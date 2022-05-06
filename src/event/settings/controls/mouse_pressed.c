@@ -7,6 +7,14 @@
 
 #include "rpg.h"
 
+int check_key_already_used_reset(game_t *game, int idx_key)
+{
+    for (int idx = 0; game->keys[idx] != sfKeyUnknown; idx += 1)
+        if (game->default_keys[idx_key] == game->keys[idx])
+            return 1;
+    return 0;
+}
+
 void settings_controls_mouse_pressed_key(game_t *game, int idx_key)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
@@ -20,6 +28,8 @@ void settings_controls_mouse_pressed_key(game_t *game, int idx_key)
     if (sfFloatRect_contains(&r_key, coords.x, coords.y))
         s_controls->key_selected = idx_key;
     if (sfFloatRect_contains(&r_reset, coords.x, coords.y)) {
+        if (check_key_already_used_reset(game, idx_key))
+            return;
         game->keys[idx_key] = game->default_keys[idx_key];
         sfText_setString(s_key->key, get_key_name(
             game->default_keys[idx_key]));

@@ -51,23 +51,23 @@ void init_titles_load_save(game_t *game, load_save_t *load_save, int pos_x)
 
 void init_values_load_save(game_t *game, load_save_t *load_save, int pos_x)
 {
-    sfVector2f p_time_played = init_pos(pos_x + 120, 490);
-    sfVector2f p_money = init_pos(pos_x + 120, 540);
-    sfVector2f p_xp = init_pos(pos_x + 120, 590);
+    sfVector2f p_time_played = init_pos(pos_x + 125, 490);
+    sfVector2f p_money = init_pos(pos_x + 125, 540);
+    sfVector2f p_xp = init_pos(pos_x + 125, 590);
     sfVector2f scale = init_scale(1, 1);
 
     load_save->time_played = create_text(
         FONT_BUENARD, sfWhite, 32, "0");
     sfText_setPosition(load_save->time_played, p_time_played);
-    set_text_origin(load_save->time_played);
+    set_text_origin_middle_right(load_save->time_played);
     load_save->money = create_text(
         FONT_BUENARD, sfWhite, 32, "0");
     sfText_setPosition(load_save->money, p_money);
-    set_text_origin(load_save->money);
+    set_text_origin_middle_right(load_save->money);
     load_save->xp = create_text(
         FONT_BUENARD, sfWhite, 32, "0");
     sfText_setPosition(load_save->xp, p_xp);
-    set_text_origin(load_save->xp);
+    set_text_origin_middle_right(load_save->xp);
 }
 
 void init_empty_load_save(game_t *game, load_save_t *load_save, int pos_x)
