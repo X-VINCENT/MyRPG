@@ -33,7 +33,6 @@ void init_howtoplay_sprites(game_t *game)
     howtoplay_t *howtoplay = game->assets->howtoplay;
     sfIntRect r_bg = init_rect(0, 0, 1920, 1080);
     sfVector2f p_bg = init_pos(0, 0);
-    sfVector2f p_sprites = init_pos(960, 479);
     sfVector2f p_left = init_pos(80, 480);
     sfVector2f p_right = init_pos(1840, 480);
     sfVector2f scale = init_scale(1, 1);
@@ -47,17 +46,11 @@ void init_howtoplay_sprites(game_t *game)
     init_howtoplay_sprites_2(game);
 }
 
-void init_howtoplay_texts(game_t *game)
-{
-    howtoplay_t *howtoplay = game->assets->howtoplay;
-}
-
 void init_howtoplay(game_t *game)
 {
     game->assets->howtoplay = malloc(sizeof(howtoplay_t));
 
     init_howtoplay_sprites(game);
-    init_howtoplay_texts(game);
     game->assets->howtoplay->screen = 0;
     game->assets->howtoplay->clock = sfClock_create();
 }

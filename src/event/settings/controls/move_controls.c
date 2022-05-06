@@ -46,9 +46,6 @@ void move_controls_down(game_t *game)
 void settings_controls_scrolling_bar_event(game_t *game)
 {
     settings_controls_t *s_controls = game->assets->settings->controls;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
     float delta = game->event->event->mouseWheelScroll.delta;
 
     if (time_elapsed(s_controls->scrolling_clock) > 0.01) {

@@ -44,7 +44,6 @@ void fight_enemy_flee(game_t *game)
 {
     fights_t *fights = game->fights;
     enemy_t *enemy = fights->enemy;
-    rat_t *rat = game->assets->rat;
     sfVector2f p_enemy = sfSprite_getPosition(enemy->left);
     sfVector2f offset = {1, 0};
 

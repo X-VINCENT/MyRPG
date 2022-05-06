@@ -14,6 +14,13 @@ void fight_bomb(game_t *game)
     fights->bomb = 0;
 }
 
+void reset_actions(game_t *game)
+{
+    game->fights->bite = 0;
+    game->fights->kick = 0;
+    game->fights->as_touched = 0;
+}
+
 void remove_illegal_items_inventory(game_t *game)
 {
     item_t **items = game->inventory->items;
@@ -25,22 +32,22 @@ void remove_illegal_items_inventory(game_t *game)
 
 void check_win_lose_fights(game_t *game)
 {
-    rat_t *rat = game->assets->rat;
-    enemy_t *enemy = game->fights->enemy;
-
-    if (enemy->life <= 0 || sfSprite_getPosition(rat->idle_front).x > 540) {
-        game->assets->pnj[enemy->idx]->is_dead = 1;
+    if (game->fights->enemy->life <= 0 ||
+        sfSprite_getPosition(game->assets->rat->idle_front).x > 540) {
+        game->assets->pnj[game->fights->enemy->idx]->is_dead = 1;
         game->data->current->fights_won += 1;
         game->data->current->nb_xps += 75;
         set_rats_position(game, game->fights->last_position);
+        reset_actions(game);
         game->stage = game->last_stage;
     }
-    if (rat->life <= 0) {
+    if (game->assets->rat->life <= 0) {
         remove_illegal_items_inventory(game);
         game->data->current->fights_lost += 1;
-        set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
-        rat->speed = RAT_SPEED_APPARTMENT;
+        game->assets->rat->speed = RAT_SPEED_APPARTMENT;
         game->assets->rat->life = 50;
+        set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
+        reset_actions(game);
         game->stage = APPARTMENT_STAGE;
     }
 }

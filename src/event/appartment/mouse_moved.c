@@ -30,9 +30,6 @@ void skin_selector_mouse_moved(game_t *game)
 void appartment_mouse_moved(game_t *game)
 {
     appartment_t *appartment = game->assets->appartment;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
 
     if (appartment->is_skin_selector_opened)
         skin_selector_mouse_moved(game);

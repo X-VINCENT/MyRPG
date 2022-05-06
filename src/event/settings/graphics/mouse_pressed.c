@@ -61,10 +61,6 @@ void mouse_pressed_vsync_settings(game_t *game)
 
 void settings_graphics_mouse_pressed(game_t *game)
 {
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
-
     mouse_pressed_fps_settings(game);
     mouse_pressed_res_settings(game);
     mouse_pressed_vsync_settings(game);

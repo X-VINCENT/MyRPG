@@ -65,6 +65,5 @@ void appartment_stage(game_t *game)
         check_rat_key_pressed(game);
     display_objects(game->window, apart->objects);
     event_objects(game, apart->objects, game->keys[INTERACT]);
-    display_inventory(game);
     display_cursor(game);
 }

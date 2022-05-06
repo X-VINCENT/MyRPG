@@ -9,8 +9,5 @@
 
 void abilities_key_pressed(game_t *game)
 {
-    abilities_t *abilities = game->abilities;
-    sfEvent *event = game->event->event;
-
     top_bar_key_pressed(game);
 }

@@ -52,7 +52,6 @@ void right_car(game_t *game)
 {
     sfVector2f position_car =
         sfSprite_getPosition(game->assets->car_right->car);
-    sfFloatRect rect;
 
     if (time_elapsed(game->assets->car_right->clock) > 0.02
         && check_car_interesect_two(game, game->assets->car_right) == 0) {
@@ -62,7 +61,6 @@ void right_car(game_t *game)
     }
     if (time_elapsed(game->assets->car_right->clock_animation) > 0.8) {
         animate_sprite(game->assets->car_right->car, 64, 384, 960);
-        rect = sfSprite_getGlobalBounds(game->assets->car_right->car);
         sfClock_restart(game->assets->car_right->clock_animation);
     }
 }

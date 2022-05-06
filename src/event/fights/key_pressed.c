@@ -40,8 +40,6 @@ void rat_jump_in_fights(game_t *game)
 
 void fights_key_pressed(game_t *game)
 {
-    fights_t *fights = game->fights;
-    sfEvent *event = game->event->event;
     sfVector2f p_rat = sfSprite_getPosition(game->assets->rat->idle_front);
 
     if (sfKeyboard_isKeyPressed(game->keys[DODGE]) && p_rat.y >= 190) {

@@ -14,12 +14,12 @@ void init_sprites_fights(game_t *game)
     sfVector2f p_run = {370, 289};
     sfVector2f scale = {1, 1};
 
-    game->fights->fight_button = create_sprite(
+    fights->fight_button = create_sprite(
         game->textures->gui, R_FIGHT_BUTTON, p_fight, scale);
-    game->fights->run_button = create_sprite(
+    fights->run_button = create_sprite(
         game->textures->gui, R_RUN_BUTTON, p_run, scale);
-    set_sprite_origin(game->fights->fight_button, R_FIGHT_BUTTON);
-    set_sprite_origin(game->fights->run_button, R_RUN_BUTTON);
+    set_sprite_origin(fights->fight_button, R_FIGHT_BUTTON);
+    set_sprite_origin(fights->run_button, R_RUN_BUTTON);
 }
 
 attack_t *init_attack(game_t *game, sfIntRect r,

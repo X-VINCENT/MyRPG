@@ -29,7 +29,6 @@ void init_settings_controls_choose_key_quit(game_t *game)
     settings_choose_key_t *s_choose_key =
         game->assets->settings->controls->choose_key;
     sfVector2f pos = init_pos(960, 520);
-    sfVector2f scale = init_scale(1, 1);
 
     s_choose_key->quit = create_text(
         FONT_BUENARD, sfWhite, 36, ENGLISH_QUIT);

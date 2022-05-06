@@ -27,9 +27,6 @@ void settings_texts_mouse_moved(game_t *game)
 void settings_mouse_moved(game_t *game)
 {
     settings_t *settings = game->assets->settings;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
 
     if (settings->controls->key_selected >= 0) {
         settings_mouse_moved_choose_key(game);

@@ -9,8 +9,5 @@
 
 void shop_mouse_moved(game_t *game)
 {
-    shop_t *shop = game->assets->shop;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
+    return;
 }

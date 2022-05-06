@@ -9,8 +9,8 @@
 
 void init_texts_skin_selector(game_t *game, skin_selector_t *skin_selector)
 {
-    sfVector2f p_title = init_pos(258, 45);
-    sfVector2f p_money = init_pos(240, 260);
+    sfVector2f p_title = init_pos(258, 35);
+    sfVector2f p_money = init_pos(240, 250);
 
     skin_selector->title = create_text(
         FONT_BUENARD, sfWhite, 24, ENGLISH_CHOOSE_SKIN);
@@ -24,7 +24,7 @@ void init_texts_skin_selector(game_t *game, skin_selector_t *skin_selector)
 void init_sprites_skin_selector(game_t *game, skin_selector_t *skin_selector)
 {
     sfVector2f p_bg = init_pos(0, 0);
-    sfVector2f p_coin = init_pos(276, 271);
+    sfVector2f p_coin = init_pos(278, 261);
     sfVector2f s_bg = init_scale(2, 2);
     sfVector2f s_coin = {0.4, 0.4};
 
