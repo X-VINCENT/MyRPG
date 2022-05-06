@@ -25,4 +25,6 @@ void init_fights_enemy(game_t *game)
     game->fights->enemy->clock = sfClock_create();
     game->fights->enemy->damage = 0;
     game->fights->enemy->life = 0;
+    game->fights->enemy->direction = 0;
+    game->fights->enemy->idx = 0;
 }

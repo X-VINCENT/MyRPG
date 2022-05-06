@@ -29,19 +29,19 @@ void check_win_lose_fights(game_t *game)
     enemy_t *enemy = game->fights->enemy;
 
     if (enemy->life <= 0 || sfSprite_getPosition(rat->idle_front).x > 540) {
+        game->assets->pnj[enemy->idx]->is_dead = 1;
         game->data->current->fights_won += 1;
         game->data->current->nb_xps += 75;
+        set_rats_position(game, game->fights->last_position);
         game->stage = game->last_stage;
     }
     if (rat->life <= 0) {
         remove_illegal_items_inventory(game);
         game->data->current->fights_lost += 1;
-        game->stage = APPARTMENT_STAGE;
-        sfView_setCenter(game->view, VIEW_APPARTMENT_SIZE);
-        sfView_setSize(game->view, VIEW_APPARTMENT_SIZE);
         set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
         rat->speed = RAT_SPEED_APPARTMENT;
         game->assets->rat->life = 50;
+        game->stage = APPARTMENT_STAGE;
     }
 }
 

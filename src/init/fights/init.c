@@ -69,9 +69,9 @@ void init_fights_attacks(game_t *game)
     fights->attack_1 = init_attack(game, R_RAT_KICK, p_1, ENGLISH_KICK);
     fights->attack_2 = init_attack(game, R_RAT_BITE, p_2, ENGLISH_BITE);
     fights->attack_3 = init_attack(game, R_BOMB_IDLE, p_3, ENGLISH_BOMB);
-    set_attack_values(fights->attack_1, 0.2, 87, 10);
-    set_attack_values(fights->attack_2, 1000, 204, 15);
-    set_attack_values(fights->attack_3, 0.2, 1881, 25);
+    set_attack_values(fights->attack_1, 0.2, 87, 25);
+    set_attack_values(fights->attack_2, 1000, 204, 30);
+    set_attack_values(fights->attack_3, 0.2, 1881, 50);
 }
 
 void init_fights(game_t *game)
@@ -92,4 +92,5 @@ void init_fights(game_t *game)
     game->fights->bite = 0;
     game->fights->bomb = 0;
     game->fights->as_touched = 0;
+    game->fights->last_position = init_pos(0, 0);
 }

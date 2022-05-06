@@ -22,6 +22,7 @@
         int damage;
         int life;
         int direction;
+        int idx;
     } enemy_t;
 
     typedef struct attack {
@@ -61,6 +62,7 @@
         sfText *win;
         sfText *loose;
         sfClock *result_clock;
+        sfVector2f last_position;
         int fight_status;
         int to_attack;
         int kick;

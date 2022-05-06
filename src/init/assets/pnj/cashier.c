@@ -8,8 +8,8 @@
 #include "rpg.h"
 
 char *message_cashier[] = {
-    "Hello do you want to sell anything ?",
-    "Select an item to sell in your inventory and press Y to sell it",
+    "Hello do you want to sell or buy anything ?",
+    "To buy an item, press Y. To sell an item, select it and press U.",
     NULL
 };
 

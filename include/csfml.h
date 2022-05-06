@@ -88,6 +88,7 @@
         const char *font_path, sfColor color, int size, const char *string);
     void set_text_origin(sfText *text);
     void set_text_origin_middle_left(sfText *text);
+    void set_text_origin_middle_right(sfText *text);
     void destroy_text(sfText *text);
 
 // View

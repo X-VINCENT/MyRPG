@@ -20,6 +20,17 @@ void resize_view(game_t *game)
         visible_area.width * scale, visible_area.height * scale});
 }
 
+void call_different_events_2(game_t *game)
+{
+    switch (game->event->event->type) {
+        case sfEvtMouseButtonReleased:
+            mouse_released(game);
+            break;
+        default:
+            break;
+    }
+}
+
 void call_different_events(game_t *game)
 {
     switch (game->event->event->type) {
@@ -41,4 +52,5 @@ void call_different_events(game_t *game)
         default:
             break;
     }
+    call_different_events_2(game);
 }

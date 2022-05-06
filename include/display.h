@@ -78,9 +78,9 @@
 
 // Pnj
     // display.c
-    void display_pnj(game_t *game, pnj_t *pnj);
+    void display_pnj(game_t *game, pnj_t *pnj, int idx);
     void move_circle(game_t *game, pnj_t *pnj);
-    void check_intersect_circle(game_t *game, pnj_t *pnj);
+    void check_intersect_circle(game_t *game, pnj_t *pnj, int idx);
     void move_pnj(game_t *game, int nbr_animated_pnj);
 
 // Clothe
@@ -120,6 +120,10 @@
 
     // graphics.c
     void display_settings_graphics(game_t *game);
+
+// Shop
+    // display.c
+    void display_shop(game_t *game);
 
 // Stats
     // display.c
