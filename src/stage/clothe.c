@@ -21,5 +21,7 @@ void clothe_stage(game_t *game)
         game->window, game->assets->clothe->bg_top, NULL);
     display_circle_rat(game);
     check_rat_key_pressed(game);
+    display_objects(game->window, game->assets->clothe->objects);
+    event_objects(game, game->assets->clothe->objects, game->keys[INTERACT]);
     display_inventory(game);
 }

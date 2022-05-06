@@ -87,6 +87,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } ice_t;
 
     typedef struct market {
@@ -100,6 +101,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } clothe_t;
 
     typedef struct doors {
