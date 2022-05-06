@@ -10,7 +10,7 @@
 sfRenderWindow *create_window(const char *title, int width, int height)
 {
     sfVideoMode mode = {width, height, 32};
-    sfUint32 style = sfClose | sfResize;
+    sfUint32 style = sfTitlebar | sfClose | sfResize;
     sfContextSettings *settings = NULL;
     sfRenderWindow *window = NULL;
 

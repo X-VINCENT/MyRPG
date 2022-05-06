@@ -22,5 +22,9 @@ void sell(game_t *game)
             game->data->current->nb_xps += 15;
             item->name = EMPTY;
         }
+        if (sfKeyboard_isKeyPressed(sfKeyU)) {
+            game->last_stage = game->stage;
+            game->stage = SHOP_STAGE;
+        }
     }
 }

@@ -83,7 +83,7 @@ void change_text_and_box_message_pos(game_t *game, pnj_t *pnj)
     sfSprite_setPosition(pnj->message_box, message_box_pos);
 }
 
-void display_pnj(game_t *game, pnj_t *pnj)
+void display_pnj(game_t *game, pnj_t *pnj, int idx)
 {
     int stop = 0;
 
@@ -92,7 +92,7 @@ void display_pnj(game_t *game, pnj_t *pnj)
         return;
     sfRenderWindow_drawSprite(game->window, pnj->sprite, NULL);
     move_circle(game, pnj);
-    check_intersect_circle(game, pnj);
+    check_intersect_circle(game, pnj, idx);
     if (check_pnj_intersects(pnj, game) == 1
         && pnj->text == true
         && pnj->display_the_text == true

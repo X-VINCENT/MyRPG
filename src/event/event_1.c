@@ -87,3 +87,14 @@ void mouse_moved(game_t *game)
             break;
     }
 }
+
+void mouse_released(game_t *game)
+{
+    switch (game->stage) {
+        case SHOP_STAGE:
+            shop_mouse_released(game);
+            break;
+        default:
+            break;
+    }
+}
