@@ -17,17 +17,11 @@ void init_game_menu_sprites(game_t *game)
     game_menu->bg = create_sprite(game->textures->menu_bg, r_bg, p_bg, scale);
 }
 
-void init_game_menu_texts(game_t *game)
-{
-    game_menu_t *game_menu = game->assets->game_menu;
-}
-
 void init_game_menu(game_t *game)
 {
     game->assets->game_menu = malloc(sizeof(game_menu_t));
 
     init_game_menu_sprites(game);
-    init_game_menu_texts(game);
     game->assets->game_menu->save_1 = init_load_save(game, 430);
     game->assets->game_menu->save_2 = init_load_save(game, 960);
     game->assets->game_menu->save_3 = init_load_save(game, 1490);

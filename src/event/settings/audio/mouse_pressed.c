@@ -85,11 +85,6 @@ void settings_audio_mouse_pressed_effects_bar(game_t *game)
 
 void settings_audio_mouse_pressed(game_t *game)
 {
-    settings_audio_t *s_audio = game->assets->settings->audio;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
-
     settings_audio_mouse_pressed_music(game);
     settings_audio_mouse_pressed_music_bar(game);
     settings_audio_mouse_pressed_effects(game);

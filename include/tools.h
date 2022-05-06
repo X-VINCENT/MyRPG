@@ -125,13 +125,6 @@
 // arrow.c
 sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
 
-// audio.c
-void down_volume(game_t *game);
-void up_volume(game_t *game);
-void down_sounds(game_t *game);
-void up_sounds(game_t *game);
-void stop_musics(game_t *game);
-
 // fps.c
 void down_fps(game_t *game);
 void up_fps(game_t *game);

@@ -12,7 +12,6 @@ stat_data_t *init_stat(game_t *game, int pos_y, char *title)
     stat_data_t *stat_data = malloc(sizeof(stat_data_t));
     sfVector2f p_title = init_pos(1250, pos_y);
     sfVector2f p_value = init_pos(1800, pos_y - 8);
-    sfVector2f scale = init_scale(1, 1);
 
     stat_data->title = create_text(FONT_BUENARD, sfWhite, 36, title);
     stat_data->value = create_text(FONT_BUENARD, sfWhite, 36, "0");

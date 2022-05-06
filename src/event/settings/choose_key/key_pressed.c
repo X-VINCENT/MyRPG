@@ -61,10 +61,12 @@ void settings_key_pressed_choose_key(game_t *game)
     sfEvent *event = game->event->event;
 
     for (int idx = 0; idx != NB_KEYS; idx += 1)
-        if (event->key.code == game->keys[idx] &&
-            s_controls->key_selected != idx || event->key.code >= sfKeyNum1 &&
-            event->key.code <= sfKeyNum9 || event->key.code == sfKeyY ||
-            event->key.code == sfKeyU)
+        if ((event->key.code == game->keys[idx]) &&
+            (s_controls->key_selected != idx) ||
+            (event->key.code >= sfKeyNum1) &&
+            (event->key.code <= sfKeyNum9) ||
+            (event->key.code == sfKeyY) ||
+            (event->key.code == sfKeyU))
             return display_key_already_used(game);
     game->keys[s_controls->key_selected] = event->key.code;
     reset_choose_key_texts(game);

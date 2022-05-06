@@ -49,7 +49,7 @@ void set_ability_stealth_2(game_t *game, int idx)
 {
     rat_t *rat = game->assets->rat;
 
-    if (idx = STEALTH_RANGE_20)
+    if (idx == STEALTH_RANGE_20)
         rat->radius_circle = RAT_RADIUS_20;
     if (idx == STEALTH_ILLEGAL_2)
         return;

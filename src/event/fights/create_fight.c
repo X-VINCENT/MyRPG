@@ -20,6 +20,11 @@ void create_fight(game_t *game, pnj_t *pnj, int idx)
     enemy->idx = idx;
     game->fights->last_position = sfSprite_getPosition(
         game->assets->rat->idle_front);
+    game->assets->rat->up = 0;
+    game->assets->rat->down = 0;
+    game->assets->rat->left = 0;
+    game->assets->rat->right = 1;
+    game->fights->to_attack = RAT;
     set_rats_position(game, (sfVector2f){140, 190});
     game->fights->to_attack = RAT;
     game->last_stage = game->stage;

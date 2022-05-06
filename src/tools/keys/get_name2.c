@@ -29,7 +29,7 @@ const char *get_key_name_10(sfKeyCode key)
         return "F3";
     if (key == sfKeyF4)
         return "F4";
-    get_key_name_11(key);
+    return get_key_name_11(key);
 }
 
 const char *get_key_name_9(sfKeyCode key)
@@ -52,7 +52,7 @@ const char *get_key_name_9(sfKeyCode key)
         return "Numpad3";
     if (key == sfKeyNumpad4)
         return "Numpad4";
-    get_key_name_10(key);
+    return get_key_name_10(key);
 }
 
 const char *get_key_name_8(sfKeyCode key)
@@ -75,7 +75,7 @@ const char *get_key_name_8(sfKeyCode key)
         return "Multiply";
     if (key == sfKeyDivide)
         return "Divide";
-    get_key_name_9(key);
+    return get_key_name_9(key);
 }
 
 const char *get_key_name_7(sfKeyCode key)
@@ -98,7 +98,7 @@ const char *get_key_name_7(sfKeyCode key)
         return "Tab";
     if (key == sfKeyPageUp)
         return "PageUp";
-    get_key_name_8(key);
+    return get_key_name_8(key);
 }
 
 const char *get_key_name_6(sfKeyCode key)
@@ -121,5 +121,5 @@ const char *get_key_name_6(sfKeyCode key)
         return "Quote";
     if (key == sfKeySlash)
         return "Slash";
-    get_key_name_7(key);
+    return get_key_name_7(key);
 }

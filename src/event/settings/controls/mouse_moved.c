@@ -49,11 +49,6 @@ void settings_controls_key_buttons_hover(game_t *game)
 
 void settings_controls_mouse_moved(game_t *game)
 {
-    settings_controls_t *s_controls = game->assets->settings->controls;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
-
     settings_controls_reset_buttons_hover(game);
     settings_controls_key_buttons_hover(game);
 }

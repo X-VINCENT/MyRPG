@@ -19,7 +19,7 @@ void destroy_wallet(wallet_t *wallet)
 
 void destroy_stat(stat_data_t *stat_data)
 {
-    if (!stat)
+    if (!stat_data)
         return;
     destroy_text(stat_data->title);
     destroy_text(stat_data->value);

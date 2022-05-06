@@ -33,7 +33,6 @@ void init_titles_load_save(game_t *game, load_save_t *load_save, int pos_x)
     sfVector2f p_title_time_played = init_pos(pos_x - 170, 490);
     sfVector2f p_title_money = init_pos(pos_x - 170, 540);
     sfVector2f p_title_xp = init_pos(pos_x - 170, 590);
-    sfVector2f scale = init_scale(1, 1);
 
     load_save->title_time_played = create_text(
         FONT_BUENARD, sfWhite, 32, ENGLISH_TIME_PLAYED);
@@ -54,7 +53,6 @@ void init_values_load_save(game_t *game, load_save_t *load_save, int pos_x)
     sfVector2f p_time_played = init_pos(pos_x + 125, 490);
     sfVector2f p_money = init_pos(pos_x + 125, 540);
     sfVector2f p_xp = init_pos(pos_x + 125, 590);
-    sfVector2f scale = init_scale(1, 1);
 
     load_save->time_played = create_text(
         FONT_BUENARD, sfWhite, 32, "0");

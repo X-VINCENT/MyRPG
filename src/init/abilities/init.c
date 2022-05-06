@@ -167,7 +167,6 @@ void init_ability_texts(game_t *game, ability_t *ability, int idx)
         abilities_pos[idx].x, abilities_pos[idx].y - 25};
     sfVector2f p_text_price = {
         abilities_pos[idx].x, abilities_pos[idx].y + 10};
-    sfVector2f scale = init_scale(1, 1);
 
     ability->text = create_text(FONT_BUENARD, sfWhite, 22,
         english_abilities_texts[idx]);

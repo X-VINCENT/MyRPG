@@ -37,8 +37,6 @@ void display_settings_audio_effects(game_t *game)
 
 void display_settings_audio(game_t *game)
 {
-    settings_audio_t *s_audio = game->assets->settings->audio;
-
     display_settings_audio_music(game);
     display_settings_audio_effects(game);
 }
