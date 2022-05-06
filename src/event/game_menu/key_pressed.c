@@ -9,8 +9,5 @@
 
 void game_menu_key_pressed(game_t *game)
 {
-    game_menu_t *game_menu = game->assets->game_menu;
-    sfEvent *event = game->event->event;
-
     top_bar_key_pressed(game);
 }

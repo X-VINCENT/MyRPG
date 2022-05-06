@@ -6,6 +6,24 @@
 */
 
 #include "rpg.h"
+void set_rats_textures_2(game_t *game, const sfTexture *texture)
+{
+    rat_t *rat = game->assets->rat;
+
+    sfSprite_setTexture(rat->dodge_up, texture, sfFalse);
+    sfSprite_setTexture(rat->dodge_down, texture, sfFalse);
+    sfSprite_setTexture(rat->dodge_left, texture, sfFalse);
+    sfSprite_setTexture(rat->dodge_right, texture, sfFalse);
+    sfSprite_setTexture(rat->dodge_up_left, texture, sfFalse);
+    sfSprite_setTexture(rat->dodge_up_right, texture, sfFalse);
+    sfSprite_setTexture(rat->kick_down, texture, sfFalse);
+    sfSprite_setTexture(rat->kick_left, texture, sfFalse);
+    sfSprite_setTexture(rat->kick_right, texture, sfFalse);
+    sfSprite_setTexture(rat->kick_up_left, texture, sfFalse);
+    sfSprite_setTexture(rat->kick_up_right, texture, sfFalse);
+    sfSprite_setTexture(rat->bite_left, texture, sfFalse);
+    sfSprite_setTexture(rat->bite_right, texture, sfFalse);
+}
 
 void set_rats_textures(game_t *game, const sfTexture *texture)
 {
@@ -23,12 +41,7 @@ void set_rats_textures(game_t *game, const sfTexture *texture)
     sfSprite_setTexture(rat->movement_right, texture, sfFalse);
     sfSprite_setTexture(rat->movement_up_left, texture, sfFalse);
     sfSprite_setTexture(rat->movement_up_right, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_up, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_down, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_left, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_right, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_up_left, texture, sfFalse);
-    sfSprite_setTexture(rat->dodge_up_right, texture, sfFalse);
+    set_rats_textures_2(game, texture);
 }
 
 void skin_mouse_pressed(game_t *game, skin_t *skin, sfVector2f coords)
@@ -64,9 +77,6 @@ void skin_selector_mouse_pressed(game_t *game)
 void appartment_mouse_pressed(game_t *game)
 {
     appartment_t *appartment = game->assets->appartment;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
 
     if (appartment->is_skin_selector_opened == 1)
         skin_selector_mouse_pressed(game);
