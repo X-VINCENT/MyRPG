@@ -155,6 +155,10 @@
         // init.c
         void init_transition(game_t *game);
 
+    //end
+        // init.c
+        void init_end(game_t *game);
+
     // init.c
     void init_assets(game_t *game);
     void init_cursor(game_t *game);

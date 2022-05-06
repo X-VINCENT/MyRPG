@@ -12,6 +12,10 @@ void select_game_stage_4(game_t *game)
     switch (game->stage) {
         case SHOP_STAGE:
             shop_stage(game);
+            break;
+        case END_STAGE:
+            end_stage(game);
+            break;
         default:
             break;
     }

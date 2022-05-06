@@ -42,6 +42,7 @@ void check_win_lose_fights(game_t *game)
         rat->speed = RAT_SPEED_APPARTMENT;
         game->assets->rat->life = 50;
         game->stage = APPARTMENT_STAGE;
+        game->data->current->nb_golds -= 1000;
     }
 }
 

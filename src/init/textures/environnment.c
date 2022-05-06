@@ -17,6 +17,8 @@ void init_textures_environnment_two(game_t *game)
     textures->wind = sfTexture_createFromFile(WIND, NULL);
     textures->car = sfTexture_createFromFile(CAR, NULL);
     textures->car_grey = sfTexture_createFromFile(CAR_GREY, NULL);
+    textures->win = sfTexture_createFromFile(WIN, NULL);
+    textures->loose = sfTexture_createFromFile(LOOSE, NULL);
 }
 
 void init_textures_environnment(game_t *game)
