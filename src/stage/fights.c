@@ -49,6 +49,7 @@ void check_win_lose_fights(game_t *game)
         set_rats_position(game, RAT_DEFAULT_POS_APPARTMENT);
         reset_actions(game);
         game->stage = APPARTMENT_STAGE;
+        game->data->current->nb_golds -= 1000;
     }
 }
 

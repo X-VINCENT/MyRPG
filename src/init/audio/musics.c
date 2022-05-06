@@ -16,4 +16,6 @@ void init_musics(game_t *game)
     game->audio->musics->music_ice_cream = create_music(MUSIC_ICE_CREAM_SHOP);
     game->audio->musics->music_museum = create_music(MUSIC_MUSEUM);
     game->audio->musics->music_fight = create_music(MUSIC_FIGHT);
+    game->audio->musics->win = create_music(MUSIC_WIN);
+    game->audio->musics->loose = create_music(MUSIC_LOOSE);
 }

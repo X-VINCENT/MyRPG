@@ -85,6 +85,8 @@
     #define MUSIC_ICE_CREAM_SHOP "assets/audio/musics/music_ice_cream.ogg"
     #define MUSIC_MUSEUM "assets/audio/musics/music_museum.ogg"
     #define MUSIC_FIGHT "assets/audio/musics/music_fight.ogg"
+    #define MUSIC_WIN "assets/audio/musics/win.ogg"
+    #define MUSIC_LOOSE "assets/audio/musics/loose.ogg"
     // Sounds
     #define JUMP_SOUND "assets/audio/sounds/jump_sound.ogg"
     #define PUNCH_SOUND "assets/audio/sounds/punch_sound.ogg"
@@ -113,7 +115,7 @@
     // Apart
     #define APART "assets/images/environments/appartment/apart.png"
     #define APART_TOP "assets/images/environments/appartment/apart_top.png"
-    #define APART_HITBOX "assets/images/environments/appartment/hitbox.bmp"
+    #define APART_HITBOX "assets/images/environments/appartment/hitbox.png"
 
     // Bar
     #define BAR "assets/images/environments/bar/view.png"
@@ -123,7 +125,7 @@
     // City
     #define CITY "assets/images/environments/city/view.png"
     #define CITY_TOP "assets/images/environments/city/map_top.png"
-    #define CITY_HITBOX "assets/images/environments/city/hitbox.bmp"
+    #define CITY_HITBOX "assets/images/environments/city/hitbox.png"
     #define RAT_DOOR "assets/images/environments/city/rat_door.png"
 
     // Clothe Store
@@ -149,6 +151,10 @@
     // Car
     #define CAR "assets/images/characters/car/car.png"
     #define CAR_GREY "assets/images/characters/car/car_grey.png"
+
+    //win
+    #define WIN "assets/images/environments/end/win.png"
+    #define LOOSE "assets/images/environments/end/loose.png"
 
 //////////////////////////////////////////////////////////////////////////////
 
