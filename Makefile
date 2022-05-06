@@ -314,7 +314,6 @@ SRC                 =           $(addprefix src/,                            \
 								tools/save/read.c                            \
 								tools/save/write.c                           \
 								tools/arrow.c                                \
-								tools/audio.c                                \
 								tools/fps.c                                  \
 								tools/location.c                             \
 								tools/object.c                               \
@@ -349,7 +348,7 @@ SRC_TESTS           +=          $(SRC) $(SRC_CSFML)
 OBJ_MAIN            =           $(SRC_MAIN:.c=.o)
 OBJ                 =           $(SRC:.c=.o) $(SRC_CSFML:.c=.o)
 
-CFLAGS              +=          -Iinclude
+CFLAGS              +=          -Iinclude -Wall
 LDFLAGS             =           -Llib -lmy
 LDFLAGS             +=          -lcsfml-graphics -lcsfml-window
 LDFLAGS             +=          -lcsfml-system -lcsfml-audio

@@ -27,7 +27,6 @@ void init_rat_idle(game_t *game, sfTexture *texture)
     sfIntRect r_front = init_rect(22, 39, 16, 21);
     sfIntRect r_back = init_rect(22, 94, 16, 24);
     sfIntRect r_sides = init_rect(22, 66, 25, 22);
-    sfIntRect r_diagonal = init_rect(22, 124, 20, 23);
     sfVector2f pos = RAT_DEFAULT_POS_CITY_APPARTMENT;
     sfVector2f scale = SCALE_RAT;
     sfVector2f i_scale = (sfVector2f){-scale.x, scale.y};

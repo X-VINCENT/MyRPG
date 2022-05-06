@@ -30,7 +30,7 @@ void set_rats_position_circle(game_t *game, sfVector2f position)
 {
     rat_t *rat = game->assets->rat;
 
-    sfCircleShape_setPosition(game->assets->rat->circle, position);
+    sfCircleShape_setPosition(rat->circle, position);
 }
 
 void set_rats_position(game_t *game, sfVector2f position)

@@ -19,9 +19,6 @@ void create_box_message(game_t *game, pnj_t *pnj, sfVector2f position)
 
 void init_settings_base(pnj_t *pnj)
 {
-    int random = 0;
-    int n = 0;
-
     pnj->display_the_text = false;
     pnj->text_index_display = 0;
     pnj->timer_display_text = sfClock_create();

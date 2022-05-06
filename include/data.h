@@ -87,6 +87,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } ice_t;
 
     typedef struct market {
@@ -100,6 +101,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } clothe_t;
 
     typedef struct doors {
@@ -124,7 +126,7 @@
         sfClock *fire_clock;
         sfClock *fire_car_clock;
         object_t **objects;
-        sfCircleShape *pos_minimap;
+        sfSprite *pos_minimap;
     } city_t;
 
     typedef struct load_save {

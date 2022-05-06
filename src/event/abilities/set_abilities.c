@@ -25,9 +25,8 @@ void set_ability_utility(game_t *game, int idx)
         game->assets->rat->speed_multiplier = RAT_SPEED_MULTIPLIER_40;
     if (idx == UTILITY_SPEED_50)
         game->assets->rat->speed_multiplier = RAT_SPEED_MULTIPLIER_50;
-    if (idx == UTILITY_SELL_100_SPEED_100) {
+    if (idx == UTILITY_SELL_100_SPEED_100)
         game->assets->rat->speed_multiplier = RAT_SPEED_MULTIPLIER_100;
-    }
 }
 
 void set_ability_stealth(game_t *game, int idx)
@@ -50,7 +49,7 @@ void set_ability_stealth_2(game_t *game, int idx)
 {
     rat_t *rat = game->assets->rat;
 
-    if (idx = STEALTH_RANGE_20)
+    if (idx == STEALTH_RANGE_20)
         rat->radius_circle = RAT_RADIUS_20;
     if (idx == STEALTH_ILLEGAL_2)
         return;

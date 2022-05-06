@@ -9,7 +9,5 @@
 
 void shop_key_pressed(game_t *game)
 {
-    shop_t *shop = game->assets->shop;
-    sfEvent *event = game->event->event;
-
+    return;
 }

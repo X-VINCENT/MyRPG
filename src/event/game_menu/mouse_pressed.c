@@ -48,9 +48,6 @@ void mouse_pressed_erase_save(game_t *game, load_save_t *load_save, int idx)
 void game_menu_mouse_pressed(game_t *game)
 {
     game_menu_t *game_menu = game->assets->game_menu;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
 
     mouse_pressed_load_save(game, game_menu->save_1, 0);
     mouse_pressed_load_save(game, game_menu->save_2, 1);

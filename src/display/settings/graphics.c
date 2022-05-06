@@ -56,8 +56,6 @@ void display_settings_graphics_vsync(game_t *game)
 
 void display_settings_graphics(game_t *game)
 {
-    settings_graphics_t *s_graphics = game->assets->settings->graphics;
-
     display_settings_graphics_res(game);
     display_settings_graphics_fps(game);
     display_settings_graphics_vsync(game);

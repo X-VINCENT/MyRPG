@@ -29,14 +29,15 @@ void shop_mouse_released(game_t *game)
     sfFloatRect r_buy = sfSprite_getGlobalBounds(shop->buy_on);
     sfFloatRect r_exit = sfSprite_getGlobalBounds(shop->exit_on);
 
-    if (sfFloatRect_contains(&r_buy, coords.x, coords.y))
+    if (sfFloatRect_contains(&r_buy, coords.x, coords.y)) {
         if (shop->current == 0 &&
             game->abilities->ability[FIGHT_WEAPON]->status == UNLOCKED)
             buy_object(game, BOMB, BOMB_PRICE);
         else
             buy_object(game, KIT, KIT_PRICE);
+    }
     if (sfFloatRect_contains(&r_exit, coords.x, coords.y))
-        game->stage = game->last_stage;
+        game->stage = BAR_STAGE;
     shop->status_exit = 0;
     shop->status_buy = 0;
 }

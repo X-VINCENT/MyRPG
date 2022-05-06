@@ -14,8 +14,7 @@ sfView *create_view(sfVector2f size, float angle)
     if (!view)
         return NULL;
     sfView_setSize(view, size);
-    sfView_setCenter(view, (sfVector2f){
-        sfView_getSize(view).x / 2,
+    sfView_setCenter(view, (sfVector2f){sfView_getSize(view).x / 2,
         sfView_getSize(view).y / 2});
     sfView_setRotation(view, angle);
     return view;
