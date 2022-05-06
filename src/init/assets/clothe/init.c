@@ -7,6 +7,27 @@
 
 #include "rpg.h"
 
+const int name_objects_clothe[] = {
+    TEE_SHIRT,
+    CAP,
+    TEE_SHIRT,
+    -1
+};
+
+const sfVector2f pos_objects_clothe[] = {
+    {325, 150},
+    {325, 120},
+    {350, 170},
+    {0, 0}
+};
+
+const int objects_areas_clothe[] = {
+    20,
+    20,
+    20,
+    -1
+};
+
 void init_clothe(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 415, 428);
@@ -18,5 +39,7 @@ void init_clothe(game_t *game)
         game->textures->clothe, rect, pos, scale);
     game->assets->clothe->bg_top = create_sprite(
         game->textures->clothe_top, rect, pos, scale);
+    game->assets->clothe->objects = create_objects(game->textures->gui,
+        name_objects_clothe, pos_objects_clothe, objects_areas_clothe);
     game->assets->clothe->hitbox = create_image(CLOTHE_HITBOX);
 }
