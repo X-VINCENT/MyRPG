@@ -9,7 +9,7 @@
 
 char *message_cashier[] = {
     "Hello do you want to sell or buy anything ?",
-    "To buy an item, press Y. To sell an item, select it and press U.",
+    "To buy an item, press U. To sell an item, select it and press Y.",
     NULL
 };
 
