@@ -7,7 +7,8 @@
 
 #include "rpg.h"
 
-bool is_it_a_menu(int stage) {
+bool is_it_a_menu(int stage)
+{
     if (stage != GAME_STAGE &&
         stage != ABILITIES_STAGE &&
         stage != STATS_STAGE &&
