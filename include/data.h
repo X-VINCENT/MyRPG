@@ -224,6 +224,7 @@
         int damage;
         int life;
         int is_jumping;
+        int run_chance;
     } rat_t;
 
     typedef struct settings_game {
