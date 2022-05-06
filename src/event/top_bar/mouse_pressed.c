@@ -36,10 +36,15 @@ void top_bar_mouse_pressed(game_t *game)
         game->window, mouse, NULL);
     sfFloatRect r_settings = sfSprite_getGlobalBounds(bar->settings_off);
     sfFloatRect r_quit = sfSprite_getGlobalBounds(bar->quit_off);
+    sfFloatRect r_back = {0, 35, 223, 101};
 
     top_bar_mouse_pressed_texts(game);
     if (sfFloatRect_contains(&r_settings, coords.x, coords.y))
         game->stage = SETTINGS_STAGE;
     if (sfFloatRect_contains(&r_quit, coords.x, coords.y))
         sfRenderWindow_close(game->window);
+    if (sfFloatRect_contains(&r_back, coords.x, coords.y)) {
+        game->last_stage = START_STAGE;
+        game->stage = START_STAGE;
+    }
 }
