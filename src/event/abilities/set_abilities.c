@@ -38,11 +38,11 @@ void set_ability_stealth(game_t *game, int idx)
     if (idx == STEALTH_ILLEGAL_1)
         return;
     if (idx == STEALTH_ESCAPE_20)
-        return;
+        rat->run_chance = 40;
     if (idx == STEALTH_ESCAPE_40)
-        return;
+        rat->run_chance = 60;
     if (idx == STEALTH_ESCAPE_60)
-        return;
+        rat->run_chance = 80;
 }
 
 void set_ability_stealth_2(game_t *game, int idx)

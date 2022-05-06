@@ -28,6 +28,8 @@
     #define HOWTOPLAY_STAGE 13
     #define SETTINGS_STAGE 14
 
+    #define END_STAGE 15
+
     #define FIGHTS_STAGE 20
 
 // Settings Stage
@@ -91,5 +93,8 @@ void stats_stage(game_t *game);
 
 // transition.c
 void transition_stage(game_t *game);
+
+//end.c
+void end_stage(game_t *game);
 
 #endif /* !STAGE_H_ */

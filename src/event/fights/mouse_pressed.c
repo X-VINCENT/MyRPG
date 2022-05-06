@@ -48,6 +48,8 @@ void fights_mouse_pressed(game_t *game)
     sfVector2f coords = sfRenderWindow_mapPixelToCoords(
         game->window, mouse, NULL);
     sfFloatRect r_fight = sfSprite_getGlobalBounds(fights->fight_button);
+    sfFloatRect r_run = sfSprite_getGlobalBounds(fights->run_button);
+    int random = rand() % 100;
 
     if (sfFloatRect_contains(&r_fight, coords.x, coords.y) &&
         fights->to_attack == 0) {
@@ -55,6 +57,12 @@ void fights_mouse_pressed(game_t *game)
             fights->fight_status = 1;
         else
             fights->fight_status = 0;
+    }
+    if (sfFloatRect_contains(&r_run, coords.x, coords.y)) {
+        if (random <= game->assets->rat->run_chance)
+            fights->enemy->life = 0;
+        else
+            game->assets->rat->life = 0;
     }
     attack_key_pressed(game, coords);
 }

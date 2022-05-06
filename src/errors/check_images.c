@@ -13,6 +13,8 @@ int check_characters(void)
 
     error += is_file(CAR_GREY);
     error += is_file(CAR);
+    error += is_file(WIN);
+    error += is_file(LOOSE);
     error += is_file(PNJ_BLACK_PATH);
     error += is_file(PNJ_BLUE_GIRL_PATH);
     error += is_file(PNJ_GUARD_PATH);

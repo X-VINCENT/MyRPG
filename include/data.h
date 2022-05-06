@@ -224,6 +224,7 @@
         int damage;
         int life;
         int is_jumping;
+        int run_chance;
     } rat_t;
 
     typedef struct settings_game {
@@ -400,6 +401,11 @@
         sfClock *clock;
     } top_bar_t;
 
+    typedef struct end {
+        sfSprite *win;
+        sfSprite *loose;
+    } end_t;
+
     typedef struct assets {
         sfSprite *cursor;
         abilities_t *abilities;
@@ -422,6 +428,7 @@
         shop_t *shop;
         transition_t *transition;
         top_bar_t *top_bar;
+        end_t *end;
     } assets_t;
 
     typedef struct event {
@@ -437,6 +444,8 @@
         sfMusic *music_ice_cream;
         sfMusic *music_museum;
         sfMusic *music_fight;
+        sfMusic *win;
+        sfMusic *loose;
     } musics_t;
 
     typedef struct sounds {
@@ -492,6 +501,8 @@
         sfTexture *hotess_pnj;
         sfTexture *car;
         sfTexture *car_grey;
+        sfTexture *win;
+        sfTexture *loose;
     } textures_t;
 
     typedef struct save_game {
