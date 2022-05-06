@@ -29,6 +29,8 @@ void destroy_assets_2(assets_t *assets)
     destroy_stats(assets->stats);
     destroy_top_bar(assets->top_bar);
     destroy_pnjs(assets->pnj);
+    destroy_sprite(assets->end->win);
+    destroy_sprite(assets->end->loose);
     free(assets);
 }
 

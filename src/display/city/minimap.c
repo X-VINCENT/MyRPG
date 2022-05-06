@@ -23,11 +23,10 @@ void display_rat_minimap(game_t *game, sfVector2f pos, sfVector2f scale)
     sfVector2f point_pos = {pos.x + rat_pos.x * scale.x,
         pos.y + rat_pos.y * scale.y};
 
-    sfCircleShape_setPosition(city->pos_minimap, point_pos);
-    sfCircleShape_setRadius(city->pos_minimap, scale.x * 50);
-    sfCircleShape_setOrigin(city->pos_minimap, (sfVector2f){scale.x * 50,
-        scale.y * 50});
-    sfRenderWindow_drawCircleShape(game->window, city->pos_minimap, NULL);
+    sfSprite_setPosition(city->pos_minimap, point_pos);
+    sfSprite_setScale(city->pos_minimap,
+        (sfVector2f){scale.x * 8, scale.y * 8});
+    sfRenderWindow_drawSprite(game->window, city->pos_minimap, NULL);
 }
 
 void display_minimap(game_t *game)

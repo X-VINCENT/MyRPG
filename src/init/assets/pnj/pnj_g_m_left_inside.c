@@ -34,7 +34,7 @@ void init_pnj_g_museum_left(game_t *game)
     assets_t *assets = game->assets;
     pnj_t *pnj = assets->pnj[PNJ_M_GUARD_LEFT];
     sfTexture *texture = game->textures->guard_pnj;
-    sfVector2f position = {244, 482};
+    sfVector2f position = {2419, 1739};
     sfIntRect rect = {97, 18, 36, 47};
 
     init_pnj(pnj, texture, position, rect);

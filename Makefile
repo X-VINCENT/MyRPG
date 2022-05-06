@@ -240,6 +240,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/stats/wallet.c                   \
 								init/assets/top_bar/init.c                   \
 								init/assets/transition/init.c                \
+								init/assets/end/init.c                       \
 								init/assets/init.c                           \
 								init/audio/init.c                            \
 								init/audio/musics.c                          \
@@ -278,6 +279,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/stage.c                                \
 								stage/shop.c                                 \
 								stage/stats.c                                \
+								stage/end.c                                  \
 								stage/transition.c                           \
 								tools/keys/get_name.c                        \
 								tools/keys/get_name2.c                       \
@@ -346,7 +348,7 @@ SRC_TESTS           +=          $(SRC) $(SRC_CSFML)
 OBJ_MAIN            =           $(SRC_MAIN:.c=.o)
 OBJ                 =           $(SRC:.c=.o) $(SRC_CSFML:.c=.o)
 
-CFLAGS              +=          -Iinclude -Wall
+CFLAGS              +=          -Iinclude
 LDFLAGS             =           -Llib -lmy
 LDFLAGS             +=          -lcsfml-graphics -lcsfml-window
 LDFLAGS             +=          -lcsfml-system -lcsfml-audio

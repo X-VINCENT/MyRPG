@@ -22,6 +22,7 @@ void init_assets_two(game_t *game)
     init_struct_pnjs(game);
     init_stats(game);
     init_shop(game);
+    init_end(game);
 }
 
 void init_assets(game_t *game)

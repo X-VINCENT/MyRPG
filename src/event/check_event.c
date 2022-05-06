@@ -9,13 +9,17 @@
 
 void resize_view(game_t *game)
 {
+    sfVector2u w_size = sfRenderWindow_getSize(game->window);
     sfVector2f size = sfView_getSize(game->view);
     sfFloatRect visible_area = {0, 0, game->event->event->size.width,
         game->event->event->size.height};
     float scale = size.x / visible_area.width;
 
-    sfRenderWindow_setSize(game->window,
-        (sfVector2u){visible_area.width, visible_area.height});
+    if (w_size.x < 800 || w_size.y < 600)
+        sfRenderWindow_setSize(game->window, (sfVector2u){800, 800 * 9 / 16});
+    if (w_size.x > 3840 || w_size.y > 2160)
+        sfRenderWindow_setSize(game->window,
+            (sfVector2u){3840, 3840 * 9 / 16});
     sfView_setSize(game->view, (sfVector2f){
         visible_area.width * scale, visible_area.height * scale});
 }
