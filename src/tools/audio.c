@@ -11,11 +11,10 @@ void down_volume(game_t *game)
 {
     sfMusic *music;
 
-    if (sfMusic_getVolume(music) < 10) {
+    if (sfMusic_getVolume(music) < 10)
         mute_music(music);
-    } else {
+    else
         set_offset_music(music, -10);
-    }
 }
 
 void up_volume(game_t *game)
@@ -33,20 +32,18 @@ void down_sounds(game_t *game)
 {
     sfSound *sound;
 
-    if (sfSound_getVolume(sound) < 10) {
+    if (sfSound_getVolume(sound) < 10)
         mute_sound(sound);
-    } else {
+    else
         set_offset_sound(sound, -10);
-    }
 }
 
 void up_sounds(game_t *game)
 {
     sfSound *sound;
 
-    if (sfSound_getVolume(sound) < 100) {
+    if (sfSound_getVolume(sound) < 100)
         set_offset_sound(sound, 10);
-    }
 }
 
 void stop_musics(game_t *game)
