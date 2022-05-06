@@ -160,6 +160,10 @@ void down_res_2(game_t *game);
 void up_res(game_t *game);
 void up_res_2(game_t *game);
 
+// reset_objects.c
+void reset_objects(object_t **objects);
+void reset_all_objects(game_t *game);
+
 // set_save_values.c
 void save_data(save_t *target, save_t *source);
 void load_save_values(game_t *game, save_t *save);
@@ -181,7 +185,7 @@ void check_and_center_view(
 void set_music_volume(game_t *game);
 void set_effects_volume(game_t *game);
 
-//xp.c
+// xp.c
 void update_xp(game_t *game);
 
 #endif /* !TOOLS_H_ */

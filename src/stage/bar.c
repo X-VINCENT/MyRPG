@@ -23,7 +23,7 @@ void bar_stage(game_t *game)
             48, 762, 426);
             sfClock_restart(game->assets->pnj[PNJ_CASHIER]->animation);
     }
-    display_pnj(game, game->assets->pnj[PNJ_CASHIER]);
+    display_pnj(game, game->assets->pnj[PNJ_CASHIER], PNJ_CASHIER);
     display_circle_rat(game);
     check_rat_key_pressed(game);
     display_inventory(game);

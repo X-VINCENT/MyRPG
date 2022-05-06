@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Init Appartment for My RPG
+** Init Bar for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

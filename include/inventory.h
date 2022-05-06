@@ -20,6 +20,7 @@
     #define R_THE_WAVE ((sfIntRect){385, 0, 60, 44})
     #define R_TROPHY ((sfIntRect){455, 0, 40, 36})
     #define R_BOMB ((sfIntRect){1860, 32, 21, 20})
+    #define R_KIT ((sfIntRect){388, 232, 86, 62})
     #define R_KEY ((sfIntRect){508, 0, 24, 10})
     #define R_GARBAGE_BAG ((sfIntRect){542, 0, 23, 17})
     #define R_TEE_SHIRT ((sfIntRect){574, 0, 26, 26})
@@ -39,6 +40,7 @@
     #define S_THE_WAVE 4
     #define S_TROPHY 5
     #define S_BOMB 8
+    #define S_KIT 3
     #define S_KEY 8
     #define S_GARBAGE_BAG 8
     #define S_TEE_SHIRT 8
@@ -58,6 +60,7 @@
     #define TROPHY_PRICE 1000
     #define THE_WAVE_PRICE 5000
     #define BOMB_PRICE 500
+    #define KIT_PRICE 100
     #define KEY_PRICE 0
     #define GARBAGE_BAG_PRICE 10
     #define TEE_SHIRT_PRICE 50
@@ -72,12 +75,14 @@
     #define TOILET_PAPER_PRICE 5
     #define WATER_BOTTLE_PRICE 5
 
+
     enum item_name {
         EMPTY,
         MONA,
         THE_WAVE,
         TROPHY,
         BOMB,
+        KIT,
         KEY,
         GARBAGE_BAG,
         TEE_SHIRT,

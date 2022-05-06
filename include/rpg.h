@@ -63,6 +63,10 @@
     #define VIEW_HOME_MENU_SIZE ((sfVector2f){640, 360})
     #define VIEW_HOME_MENU_POS ((sfVector2f){320, 180})
 
+    // SHOP
+    #define VIEW_SHOP_SIZE ((sfVector2f){3414, 1920})
+    #define VIEW_SHOP_POS ((sfVector2f){1707, 960})
+
     // FIGHTS
     #define VIEW_FIGHTS_SIZE ((sfVector2f){520, 307})
     #define VIEW_FIGHTS_POS ((sfVector2f){260, 153.50})

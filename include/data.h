@@ -334,6 +334,25 @@
         int current;
     } settings_t;
 
+    typedef struct shop {
+        sfSprite *bg;
+        sfSprite *buy_off;
+        sfSprite *exit_off;
+        sfSprite *buy_on;
+        sfSprite *exit_on;
+        sfSprite *bomb_off;
+        sfSprite *kit_off;
+        sfSprite *sold;
+        sfSprite *bomb_on;
+        sfSprite *kit_on;
+        sfText *bomb;
+        sfText *kit;
+        sfText *money;
+        int current;
+        int status_buy;
+        int status_exit;
+    } shop_t;
+
     typedef struct wallet {
         sfSprite *logo;
         sfText *title;
@@ -398,6 +417,7 @@
         car_right_t *car_right;
         settings_t *settings;
         stats_t *stats;
+        shop_t *shop;
         transition_t *transition;
         top_bar_t *top_bar;
     } assets_t;
@@ -525,6 +545,7 @@
         int music_volume;
         int effects_volume;
         sfClock *time_playing_clock;
+        sfClock *reset_object_clock;
     } game_t;
 
 #endif /* !DATA_H_ */

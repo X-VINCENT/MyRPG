@@ -11,8 +11,9 @@ int check_fonts(void)
 {
     int error = 0;
 
-    error += is_file(FONT_RPG);
-    error += is_file(FONT_BUENARD);
     error += is_file(FONT_TEXT_PNJ);
+    error += is_file(FONT_BUENARD);
+    error += is_file(FONT_PIXEL_ART);
+    error += is_file(FONT_RPG);
     return error;
 }

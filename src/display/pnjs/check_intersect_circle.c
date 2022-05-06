@@ -34,7 +34,7 @@ int check_inventory_illegal(game_t *game)
     return 0;
 }
 
-void check_intersect_circle(game_t *game, pnj_t *pnj)
+void check_intersect_circle(game_t *game, pnj_t *pnj, int idx)
 {
     sfFloatRect r_pnj = sfSprite_getGlobalBounds(pnj->sprite);
     sfFloatRect r_rat_circle =
@@ -42,6 +42,6 @@ void check_intersect_circle(game_t *game, pnj_t *pnj)
 
     if (sfFloatRect_intersects(&r_rat_circle, &r_pnj, NULL) &&
         pnj->is_guard && check_inventory_illegal(game))
-        return create_fight(game, pnj);
+        return create_fight(game, pnj, idx);
     check_intersect_circle_key(game, pnj);
 }
