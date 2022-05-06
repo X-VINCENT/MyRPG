@@ -12,6 +12,7 @@ void display_fights(game_t *game)
     fights_t *fights = game->fights;
 
     sfRenderWindow_drawSprite(game->window, fights->bg, NULL);
+    rat_jump_in_fights(game);
     display_fights_gui(game);
     display_fights_rat(game);
     display_fights_enemy(game);

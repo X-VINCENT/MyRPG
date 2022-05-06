@@ -47,9 +47,6 @@ void move_abilities_down(game_t *game)
 void abilities_scrolling_bar_event(game_t *game)
 {
     abilities_t *abilities = game->abilities;
-    sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-    sfVector2f coords = sfRenderWindow_mapPixelToCoords(
-        game->window, mouse, NULL);
     float delta = game->event->event->mouseWheelScroll.delta;
 
     if (time_elapsed(abilities->menu->scrolling_clock) > 0.01) {

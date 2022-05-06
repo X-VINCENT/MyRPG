@@ -73,7 +73,33 @@
         //init.c
         void init_museum(game_t *game);
 
-    // Ratmake fa
+    // Pnj
+        // init.c
+        void init_struct_pnjs(game_t *game);
+        void citizens_png(game_t *game);
+        void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
+        void init_text_pnj_one(pnj_t *pnj, sfVector2f pos);
+        void init_text_pnj_two(pnj_t *pnj, sfVector2f pos);
+        void init_pnj(pnj_t *pnj, sfTexture *texture,
+            sfVector2f pos, sfIntRect rect);
+        void create_box_message(game_t *game, pnj_t *pnj,
+            sfVector2f position);
+        void init_one(game_t *game);
+        void init_pnj_guard_left(game_t *game);
+        void init_pnj_museum_hotess(game_t *game);
+        void init_pnj_guide_top_right(game_t *game);
+        void init_pnj_g2_museum_left(game_t *game);
+        void init_pnj_g_museum_left(game_t *game);
+        void init_pnj_g_museum_right(game_t *game);
+        void init_pnj_guard_right(game_t *game);
+        void init_pnj_bar_cashier(game_t *game);
+        void init_pnj_museum_indicator(game_t *game);
+        void init_pnj_guard_last_museum(game_t *game);
+        void init_pnj_museum_cashier(game_t *game);
+        void init_two(game_t *game);
+        void init_three(game_t *game);
+
+    // Rat
         // actions.c
         void init_rat_dodge(game_t *game, sfTexture *texture);
         void init_rat_kick(game_t *game, sfTexture *texture);
@@ -107,6 +133,10 @@
             sfIntRect *rect, int offset);
         void init_settings(game_t *game);
 
+    // Shop
+        // init.c
+        void init_shop(game_t *game);
+
     // Stats
         // init.c
         void init_stats(game_t *game);
@@ -124,32 +154,6 @@
     // Transitions
         // init.c
         void init_transition(game_t *game);
-
-    // Pnj
-        // init.c
-        void init_struct_pnjs(game_t *game);
-        void citizens_png(game_t *game);
-        void init_text_pnj(pnj_t *pnj, sfVector2f pos, char *first_message);
-        void init_text_pnj_one(pnj_t *pnj, sfVector2f pos);
-        void init_text_pnj_two(pnj_t *pnj, sfVector2f pos);
-        void init_pnj(pnj_t *pnj, sfTexture *texture,
-            sfVector2f pos, sfIntRect rect);
-        void create_box_message(game_t *game, pnj_t *pnj,
-            sfVector2f position);
-        void init_one(game_t *game);
-        void init_pnj_guard_left(game_t *game);
-        void init_pnj_museum_hotess(game_t *game);
-        void init_pnj_guide_top_right(game_t *game);
-        void init_pnj_g2_museum_left(game_t *game);
-        void init_pnj_g_museum_left(game_t *game);
-        void init_pnj_g_museum_right(game_t *game);
-        void init_pnj_guard_right(game_t *game);
-        void init_pnj_bar_cashier(game_t *game);
-        void init_pnj_museum_indicator(game_t *game);
-        void init_pnj_guard_last_museum(game_t *game);
-        void init_pnj_museum_cashier(game_t *game);
-        void init_two(game_t *game);
-        void init_three(game_t *game);
 
     // init.c
     void init_assets(game_t *game);
@@ -194,6 +198,8 @@
     // init.c
     void init_rain(game_t *game);
     void init_wind(game_t *game);
+    void init_fire_trashcan(game_t *game);
+    void init_fire_car(game_t *game);
 
 // Textures
     // characters.c

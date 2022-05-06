@@ -56,15 +56,17 @@ void pnjs_display_city(game_t *game, int nbr_animated_pnj)
     nbr_animated_pnj += last_pnj_not_citizens;
     move_pnj(game, nbr_animated_pnj);
     for (int i = last_pnj_not_citizens; i < nbr_animated_pnj; i++)
-        display_pnj(game, game->assets->pnj[i]);
-    display_pnj(game, game->assets->pnj[PNJ_BLACK]);
-    display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO]);
-    display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE]);
+        display_pnj(game, game->assets->pnj[i], i);
+    display_pnj(game, game->assets->pnj[PNJ_BLACK], PNJ_BLACK);
+    display_pnj(game, game->assets->pnj[PNJ_GIRL_TWO], PNJ_GIRL_TWO);
+    display_pnj(game, game->assets->pnj[PNJ_BLACK_THREE], PNJ_BLACK_THREE);
     if (game->assets->pnj[PNJ_GUARD_RIGHT]->is_dead == 0)
-        display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT]);
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_RIGHT],
+            PNJ_GUARD_RIGHT);
     if (game->assets->pnj[PNJ_GUARD_LEFT]->is_dead == 0)
-        display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT]);
-    display_pnj(game, game->assets->pnj[PNJ_GUIDE_TOP_RIGHT]);
+        display_pnj(game, game->assets->pnj[PNJ_GUARD_LEFT], PNJ_GUARD_LEFT);
+    display_pnj(game, game->assets->pnj[PNJ_GUIDE_TOP_RIGHT],
+        PNJ_GUIDE_TOP_RIGHT);
 }
 
 void city_stage(game_t *game)
@@ -81,6 +83,7 @@ void city_stage(game_t *game)
     event_objects(game, game->assets->city->objects, game->keys[INTERACT]);
     rain(game);
     wind(game);
+    fire(game);
     display_minimap(game);
     display_inventory(game);
     check_and_center_view(

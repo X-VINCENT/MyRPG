@@ -20,6 +20,7 @@ void init_game_variables(game_t *game)
     game->music_volume = game->data->game->music_volume;
     game->effects_volume = game->data->game->effects_volume;
     game->time_playing_clock = sfClock_create();
+    game->reset_object_clock = sfClock_create();
 }
 
 void set_game_data(game_t *game)
@@ -47,6 +48,7 @@ game_t *init_game(void)
     init_inventory(game);
     init_rain(game);
     init_wind(game);
+    init_fire_trashcan(game);
     init_fights(game);
     set_game_data(game);
     return game;

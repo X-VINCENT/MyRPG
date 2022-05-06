@@ -38,3 +38,36 @@ void init_rain(game_t *game)
             game->textures->rain, rect, pos);
     }
 }
+
+void init_fire_car(game_t *game)
+{
+    sfVector2f pos = {2295, 1690};
+    sfVector2f size = {1, 1};
+    sfColor color = {255, 0, 0, 255};
+
+    game->assets->city->fire_car = create_fire_list(pos, size, color);
+    for (int i = 0; i < FIRE_NUMBER; i++) {
+        pos.y += 1;
+        if (pos.y < 1675)
+            pos.y = 1690;
+        game->assets->city->fire_car = add_node_fire(
+            game->assets->city->fire_car, pos, size, color);
+    }
+}
+
+void init_fire_trashcan(game_t *game)
+{
+    sfVector2f pos = {467, 583};
+    sfVector2f size = {1, 1};
+    sfColor color = {255, 0, 0, 255};
+
+    game->assets->city->fire = create_fire_list(pos, size, color);
+    for (int i = 0; i < FIRE_NUMBER; i++) {
+        pos.y += 1;
+        if (pos.y < 570)
+            pos.y = 583;
+        game->assets->city->fire = add_node_fire(game->assets->city->fire,
+            pos, size, color);
+    }
+    init_fire_car(game);
+}

@@ -80,6 +80,10 @@
         // destroy.c
         void destroy_settings(settings_t *settings);
 
+    // Shop
+        // destroy.c
+        void destroy_shop(shop_t *shop);
+
     // Stats
         // destroy.c
         void destroy_stats(stats_t *stats);

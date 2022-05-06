@@ -127,9 +127,10 @@
         void fight_kick(game_t *game);
 
     // create_fight.c
-    void create_fight(game_t *game, pnj_t *pnj);
+    void create_fight(game_t *game, pnj_t *pnj, int idx);
 
     // key_pressed.c
+    void rat_jump_in_fights(game_t *game);
     void fights_key_pressed(game_t *game);
 
     // mouse_moved.c
@@ -333,6 +334,20 @@
     // mouse_pressed.c
     void settings_mouse_pressed(game_t *game);
 
+// Shop
+    // key_pressed.c
+    void shop_key_pressed(game_t *game);
+
+    // mouse_moved.c
+    void shop_mouse_moved(game_t *game);
+
+    // mouse_pressed.c
+    void shop_mouse_pressed(game_t *game);
+
+    // mouse_released.c
+    void buy_object(game_t *game, enum item_name name, int price);
+    void shop_mouse_released(game_t *game);
+
 // Stats
     // key_pressed.c
     void stats_key_pressed(game_t *game);
@@ -363,12 +378,15 @@
     // mouse_pressed.c
     void transition_mouse_pressed(game_t *game);
 
+// check_event.c
+void call_different_events(game_t *game);
+
 // event_1.c
 void event(game_t *game);
-void call_different_events(game_t *game);
 void event_key_pressed(game_t *game);
 void mouse_pressed(game_t *game);
 void mouse_moved(game_t *game);
+void mouse_released(game_t *game);
 
 // event_2.c
 void event_key_pressed_2(game_t *game);

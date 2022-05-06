@@ -24,6 +24,7 @@ const int name_objects_city[] = {
     KNACKI,
     KNACKI,
     KNACKI,
+    BUCKET_KFC,
     -1
 };
 
@@ -44,6 +45,7 @@ const sfVector2f pos_objects_city[] = {
     {504, 1352},
     {1851, 819},
     {2003, 1890},
+    {453, 288},
     {0, 0}
 };
 
@@ -64,8 +66,16 @@ const int objects_areas_city[] = {
     10,
     10,
     10,
+    1,
     -1
 };
+
+void init_clocks(game_t *game)
+{
+    game->assets->city->weather_clock = sfClock_create();
+    game->assets->city->fire_clock = sfClock_create();
+    game->assets->city->fire_car_clock = sfClock_create();
+}
 
 void init_city(game_t *game)
 {
@@ -86,6 +96,6 @@ void init_city(game_t *game)
         name_objects_city, pos_objects_city, objects_areas_city);
     game->assets->city->pos_minimap = create_circle_shape(
         sfRed, (sfVector2f){0, 0}, 0, sfRed);
-    game->assets->city->weather_clock = sfClock_create();
+    init_clocks(game);
     init_doors(game);
 }

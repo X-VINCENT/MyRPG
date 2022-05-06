@@ -12,16 +12,14 @@ void display_settings_graphics_res(game_t *game)
     settings_graphics_t *s_graphics = game->assets->settings->graphics;
 
     sfRenderWindow_drawText(game->window, s_graphics->title_res, NULL);
-    if (game->res == 480)
-        sfRenderWindow_drawText(game->window, s_graphics->res[0], NULL);
     if (game->res == 720)
-        sfRenderWindow_drawText(game->window, s_graphics->res[1], NULL);
+        sfRenderWindow_drawText(game->window, s_graphics->res[0], NULL);
     if (game->res == 1080)
-        sfRenderWindow_drawText(game->window, s_graphics->res[2], NULL);
+        sfRenderWindow_drawText(game->window, s_graphics->res[1], NULL);
     if (game->res == 1440)
-        sfRenderWindow_drawText(game->window, s_graphics->res[3], NULL);
+        sfRenderWindow_drawText(game->window, s_graphics->res[2], NULL);
     if (game->res == 2160)
-        sfRenderWindow_drawText(game->window, s_graphics->res[4], NULL);
+        sfRenderWindow_drawText(game->window, s_graphics->res[3], NULL);
     sfRenderWindow_drawSprite(game->window, s_graphics->res_left, NULL);
     sfRenderWindow_drawSprite(game->window, s_graphics->res_right, NULL);
 }
@@ -58,8 +56,6 @@ void display_settings_graphics_vsync(game_t *game)
 
 void display_settings_graphics(game_t *game)
 {
-    settings_graphics_t *s_graphics = game->assets->settings->graphics;
-
     display_settings_graphics_res(game);
     display_settings_graphics_fps(game);
     display_settings_graphics_vsync(game);

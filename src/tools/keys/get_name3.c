@@ -38,4 +38,5 @@ const char *get_key_name_11(sfKeyCode key)
         return "F12";
     if (key == sfKeyF13)
         return "F13";
+    return get_key_name_12(key);
 }

@@ -12,7 +12,7 @@ void init_transition(game_t *game)
     game->assets->transition = malloc(sizeof(transition_t));
     sfVector2f pos = init_pos(-1000, -1000);
     sfVector2f size = {10000, 10000};
-    sfColor color = sfColor_fromRGBA(16, 16, 16, 0);
+    sfColor color = sfColor_fromRGBA(64, 64, 64, 0);
 
     game->assets->transition->rectangle = create_rectangle_shape(
         pos, size, color, color);

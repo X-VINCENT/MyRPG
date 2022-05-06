@@ -20,6 +20,7 @@
     #define R_THE_WAVE ((sfIntRect){385, 0, 60, 44})
     #define R_TROPHY ((sfIntRect){455, 0, 40, 36})
     #define R_BOMB ((sfIntRect){1860, 32, 21, 20})
+    #define R_KIT ((sfIntRect){388, 232, 86, 62})
     #define R_KEY ((sfIntRect){508, 0, 24, 10})
     #define R_GARBAGE_BAG ((sfIntRect){542, 0, 23, 17})
     #define R_TEE_SHIRT ((sfIntRect){574, 0, 26, 26})
@@ -30,6 +31,7 @@
     #define R_MONSTER ((sfIntRect){501, 580, 10, 19})
     #define R_CHICKEN ((sfIntRect){120, 447, 24, 12})
     #define R_PIZZA ((sfIntRect){321, 546, 30, 18})
+    #define R_BUCKET_KFC ((sfIntRect){770, 0, 26, 29})
     #define R_TOILET_PAPER ((sfIntRect){724, 0, 14, 18})
     #define R_WATER_BOTTLE ((sfIntRect){750, 0, 10, 18})
 
@@ -38,6 +40,7 @@
     #define S_THE_WAVE 4
     #define S_TROPHY 5
     #define S_BOMB 8
+    #define S_KIT 3
     #define S_KEY 8
     #define S_GARBAGE_BAG 8
     #define S_TEE_SHIRT 8
@@ -45,9 +48,10 @@
     #define S_CAP 8
     #define S_ICE_CREAM 12
     #define S_KNACKI 12
-    #define S_MONSTER 4
-    #define S_CHICKEN 4
-    #define S_PIZZA 4
+    #define S_MONSTER 10
+    #define S_CHICKEN 10
+    #define S_PIZZA 10
+    #define S_BUCKET_KFC 10
     #define S_TOILET_PAPER 12
     #define S_WATER_BOTTLE 12
 
@@ -56,6 +60,7 @@
     #define TROPHY_PRICE 1000
     #define THE_WAVE_PRICE 5000
     #define BOMB_PRICE 500
+    #define KIT_PRICE 100
     #define KEY_PRICE 0
     #define GARBAGE_BAG_PRICE 10
     #define TEE_SHIRT_PRICE 50
@@ -66,8 +71,10 @@
     #define MONSTER_PRICE 10
     #define CHICKEN_PRICE 10
     #define PIZZA_PRICE 10
+    #define BUCKET_KFC_PRICE 999999
     #define TOILET_PAPER_PRICE 5
     #define WATER_BOTTLE_PRICE 5
+
 
     enum item_name {
         EMPTY,
@@ -75,6 +82,7 @@
         THE_WAVE,
         TROPHY,
         BOMB,
+        KIT,
         KEY,
         GARBAGE_BAG,
         TEE_SHIRT,
@@ -85,6 +93,7 @@
         MONSTER,
         CHICKEN,
         PIZZA,
+        BUCKET_KFC,
         TOILET_PAPER,
         WATER_BOTTLE,
         NB_ITEMS

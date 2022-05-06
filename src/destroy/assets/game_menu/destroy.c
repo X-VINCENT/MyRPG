@@ -7,7 +7,8 @@
 
 #include "rpg.h"
 
-void destroy_load_save(load_save_t *load_save) {
+void destroy_load_save(load_save_t *load_save)
+{
     destroy_sprite(load_save->box);
     destroy_sprite(load_save->map);
     destroy_text(load_save->title_time_played);

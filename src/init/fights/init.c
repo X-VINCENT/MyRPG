@@ -14,12 +14,12 @@ void init_sprites_fights(game_t *game)
     sfVector2f p_run = {370, 289};
     sfVector2f scale = {1, 1};
 
-    game->fights->fight_button = create_sprite(
+    fights->fight_button = create_sprite(
         game->textures->gui, R_FIGHT_BUTTON, p_fight, scale);
-    game->fights->run_button = create_sprite(
+    fights->run_button = create_sprite(
         game->textures->gui, R_RUN_BUTTON, p_run, scale);
-    set_sprite_origin(game->fights->fight_button, R_FIGHT_BUTTON);
-    set_sprite_origin(game->fights->run_button, R_RUN_BUTTON);
+    set_sprite_origin(fights->fight_button, R_FIGHT_BUTTON);
+    set_sprite_origin(fights->run_button, R_RUN_BUTTON);
 }
 
 attack_t *init_attack(game_t *game, sfIntRect r,
@@ -69,9 +69,9 @@ void init_fights_attacks(game_t *game)
     fights->attack_1 = init_attack(game, R_RAT_KICK, p_1, ENGLISH_KICK);
     fights->attack_2 = init_attack(game, R_RAT_BITE, p_2, ENGLISH_BITE);
     fights->attack_3 = init_attack(game, R_BOMB_IDLE, p_3, ENGLISH_BOMB);
-    set_attack_values(fights->attack_1, 0.2, 87, 10);
-    set_attack_values(fights->attack_2, 1000, 204, 15);
-    set_attack_values(fights->attack_3, 0.2, 1881, 25);
+    set_attack_values(fights->attack_1, 0.2, 87, 25);
+    set_attack_values(fights->attack_2, 1000, 204, 30);
+    set_attack_values(fights->attack_3, 0.2, 1881, 50);
 }
 
 void init_fights(game_t *game)
@@ -92,4 +92,5 @@ void init_fights(game_t *game)
     game->fights->bite = 0;
     game->fights->bomb = 0;
     game->fights->as_touched = 0;
+    game->fights->last_position = init_pos(0, 0);
 }

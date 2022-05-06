@@ -29,7 +29,7 @@ const char *get_key_name_5(sfKeyCode key)
         return "RShift";
     if (key == sfKeyRAlt)
         return "RAlt";
-    get_key_name_6(key);
+    return get_key_name_6(key);
 }
 
 const char *get_key_name_4(sfKeyCode key)
@@ -52,7 +52,7 @@ const char *get_key_name_4(sfKeyCode key)
         return "Num7";
     if (key == sfKeyNum8)
         return "Num8";
-    get_key_name_5(key);
+    return get_key_name_5(key);
 }
 
 const char *get_key_name_3(sfKeyCode key)
@@ -75,7 +75,7 @@ const char *get_key_name_3(sfKeyCode key)
         return "Y";
     if (key == sfKeyZ)
         return "Z";
-    get_key_name_4(key);
+    return get_key_name_4(key);
 }
 
 const char *get_key_name_2(sfKeyCode key)
@@ -98,7 +98,7 @@ const char *get_key_name_2(sfKeyCode key)
         return "P";
     if (key == sfKeyQ)
         return "Q";
-    get_key_name_3(key);
+    return get_key_name_3(key);
 }
 
 const char *get_key_name(sfKeyCode key)
@@ -121,5 +121,5 @@ const char *get_key_name(sfKeyCode key)
         return "G";
     if (key == sfKeyH)
         return "H";
-    get_key_name_2(key);
+    return get_key_name_2(key);
 }

@@ -19,6 +19,13 @@
         struct particle *previous;
     } particle_t;
 
+    typedef struct fire {
+        sfRectangleShape *pixel;
+        int nb_move;
+        struct fire *next;
+        struct fire *previous;
+    } fire_t;
+
     typedef struct parallax {
         sfSprite *bg0;
         sfSprite *bg1;
@@ -80,6 +87,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } ice_t;
 
     typedef struct market {
@@ -93,6 +101,7 @@
         sfSprite *bg;
         sfSprite *bg_top;
         sfImage *hitbox;
+        object_t **objects;
     } clothe_t;
 
     typedef struct doors {
@@ -111,7 +120,11 @@
         int is_windy;
         particle_t *rain;
         particle_t *wind;
+        fire_t *fire;
+        fire_t *fire_car;
         sfClock *weather_clock;
+        sfClock *fire_clock;
+        sfClock *fire_car_clock;
         object_t **objects;
         sfCircleShape *pos_minimap;
     } city_t;
@@ -196,6 +209,7 @@
         sfClock *bite_time_clock;
         sfClock *movement_clock;
         sfClock *latency_status_clock;
+        sfClock *clock_jump;
         int up;
         int down;
         int left;
@@ -209,6 +223,7 @@
         float radius_circle;
         int damage;
         int life;
+        int is_jumping;
     } rat_t;
 
     typedef struct settings_game {
@@ -321,6 +336,25 @@
         int current;
     } settings_t;
 
+    typedef struct shop {
+        sfSprite *bg;
+        sfSprite *buy_off;
+        sfSprite *exit_off;
+        sfSprite *buy_on;
+        sfSprite *exit_on;
+        sfSprite *bomb_off;
+        sfSprite *kit_off;
+        sfSprite *sold;
+        sfSprite *bomb_on;
+        sfSprite *kit_on;
+        sfText *bomb;
+        sfText *kit;
+        sfText *money;
+        int current;
+        int status_buy;
+        int status_exit;
+    } shop_t;
+
     typedef struct wallet {
         sfSprite *logo;
         sfText *title;
@@ -385,6 +419,7 @@
         car_right_t *car_right;
         settings_t *settings;
         stats_t *stats;
+        shop_t *shop;
         transition_t *transition;
         top_bar_t *top_bar;
     } assets_t;
@@ -512,6 +547,7 @@
         int music_volume;
         int effects_volume;
         sfClock *time_playing_clock;
+        sfClock *reset_object_clock;
     } game_t;
 
 #endif /* !DATA_H_ */

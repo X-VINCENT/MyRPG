@@ -13,6 +13,7 @@ const sfIntRect r_objects[] = {
     R_THE_WAVE,
     R_TROPHY,
     R_BOMB,
+    R_KIT,
     R_KEY,
     R_GARBAGE_BAG,
     R_TEE_SHIRT,
@@ -23,6 +24,7 @@ const sfIntRect r_objects[] = {
     R_MONSTER,
     R_CHICKEN,
     R_PIZZA,
+    R_BUCKET_KFC,
     R_TOILET_PAPER,
     R_WATER_BOTTLE,
     {0, 0, 0, 0}

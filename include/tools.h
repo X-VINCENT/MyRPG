@@ -101,9 +101,12 @@
     // manage_list.c
     particle_t *create_particle_list(sfTexture *texture,
     sfIntRect rect, sfVector2f pos, sfVector2f scale);
+    fire_t *create_fire_list(sfVector2f pos, sfVector2f size, sfColor color);
 
     particle_t *add_node(particle_t *list, sfTexture *texture,
     sfIntRect rect, sfVector2f pos);
+    fire_t *add_node_fire(fire_t *list, sfVector2f pos,
+    sfVector2f size, sfColor color);
 
 // Save
     // read.c
@@ -121,13 +124,6 @@
 
 // arrow.c
 sfSprite *create_arrow(game_t *game, sfVector2f pos, sfVector2f scale);
-
-// audio.c
-void down_volume(game_t *game);
-void up_volume(game_t *game);
-void down_sounds(game_t *game);
-void up_sounds(game_t *game);
-void stop_musics(game_t *game);
 
 // fps.c
 void down_fps(game_t *game);
@@ -157,6 +153,10 @@ void down_res_2(game_t *game);
 void up_res(game_t *game);
 void up_res_2(game_t *game);
 
+// reset_objects.c
+void reset_objects(object_t **objects);
+void reset_all_objects(game_t *game);
+
 // set_save_values.c
 void save_data(save_t *target, save_t *source);
 void load_save_values(game_t *game, save_t *save);
@@ -178,7 +178,7 @@ void check_and_center_view(
 void set_music_volume(game_t *game);
 void set_effects_volume(game_t *game);
 
-//xp.c
+// xp.c
 void update_xp(game_t *game);
 
 #endif /* !TOOLS_H_ */

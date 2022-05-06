@@ -19,9 +19,6 @@ void create_box_message(game_t *game, pnj_t *pnj, sfVector2f position)
 
 void init_settings_base(pnj_t *pnj)
 {
-    int random = 0;
-    int n = 0;
-
     pnj->display_the_text = false;
     pnj->text_index_display = 0;
     pnj->timer_display_text = sfClock_create();
@@ -40,7 +37,7 @@ void init_pnj(pnj_t *pnj, sfTexture *texture, sfVector2f pos, sfIntRect rect)
         rect, pos, (sfVector2f){0.42, 0.42});
     set_sprite_origin(pnj->sprite, rect);
     pnj->life = 100;
-    pnj->damage = 5;
+    pnj->damage = 10;
     pnj->touch_talk = create_text(FONT_TEXT_PNJ, sfWhite, 25, "0");
     set_text_origin(pnj->touch_talk);
     sfText_setPosition(pnj->touch_talk, (sfVector2f){pos.x, pos.y - 45});

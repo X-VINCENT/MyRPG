@@ -20,5 +20,7 @@ void ice_stage(game_t *game)
     sfRenderWindow_drawSprite(game->window, game->assets->ice->bg_top, NULL);
     display_circle_rat(game);
     check_rat_key_pressed(game);
+    display_objects(game->window, game->assets->ice->objects);
+    event_objects(game, game->assets->ice->objects, game->keys[INTERACT]);
     display_inventory(game);
 }

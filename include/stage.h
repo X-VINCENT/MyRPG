@@ -20,6 +20,7 @@
     #define CLOTHE_STAGE 5
     #define MUSEUM_STAGE 6
     #define TRANSITION_STAGE 7
+    #define SHOP_STAGE 8
 
     #define GAME_STAGE 10
     #define ABILITIES_STAGE 11
@@ -81,6 +82,9 @@ void settings_stage(game_t *game);
 void select_game_stage(game_t *game);
 void select_game_stage_2(game_t *game);
 void select_game_stage_3(game_t *game);
+
+// shop.c
+void shop_stage(game_t *game);
 
 // stats.c
 void stats_stage(game_t *game);

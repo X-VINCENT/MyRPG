@@ -29,6 +29,9 @@
     void animate_rain(particle_t *rain, sfRenderWindow *window);
     void display_wind(particle_t *wind, sfRenderWindow *window);
     void animate_wind(particle_t *rain, sfRenderWindow *window);
+    void display_fire(fire_t *fire, sfRenderWindow *window);
+    void animate_fire(fire_t *fire, sfRenderWindow *window, sfVector2f pos);
+    void fire(game_t *game);
     void display_car(game_t *game);
 
     // minimap.c
@@ -75,9 +78,9 @@
 
 // Pnj
     // display.c
-    void display_pnj(game_t *game, pnj_t *pnj);
+    void display_pnj(game_t *game, pnj_t *pnj, int idx);
     void move_circle(game_t *game, pnj_t *pnj);
-    void check_intersect_circle(game_t *game, pnj_t *pnj);
+    void check_intersect_circle(game_t *game, pnj_t *pnj, int idx);
     void move_pnj(game_t *game, int nbr_animated_pnj);
 
 // Clothe
@@ -117,6 +120,10 @@
 
     // graphics.c
     void display_settings_graphics(game_t *game);
+
+// Shop
+    // display.c
+    void display_shop(game_t *game);
 
 // Stats
     // display.c

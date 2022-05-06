@@ -30,6 +30,7 @@ void init_rat_data(game_t *game)
     rat->is_dodging = 0;
     rat->is_kicking = 0;
     rat->is_biting = 0;
-    rat->damage = 5;
+    rat->damage = 10;
     rat->life = 50;
+    rat->clock_jump = sfClock_create();
 }
