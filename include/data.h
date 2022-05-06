@@ -126,7 +126,7 @@
         sfClock *fire_clock;
         sfClock *fire_car_clock;
         object_t **objects;
-        sfCircleShape *pos_minimap;
+        sfSprite *pos_minimap;
     } city_t;
 
     typedef struct load_save {

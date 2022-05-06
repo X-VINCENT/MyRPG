@@ -77,6 +77,17 @@ void init_clocks(game_t *game)
     game->assets->city->fire_car_clock = sfClock_create();
 }
 
+void init_minimap_city(game_t *game)
+{
+    sfIntRect rect = init_rect(806, 0, 32, 24);
+    sfVector2f pos = init_pos(0, 0);
+    sfVector2f scale = init_scale(1, 1);
+
+    game->assets->city->pos_minimap = create_sprite(
+        game->textures->gui, rect, pos, scale);
+    set_sprite_origin(game->assets->city->pos_minimap, rect);
+}
+
 void init_city(game_t *game)
 {
     sfIntRect rect = init_rect(0, 0, 3000, 2000);
@@ -94,8 +105,7 @@ void init_city(game_t *game)
     game->assets->city->is_windy = 0;
     game->assets->city->objects = create_objects(game->textures->gui,
         name_objects_city, pos_objects_city, objects_areas_city);
-    game->assets->city->pos_minimap = create_circle_shape(
-        sfRed, (sfVector2f){0, 0}, 0, sfRed);
+    init_minimap_city(game);
     init_clocks(game);
     init_doors(game);
 }
