@@ -7,13 +7,13 @@ This project is one of the freest project of your first year. Create your own RP
 Your main challenge for this game will be to create a complete product using everything that you and your
 team know.
 Your game must follow the following rules:
-• The player needs to have characteristics which you can find in the status menu.
-• The player can fight enemies, statistics will impact the fights results.
-• There must be NPC in your game.
-• You need to implement at least one quest.
-• The player must have an inventory which can contain a limited set of items.
-• The player can earn experience by winning fights and accomplishing specific actions.
-• With enough experience, the player can level up, upgrading its statistics.
+- The player needs to have characteristics which you can find in the status menu.
+- The player can fight enemies, statistics will impact the fights results.
+- There must be NPC in your game.
+- You need to implement at least one quest.
+- The player must have an inventory which can contain a limited set of items.
+- The player can earn experience by winning fights and accomplishing specific actions.
+- With enough experience, the player can level up, upgrading its statistics.
 
 
 Welcome to our rat rpg !
