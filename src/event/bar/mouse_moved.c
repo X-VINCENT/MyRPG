@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Ice Cream Shop Mouse Mouved for My RPG
+** Bar Mouse Mouved for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

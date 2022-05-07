@@ -31,6 +31,7 @@ void destroy_assets_2(assets_t *assets)
     destroy_pnjs(assets->pnj);
     destroy_sprite(assets->end->win);
     destroy_sprite(assets->end->loose);
+    destroy_introduction(assets->introduction);
     free(assets);
 }
 

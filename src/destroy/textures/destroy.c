@@ -14,6 +14,7 @@ void destroy_textures_3(textures_t *textures)
     sfTexture_destroy(textures->menu_bg);
     sfTexture_destroy(textures->buttons_1);
     sfTexture_destroy(textures->gui);
+    sfTexture_destroy(textures->intro);
     sfTexture_destroy(textures->message_box);
     sfTexture_destroy(textures->blue_girl_pnj);
     sfTexture_destroy(textures->guard_pnj);
