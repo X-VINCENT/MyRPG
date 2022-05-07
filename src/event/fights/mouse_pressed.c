@@ -50,7 +50,8 @@ void fights_mouse_pressed_run(game_t *game)
     sfFloatRect r_run = sfSprite_getGlobalBounds(fights->run_button);
     int random = rand() % 100;
 
-    if (sfFloatRect_contains(&r_run, coords.x, coords.y)) {
+    if (sfFloatRect_contains(&r_run, coords.x, coords.y) &&
+        fights->to_attack == 0) {
         if (random <= game->assets->rat->run_chance)
             fights->enemy->life = 0;
         else
