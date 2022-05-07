@@ -11,26 +11,27 @@
     #include "rpg.h"
 
 // Macros
-    #define START_STAGE 0
-    #define CITY_STAGE 1
-    #define APPARTMENT_STAGE 2
-    #define BAR_STAGE 15
-    #define ICE_STAGE 3
-    #define MARKET_STAGE 4
-    #define CLOTHE_STAGE 5
-    #define MUSEUM_STAGE 6
-    #define TRANSITION_STAGE 7
-    #define SHOP_STAGE 8
+    #define INTRO_STAGE 0
+    #define START_STAGE 1
+    #define CITY_STAGE 2
+    #define APPARTMENT_STAGE 3
+    #define BAR_STAGE 4
+    #define ICE_STAGE 5
+    #define MARKET_STAGE 6
+    #define CLOTHE_STAGE 7
+    #define MUSEUM_STAGE 8
+    #define TRANSITION_STAGE 9
+    #define SHOP_STAGE 10
 
-    #define GAME_STAGE 10
-    #define ABILITIES_STAGE 11
-    #define STATS_STAGE 12
-    #define HOWTOPLAY_STAGE 13
-    #define SETTINGS_STAGE 14
+    #define GAME_STAGE 11
+    #define ABILITIES_STAGE 12
+    #define STATS_STAGE 13
+    #define HOWTOPLAY_STAGE 14
+    #define SETTINGS_STAGE 15
 
-    #define END_STAGE 15
+    #define END_STAGE 16
 
-    #define FIGHTS_STAGE 20
+    #define FIGHTS_STAGE 17
 
 // Settings Stage
     #define SETTINGS_STAGE_GAME 0
@@ -67,6 +68,9 @@ void howtoplay_stage(game_t *game);
 
 // ice_shop.c
 void ice_stage(game_t *game);
+
+// introduction_shop.c
+void introduction_stage(game_t *game);
 
 // clothe.c
 void clothe_stage(game_t *game);

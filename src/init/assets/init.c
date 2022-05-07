@@ -23,6 +23,7 @@ void init_assets_two(game_t *game)
     init_stats(game);
     init_shop(game);
     init_end(game);
+    init_introduction(game);
 }
 
 void init_assets(game_t *game)

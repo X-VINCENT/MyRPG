@@ -9,7 +9,7 @@
 
 void init_game_variables(game_t *game)
 {
-    game->stage = START_STAGE;
+    game->stage = INTRO_STAGE;
     game->last_stage = START_STAGE;
     game->next_stage = START_STAGE;
     game->fps = game->data->game->fps;

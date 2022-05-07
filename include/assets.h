@@ -181,6 +181,7 @@
     // Settings
     #define SETTINGS_BG "assets/images/menus/settings/bg.png"
 
+    #define INTRODUCTION "assets/images/menus/introduction.png"
     #define MENU_BG "assets/images/menus/menu.png"
 //////////////////////////////////////////////////////////////////////////////
 

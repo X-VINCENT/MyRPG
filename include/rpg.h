@@ -63,6 +63,9 @@
     #define VIEW_HOME_MENU_SIZE ((sfVector2f){640, 360})
     #define VIEW_HOME_MENU_POS ((sfVector2f){320, 180})
 
+    #define VIEW_INTRO_SIZE ((sfVector2f){1280, 720})
+    #define VIEW_INTRO_POS ((sfVector2f){640, 360})
+
     // SHOP
     #define VIEW_SHOP_SIZE ((sfVector2f){3414, 1920})
     #define VIEW_SHOP_POS ((sfVector2f){1707, 960})

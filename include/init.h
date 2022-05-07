@@ -65,6 +65,10 @@
         // init.c
         void init_ice_cream(game_t *game);
 
+    // Introduction
+        // init.c
+        void init_introduction(game_t *game);
+
     // Market
         // init.c
         void init_market(game_t *game);
@@ -155,7 +159,7 @@
         // init.c
         void init_transition(game_t *game);
 
-    //end
+    // End
         // init.c
         void init_end(game_t *game);
 

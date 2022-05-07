@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Clothe store Mouse Mouved for My RPG
+** Clothe Mouse Mouved for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */
