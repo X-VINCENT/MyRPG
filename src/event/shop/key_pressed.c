@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Key Pressed Shp for My RPG
+** Key Pressed Shop for My RPG
 ** File description:
 ** Xavier VINCENT - Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

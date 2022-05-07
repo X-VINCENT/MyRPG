@@ -72,6 +72,10 @@
     // display.c
     void display_ice_cream(game_t *game);
 
+// Introduction
+    // display.c
+    void display_introduction(game_t *game);
+
 // Inventory
     // display.c
     void display_inventory(game_t *game);

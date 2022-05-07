@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Ice Cream Shop Door Location for MyRPG
+** Bar Sell for MyRPG
 ** File description:
 ** Xavier VINCENT- Max PEIXOTO - Gautier BONHUR - Hugo DUBOIS
 */

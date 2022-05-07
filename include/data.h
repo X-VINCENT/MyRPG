@@ -406,9 +406,13 @@
         sfSprite *loose;
     } end_t;
 
+    typedef struct introduction {
+        sfSprite *bg;
+        sfClock *clock;
+    } introduction_t;
+
     typedef struct assets {
         sfSprite *cursor;
-        abilities_t *abilities;
         appartment_t *appartment;
         game_menu_t *game_menu;
         howtoplay_t *howtoplay;
@@ -429,6 +433,7 @@
         transition_t *transition;
         top_bar_t *top_bar;
         end_t *end;
+        introduction_t *introduction;
     } assets_t;
 
     typedef struct event {
@@ -494,6 +499,7 @@
         sfTexture *menu_bg;
         sfTexture *buttons_1;
         sfTexture *gui;
+        sfTexture *intro;
         sfTexture *message_box;
         sfTexture *rain;
         sfTexture *wind;
