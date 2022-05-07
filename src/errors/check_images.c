@@ -71,6 +71,7 @@ int check_menus_objects(void)
     error += is_file(HOME_BG3);
     error += is_file(HOME_TITLE);
     error += is_file(SETTINGS_BG);
+    error += is_file(INTRODUCTION);
     error += is_file(MENU_BG);
     error += is_file(BUTTONS_1);
     error += is_file(SLOT_PATH_OFF);
