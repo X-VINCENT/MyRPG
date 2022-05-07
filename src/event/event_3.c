@@ -26,6 +26,7 @@ void event_key_pressed_3(game_t *game)
             shop_key_pressed(game);
             break;
         default:
+            event_key_pressed_4(game);
             break;
     }
 }
@@ -49,6 +50,7 @@ void mouse_pressed_3(game_t *game)
             shop_mouse_pressed(game);
             break;
         default:
+            mouse_pressed_4(game);
             break;
     }
 }
@@ -72,6 +74,7 @@ void mouse_moved_3(game_t *game)
             shop_mouse_moved(game);
             break;
         default:
+            mouse_moved_4(game);
             break;
     }
 }

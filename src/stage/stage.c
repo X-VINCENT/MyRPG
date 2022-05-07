@@ -16,6 +16,9 @@ void select_game_stage_4(game_t *game)
         case END_STAGE:
             end_stage(game);
             break;
+        case INTRO_STAGE:
+            introduction_stage(game);
+            break;
         default:
             break;
     }

@@ -13,6 +13,7 @@ void reset_objects(object_t **objects)
         if (objects[idx]->is_picked == 1 &&
             objects[idx]->name != MONA &&
             objects[idx]->name != THE_WAVE &&
+            objects[idx]->name != KEY &&
             objects[idx]->name != TROPHY)
             objects[idx]->is_picked = 0;
 }

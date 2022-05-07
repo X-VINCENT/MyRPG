@@ -22,6 +22,7 @@ SRC                 =           $(addprefix src/,                            \
 								destroy/assets/home_menu/parallax/destroy.c  \
 								destroy/assets/howtoplay/destroy.c           \
 								destroy/assets/ice_shop/destroy.c 			 \
+								destroy/assets/introduction/destroy.c 	     \
 								destroy/assets/market/destroy.c 			 \
 								destroy/assets/museum/destroy.c 			 \
 								destroy/assets/rat/destroy.c                 \
@@ -64,6 +65,7 @@ SRC                 =           $(addprefix src/,                            \
 								display/home_menu/display.c                  \
 								display/howtoplay/display.c                  \
 								display/ice_shop/display.c 					 \
+								display/introduction/display.c 			     \
 								display/market/display.c 					 \
 								display/museum/display.c 					 \
 								display/clothe/display.c 					 \
@@ -150,6 +152,7 @@ SRC                 =           $(addprefix src/,                            \
 								event/ice_cream_shop/key_pressed.c           \
 								event/ice_cream_shop/mouse_moved.c           \
 								event/ice_cream_shop/mouse_pressed.c         \
+								event/introduction/key_pressed.c             \
 								event/rat/animations/check/check.c           \
 								event/rat/animations/check/check2.c          \
 								event/rat/animations/check/collision.c       \
@@ -189,10 +192,11 @@ SRC                 =           $(addprefix src/,                            \
 								event/top_bar/key_pressed.c                  \
 								event/top_bar/mouse_moved.c                  \
 								event/top_bar/mouse_pressed.c                \
-								event/event_1.c                              \
 								event/check_event.c                          \
+								event/event_1.c                              \
 								event/event_2.c                              \
 								event/event_3.c                              \
+								event/event_4.c                              \
 								init/abilities/init.c                        \
 								init/abilities/menu.c                        \
 								init/assets/appartment/init.c                \
@@ -208,6 +212,7 @@ SRC                 =           $(addprefix src/,                            \
 								init/assets/home_menu/parallax/init.c        \
 								init/assets/howtoplay/init.c                 \
 								init/assets/ice_cream/init.c                 \
+								init/assets/introduction/init.c              \
 								init/assets/market/init.c                    \
 								init/assets/museum/init.c                    \
 								init/assets/pnj/init_pnj.c                   \
@@ -273,6 +278,7 @@ SRC                 =           $(addprefix src/,                            \
 								stage/home_menu.c                            \
 								stage/howtoplay.c                            \
 								stage/ice_shop.c                             \
+								stage/introduction.c                         \
 								stage/market.c                               \
 								stage/museum.c                               \
 								stage/settings.c                             \

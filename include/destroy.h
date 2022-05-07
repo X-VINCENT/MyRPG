@@ -23,10 +23,6 @@
         // destroy.c
         void destroy_bar(bar_t *bar);
 
-    // Ice cream shop
-        // destroy.c
-        void destroy_ice(ice_t *ice);
-
     // City
         // destroy.c
         void destroy_city(city_t *city);
@@ -52,6 +48,14 @@
     // HowToPlay
         // destroy.c
         void destroy_howtoplay(howtoplay_t *howtoplay);
+
+    // Ice cream shop
+        // destroy.c
+        void destroy_ice(ice_t *ice);
+
+    // Introduction
+        // destroy.c
+        void destroy_introduction(introduction_t *introduction);
 
     // Inventory
         // destroy.c

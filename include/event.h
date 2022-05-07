@@ -186,6 +186,10 @@
     // mouse_pressed.c
     void ice_cream_shop_mouse_pressed(game_t *game);
 
+// Introduction
+    // key_pressed.c
+    void introduction_key_pressed(game_t *game);
+
 // Market
     // Locations
         // door.c
@@ -397,5 +401,10 @@ void mouse_moved_2(game_t *game);
 void event_key_pressed_3(game_t *game);
 void mouse_pressed_3(game_t *game);
 void mouse_moved_3(game_t *game);
+
+// event_4.c
+void event_key_pressed_4(game_t *game);
+void mouse_pressed_4(game_t *game);
+void mouse_moved_4(game_t *game);
 
 #endif /* !EVENT_H_ */
