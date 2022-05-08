@@ -34,5 +34,6 @@ void destroy_all(game_t *game)
     destroy_fights(game->fights);
     sfClock_destroy(game->time_playing_clock);
     sfClock_destroy(game->reset_object_clock);
+    sfClock_destroy(game->costs_clock);
     free(game);
 }
