@@ -23,7 +23,7 @@ void end_stage(game_t *game)
         play_music(game->audio->musics->win);
         sfRenderWindow_drawSprite(game->window, end->win, NULL);
     }
-    if (game->data->current->nb_golds <= -1000) {
+    if (game->data->current->nb_golds <= 0) {
         sfView_reset(game->view, view);
         play_music(game->audio->musics->loose);
         sfRenderWindow_drawSprite(game->window, end->loose, NULL);

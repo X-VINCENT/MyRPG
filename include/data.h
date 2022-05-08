@@ -565,6 +565,7 @@
         int effects_volume;
         sfClock *time_playing_clock;
         sfClock *reset_object_clock;
+        sfClock *costs_clock;
     } game_t;
 
 #endif /* !DATA_H_ */

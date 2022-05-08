@@ -50,7 +50,7 @@ void erase_save(save_t *save)
     save->fights_won = 0;
     save->money_saved = 0;
     save->nb_abilities = 0;
-    save->nb_golds = 0;
+    save->nb_golds = 1000;
     save->nb_xps = 0;
     save->stolen_items = 0;
     save->time_played = 0;
