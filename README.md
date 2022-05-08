@@ -56,7 +56,7 @@ Your game must follow the following rules:
 <p>For starters we advise you to steal some Knackis that are on the street in order to win some exp and upgrade your talents !</br >
 Then you could go to some shops but beware of guards !</br >
 When you feel ready you could go to the museum and try to steal the famous Mona Lisa !</br >
-But be carefull ! If your money is under -1000 you will automatically loose because of your debts !</br >
+But be carefull ! If your money is under 0 you will automatically loose because of your debts !</br >
 However if you manage to collect more than one million you will spend the rest of your life in a paradise island !</p>
 
 Some infos about the game :
