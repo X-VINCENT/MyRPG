@@ -56,9 +56,9 @@
     #define S_WATER_BOTTLE 12
 
     #define EMPTY_PRICE 0
-    #define MONA_PRICE 10000
-    #define TROPHY_PRICE 1000
-    #define THE_WAVE_PRICE 5000
+    #define MONA_PRICE 1000000
+    #define TROPHY_PRICE 10000
+    #define THE_WAVE_PRICE 100000
     #define BOMB_PRICE 500
     #define KIT_PRICE 100
     #define KEY_PRICE 0
