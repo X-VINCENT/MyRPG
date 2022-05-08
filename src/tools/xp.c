@@ -11,8 +11,8 @@ bool is_it_in_game(int stage)
 {
     if (stage != INTRO_STAGE &&
         stage != START_STAGE &&
-        stage != GAME_STAGE &&
         stage != END_STAGE &&
+        stage != GAME_STAGE &&
         stage != ABILITIES_STAGE &&
         stage != STATS_STAGE &&
         stage != HOWTOPLAY_STAGE &&
@@ -31,11 +31,11 @@ void update_xp(game_t *game)
         game->stage = END_STAGE;
     if (game->data->current->nb_golds <= 0)
         game->stage = END_STAGE;
-    if (is_it_in_game(game->stage))
+    if (is_it_in_game(game->stage)) {
         if (time_elapsed(game->costs_clock) > 10) {
             game->data->current->nb_golds -= 15;
             sfClock_restart(game->costs_clock);
         }
-    else
+    } else
         sfClock_restart(game->costs_clock);
 }
