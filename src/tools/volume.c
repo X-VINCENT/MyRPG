@@ -18,6 +18,9 @@ void set_music_volume(game_t *game)
     sfMusic_setVolume(
         game->audio->musics->music_ice_cream, game->music_volume);
     sfMusic_setVolume(game->audio->musics->music_museum, game->music_volume);
+    sfMusic_setVolume(game->audio->musics->music_fight, game->music_volume);
+    sfMusic_setVolume(game->audio->musics->win, game->music_volume);
+    sfMusic_setVolume(game->audio->musics->loose, game->music_volume);
     sfSprite_setPosition(circle, pos_circle);
 }
 
